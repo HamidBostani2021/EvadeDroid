@@ -3,7 +3,8 @@
 This tool is the EvadeDroid's pipeline, a novel problem-space evasion attack for 
 black-box based Android malware detection, presented in [1].
 
-[1] "EvadeDroid: A Practical Evasion Attack on Machine Learning for Black-box Android Malware Detection", EuroS&P 2022,  Submitted on Sept. 23, 2021. 
+[1] "EvadeDroid: A Practical Evasion Attack on Machine Learning for Black-box Android Malware Detection", 
+EuroS&P 2022,  Submitted on Sept. 23, 2021. 
 """
 from feature_extraction import feature_set
 import sys
@@ -12,8 +13,8 @@ import lib.utils as utils
 import timeit
 import black_box_attack.models as models
 import json
-from black_box_attack import evasion
-from black_box_attack import reference_attacks as baseline
+from attacks import evasion
+from attacks import reference_attacks as baseline
 import numpy as np
 import torch
 from itertools import repeat
@@ -50,9 +51,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
     
     evasion_attack_vt = bool(int(evasion_attack_vt))    
     if vt_engine =="ESETNOD32":
-        vt_engine = "ESET-NOD32"
-        
-        
+        vt_engine = "ESET-NOD32"   
     
     
     if download_samples == True:
@@ -65,37 +64,37 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         
         <C:/AndroidDatasets/AndooZoo> 
         
-        Note if you use az command, you may come across an exception related dex_date field. I this case,
+        Note in using az command, you may come across an exception related dex_date field. I this case,
         first of all, open csv file with notepad and then replace the values of this field with
         a proper value like 2021-07-09 00:00:00.
         
         Then copy apks in ../data/apks/sub_dataset/
         '''
-        print("~~~~~~~~~~~~~~~~~~~ Finsih download samples ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete download samples ~~~~~~~~~~~~~~~~~~~")
     
     if initial_check_apks == True:
         print("~~~~~~~~~~~~~~~~~~~ Start selecting EvadeDroid's malware samples after checking the validity of accessible malware  samples ~~~~~~~~~~~~~~~~~~~")
         feature_set.check_malware_apks()
-        print("~~~~~~~~~~~~~~~~~~~ Finish selecting EvadeDroid's malware samples after checking the validity of accessible malware  samples ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete selecting EvadeDroid's malware samples after checking the validity of accessible malware  samples ~~~~~~~~~~~~~~~~~~~")
     
     if accessible_inaccessible_datset_preparation == True:
         print("~~~~~~~~~~~~~~~~~~~ Start check accessible and inaccessible datasets preparation ~~~~~~~~~~~~~~~~~~~")
         feature_set.determine_smaples_accessible_inaccessible()
-        print("~~~~~~~~~~~~~~~~~~~ Finish check accessible and inaccessible datasets preparation ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete check accessible and inaccessible datasets preparation ~~~~~~~~~~~~~~~~~~~")
     
     if mamadroid_feature_extraction == True:
         print("~~~~~~~~~~~~~~~~~~~ Start feature extraction for MaMaDroid ~~~~~~~~~~~~~~~~~~~")
         feature_set.extract_mamadriod_features()
-        print("~~~~~~~~~~~~~~~~~~~ Finish feature extraction for MaMaDroid ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete feature extraction for MaMaDroid ~~~~~~~~~~~~~~~~~~~")
     if n_gram_feature_extraction == True:
         print("~~~~~~~~~~~~~~~~~~~ Start n-gram feature extraction ~~~~~~~~~~~~~~~~~~~")
         feature_set.extract_n_gram_features()
-        print("~~~~~~~~~~~~~~~~~~~ Finish n-gram feature extraction ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete n-gram feature extraction ~~~~~~~~~~~~~~~~~~~")
         
     if create_action_set == True:
         start = timeit.timeit()          
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         donors_path = os.path.join(config['stored_components'],'donors.p')
         if os.path.exists(donors_path) == True:
             with open(donors_path,'rb') as f:
@@ -103,25 +102,23 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         else:
             print("donors.p was not found")
             utils.perform_logging("donors.p was not found")
+            return
         donors = [val for id,val in enumerate(malware_donors.values())]
         donors = list(dict.fromkeys(donors))
         extraction.create_action_set(donors)
         end = timeit.timeit()
         print("elapsed time:" + str(end - start))
         utils.perform_logging("elapsed time:" + str(end - start))    
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete: action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete: action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("Next component ...")
   
     if roc_curve == True:
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: ROC analysis ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        
-        
-        models.create_roc_curve()        
-        
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete: ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete: ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start ROC analysis ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")       
+        models.create_roc_curve()                
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("Next component ...")
     
     X = list()
@@ -133,20 +130,13 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         
         X_filename = os.path.join(config['features'] , 'sub_dataset/', 'sub_dataset-X.json')   
         with open(X_filename, 'rt') as f:
-            X = json.load(f)
-        '''
-        X_filename_append = os.path.join(config['features'] , 'sub_dataset/', 'sub_dataset-X-append.json')   
-        with open(X_filename_append, 'rt') as f:
-            X_append = json.load(f)
-        
-        X = X + X_append
-        '''
+            X = json.load(f)        
         malware_app_indices = [item for item in malware_app.values()]
         malware_app = [item for item in malware_app.keys()]
 
     if create_Drebin == True:   
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: Prepare DREBIN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: Prepare DREBIN  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start preparing DREBIN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start preparing DREBIN  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         model_inaccessible_Drebin = models.SVM("Drebin", False, config['X_dataset_inaccessible'], config['Y_dataset_inaccessible'],
                                   config['meta_inaccessible'],num_features = None,append = None)
         
@@ -164,13 +154,13 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             y_pred.append(y_pred_app)
         DR = (sum(y_pred)/len(malware_app_indices))*100            
         print("DR (DREBIN):" + str(DR) + "%")
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: Prepare DREBIN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: Prepare DREBIN  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End preparing DREBIN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End preparing DREBIN  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     
 
     if create_SecSVM == True: 
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: Prepare SecSVM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: Prepare SecSVM  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start preparing SecSVM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start preparing SecSVM  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         model_inaccessible_SecSVM = models.SecSVM("SecSVM",False, config['X_dataset_inaccessible'], config['Y_dataset_inaccessible'],
                                   config['meta_inaccessible'], num_features=None,
                                   secsvm_k=0.2, secsvm=False, secsvm_lr=0.0001,
@@ -189,12 +179,12 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             y_pred.append(y_pred_app[0])
         DR = (sum(y_pred)/len(malware_app_indices))*100
         print("DR (SecSVM):" + str(DR) + "%")
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: Prepare SecSVM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: Prepare SecSVM  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End preparing SecSVM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End preparing SecSVM  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         
     if create_MaMaDroid == True:
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: Prepare MaMaDroid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: Prepare MaMaDroid  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start preparing MaMaDroid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start preparing MaMaDroid  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         model_inaccessible = models.SVM("Drebin", False, config['X_dataset_inaccessible'], config['Y_dataset_inaccessible'],
                                       config['meta_inaccessible'])
         model_inaccessible = models.load_from_file(model_inaccessible.model_name)
@@ -217,8 +207,8 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         y_pred = model_mamadroid.clf.predict(malware_list)
         DR = (sum(y_pred)/len(malware_list))*100
         print("DR (MaMaDroid): " + str(DR) + "%")
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: Prepare MaMaDroid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: Prepare MaMaDroid  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End preparing MaMaDroid ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End preparing MaMaDroid  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     if evasion_attack_Drebin == True:         
         utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: evasion attack on DREBIN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start: evasion attack on DREBIN  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")

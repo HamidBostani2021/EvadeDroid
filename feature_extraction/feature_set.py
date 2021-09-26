@@ -8,8 +8,6 @@ from settings import config
 from feature_extraction import drebin
 import json
 import random
-from pathlib import Path
-from black_box_attack import models
 import csv
 import shutil
 import subprocess
@@ -428,36 +426,3 @@ def extract_n_gram_features():
     print("start n-gram")
     n_gram.extract_n_gram(5, apks)    
     print("end n-gram")  
-
-def getData(fabio_dataset):
-    if fabio_dataset == False:
-        meta = Path(config['meta_inaccessible'])
-        if meta.is_file() == False:
-            X_dataset_shuffled, Y_dataset_shuffled, meta_shuffled  = get_inputapps(config['apks_inaccessible'])  
-            with open(config['features_inaccessible']+'/inaccessible-dataset-X.json' , 'w') as f:
-                json.dump(X_dataset_shuffled, f)    
-            
-            with open(config['features_inaccessible']+'/inaccessible-dataset-Y.json' , 'w') as f:
-                json.dump(Y_dataset_shuffled, f)       
-                
-            with open(config['features_inaccessible']+'/inaccessible-dataset-meta.json' , 'w') as f:
-                json.dump(meta_shuffled, f)       
-        
-        meta = Path(config['meta_accessible'])
-        if meta.is_file() == False:
-            X_dataset_shuffled, Y_dataset_shuffled, meta_shuffled  = get_inputapps(config['apks_accessible'])  
-            with open(config['features_accessible']+'/accessible-dataset-X.json' , 'w') as f:
-                json.dump(X_dataset_shuffled, f)    
-            
-            with open(config['features_accessible']+'/accessible-dataset-Y.json' , 'w') as f:
-                json.dump(Y_dataset_shuffled, f)       
-                
-            with open(config['features_accessible']+'/accessible-dataset-meta.json' , 'w') as f:
-                json.dump(meta_shuffled, f)
-    else:
-        models.select_smaples_from_total_dataset();
-    
-    
-   
-
-

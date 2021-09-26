@@ -38,7 +38,7 @@ config = {
     'X_dataset_inaccessible': project('data/features/inaccessible/inaccessible-dataset-X.json'),
     'Y_dataset_inaccessible': project('data/features/inaccessible/inaccessible-dataset-Y.json'),
     'meta_inaccessible': project('data/features/inaccessible/inaccessible-dataset-meta.json'),    
-    'feature_extractor': '/home/hamid/Projects/feature-extractor',
+    'feature_extractor': project('drebin_feature_extractor'),
     'tmp_dir': project('data/stored-components/tmp/'),  
     'goodware_location': project('/data/apk'),
 

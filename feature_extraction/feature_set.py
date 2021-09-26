@@ -15,7 +15,7 @@ import shutil
 import subprocess
 import pickle
 from mamadroid import mamadroid, MaMaStat
-from android_malware_with_n_gram import n_gram
+from android_malware_with_n_gram import n_gram, bytecode_extract, batch_disasseble
 
 
 def get_inputapps(path):    
@@ -420,12 +420,11 @@ def extract_n_gram_features():
         malware_path.append(os.path.join(config['apks'],'accessible/malware',app))
         apks[app] = 1
     
-    frompath = malware_path + goodware_path  
-    
+    frompath = malware_path + goodware_path      
     print("No apps: ",len(frompath))
-    #topath = config['tmp_dir'] + "smalis"
-    #batch_disasseble.disassemble(frompath, topath, 3000)     
-    #bytecode_extract.collect(topath,0)     
+    topath = config['tmp_dir'] + "smalis"
+    batch_disasseble.disassemble(frompath, topath, 3000)     
+    bytecode_extract.collect(topath,0)     
     print("start n-gram")
     n_gram.extract_n_gram(5, apks)    
     print("end n-gram")  

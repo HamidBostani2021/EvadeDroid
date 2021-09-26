@@ -60,13 +60,14 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         feature_set.create_csv_from_meta_sub_dataset()       
     
         '''
-        Now, download apks determined in metafile from AndroZoo and put then in the following path:
+        Now, download apks determined in the obtained metafile from AndroZoo 
+        and put them in the following path:
         
         <C:/AndroidDatasets/AndooZoo> 
         
-        Note in using az command, you may come across an exception related dex_date field. I this case,
-        first of all, open csv file with notepad and then replace the values of this field with
-        a proper value like 2021-07-09 00:00:00.
+        Note in using az command, you may come across an exception related dex_date field. 
+        I this case, first of all, open csv file with notepad and then replace 
+        the values of this field with a proper value like 2021-07-09 00:00:00.
         
         Then copy apks in ../data/apks/sub_dataset/
         '''

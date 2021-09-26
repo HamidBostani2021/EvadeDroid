@@ -1,16 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """
-extraction.py
+Preparing action set
 ~~~~~~~~~~~~~
-
-Search, extract, and manage organs for transplantation.
-
-Note that the string representations of features are slightly different depending
-on if they're identified by the Drebin feature extractor or by Soot:
-
-    * d_feature: com_s2lab_minactivity_SecondActivity
-    * j_feature: com.s2lab.minactivity.SecondActivity
 
 [1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
     [S&P 2020], Pierazzi et al.

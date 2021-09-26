@@ -3,9 +3,12 @@
 """
 Create Sec-SVM model [1].
 ~~~~~~~~
-This module is originally created in [1].
-  
-[1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
+This module is originally created in [2].
+
+[1] Yes, Machine Learning Can Be More Secure!
+    [TDSC 2019] Demontis et al.
+    
+[2] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
     [S&P 2020], Pierazzi et al.
 
 

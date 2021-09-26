@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-preparing the classification models for the EvadeDroid's pipeline.
+Preparing the classification models for the EvadeDroid's pipeline.
 ~~~~~~~~
 
 This module that is originally created in [1] has been modified and extended a lot for using in EvadeDroid.
 
-[2] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
+[1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
     [S&P 2020], Pierazzi et al.
 
 

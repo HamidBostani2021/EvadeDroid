@@ -55,7 +55,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
     
     
     if download_samples == True:
-        print("~~~~~~~~~~~~~~~~~~~ Start download samples ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Start - downloading samples ~~~~~~~~~~~~~~~~~~~")
         feature_set.create_sub_dataset()
         feature_set.create_csv_from_meta_sub_dataset()       
     
@@ -70,31 +70,31 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         
         Then copy apks in ../data/apks/sub_dataset/
         '''
-        print("~~~~~~~~~~~~~~~~~~~ Complete download samples ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete - downloading samples ~~~~~~~~~~~~~~~~~~~")
     
     if initial_check_apks == True:
-        print("~~~~~~~~~~~~~~~~~~~ Start selecting EvadeDroid's malware samples after checking the validity of accessible malware  samples ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Start - selecting EvadeDroid's malware samples after checking the validity of accessible malware  samples ~~~~~~~~~~~~~~~~~~~")
         feature_set.check_malware_apks()
-        print("~~~~~~~~~~~~~~~~~~~ Complete selecting EvadeDroid's malware samples after checking the validity of accessible malware  samples ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete - selecting EvadeDroid's malware samples after checking the validity of accessible malware  samples ~~~~~~~~~~~~~~~~~~~")
     
     if accessible_inaccessible_datset_preparation == True:
-        print("~~~~~~~~~~~~~~~~~~~ Start check accessible and inaccessible datasets preparation ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Start - determining accessible and inaccessible datasets preparation ~~~~~~~~~~~~~~~~~~~")
         feature_set.determine_smaples_accessible_inaccessible()
-        print("~~~~~~~~~~~~~~~~~~~ Complete check accessible and inaccessible datasets preparation ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete - determining accessible and inaccessible datasets preparation ~~~~~~~~~~~~~~~~~~~")
     
     if mamadroid_feature_extraction == True:
-        print("~~~~~~~~~~~~~~~~~~~ Start feature extraction for MaMaDroid ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Start - feature extraction for MaMaDroid ~~~~~~~~~~~~~~~~~~~")
         feature_set.extract_mamadriod_features()
-        print("~~~~~~~~~~~~~~~~~~~ Complete feature extraction for MaMaDroid ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete - feature extraction for MaMaDroid ~~~~~~~~~~~~~~~~~~~")
     if n_gram_feature_extraction == True:
-        print("~~~~~~~~~~~~~~~~~~~ Start n-gram feature extraction ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Start - n-gram-based feature extraction ~~~~~~~~~~~~~~~~~~~")
         feature_set.extract_n_gram_features()
-        print("~~~~~~~~~~~~~~~~~~~ Complete n-gram feature extraction ~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~ Complete - n-gram-based feature extraction ~~~~~~~~~~~~~~~~~~~")
         
     if create_action_set == True:
         start = timeit.timeit()          
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start - preparing action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start - preparing action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         donors_path = os.path.join(config['stored_components'],'donors.p')
         if os.path.exists(donors_path) == True:
             with open(donors_path,'rb') as f:
@@ -109,16 +109,16 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         end = timeit.timeit()
         print("elapsed time:" + str(end - start))
         utils.perform_logging("elapsed time:" + str(end - start))    
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete - preparing action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete - preparing action set ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("Next component ...")
   
     if roc_curve == True:
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start ROC analysis ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")       
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start - ROC analysis ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start - ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")       
         models.create_roc_curve()                
-        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete - ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~ Complete - ROC analysis  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("Next component ...")
     
     X = list()

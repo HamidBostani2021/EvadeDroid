@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul 19 09:51:10 2021
-
-@author: HamidBostani
+The data structure of EvadeDroid's output 
 """
 
 

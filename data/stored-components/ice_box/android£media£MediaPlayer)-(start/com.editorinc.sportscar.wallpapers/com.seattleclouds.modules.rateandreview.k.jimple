@@ -1,0 +1,71 @@
+class com.seattleclouds.modules.rateandreview.k extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.rateandreview.e a;
+
+    void <init>(com.seattleclouds.modules.rateandreview.e)
+    {
+        com.seattleclouds.modules.rateandreview.k $r0;
+        com.seattleclouds.modules.rateandreview.e $r1;
+
+        $r0 := @this: com.seattleclouds.modules.rateandreview.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.rateandreview.e;
+
+        $r0.<com.seattleclouds.modules.rateandreview.k: com.seattleclouds.modules.rateandreview.e a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.rateandreview.k $r0;
+        int $i0;
+        com.seattleclouds.modules.rateandreview.e $r1;
+        android.view.View $r2;
+        android.widget.LinearLayout $r3;
+        android.widget.TextView $r4;
+        android.support.v4.app.ac $r5;
+        android.content.res.Resources $r6;
+        java.lang.String $r7;
+
+        $r0 := @this: com.seattleclouds.modules.rateandreview.k;
+
+        $r1 = $r0.<com.seattleclouds.modules.rateandreview.k: com.seattleclouds.modules.rateandreview.e a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.rateandreview.e: android.view.View d(com.seattleclouds.modules.rateandreview.e)>($r1);
+
+        $i0 = <com.seattleclouds.h: int rateandreview_result_layout_bottom_btn2>;
+
+        $r2 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.LinearLayout) $r2;
+
+        virtualinvoke $r3.<android.widget.LinearLayout: void setVisibility(int)>(4);
+
+        $r1 = $r0.<com.seattleclouds.modules.rateandreview.k: com.seattleclouds.modules.rateandreview.e a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.rateandreview.e: android.view.View d(com.seattleclouds.modules.rateandreview.e)>($r1);
+
+        $i0 = <com.seattleclouds.h: int rateandreview_label_statusconnect>;
+
+        $r2 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r2;
+
+        $r1 = $r0.<com.seattleclouds.modules.rateandreview.k: com.seattleclouds.modules.rateandreview.e a>;
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.modules.rateandreview.e: android.support.v4.app.ac n()>();
+
+        $r6 = virtualinvoke $r5.<android.support.v4.app.ac: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.l: int rateandreview_status>;
+
+        $r7 = virtualinvoke $r6.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r4.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        return;
+    }
+}

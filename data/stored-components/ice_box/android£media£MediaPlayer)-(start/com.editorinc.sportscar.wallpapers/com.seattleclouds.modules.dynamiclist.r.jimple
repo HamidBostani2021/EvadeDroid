@@ -1,0 +1,330 @@
+public class com.seattleclouds.modules.dynamiclist.r extends java.lang.Object
+{
+    private java.lang.String a;
+    private int b;
+    private java.lang.String c;
+    private java.lang.String d;
+    private java.lang.String e;
+    private int f;
+    private java.lang.String g;
+    private java.lang.String h;
+    private java.lang.String i;
+    private int j;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: int j> = 2;
+
+        return;
+    }
+
+    public int a()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        i0 = $r0.<com.seattleclouds.modules.dynamiclist.r: int b>;
+
+        return i0;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r a(int)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: int b> = $i0;
+
+        return $r0;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r a(java.lang.String)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String a> = $r1;
+
+        return $r0;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r b(int)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: int f> = $i0;
+
+        return $r0;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r b(java.lang.String)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String c> = $r1;
+
+        return $r0;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        r1 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String c>;
+
+        return r1;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r c(int)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: int j> = $i0;
+
+        return $r0;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r c(java.lang.String)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String d> = $r1;
+
+        return $r0;
+    }
+
+    public java.lang.String c()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        r1 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String d>;
+
+        return r1;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r d(java.lang.String)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String e> = $r1;
+
+        return $r0;
+    }
+
+    public java.lang.String d()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        r1 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String e>;
+
+        return r1;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r e(java.lang.String)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String g> = $r1;
+
+        return $r0;
+    }
+
+    public java.lang.String e()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        r1 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String g>;
+
+        return r1;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r f(java.lang.String)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String h> = $r1;
+
+        return $r0;
+    }
+
+    public java.lang.String f()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        r1 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String h>;
+
+        return r1;
+    }
+
+    public com.seattleclouds.modules.dynamiclist.r g(java.lang.String)
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String i> = $r1;
+
+        return $r0;
+    }
+
+    public java.lang.String g()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        r1 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String i>;
+
+        return r1;
+    }
+
+    public int h()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        i0 = $r0.<com.seattleclouds.modules.dynamiclist.r: int j>;
+
+        return i0;
+    }
+
+    public java.lang.String toString()
+    {
+        com.seattleclouds.modules.dynamiclist.r $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.r;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("DynamicListItem [section=");
+
+        $r2 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String a>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", style=");
+
+        $r2 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String c>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", text=");
+
+        $r2 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String d>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", detailText=");
+
+        $r2 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String e>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", detailTextLines=");
+
+        $i0 = $r0.<com.seattleclouds.modules.dynamiclist.r: int f>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", action=");
+
+        $r2 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String g>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", actionParam=");
+
+        $r2 = $r0.<com.seattleclouds.modules.dynamiclist.r: java.lang.String h>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", type=");
+
+        $i0 = $r0.<com.seattleclouds.modules.dynamiclist.r: int j>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("]");
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+}

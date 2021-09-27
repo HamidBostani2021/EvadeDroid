@@ -1,0 +1,301 @@
+public class nic.cabbage_ifc.Demo extends android.app.Activity
+{
+    long Delay;
+    private android.widget.Button btnNext;
+    private android.widget.Button btnSkip;
+    private android.widget.TextView[] dots;
+    private android.widget.LinearLayout dotsLayout;
+    private int[] layouts;
+    private nic.cabbage_ifc.Demo$MyViewPagerAdapter myViewPagerAdapter;
+    private nic.cabbage_ifc.PrefManager prefManager;
+    private android.support.v4.view.ViewPager viewPager;
+    android.support.v4.view.ViewPager$OnPageChangeListener viewPagerPageChangeListener;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        nic.cabbage_ifc.Demo $r0;
+        nic.cabbage_ifc.Demo$1 $r1;
+
+        $r0 := @this: nic.cabbage_ifc.Demo;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r0.<nic.cabbage_ifc.Demo: long Delay> = 5000L;
+
+        $r1 = new nic.cabbage_ifc.Demo$1;
+
+        specialinvoke $r1.<nic.cabbage_ifc.Demo$1: void <init>(nic.cabbage_ifc.Demo)>($r0);
+
+        $r0.<nic.cabbage_ifc.Demo: android.support.v4.view.ViewPager$OnPageChangeListener viewPagerPageChangeListener> = $r1;
+
+        return;
+    }
+
+    static int[] access$0(nic.cabbage_ifc.Demo)
+    {
+        nic.cabbage_ifc.Demo $r0;
+        int[] r1;
+
+        $r0 := @parameter0: nic.cabbage_ifc.Demo;
+
+        r1 = $r0.<nic.cabbage_ifc.Demo: int[] layouts>;
+
+        return r1;
+    }
+
+    static android.widget.Button access$1(nic.cabbage_ifc.Demo)
+    {
+        nic.cabbage_ifc.Demo $r0;
+        android.widget.Button r1;
+
+        $r0 := @parameter0: nic.cabbage_ifc.Demo;
+
+        r1 = $r0.<nic.cabbage_ifc.Demo: android.widget.Button btnNext>;
+
+        return r1;
+    }
+
+    static android.widget.Button access$2(nic.cabbage_ifc.Demo)
+    {
+        nic.cabbage_ifc.Demo $r0;
+        android.widget.Button r1;
+
+        $r0 := @parameter0: nic.cabbage_ifc.Demo;
+
+        r1 = $r0.<nic.cabbage_ifc.Demo: android.widget.Button btnSkip>;
+
+        return r1;
+    }
+
+    static void access$3(nic.cabbage_ifc.Demo)
+    {
+        nic.cabbage_ifc.Demo $r0;
+
+        $r0 := @parameter0: nic.cabbage_ifc.Demo;
+
+        specialinvoke $r0.<nic.cabbage_ifc.Demo: void launchHomeScreen()>();
+
+        return;
+    }
+
+    static int access$4(nic.cabbage_ifc.Demo, int)
+    {
+        nic.cabbage_ifc.Demo $r0;
+        int $i0;
+
+        $r0 := @parameter0: nic.cabbage_ifc.Demo;
+
+        $i0 := @parameter1: int;
+
+        $i0 = specialinvoke $r0.<nic.cabbage_ifc.Demo: int getItem(int)>(1);
+
+        return $i0;
+    }
+
+    static android.support.v4.view.ViewPager access$5(nic.cabbage_ifc.Demo)
+    {
+        nic.cabbage_ifc.Demo $r0;
+        android.support.v4.view.ViewPager r1;
+
+        $r0 := @parameter0: nic.cabbage_ifc.Demo;
+
+        r1 = $r0.<nic.cabbage_ifc.Demo: android.support.v4.view.ViewPager viewPager>;
+
+        return r1;
+    }
+
+    private int getItem(int)
+    {
+        nic.cabbage_ifc.Demo $r0;
+        int $i0, $i1;
+        android.support.v4.view.ViewPager $r1;
+
+        $r0 := @this: nic.cabbage_ifc.Demo;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<nic.cabbage_ifc.Demo: android.support.v4.view.ViewPager viewPager>;
+
+        $i1 = virtualinvoke $r1.<android.support.v4.view.ViewPager: int getCurrentItem()>();
+
+        $i0 = $i1 + 1;
+
+        return $i0;
+    }
+
+    private void launchHomeScreen()
+    {
+        nic.cabbage_ifc.Demo $r0;
+        nic.cabbage_ifc.PrefManager $r1;
+        android.content.Intent $r2;
+
+        $r0 := @this: nic.cabbage_ifc.Demo;
+
+        $r1 = $r0.<nic.cabbage_ifc.Demo: nic.cabbage_ifc.PrefManager prefManager>;
+
+        virtualinvoke $r1.<nic.cabbage_ifc.PrefManager: void setFirstTimeLaunch(boolean)>(0);
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lnic/cabbage_ifc/Home;");
+
+        virtualinvoke $r0.<nic.cabbage_ifc.Demo: void startActivity(android.content.Intent)>($r2);
+
+        virtualinvoke $r0.<nic.cabbage_ifc.Demo: void finish()>();
+
+        return;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        nic.cabbage_ifc.Demo $r0;
+        android.os.Bundle $r1;
+        nic.cabbage_ifc.PrefManager $r2;
+        boolean $z0;
+        int $i0;
+        android.view.View $r3;
+        android.support.v4.view.ViewPager $r4;
+        android.widget.Button $r5;
+        int[] $r6;
+        nic.cabbage_ifc.Demo$MyViewPagerAdapter $r7;
+        android.support.v4.view.ViewPager$OnPageChangeListener $r8;
+        nic.cabbage_ifc.Demo$2 $r9;
+        nic.cabbage_ifc.Demo$3 $r10;
+
+        $r0 := @this: nic.cabbage_ifc.Demo;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        $r2 = new nic.cabbage_ifc.PrefManager;
+
+        specialinvoke $r2.<nic.cabbage_ifc.PrefManager: void <init>(android.content.Context)>($r0);
+
+        $r0.<nic.cabbage_ifc.Demo: nic.cabbage_ifc.PrefManager prefManager> = $r2;
+
+        $r2 = $r0.<nic.cabbage_ifc.Demo: nic.cabbage_ifc.PrefManager prefManager>;
+
+        $z0 = virtualinvoke $r2.<nic.cabbage_ifc.PrefManager: boolean isFirstTimeLaunch()>();
+
+        if $z0 != 0 goto label1;
+
+        specialinvoke $r0.<nic.cabbage_ifc.Demo: void launchHomeScreen()>();
+
+        virtualinvoke $r0.<nic.cabbage_ifc.Demo: void finish()>();
+
+     label1:
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        virtualinvoke $r0.<nic.cabbage_ifc.Demo: void setContentView(int)>(2130903041);
+
+        $r3 = virtualinvoke $r0.<nic.cabbage_ifc.Demo: android.view.View findViewById(int)>(2131296261);
+
+        $r4 = (android.support.v4.view.ViewPager) $r3;
+
+        $r0.<nic.cabbage_ifc.Demo: android.support.v4.view.ViewPager viewPager> = $r4;
+
+        $r3 = virtualinvoke $r0.<nic.cabbage_ifc.Demo: android.view.View findViewById(int)>(2131296263);
+
+        $r5 = (android.widget.Button) $r3;
+
+        $r0.<nic.cabbage_ifc.Demo: android.widget.Button btnSkip> = $r5;
+
+        $r3 = virtualinvoke $r0.<nic.cabbage_ifc.Demo: android.view.View findViewById(int)>(2131296262);
+
+        $r5 = (android.widget.Button) $r3;
+
+        $r0.<nic.cabbage_ifc.Demo: android.widget.Button btnNext> = $r5;
+
+        $r6 = newarray (int)[3];
+
+        $r6[0] = 2130903048;
+
+        $r6[1] = 2130903049;
+
+        $r6[2] = 2130903050;
+
+        $r0.<nic.cabbage_ifc.Demo: int[] layouts> = $r6;
+
+        $r7 = new nic.cabbage_ifc.Demo$MyViewPagerAdapter;
+
+        specialinvoke $r7.<nic.cabbage_ifc.Demo$MyViewPagerAdapter: void <init>(nic.cabbage_ifc.Demo)>($r0);
+
+        $r0.<nic.cabbage_ifc.Demo: nic.cabbage_ifc.Demo$MyViewPagerAdapter myViewPagerAdapter> = $r7;
+
+        $r4 = $r0.<nic.cabbage_ifc.Demo: android.support.v4.view.ViewPager viewPager>;
+
+        $r7 = $r0.<nic.cabbage_ifc.Demo: nic.cabbage_ifc.Demo$MyViewPagerAdapter myViewPagerAdapter>;
+
+        virtualinvoke $r4.<android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)>($r7);
+
+        $r4 = $r0.<nic.cabbage_ifc.Demo: android.support.v4.view.ViewPager viewPager>;
+
+        $r8 = $r0.<nic.cabbage_ifc.Demo: android.support.v4.view.ViewPager$OnPageChangeListener viewPagerPageChangeListener>;
+
+        virtualinvoke $r4.<android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)>($r8);
+
+        $r5 = $r0.<nic.cabbage_ifc.Demo: android.widget.Button btnSkip>;
+
+        $r9 = new nic.cabbage_ifc.Demo$2;
+
+        specialinvoke $r9.<nic.cabbage_ifc.Demo$2: void <init>(nic.cabbage_ifc.Demo)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r9);
+
+        $r5 = $r0.<nic.cabbage_ifc.Demo: android.widget.Button btnNext>;
+
+        $r10 = new nic.cabbage_ifc.Demo$3;
+
+        specialinvoke $r10.<nic.cabbage_ifc.Demo$3: void <init>(nic.cabbage_ifc.Demo)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r10);
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        nic.cabbage_ifc.Demo this;
+        android.content.Intent $r0;
+
+        this := @this: nic.cabbage_ifc.Demo;
+
+        $r0 = this.<nic.cabbage_ifc.Demo: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        nic.cabbage_ifc.Demo this;
+        android.content.Intent parameter0;
+
+        this := @this: nic.cabbage_ifc.Demo;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<nic.cabbage_ifc.Demo: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        nic.cabbage_ifc.Demo this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: nic.cabbage_ifc.Demo;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<nic.cabbage_ifc.Demo: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

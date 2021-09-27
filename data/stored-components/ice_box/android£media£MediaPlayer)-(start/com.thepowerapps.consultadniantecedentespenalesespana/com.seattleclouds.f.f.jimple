@@ -1,0 +1,73 @@
+class com.seattleclouds.f.f extends android.view.GestureDetector$SimpleOnGestureListener
+{
+    final com.seattleclouds.f.j a;
+    final com.seattleclouds.f.e b;
+
+    void <init>(com.seattleclouds.f.e, com.seattleclouds.f.j)
+    {
+        com.seattleclouds.f.f $r0;
+        com.seattleclouds.f.e $r1;
+        com.seattleclouds.f.j $r2;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: com.seattleclouds.f.e;
+
+        $r2 := @parameter1: com.seattleclouds.f.j;
+
+        $r0.<com.seattleclouds.f.f: com.seattleclouds.f.e b> = $r1;
+
+        $r0.<com.seattleclouds.f.f: com.seattleclouds.f.j a> = $r2;
+
+        specialinvoke $r0.<android.view.GestureDetector$SimpleOnGestureListener: void <init>()>();
+
+        return;
+    }
+
+    public boolean onDoubleTap(android.view.MotionEvent)
+    {
+        com.seattleclouds.f.f $r0;
+        android.view.MotionEvent $r1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        return 1;
+    }
+
+    public boolean onDoubleTapEvent(android.view.MotionEvent)
+    {
+        com.seattleclouds.f.f $r0;
+        android.view.MotionEvent $r1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        return 1;
+    }
+
+    public boolean onSingleTapUp(android.view.MotionEvent)
+    {
+        com.seattleclouds.f.f $r0;
+        android.view.MotionEvent $r1;
+        long $l0;
+        com.seattleclouds.f.e $r2;
+        com.seattleclouds.f.j $r3;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $r2 = $r0.<com.seattleclouds.f.f: com.seattleclouds.f.e b>;
+
+        $r3 = $r2.<com.seattleclouds.f.e: com.seattleclouds.f.j a>;
+
+        $l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        staticinvoke <com.seattleclouds.f.j: long a(com.seattleclouds.f.j,long)>($r3, $l0);
+
+        return 0;
+    }
+}

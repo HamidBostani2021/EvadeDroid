@@ -1,0 +1,453 @@
+public class com.seattleclouds.e.e extends java.lang.Object
+{
+    private static final java.lang.String a;
+    private java.util.HashMap b;
+    private java.lang.String c;
+    private java.lang.String d;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/e/e;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.e.e: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.e.e $r0;
+        java.util.HashMap $r1;
+
+        $r0 := @this: com.seattleclouds.e.e;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new java.util.HashMap;
+
+        specialinvoke $r1.<java.util.HashMap: void <init>()>();
+
+        $r0.<com.seattleclouds.e.e: java.util.HashMap b> = $r1;
+
+        return;
+    }
+
+    private com.seattleclouds.e.a a(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.e.e $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        java.lang.String $r2;
+        boolean $z0;
+        com.seattleclouds.e.a $r3, r6;
+        java.util.HashMap $r4;
+        com.seattleclouds.e.f r5;
+
+        $r0 := @this: com.seattleclouds.e.e;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $r2 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>(null, "name");
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        return null;
+
+     label1:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("Theme.");
+
+        if $z0 == 0 goto label4;
+
+        r5 = new com.seattleclouds.e.f;
+
+        $r3 = r5;
+
+        specialinvoke r5.<com.seattleclouds.e.f: void <init>(java.lang.String)>($r2);
+
+     label2:
+        $r2 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>(null, "parent");
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r2);
+
+        if $z0 != 0 goto label3;
+
+        virtualinvoke $r3.<com.seattleclouds.e.a: void b(java.lang.String)>($r2);
+
+     label3:
+        $r4 = $r0.<com.seattleclouds.e.e: java.util.HashMap b>;
+
+        virtualinvoke $r3.<com.seattleclouds.e.a: void a(java.util.Map)>($r4);
+
+        return $r3;
+
+     label4:
+        r6 = new com.seattleclouds.e.a;
+
+        $r3 = r6;
+
+        specialinvoke r6.<com.seattleclouds.e.a: void <init>(java.lang.String)>($r2);
+
+        goto label2;
+    }
+
+    private java.lang.String b(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.e.e $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        java.lang.String $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.e.e;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $r2 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>(null, "name");
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        return null;
+
+     label1:
+        return $r2;
+    }
+
+    private void c(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.e.e $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        java.lang.String $r2, $r4;
+        boolean $z0;
+        java.util.HashMap $r3;
+        java.lang.Object $r5;
+        com.seattleclouds.e.a $r6;
+        int $i0;
+        java.lang.Throwable $r7;
+        java.lang.StringBuilder $r8;
+
+        $r0 := @this: com.seattleclouds.e.e;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $r2 = $r0.<com.seattleclouds.e.e: java.lang.String d>;
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getText()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r2);
+
+        if $z0 != 0 goto label6;
+
+        $r3 = $r0.<com.seattleclouds.e.e: java.util.HashMap b>;
+
+        $r4 = $r0.<com.seattleclouds.e.e: java.lang.String c>;
+
+        $r5 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r4);
+
+        $r6 = (com.seattleclouds.e.a) $r5;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("@style/");
+
+        if $z0 == 0 goto label2;
+
+        $r4 = $r0.<com.seattleclouds.e.e: java.lang.String d>;
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String substring(int)>(7);
+
+        virtualinvoke $r6.<com.seattleclouds.e.a: void a(java.lang.String,java.lang.String)>($r4, $r2);
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("#");
+
+        if $z0 == 0 goto label6;
+
+        $r4 = $r0.<com.seattleclouds.e.e: java.lang.String d>;
+
+     label3:
+        $i0 = staticinvoke <android.graphics.Color: int parseColor(java.lang.String)>($r2);
+
+        virtualinvoke $r6.<com.seattleclouds.e.a: void a(java.lang.String,int)>($r4, $i0);
+
+     label4:
+        return;
+
+     label5:
+        $r7 := @caughtexception;
+
+        $r4 = <com.seattleclouds.e.e: java.lang.String a>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Invalid color: ");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" in item: ");
+
+        $r2 = $r0.<com.seattleclouds.e.e: java.lang.String d>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" of style: ");
+
+        $r2 = $r0.<com.seattleclouds.e.e: java.lang.String c>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r4, $r2);
+
+     label6:
+        return;
+
+        catch java.lang.IllegalArgumentException from label3 to label4 with label5;
+    }
+
+    public java.util.Map a()
+    {
+        com.seattleclouds.e.e $r0;
+        java.io.InputStream $r1;
+        java.util.Map $r2;
+        java.util.HashMap r3;
+
+        $r0 := @this: com.seattleclouds.e.e;
+
+        $r1 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>("appStyles.xml");
+
+        if $r1 != null goto label1;
+
+        r3 = $r0.<com.seattleclouds.e.e: java.util.HashMap b>;
+
+        return r3;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.e.e: java.util.Map a(java.io.InputStream)>($r1);
+
+        return $r2;
+    }
+
+    public java.util.Map a(java.io.InputStream)
+    {
+        com.seattleclouds.e.e $r0;
+        java.io.InputStream $r1;
+        org.xmlpull.v1.XmlPullParserFactory $r2;
+        org.xmlpull.v1.XmlPullParser $r3;
+        java.io.InputStreamReader $r4, r12;
+        int $i0;
+        java.lang.String $r5, $r10;
+        boolean $z0;
+        com.seattleclouds.e.a $r6;
+        java.util.HashMap $r7;
+        org.xmlpull.v1.XmlPullParserException $r8;
+        java.lang.StringBuilder $r9, r13;
+        java.lang.Throwable $r11;
+        java.io.IOException r14;
+
+        $r0 := @this: com.seattleclouds.e.e;
+
+        $r1 := @parameter0: java.io.InputStream;
+
+     label01:
+        $r2 = staticinvoke <org.xmlpull.v1.XmlPullParserFactory: org.xmlpull.v1.XmlPullParserFactory newInstance()>();
+
+        virtualinvoke $r2.<org.xmlpull.v1.XmlPullParserFactory: void setNamespaceAware(boolean)>(1);
+
+        $r3 = virtualinvoke $r2.<org.xmlpull.v1.XmlPullParserFactory: org.xmlpull.v1.XmlPullParser newPullParser()>();
+
+     label02:
+        r12 = new java.io.InputStreamReader;
+
+        $r4 = r12;
+
+     label03:
+        specialinvoke r12.<java.io.InputStreamReader: void <init>(java.io.InputStream,java.lang.String)>($r1, "UTF-8");
+
+        interfaceinvoke $r3.<org.xmlpull.v1.XmlPullParser: void setInput(java.io.Reader)>($r4);
+
+        $i0 = interfaceinvoke $r3.<org.xmlpull.v1.XmlPullParser: int getEventType()>();
+
+     label04:
+        if $i0 == 1 goto label16;
+
+        lookupswitch($i0)
+        {
+            case 0: goto label05;
+            case 1: goto label05;
+            case 2: goto label07;
+            case 3: goto label23;
+            case 4: goto label27;
+            default: goto label05;
+        };
+
+     label05:
+        $i0 = interfaceinvoke $r3.<org.xmlpull.v1.XmlPullParser: int next()>();
+
+     label06:
+        goto label04;
+
+     label07:
+        $r5 = interfaceinvoke $r3.<org.xmlpull.v1.XmlPullParser: java.lang.String getName()>();
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("style");
+
+     label08:
+        if $z0 == 0 goto label17;
+
+     label09:
+        $r6 = specialinvoke $r0.<com.seattleclouds.e.e: com.seattleclouds.e.a a(org.xmlpull.v1.XmlPullParser)>($r3);
+
+     label10:
+        if $r6 == null goto label05;
+
+     label11:
+        $r5 = virtualinvoke $r6.<com.seattleclouds.e.a: java.lang.String a()>();
+
+     label12:
+        $r0.<com.seattleclouds.e.e: java.lang.String c> = $r5;
+
+        $r7 = $r0.<com.seattleclouds.e.e: java.util.HashMap b>;
+
+     label13:
+        $r5 = virtualinvoke $r6.<com.seattleclouds.e.a: java.lang.String a()>();
+
+        virtualinvoke $r7.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r5, $r6);
+
+     label14:
+        goto label05;
+
+     label15:
+        $r8 := @caughtexception;
+
+        $r5 = <com.seattleclouds.e.e: java.lang.String a>;
+
+        r13 = new java.lang.StringBuilder;
+
+        specialinvoke r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error parsing styles config file: ");
+
+        $r10 = virtualinvoke $r8.<org.xmlpull.v1.XmlPullParserException: java.lang.String toString()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r10 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r5, $r10, $r8);
+
+     label16:
+        $r7 = $r0.<com.seattleclouds.e.e: java.util.HashMap b>;
+
+        return $r7;
+
+     label17:
+        $r10 = $r0.<com.seattleclouds.e.e: java.lang.String c>;
+
+        if $r10 == null goto label05;
+
+     label18:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("item");
+
+     label19:
+        if $z0 == 0 goto label05;
+
+     label20:
+        $r5 = specialinvoke $r0.<com.seattleclouds.e.e: java.lang.String b(org.xmlpull.v1.XmlPullParser)>($r3);
+
+     label21:
+        $r0.<com.seattleclouds.e.e: java.lang.String d> = $r5;
+
+        goto label05;
+
+     label22:
+        $r11 := @caughtexception;
+
+        $r5 = <com.seattleclouds.e.e: java.lang.String a>;
+
+        r13 = new java.lang.StringBuilder;
+
+        specialinvoke r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error parsing styles config file: ");
+
+        r14 = (java.io.IOException) $r11;
+
+        $r10 = virtualinvoke r14.<java.io.IOException: java.lang.String toString()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r10 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r5, $r10, $r11);
+
+        goto label16;
+
+     label23:
+        $r5 = interfaceinvoke $r3.<org.xmlpull.v1.XmlPullParser: java.lang.String getName()>();
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("style");
+
+     label24:
+        if $z0 == 0 goto label25;
+
+        $r0.<com.seattleclouds.e.e: java.lang.String c> = null;
+
+        goto label05;
+
+     label25:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("item");
+
+     label26:
+        if $z0 == 0 goto label05;
+
+        $r0.<com.seattleclouds.e.e: java.lang.String d> = null;
+
+        goto label05;
+
+     label27:
+        specialinvoke $r0.<com.seattleclouds.e.e: void c(org.xmlpull.v1.XmlPullParser)>($r3);
+
+     label28:
+        goto label05;
+
+        catch org.xmlpull.v1.XmlPullParserException from label01 to label02 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label03 to label04 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label05 to label06 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label07 to label08 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label09 to label10 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label11 to label12 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label13 to label14 with label15;
+        catch java.io.IOException from label01 to label02 with label22;
+        catch java.io.IOException from label03 to label04 with label22;
+        catch java.io.IOException from label05 to label06 with label22;
+        catch java.io.IOException from label07 to label08 with label22;
+        catch java.io.IOException from label09 to label10 with label22;
+        catch java.io.IOException from label11 to label12 with label22;
+        catch java.io.IOException from label13 to label14 with label22;
+        catch org.xmlpull.v1.XmlPullParserException from label18 to label19 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label20 to label21 with label15;
+        catch java.io.IOException from label18 to label19 with label22;
+        catch java.io.IOException from label20 to label21 with label22;
+        catch org.xmlpull.v1.XmlPullParserException from label23 to label24 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label25 to label26 with label15;
+        catch org.xmlpull.v1.XmlPullParserException from label27 to label28 with label15;
+        catch java.io.IOException from label23 to label24 with label22;
+        catch java.io.IOException from label25 to label26 with label22;
+        catch java.io.IOException from label27 to label28 with label22;
+    }
+}

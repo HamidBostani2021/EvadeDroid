@@ -1,0 +1,92 @@
+class com.seattleclouds.as extends java.lang.Object implements com.seattleclouds.aw
+{
+    final android.view.View a;
+    final com.seattleclouds.ap b;
+
+    void <init>(com.seattleclouds.ap, android.view.View)
+    {
+        com.seattleclouds.as $r0;
+        com.seattleclouds.ap $r1;
+        android.view.View $r2;
+
+        $r0 := @this: com.seattleclouds.as;
+
+        $r1 := @parameter0: com.seattleclouds.ap;
+
+        $r2 := @parameter1: android.view.View;
+
+        $r0.<com.seattleclouds.as: com.seattleclouds.ap b> = $r1;
+
+        $r0.<com.seattleclouds.as: android.view.View a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.as $r0;
+        android.view.View $r1;
+        android.widget.FrameLayout $r2;
+        com.seattleclouds.ap $r3;
+        android.support.v4.app.aj $r4;
+        android.support.v4.app.ax $r5;
+        android.support.v4.app.ac $r6;
+        com.seattleclouds.FragmentInfo $r7;
+        java.lang.String $r8;
+        android.os.Bundle $r9;
+        android.support.v4.app.Fragment $r10;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.as;
+
+        $r1 = $r0.<com.seattleclouds.as: android.view.View a>;
+
+        $r2 = (android.widget.FrameLayout) $r1;
+
+        virtualinvoke $r2.<android.widget.FrameLayout: void removeAllViews()>();
+
+        $r3 = $r0.<com.seattleclouds.as: com.seattleclouds.ap b>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.ap: android.support.v4.app.aj q()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $r3 = $r0.<com.seattleclouds.as: com.seattleclouds.ap b>;
+
+        $r6 = virtualinvoke $r3.<com.seattleclouds.ap: android.support.v4.app.ac n()>();
+
+        $r3 = $r0.<com.seattleclouds.as: com.seattleclouds.ap b>;
+
+        $r7 = staticinvoke <com.seattleclouds.ap: com.seattleclouds.FragmentInfo c(com.seattleclouds.ap)>($r3);
+
+        $r8 = virtualinvoke $r7.<com.seattleclouds.FragmentInfo: java.lang.String a()>();
+
+        $r3 = $r0.<com.seattleclouds.as: com.seattleclouds.ap b>;
+
+        $r7 = staticinvoke <com.seattleclouds.ap: com.seattleclouds.FragmentInfo c(com.seattleclouds.ap)>($r3);
+
+        $r9 = virtualinvoke $r7.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+        $r10 = staticinvoke <android.support.v4.app.Fragment: android.support.v4.app.Fragment a(android.content.Context,java.lang.String,android.os.Bundle)>($r6, $r8, $r9);
+
+        $i0 = <com.seattleclouds.h: int fragment_frame>;
+
+        virtualinvoke $r5.<android.support.v4.app.ax: android.support.v4.app.ax b(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r10, "resourceDownloader");
+
+        virtualinvoke $r5.<android.support.v4.app.ax: int b()>();
+
+        $r3 = $r0.<com.seattleclouds.as: com.seattleclouds.ap b>;
+
+        $r1 = $r0.<com.seattleclouds.as: android.view.View a>;
+
+        staticinvoke <com.seattleclouds.ap: void a(com.seattleclouds.ap,android.view.View,com.seattleclouds.aw)>($r3, $r1, null);
+
+        $r3 = $r0.<com.seattleclouds.as: com.seattleclouds.ap b>;
+
+        virtualinvoke $r3.<com.seattleclouds.ap: void a(android.support.v4.app.Fragment)>($r10);
+
+        return;
+    }
+}

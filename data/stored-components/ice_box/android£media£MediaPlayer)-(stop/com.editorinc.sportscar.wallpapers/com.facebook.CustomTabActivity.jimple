@@ -1,0 +1,221 @@
+public class com.facebook.CustomTabActivity extends android.app.Activity
+{
+    public static final java.lang.String a;
+    public static final java.lang.String b;
+    private android.content.BroadcastReceiver c;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    static void <clinit>()
+    {
+        java.lang.StringBuilder $r0;
+        java.lang.Class $r1;
+        java.lang.String $r2;
+
+        $r0 = new java.lang.StringBuilder;
+
+        specialinvoke $r0.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = class "Lcom/facebook/CustomTabActivity;";
+
+        $r2 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".action_customTabRedirect");
+
+        $r2 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        <com.facebook.CustomTabActivity: java.lang.String a> = $r2;
+
+        $r0 = new java.lang.StringBuilder;
+
+        specialinvoke $r0.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = class "Lcom/facebook/CustomTabActivity;";
+
+        $r2 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".action_destroy");
+
+        $r2 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        <com.facebook.CustomTabActivity: java.lang.String b> = $r2;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.facebook.CustomTabActivity $r0;
+
+        $r0 := @this: com.facebook.CustomTabActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    protected void onActivityResult(int, int, android.content.Intent)
+    {
+        com.facebook.CustomTabActivity $r0;
+        int $i0, $i1;
+        android.content.Intent $r1, $r3;
+        java.lang.String $r2, $r4;
+        android.support.v4.content.q $r5;
+        com.facebook.m $r6;
+        android.content.BroadcastReceiver $r7;
+        android.content.IntentFilter $r8;
+
+        $r0 := @this: com.facebook.CustomTabActivity;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        specialinvoke $r0.<android.app.Activity: void onActivityResult(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+        if $i1 != 0 goto label1;
+
+        $r1 = new android.content.Intent;
+
+        $r2 = <com.facebook.CustomTabActivity: java.lang.String a>;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(java.lang.String)>($r2);
+
+        $r2 = <com.facebook.CustomTabMainActivity: java.lang.String c>;
+
+        $r3 = virtualinvoke $r0.<com.facebook.CustomTabActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getDataString()>();
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>($r2, $r4);
+
+        $r5 = staticinvoke <android.support.v4.content.q: android.support.v4.content.q a(android.content.Context)>($r0);
+
+        virtualinvoke $r5.<android.support.v4.content.q: boolean a(android.content.Intent)>($r1);
+
+        $r6 = new com.facebook.m;
+
+        specialinvoke $r6.<com.facebook.m: void <init>(com.facebook.CustomTabActivity)>($r0);
+
+        $r0.<com.facebook.CustomTabActivity: android.content.BroadcastReceiver c> = $r6;
+
+        $r5 = staticinvoke <android.support.v4.content.q: android.support.v4.content.q a(android.content.Context)>($r0);
+
+        $r7 = $r0.<com.facebook.CustomTabActivity: android.content.BroadcastReceiver c>;
+
+        $r8 = new android.content.IntentFilter;
+
+        $r2 = <com.facebook.CustomTabActivity: java.lang.String b>;
+
+        specialinvoke $r8.<android.content.IntentFilter: void <init>(java.lang.String)>($r2);
+
+        virtualinvoke $r5.<android.support.v4.content.q: void a(android.content.BroadcastReceiver,android.content.IntentFilter)>($r7, $r8);
+
+     label1:
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.facebook.CustomTabActivity $r0;
+        android.os.Bundle $r1;
+        android.content.Intent $r2, $r4;
+        java.lang.String $r3, $r5;
+
+        $r0 := @this: com.facebook.CustomTabActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lcom/facebook/CustomTabMainActivity;");
+
+        $r3 = <com.facebook.CustomTabActivity: java.lang.String a>;
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setAction(java.lang.String)>($r3);
+
+        $r3 = <com.facebook.CustomTabMainActivity: java.lang.String c>;
+
+        $r4 = virtualinvoke $r0.<com.facebook.CustomTabActivity: android.content.Intent getIntent()>();
+
+        $r5 = virtualinvoke $r4.<android.content.Intent: java.lang.String getDataString()>();
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>($r3, $r5);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent addFlags(int)>(603979776);
+
+        virtualinvoke $r0.<com.facebook.CustomTabActivity: void startActivityForResult(android.content.Intent,int)>($r2, 2);
+
+        return;
+    }
+
+    protected void onDestroy()
+    {
+        com.facebook.CustomTabActivity $r0;
+        android.content.BroadcastReceiver $r1;
+        android.support.v4.content.q $r2;
+
+        $r0 := @this: com.facebook.CustomTabActivity;
+
+        $r2 = staticinvoke <android.support.v4.content.q: android.support.v4.content.q a(android.content.Context)>($r0);
+
+        $r1 = $r0.<com.facebook.CustomTabActivity: android.content.BroadcastReceiver c>;
+
+        virtualinvoke $r2.<android.support.v4.content.q: void a(android.content.BroadcastReceiver)>($r1);
+
+        specialinvoke $r0.<android.app.Activity: void onDestroy()>();
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.facebook.CustomTabActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.facebook.CustomTabActivity;
+
+        $r0 = this.<com.facebook.CustomTabActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.facebook.CustomTabActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.facebook.CustomTabActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.facebook.CustomTabActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.facebook.CustomTabActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.facebook.CustomTabActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.facebook.CustomTabActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

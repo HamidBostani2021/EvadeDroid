@@ -1,0 +1,57 @@
+final class com.revmob.internal.f extends java.lang.Object implements java.lang.Runnable
+{
+    private java.lang.String a;
+    private com.revmob.internal.e b;
+
+    void <init>(com.revmob.internal.e, java.lang.String)
+    {
+        com.revmob.internal.f $r0;
+        com.revmob.internal.e $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.revmob.internal.f;
+
+        $r1 := @parameter0: com.revmob.internal.e;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.revmob.internal.f: com.revmob.internal.e b> = $r1;
+
+        $r0.<com.revmob.internal.f: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public final void run()
+    {
+        com.revmob.internal.f $r0;
+        android.content.Intent $r1;
+        com.revmob.internal.e $r2;
+        android.app.Activity $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.revmob.internal.f;
+
+        $r1 = new android.content.Intent;
+
+        $r2 = $r0.<com.revmob.internal.f: com.revmob.internal.e b>;
+
+        $r3 = staticinvoke <com.revmob.internal.e: android.app.Activity a(com.revmob.internal.e)>($r2);
+
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r3, class "Lcom/revmob/FullscreenActivity;");
+
+        $r4 = $r0.<com.revmob.internal.f: java.lang.String a>;
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("marketURL", $r4);
+
+        $r2 = $r0.<com.revmob.internal.f: com.revmob.internal.e b>;
+
+        $r3 = staticinvoke <com.revmob.internal.e: android.app.Activity a(com.revmob.internal.e)>($r2);
+
+        virtualinvoke $r3.<android.app.Activity: void startActivityForResult(android.content.Intent,int)>($r1, 0);
+
+        return;
+    }
+}

@@ -1,0 +1,62 @@
+public class com.seattleclouds.modules.order.indiapay.c.d extends java.lang.Object
+{
+    private static com.seattleclouds.modules.order.indiapay.c.d a;
+    private com.seattleclouds.modules.order.indiapay.c.c b;
+
+    private void <init>()
+    {
+        com.seattleclouds.modules.order.indiapay.c.d $r0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.d;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.order.indiapay.c.d a()
+    {
+        com.seattleclouds.modules.order.indiapay.c.d $r0;
+
+        $r0 = <com.seattleclouds.modules.order.indiapay.c.d: com.seattleclouds.modules.order.indiapay.c.d a>;
+
+        if $r0 != null goto label1;
+
+        $r0 = new com.seattleclouds.modules.order.indiapay.c.d;
+
+        specialinvoke $r0.<com.seattleclouds.modules.order.indiapay.c.d: void <init>()>();
+
+        <com.seattleclouds.modules.order.indiapay.c.d: com.seattleclouds.modules.order.indiapay.c.d a> = $r0;
+
+     label1:
+        $r0 = <com.seattleclouds.modules.order.indiapay.c.d: com.seattleclouds.modules.order.indiapay.c.d a>;
+
+        return $r0;
+    }
+
+    public void a(com.seattleclouds.modules.order.indiapay.c.c)
+    {
+        com.seattleclouds.modules.order.indiapay.c.d $r0;
+        com.seattleclouds.modules.order.indiapay.c.c $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.d;
+
+        $r1 := @parameter0: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.d: com.seattleclouds.modules.order.indiapay.c.c b> = $r1;
+
+        return;
+    }
+
+    public com.seattleclouds.modules.order.indiapay.c.c b()
+    {
+        com.seattleclouds.modules.order.indiapay.c.d $r0;
+        com.seattleclouds.modules.order.indiapay.c.c r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.d;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.d: com.seattleclouds.modules.order.indiapay.c.c b>;
+
+        return r1;
+    }
+}

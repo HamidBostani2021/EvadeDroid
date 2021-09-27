@@ -1,0 +1,26 @@
+class com.seattleclouds.modules.j.a extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.j.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.j.a;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void lineTimesParsed(java.lang.String)
+    {
+        com.seattleclouds.modules.j.a $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.j.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        return;
+    }
+}

@@ -1,0 +1,305 @@
+public class com.seattleclouds.location.a extends java.lang.Object
+{
+    public static final android.location.Location a;
+    private final boolean b;
+    private boolean c;
+    private android.app.Activity d;
+    private com.seattleclouds.util.bi e;
+    private android.location.Geocoder f;
+
+    static void <clinit>()
+    {
+        android.location.Location $r0;
+
+        $r0 = new android.location.Location;
+
+        specialinvoke $r0.<android.location.Location: void <init>(java.lang.String)>("Code");
+
+        <com.seattleclouds.location.a: android.location.Location a> = $r0;
+
+        $r0 = <com.seattleclouds.location.a: android.location.Location a>;
+
+        virtualinvoke $r0.<android.location.Location: void setLatitude(double)>(1000.0);
+
+        $r0 = <com.seattleclouds.location.a: android.location.Location a>;
+
+        virtualinvoke $r0.<android.location.Location: void setLongitude(double)>(1000.0);
+
+        return;
+    }
+
+    public void <init>(android.app.Activity, com.seattleclouds.util.bi)
+    {
+        com.seattleclouds.location.a $r0;
+        android.app.Activity $r1;
+        com.seattleclouds.util.bi $r2;
+        java.util.Locale $r3;
+
+        $r0 := @this: com.seattleclouds.location.a;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: com.seattleclouds.util.bi;
+
+        $r3 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        specialinvoke $r0.<com.seattleclouds.location.a: void <init>(android.app.Activity,java.util.Locale,com.seattleclouds.util.bi)>($r1, $r3, $r2);
+
+        return;
+    }
+
+    public void <init>(android.app.Activity, java.util.Locale, com.seattleclouds.util.bi)
+    {
+        com.seattleclouds.location.a $r0;
+        android.app.Activity $r1;
+        java.util.Locale $r2;
+        com.seattleclouds.util.bi $r3;
+        android.location.Geocoder $r4;
+
+        $r0 := @this: com.seattleclouds.location.a;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: java.util.Locale;
+
+        $r3 := @parameter2: com.seattleclouds.util.bi;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.location.a: boolean b> = 0;
+
+        $r0.<com.seattleclouds.location.a: boolean c> = 0;
+
+        $r0.<com.seattleclouds.location.a: android.app.Activity d> = $r1;
+
+        $r0.<com.seattleclouds.location.a: com.seattleclouds.util.bi e> = $r3;
+
+        $r4 = new android.location.Geocoder;
+
+        specialinvoke $r4.<android.location.Geocoder: void <init>(android.content.Context,java.util.Locale)>($r1, $r2);
+
+        $r0.<com.seattleclouds.location.a: android.location.Geocoder f> = $r4;
+
+        return;
+    }
+
+    static android.location.Geocoder a(com.seattleclouds.location.a)
+    {
+        com.seattleclouds.location.a $r0;
+        android.location.Geocoder r1;
+
+        $r0 := @parameter0: com.seattleclouds.location.a;
+
+        r1 = $r0.<com.seattleclouds.location.a: android.location.Geocoder f>;
+
+        return r1;
+    }
+
+    private android.location.Location a(android.location.Address)
+    {
+        com.seattleclouds.location.a $r0;
+        android.location.Address $r1;
+        android.location.Location $r2;
+        double $d0;
+
+        $r0 := @this: com.seattleclouds.location.a;
+
+        $r1 := @parameter0: android.location.Address;
+
+        $r2 = new android.location.Location;
+
+        specialinvoke $r2.<android.location.Location: void <init>(java.lang.String)>("Code");
+
+        $d0 = virtualinvoke $r1.<android.location.Address: double getLatitude()>();
+
+        virtualinvoke $r2.<android.location.Location: void setLatitude(double)>($d0);
+
+        $d0 = virtualinvoke $r1.<android.location.Address: double getLongitude()>();
+
+        virtualinvoke $r2.<android.location.Location: void setLongitude(double)>($d0);
+
+        return $r2;
+    }
+
+    static android.location.Location a(com.seattleclouds.location.a, android.location.Address)
+    {
+        com.seattleclouds.location.a $r0;
+        android.location.Address $r1;
+        android.location.Location $r2;
+
+        $r0 := @parameter0: com.seattleclouds.location.a;
+
+        $r1 := @parameter1: android.location.Address;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.location.a: android.location.Location a(android.location.Address)>($r1);
+
+        return $r2;
+    }
+
+    static void a(com.seattleclouds.location.a, java.lang.Object)
+    {
+        com.seattleclouds.location.a $r0;
+        java.lang.Object $r1;
+
+        $r0 := @parameter0: com.seattleclouds.location.a;
+
+        $r1 := @parameter1: java.lang.Object;
+
+        specialinvoke $r0.<com.seattleclouds.location.a: void a(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    private void a(java.lang.Object)
+    {
+        com.seattleclouds.location.a $r0;
+        java.lang.Object $r1;
+        com.seattleclouds.location.q $r2;
+        android.app.Activity $r3;
+        com.seattleclouds.util.bi $r4;
+
+        $r0 := @this: com.seattleclouds.location.a;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r3 = $r0.<com.seattleclouds.location.a: android.app.Activity d>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.location.a: android.app.Activity d>;
+
+        $r2 = new com.seattleclouds.location.q;
+
+        specialinvoke $r2.<com.seattleclouds.location.q: void <init>(com.seattleclouds.location.a,java.lang.Object)>($r0, $r1);
+
+        virtualinvoke $r3.<android.app.Activity: void runOnUiThread(java.lang.Runnable)>($r2);
+
+        return;
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.location.a: com.seattleclouds.util.bi e>;
+
+        interfaceinvoke $r4.<com.seattleclouds.util.bi: void a(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    static boolean a(com.seattleclouds.location.a, boolean)
+    {
+        com.seattleclouds.location.a $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.location.a;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.seattleclouds.location.a: boolean c> = $z0;
+
+        return $z0;
+    }
+
+    static com.seattleclouds.util.bi b(com.seattleclouds.location.a)
+    {
+        com.seattleclouds.location.a $r0;
+        com.seattleclouds.util.bi r1;
+
+        $r0 := @parameter0: com.seattleclouds.location.a;
+
+        r1 = $r0.<com.seattleclouds.location.a: com.seattleclouds.util.bi e>;
+
+        return r1;
+    }
+
+    public void a(double, double)
+    {
+        com.seattleclouds.location.a $r0;
+        double $d0, $d1;
+        com.seattleclouds.location.o $r1;
+        com.seattleclouds.util.bi $r2;
+        boolean $z0;
+        java.lang.Thread $r3;
+
+        $r0 := @this: com.seattleclouds.location.a;
+
+        $d0 := @parameter0: double;
+
+        $d1 := @parameter1: double;
+
+        $r2 = $r0.<com.seattleclouds.location.a: com.seattleclouds.util.bi e>;
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $z0 = $r0.<com.seattleclouds.location.a: boolean c>;
+
+        if $z0 != 0 goto label2;
+
+        specialinvoke $r0.<com.seattleclouds.location.a: void a(java.lang.Object)>(null);
+
+     label2:
+        $r3 = new java.lang.Thread;
+
+        $r1 = new com.seattleclouds.location.o;
+
+        specialinvoke $r1.<com.seattleclouds.location.o: void <init>(com.seattleclouds.location.a,java.lang.String,double,double)>($r0, null, $d0, $d1);
+
+        specialinvoke $r3.<java.lang.Thread: void <init>(java.lang.Runnable)>($r1);
+
+        virtualinvoke $r3.<java.lang.Thread: void start()>();
+
+        return;
+    }
+
+    public void a(android.location.Location)
+    {
+        com.seattleclouds.location.a $r0;
+        android.location.Location $r1;
+        double $d0, $d1;
+
+        $r0 := @this: com.seattleclouds.location.a;
+
+        $r1 := @parameter0: android.location.Location;
+
+        $d0 = virtualinvoke $r1.<android.location.Location: double getLatitude()>();
+
+        $d1 = virtualinvoke $r1.<android.location.Location: double getLongitude()>();
+
+        virtualinvoke $r0.<com.seattleclouds.location.a: void a(double,double)>($d0, $d1);
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.location.a $r0;
+        java.lang.String $r1;
+        com.seattleclouds.location.p $r2;
+        com.seattleclouds.util.bi $r3;
+        java.lang.Thread $r4;
+
+        $r0 := @this: com.seattleclouds.location.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.location.a: com.seattleclouds.util.bi e>;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r4 = new java.lang.Thread;
+
+        $r2 = new com.seattleclouds.location.p;
+
+        specialinvoke $r2.<com.seattleclouds.location.p: void <init>(com.seattleclouds.location.a,java.lang.String)>($r0, $r1);
+
+        specialinvoke $r4.<java.lang.Thread: void <init>(java.lang.Runnable)>($r2);
+
+        virtualinvoke $r4.<java.lang.Thread: void start()>();
+
+        return;
+    }
+}

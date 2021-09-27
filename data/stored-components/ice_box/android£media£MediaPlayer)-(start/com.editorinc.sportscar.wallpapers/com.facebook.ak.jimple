@@ -1,0 +1,545 @@
+public class com.facebook.ak extends java.util.AbstractList
+{
+    private static java.util.concurrent.atomic.AtomicInteger a;
+    private android.os.Handler b;
+    private java.util.List c;
+    private int d;
+    private final java.lang.String e;
+    private java.util.List f;
+    private java.lang.String g;
+
+    static void <clinit>()
+    {
+        java.util.concurrent.atomic.AtomicInteger $r0;
+
+        $r0 = new java.util.concurrent.atomic.AtomicInteger;
+
+        specialinvoke $r0.<java.util.concurrent.atomic.AtomicInteger: void <init>()>();
+
+        <com.facebook.ak: java.util.concurrent.atomic.AtomicInteger a> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.facebook.ak $r0;
+        java.util.ArrayList $r1;
+        java.util.concurrent.atomic.AtomicInteger $r2;
+        int $i0;
+        java.lang.Integer $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.facebook.ak;
+
+        specialinvoke $r0.<java.util.AbstractList: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.facebook.ak: java.util.List c> = $r1;
+
+        $r0.<com.facebook.ak: int d> = 0;
+
+        $r2 = <com.facebook.ak: java.util.concurrent.atomic.AtomicInteger a>;
+
+        $i0 = virtualinvoke $r2.<java.util.concurrent.atomic.AtomicInteger: int incrementAndGet()>();
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r4 = virtualinvoke $r3.<java.lang.Integer: java.lang.String toString()>();
+
+        $r0.<com.facebook.ak: java.lang.String e> = $r4;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.facebook.ak: java.util.List f> = $r1;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.facebook.ak: java.util.List c> = $r1;
+
+        return;
+    }
+
+    public void <init>(java.util.Collection)
+    {
+        com.facebook.ak $r0;
+        java.util.Collection $r1;
+        java.util.ArrayList $r2;
+        java.util.concurrent.atomic.AtomicInteger $r3;
+        int $i0;
+        java.lang.Integer $r4;
+        java.lang.String $r5;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 := @parameter0: java.util.Collection;
+
+        specialinvoke $r0.<java.util.AbstractList: void <init>()>();
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.facebook.ak: java.util.List c> = $r2;
+
+        $r0.<com.facebook.ak: int d> = 0;
+
+        $r3 = <com.facebook.ak: java.util.concurrent.atomic.AtomicInteger a>;
+
+        $i0 = virtualinvoke $r3.<java.util.concurrent.atomic.AtomicInteger: int incrementAndGet()>();
+
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.Integer: java.lang.String toString()>();
+
+        $r0.<com.facebook.ak: java.lang.String e> = $r5;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.facebook.ak: java.util.List f> = $r2;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>(java.util.Collection)>($r1);
+
+        $r0.<com.facebook.ak: java.util.List c> = $r2;
+
+        return;
+    }
+
+    public transient void <init>(com.facebook.GraphRequest[])
+    {
+        com.facebook.ak $r0;
+        com.facebook.GraphRequest[] $r1;
+        java.util.ArrayList $r2;
+        java.util.concurrent.atomic.AtomicInteger $r3;
+        int $i0;
+        java.lang.Integer $r4;
+        java.lang.String $r5;
+        java.util.List $r6;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 := @parameter0: com.facebook.GraphRequest[];
+
+        specialinvoke $r0.<java.util.AbstractList: void <init>()>();
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.facebook.ak: java.util.List c> = $r2;
+
+        $r0.<com.facebook.ak: int d> = 0;
+
+        $r3 = <com.facebook.ak: java.util.concurrent.atomic.AtomicInteger a>;
+
+        $i0 = virtualinvoke $r3.<java.util.concurrent.atomic.AtomicInteger: int incrementAndGet()>();
+
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.Integer: java.lang.String toString()>();
+
+        $r0.<com.facebook.ak: java.lang.String e> = $r5;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.facebook.ak: java.util.List f> = $r2;
+
+        $r6 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($r1);
+
+        $r0.<com.facebook.ak: java.util.List c> = $r6;
+
+        return;
+    }
+
+    public int a()
+    {
+        com.facebook.ak $r0;
+        int i0;
+
+        $r0 := @this: com.facebook.ak;
+
+        i0 = $r0.<com.facebook.ak: int d>;
+
+        return i0;
+    }
+
+    public final com.facebook.GraphRequest a(int)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+        com.facebook.GraphRequest $r3;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r2 = $r0.<com.facebook.ak: java.util.List c>;
+
+        $r1 = interfaceinvoke $r2.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r3 = (com.facebook.GraphRequest) $r1;
+
+        return $r3;
+    }
+
+    public final void a(int, com.facebook.GraphRequest)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        com.facebook.GraphRequest $r1;
+        java.util.List $r2;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: com.facebook.GraphRequest;
+
+        $r2 = $r0.<com.facebook.ak: java.util.List c>;
+
+        interfaceinvoke $r2.<java.util.List: void add(int,java.lang.Object)>($i0, $r1);
+
+        return;
+    }
+
+    final void a(android.os.Handler)
+    {
+        com.facebook.ak $r0;
+        android.os.Handler $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 := @parameter0: android.os.Handler;
+
+        $r0.<com.facebook.ak: android.os.Handler b> = $r1;
+
+        return;
+    }
+
+    public void a(com.facebook.al)
+    {
+        com.facebook.ak $r0;
+        com.facebook.al $r1;
+        boolean $z0;
+        java.util.List $r2;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 := @parameter0: com.facebook.al;
+
+        $r2 = $r0.<com.facebook.ak: java.util.List f>;
+
+        $z0 = interfaceinvoke $r2.<java.util.List: boolean contains(java.lang.Object)>($r1);
+
+        if $z0 != 0 goto label1;
+
+        $r2 = $r0.<com.facebook.ak: java.util.List f>;
+
+        interfaceinvoke $r2.<java.util.List: boolean add(java.lang.Object)>($r1);
+
+     label1:
+        return;
+    }
+
+    public final boolean a(com.facebook.GraphRequest)
+    {
+        com.facebook.ak $r0;
+        com.facebook.GraphRequest $r1;
+        boolean $z0;
+        java.util.List $r2;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 := @parameter0: com.facebook.GraphRequest;
+
+        $r2 = $r0.<com.facebook.ak: java.util.List c>;
+
+        $z0 = interfaceinvoke $r2.<java.util.List: boolean add(java.lang.Object)>($r1);
+
+        return $z0;
+    }
+
+    public void add(int, java.lang.Object)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        java.lang.Object $r1;
+        com.facebook.GraphRequest $r2;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.Object;
+
+        $r2 = (com.facebook.GraphRequest) $r1;
+
+        virtualinvoke $r0.<com.facebook.ak: void a(int,com.facebook.GraphRequest)>($i0, $r2);
+
+        return;
+    }
+
+    public boolean add(java.lang.Object)
+    {
+        com.facebook.ak $r0;
+        boolean $z0;
+        java.lang.Object $r1;
+        com.facebook.GraphRequest $r2;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (com.facebook.GraphRequest) $r1;
+
+        $z0 = virtualinvoke $r0.<com.facebook.ak: boolean a(com.facebook.GraphRequest)>($r2);
+
+        return $z0;
+    }
+
+    public final com.facebook.GraphRequest b(int)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+        com.facebook.GraphRequest $r3;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r2 = $r0.<com.facebook.ak: java.util.List c>;
+
+        $r1 = interfaceinvoke $r2.<java.util.List: java.lang.Object remove(int)>($i0);
+
+        $r3 = (com.facebook.GraphRequest) $r1;
+
+        return $r3;
+    }
+
+    public final com.facebook.GraphRequest b(int, com.facebook.GraphRequest)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        com.facebook.GraphRequest $r1;
+        java.lang.Object $r2;
+        java.util.List $r3;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: com.facebook.GraphRequest;
+
+        $r3 = $r0.<com.facebook.ak: java.util.List c>;
+
+        $r2 = interfaceinvoke $r3.<java.util.List: java.lang.Object set(int,java.lang.Object)>($i0, $r1);
+
+        $r1 = (com.facebook.GraphRequest) $r2;
+
+        return $r1;
+    }
+
+    final java.lang.String b()
+    {
+        com.facebook.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        r1 = $r0.<com.facebook.ak: java.lang.String e>;
+
+        return r1;
+    }
+
+    final android.os.Handler c()
+    {
+        com.facebook.ak $r0;
+        android.os.Handler r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        r1 = $r0.<com.facebook.ak: android.os.Handler b>;
+
+        return r1;
+    }
+
+    public final void clear()
+    {
+        com.facebook.ak $r0;
+        java.util.List $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 = $r0.<com.facebook.ak: java.util.List c>;
+
+        interfaceinvoke $r1.<java.util.List: void clear()>();
+
+        return;
+    }
+
+    final java.util.List d()
+    {
+        com.facebook.ak $r0;
+        java.util.List r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        r1 = $r0.<com.facebook.ak: java.util.List c>;
+
+        return r1;
+    }
+
+    final java.util.List e()
+    {
+        com.facebook.ak $r0;
+        java.util.List r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        r1 = $r0.<com.facebook.ak: java.util.List f>;
+
+        return r1;
+    }
+
+    public final java.lang.String f()
+    {
+        com.facebook.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        r1 = $r0.<com.facebook.ak: java.lang.String g>;
+
+        return r1;
+    }
+
+    public final java.util.List g()
+    {
+        com.facebook.ak $r0;
+        java.util.List $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 = virtualinvoke $r0.<com.facebook.ak: java.util.List i()>();
+
+        return $r1;
+    }
+
+    public java.lang.Object get(int)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        com.facebook.GraphRequest $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<com.facebook.ak: com.facebook.GraphRequest a(int)>($i0);
+
+        return $r1;
+    }
+
+    public final com.facebook.aj h()
+    {
+        com.facebook.ak $r0;
+        com.facebook.aj $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 = virtualinvoke $r0.<com.facebook.ak: com.facebook.aj j()>();
+
+        return $r1;
+    }
+
+    java.util.List i()
+    {
+        com.facebook.ak $r0;
+        java.util.List $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 = staticinvoke <com.facebook.GraphRequest: java.util.List b(com.facebook.ak)>($r0);
+
+        return $r1;
+    }
+
+    com.facebook.aj j()
+    {
+        com.facebook.ak $r0;
+        com.facebook.aj $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 = staticinvoke <com.facebook.GraphRequest: com.facebook.aj c(com.facebook.ak)>($r0);
+
+        return $r1;
+    }
+
+    public java.lang.Object remove(int)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        com.facebook.GraphRequest $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<com.facebook.ak: com.facebook.GraphRequest b(int)>($i0);
+
+        return $r1;
+    }
+
+    public java.lang.Object set(int, java.lang.Object)
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        com.facebook.GraphRequest $r1;
+        java.lang.Object $r2;
+
+        $r0 := @this: com.facebook.ak;
+
+        $i0 := @parameter0: int;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $r1 = (com.facebook.GraphRequest) $r2;
+
+        $r1 = virtualinvoke $r0.<com.facebook.ak: com.facebook.GraphRequest b(int,com.facebook.GraphRequest)>($i0, $r1);
+
+        return $r1;
+    }
+
+    public final int size()
+    {
+        com.facebook.ak $r0;
+        int $i0;
+        java.util.List $r1;
+
+        $r0 := @this: com.facebook.ak;
+
+        $r1 = $r0.<com.facebook.ak: java.util.List c>;
+
+        $i0 = interfaceinvoke $r1.<java.util.List: int size()>();
+
+        return $i0;
+    }
+}

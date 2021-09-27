@@ -1,0 +1,7 @@
+public interface  com.facebook.internal.t extends java.lang.Object
+{
+
+    public abstract android.os.Bundle a();
+
+    public abstract android.os.Bundle b();
+}

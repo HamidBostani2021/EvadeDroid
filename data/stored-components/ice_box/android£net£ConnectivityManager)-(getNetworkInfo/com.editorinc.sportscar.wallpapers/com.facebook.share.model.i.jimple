@@ -1,0 +1,112 @@
+public final class com.facebook.share.model.i extends com.facebook.share.model.l
+{
+
+    public void <init>()
+    {
+        com.facebook.share.model.i $r0;
+
+        $r0 := @this: com.facebook.share.model.i;
+
+        specialinvoke $r0.<com.facebook.share.model.l: void <init>()>();
+
+        return;
+    }
+
+    public com.facebook.share.model.ShareOpenGraphAction a()
+    {
+        com.facebook.share.model.i $r0;
+        com.facebook.share.model.ShareOpenGraphAction $r1;
+
+        $r0 := @this: com.facebook.share.model.i;
+
+        $r1 = new com.facebook.share.model.ShareOpenGraphAction;
+
+        specialinvoke $r1.<com.facebook.share.model.ShareOpenGraphAction: void <init>(com.facebook.share.model.i,com.facebook.share.model.h)>($r0, null);
+
+        return $r1;
+    }
+
+    com.facebook.share.model.i a(android.os.Parcel)
+    {
+        com.facebook.share.model.i $r0;
+        android.os.Parcel $r1;
+        java.lang.Class $r2;
+        java.lang.ClassLoader $r3;
+        android.os.Parcelable $r4;
+        com.facebook.share.model.ShareOpenGraphAction $r5;
+
+        $r0 := @this: com.facebook.share.model.i;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $r2 = class "Lcom/facebook/share/model/ShareOpenGraphAction;";
+
+        $r3 = virtualinvoke $r2.<java.lang.Class: java.lang.ClassLoader getClassLoader()>();
+
+        $r4 = virtualinvoke $r1.<android.os.Parcel: android.os.Parcelable readParcelable(java.lang.ClassLoader)>($r3);
+
+        $r5 = (com.facebook.share.model.ShareOpenGraphAction) $r4;
+
+        $r0 = virtualinvoke $r0.<com.facebook.share.model.i: com.facebook.share.model.i a(com.facebook.share.model.ShareOpenGraphAction)>($r5);
+
+        return $r0;
+    }
+
+    public com.facebook.share.model.i a(com.facebook.share.model.ShareOpenGraphAction)
+    {
+        com.facebook.share.model.ShareOpenGraphAction $r0;
+        com.facebook.share.model.i $r1;
+        com.facebook.share.model.l $r2;
+        java.lang.String $r3;
+
+        $r1 := @this: com.facebook.share.model.i;
+
+        $r0 := @parameter0: com.facebook.share.model.ShareOpenGraphAction;
+
+        if $r0 != null goto label1;
+
+        return $r1;
+
+     label1:
+        $r2 = specialinvoke $r1.<com.facebook.share.model.l: com.facebook.share.model.l a(com.facebook.share.model.ShareOpenGraphValueContainer)>($r0);
+
+        $r1 = (com.facebook.share.model.i) $r2;
+
+        $r3 = virtualinvoke $r0.<com.facebook.share.model.ShareOpenGraphAction: java.lang.String a()>();
+
+        $r1 = virtualinvoke $r1.<com.facebook.share.model.i: com.facebook.share.model.i a(java.lang.String)>($r3);
+
+        return $r1;
+    }
+
+    public com.facebook.share.model.i a(java.lang.String)
+    {
+        com.facebook.share.model.i $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.facebook.share.model.i;
+
+        $r1 := @parameter0: java.lang.String;
+
+        virtualinvoke $r0.<com.facebook.share.model.i: com.facebook.share.model.l a(java.lang.String,java.lang.String)>("og:type", $r1);
+
+        return $r0;
+    }
+
+    public volatile com.facebook.share.model.l a(com.facebook.share.model.ShareOpenGraphValueContainer)
+    {
+        com.facebook.share.model.i $r0;
+        com.facebook.share.model.ShareOpenGraphValueContainer $r1;
+        com.facebook.share.model.ShareOpenGraphAction $r2;
+
+        $r0 := @this: com.facebook.share.model.i;
+
+        $r1 := @parameter0: com.facebook.share.model.ShareOpenGraphValueContainer;
+
+        $r2 = (com.facebook.share.model.ShareOpenGraphAction) $r1;
+
+        $r0 = virtualinvoke $r0.<com.facebook.share.model.i: com.facebook.share.model.i a(com.facebook.share.model.ShareOpenGraphAction)>($r2);
+
+        return $r0;
+    }
+}

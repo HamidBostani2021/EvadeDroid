@@ -1,0 +1,172 @@
+class com.hrishiz.memo.DataActivity$7 extends java.lang.Object implements android.widget.AdapterView$OnItemSelectedListener
+{
+    final com.hrishiz.memo.DataActivity this$0;
+
+    void <init>(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity$7 $r0;
+        com.hrishiz.memo.DataActivity $r1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$7;
+
+        $r1 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onItemSelected(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.hrishiz.memo.DataActivity$7 $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        com.hrishiz.memo.DataActivity $r3;
+        android.widget.EditText $r4;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$7;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        if $i0 != 0 goto label01;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(6.0F);
+
+     label01:
+        if $i0 != 1 goto label02;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(8.0F);
+
+     label02:
+        if $i0 != 2 goto label03;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(10.0F);
+
+     label03:
+        if $i0 != 3 goto label04;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(12.0F);
+
+     label04:
+        if $i0 != 4 goto label05;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(14.0F);
+
+     label05:
+        if $i0 != 5 goto label06;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(16.0F);
+
+     label06:
+        if $i0 != 6 goto label07;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(18.0F);
+
+     label07:
+        if $i0 != 7 goto label08;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(20.0F);
+
+     label08:
+        if $i0 != 8 goto label09;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(22.0F);
+
+     label09:
+        if $i0 != 9 goto label10;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(24.0F);
+
+     label10:
+        if $i0 != 10 goto label11;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(26.0F);
+
+     label11:
+        if $i0 != 11 goto label12;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(28.0F);
+
+     label12:
+        if $i0 != 12 goto label13;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$7: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.EditText: void setTextSize(float)>(30.0F);
+
+     label13:
+        return;
+    }
+
+    public void onNothingSelected(android.widget.AdapterView)
+    {
+        com.hrishiz.memo.DataActivity$7 $r0;
+        android.widget.AdapterView $r1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$7;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        return;
+    }
+}

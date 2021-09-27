@@ -1,0 +1,141 @@
+public final class com.seattleclouds.bs extends android.preference.PreferenceFragment
+{
+
+    public void <init>()
+    {
+        com.seattleclouds.bs $r0;
+
+        $r0 := @this: com.seattleclouds.bs;
+
+        specialinvoke $r0.<android.preference.PreferenceFragment: void <init>()>();
+
+        return;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.bs $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        android.preference.Preference $r2;
+        com.seattleclouds.bt $r3;
+        boolean $z0;
+        com.seattleclouds.ce $r4;
+        android.preference.PreferenceScreen $r5;
+        com.seattleclouds.bu $r6;
+        com.seattleclouds.by $r7;
+
+        $r0 := @this: com.seattleclouds.bs;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.preference.PreferenceFragment: void onCreate(android.os.Bundle)>($r1);
+
+        $i0 = <com.seattleclouds.o: int pref_app>;
+
+        virtualinvoke $r0.<com.seattleclouds.bs: void addPreferencesFromResource(int)>($i0);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.bs: android.preference.Preference findPreference(java.lang.CharSequence)>("pref_forceSync");
+
+        $r3 = new com.seattleclouds.bt;
+
+        specialinvoke $r3.<com.seattleclouds.bt: void <init>(com.seattleclouds.bs)>($r0);
+
+        virtualinvoke $r2.<android.preference.Preference: void setOnPreferenceClickListener(android.preference.Preference$OnPreferenceClickListener)>($r3);
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 != 0 goto label5;
+
+        $r4 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r4.<com.seattleclouds.ce: boolean a(java.lang.String)>("forceSync");
+
+        if $z0 != 0 goto label5;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.bs: android.preference.PreferenceScreen getPreferenceScreen()>();
+
+        virtualinvoke $r5.<android.preference.PreferenceScreen: boolean removePreference(android.preference.Preference)>($r2);
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.bs: android.preference.Preference findPreference(java.lang.CharSequence)>("pref_clearResources");
+
+        $r6 = new com.seattleclouds.bu;
+
+        specialinvoke $r6.<com.seattleclouds.bu: void <init>(com.seattleclouds.bs)>($r0);
+
+        virtualinvoke $r2.<android.preference.Preference: void setOnPreferenceClickListener(android.preference.Preference$OnPreferenceClickListener)>($r6);
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 != 0 goto label2;
+
+        $r4 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r4.<com.seattleclouds.ce: boolean a(java.lang.String)>("clearResources");
+
+        if $z0 != 0 goto label2;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.bs: android.preference.PreferenceScreen getPreferenceScreen()>();
+
+        virtualinvoke $r5.<android.preference.PreferenceScreen: boolean removePreference(android.preference.Preference)>($r2);
+
+     label2:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.bs: android.preference.Preference findPreference(java.lang.CharSequence)>("pref_appUserSignOut");
+
+        $r7 = new com.seattleclouds.by;
+
+        specialinvoke $r7.<com.seattleclouds.by: void <init>(com.seattleclouds.bs)>($r0);
+
+        virtualinvoke $r2.<android.preference.Preference: void setOnPreferenceClickListener(android.preference.Preference$OnPreferenceClickListener)>($r7);
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean a()>();
+
+        if $z0 == 0 goto label6;
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 != 0 goto label3;
+
+        $r4 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r4.<com.seattleclouds.ce: boolean a(java.lang.String)>("appUserSignOut");
+
+        if $z0 == 0 goto label6;
+
+     label3:
+        $z0 = 1;
+
+     label4:
+        if $z0 != 0 goto label7;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.bs: android.preference.PreferenceScreen getPreferenceScreen()>();
+
+        virtualinvoke $r5.<android.preference.PreferenceScreen: boolean removePreference(android.preference.Preference)>($r2);
+
+        return;
+
+     label5:
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 == 0 goto label1;
+
+        $i0 = <com.seattleclouds.l: int settings_pref_force_sync_previewer>;
+
+        virtualinvoke $r2.<android.preference.Preference: void setTitle(int)>($i0);
+
+        $i0 = <com.seattleclouds.l: int settings_pref_force_sync_summary_previewer>;
+
+        virtualinvoke $r2.<android.preference.Preference: void setSummary(int)>($i0);
+
+        goto label1;
+
+     label6:
+        $z0 = 0;
+
+        goto label4;
+
+     label7:
+        return;
+    }
+}

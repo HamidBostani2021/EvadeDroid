@@ -1,0 +1,289 @@
+class com.hrishiz.memo.DataActivity$2 extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.hrishiz.memo.DataActivity this$0;
+
+    void <init>(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity$2 $r0;
+        com.hrishiz.memo.DataActivity $r1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$2;
+
+        $r1 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.hrishiz.memo.DataActivity$2 $r0;
+        android.view.View $r1;
+        com.hrishiz.memo.DataActivity $r2, $r19;
+        android.content.SharedPreferences $r3;
+        java.lang.String $r4, $r13;
+        boolean $z0;
+        android.content.SharedPreferences$Editor $r5;
+        android.widget.TextView $r6;
+        java.text.SimpleDateFormat $r7;
+        java.util.Calendar $r8;
+        java.util.Date $r9;
+        android.content.Intent $r10;
+        android.widget.EditText $r11;
+        android.text.Editable $r12;
+        java.lang.CharSequence $r14;
+        java.util.ArrayList $r15;
+        android.widget.Spinner $r16;
+        int $i0;
+        java.lang.Object $r17;
+        android.content.Context $r18;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$2;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$2(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("screen", "");
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("2");
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$2(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("sph", "y");
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+     label1:
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("pa", "");
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.TextView access$4(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r7 = new java.text.SimpleDateFormat;
+
+        specialinvoke $r7.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("hh:mm");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: java.util.Calendar access$5(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r9 = virtualinvoke $r8.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r4 = virtualinvoke $r7.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>($r9);
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.TextView access$6(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r7 = new java.text.SimpleDateFormat;
+
+        specialinvoke $r7.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("dd/MM/yyyy");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: java.util.Calendar access$5(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r9 = virtualinvoke $r8.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r4 = virtualinvoke $r7.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>($r9);
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r8 = staticinvoke <java.util.Calendar: java.util.Calendar getInstance()>();
+
+        staticinvoke <com.hrishiz.memo.DataActivity: void access$7(com.hrishiz.memo.DataActivity,java.util.Calendar)>($r2, $r8);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r10 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r10.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r11 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r12 = virtualinvoke $r11.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r13 = interfaceinvoke $r12.<android.text.Editable: java.lang.String toString()>();
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r13);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r10 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r10.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String concat(java.lang.String)>("time");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.TextView access$4(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r14 = virtualinvoke $r6.<android.widget.TextView: java.lang.CharSequence getText()>();
+
+        $r13 = interfaceinvoke $r14.<java.lang.CharSequence: java.lang.String toString()>();
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r13);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r10 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r10.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String concat(java.lang.String)>("date");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.TextView access$6(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r14 = virtualinvoke $r6.<android.widget.TextView: java.lang.CharSequence getText()>();
+
+        $r13 = interfaceinvoke $r14.<java.lang.CharSequence: java.lang.String toString()>();
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r13);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r10 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r10.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r15 = staticinvoke <com.hrishiz.memo.DataActivity: java.util.ArrayList access$8(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r16 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$9(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r16.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        $r17 = virtualinvoke $r15.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r13 = (java.lang.String) $r17;
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r13);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r10 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r10.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String concat(java.lang.String)>("texttype");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r15 = staticinvoke <com.hrishiz.memo.DataActivity: java.util.ArrayList access$10(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r16 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r16.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        $r17 = virtualinvoke $r15.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r13 = (java.lang.String) $r17;
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r13);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        staticinvoke <com.hrishiz.memo.DataActivity: void access$1(com.hrishiz.memo.DataActivity,java.lang.String)>($r2, "Saved");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r10 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.Intent access$12(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r18 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        virtualinvoke $r10.<android.content.Intent: android.content.Intent setClass(android.content.Context,java.lang.Class)>($r18, class "Lcom/hrishiz/memo/MainActivity;");
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r19 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        $r10 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.Intent access$12(com.hrishiz.memo.DataActivity)>($r19);
+
+        virtualinvoke $r2.<com.hrishiz.memo.DataActivity: void startActivity(android.content.Intent)>($r10);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$2: com.hrishiz.memo.DataActivity this$0>;
+
+        virtualinvoke $r2.<com.hrishiz.memo.DataActivity: void finish()>();
+
+        return;
+    }
+}

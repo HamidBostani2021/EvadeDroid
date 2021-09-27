@@ -1,0 +1,25 @@
+public class com.seattleclouds.util.HTTPUtil$HttpUnauthorizedException extends java.io.IOException
+{
+    private static final long serialVersionUID;
+
+    public void <init>(java.lang.String)
+    {
+        com.seattleclouds.util.HTTPUtil$HttpUnauthorizedException $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.util.HTTPUtil$HttpUnauthorizedException;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<java.io.IOException: void <init>(java.lang.String)>($r1);
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <com.seattleclouds.util.HTTPUtil$HttpUnauthorizedException: long serialVersionUID> = 1L;
+
+        return;
+    }
+}

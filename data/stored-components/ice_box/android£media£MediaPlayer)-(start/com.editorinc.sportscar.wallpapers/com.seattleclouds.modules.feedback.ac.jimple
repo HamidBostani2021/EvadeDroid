@@ -1,0 +1,35 @@
+class com.seattleclouds.modules.feedback.ac extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.modules.feedback.z a;
+
+    void <init>(com.seattleclouds.modules.feedback.z)
+    {
+        com.seattleclouds.modules.feedback.ac $r0;
+        com.seattleclouds.modules.feedback.z $r1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ac;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.z;
+
+        $r0.<com.seattleclouds.modules.feedback.ac: com.seattleclouds.modules.feedback.z a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.feedback.ac $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ac;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        return;
+    }
+}

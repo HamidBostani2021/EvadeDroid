@@ -1,0 +1,76 @@
+final class com.seattleclouds.modules.peopledirectory.n extends java.lang.Object implements android.os.Parcelable$Creator
+{
+
+    void <init>()
+    {
+        com.seattleclouds.modules.peopledirectory.n $r0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.n;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public com.seattleclouds.modules.peopledirectory.Person a(android.os.Parcel)
+    {
+        com.seattleclouds.modules.peopledirectory.n $r0;
+        android.os.Parcel $r1;
+        com.seattleclouds.modules.peopledirectory.Person $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.n;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $r2 = new com.seattleclouds.modules.peopledirectory.Person;
+
+        specialinvoke $r2.<com.seattleclouds.modules.peopledirectory.Person: void <init>(android.os.Parcel)>($r1);
+
+        return $r2;
+    }
+
+    public com.seattleclouds.modules.peopledirectory.Person[] a(int)
+    {
+        com.seattleclouds.modules.peopledirectory.n $r0;
+        int $i0;
+        com.seattleclouds.modules.peopledirectory.Person[] $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.n;
+
+        $i0 := @parameter0: int;
+
+        $r1 = newarray (com.seattleclouds.modules.peopledirectory.Person)[$i0];
+
+        return $r1;
+    }
+
+    public java.lang.Object createFromParcel(android.os.Parcel)
+    {
+        com.seattleclouds.modules.peopledirectory.n $r0;
+        android.os.Parcel $r1;
+        com.seattleclouds.modules.peopledirectory.Person $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.n;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.n: com.seattleclouds.modules.peopledirectory.Person a(android.os.Parcel)>($r1);
+
+        return $r2;
+    }
+
+    public java.lang.Object[] newArray(int)
+    {
+        com.seattleclouds.modules.peopledirectory.n $r0;
+        int $i0;
+        com.seattleclouds.modules.peopledirectory.Person[] $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.n;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.n: com.seattleclouds.modules.peopledirectory.Person[] a(int)>($i0);
+
+        return $r1;
+    }
+}

@@ -1,0 +1,721 @@
+public class com.seattleclouds.modules.order.indiapay.c.c extends java.lang.Object
+{
+    private java.lang.String A;
+    private java.lang.String B;
+    private java.lang.String C;
+    private java.lang.String a;
+    private java.lang.String b;
+    private java.lang.String c;
+    private java.lang.String d;
+    private java.lang.String e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private java.lang.String h;
+    private java.lang.String i;
+    private java.lang.String j;
+    private java.lang.String k;
+    private java.lang.String l;
+    private boolean m;
+    private java.lang.String n;
+    private java.lang.String o;
+    private boolean p;
+    private boolean q;
+    private java.lang.String r;
+    private java.lang.String s;
+    private boolean t;
+    private java.lang.String u;
+    private java.lang.String v;
+    private java.lang.String w;
+    private java.lang.String x;
+    private java.lang.String y;
+    private boolean z;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean m> = 0;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean p> = 0;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean q> = 0;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String r> = "12345";
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String s> = "1245789214563214";
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean t> = 0;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String A> = "Pending";
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String a>;
+
+        return r1;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean m> = $z0;
+
+        return;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String b>;
+
+        return r1;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    public void b(boolean)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean q> = 1;
+
+        return;
+    }
+
+    public java.lang.String c()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String e>;
+
+        return r1;
+    }
+
+    public void c(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String e> = $r1;
+
+        return;
+    }
+
+    public void c(boolean)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean t> = $z0;
+
+        return;
+    }
+
+    public java.lang.String d()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String f>;
+
+        return r1;
+    }
+
+    public void d(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String f> = $r1;
+
+        return;
+    }
+
+    public void d(boolean)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean z> = $z0;
+
+        return;
+    }
+
+    public java.lang.String e()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String i>;
+
+        return r1;
+    }
+
+    public void e(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String g> = $r1;
+
+        return;
+    }
+
+    public java.lang.String f()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String d>;
+
+        return r1;
+    }
+
+    public void f(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String i> = $r1;
+
+        return;
+    }
+
+    public java.lang.String g()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String h>;
+
+        return r1;
+    }
+
+    public void g(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String d> = $r1;
+
+        return;
+    }
+
+    public java.lang.String h()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String c>;
+
+        return r1;
+    }
+
+    public void h(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String h> = $r1;
+
+        return;
+    }
+
+    public java.lang.String i()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String k>;
+
+        return r1;
+    }
+
+    public void i(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String c> = $r1;
+
+        return;
+    }
+
+    public java.lang.String j()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String l>;
+
+        return r1;
+    }
+
+    public void j(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String j> = $r1;
+
+        return;
+    }
+
+    public void k(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String k> = $r1;
+
+        return;
+    }
+
+    public boolean k()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        z0 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean m>;
+
+        return z0;
+    }
+
+    public java.lang.String l()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String n>;
+
+        return r1;
+    }
+
+    public void l(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String l> = $r1;
+
+        return;
+    }
+
+    public java.lang.String m()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String o>;
+
+        return r1;
+    }
+
+    public void m(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String n> = $r1;
+
+        return;
+    }
+
+    public java.lang.String n()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String r>;
+
+        return r1;
+    }
+
+    public void n(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String o> = $r1;
+
+        return;
+    }
+
+    public java.lang.String o()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String s>;
+
+        return r1;
+    }
+
+    public void o(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String v> = $r1;
+
+        return;
+    }
+
+    public void p(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String w> = $r1;
+
+        return;
+    }
+
+    public boolean p()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        z0 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean t>;
+
+        return z0;
+    }
+
+    public java.lang.String q()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String v>;
+
+        return r1;
+    }
+
+    public void q(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String x> = $r1;
+
+        return;
+    }
+
+    public java.lang.String r()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String w>;
+
+        return r1;
+    }
+
+    public void r(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String u> = $r1;
+
+        return;
+    }
+
+    public java.lang.String s()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String x>;
+
+        return r1;
+    }
+
+    public void s(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String y> = $r1;
+
+        return;
+    }
+
+    public java.lang.String t()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String u>;
+
+        return r1;
+    }
+
+    public void t(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String A> = $r1;
+
+        return;
+    }
+
+    public java.lang.String u()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String y>;
+
+        return r1;
+    }
+
+    public void u(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String B> = $r1;
+
+        return;
+    }
+
+    public void v(java.lang.String)
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String C> = $r1;
+
+        return;
+    }
+
+    public boolean v()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        z0 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: boolean z>;
+
+        return z0;
+    }
+
+    public java.lang.String w()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String A>;
+
+        return r1;
+    }
+
+    public java.lang.String x()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String B>;
+
+        return r1;
+    }
+
+    public java.lang.String y()
+    {
+        com.seattleclouds.modules.order.indiapay.c.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.indiapay.c.c;
+
+        r1 = $r0.<com.seattleclouds.modules.order.indiapay.c.c: java.lang.String C>;
+
+        return r1;
+    }
+}

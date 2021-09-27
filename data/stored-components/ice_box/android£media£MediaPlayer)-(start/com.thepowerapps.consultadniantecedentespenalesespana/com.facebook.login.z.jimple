@@ -1,0 +1,41 @@
+class com.facebook.login.z extends java.lang.Object implements com.facebook.internal.p
+{
+    final com.facebook.login.x a;
+
+    void <init>(com.facebook.login.x)
+    {
+        com.facebook.login.z $r0;
+        com.facebook.login.x $r1;
+
+        $r0 := @this: com.facebook.login.z;
+
+        $r1 := @parameter0: com.facebook.login.x;
+
+        $r0.<com.facebook.login.z: com.facebook.login.x a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public boolean a(int, android.content.Intent)
+    {
+        com.facebook.login.z $r0;
+        int $i0;
+        android.content.Intent $r1;
+        boolean $z0;
+        com.facebook.login.x $r2;
+
+        $r0 := @this: com.facebook.login.z;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.content.Intent;
+
+        $r2 = $r0.<com.facebook.login.z: com.facebook.login.x a>;
+
+        $z0 = virtualinvoke $r2.<com.facebook.login.x: boolean a(int,android.content.Intent)>($i0, $r1);
+
+        return $z0;
+    }
+}

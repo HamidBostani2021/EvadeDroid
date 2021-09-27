@@ -1,0 +1,7 @@
+public interface  com.seattleclouds.bh extends java.lang.Object
+{
+
+    public abstract void a_(boolean);
+
+    public abstract java.lang.CharSequence c();
+}

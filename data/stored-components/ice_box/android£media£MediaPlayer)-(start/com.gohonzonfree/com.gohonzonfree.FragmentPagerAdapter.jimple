@@ -1,0 +1,84 @@
+public class com.gohonzonfree.FragmentPagerAdapter extends android.support.v4.app.FragmentStatePagerAdapter
+{
+    private java.util.ArrayList itemData;
+
+    public void <init>(android.support.v4.app.FragmentManager, java.util.ArrayList)
+    {
+        com.gohonzonfree.FragmentPagerAdapter $r0;
+        android.support.v4.app.FragmentManager $r1;
+        java.util.ArrayList $r2;
+
+        $r0 := @this: com.gohonzonfree.FragmentPagerAdapter;
+
+        $r1 := @parameter0: android.support.v4.app.FragmentManager;
+
+        $r2 := @parameter1: java.util.ArrayList;
+
+        specialinvoke $r0.<android.support.v4.app.FragmentStatePagerAdapter: void <init>(android.support.v4.app.FragmentManager)>($r1);
+
+        $r0.<com.gohonzonfree.FragmentPagerAdapter: java.util.ArrayList itemData> = $r2;
+
+        return;
+    }
+
+    public void destroyItem(android.view.ViewGroup, int, java.lang.Object)
+    {
+        com.gohonzonfree.FragmentPagerAdapter $r0;
+        android.view.ViewGroup $r1;
+        int $i0;
+        java.lang.Object $r2;
+
+        $r0 := @this: com.gohonzonfree.FragmentPagerAdapter;
+
+        $r1 := @parameter0: android.view.ViewGroup;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: java.lang.Object;
+
+        specialinvoke $r0.<android.support.v4.app.FragmentStatePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)>($r1, $i0, $r2);
+
+        return;
+    }
+
+    public int getCount()
+    {
+        com.gohonzonfree.FragmentPagerAdapter $r0;
+        int $i0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.gohonzonfree.FragmentPagerAdapter;
+
+        $r1 = $r0.<com.gohonzonfree.FragmentPagerAdapter: java.util.ArrayList itemData>;
+
+        $i0 = virtualinvoke $r1.<java.util.ArrayList: int size()>();
+
+        return $i0;
+    }
+
+    public android.support.v4.app.Fragment getItem(int)
+    {
+        com.gohonzonfree.FragmentPagerAdapter $r0;
+        int $i0;
+        com.gohonzonfree.FragmentImageView $r1;
+        java.util.ArrayList $r2;
+        java.lang.Object $r3;
+        java.lang.Integer $r4;
+
+        $r0 := @this: com.gohonzonfree.FragmentPagerAdapter;
+
+        $i0 := @parameter0: int;
+
+        $r1 = staticinvoke <com.gohonzonfree.FragmentImageView: com.gohonzonfree.FragmentImageView newInstance()>();
+
+        $r2 = $r0.<com.gohonzonfree.FragmentPagerAdapter: java.util.ArrayList itemData>;
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r4 = (java.lang.Integer) $r3;
+
+        virtualinvoke $r1.<com.gohonzonfree.FragmentImageView: void setImageList(java.lang.Integer)>($r4);
+
+        return $r1;
+    }
+}

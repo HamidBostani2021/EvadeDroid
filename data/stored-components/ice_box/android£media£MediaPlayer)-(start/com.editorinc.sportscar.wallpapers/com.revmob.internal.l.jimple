@@ -1,0 +1,131 @@
+final class com.revmob.internal.l extends org.apache.http.impl.client.DefaultRedirectHandler
+{
+    private java.net.URI a;
+
+    void <init>()
+    {
+        com.revmob.internal.l $r0;
+
+        $r0 := @this: com.revmob.internal.l;
+
+        specialinvoke $r0.<org.apache.http.impl.client.DefaultRedirectHandler: void <init>()>();
+
+        return;
+    }
+
+    public final java.net.URI a()
+    {
+        com.revmob.internal.l $r0;
+        java.net.URI r1;
+
+        $r0 := @this: com.revmob.internal.l;
+
+        r1 = $r0.<com.revmob.internal.l: java.net.URI a>;
+
+        return r1;
+    }
+
+    public final java.net.URI getLocationURI(org.apache.http.HttpResponse, org.apache.http.protocol.HttpContext)
+    {
+        com.revmob.internal.l $r0;
+        org.apache.http.HttpResponse $r1;
+        org.apache.http.protocol.HttpContext $r2;
+        com.revmob.internal.w $r3;
+        java.net.URI $r4;
+        java.lang.Throwable $r5;
+        org.apache.http.ProtocolException r6;
+
+        $r0 := @this: com.revmob.internal.l;
+
+        $r1 := @parameter0: org.apache.http.HttpResponse;
+
+        $r2 := @parameter1: org.apache.http.protocol.HttpContext;
+
+     label1:
+        $r4 = specialinvoke $r0.<org.apache.http.impl.client.DefaultRedirectHandler: java.net.URI getLocationURI(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext)>($r1, $r2);
+
+     label2:
+        $r0.<com.revmob.internal.l: java.net.URI a> = $r4;
+
+        $r4 = $r0.<com.revmob.internal.l: java.net.URI a>;
+
+        return $r4;
+
+     label3:
+        $r5 := @caughtexception;
+
+        $r3 = <com.revmob.internal.w: com.revmob.internal.w b>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r5, null, $r3, null, "getLocationURI");
+
+        r6 = (org.apache.http.ProtocolException) $r5;
+
+        virtualinvoke r6.<org.apache.http.ProtocolException: void printStackTrace()>();
+
+        return null;
+
+        catch org.apache.http.ProtocolException from label1 to label2 with label3;
+    }
+
+    public final boolean isRedirectRequested(org.apache.http.HttpResponse, org.apache.http.protocol.HttpContext)
+    {
+        com.revmob.internal.l $r0;
+        org.apache.http.HttpResponse $r1;
+        org.apache.http.protocol.HttpContext $r2;
+        com.revmob.internal.w $r3;
+        org.apache.http.Header $r4;
+        java.lang.String $r5;
+        boolean $z0;
+        java.net.URI $r6;
+        java.lang.Throwable $r7;
+
+        $r0 := @this: com.revmob.internal.l;
+
+        $r1 := @parameter0: org.apache.http.HttpResponse;
+
+        $r2 := @parameter1: org.apache.http.protocol.HttpContext;
+
+        $r4 = interfaceinvoke $r1.<org.apache.http.HttpResponse: org.apache.http.Header getLastHeader(java.lang.String)>("Location");
+
+        if $r4 == null goto label5;
+
+        $r5 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+        $z0 = staticinvoke <com.revmob.internal.k: boolean a(java.lang.String)>($r5);
+
+        if $z0 != 0 goto label1;
+
+        $z0 = staticinvoke <com.revmob.internal.k: boolean b(java.lang.String)>($r5);
+
+        if $z0 == 0 goto label5;
+
+     label1:
+        $r6 = new java.net.URI;
+
+     label2:
+        specialinvoke $r6.<java.net.URI: void <init>(java.lang.String)>($r5);
+
+     label3:
+        $r0.<com.revmob.internal.l: java.net.URI a> = $r6;
+
+        return 0;
+
+     label4:
+        $r7 := @caughtexception;
+
+        $r3 = <com.revmob.internal.w: com.revmob.internal.w b>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r7, null, $r3, $r5, "isRedirectRequested");
+
+        $z0 = specialinvoke $r0.<org.apache.http.impl.client.DefaultRedirectHandler: boolean isRedirectRequested(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext)>($r1, $r2);
+
+        return $z0;
+
+     label5:
+        $z0 = specialinvoke $r0.<org.apache.http.impl.client.DefaultRedirectHandler: boolean isRedirectRequested(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext)>($r1, $r2);
+
+        return $z0;
+
+        catch java.net.URISyntaxException from label2 to label3 with label4;
+    }
+}

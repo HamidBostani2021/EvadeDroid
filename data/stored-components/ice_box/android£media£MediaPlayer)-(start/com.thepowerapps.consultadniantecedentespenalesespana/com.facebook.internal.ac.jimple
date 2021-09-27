@@ -1,0 +1,34 @@
+class com.facebook.internal.ac extends java.lang.Object implements java.lang.Runnable
+{
+    final com.facebook.internal.ab a;
+
+    void <init>(com.facebook.internal.ab)
+    {
+        com.facebook.internal.ac $r0;
+        com.facebook.internal.ab $r1;
+
+        $r0 := @this: com.facebook.internal.ac;
+
+        $r1 := @parameter0: com.facebook.internal.ab;
+
+        $r0.<com.facebook.internal.ac: com.facebook.internal.ab a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.facebook.internal.ac $r0;
+        com.facebook.internal.ab $r1;
+
+        $r0 := @this: com.facebook.internal.ac;
+
+        $r1 = $r0.<com.facebook.internal.ac: com.facebook.internal.ab a>;
+
+        staticinvoke <com.facebook.internal.ab: void a(com.facebook.internal.ab)>($r1);
+
+        return;
+    }
+}

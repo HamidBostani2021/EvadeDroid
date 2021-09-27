@@ -1,0 +1,216 @@
+public class com.seattleclouds.modules.podcast.PodcastListItem extends java.lang.Object implements android.os.Parcelable
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    public com.seattleclouds.modules.podcast.PodcastItem a;
+    public com.seattleclouds.modules.podcast.PodcastCategory b;
+    public boolean c;
+    public boolean d;
+    public java.lang.String e;
+    public java.lang.String f;
+    public java.lang.String g;
+    public java.lang.String h;
+    public java.lang.String i;
+
+    static void <clinit>()
+    {
+        com.seattleclouds.modules.podcast.v $r0;
+
+        $r0 = new com.seattleclouds.modules.podcast.v;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.v: void <init>()>();
+
+        <com.seattleclouds.modules.podcast.PodcastListItem: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.podcast.PodcastListItem $r0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastListItem;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    protected void <init>(android.os.Parcel)
+    {
+        com.seattleclouds.modules.podcast.PodcastListItem $r0;
+        android.os.Parcel $r1;
+        boolean $z0, $z1;
+        java.lang.Class $r2;
+        java.lang.ClassLoader $r3;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.podcast.PodcastItem $r5;
+        com.seattleclouds.modules.podcast.PodcastCategory $r6;
+        byte $b0;
+        java.lang.String $r7;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastListItem;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $z0 = 1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = class "Lcom/seattleclouds/modules/podcast/PodcastItem;";
+
+        $r3 = virtualinvoke $r2.<java.lang.Class: java.lang.ClassLoader getClassLoader()>();
+
+        $r4 = virtualinvoke $r1.<android.os.Parcel: java.lang.Object readValue(java.lang.ClassLoader)>($r3);
+
+        $r5 = (com.seattleclouds.modules.podcast.PodcastItem) $r4;
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a> = $r5;
+
+        $r2 = class "Lcom/seattleclouds/modules/podcast/PodcastCategory;";
+
+        $r3 = virtualinvoke $r2.<java.lang.Class: java.lang.ClassLoader getClassLoader()>();
+
+        $r4 = virtualinvoke $r1.<android.os.Parcel: java.lang.Object readValue(java.lang.ClassLoader)>($r3);
+
+        $r6 = (com.seattleclouds.modules.podcast.PodcastCategory) $r4;
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b> = $r6;
+
+        $b0 = virtualinvoke $r1.<android.os.Parcel: byte readByte()>();
+
+        if $b0 == 0 goto label3;
+
+        $z1 = 1;
+
+     label1:
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: boolean c> = $z1;
+
+        $b0 = virtualinvoke $r1.<android.os.Parcel: byte readByte()>();
+
+        if $b0 == 0 goto label4;
+
+     label2:
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: boolean d> = $z0;
+
+        $r7 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String e> = $r7;
+
+        $r7 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String f> = $r7;
+
+        $r7 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String g> = $r7;
+
+        $r7 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String h> = $r7;
+
+        $r7 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String i> = $r7;
+
+        return;
+
+     label3:
+        $z1 = 0;
+
+        goto label1;
+
+     label4:
+        $z0 = 0;
+
+        goto label2;
+    }
+
+    public int describeContents()
+    {
+        com.seattleclouds.modules.podcast.PodcastListItem $r0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastListItem;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.seattleclouds.modules.podcast.PodcastListItem $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        boolean $z0, $z1;
+        com.seattleclouds.modules.podcast.PodcastItem $r2;
+        com.seattleclouds.modules.podcast.PodcastCategory $r3;
+        byte $b1;
+        java.lang.String $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastListItem;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        $z0 = 1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeValue(java.lang.Object)>($r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeValue(java.lang.Object)>($r3);
+
+        $z1 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: boolean c>;
+
+        if $z1 == 0 goto label3;
+
+        $z1 = 1;
+
+     label1:
+        $b1 = (byte) $z1;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeByte(byte)>($b1);
+
+        $z1 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: boolean d>;
+
+        if $z1 == 0 goto label4;
+
+     label2:
+        $b1 = (byte) $z0;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeByte(byte)>($b1);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String e>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r4);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String f>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r4);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String g>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r4);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String h>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r4);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String i>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r4);
+
+        return;
+
+     label3:
+        $z1 = 0;
+
+        goto label1;
+
+     label4:
+        $z0 = 0;
+
+        goto label2;
+    }
+}

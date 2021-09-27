@@ -1,0 +1,53 @@
+class com.seattleclouds.modules.podcast.a.h extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final com.seattleclouds.modules.podcast.a.d b;
+
+    void <init>(com.seattleclouds.modules.podcast.a.d, java.lang.String)
+    {
+        com.seattleclouds.modules.podcast.a.h $r0;
+        com.seattleclouds.modules.podcast.a.d $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.a.h;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.a.d;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.podcast.a.h: com.seattleclouds.modules.podcast.a.d b> = $r1;
+
+        $r0.<com.seattleclouds.modules.podcast.a.h: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.podcast.a.h $r0;
+        java.lang.String $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.modules.podcast.a.d $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.a.h;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.a.h: com.seattleclouds.modules.podcast.a.d b>;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.modules.podcast.a.d: android.support.v4.app.ac n()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.podcast.a.h: com.seattleclouds.modules.podcast.a.d b>;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.a.h: java.lang.String a>;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.podcast.a.d: void d(java.lang.String)>($r1);
+
+        return;
+    }
+}

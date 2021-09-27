@@ -1,0 +1,36 @@
+class com.seattleclouds.modules.order.s extends java.lang.Object
+{
+    final android.widget.TextView a;
+    final android.widget.TextView b;
+    final android.widget.TextView c;
+    final android.widget.EditText d;
+
+    void <init>(android.widget.TextView, android.widget.TextView, android.widget.TextView, android.widget.EditText)
+    {
+        com.seattleclouds.modules.order.s $r0;
+        android.widget.TextView $r1, $r2, $r3;
+        android.widget.EditText $r4;
+
+        $r0 := @this: com.seattleclouds.modules.order.s;
+
+        $r1 := @parameter0: android.widget.TextView;
+
+        $r2 := @parameter1: android.widget.TextView;
+
+        $r3 := @parameter2: android.widget.TextView;
+
+        $r4 := @parameter3: android.widget.EditText;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.order.s: android.widget.TextView a> = $r1;
+
+        $r0.<com.seattleclouds.modules.order.s: android.widget.TextView b> = $r2;
+
+        $r0.<com.seattleclouds.modules.order.s: android.widget.TextView c> = $r3;
+
+        $r0.<com.seattleclouds.modules.order.s: android.widget.EditText d> = $r4;
+
+        return;
+    }
+}

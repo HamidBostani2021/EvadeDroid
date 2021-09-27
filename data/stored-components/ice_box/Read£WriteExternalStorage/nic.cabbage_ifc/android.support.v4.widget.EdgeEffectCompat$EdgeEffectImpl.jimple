@@ -1,0 +1,4 @@
+interface  android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl extends java.lang.Object
+{
+
+}

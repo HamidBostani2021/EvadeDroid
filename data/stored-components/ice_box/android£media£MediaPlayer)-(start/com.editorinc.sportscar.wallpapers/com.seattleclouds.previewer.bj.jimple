@@ -1,0 +1,65 @@
+class com.seattleclouds.previewer.bj extends java.lang.Object implements java.lang.Runnable
+{
+    final org.json.JSONArray a;
+    final com.seattleclouds.previewer.bi b;
+
+    void <init>(com.seattleclouds.previewer.bi, org.json.JSONArray)
+    {
+        com.seattleclouds.previewer.bj $r0;
+        com.seattleclouds.previewer.bi $r1;
+        org.json.JSONArray $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.bj;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.bi;
+
+        $r2 := @parameter1: org.json.JSONArray;
+
+        $r0.<com.seattleclouds.previewer.bj: com.seattleclouds.previewer.bi b> = $r1;
+
+        $r0.<com.seattleclouds.previewer.bj: org.json.JSONArray a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.previewer.bj $r0;
+        com.seattleclouds.previewer.bi $r1;
+        com.seattleclouds.previewer.aw $r2;
+        java.io.File $r3;
+        org.json.JSONArray $r4;
+        java.lang.String $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @this: com.seattleclouds.previewer.bj;
+
+        $r1 = $r0.<com.seattleclouds.previewer.bj: com.seattleclouds.previewer.bi b>;
+
+        $r2 = $r1.<com.seattleclouds.previewer.bi: com.seattleclouds.previewer.aw a>;
+
+     label1:
+        $r3 = staticinvoke <com.seattleclouds.previewer.aw: java.io.File o(com.seattleclouds.previewer.aw)>($r2);
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.previewer.bj: org.json.JSONArray a>;
+
+     label3:
+        $r5 = virtualinvoke $r4.<org.json.JSONArray: java.lang.String toString()>();
+
+        staticinvoke <org.apache.commons.io.b: void a(java.io.File,java.lang.String,java.lang.String)>($r3, $r5, "UTF-8");
+
+     label4:
+        return;
+
+     label5:
+        $r6 := @caughtexception;
+
+        return;
+
+        catch java.io.IOException from label1 to label2 with label5;
+        catch java.io.IOException from label3 to label4 with label5;
+    }
+}

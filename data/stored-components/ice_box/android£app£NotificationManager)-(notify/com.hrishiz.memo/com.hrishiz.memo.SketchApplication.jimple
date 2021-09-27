@@ -1,0 +1,102 @@
+public class com.hrishiz.memo.SketchApplication extends android.app.Application
+{
+    private java.lang.Thread$UncaughtExceptionHandler uncaughtExceptionHandler;
+
+    public void <init>()
+    {
+        com.hrishiz.memo.SketchApplication $r0;
+
+        $r0 := @this: com.hrishiz.memo.SketchApplication;
+
+        specialinvoke $r0.<android.app.Application: void <init>()>();
+
+        return;
+    }
+
+    static java.lang.String access$0(com.hrishiz.memo.SketchApplication, java.lang.Throwable)
+    {
+        com.hrishiz.memo.SketchApplication $r0;
+        java.lang.Throwable $r1;
+        java.lang.String $r2;
+
+        $r0 := @parameter0: com.hrishiz.memo.SketchApplication;
+
+        $r1 := @parameter1: java.lang.Throwable;
+
+        $r2 = specialinvoke $r0.<com.hrishiz.memo.SketchApplication: java.lang.String getStackTrace(java.lang.Throwable)>($r1);
+
+        return $r2;
+    }
+
+    static java.lang.Thread$UncaughtExceptionHandler access$1(com.hrishiz.memo.SketchApplication)
+    {
+        com.hrishiz.memo.SketchApplication $r0;
+        java.lang.Thread$UncaughtExceptionHandler r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.SketchApplication;
+
+        r1 = $r0.<com.hrishiz.memo.SketchApplication: java.lang.Thread$UncaughtExceptionHandler uncaughtExceptionHandler>;
+
+        return r1;
+    }
+
+    private java.lang.String getStackTrace(java.lang.Throwable)
+    {
+        com.hrishiz.memo.SketchApplication $r0;
+        java.io.PrintWriter $r1;
+        java.lang.Throwable $r2;
+        java.io.StringWriter $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.hrishiz.memo.SketchApplication;
+
+        $r2 := @parameter0: java.lang.Throwable;
+
+        $r3 = new java.io.StringWriter;
+
+        specialinvoke $r3.<java.io.StringWriter: void <init>()>();
+
+        $r1 = new java.io.PrintWriter;
+
+        specialinvoke $r1.<java.io.PrintWriter: void <init>(java.io.Writer)>($r3);
+
+     label1:
+        if $r2 != null goto label2;
+
+        $r4 = virtualinvoke $r3.<java.lang.Object: java.lang.String toString()>();
+
+        virtualinvoke $r1.<java.io.PrintWriter: void close()>();
+
+        return $r4;
+
+     label2:
+        virtualinvoke $r2.<java.lang.Throwable: void printStackTrace(java.io.PrintWriter)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.Throwable: java.lang.Throwable getCause()>();
+
+        goto label1;
+    }
+
+    public void onCreate()
+    {
+        com.hrishiz.memo.SketchApplication $r0;
+        java.lang.Thread$UncaughtExceptionHandler $r1;
+        com.hrishiz.memo.SketchApplication$1 $r2;
+
+        $r0 := @this: com.hrishiz.memo.SketchApplication;
+
+        $r1 = staticinvoke <java.lang.Thread: java.lang.Thread$UncaughtExceptionHandler getDefaultUncaughtExceptionHandler()>();
+
+        $r0.<com.hrishiz.memo.SketchApplication: java.lang.Thread$UncaughtExceptionHandler uncaughtExceptionHandler> = $r1;
+
+        $r2 = new com.hrishiz.memo.SketchApplication$1;
+
+        specialinvoke $r2.<com.hrishiz.memo.SketchApplication$1: void <init>(com.hrishiz.memo.SketchApplication)>($r0);
+
+        staticinvoke <java.lang.Thread: void setDefaultUncaughtExceptionHandler(java.lang.Thread$UncaughtExceptionHandler)>($r2);
+
+        specialinvoke $r0.<android.app.Application: void onCreate()>();
+
+        return;
+    }
+}

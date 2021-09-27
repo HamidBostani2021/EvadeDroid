@@ -1,0 +1,88 @@
+class com.seattleclouds.modules.o.d extends java.lang.Object implements com.google.android.gms.maps.p
+{
+    final com.seattleclouds.modules.o.a a;
+
+    void <init>(com.seattleclouds.modules.o.a)
+    {
+        com.seattleclouds.modules.o.d $r0;
+        com.seattleclouds.modules.o.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.o.d;
+
+        $r1 := @parameter0: com.seattleclouds.modules.o.a;
+
+        $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(android.location.Location)
+    {
+        com.seattleclouds.modules.o.d $r0;
+        android.location.Location $r1;
+        double $d0, $d1;
+        com.seattleclouds.modules.o.a $r2, $r5;
+        com.google.android.gms.maps.model.LatLng $r3, $r4;
+        boolean $z0;
+        android.support.v4.app.ac $r6;
+        com.google.android.gms.maps.c $r7;
+
+        $r0 := @this: com.seattleclouds.modules.o.d;
+
+        $r1 := @parameter0: android.location.Location;
+
+        $d0 = virtualinvoke $r1.<android.location.Location: double getLatitude()>();
+
+        $d1 = virtualinvoke $r1.<android.location.Location: double getLongitude()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        staticinvoke <com.seattleclouds.modules.o.a: android.location.Location a(com.seattleclouds.modules.o.a,android.location.Location)>($r2, $r1);
+
+        $r3 = new com.google.android.gms.maps.model.LatLng;
+
+        specialinvoke $r3.<com.google.android.gms.maps.model.LatLng: void <init>(double,double)>($d0, $d1);
+
+        $r2 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.model.LatLng a(com.seattleclouds.modules.o.a)>($r2);
+
+        if $r4 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        $r5 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.model.LatLng a(com.seattleclouds.modules.o.a)>($r5);
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.modules.o.a: boolean a(com.google.android.gms.maps.model.LatLng,com.google.android.gms.maps.model.LatLng)>($r3, $r4);
+
+        if $z0 != 0 goto label2;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.model.LatLng a(com.seattleclouds.modules.o.a,com.google.android.gms.maps.model.LatLng)>($r2, $r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        $r6 = virtualinvoke $r2.<com.seattleclouds.modules.o.a: android.support.v4.app.ac n()>();
+
+        if $r6 == null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.o.a: void ae()>();
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.o.d: com.seattleclouds.modules.o.a a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.c c(com.seattleclouds.modules.o.a)>($r2);
+
+        virtualinvoke $r7.<com.google.android.gms.maps.c: void a(com.google.android.gms.maps.p)>(null);
+
+        return;
+    }
+}

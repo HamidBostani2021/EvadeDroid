@@ -1,0 +1,118 @@
+public abstract class com.facebook.share.model.f extends java.lang.Object
+{
+    private android.os.Bundle a;
+
+    public void <init>()
+    {
+        com.facebook.share.model.f $r0;
+        android.os.Bundle $r1;
+
+        $r0 := @this: com.facebook.share.model.f;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new android.os.Bundle;
+
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+
+        $r0.<com.facebook.share.model.f: android.os.Bundle a> = $r1;
+
+        return;
+    }
+
+    static android.os.Bundle a(com.facebook.share.model.f)
+    {
+        com.facebook.share.model.f $r0;
+        android.os.Bundle r1;
+
+        $r0 := @parameter0: com.facebook.share.model.f;
+
+        r1 = $r0.<com.facebook.share.model.f: android.os.Bundle a>;
+
+        return r1;
+    }
+
+    static java.util.List a(android.os.Parcel)
+    {
+        android.os.Parcel $r0;
+        java.util.ArrayList $r1;
+        int $i0, $i1;
+        java.lang.Class $r2;
+        java.lang.ClassLoader $r3;
+        android.os.Parcelable[] $r4;
+        android.os.Parcelable $r5;
+        com.facebook.share.model.ShareMedia $r6;
+
+        $r0 := @parameter0: android.os.Parcel;
+
+        $r2 = class "Lcom/facebook/share/model/ShareMedia;";
+
+        $r3 = virtualinvoke $r2.<java.lang.Class: java.lang.ClassLoader getClassLoader()>();
+
+        $r4 = virtualinvoke $r0.<android.os.Parcel: android.os.Parcelable[] readParcelableArray(java.lang.ClassLoader)>($r3);
+
+        $r1 = new java.util.ArrayList;
+
+        $i0 = lengthof $r4;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>(int)>($i0);
+
+        $i0 = lengthof $r4;
+
+        $i1 = 0;
+
+     label1:
+        if $i1 >= $i0 goto label2;
+
+        $r5 = $r4[$i1];
+
+        $r6 = (com.facebook.share.model.ShareMedia) $r5;
+
+        interfaceinvoke $r1.<java.util.List: boolean add(java.lang.Object)>($r6);
+
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label2:
+        return $r1;
+    }
+
+    public com.facebook.share.model.f a(android.os.Bundle)
+    {
+        com.facebook.share.model.f $r0;
+        android.os.Bundle $r1, $r2;
+
+        $r0 := @this: com.facebook.share.model.f;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = $r0.<com.facebook.share.model.f: android.os.Bundle a>;
+
+        virtualinvoke $r2.<android.os.Bundle: void putAll(android.os.Bundle)>($r1);
+
+        return $r0;
+    }
+
+    public com.facebook.share.model.f a(com.facebook.share.model.ShareMedia)
+    {
+        com.facebook.share.model.ShareMedia $r0;
+        com.facebook.share.model.f $r1;
+        android.os.Bundle $r2;
+
+        $r1 := @this: com.facebook.share.model.f;
+
+        $r0 := @parameter0: com.facebook.share.model.ShareMedia;
+
+        if $r0 != null goto label1;
+
+        return $r1;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.facebook.share.model.ShareMedia: android.os.Bundle a()>();
+
+        $r1 = virtualinvoke $r1.<com.facebook.share.model.f: com.facebook.share.model.f a(android.os.Bundle)>($r2);
+
+        return $r1;
+    }
+}

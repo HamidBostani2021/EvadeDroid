@@ -1,0 +1,300 @@
+public class com.gohonzonfree.Images extends java.lang.Object
+{
+    private java.util.ArrayList imageId;
+    private java.util.Random randNo;
+
+    public void <init>()
+    {
+        com.gohonzonfree.Images $r0;
+        java.util.ArrayList $r1;
+        java.lang.Integer $r2;
+
+        $r0 := @this: com.gohonzonfree.Images;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId> = $r1;
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837504);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837515);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837526);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837536);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837537);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837538);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837539);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837540);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837541);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837505);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837506);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837507);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837508);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837509);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837510);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837511);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837512);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837513);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837514);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837516);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837517);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837518);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837519);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837520);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837521);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837522);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837523);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837524);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837525);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837527);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837528);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837529);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837530);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837531);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837532);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837533);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837534);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837535);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        return;
+    }
+
+    public int getImageId()
+    {
+        com.gohonzonfree.Images $r0;
+        java.util.Random $r1;
+        java.util.ArrayList $r2, $r3;
+        int $i0;
+        java.lang.Object $r4;
+        java.lang.Integer $r5;
+
+        $r0 := @this: com.gohonzonfree.Images;
+
+        $r1 = new java.util.Random;
+
+        specialinvoke $r1.<java.util.Random: void <init>()>();
+
+        $r0.<com.gohonzonfree.Images: java.util.Random randNo> = $r1;
+
+        $r2 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $r1 = $r0.<com.gohonzonfree.Images: java.util.Random randNo>;
+
+        $r3 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        $i0 = virtualinvoke $r3.<java.util.ArrayList: int size()>();
+
+        $i0 = virtualinvoke $r1.<java.util.Random: int nextInt(int)>($i0);
+
+        $r4 = virtualinvoke $r2.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r5 = (java.lang.Integer) $r4;
+
+        $i0 = virtualinvoke $r5.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public java.util.ArrayList getImageItem()
+    {
+        com.gohonzonfree.Images $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @this: com.gohonzonfree.Images;
+
+        r1 = $r0.<com.gohonzonfree.Images: java.util.ArrayList imageId>;
+
+        return r1;
+    }
+}

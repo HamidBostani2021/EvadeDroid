@@ -1,0 +1,17 @@
+public class Slicecom.gg.jewel.sagahd.quest.starmethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.gg.jewel.sagahd.quest.starmethod this;
+        com.google.android.gms.cast.CastDevice $r0;
+        android.os.Parcel $r1;
+        int $i0;
+
+        this := @this: Slicecom.gg.jewel.sagahd.quest.starmethod;
+
+        staticinvoke <com.google.android.gms.cast.b: void a(com.google.android.gms.cast.CastDevice,android.os.Parcel,int)>($r0, $r1, $i0);
+
+        return;
+    }
+}

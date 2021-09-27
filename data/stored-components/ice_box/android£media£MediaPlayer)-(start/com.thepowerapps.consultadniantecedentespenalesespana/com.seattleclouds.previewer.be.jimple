@@ -1,0 +1,63 @@
+class com.seattleclouds.previewer.be extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.previewer.aw a;
+
+    void <init>(com.seattleclouds.previewer.aw)
+    {
+        com.seattleclouds.previewer.be $r0;
+        com.seattleclouds.previewer.aw $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.be;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.aw;
+
+        $r0.<com.seattleclouds.previewer.be: com.seattleclouds.previewer.aw a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.previewer.be $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.previewer.aw $r2, $r3;
+        java.lang.String $r4;
+        android.support.v7.a.t $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.be;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.previewer.be: com.seattleclouds.previewer.aw a>;
+
+        $r3 = $r0.<com.seattleclouds.previewer.be: com.seattleclouds.previewer.aw a>;
+
+        $r4 = staticinvoke <com.seattleclouds.previewer.aw: java.lang.String d(com.seattleclouds.previewer.aw)>($r3);
+
+        staticinvoke <com.seattleclouds.previewer.aw: void a(com.seattleclouds.previewer.aw,java.lang.String,int)>($r2, $r4, $i0);
+
+        $r2 = $r0.<com.seattleclouds.previewer.be: com.seattleclouds.previewer.aw a>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.aw: android.support.v7.a.t e(com.seattleclouds.previewer.aw)>($r2);
+
+        if $r5 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.previewer.be: com.seattleclouds.previewer.aw a>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.aw: android.support.v7.a.t e(com.seattleclouds.previewer.aw)>($r2);
+
+        virtualinvoke $r5.<android.support.v7.a.t: void dismiss()>();
+
+        $r2 = $r0.<com.seattleclouds.previewer.be: com.seattleclouds.previewer.aw a>;
+
+        staticinvoke <com.seattleclouds.previewer.aw: android.support.v7.a.t a(com.seattleclouds.previewer.aw,android.support.v7.a.t)>($r2, null);
+
+     label1:
+        return;
+    }
+}

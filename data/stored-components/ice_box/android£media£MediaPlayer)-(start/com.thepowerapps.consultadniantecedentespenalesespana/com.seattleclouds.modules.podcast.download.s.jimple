@@ -1,0 +1,20 @@
+class com.seattleclouds.modules.podcast.download.s extends java.lang.Object
+{
+    android.widget.TextView a;
+    android.widget.TextView b;
+    android.widget.TextView c;
+    android.widget.ImageView d;
+    android.widget.ImageButton e;
+    android.widget.ProgressBar f;
+
+    void <init>()
+    {
+        com.seattleclouds.modules.podcast.download.s $r0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.s;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

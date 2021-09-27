@@ -1,0 +1,43 @@
+class com.seattleclouds.media.ui.r extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final com.seattleclouds.media.ui.a b;
+
+    void <init>(com.seattleclouds.media.ui.a, java.lang.String)
+    {
+        com.seattleclouds.media.ui.r $r0;
+        com.seattleclouds.media.ui.a $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.media.ui.r;
+
+        $r1 := @parameter0: com.seattleclouds.media.ui.a;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.media.ui.r: com.seattleclouds.media.ui.a b> = $r1;
+
+        $r0.<com.seattleclouds.media.ui.r: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.media.ui.r $r0;
+        com.seattleclouds.media.ui.a $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.media.ui.r;
+
+        $r1 = $r0.<com.seattleclouds.media.ui.r: com.seattleclouds.media.ui.a b>;
+
+        $r2 = $r0.<com.seattleclouds.media.ui.r: java.lang.String a>;
+
+        staticinvoke <com.seattleclouds.media.ui.a: void c(com.seattleclouds.media.ui.a,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+}

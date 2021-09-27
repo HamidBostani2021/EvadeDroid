@@ -1,0 +1,43 @@
+class com.seattleclouds.modules.t.k extends java.lang.Object implements com.seattleclouds.modules.t.af
+{
+    final com.seattleclouds.modules.t.h a;
+
+    void <init>(com.seattleclouds.modules.t.h)
+    {
+        com.seattleclouds.modules.t.k $r0;
+        com.seattleclouds.modules.t.h $r1;
+
+        $r0 := @this: com.seattleclouds.modules.t.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.h;
+
+        $r0.<com.seattleclouds.modules.t.k: com.seattleclouds.modules.t.h a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(com.seattleclouds.modules.t.ab)
+    {
+        com.seattleclouds.modules.t.k $r0;
+        com.seattleclouds.modules.t.ab $r1;
+        java.lang.String $r2;
+        com.seattleclouds.modules.t.h $r3;
+        com.seattleclouds.modules.t.ai $r4;
+
+        $r0 := @this: com.seattleclouds.modules.t.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.ab;
+
+        $r3 = $r0.<com.seattleclouds.modules.t.k: com.seattleclouds.modules.t.h a>;
+
+        $r4 = $r3.<com.seattleclouds.modules.t.h: com.seattleclouds.modules.t.ai a>;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.modules.t.ab: java.lang.String ab()>();
+
+        staticinvoke <com.seattleclouds.modules.t.ai: void a(com.seattleclouds.modules.t.ai,java.lang.String,boolean)>($r4, $r2, 1);
+
+        return;
+    }
+}

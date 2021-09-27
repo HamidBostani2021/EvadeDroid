@@ -1,0 +1,1211 @@
+public class com.seattleclouds.modules.f.a extends java.lang.Object
+{
+    private static com.seattleclouds.modules.f.a a;
+    private static java.lang.String d;
+    private static java.lang.String e;
+    private com.seattleclouds.modules.f.b b;
+    private java.util.ArrayList c;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.a a> = null;
+
+        <com.seattleclouds.modules.f.a: java.lang.String d> = null;
+
+        <com.seattleclouds.modules.f.a: java.lang.String e> = null;
+
+        return;
+    }
+
+    public void <init>(android.content.Context)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        android.content.Context $r1;
+        java.util.ArrayList $r2;
+        com.seattleclouds.modules.f.b $r3;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b> = null;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c> = $r2;
+
+        $r3 = new com.seattleclouds.modules.f.b;
+
+        $r1 = virtualinvoke $r1.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        specialinvoke $r3.<com.seattleclouds.modules.f.b: void <init>(com.seattleclouds.modules.f.a,android.content.Context)>($r0, $r1);
+
+        $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b> = $r3;
+
+        specialinvoke $r0.<com.seattleclouds.modules.f.a: void f()>();
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.f.a a(android.content.Context)
+    {
+        android.content.Context $r0;
+        com.seattleclouds.modules.f.a $r1;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 = <com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.a a>;
+
+        if $r1 != null goto label1;
+
+        if $r0 == null goto label1;
+
+        $r1 = new com.seattleclouds.modules.f.a;
+
+        specialinvoke $r1.<com.seattleclouds.modules.f.a: void <init>(android.content.Context)>($r0);
+
+        <com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.a a> = $r1;
+
+     label1:
+        $r1 = <com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.a a>;
+
+        return $r1;
+    }
+
+    public static java.lang.String a()
+    {
+        java.lang.String $r0;
+        java.lang.StringBuilder $r1;
+
+        $r0 = <com.seattleclouds.modules.f.a: java.lang.String d>;
+
+        if $r0 != null goto label1;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("data:image/png;base64,");
+
+        $r0 = staticinvoke <com.seattleclouds.util.k: java.lang.String a(java.lang.String)>("favorite.png");
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r0);
+
+        $r0 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        <com.seattleclouds.modules.f.a: java.lang.String d> = $r0;
+
+     label1:
+        $r0 = <com.seattleclouds.modules.f.a: java.lang.String d>;
+
+        return $r0;
+    }
+
+    public static void a(android.content.Context, android.webkit.WebView, java.lang.String[])
+    {
+        android.content.Context $r0;
+        android.webkit.WebView $r1;
+        java.lang.String[] $r2;
+        int $i0;
+        java.lang.String $r3, $r4, $r5, $r6, $r7;
+        boolean $z0;
+        java.lang.StringBuilder $r8;
+        com.seattleclouds.modules.f.a $r9;
+        java.lang.Throwable $r10, $r11;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: android.webkit.WebView;
+
+        $r2 := @parameter2: java.lang.String[];
+
+        $i0 = lengthof $r2;
+
+        if $i0 <= 0 goto label43;
+
+        $r3 = $r2[0];
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("add");
+
+        if $z0 == 0 goto label43;
+
+        $i0 = lengthof $r2;
+
+        if $i0 <= 1 goto label43;
+
+        $r3 = $r2[1];
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("RSSItem");
+
+        if $z0 == 0 goto label24;
+
+        $i0 = lengthof $r2;
+
+        if $i0 <= 5 goto label43;
+
+        $r3 = $r2[2];
+
+     label01:
+        $r3 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r3, "UTF-8");
+
+     label02:
+        $r4 = $r2[3];
+
+     label03:
+        $r5 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r4, "UTF-8");
+
+     label04:
+        $r4 = $r2[4];
+
+     label05:
+        $r6 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r4, "UTF-8");
+
+     label06:
+        $r4 = $r2[5];
+
+     label07:
+        $r7 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r4, "UTF-8");
+
+     label08:
+        $r8 = new java.lang.StringBuilder;
+
+     label09:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = staticinvoke <com.seattleclouds.util.au: java.lang.String e(java.lang.String)>($r4);
+
+        $r9 = staticinvoke <com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.a a(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r9.<com.seattleclouds.modules.f.a: boolean b(java.lang.String)>($r4);
+
+     label10:
+        if $z0 == 0 goto label17;
+
+     label11:
+        virtualinvoke $r9.<com.seattleclouds.modules.f.a: void a(java.lang.String,java.lang.String)>($r5, $r3);
+
+     label12:
+        $r8 = new java.lang.StringBuilder;
+
+     label13:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'rsstable\').contentWindow.document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r3 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String b()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r3 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r3);
+
+     label14:
+        $r8 = new java.lang.StringBuilder;
+
+     label15:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r3 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String b()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r3 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r3);
+
+     label16:
+        return;
+
+     label17:
+        virtualinvoke $r9.<com.seattleclouds.modules.f.a: void a(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>($r5, $r3, $r6, $r7);
+
+     label18:
+        $r8 = new java.lang.StringBuilder;
+
+     label19:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'rsstable\').contentWindow.document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r3 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String a()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r3 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r3);
+
+     label20:
+        $r8 = new java.lang.StringBuilder;
+
+     label21:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r3 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String a()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r3 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r3);
+
+     label22:
+        return;
+
+     label23:
+        $r10 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("Favorites:", "UnsupportedEncodingException", $r10);
+
+        return;
+
+     label24:
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("ILTI");
+
+        if $z0 == 0 goto label43;
+
+        $i0 = lengthof $r2;
+
+        if $i0 <= 5 goto label43;
+
+        $r3 = $r2[2];
+
+        $r4 = $r2[3];
+
+     label25:
+        $r4 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r4, "UTF-8");
+
+     label26:
+        $r5 = $r2[4];
+
+     label27:
+        $r5 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r5, "UTF-8");
+
+     label28:
+        $r6 = $r2[5];
+
+     label29:
+        $r6 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r6, "UTF-8");
+
+        $r9 = staticinvoke <com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.a a(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r9.<com.seattleclouds.modules.f.a: boolean b(java.lang.String)>($r3);
+
+     label30:
+        if $z0 == 0 goto label38;
+
+     label31:
+        virtualinvoke $r9.<com.seattleclouds.modules.f.a: void a(java.lang.String)>($r3);
+
+     label32:
+        $r8 = new java.lang.StringBuilder;
+
+     label33:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'rsstable\').contentWindow.document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r4 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String b()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r4 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r4);
+
+     label34:
+        $r8 = new java.lang.StringBuilder;
+
+     label35:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r3 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String b()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r3 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r3);
+
+     label36:
+        return;
+
+     label37:
+        $r11 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("Favorites:", "UnsupportedEncodingException", $r11);
+
+        return;
+
+     label38:
+        virtualinvoke $r9.<com.seattleclouds.modules.f.a: void b(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>($r3, $r5, $r6, $r4);
+
+     label39:
+        $r8 = new java.lang.StringBuilder;
+
+     label40:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'rsstable\').contentWindow.document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r4 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String a()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r4 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r4);
+
+     label41:
+        $r8 = new java.lang.StringBuilder;
+
+     label42:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("document.getElementById(\'");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\').src = \'");
+
+        $r3 = staticinvoke <com.seattleclouds.modules.f.a: java.lang.String a()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r3 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, $r3);
+
+     label43:
+        return;
+
+        catch java.io.UnsupportedEncodingException from label01 to label02 with label23;
+        catch java.io.UnsupportedEncodingException from label03 to label04 with label23;
+        catch java.io.UnsupportedEncodingException from label05 to label06 with label23;
+        catch java.io.UnsupportedEncodingException from label07 to label08 with label23;
+        catch java.io.UnsupportedEncodingException from label09 to label10 with label23;
+        catch java.io.UnsupportedEncodingException from label11 to label12 with label23;
+        catch java.io.UnsupportedEncodingException from label13 to label14 with label23;
+        catch java.io.UnsupportedEncodingException from label15 to label16 with label23;
+        catch java.io.UnsupportedEncodingException from label17 to label18 with label23;
+        catch java.io.UnsupportedEncodingException from label19 to label20 with label23;
+        catch java.io.UnsupportedEncodingException from label21 to label22 with label23;
+        catch java.io.UnsupportedEncodingException from label25 to label26 with label37;
+        catch java.io.UnsupportedEncodingException from label27 to label28 with label37;
+        catch java.io.UnsupportedEncodingException from label29 to label30 with label37;
+        catch java.io.UnsupportedEncodingException from label31 to label32 with label37;
+        catch java.io.UnsupportedEncodingException from label33 to label34 with label37;
+        catch java.io.UnsupportedEncodingException from label35 to label36 with label37;
+        catch java.io.UnsupportedEncodingException from label38 to label39 with label37;
+        catch java.io.UnsupportedEncodingException from label40 to label41 with label37;
+        catch java.io.UnsupportedEncodingException from label42 to label43 with label37;
+    }
+
+    public static java.lang.String b()
+    {
+        java.lang.String $r0;
+        java.lang.StringBuilder $r1;
+
+        $r0 = <com.seattleclouds.modules.f.a: java.lang.String e>;
+
+        if $r0 != null goto label1;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("data:image/png;base64,");
+
+        $r0 = staticinvoke <com.seattleclouds.util.k: java.lang.String a(java.lang.String)>("favoriteoff.png");
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r0);
+
+        $r0 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        <com.seattleclouds.modules.f.a: java.lang.String e> = $r0;
+
+     label1:
+        $r0 = <com.seattleclouds.modules.f.a: java.lang.String e>;
+
+        return $r0;
+    }
+
+    private void b(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.lang.String $r1, $r2, $r6;
+        int $i0, $i1;
+        java.util.ArrayList $r3;
+        java.lang.Object $r4;
+        java.util.Map $r5;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 = 0;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $i1 = virtualinvoke $r3.<java.util.ArrayList: int size()>();
+
+        if $i0 >= $i1 goto label3;
+
+        $r3 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $r4 = virtualinvoke $r3.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r5 = (java.util.Map) $r4;
+
+        $r4 = interfaceinvoke $r5.<java.util.Map: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r6 = (java.lang.String) $r4;
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>($r2);
+
+        if $z0 == 0 goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        virtualinvoke $r3.<java.util.ArrayList: java.lang.Object remove(int)>($i0);
+
+        return;
+
+     label2:
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label3:
+        return;
+    }
+
+    private void f()
+    {
+        com.seattleclouds.modules.f.a $r0;
+        com.seattleclouds.modules.f.b $r1;
+        java.lang.String[] $r2;
+        android.database.sqlite.SQLiteDatabase $r3;
+        android.database.Cursor $r4;
+        boolean $z0;
+        java.util.HashMap $r5;
+        java.lang.String $r6;
+        java.util.ArrayList $r7;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b>;
+
+        if $r1 == null goto label3;
+
+        $r2 = newarray (java.lang.String)[7];
+
+        $r2[0] = "type";
+
+        $r2[1] = "itemID";
+
+        $r2[2] = "md5ID";
+
+        $r2[3] = "rssURL";
+
+        $r2[4] = "title";
+
+        $r2[5] = "pictureURL";
+
+        $r2[6] = "link";
+
+        $r1 = $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b>;
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.modules.f.b: android.database.sqlite.SQLiteDatabase getReadableDatabase()>();
+
+        $r4 = virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>("favorites", $r2, null, null, null, null, null);
+
+        interfaceinvoke $r4.<android.database.Cursor: boolean moveToFirst()>();
+
+     label1:
+        $z0 = interfaceinvoke $r4.<android.database.Cursor: boolean isAfterLast()>();
+
+        if $z0 != 0 goto label2;
+
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(0);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("type", $r6);
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(1);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("itemID", $r6);
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(2);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("md5ID", $r6);
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(3);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("rssURL", $r6);
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(4);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("title", $r6);
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(5);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("pictureURL", $r6);
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(6);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("link", $r6);
+
+        $r7 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        virtualinvoke $r7.<java.util.ArrayList: boolean add(java.lang.Object)>($r5);
+
+        interfaceinvoke $r4.<android.database.Cursor: boolean moveToNext()>();
+
+        goto label1;
+
+     label2:
+        interfaceinvoke $r4.<android.database.Cursor: void close()>();
+
+     label3:
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.lang.String $r1, $r5;
+        com.seattleclouds.modules.f.b $r2;
+        android.database.sqlite.SQLiteDatabase $r3;
+        java.lang.StringBuilder $r4;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.f.b: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("DELETE FROM favorites WHERE md5ID=\'");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r3.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>($r5);
+
+        specialinvoke $r0.<com.seattleclouds.modules.f.a: void b(java.lang.String,java.lang.String)>("md5ID", $r1);
+
+     label1:
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.lang.String $r1, $r2;
+        com.seattleclouds.modules.f.b $r3;
+        android.database.sqlite.SQLiteDatabase $r4;
+        java.lang.StringBuilder $r5;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.f.b: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r1 = staticinvoke <com.seattleclouds.util.au: java.lang.String e(java.lang.String)>($r1);
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("DELETE FROM favorites WHERE md5ID=\'");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\';");
+
+        $r2 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r4.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>($r2);
+
+        specialinvoke $r0.<com.seattleclouds.modules.f.a: void b(java.lang.String,java.lang.String)>("md5ID", $r1);
+
+     label1:
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.lang.String $r1, $r2, $r3, $r4;
+        java.util.HashMap $r5;
+        java.lang.StringBuilder $r6;
+        byte[] $r7;
+        java.lang.Throwable $r8;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("type", "RSSItem");
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("itemID", $r1);
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r1 = staticinvoke <com.seattleclouds.util.au: java.lang.String e(java.lang.String)>($r1);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("md5ID", $r1);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("rssURL", $r2);
+
+        $r1 = new java.lang.String;
+
+     label1:
+        $r7 = virtualinvoke $r3.<java.lang.String: byte[] getBytes()>();
+
+        specialinvoke $r1.<java.lang.String: void <init>(byte[],java.lang.String)>($r7, "UTF-8");
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("title", $r1);
+
+     label2:
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("pictureURL", $r4);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("link", "");
+
+        virtualinvoke $r0.<com.seattleclouds.modules.f.a: void a(java.util.HashMap)>($r5);
+
+        return;
+
+     label3:
+        $r8 := @caughtexception;
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("title", $r3);
+
+        goto label2;
+
+        catch java.io.UnsupportedEncodingException from label1 to label2 with label3;
+    }
+
+    public void a(java.util.HashMap)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.util.HashMap $r1;
+        android.content.ContentValues $r2;
+        java.lang.Object $r3;
+        java.lang.String $r4;
+        com.seattleclouds.modules.f.b $r5;
+        android.database.sqlite.SQLiteDatabase $r6;
+        java.util.ArrayList $r7;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: java.util.HashMap;
+
+        $r2 = new android.content.ContentValues;
+
+        specialinvoke $r2.<android.content.ContentValues: void <init>()>();
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("type");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r2.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("type", $r4);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("itemID");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r2.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("itemID", $r4);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("md5ID");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r2.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("md5ID", $r4);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("rssURL");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r2.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("rssURL", $r4);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("title");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r2.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("title", $r4);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("pictureURL");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r2.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("pictureURL", $r4);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("link");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r2.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("link", $r4);
+
+        $r5 = $r0.<com.seattleclouds.modules.f.a: com.seattleclouds.modules.f.b b>;
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.modules.f.b: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        virtualinvoke $r6.<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)>("favorites", null, $r2);
+
+        $r7 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        virtualinvoke $r7.<java.util.ArrayList: boolean add(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    public void b(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.lang.String $r1, $r2, $r3, $r4;
+        java.util.HashMap $r5;
+        byte[] $r6;
+        java.lang.Throwable $r7;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("type", "ILTI");
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("itemID", "");
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("md5ID", $r1);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("rssURL", "");
+
+        $r1 = new java.lang.String;
+
+     label1:
+        $r6 = virtualinvoke $r2.<java.lang.String: byte[] getBytes()>();
+
+        specialinvoke $r1.<java.lang.String: void <init>(byte[],java.lang.String)>($r6, "UTF-8");
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("title", $r1);
+
+     label2:
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("pictureURL", $r3);
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("link", $r4);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.f.a: void a(java.util.HashMap)>($r5);
+
+        return;
+
+     label3:
+        $r7 := @caughtexception;
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("title", $r2);
+
+        goto label2;
+
+        catch java.io.UnsupportedEncodingException from label1 to label2 with label3;
+    }
+
+    public boolean b(java.lang.String)
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.lang.String $r1, $r5;
+        int $i0, $i1;
+        java.util.ArrayList $r2;
+        java.lang.Object $r3;
+        java.util.Map $r4;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 = 0;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $i1 = virtualinvoke $r2.<java.util.ArrayList: int size()>();
+
+        if $i0 >= $i1 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r4 = (java.util.Map) $r3;
+
+        $r3 = interfaceinvoke $r4.<java.util.Map: java.lang.Object get(java.lang.Object)>("md5ID");
+
+        $r5 = (java.lang.String) $r3;
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label2;
+
+        return 1;
+
+     label2:
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label3:
+        return 0;
+    }
+
+    public java.lang.String[] c()
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.util.ArrayList $r1, $r2;
+        int $i0, $i1;
+        java.lang.Object $r3;
+        java.util.Map $r4;
+        java.lang.String[] $r5;
+        java.lang.Object[] $r6;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $i0 = 0;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $i1 = virtualinvoke $r2.<java.util.ArrayList: int size()>();
+
+        if $i0 >= $i1 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r4 = (java.util.Map) $r3;
+
+        $r3 = interfaceinvoke $r4.<java.util.Map: java.lang.Object get(java.lang.Object)>("md5ID");
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r3);
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label2:
+        $i0 = virtualinvoke $r1.<java.util.ArrayList: int size()>();
+
+        $r5 = newarray (java.lang.String)[$i0];
+
+        $r6 = virtualinvoke $r1.<java.util.ArrayList: java.lang.Object[] toArray(java.lang.Object[])>($r5);
+
+        $r5 = (java.lang.String[]) $r6;
+
+        return $r5;
+    }
+
+    public java.util.ArrayList d()
+    {
+        com.seattleclouds.modules.f.a $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        r1 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        return r1;
+    }
+
+    public java.lang.String e()
+    {
+        com.seattleclouds.modules.f.a $r0;
+        org.json.JSONObject $r1, $r6;
+        org.json.JSONArray $r2;
+        int $i0, $i1;
+        java.util.ArrayList $r3;
+        java.lang.Object $r4;
+        java.util.Map $r5;
+        java.lang.String $r7;
+        java.lang.StringBuilder $r8;
+        org.json.JSONException $r9, $r11;
+        java.lang.Throwable $r10;
+
+        $r0 := @this: com.seattleclouds.modules.f.a;
+
+        $r1 = new org.json.JSONObject;
+
+        specialinvoke $r1.<org.json.JSONObject: void <init>()>();
+
+        $r2 = new org.json.JSONArray;
+
+        specialinvoke $r2.<org.json.JSONArray: void <init>()>();
+
+        $i0 = 0;
+
+     label01:
+        $r3 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $i1 = virtualinvoke $r3.<java.util.ArrayList: int size()>();
+
+        if $i0 >= $i1 goto label21;
+
+        $r3 = $r0.<com.seattleclouds.modules.f.a: java.util.ArrayList c>;
+
+        $r4 = virtualinvoke $r3.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r5 = (java.util.Map) $r4;
+
+        $r6 = new org.json.JSONObject;
+
+        specialinvoke $r6.<org.json.JSONObject: void <init>(java.util.Map)>($r5);
+
+     label02:
+        $r4 = interfaceinvoke $r5.<java.util.Map: java.lang.Object get(java.lang.Object)>("link");
+
+     label03:
+        $r7 = (java.lang.String) $r4;
+
+     label04:
+        $i1 = virtualinvoke $r7.<java.lang.String: int length()>();
+
+     label05:
+        if $i1 <= 0 goto label10;
+
+     label06:
+        $r4 = interfaceinvoke $r5.<java.util.Map: java.lang.Object get(java.lang.Object)>("link");
+
+     label07:
+        $r7 = (java.lang.String) $r4;
+
+     label08:
+        virtualinvoke $r6.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("itemURL", $r7);
+
+        virtualinvoke $r2.<org.json.JSONArray: org.json.JSONArray put(java.lang.Object)>($r6);
+
+     label09:
+        $i0 = $i0 + 1;
+
+        goto label01;
+
+     label10:
+        $r8 = new java.lang.StringBuilder;
+
+     label11:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+     label12:
+        $r7 = <com.seattleclouds.App: java.lang.String q>;
+
+     label13:
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/reader.ashx?itemid=");
+
+        $r4 = interfaceinvoke $r5.<java.util.Map: java.lang.Object get(java.lang.Object)>("itemID");
+
+     label14:
+        $r7 = (java.lang.String) $r4;
+
+     label15:
+        $r7 = staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>($r7, "UTF-8");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&rssurl=");
+
+        $r4 = interfaceinvoke $r5.<java.util.Map: java.lang.Object get(java.lang.Object)>("rssURL");
+
+     label16:
+        $r7 = (java.lang.String) $r4;
+
+     label17:
+        $r7 = staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>($r7, "UTF-8");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label18:
+        goto label08;
+
+     label19:
+        $r9 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("Favorites:", "JSONException", $r9);
+
+        goto label09;
+
+     label20:
+        $r10 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("Favorites:", "UnsupportedEncodingException", $r10);
+
+        goto label09;
+
+     label21:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("favorites", $r2);
+
+        $r7 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String toString()>();
+
+     label22:
+        return $r7;
+
+     label23:
+        $r11 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("Favorites:", "JSONException", $r11);
+
+        return "{\"favorites\":[]}";
+
+        catch org.json.JSONException from label02 to label03 with label19;
+        catch org.json.JSONException from label04 to label05 with label19;
+        catch org.json.JSONException from label06 to label07 with label19;
+        catch org.json.JSONException from label08 to label09 with label19;
+        catch org.json.JSONException from label11 to label12 with label19;
+        catch org.json.JSONException from label13 to label14 with label19;
+        catch org.json.JSONException from label15 to label16 with label19;
+        catch org.json.JSONException from label17 to label18 with label19;
+        catch java.io.UnsupportedEncodingException from label02 to label03 with label20;
+        catch java.io.UnsupportedEncodingException from label04 to label05 with label20;
+        catch java.io.UnsupportedEncodingException from label06 to label07 with label20;
+        catch java.io.UnsupportedEncodingException from label08 to label09 with label20;
+        catch java.io.UnsupportedEncodingException from label11 to label12 with label20;
+        catch java.io.UnsupportedEncodingException from label13 to label14 with label20;
+        catch java.io.UnsupportedEncodingException from label15 to label16 with label20;
+        catch java.io.UnsupportedEncodingException from label17 to label18 with label20;
+        catch org.json.JSONException from label21 to label22 with label23;
+    }
+}

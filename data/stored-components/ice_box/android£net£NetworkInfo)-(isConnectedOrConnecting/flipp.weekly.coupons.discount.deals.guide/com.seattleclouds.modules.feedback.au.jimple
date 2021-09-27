@@ -1,0 +1,78 @@
+class com.seattleclouds.modules.feedback.au extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.modules.feedback.a a;
+    final com.seattleclouds.modules.feedback.c b;
+
+    void <init>(com.seattleclouds.modules.feedback.c, com.seattleclouds.modules.feedback.a)
+    {
+        com.seattleclouds.modules.feedback.au $r0;
+        com.seattleclouds.modules.feedback.c $r1;
+        com.seattleclouds.modules.feedback.a $r2;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.au;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.c;
+
+        $r2 := @parameter1: com.seattleclouds.modules.feedback.a;
+
+        $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.c b> = $r1;
+
+        $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.a a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.modules.feedback.au $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.feedback.c $r2;
+        com.seattleclouds.modules.feedback.a $r3;
+        android.content.Intent $r4;
+        android.support.v4.app.ac $r5;
+        android.widget.ImageView $r6;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.au;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.c b>;
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.a a>;
+
+        staticinvoke <com.seattleclouds.modules.feedback.c: com.seattleclouds.modules.feedback.a a(com.seattleclouds.modules.feedback.c,com.seattleclouds.modules.feedback.a)>($r2, $r3);
+
+        $r4 = new android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.c b>;
+
+        $r5 = virtualinvoke $r2.<com.seattleclouds.modules.feedback.c: android.support.v4.app.ac n()>();
+
+        specialinvoke $r4.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r5, class "Lcom/seattleclouds/modules/signaturestamp/DrawSurfaceActivity;");
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.a a>;
+
+        $r6 = $r3.<com.seattleclouds.modules.feedback.a: android.widget.ImageView e>;
+
+        $i0 = virtualinvoke $r6.<android.widget.ImageView: int getWidth()>();
+
+        virtualinvoke $r4.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("surfWidth", $i0);
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.a a>;
+
+        $r6 = $r3.<com.seattleclouds.modules.feedback.a: android.widget.ImageView e>;
+
+        $i0 = virtualinvoke $r6.<android.widget.ImageView: int getHeight()>();
+
+        virtualinvoke $r4.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("surfHeight", $i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.au: com.seattleclouds.modules.feedback.c b>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.feedback.c: void startActivityForResult(android.content.Intent,int)>($r4, 1303);
+
+        return;
+    }
+}

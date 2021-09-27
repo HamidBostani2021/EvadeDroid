@@ -1,0 +1,778 @@
+public class anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper extends anywheresoftware.b4a.AbsObjectWrapper
+{
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.AbsObjectWrapper: void <init>()>();
+
+        return;
+    }
+
+    private static android.graphics.Bitmap initializeSampleImpl(java.lang.String, java.lang.String, int, int) throws java.io.IOException
+    {
+        java.lang.String $r0, $r1, $r13;
+        int $i0, $i1, $i2;
+        android.graphics.BitmapFactory$Options $r2;
+        java.lang.OutOfMemoryError $r3;
+        float $f0;
+        anywheresoftware.b4a.objects.streams.File $r4;
+        anywheresoftware.b4a.objects.streams.File$InputStreamWrapper $r5, $r6;
+        java.lang.Object $r7;
+        java.io.InputStream $r8;
+        byte $b3;
+        android.graphics.Bitmap $r9, $r11;
+        boolean $z0;
+        java.lang.RuntimeException $r10;
+        java.lang.StringBuilder $r12;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $i0 := @parameter2: int;
+
+        $i1 := @parameter3: int;
+
+        $r4 = <anywheresoftware.b4a.keywords.Common: anywheresoftware.b4a.objects.streams.File File>;
+
+        $r5 = staticinvoke <anywheresoftware.b4a.objects.streams.File: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper OpenInput(java.lang.String,java.lang.String)>($r0, $r1);
+
+        $r6 = $r5;
+
+        $r2 = new android.graphics.BitmapFactory$Options;
+
+        specialinvoke $r2.<android.graphics.BitmapFactory$Options: void <init>()>();
+
+        $r2.<android.graphics.BitmapFactory$Options: boolean inJustDecodeBounds> = 1;
+
+        $r7 = virtualinvoke $r5.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: java.lang.Object getObject()>();
+
+        $r8 = (java.io.InputStream) $r7;
+
+        staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeStream(java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory$Options)>($r8, null, $r2);
+
+        virtualinvoke $r5.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: void Close()>();
+
+        $i2 = $r2.<android.graphics.BitmapFactory$Options: int outWidth>;
+
+        $i0 = $i2 / $i0;
+
+        $i2 = $r2.<android.graphics.BitmapFactory$Options: int outHeight>;
+
+        $i1 = $i2 / $i1;
+
+        $i0 = staticinvoke <java.lang.Math: int max(int,int)>($i0, $i1);
+
+        $f0 = (float) $i0;
+
+        $r2 = null;
+
+        $b3 = $f0 cmpl 1.0F;
+
+        if $b3 <= 0 goto label01;
+
+        $r2 = new android.graphics.BitmapFactory$Options;
+
+        specialinvoke $r2.<android.graphics.BitmapFactory$Options: void <init>()>();
+
+        $i0 = (int) $f0;
+
+        $r2.<android.graphics.BitmapFactory$Options: int inSampleSize> = $i0;
+
+     label01:
+        $r9 = null;
+
+        $z0 = 0;
+
+        $i0 = 5;
+
+     label02:
+        if $i0 > 0 goto label04;
+
+     label03:
+        if $r9 != null goto label16;
+
+        if $z0 == 0 goto label15;
+
+        $r10 = new java.lang.RuntimeException;
+
+        specialinvoke $r10.<java.lang.RuntimeException: void <init>(java.lang.String)>("Error loading bitmap (OutOfMemoryError)");
+
+        throw $r10;
+
+     label04:
+        $r4 = <anywheresoftware.b4a.keywords.Common: anywheresoftware.b4a.objects.streams.File File>;
+
+        $r5 = staticinvoke <anywheresoftware.b4a.objects.streams.File: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper OpenInput(java.lang.String,java.lang.String)>($r0, $r1);
+
+     label05:
+        $r6 = $r5;
+
+     label06:
+        $r7 = virtualinvoke $r5.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: java.lang.Object getObject()>();
+
+     label07:
+        $r8 = (java.io.InputStream) $r7;
+
+     label08:
+        $r11 = staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeStream(java.io.InputStream,android.graphics.Rect,android.graphics.BitmapFactory$Options)>($r8, null, $r2);
+
+     label09:
+        $r9 = $r11;
+
+     label10:
+        virtualinvoke $r5.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: void Close()>();
+
+     label11:
+        goto label03;
+
+     label12:
+        $r3 := @caughtexception;
+
+        if $r6 == null goto label13;
+
+        virtualinvoke $r6.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: void Close()>();
+
+     label13:
+        staticinvoke <java.lang.System: void gc()>();
+
+        if $r2 != null goto label14;
+
+        $r2 = new android.graphics.BitmapFactory$Options;
+
+        specialinvoke $r2.<android.graphics.BitmapFactory$Options: void <init>()>();
+
+        $r2.<android.graphics.BitmapFactory$Options: int inSampleSize> = 1;
+
+     label14:
+        $i1 = $r2.<android.graphics.BitmapFactory$Options: int inSampleSize>;
+
+        $i1 = $i1 * 2;
+
+        $r2.<android.graphics.BitmapFactory$Options: int inSampleSize> = $i1;
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>(java.lang.String)>("Downsampling image due to lack of memory: ");
+
+        $i1 = $r2.<android.graphics.BitmapFactory$Options: int inSampleSize>;
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i1);
+
+        $r13 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <anywheresoftware.b4a.BA: void Log(java.lang.String)>($r13);
+
+        $z0 = 1;
+
+        $i0 = $i0 + -1;
+
+        goto label02;
+
+     label15:
+        $r10 = new java.lang.RuntimeException;
+
+        specialinvoke $r10.<java.lang.RuntimeException: void <init>(java.lang.String)>("Error loading bitmap.");
+
+        throw $r10;
+
+     label16:
+        virtualinvoke $r9.<android.graphics.Bitmap: void setDensity(int)>(160);
+
+        return $r9;
+
+        catch java.lang.OutOfMemoryError from label04 to label05 with label12;
+        catch java.lang.OutOfMemoryError from label06 to label07 with label12;
+        catch java.lang.OutOfMemoryError from label08 to label09 with label12;
+        catch java.lang.OutOfMemoryError from label10 to label11 with label12;
+    }
+
+    public anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper Crop(int, int, int, int)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        int $i0, $i1, $i2, $i3, $i4;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2, $r3;
+        anywheresoftware.b4a.ObjectWrapper $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.graphics.Bitmap) $r1;
+
+        $i4 = virtualinvoke $r3.<android.graphics.Bitmap: int getWidth()>();
+
+        $i4 = $i4 - $i0;
+
+        $i2 = staticinvoke <java.lang.Math: int min(int,int)>($i2, $i4);
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.graphics.Bitmap) $r1;
+
+        $i4 = virtualinvoke $r3.<android.graphics.Bitmap: int getHeight()>();
+
+        $i4 = $i4 - $i1;
+
+        $i3 = staticinvoke <java.lang.Math: int min(int,int)>($i3, $i4);
+
+        $r2 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)>($r2, $i0, $i1, $i2, $i3, null, 1);
+
+        $r0 = new anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void <init>()>();
+
+        $r4 = staticinvoke <anywheresoftware.b4a.AbsObjectWrapper: anywheresoftware.b4a.ObjectWrapper ConvertToWrapper(anywheresoftware.b4a.ObjectWrapper,java.lang.Object)>($r0, $r2);
+
+        $r0 = (anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper) $r4;
+
+        return $r0;
+    }
+
+    public int GetPixel(int, int)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        int $i0, $i1;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $i0 = virtualinvoke $r2.<android.graphics.Bitmap: int getPixel(int,int)>($i0, $i1);
+
+        return $i0;
+    }
+
+    public void Initialize(java.lang.String, java.lang.String) throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.lang.String $r1, $r2;
+        java.lang.OutOfMemoryError $r3;
+        anywheresoftware.b4a.objects.streams.File$InputStreamWrapper $r4, $r6;
+        boolean $z0;
+        anywheresoftware.b4a.objects.streams.File $r5;
+        java.lang.Object $r7;
+        java.io.InputStream $r8;
+        android.app.Application $r9;
+        android.view.WindowManager $r10;
+        android.view.Display $r11;
+        int $i0, $i1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r4 = null;
+
+        $z0 = 0;
+
+     label1:
+        $r5 = <anywheresoftware.b4a.keywords.Common: anywheresoftware.b4a.objects.streams.File File>;
+
+        $r6 = staticinvoke <anywheresoftware.b4a.objects.streams.File: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper OpenInput(java.lang.String,java.lang.String)>($r1, $r2);
+
+     label2:
+        $r4 = $r6;
+
+     label3:
+        $r7 = virtualinvoke $r6.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: java.lang.Object getObject()>();
+
+     label4:
+        $r8 = (java.io.InputStream) $r7;
+
+     label5:
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void Initialize2(java.io.InputStream)>($r8);
+
+        virtualinvoke $r6.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: void Close()>();
+
+     label6:
+        if $z0 == 0 goto label8;
+
+        staticinvoke <anywheresoftware.b4a.BA: void Log(java.lang.String)>("Downsampling image due to lack of memory.");
+
+        $r9 = <anywheresoftware.b4a.BA: android.app.Application applicationContext>;
+
+        $r7 = virtualinvoke $r9.<android.app.Application: java.lang.Object getSystemService(java.lang.String)>("window");
+
+        $r10 = (android.view.WindowManager) $r7;
+
+        $r11 = interfaceinvoke $r10.<android.view.WindowManager: android.view.Display getDefaultDisplay()>();
+
+        $i0 = virtualinvoke $r11.<android.view.Display: int getWidth()>();
+
+        $i0 = $i0 / 2;
+
+        $i1 = virtualinvoke $r11.<android.view.Display: int getHeight()>();
+
+        $i1 = $i1 / 2;
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void InitializeSample(java.lang.String,java.lang.String,int,int)>($r1, $r2, $i0, $i1);
+
+        return;
+
+     label7:
+        $r3 := @caughtexception;
+
+        staticinvoke <java.lang.System: void gc()>();
+
+        virtualinvoke $r4.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: void Close()>();
+
+        $z0 = 1;
+
+        goto label6;
+
+     label8:
+        return;
+
+        catch java.lang.OutOfMemoryError from label1 to label2 with label7;
+        catch java.lang.OutOfMemoryError from label3 to label4 with label7;
+        catch java.lang.OutOfMemoryError from label5 to label6 with label7;
+    }
+
+    public void Initialize2(java.io.InputStream)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.io.InputStream $r1;
+        android.graphics.Bitmap $r2;
+        java.lang.RuntimeException $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 := @parameter0: java.io.InputStream;
+
+        $r2 = staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeStream(java.io.InputStream)>($r1);
+
+        if $r2 != null goto label1;
+
+        $r3 = new java.lang.RuntimeException;
+
+        specialinvoke $r3.<java.lang.RuntimeException: void <init>(java.lang.String)>("Error loading bitmap.");
+
+        throw $r3;
+
+     label1:
+        virtualinvoke $r2.<android.graphics.Bitmap: void setDensity(int)>(160);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void setObject(java.lang.Object)>($r2);
+
+        return;
+    }
+
+    public void Initialize3(android.graphics.Bitmap)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        android.graphics.Bitmap $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r1 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(android.graphics.Bitmap)>($r1);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void setObject(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    public void InitializeMutable(int, int)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        int $i0, $i1;
+        android.graphics.Bitmap$Config $r1;
+        android.graphics.Bitmap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 = <android.graphics.Bitmap$Config: android.graphics.Bitmap$Config ARGB_8888>;
+
+        $r2 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i0, $i1, $r1);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void setObject(java.lang.Object)>($r2);
+
+        return;
+    }
+
+    public void InitializeResize(java.lang.String, java.lang.String, int, int, boolean) throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0, $r4;
+        java.lang.String $r1, $r2;
+        int $i0, $i1;
+        boolean $z0;
+        float $f0, $f1;
+        android.graphics.Bitmap $r3;
+        java.lang.Object $r5;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 := @parameter2: int;
+
+        $i1 := @parameter3: int;
+
+        $z0 := @parameter4: boolean;
+
+        $r3 = staticinvoke <anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: android.graphics.Bitmap initializeSampleImpl(java.lang.String,java.lang.String,int,int)>($r1, $r2, $i0, $i1);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void setObject(java.lang.Object)>($r3);
+
+        $f1 = (float) $i0;
+
+        $f0 = (float) $i1;
+
+        $r4 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper Resize(float,float,boolean)>($f1, $f0, $z0);
+
+        $r5 = virtualinvoke $r4.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.graphics.Bitmap) $r5;
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void setObject(java.lang.Object)>($r3);
+
+        return;
+    }
+
+    public void InitializeSample(java.lang.String, java.lang.String, int, int) throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.lang.String $r1, $r2;
+        int $i0, $i1;
+        android.graphics.Bitmap $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 := @parameter2: int;
+
+        $i1 := @parameter3: int;
+
+        $r3 = staticinvoke <anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: android.graphics.Bitmap initializeSampleImpl(java.lang.String,java.lang.String,int,int)>($r1, $r2, $i0, $i1);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void setObject(java.lang.Object)>($r3);
+
+        return;
+    }
+
+    public anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper Resize(float, float, boolean)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        boolean $z0;
+        float $f0, $f1, $f2;
+        int $i0, $i1;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+        android.app.Application $r3;
+        android.content.res.Resources $r4;
+        android.util.DisplayMetrics $r5;
+        anywheresoftware.b4a.ObjectWrapper $r6;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $f1 := @parameter0: float;
+
+        $f0 := @parameter1: float;
+
+        $z0 := @parameter2: boolean;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $i0 = virtualinvoke $r2.<android.graphics.Bitmap: int getWidth()>();
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $i1 = virtualinvoke $r2.<android.graphics.Bitmap: int getHeight()>();
+
+        $f2 = (float) $i0;
+
+        $f1 = $f2 / $f1;
+
+        $f2 = (float) $i1;
+
+        $f0 = $f2 / $f0;
+
+        $f0 = staticinvoke <java.lang.Math: float max(float,float)>($f0, $f1);
+
+        $f1 = (float) $i0;
+
+        $f1 = $f1 / $f0;
+
+        $f2 = (float) $i1;
+
+        $f0 = $f2 / $f0;
+
+     label1:
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f1);
+
+        $f1 = (float) $i0;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $f0 = (float) $i0;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $i1 = (int) $f1;
+
+        $i0 = (int) $f0;
+
+        $r2 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createScaledBitmap(android.graphics.Bitmap,int,int,boolean)>($r2, $i1, $i0, 1);
+
+        $r3 = <anywheresoftware.b4a.BA: android.app.Application applicationContext>;
+
+        $r4 = virtualinvoke $r3.<android.app.Application: android.content.res.Resources getResources()>();
+
+        $r5 = virtualinvoke $r4.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        $f1 = $r5.<android.util.DisplayMetrics: float density>;
+
+        $f1 = $f1 * 160.0F;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f1);
+
+        virtualinvoke $r2.<android.graphics.Bitmap: void setDensity(int)>($i0);
+
+        $r0 = new anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void <init>()>();
+
+        $r6 = staticinvoke <anywheresoftware.b4a.AbsObjectWrapper: anywheresoftware.b4a.ObjectWrapper ConvertToWrapper(anywheresoftware.b4a.ObjectWrapper,java.lang.Object)>($r0, $r2);
+
+        $r0 = (anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper) $r6;
+
+        return $r0;
+    }
+
+    public anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper Rotate(float)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        float $f0;
+        android.graphics.Matrix $r1;
+        java.lang.Object $r2;
+        android.graphics.Bitmap $r3, $r4;
+        int $i0, $i1;
+        anywheresoftware.b4a.ObjectWrapper $r5;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $f0 := @parameter0: float;
+
+        $r1 = new android.graphics.Matrix;
+
+        specialinvoke $r1.<android.graphics.Matrix: void <init>()>();
+
+        virtualinvoke $r1.<android.graphics.Matrix: boolean postRotate(float)>($f0);
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.graphics.Bitmap) $r2;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.graphics.Bitmap) $r2;
+
+        $i0 = virtualinvoke $r4.<android.graphics.Bitmap: int getWidth()>();
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.graphics.Bitmap) $r2;
+
+        $i1 = virtualinvoke $r4.<android.graphics.Bitmap: int getHeight()>();
+
+        $r3 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(android.graphics.Bitmap,int,int,int,int,android.graphics.Matrix,boolean)>($r3, 0, 0, $i0, $i1, $r1, 1);
+
+        $r0 = new anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: void <init>()>();
+
+        $r5 = staticinvoke <anywheresoftware.b4a.AbsObjectWrapper: anywheresoftware.b4a.ObjectWrapper ConvertToWrapper(anywheresoftware.b4a.ObjectWrapper,java.lang.Object)>($r0, $r3);
+
+        $r0 = (anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper) $r5;
+
+        return $r0;
+    }
+
+    public void WriteToStream(java.io.OutputStream, int, android.graphics.Bitmap$CompressFormat)
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.io.OutputStream $r1;
+        int $i0;
+        android.graphics.Bitmap$CompressFormat $r2;
+        java.lang.Object $r3;
+        android.graphics.Bitmap $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 := @parameter0: java.io.OutputStream;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: android.graphics.Bitmap$CompressFormat;
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.graphics.Bitmap) $r3;
+
+        virtualinvoke $r4.<android.graphics.Bitmap: boolean compress(android.graphics.Bitmap$CompressFormat,int,java.io.OutputStream)>($r2, $i0, $r1);
+
+        return;
+    }
+
+    public int getHeight()
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $i0 = virtualinvoke $r2.<android.graphics.Bitmap: int getHeight()>();
+
+        return $i0;
+    }
+
+    public float getScale()
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+        int $i0;
+        float $f0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $i0 = virtualinvoke $r2.<android.graphics.Bitmap: int getDensity()>();
+
+        $f0 = (float) $i0;
+
+        $f0 = $f0 / 160.0F;
+
+        return $f0;
+    }
+
+    public int getWidth()
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        $i0 = virtualinvoke $r2.<android.graphics.Bitmap: int getWidth()>();
+
+        return $i0;
+    }
+
+    public java.lang.String toString()
+    {
+        anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        java.lang.StringBuilder $r2;
+        int $i0;
+        java.lang.Object[] $r3;
+        float $f0;
+        java.lang.Float $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: java.lang.String baseToString()>();
+
+        $z0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: boolean IsInitialized()>();
+
+        if $z0 == 0 goto label1;
+
+        $r2 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(": ");
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: int getWidth()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" x ");
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: int getHeight()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", scale = ");
+
+        $r3 = newarray (java.lang.Object)[1];
+
+        $f0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper: float getScale()>();
+
+        $r4 = staticinvoke <java.lang.Float: java.lang.Float valueOf(float)>($f0);
+
+        $r3[0] = $r4;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%.2f", $r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label1:
+        return $r1;
+    }
+}

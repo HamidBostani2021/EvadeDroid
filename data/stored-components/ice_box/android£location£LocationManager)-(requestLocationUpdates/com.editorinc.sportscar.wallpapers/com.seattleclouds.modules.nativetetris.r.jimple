@@ -1,0 +1,78 @@
+class com.seattleclouds.modules.nativetetris.r extends java.lang.Object
+{
+    final com.seattleclouds.modules.nativetetris.q a;
+    private boolean b;
+    private java.lang.String c;
+
+    public void <init>(com.seattleclouds.modules.nativetetris.q)
+    {
+        com.seattleclouds.modules.nativetetris.r $r0;
+        com.seattleclouds.modules.nativetetris.q $r1;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.r;
+
+        $r1 := @parameter0: com.seattleclouds.modules.nativetetris.q;
+
+        $r0.<com.seattleclouds.modules.nativetetris.r: com.seattleclouds.modules.nativetetris.q a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.nativetetris.r: boolean b> = 1;
+
+        $r0.<com.seattleclouds.modules.nativetetris.r: java.lang.String c> = "empty";
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.nativetetris.r $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.r;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.nativetetris.r: java.lang.String c> = $r1;
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.modules.nativetetris.r $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.r;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.nativetetris.r: boolean b> = $z0;
+
+        return;
+    }
+
+    public boolean a()
+    {
+        com.seattleclouds.modules.nativetetris.r $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.r;
+
+        z0 = $r0.<com.seattleclouds.modules.nativetetris.r: boolean b>;
+
+        return z0;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.modules.nativetetris.r $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.r;
+
+        r1 = $r0.<com.seattleclouds.modules.nativetetris.r: java.lang.String c>;
+
+        return r1;
+    }
+}

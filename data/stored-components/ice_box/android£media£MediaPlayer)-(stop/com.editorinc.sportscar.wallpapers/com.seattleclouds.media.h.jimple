@@ -1,0 +1,105 @@
+class com.seattleclouds.media.h extends java.lang.Object implements com.seattleclouds.media.a.k
+{
+    final com.seattleclouds.media.MediaService a;
+
+    void <init>(com.seattleclouds.media.MediaService)
+    {
+        com.seattleclouds.media.h $r0;
+        com.seattleclouds.media.MediaService $r1;
+
+        $r0 := @this: com.seattleclouds.media.h;
+
+        $r1 := @parameter0: com.seattleclouds.media.MediaService;
+
+        $r0.<com.seattleclouds.media.h: com.seattleclouds.media.MediaService a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.media.h $r0;
+        int $i0;
+        com.seattleclouds.media.MediaService $r1;
+        com.seattleclouds.media.a.e $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.media.h;
+
+        $r1 = $r0.<com.seattleclouds.media.h: com.seattleclouds.media.MediaService a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.MediaService: com.seattleclouds.media.a.e b(com.seattleclouds.media.MediaService)>($r1);
+
+        $r1 = $r0.<com.seattleclouds.media.h: com.seattleclouds.media.MediaService a>;
+
+        $i0 = <com.seattleclouds.l: int media_service_error_no_metadata>;
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.media.MediaService: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.media.a.e: void c(java.lang.String)>($r3);
+
+        return;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.media.h $r0;
+        int $i0;
+        com.seattleclouds.media.a.e $r1;
+        com.seattleclouds.media.MediaService $r2;
+
+        $r0 := @this: com.seattleclouds.media.h;
+
+        $i0 := @parameter0: int;
+
+        $r2 = $r0.<com.seattleclouds.media.h: com.seattleclouds.media.MediaService a>;
+
+        $r1 = staticinvoke <com.seattleclouds.media.MediaService: com.seattleclouds.media.a.e b(com.seattleclouds.media.MediaService)>($r2);
+
+        virtualinvoke $r1.<com.seattleclouds.media.a.e: void c()>();
+
+        return;
+    }
+
+    public void a(android.support.v4.media.MediaMetadataCompat)
+    {
+        com.seattleclouds.media.h $r0;
+        android.support.v4.media.MediaMetadataCompat $r1;
+        android.support.v4.media.session.MediaSessionCompat $r2;
+        com.seattleclouds.media.MediaService $r3;
+
+        $r0 := @this: com.seattleclouds.media.h;
+
+        $r1 := @parameter0: android.support.v4.media.MediaMetadataCompat;
+
+        $r3 = $r0.<com.seattleclouds.media.h: com.seattleclouds.media.MediaService a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.MediaService: android.support.v4.media.session.MediaSessionCompat a(com.seattleclouds.media.MediaService)>($r3);
+
+        virtualinvoke $r2.<android.support.v4.media.session.MediaSessionCompat: void a(android.support.v4.media.MediaMetadataCompat)>($r1);
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.media.h $r0;
+        java.lang.String $r1;
+        com.seattleclouds.media.a.e $r2;
+        com.seattleclouds.media.MediaService $r3;
+
+        $r0 := @this: com.seattleclouds.media.h;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.media.h: com.seattleclouds.media.MediaService a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.MediaService: com.seattleclouds.media.a.e b(com.seattleclouds.media.MediaService)>($r3);
+
+        virtualinvoke $r2.<com.seattleclouds.media.a.e: void b(java.lang.String)>($r1);
+
+        return;
+    }
+}

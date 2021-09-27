@@ -1,0 +1,257 @@
+class com.seattleclouds.media.ui.c extends android.support.v4.media.g
+{
+    final com.seattleclouds.media.ui.a b;
+
+    void <init>(com.seattleclouds.media.ui.a)
+    {
+        com.seattleclouds.media.ui.c $r0;
+        com.seattleclouds.media.ui.a $r1;
+
+        $r0 := @this: com.seattleclouds.media.ui.c;
+
+        $r1 := @parameter0: com.seattleclouds.media.ui.a;
+
+        $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b> = $r1;
+
+        specialinvoke $r0.<android.support.v4.media.g: void <init>()>();
+
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.media.ui.c $r0;
+        java.lang.String $r1, $r6;
+        java.lang.StringBuilder $r2, r17;
+        com.seattleclouds.media.ui.a $r3, $r8;
+        android.support.v4.media.MediaBrowserCompat $r4;
+        android.support.v4.media.session.MediaSessionCompat$Token $r5;
+        android.support.v4.media.session.g $r7, r18;
+        android.support.v4.app.ac $r9;
+        android.support.v4.media.session.r $r10;
+        android.support.v4.media.session.i $r11;
+        android.support.v4.media.session.PlaybackStateCompat $r12;
+        android.content.Context $r13;
+        android.os.Bundle $r14, r19;
+        com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser $r15;
+        java.lang.Throwable $r16;
+        android.os.RemoteException r20;
+
+        $r0 := @this: com.seattleclouds.media.ui.c;
+
+        $r1 = staticinvoke <com.seattleclouds.media.ui.a: java.lang.String c()>();
+
+        r17 = new java.lang.StringBuilder;
+
+        specialinvoke r17.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("onConnected: session token ");
+
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r4 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.MediaBrowserCompat g(com.seattleclouds.media.ui.a)>($r3);
+
+        $r5 = virtualinvoke $r4.<android.support.v4.media.MediaBrowserCompat: android.support.v4.media.session.MediaSessionCompat$Token d()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r5);
+
+        $r6 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r1, $r6);
+
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        r18 = new android.support.v4.media.session.g;
+
+        $r7 = r18;
+
+        $r8 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label01:
+        $r9 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.app.ac h(com.seattleclouds.media.ui.a)>($r8);
+
+     label02:
+        $r8 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label03:
+        $r4 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.MediaBrowserCompat g(com.seattleclouds.media.ui.a)>($r8);
+
+        $r5 = virtualinvoke $r4.<android.support.v4.media.MediaBrowserCompat: android.support.v4.media.session.MediaSessionCompat$Token d()>();
+
+        specialinvoke r18.<android.support.v4.media.session.g: void <init>(android.content.Context,android.support.v4.media.session.MediaSessionCompat$Token)>($r9, $r5);
+
+        staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.g a(com.seattleclouds.media.ui.a,android.support.v4.media.session.g)>($r3, $r7);
+
+     label04:
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r8 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label05:
+        $r7 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.g i(com.seattleclouds.media.ui.a)>($r8);
+
+        $r10 = virtualinvoke $r7.<android.support.v4.media.session.g: android.support.v4.media.session.r a()>();
+
+        staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.r a(com.seattleclouds.media.ui.a,android.support.v4.media.session.r)>($r3, $r10);
+
+     label06:
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label07:
+        $r7 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.g i(com.seattleclouds.media.ui.a)>($r3);
+
+     label08:
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label09:
+        $r11 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.i j(com.seattleclouds.media.ui.a)>($r3);
+
+        virtualinvoke $r7.<android.support.v4.media.session.g: void a(android.support.v4.media.session.i)>($r11);
+
+     label10:
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r8 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label11:
+        $r7 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.g i(com.seattleclouds.media.ui.a)>($r8);
+
+        $r12 = virtualinvoke $r7.<android.support.v4.media.session.g: android.support.v4.media.session.PlaybackStateCompat b()>();
+
+        staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.PlaybackStateCompat a(com.seattleclouds.media.ui.a,android.support.v4.media.session.PlaybackStateCompat)>($r3, $r12);
+
+     label12:
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r8 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label13:
+        $r12 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.PlaybackStateCompat k(com.seattleclouds.media.ui.a)>($r8);
+
+        staticinvoke <com.seattleclouds.media.ui.a: void b(com.seattleclouds.media.ui.a,android.support.v4.media.session.PlaybackStateCompat)>($r3, $r12);
+
+     label14:
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+     label15:
+        $r10 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.r l(com.seattleclouds.media.ui.a)>($r3);
+
+        $r13 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r1 = staticinvoke <com.seattleclouds.media.i: java.lang.String n(android.content.Context)>($r13);
+
+     label16:
+        r19 = new android.os.Bundle;
+
+        $r14 = r19;
+
+     label17:
+        specialinvoke r19.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r10.<android.support.v4.media.session.r: void b(java.lang.String,android.os.Bundle)>($r1, $r14);
+
+     label18:
+        $r3 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r15 = <com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser: com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser CONNECT_STATE_CONNECTED>;
+
+     label19:
+        staticinvoke <com.seattleclouds.media.ui.a: com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser a(com.seattleclouds.media.ui.a,com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser)>($r3, $r15);
+
+     label20:
+        return;
+
+     label21:
+        $r16 := @caughtexception;
+
+        $r1 = staticinvoke <com.seattleclouds.media.ui.a: java.lang.String c()>();
+
+        r20 = (android.os.RemoteException) $r16;
+
+        $r6 = virtualinvoke r20.<android.os.RemoteException: java.lang.String getMessage()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String,java.lang.String)>($r1, "RemoteException", $r6);
+
+        return;
+
+        catch android.os.RemoteException from label01 to label02 with label21;
+        catch android.os.RemoteException from label03 to label04 with label21;
+        catch android.os.RemoteException from label05 to label06 with label21;
+        catch android.os.RemoteException from label07 to label08 with label21;
+        catch android.os.RemoteException from label09 to label10 with label21;
+        catch android.os.RemoteException from label11 to label12 with label21;
+        catch android.os.RemoteException from label13 to label14 with label21;
+        catch android.os.RemoteException from label15 to label16 with label21;
+        catch android.os.RemoteException from label17 to label18 with label21;
+        catch android.os.RemoteException from label19 to label20 with label21;
+    }
+
+    public void b()
+    {
+        com.seattleclouds.media.ui.c $r0;
+        java.lang.String $r1;
+        com.seattleclouds.media.ui.a $r2;
+        android.support.v4.media.session.g $r3;
+        android.support.v4.media.session.i $r4;
+        com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser $r5;
+
+        $r0 := @this: com.seattleclouds.media.ui.c;
+
+        $r1 = staticinvoke <com.seattleclouds.media.ui.a: java.lang.String c()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r1, "onConnectionSuspended");
+
+        $r2 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r3 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.g i(com.seattleclouds.media.ui.a)>($r2);
+
+        if $r3 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r4 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.i j(com.seattleclouds.media.ui.a)>($r2);
+
+        if $r4 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r3 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.g i(com.seattleclouds.media.ui.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r4 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.i j(com.seattleclouds.media.ui.a)>($r2);
+
+        virtualinvoke $r3.<android.support.v4.media.session.g: void b(android.support.v4.media.session.i)>($r4);
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r5 = <com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser: com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser CONNECT_STATE_SUSPENDED>;
+
+        staticinvoke <com.seattleclouds.media.ui.a: com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser a(com.seattleclouds.media.ui.a,com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser)>($r2, $r5);
+
+        return;
+    }
+
+    public void c()
+    {
+        com.seattleclouds.media.ui.c $r0;
+        java.lang.String $r1;
+        com.seattleclouds.media.ui.a $r2;
+        com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser $r3;
+
+        $r0 := @this: com.seattleclouds.media.ui.c;
+
+        $r1 = staticinvoke <com.seattleclouds.media.ui.a: java.lang.String c()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r1, "onConnectionFailed");
+
+        $r2 = $r0.<com.seattleclouds.media.ui.c: com.seattleclouds.media.ui.a b>;
+
+        $r3 = <com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser: com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser CONNECT_STATE_SUSPENDED>;
+
+        staticinvoke <com.seattleclouds.media.ui.a: com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser a(com.seattleclouds.media.ui.a,com.seattleclouds.media.ui.MediaPlayerSchemeProcessor$StateMediaBrowser)>($r2, $r3);
+
+        return;
+    }
+}

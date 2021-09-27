@@ -1,0 +1,193 @@
+public class anywheresoftware.b4a.objects.streams.File$TextWriterWrapper extends anywheresoftware.b4a.AbsObjectWrapper
+{
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.AbsObjectWrapper: void <init>()>();
+
+        return;
+    }
+
+    public void Close() throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+        java.lang.Object $r1;
+        java.io.BufferedWriter $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$TextWriterWrapper: java.lang.Object getObject()>();
+
+        $r2 = (java.io.BufferedWriter) $r1;
+
+        virtualinvoke $r2.<java.io.BufferedWriter: void close()>();
+
+        return;
+    }
+
+    public void Flush() throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+        java.lang.Object $r1;
+        java.io.BufferedWriter $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$TextWriterWrapper: java.lang.Object getObject()>();
+
+        $r2 = (java.io.BufferedWriter) $r1;
+
+        virtualinvoke $r2.<java.io.BufferedWriter: void flush()>();
+
+        return;
+    }
+
+    public void Initialize(java.io.OutputStream)
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+        java.io.OutputStream $r1;
+        java.io.BufferedWriter $r2;
+        java.io.OutputStreamWriter $r3;
+        java.nio.charset.Charset $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        $r1 := @parameter0: java.io.OutputStream;
+
+        $r2 = new java.io.BufferedWriter;
+
+        $r3 = new java.io.OutputStreamWriter;
+
+        $r4 = staticinvoke <java.nio.charset.Charset: java.nio.charset.Charset forName(java.lang.String)>("UTF8");
+
+        specialinvoke $r3.<java.io.OutputStreamWriter: void <init>(java.io.OutputStream,java.nio.charset.Charset)>($r1, $r4);
+
+        specialinvoke $r2.<java.io.BufferedWriter: void <init>(java.io.Writer,int)>($r3, 4096);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$TextWriterWrapper: void setObject(java.lang.Object)>($r2);
+
+        return;
+    }
+
+    public void Initialize2(java.io.OutputStream, java.lang.String)
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+        java.io.OutputStream $r1;
+        java.lang.String $r2;
+        java.io.BufferedWriter $r3;
+        java.io.OutputStreamWriter $r4;
+        java.nio.charset.Charset $r5;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        $r1 := @parameter0: java.io.OutputStream;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = new java.io.BufferedWriter;
+
+        $r4 = new java.io.OutputStreamWriter;
+
+        $r5 = staticinvoke <java.nio.charset.Charset: java.nio.charset.Charset forName(java.lang.String)>($r2);
+
+        specialinvoke $r4.<java.io.OutputStreamWriter: void <init>(java.io.OutputStream,java.nio.charset.Charset)>($r1, $r5);
+
+        specialinvoke $r3.<java.io.BufferedWriter: void <init>(java.io.Writer,int)>($r4, 4096);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$TextWriterWrapper: void setObject(java.lang.Object)>($r3);
+
+        return;
+    }
+
+    public void Write(java.lang.String) throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+        java.lang.String $r1;
+        java.lang.Object $r2;
+        java.io.BufferedWriter $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$TextWriterWrapper: java.lang.Object getObject()>();
+
+        $r3 = (java.io.BufferedWriter) $r2;
+
+        virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r1);
+
+        return;
+    }
+
+    public void WriteLine(java.lang.String) throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+        java.lang.String $r1;
+        java.lang.Object $r2;
+        java.io.BufferedWriter $r3;
+        java.lang.StringBuilder $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$TextWriterWrapper: java.lang.Object getObject()>();
+
+        $r3 = (java.io.BufferedWriter) $r2;
+
+        $r4 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n");
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r3.<java.io.BufferedWriter: void write(java.lang.String)>($r1);
+
+        return;
+    }
+
+    public void WriteList(anywheresoftware.b4a.objects.collections.List) throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$TextWriterWrapper $r0;
+        anywheresoftware.b4a.objects.collections.List $r1;
+        java.lang.Object $r2;
+        java.util.List $r3;
+        java.util.Iterator $r4;
+        boolean $z0;
+        java.lang.String $r5;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$TextWriterWrapper;
+
+        $r1 := @parameter0: anywheresoftware.b4a.objects.collections.List;
+
+        $r2 = virtualinvoke $r1.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        $r4 = interfaceinvoke $r3.<java.util.List: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r4.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 != 0 goto label2;
+
+        return;
+
+     label2:
+        $r2 = interfaceinvoke $r4.<java.util.Iterator: java.lang.Object next()>();
+
+        $r5 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r2);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$TextWriterWrapper: void WriteLine(java.lang.String)>($r5);
+
+        goto label1;
+    }
+}

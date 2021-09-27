@@ -1,0 +1,34 @@
+class com.seattleclouds.previewer.al extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.previewer.af a;
+
+    void <init>(com.seattleclouds.previewer.af)
+    {
+        com.seattleclouds.previewer.al $r0;
+        com.seattleclouds.previewer.af $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.al;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.af;
+
+        $r0.<com.seattleclouds.previewer.al: com.seattleclouds.previewer.af a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.previewer.al $r0;
+        com.seattleclouds.previewer.af $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.al;
+
+        $r1 = $r0.<com.seattleclouds.previewer.al: com.seattleclouds.previewer.af a>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void g(com.seattleclouds.previewer.af)>($r1);
+
+        return;
+    }
+}

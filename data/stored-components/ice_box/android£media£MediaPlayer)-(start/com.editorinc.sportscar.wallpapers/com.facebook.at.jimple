@@ -1,0 +1,198 @@
+class com.facebook.at extends java.io.OutputStream implements com.facebook.bc
+{
+    private final java.util.Map a;
+    private final android.os.Handler b;
+    private com.facebook.GraphRequest c;
+    private com.facebook.bd d;
+    private int e;
+
+    void <init>(android.os.Handler)
+    {
+        com.facebook.at $r0;
+        android.os.Handler $r1;
+        java.util.HashMap $r2;
+
+        $r0 := @this: com.facebook.at;
+
+        $r1 := @parameter0: android.os.Handler;
+
+        specialinvoke $r0.<java.io.OutputStream: void <init>()>();
+
+        $r2 = new java.util.HashMap;
+
+        specialinvoke $r2.<java.util.HashMap: void <init>()>();
+
+        $r0.<com.facebook.at: java.util.Map a> = $r2;
+
+        $r0.<com.facebook.at: android.os.Handler b> = $r1;
+
+        return;
+    }
+
+    int a()
+    {
+        com.facebook.at $r0;
+        int i0;
+
+        $r0 := @this: com.facebook.at;
+
+        i0 = $r0.<com.facebook.at: int e>;
+
+        return i0;
+    }
+
+    void a(long)
+    {
+        com.facebook.at $r0;
+        long $l0, $l2;
+        com.facebook.bd $r1;
+        android.os.Handler $r2;
+        com.facebook.GraphRequest $r3;
+        java.util.Map $r4;
+        int $i1;
+
+        $r0 := @this: com.facebook.at;
+
+        $l0 := @parameter0: long;
+
+        $r1 = $r0.<com.facebook.at: com.facebook.bd d>;
+
+        if $r1 != null goto label1;
+
+        $r1 = new com.facebook.bd;
+
+        $r2 = $r0.<com.facebook.at: android.os.Handler b>;
+
+        $r3 = $r0.<com.facebook.at: com.facebook.GraphRequest c>;
+
+        specialinvoke $r1.<com.facebook.bd: void <init>(android.os.Handler,com.facebook.GraphRequest)>($r2, $r3);
+
+        $r0.<com.facebook.at: com.facebook.bd d> = $r1;
+
+        $r4 = $r0.<com.facebook.at: java.util.Map a>;
+
+        $r3 = $r0.<com.facebook.at: com.facebook.GraphRequest c>;
+
+        $r1 = $r0.<com.facebook.at: com.facebook.bd d>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>($r3, $r1);
+
+     label1:
+        $r1 = $r0.<com.facebook.at: com.facebook.bd d>;
+
+        virtualinvoke $r1.<com.facebook.bd: void b(long)>($l0);
+
+        $i1 = $r0.<com.facebook.at: int e>;
+
+        $l2 = (long) $i1;
+
+        $l0 = $l2 + $l0;
+
+        $i1 = (int) $l0;
+
+        $r0.<com.facebook.at: int e> = $i1;
+
+        return;
+    }
+
+    public void a(com.facebook.GraphRequest)
+    {
+        com.facebook.at $r0;
+        com.facebook.GraphRequest $r1;
+        java.lang.Object $r2;
+        java.util.Map $r3;
+        com.facebook.bd $r4;
+
+        $r0 := @this: com.facebook.at;
+
+        $r1 := @parameter0: com.facebook.GraphRequest;
+
+        $r0.<com.facebook.at: com.facebook.GraphRequest c> = $r1;
+
+        if $r1 == null goto label2;
+
+        $r3 = $r0.<com.facebook.at: java.util.Map a>;
+
+        $r2 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r4 = (com.facebook.bd) $r2;
+
+     label1:
+        $r0.<com.facebook.at: com.facebook.bd d> = $r4;
+
+        return;
+
+     label2:
+        $r4 = null;
+
+        goto label1;
+    }
+
+    java.util.Map b()
+    {
+        com.facebook.at $r0;
+        java.util.Map r1;
+
+        $r0 := @this: com.facebook.at;
+
+        r1 = $r0.<com.facebook.at: java.util.Map a>;
+
+        return r1;
+    }
+
+    public void write(int)
+    {
+        com.facebook.at $r0;
+        int $i0;
+
+        $r0 := @this: com.facebook.at;
+
+        $i0 := @parameter0: int;
+
+        virtualinvoke $r0.<com.facebook.at: void a(long)>(1L);
+
+        return;
+    }
+
+    public void write(byte[])
+    {
+        com.facebook.at $r0;
+        byte[] $r1;
+        int $i0;
+        long $l1;
+
+        $r0 := @this: com.facebook.at;
+
+        $r1 := @parameter0: byte[];
+
+        $i0 = lengthof $r1;
+
+        $l1 = (long) $i0;
+
+        virtualinvoke $r0.<com.facebook.at: void a(long)>($l1);
+
+        return;
+    }
+
+    public void write(byte[], int, int)
+    {
+        com.facebook.at $r0;
+        byte[] $r1;
+        int $i0, $i1;
+        long $l2;
+
+        $r0 := @this: com.facebook.at;
+
+        $r1 := @parameter0: byte[];
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $l2 = (long) $i1;
+
+        virtualinvoke $r0.<com.facebook.at: void a(long)>($l2);
+
+        return;
+    }
+}

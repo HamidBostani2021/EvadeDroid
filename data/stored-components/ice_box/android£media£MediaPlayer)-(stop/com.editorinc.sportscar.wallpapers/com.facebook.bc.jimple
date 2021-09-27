@@ -1,0 +1,5 @@
+interface  com.facebook.bc extends java.lang.Object
+{
+
+    public abstract void a(com.facebook.GraphRequest);
+}

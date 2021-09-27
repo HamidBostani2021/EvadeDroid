@@ -1,0 +1,57 @@
+class com.facebook.login.aa extends java.lang.Object implements com.facebook.login.ad
+{
+    private final com.facebook.internal.ad a;
+
+    void <init>(com.facebook.internal.ad)
+    {
+        com.facebook.login.aa $r0;
+        com.facebook.internal.ad $r1;
+
+        $r0 := @this: com.facebook.login.aa;
+
+        $r1 := @parameter0: com.facebook.internal.ad;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        staticinvoke <com.facebook.internal.bg: void a(java.lang.Object,java.lang.String)>($r1, "fragment");
+
+        $r0.<com.facebook.login.aa: com.facebook.internal.ad a> = $r1;
+
+        return;
+    }
+
+    public android.app.Activity a()
+    {
+        com.facebook.login.aa $r0;
+        android.app.Activity $r1;
+        com.facebook.internal.ad $r2;
+
+        $r0 := @this: com.facebook.login.aa;
+
+        $r2 = $r0.<com.facebook.login.aa: com.facebook.internal.ad a>;
+
+        $r1 = virtualinvoke $r2.<com.facebook.internal.ad: android.app.Activity a()>();
+
+        return $r1;
+    }
+
+    public void a(android.content.Intent, int)
+    {
+        com.facebook.login.aa $r0;
+        android.content.Intent $r1;
+        int $i0;
+        com.facebook.internal.ad $r2;
+
+        $r0 := @this: com.facebook.login.aa;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.facebook.login.aa: com.facebook.internal.ad a>;
+
+        virtualinvoke $r2.<com.facebook.internal.ad: void a(android.content.Intent,int)>($r1, $i0);
+
+        return;
+    }
+}

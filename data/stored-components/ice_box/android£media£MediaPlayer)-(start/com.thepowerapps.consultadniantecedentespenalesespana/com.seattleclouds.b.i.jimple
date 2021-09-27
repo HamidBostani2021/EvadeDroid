@@ -1,0 +1,50 @@
+class com.seattleclouds.b.i extends java.lang.Object implements android.content.DialogInterface$OnCancelListener
+{
+    final com.seattleclouds.b.h a;
+
+    void <init>(com.seattleclouds.b.h)
+    {
+        com.seattleclouds.b.i $r0;
+        com.seattleclouds.b.h $r1;
+
+        $r0 := @this: com.seattleclouds.b.i;
+
+        $r1 := @parameter0: com.seattleclouds.b.h;
+
+        $r0.<com.seattleclouds.b.i: com.seattleclouds.b.h a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onCancel(android.content.DialogInterface)
+    {
+        com.seattleclouds.b.i $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.b.h $r2;
+        android.app.Activity $r3;
+        android.widget.Toast $r4;
+
+        $r0 := @this: com.seattleclouds.b.i;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $r2 = $r0.<com.seattleclouds.b.i: com.seattleclouds.b.h a>;
+
+        staticinvoke <com.seattleclouds.b.h: boolean a(com.seattleclouds.b.h,boolean)>($r2, 1);
+
+        $r2 = $r0.<com.seattleclouds.b.i: com.seattleclouds.b.h a>;
+
+        $r3 = staticinvoke <com.seattleclouds.b.h: android.app.Activity a(com.seattleclouds.b.h)>($r2);
+
+        $i0 = <com.seattleclouds.l: int common_sync_cancelled>;
+
+        $r4 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r3, $i0, 1);
+
+        virtualinvoke $r4.<android.widget.Toast: void show()>();
+
+        return;
+    }
+}

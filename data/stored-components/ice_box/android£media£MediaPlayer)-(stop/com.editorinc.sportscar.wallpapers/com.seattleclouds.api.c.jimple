@@ -1,0 +1,166 @@
+public class com.seattleclouds.api.c extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.lang.String b;
+    private java.util.Map c;
+    private java.util.Map d;
+    private int e;
+
+    public void <init>(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.c $r0;
+        java.lang.String $r1, $r2;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.api.c: int e> = 30000;
+
+        $r0.<com.seattleclouds.api.c: java.lang.String a> = $r1;
+
+        $r0.<com.seattleclouds.api.c: java.lang.String b> = $r2;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.util.Map, java.util.Map)
+    {
+        com.seattleclouds.api.c $r0;
+        java.lang.String $r1, $r2;
+        java.util.Map $r3, $r4;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.util.Map;
+
+        $r4 := @parameter3: java.util.Map;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.api.c: int e> = 30000;
+
+        $r0.<com.seattleclouds.api.c: java.lang.String a> = $r1;
+
+        $r0.<com.seattleclouds.api.c: java.lang.String b> = $r2;
+
+        $r0.<com.seattleclouds.api.c: java.util.Map c> = $r3;
+
+        $r0.<com.seattleclouds.api.c: java.util.Map d> = $r4;
+
+        return;
+    }
+
+    public java.util.Map a()
+    {
+        com.seattleclouds.api.c $r0;
+        java.util.Map r1;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        r1 = $r0.<com.seattleclouds.api.c: java.util.Map c>;
+
+        return r1;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.api.c $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.api.c: int e> = $i0;
+
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.c $r0;
+        java.lang.String $r1, $r2;
+        java.util.Map $r3;
+        java.util.HashMap $r4;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.api.c: java.util.Map d>;
+
+        if $r3 != null goto label1;
+
+        $r4 = new java.util.HashMap;
+
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+        $r0.<com.seattleclouds.api.c: java.util.Map d> = $r4;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.api.c: java.util.Map d>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2);
+
+        return;
+    }
+
+    public java.util.Map b()
+    {
+        com.seattleclouds.api.c $r0;
+        java.util.Map r1;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        r1 = $r0.<com.seattleclouds.api.c: java.util.Map d>;
+
+        return r1;
+    }
+
+    public java.lang.String c()
+    {
+        com.seattleclouds.api.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        r1 = $r0.<com.seattleclouds.api.c: java.lang.String a>;
+
+        return r1;
+    }
+
+    public java.lang.String d()
+    {
+        com.seattleclouds.api.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        r1 = $r0.<com.seattleclouds.api.c: java.lang.String b>;
+
+        return r1;
+    }
+
+    public int e()
+    {
+        com.seattleclouds.api.c $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.api.c;
+
+        i0 = $r0.<com.seattleclouds.api.c: int e>;
+
+        return i0;
+    }
+}

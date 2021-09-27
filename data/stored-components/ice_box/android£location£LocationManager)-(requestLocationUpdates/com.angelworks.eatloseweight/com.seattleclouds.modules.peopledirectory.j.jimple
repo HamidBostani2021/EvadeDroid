@@ -1,0 +1,776 @@
+public class com.seattleclouds.modules.peopledirectory.j extends android.os.AsyncTask
+{
+    private static final java.lang.String a;
+    private final java.lang.ref.WeakReference b;
+    private int c;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.modules.peopledirectory.j: java.lang.String a> = null;
+
+        return;
+    }
+
+    public void <init>(com.seattleclouds.modules.peopledirectory.m)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        com.seattleclouds.modules.peopledirectory.m $r1;
+        java.lang.ref.WeakReference $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: com.seattleclouds.modules.peopledirectory.m;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.j: int c> = -1;
+
+        $r2 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r2.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.modules.peopledirectory.j: java.lang.ref.WeakReference b> = $r2;
+
+        return;
+    }
+
+    private com.seattleclouds.modules.peopledirectory.m a()
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        java.lang.Object $r1;
+        java.lang.ref.WeakReference $r2;
+        com.seattleclouds.modules.peopledirectory.m $r3;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.j: java.lang.ref.WeakReference b>;
+
+        $r1 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r3 = (com.seattleclouds.modules.peopledirectory.m) $r1;
+
+        return $r3;
+    }
+
+    static java.lang.String a(com.seattleclouds.modules.peopledirectory.Person)
+    {
+        com.seattleclouds.modules.peopledirectory.Person $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.Person;
+
+        $r1 = staticinvoke <com.seattleclouds.modules.peopledirectory.j: java.lang.String c(com.seattleclouds.modules.peopledirectory.Person)>($r0);
+
+        return $r1;
+    }
+
+    private java.util.ArrayList a(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        java.util.ArrayList $r2, $r8;
+        java.lang.String $r3;
+        int $i0;
+        boolean $z0;
+        com.seattleclouds.modules.peopledirectory.Person $r4;
+        java.util.HashMap $r5;
+        java.util.Iterator $r6, $r13;
+        java.lang.Object $r7;
+        java.util.Set $r9;
+        com.seattleclouds.modules.peopledirectory.k $r10;
+        com.seattleclouds.modules.peopledirectory.ListItem $r11;
+        com.seattleclouds.modules.peopledirectory.l $r12;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r3 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: void require(int,java.lang.String,java.lang.String)>(2, $r3, "root");
+
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int nextTag()>();
+
+        if $i0 != 2 goto label3;
+
+     label1:
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int next()>();
+
+        if $i0 == 3 goto label3;
+
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int getEventType()>();
+
+        if $i0 != 2 goto label1;
+
+        $r3 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getName()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>("person");
+
+        if $z0 == 0 goto label2;
+
+        $r4 = specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: com.seattleclouds.modules.peopledirectory.Person b(org.xmlpull.v1.XmlPullParser)>($r1);
+
+        if $r4 == null goto label1;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4);
+
+        goto label1;
+
+     label2:
+        specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: void e(org.xmlpull.v1.XmlPullParser)>($r1);
+
+        goto label1;
+
+     label3:
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        $r6 = virtualinvoke $r2.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label4:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label6;
+
+        $r7 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+        $r4 = (com.seattleclouds.modules.peopledirectory.Person) $r7;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.peopledirectory.j: java.lang.String b(com.seattleclouds.modules.peopledirectory.Person)>($r4);
+
+        $r7 = virtualinvoke $r5.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r3);
+
+        $r2 = (java.util.ArrayList) $r7;
+
+        if $r2 != null goto label5;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        virtualinvoke $r5.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r3, $r2);
+
+     label5:
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4);
+
+        goto label4;
+
+     label6:
+        $r8 = new java.util.ArrayList;
+
+        $r9 = virtualinvoke $r5.<java.util.HashMap: java.util.Set keySet()>();
+
+        specialinvoke $r8.<java.util.ArrayList: void <init>(java.util.Collection)>($r9);
+
+        $r10 = new com.seattleclouds.modules.peopledirectory.k;
+
+        specialinvoke $r10.<com.seattleclouds.modules.peopledirectory.k: void <init>(com.seattleclouds.modules.peopledirectory.j)>($r0);
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r8, $r10);
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r6 = virtualinvoke $r8.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label7:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label9;
+
+        $r7 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+        $r3 = (java.lang.String) $r7;
+
+        $r11 = new com.seattleclouds.modules.peopledirectory.ListItem;
+
+        specialinvoke $r11.<com.seattleclouds.modules.peopledirectory.ListItem: void <init>(int,com.seattleclouds.modules.peopledirectory.Person,java.lang.String)>(0, null, $r3);
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r11);
+
+        $r7 = virtualinvoke $r5.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r3);
+
+        $r8 = (java.util.ArrayList) $r7;
+
+        $r12 = new com.seattleclouds.modules.peopledirectory.l;
+
+        specialinvoke $r12.<com.seattleclouds.modules.peopledirectory.l: void <init>(com.seattleclouds.modules.peopledirectory.j)>($r0);
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r8, $r12);
+
+        $r13 = virtualinvoke $r8.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label8:
+        $z0 = interfaceinvoke $r13.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label7;
+
+        $r7 = interfaceinvoke $r13.<java.util.Iterator: java.lang.Object next()>();
+
+        $r4 = (com.seattleclouds.modules.peopledirectory.Person) $r7;
+
+        $r11 = new com.seattleclouds.modules.peopledirectory.ListItem;
+
+        specialinvoke $r11.<com.seattleclouds.modules.peopledirectory.ListItem: void <init>(int,com.seattleclouds.modules.peopledirectory.Person,java.lang.String)>(1, $r4, $r3);
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r11);
+
+        goto label8;
+
+     label9:
+        return $r2;
+    }
+
+    private com.seattleclouds.modules.peopledirectory.Person b(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        java.util.ArrayList $r2;
+        int $i0, $i1, $i2;
+        java.lang.String $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10;
+        boolean $z0;
+        java.lang.String[] $r11;
+        com.seattleclouds.modules.peopledirectory.Person $r12;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $r3 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: void require(int,java.lang.String,java.lang.String)>(2, $r3, "person");
+
+        $r4 = null;
+
+        $r5 = null;
+
+        $r6 = null;
+
+        $r7 = null;
+
+        $r8 = null;
+
+        $r9 = null;
+
+        $r3 = null;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+     label1:
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int next()>();
+
+        if $i0 == 3 goto label7;
+
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int getEventType()>();
+
+        if $i0 != 2 goto label1;
+
+        $r10 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getName()>();
+
+        $z0 = virtualinvoke $r10.<java.lang.String: boolean equals(java.lang.Object)>("info");
+
+        if $z0 == 0 goto label5;
+
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int getAttributeCount()>();
+
+        if $i0 <= 0 goto label4;
+
+        $r4 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        $r4 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>($r4, "name");
+
+        $r5 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        $r5 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>($r5, "secondName");
+
+        $r6 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        $r6 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>($r6, "title");
+
+        $r7 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        $r7 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>($r7, "phone");
+
+        $r8 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        $r8 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>($r8, "email");
+
+        $r9 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        $r9 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>($r9, "photoSrc");
+
+        $r10 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        $r10 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>($r10, "tags");
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r10);
+
+        if $z0 != 0 goto label4;
+
+        $r11 = virtualinvoke $r10.<java.lang.String: java.lang.String[] split(java.lang.String)>(",");
+
+        $i0 = lengthof $r11;
+
+        $i1 = 0;
+
+     label2:
+        if $i1 >= $i0 goto label4;
+
+        $r10 = $r11[$i1];
+
+        $r10 = virtualinvoke $r10.<java.lang.String: java.lang.String trim()>();
+
+        $i2 = virtualinvoke $r10.<java.lang.String: int length()>();
+
+        if $i2 <= 0 goto label3;
+
+        interfaceinvoke $r2.<java.util.List: boolean add(java.lang.Object)>($r10);
+
+     label3:
+        $i1 = $i1 + 1;
+
+        goto label2;
+
+     label4:
+        interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int nextTag()>();
+
+        goto label1;
+
+     label5:
+        $z0 = virtualinvoke $r10.<java.lang.String: boolean equals(java.lang.Object)>("description");
+
+        if $z0 == 0 goto label6;
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: java.lang.String c(org.xmlpull.v1.XmlPullParser)>($r1);
+
+        goto label1;
+
+     label6:
+        specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: void e(org.xmlpull.v1.XmlPullParser)>($r1);
+
+        goto label1;
+
+     label7:
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r4);
+
+        if $z0 == 0 goto label8;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r5);
+
+        if $z0 == 0 goto label8;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r6);
+
+        if $z0 == 0 goto label8;
+
+        return null;
+
+     label8:
+        $r12 = new com.seattleclouds.modules.peopledirectory.Person;
+
+        specialinvoke $r12.<com.seattleclouds.modules.peopledirectory.Person: void <init>(java.lang.String,java.lang.String,java.lang.String)>($r4, $r5, $r6);
+
+        $r12.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String d> = $r7;
+
+        $r12.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String e> = $r8;
+
+        $r12.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String f> = $r9;
+
+        $r12.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String g> = $r3;
+
+        $r12.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h> = $r2;
+
+        return $r12;
+    }
+
+    private static java.lang.String b(com.seattleclouds.modules.peopledirectory.Person)
+    {
+        com.seattleclouds.modules.peopledirectory.Person $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        char $c0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.Person;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r1);
+
+        if $z0 != 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int,int)>(0, 1);
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String toUpperCase()>();
+
+     label1:
+        $c0 = virtualinvoke $r1.<java.lang.String: char charAt(int)>(0);
+
+        $z0 = staticinvoke <java.lang.Character: boolean isLetter(char)>($c0);
+
+        if $z0 != 0 goto label4;
+
+        return "#";
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r1);
+
+        if $z0 != 0 goto label3;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int,int)>(0, 1);
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String toUpperCase()>();
+
+        goto label1;
+
+     label3:
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c>;
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int,int)>(0, 1);
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String toUpperCase()>();
+
+        goto label1;
+
+     label4:
+        return $r1;
+    }
+
+    private static java.lang.String c(com.seattleclouds.modules.peopledirectory.Person)
+    {
+        com.seattleclouds.modules.peopledirectory.Person $r0;
+        java.lang.String $r1;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.Person;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r1);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        return $r1;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r1);
+
+        if $z0 != 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        return $r1;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c>;
+
+        return $r1;
+    }
+
+    private java.lang.String c(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        java.lang.String $r2, $r3;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $r2 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: void require(int,java.lang.String,java.lang.String)>(2, $r2, "description");
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: java.lang.String d(org.xmlpull.v1.XmlPullParser)>($r1);
+
+        $r3 = <com.seattleclouds.modules.peopledirectory.j: java.lang.String a>;
+
+        interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: void require(int,java.lang.String,java.lang.String)>(3, $r3, "description");
+
+        if $r2 == null goto label1;
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String trim()>();
+
+        return $r2;
+
+     label1:
+        return null;
+    }
+
+    private java.lang.String d(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        int $i0;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int next()>();
+
+        if $i0 != 4 goto label1;
+
+        $r2 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: java.lang.String getText()>();
+
+        interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int nextTag()>();
+
+        return $r2;
+
+     label1:
+        return "";
+    }
+
+    private void e(org.xmlpull.v1.XmlPullParser)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        org.xmlpull.v1.XmlPullParser $r1;
+        int $i0, $i1;
+        java.lang.IllegalStateException $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: org.xmlpull.v1.XmlPullParser;
+
+        $i0 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int getEventType()>();
+
+        if $i0 == 2 goto label1;
+
+        $r2 = new java.lang.IllegalStateException;
+
+        specialinvoke $r2.<java.lang.IllegalStateException: void <init>()>();
+
+        throw $r2;
+
+     label1:
+        $i0 = 1;
+
+     label2:
+        if $i0 == 0 goto label6;
+
+        $i1 = interfaceinvoke $r1.<org.xmlpull.v1.XmlPullParser: int next()>();
+
+        lookupswitch($i1)
+        {
+            case 2: goto label4;
+            case 3: goto label5;
+            default: goto label3;
+        };
+
+     label3:
+        goto label2;
+
+     label4:
+        $i0 = $i0 + 1;
+
+        goto label2;
+
+     label5:
+        $i0 = $i0 + -1;
+
+        goto label2;
+
+     label6:
+        return;
+    }
+
+    protected transient java.util.ArrayList a(java.lang.String[])
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        java.lang.String[] $r1;
+        java.lang.String $r2;
+        java.io.InputStream $r3;
+        int $i0;
+        org.xmlpull.v1.XmlPullParser $r4;
+        java.util.ArrayList $r5;
+        java.lang.Throwable $r6, $r8, $r9, $r10, $r11, $r12;
+        org.xmlpull.v1.XmlPullParserException $r7;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $r2 = $r1[0];
+
+        $r3 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>($r2);
+
+        if $r3 != null goto label01;
+
+        $i0 = <com.seattleclouds.l: int people_directory_no_config_file>;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.j: int c> = $i0;
+
+        return null;
+
+     label01:
+        $r4 = staticinvoke <android.util.Xml: org.xmlpull.v1.XmlPullParser newPullParser()>();
+
+        interfaceinvoke $r4.<org.xmlpull.v1.XmlPullParser: void setFeature(java.lang.String,boolean)>("http://xmlpull.org/v1/doc/features.html#process-namespaces", 0);
+
+        interfaceinvoke $r4.<org.xmlpull.v1.XmlPullParser: void setInput(java.io.InputStream,java.lang.String)>($r3, null);
+
+        interfaceinvoke $r4.<org.xmlpull.v1.XmlPullParser: int nextTag()>();
+
+        $r5 = specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: java.util.ArrayList a(org.xmlpull.v1.XmlPullParser)>($r4);
+
+     label02:
+        virtualinvoke $r3.<java.io.InputStream: void close()>();
+
+     label03:
+        return $r5;
+
+     label04:
+        $r6 := @caughtexception;
+
+        return $r5;
+
+     label05:
+        $r7 := @caughtexception;
+
+     label06:
+        $i0 = <com.seattleclouds.l: int people_directory_invalid_xml>;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.j: int c> = $i0;
+
+     label07:
+        virtualinvoke $r3.<java.io.InputStream: void close()>();
+
+     label08:
+        return null;
+
+     label09:
+        $r8 := @caughtexception;
+
+        return null;
+
+     label10:
+        $r9 := @caughtexception;
+
+     label11:
+        $i0 = <com.seattleclouds.l: int people_directory_invalid_xml>;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.j: int c> = $i0;
+
+     label12:
+        virtualinvoke $r3.<java.io.InputStream: void close()>();
+
+     label13:
+        return null;
+
+     label14:
+        $r10 := @caughtexception;
+
+        return null;
+
+     label15:
+        $r11 := @caughtexception;
+
+     label16:
+        virtualinvoke $r3.<java.io.InputStream: void close()>();
+
+     label17:
+        throw $r11;
+
+     label18:
+        $r12 := @caughtexception;
+
+        goto label17;
+
+        catch org.xmlpull.v1.XmlPullParserException from label01 to label02 with label05;
+        catch java.io.IOException from label01 to label02 with label10;
+        catch java.lang.Throwable from label01 to label02 with label15;
+        catch java.io.IOException from label02 to label03 with label04;
+        catch java.lang.Throwable from label06 to label07 with label15;
+        catch java.io.IOException from label07 to label08 with label09;
+        catch java.lang.Throwable from label11 to label12 with label15;
+        catch java.io.IOException from label12 to label13 with label14;
+        catch java.io.IOException from label16 to label17 with label18;
+    }
+
+    protected void a(java.util.ArrayList)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        java.util.ArrayList $r1;
+        int $i0;
+        com.seattleclouds.modules.peopledirectory.m $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: java.util.ArrayList;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: com.seattleclouds.modules.peopledirectory.m a()>();
+
+        if $r1 != null goto label1;
+
+        if $r2 == null goto label2;
+
+        $i0 = $r0.<com.seattleclouds.modules.peopledirectory.j: int c>;
+
+        interfaceinvoke $r2.<com.seattleclouds.modules.peopledirectory.m: void c(int)>($i0);
+
+        return;
+
+     label1:
+        if $r2 == null goto label2;
+
+        interfaceinvoke $r2.<com.seattleclouds.modules.peopledirectory.m: void a(java.util.ArrayList)>($r1);
+
+     label2:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        java.util.ArrayList $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: java.util.ArrayList a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.peopledirectory.j $r0;
+        java.lang.Object $r1;
+        java.util.ArrayList $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.j;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.util.ArrayList) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.j: void a(java.util.ArrayList)>($r2);
+
+        return;
+    }
+}

@@ -1,0 +1,87 @@
+public class anywheresoftware.b4a.keywords.constants.Colors extends java.lang.Object
+{
+    public static final int Black;
+    public static final int Blue;
+    public static final int Cyan;
+    public static final int DarkGray;
+    public static final int Gray;
+    public static final int Green;
+    public static final int LightGray;
+    public static final int Magenta;
+    public static final int Red;
+    public static final int Transparent;
+    public static final int White;
+    public static final int Yellow;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.keywords.constants.Colors $r0;
+
+        $r0 := @this: anywheresoftware.b4a.keywords.constants.Colors;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static int ARGB(int, int, int, int)
+    {
+        int $i0, $i1, $i2, $i3;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        $i0 = staticinvoke <android.graphics.Color: int argb(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+        return $i0;
+    }
+
+    public static int RGB(int, int, int)
+    {
+        int $i0, $i1, $i2;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i0 = staticinvoke <android.graphics.Color: int rgb(int,int,int)>($i0, $i1, $i2);
+
+        return $i0;
+    }
+
+    public static void <clinit>()
+    {
+        <anywheresoftware.b4a.keywords.constants.Colors: int Yellow> = -256;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int White> = -1;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Transparent> = 0;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Red> = -65536;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Magenta> = -65281;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int LightGray> = -3355444;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Green> = -16711936;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Gray> = -7829368;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int DarkGray> = -12303292;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Cyan> = -16711681;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Blue> = -16776961;
+
+        <anywheresoftware.b4a.keywords.constants.Colors: int Black> = -16777216;
+
+        return;
+    }
+}

@@ -1,0 +1,178 @@
+public class anywheresoftware.b4a.BALayout$LayoutParams extends android.view.ViewGroup$LayoutParams
+{
+    public int left;
+    public int top;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.BALayout$LayoutParams $r0;
+
+        $r0 := @this: anywheresoftware.b4a.BALayout$LayoutParams;
+
+        specialinvoke $r0.<android.view.ViewGroup$LayoutParams: void <init>(int,int)>(0, 0);
+
+        return;
+    }
+
+    public void <init>(int, int, int, int)
+    {
+        anywheresoftware.b4a.BALayout$LayoutParams $r0;
+        int $i0, $i1, $i2, $i3;
+
+        $r0 := @this: anywheresoftware.b4a.BALayout$LayoutParams;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        specialinvoke $r0.<android.view.ViewGroup$LayoutParams: void <init>(int,int)>($i2, $i3);
+
+        $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int left> = $i0;
+
+        $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int top> = $i1;
+
+        return;
+    }
+
+    public void setFromUserPlane(int, int, int, int)
+    {
+        anywheresoftware.b4a.BALayout$LayoutParams $r0;
+        int $i0, $i1, $i2, $i3;
+        float $f0, $f1;
+
+        $r0 := @this: anywheresoftware.b4a.BALayout$LayoutParams;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        $f0 = (float) $i0;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 * $f1;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int left> = $i0;
+
+        $f0 = (float) $i1;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 * $f1;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int top> = $i0;
+
+        if $i2 <= 0 goto label1;
+
+        $f0 = (float) $i2;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 * $f1;
+
+        $i2 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+     label1:
+        $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int width> = $i2;
+
+        if $i3 <= 0 goto label2;
+
+        $f0 = (float) $i3;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 * $f1;
+
+        $i3 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+     label2:
+        $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int height> = $i3;
+
+        return;
+    }
+
+    public java.util.HashMap toDesignerMap()
+    {
+        anywheresoftware.b4a.BALayout$LayoutParams $r0;
+        java.util.HashMap $r1;
+        int $i0;
+        float $f0, $f1;
+        java.lang.Integer $r2;
+
+        $r0 := @this: anywheresoftware.b4a.BALayout$LayoutParams;
+
+        $r1 = new java.util.HashMap;
+
+        specialinvoke $r1.<java.util.HashMap: void <init>()>();
+
+        $i0 = $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int left>;
+
+        $f0 = (float) $i0;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 / $f1;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("left", $r2);
+
+        $i0 = $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int top>;
+
+        $f0 = (float) $i0;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 / $f1;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("top", $r2);
+
+        $i0 = $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int width>;
+
+        $f0 = (float) $i0;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 / $f1;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("width", $r2);
+
+        $i0 = $r0.<anywheresoftware.b4a.BALayout$LayoutParams: int height>;
+
+        $f0 = (float) $i0;
+
+        $f1 = <anywheresoftware.b4a.BALayout: float scale>;
+
+        $f0 = $f0 / $f1;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("height", $r2);
+
+        return $r1;
+    }
+}

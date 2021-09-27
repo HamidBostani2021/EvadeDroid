@@ -1,0 +1,49 @@
+class com.seattleclouds.modules.k.f extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final com.seattleclouds.modules.k.d b;
+
+    void <init>(com.seattleclouds.modules.k.d, java.lang.String)
+    {
+        com.seattleclouds.modules.k.f $r0;
+        com.seattleclouds.modules.k.d $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.k.f;
+
+        $r1 := @parameter0: com.seattleclouds.modules.k.d;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.k.f: com.seattleclouds.modules.k.d b> = $r1;
+
+        $r0.<com.seattleclouds.modules.k.f: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.k.f $r0;
+        java.lang.String $r1;
+        com.seattleclouds.modules.k.g $r2;
+        com.seattleclouds.modules.k.d $r3;
+        com.seattleclouds.modules.k.c $r4;
+
+        $r0 := @this: com.seattleclouds.modules.k.f;
+
+        $r3 = $r0.<com.seattleclouds.modules.k.f: com.seattleclouds.modules.k.d b>;
+
+        $r4 = $r3.<com.seattleclouds.modules.k.d: com.seattleclouds.modules.k.c b>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.k.c: com.seattleclouds.modules.k.g a(com.seattleclouds.modules.k.c)>($r4);
+
+        $r1 = $r0.<com.seattleclouds.modules.k.f: java.lang.String a>;
+
+        interfaceinvoke $r2.<com.seattleclouds.modules.k.g: void a(java.lang.String)>($r1);
+
+        return;
+    }
+}

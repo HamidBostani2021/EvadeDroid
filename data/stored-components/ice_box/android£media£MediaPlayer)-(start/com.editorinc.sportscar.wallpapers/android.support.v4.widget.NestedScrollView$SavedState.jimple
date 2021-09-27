@@ -1,0 +1,4 @@
+class android.support.v4.widget.NestedScrollView$SavedState extends android.view.View$BaseSavedState
+{
+
+}

@@ -1,0 +1,42 @@
+public class Slicetr.com.luizz.bitez_mobilyamethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicetr.com.luizz.bitez_mobilyamethod this;
+        tr.com.luizz.bitez_mobilya.MainActivity $r0;
+        android.os.Bundle $r1;
+        android.view.View $r2;
+        android.webkit.WebView $r3;
+        android.webkit.WebSettings $r4;
+        tr.com.luizz.bitez_mobilya.MainActivity$1 $r5;
+
+        this := @this: Slicetr.com.luizz.bitez_mobilyamethod;
+
+        specialinvoke $r0.<android.support.v7.app.AppCompatActivity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<tr.com.luizz.bitez_mobilya.MainActivity: void setContentView(int)>(2130968603);
+
+        $r2 = virtualinvoke $r0.<tr.com.luizz.bitez_mobilya.MainActivity: android.view.View findViewById(int)>(2131427414);
+
+        $r3 = (android.webkit.WebView) $r2;
+
+        $r0.<tr.com.luizz.bitez_mobilya.MainActivity: android.webkit.WebView mywebview> = $r3;
+
+        $r3 = $r0.<tr.com.luizz.bitez_mobilya.MainActivity: android.webkit.WebView mywebview>;
+
+        $r4 = virtualinvoke $r3.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r4.<android.webkit.WebSettings: void setJavaScriptEnabled(boolean)>(1);
+
+        $r3 = $r0.<tr.com.luizz.bitez_mobilya.MainActivity: android.webkit.WebView mywebview>;
+
+        virtualinvoke $r3.<android.webkit.WebView: void loadUrl(java.lang.String)>("http://bitez-mobilya.com.tr/");
+
+        $r3 = $r0.<tr.com.luizz.bitez_mobilya.MainActivity: android.webkit.WebView mywebview>;
+
+        $r5 = new tr.com.luizz.bitez_mobilya.MainActivity$1;
+
+        return;
+    }
+}

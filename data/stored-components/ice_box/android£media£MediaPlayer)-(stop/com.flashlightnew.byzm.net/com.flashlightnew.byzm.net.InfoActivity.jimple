@@ -1,0 +1,108 @@
+public class com.flashlightnew.byzm.net.InfoActivity extends android.app.Activity
+{
+    android.widget.RelativeLayout info;
+    android.content.SharedPreferences preferences;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.flashlightnew.byzm.net.InfoActivity $r0;
+
+        $r0 := @this: com.flashlightnew.byzm.net.InfoActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.flashlightnew.byzm.net.InfoActivity $r0;
+        android.os.Bundle $r1;
+        android.view.View $r2;
+        android.widget.RelativeLayout $r3;
+        android.content.SharedPreferences $r4;
+        boolean $z0;
+
+        $r0 := @this: com.flashlightnew.byzm.net.InfoActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.flashlightnew.byzm.net.InfoActivity: void setContentView(int)>(2130903040);
+
+        $r2 = virtualinvoke $r0.<com.flashlightnew.byzm.net.InfoActivity: android.view.View findViewById(int)>(2131296256);
+
+        $r3 = (android.widget.RelativeLayout) $r2;
+
+        $r0.<com.flashlightnew.byzm.net.InfoActivity: android.widget.RelativeLayout info> = $r3;
+
+        $r4 = virtualinvoke $r0.<com.flashlightnew.byzm.net.InfoActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("config", 0);
+
+        $r0.<com.flashlightnew.byzm.net.InfoActivity: android.content.SharedPreferences preferences> = $r4;
+
+        $r4 = $r0.<com.flashlightnew.byzm.net.InfoActivity: android.content.SharedPreferences preferences>;
+
+        $z0 = interfaceinvoke $r4.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("skin_dark", 0);
+
+        if $z0 == 0 goto label1;
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.InfoActivity: android.widget.RelativeLayout info>;
+
+        virtualinvoke $r3.<android.widget.RelativeLayout: void setBackgroundResource(int)>(2130837518);
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.flashlightnew.byzm.net.InfoActivity: android.widget.RelativeLayout info>;
+
+        virtualinvoke $r3.<android.widget.RelativeLayout: void setBackgroundResource(int)>(2130837519);
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.flashlightnew.byzm.net.InfoActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.flashlightnew.byzm.net.InfoActivity;
+
+        $r0 = this.<com.flashlightnew.byzm.net.InfoActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.flashlightnew.byzm.net.InfoActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.flashlightnew.byzm.net.InfoActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.flashlightnew.byzm.net.InfoActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.flashlightnew.byzm.net.InfoActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.flashlightnew.byzm.net.InfoActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.flashlightnew.byzm.net.InfoActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

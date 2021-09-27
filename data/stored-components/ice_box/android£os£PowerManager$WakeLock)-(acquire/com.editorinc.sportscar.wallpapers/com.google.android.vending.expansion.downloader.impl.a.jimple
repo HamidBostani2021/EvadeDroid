@@ -1,0 +1,2807 @@
+public class com.google.android.vending.expansion.downloader.impl.a extends java.lang.Object
+{
+    private android.content.Context a;
+    private com.google.android.vending.expansion.downloader.impl.k b;
+    private com.google.android.vending.expansion.downloader.impl.b c;
+    private final com.google.android.vending.expansion.downloader.impl.t d;
+    private final com.google.android.vending.expansion.downloader.impl.l e;
+    private java.lang.String f;
+
+    public void <init>(com.google.android.vending.expansion.downloader.impl.k, com.google.android.vending.expansion.downloader.impl.b, com.google.android.vending.expansion.downloader.impl.l)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.k $r1;
+        com.google.android.vending.expansion.downloader.impl.b $r2;
+        com.google.android.vending.expansion.downloader.impl.l $r3;
+        com.google.android.vending.expansion.downloader.impl.t $r4;
+        java.lang.StringBuilder $r5;
+        java.lang.String $r6;
+        java.util.Locale $r7;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.k;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.b;
+
+        $r3 := @parameter2: com.google.android.vending.expansion.downloader.impl.l;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.a: android.content.Context a> = $r2;
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b> = $r1;
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c> = $r2;
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.l e> = $r3;
+
+        $r4 = staticinvoke <com.google.android.vending.expansion.downloader.impl.t: com.google.android.vending.expansion.downloader.impl.t a(android.content.Context)>($r2);
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d> = $r4;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("APKXDL (Linux; U; Android ");
+
+        $r6 = <android.os.Build$VERSION: java.lang.String RELEASE>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(";");
+
+        $r7 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        $r6 = virtualinvoke $r7.<java.util.Locale: java.lang.String toString()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("; ");
+
+        $r6 = <android.os.Build: java.lang.String DEVICE>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r6 = <android.os.Build: java.lang.String ID>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(")");
+
+        $r6 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: java.lang.String getPackageName()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.a: java.lang.String f> = $r6;
+
+        return;
+    }
+
+    private java.io.InputStream a(com.google.android.vending.expansion.downloader.impl.p, org.apache.http.HttpResponse)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        org.apache.http.HttpResponse $r2;
+        org.apache.http.HttpEntity $r3;
+        java.io.InputStream $r4;
+        java.lang.Throwable $r5;
+        int $i0;
+        java.lang.StringBuilder $r6, r8;
+        java.lang.String $r7;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest r9;
+        java.io.IOException r10;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: org.apache.http.HttpResponse;
+
+     label1:
+        $r3 = interfaceinvoke $r2.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>();
+
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpEntity: java.io.InputStream getContent()>();
+
+     label2:
+        return $r4;
+
+     label3:
+        $r5 := @caughtexception;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void c()>();
+
+        r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $i0 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: int f(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        r8 = new java.lang.StringBuilder;
+
+        specialinvoke r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while getting entity: ");
+
+        r10 = (java.io.IOException) $r5;
+
+        $r7 = virtualinvoke r10.<java.io.IOException: java.lang.String toString()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, $i0, $r7, $r5);
+
+        throw r9;
+
+        catch java.io.IOException from label1 to label2 with label3;
+    }
+
+    private void a(int, boolean, int, int, boolean, java.lang.String)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        int $i0, $i1, $i2;
+        boolean $z0, $z1;
+        java.lang.String $r1;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $i0 := @parameter0: int;
+
+        $z0 := @parameter1: boolean;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $z1 := @parameter4: boolean;
+
+        $r1 := @parameter5: java.lang.String;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void b(int,boolean,int,int,boolean,java.lang.String)>($i0, $z0, $i1, $i2, $z1, $r1);
+
+        $z0 = staticinvoke <com.google.android.vending.expansion.downloader.impl.b: boolean c(int)>($i0);
+
+        if $z0 == 0 goto label1;
+
+     label1:
+        return;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.o, org.apache.http.client.methods.HttpGet)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.o $r1;
+        org.apache.http.client.methods.HttpGet $r2;
+        boolean $z0;
+        java.lang.String $r3;
+        java.lang.StringBuilder $r4;
+        int $i0;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r2 := @parameter1: org.apache.http.client.methods.HttpGet;
+
+        $z0 = $r1.<com.google.android.vending.expansion.downloader.impl.o: boolean d>;
+
+        if $z0 == 0 goto label2;
+
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String c>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String c>;
+
+        virtualinvoke $r2.<org.apache.http.client.methods.HttpGet: void addHeader(java.lang.String,java.lang.String)>("If-Match", $r3);
+
+     label1:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("bytes=");
+
+        $i0 = $r1.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("-");
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r2.<org.apache.http.client.methods.HttpGet: void addHeader(java.lang.String,java.lang.String)>("Range", $r3);
+
+     label2:
+        return;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        int $i0;
+        com.google.android.vending.expansion.downloader.impl.b $r2;
+        com.google.android.vending.expansion.downloader.impl.t $r3;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r4;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: int a(com.google.android.vending.expansion.downloader.impl.t)>($r3);
+
+        lookupswitch($i0)
+        {
+            case 1: goto label1;
+            case 2: goto label2;
+            case 3: goto label5;
+            case 4: goto label1;
+            case 5: goto label4;
+            case 6: goto label3;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $r4 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r4.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 195, "waiting for network to return");
+
+        throw $r4;
+
+     label3:
+        $r4 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r4.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 196, "waiting for wifi or for download over cellular to be authorized");
+
+        throw $r4;
+
+     label4:
+        $r4 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r4.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 195, "roaming is not allowed");
+
+        throw $r4;
+
+     label5:
+        $r4 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r4.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 197, "waiting for wifi");
+
+        throw $r4;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, int)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        int $i0;
+        java.lang.String $r2;
+        boolean $z0;
+        java.io.File $r3;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void d(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        $r2 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        if $r2 == null goto label1;
+
+        $z0 = staticinvoke <com.google.android.vending.expansion.downloader.impl.b: boolean b(int)>($i0);
+
+        if $z0 == 0 goto label1;
+
+        $r3 = new java.io.File;
+
+        $r2 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r2);
+
+        virtualinvoke $r3.<java.io.File: boolean delete()>();
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a> = null;
+
+     label1:
+        return;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.c, org.apache.http.client.methods.HttpGet)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.c $r2;
+        org.apache.http.client.methods.HttpGet $r3;
+        com.google.android.vending.expansion.downloader.impl.o $r4;
+        byte[] $r5;
+        com.google.android.vending.expansion.downloader.impl.l $r6;
+        org.apache.http.HttpResponse $r7;
+        java.io.InputStream $r8;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r3 := @parameter2: org.apache.http.client.methods.HttpGet;
+
+        $r4 = new com.google.android.vending.expansion.downloader.impl.o;
+
+        specialinvoke $r4.<com.google.android.vending.expansion.downloader.impl.o: void <init>(com.google.android.vending.expansion.downloader.impl.n)>(null);
+
+        $r5 = newarray (byte)[4096];
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void e(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void d(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o)>($r1, $r4);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.o,org.apache.http.client.methods.HttpGet)>($r4, $r3);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.l e>;
+
+        virtualinvoke $r6.<com.google.android.vending.expansion.downloader.impl.l: void a(int)>(3);
+
+        $r7 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: org.apache.http.HttpResponse b(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.c,org.apache.http.client.methods.HttpGet)>($r1, $r2, $r3);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void c(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o,org.apache.http.HttpResponse)>($r1, $r4, $r7);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o,org.apache.http.HttpResponse)>($r1, $r4, $r7);
+
+        $r8 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: java.io.InputStream a(com.google.android.vending.expansion.downloader.impl.p,org.apache.http.HttpResponse)>($r1, $r7);
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.l e>;
+
+        virtualinvoke $r6.<com.google.android.vending.expansion.downloader.impl.l: void a(int)>(4);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o,byte[],java.io.InputStream)>($r1, $r4, $r5, $r8);
+
+        return;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        long $l0, $l3;
+        int $i1, $i2;
+        byte $b4;
+        com.google.android.vending.expansion.downloader.impl.k $r3;
+        com.google.android.vending.expansion.downloader.impl.t $r4;
+        com.google.android.vending.expansion.downloader.impl.b $r5;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $i1 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $i2 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int h>;
+
+        $i1 = $i1 - $i2;
+
+        if $i1 <= 4096 goto label1;
+
+        $l3 = $r2.<com.google.android.vending.expansion.downloader.impl.o: long i>;
+
+        $l3 = $l0 - $l3;
+
+        $b4 = $l3 cmp 1000L;
+
+        if $b4 <= 0 goto label1;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $i1 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $l3 = (long) $i1;
+
+        $r3.<com.google.android.vending.expansion.downloader.impl.k: long f> = $l3;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        virtualinvoke $r4.<com.google.android.vending.expansion.downloader.impl.t: void b(com.google.android.vending.expansion.downloader.impl.k)>($r3);
+
+        $i1 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: int h> = $i1;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: long i> = $l0;
+
+        $i1 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int b>;
+
+        $l0 = (long) $i1;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $l3 = $r5.<com.google.android.vending.expansion.downloader.impl.b: long a>;
+
+        $l0 = $l0 + $l3;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        virtualinvoke $r5.<com.google.android.vending.expansion.downloader.impl.b: void a(long)>($l0);
+
+     label1:
+        return;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o, int)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        int $i0, $i1;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r3;
+        boolean $z0;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $i0 := @parameter2: int;
+
+        $z0 = staticinvoke <com.google.android.vending.expansion.downloader.impl.b: boolean b(int)>($i0);
+
+        if $z0 == 0 goto label2;
+
+        $i1 = $i0;
+
+     label1:
+        $r3 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http error ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r3.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, $i1, $r5);
+
+        throw $r3;
+
+     label2:
+        if $i0 < 300 goto label3;
+
+        if $i0 >= 400 goto label3;
+
+        $i1 = 493;
+
+        goto label1;
+
+     label3:
+        $z0 = $r2.<com.google.android.vending.expansion.downloader.impl.o: boolean d>;
+
+        if $z0 == 0 goto label4;
+
+        if $i0 != 200 goto label4;
+
+        $i1 = 489;
+
+        goto label1;
+
+     label4:
+        $i1 = 494;
+
+        goto label1;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o, org.apache.http.HttpResponse)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        org.apache.http.HttpResponse $r3;
+        boolean $z0;
+        com.google.android.vending.expansion.downloader.impl.b $r4;
+        com.google.android.vending.expansion.downloader.impl.k $r5;
+        java.lang.String $r6;
+        long $l0;
+        java.io.FileOutputStream $r7, r13;
+        com.google.android.vending.expansion.downloader.impl.DownloaderService$GenerateSaveFileError $r8;
+        int $i1;
+        java.lang.Throwable $r9;
+        java.io.File $r10, r15;
+        java.lang.Exception $r11;
+        java.lang.StringBuilder $r12, r16;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest r14;
+        java.io.FileNotFoundException r17;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 := @parameter2: org.apache.http.HttpResponse;
+
+        $z0 = $r2.<com.google.android.vending.expansion.downloader.impl.o: boolean d>;
+
+        if $z0 == 0 goto label01;
+
+        return;
+
+     label01:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void b(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o,org.apache.http.HttpResponse)>($r1, $r2, $r3);
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r6 = $r5.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String c>;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l0 = $r5.<com.google.android.vending.expansion.downloader.impl.k: long e>;
+
+     label02:
+        $r6 = virtualinvoke $r4.<com.google.android.vending.expansion.downloader.impl.b: java.lang.String a(java.lang.String,long)>($r6, $l0);
+
+     label03:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a> = $r6;
+
+        r13 = new java.io.FileOutputStream;
+
+        $r6 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+     label04:
+        specialinvoke r13.<java.io.FileOutputStream: void <init>(java.lang.String)>($r6);
+
+     label05:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b> = r13;
+
+     label06:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void c(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o)>($r1, $r2);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        return;
+
+     label07:
+        $r8 := @caughtexception;
+
+        r14 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $i1 = $r8.<com.google.android.vending.expansion.downloader.impl.DownloaderService$GenerateSaveFileError: int mStatus>;
+
+        $r6 = $r8.<com.google.android.vending.expansion.downloader.impl.DownloaderService$GenerateSaveFileError: java.lang.String mMessage>;
+
+        specialinvoke r14.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, $i1, $r6);
+
+        throw r14;
+
+     label08:
+        $r9 := @caughtexception;
+
+        r15 = new java.io.File;
+
+        $r10 = r15;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $r6 = staticinvoke <com.google.android.vending.expansion.downloader.l: java.lang.String a(android.content.Context)>($r4);
+
+        specialinvoke r15.<java.io.File: void <init>(java.lang.String)>($r6);
+
+     label09:
+        $z0 = virtualinvoke $r10.<java.io.File: boolean mkdirs()>();
+
+     label10:
+        if $z0 == 0 goto label06;
+
+        r13 = new java.io.FileOutputStream;
+
+        $r7 = r13;
+
+     label11:
+        $r6 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        specialinvoke r13.<java.io.FileOutputStream: void <init>(java.lang.String)>($r6);
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b> = $r7;
+
+     label12:
+        goto label06;
+
+     label13:
+        $r11 := @caughtexception;
+
+        r14 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        r16 = new java.lang.StringBuilder;
+
+        specialinvoke r16.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = virtualinvoke r16.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while opening destination file: ");
+
+        r17 = (java.io.FileNotFoundException) $r9;
+
+        $r6 = virtualinvoke r17.<java.io.FileNotFoundException: java.lang.String toString()>();
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r14.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, 492, $r6, $r9);
+
+        throw r14;
+
+        catch com.google.android.vending.expansion.downloader.impl.DownloaderService$GenerateSaveFileError from label02 to label03 with label07;
+        catch java.io.FileNotFoundException from label04 to label05 with label08;
+        catch java.lang.Exception from label09 to label10 with label13;
+        catch java.lang.Exception from label11 to label12 with label13;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o, byte[], java.io.InputStream)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        byte[] $r3;
+        java.io.InputStream $r4;
+        int $i0, $i1;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 := @parameter2: byte[];
+
+        $r4 := @parameter3: java.io.InputStream;
+
+     label1:
+        $i0 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: int b(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o,byte[],java.io.InputStream)>($r1, $r2, $r3, $r4);
+
+        if $i0 != -1 goto label2;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void b(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o)>($r1, $r2);
+
+        return;
+
+     label2:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: boolean g> = 1;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,byte[],int)>($r1, $r3, $i0);
+
+        $i1 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $i1 = $i1 + $i0;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: int a> = $i1;
+
+        $i1 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int b>;
+
+        $i0 = $i0 + $i1;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: int b> = $i0;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o)>($r1, $r2);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void e(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        goto label1;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, org.apache.http.HttpResponse, int)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        org.apache.http.HttpResponse $r2;
+        int $i0, $i1;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r3;
+        org.apache.http.Header $r4;
+        java.net.URI $r5, $r8;
+        com.google.android.vending.expansion.downloader.impl.k $r6;
+        java.lang.String $r7;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$RetryDownload $r9;
+        java.lang.Throwable $r10;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: org.apache.http.HttpResponse;
+
+        $i0 := @parameter2: int;
+
+        $i1 = $r1.<com.google.android.vending.expansion.downloader.impl.p: int e>;
+
+        if $i1 < 5 goto label1;
+
+        $r3 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r3.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 497, "too many redirects");
+
+        throw $r3;
+
+     label1:
+        $r4 = interfaceinvoke $r2.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("Location");
+
+        if $r4 != null goto label2;
+
+        return;
+
+     label2:
+        $r5 = new java.net.URI;
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r7 = $r6.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String a>;
+
+     label3:
+        specialinvoke $r5.<java.net.URI: void <init>(java.lang.String)>($r7);
+
+     label4:
+        $r8 = new java.net.URI;
+
+     label5:
+        $r7 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+        specialinvoke $r8.<java.net.URI: void <init>(java.lang.String)>($r7);
+
+        $r5 = virtualinvoke $r5.<java.net.URI: java.net.URI resolve(java.net.URI)>($r8);
+
+        $r7 = virtualinvoke $r5.<java.net.URI: java.lang.String toString()>();
+
+     label6:
+        $i1 = $r1.<com.google.android.vending.expansion.downloader.impl.p: int e>;
+
+        $i1 = $i1 + 1;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int e> = $i1;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String h> = $r7;
+
+        if $i0 == 301 goto label7;
+
+        if $i0 != 303 goto label8;
+
+     label7:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String f> = $r7;
+
+     label8:
+        $r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$RetryDownload;
+
+        specialinvoke $r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$RetryDownload: void <init>(com.google.android.vending.expansion.downloader.impl.a,com.google.android.vending.expansion.downloader.impl.n)>($r0, null);
+
+        throw $r9;
+
+     label9:
+        $r10 := @caughtexception;
+
+        $r3 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r3.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 495, "Couldn\'t resolve redirect URI");
+
+        throw $r3;
+
+        catch java.net.URISyntaxException from label3 to label4 with label9;
+        catch java.net.URISyntaxException from label5 to label6 with label9;
+    }
+
+    private void a(com.google.android.vending.expansion.downloader.impl.p, byte[], int)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        byte[] $r2;
+        int $i0;
+        java.io.FileOutputStream $r3, r8;
+        java.lang.String $r4;
+        java.lang.Throwable $r5;
+        boolean $z0;
+        java.io.File $r6;
+        long $l1, $l2;
+        byte $b3;
+        java.lang.StringBuilder $r7, r10;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest r9;
+        java.io.IOException r11;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: byte[];
+
+        $i0 := @parameter2: int;
+
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b>;
+
+        if $r3 != null goto label3;
+
+        r8 = new java.io.FileOutputStream;
+
+        $r4 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+     label1:
+        specialinvoke r8.<java.io.FileOutputStream: void <init>(java.lang.String,boolean)>($r4, 1);
+
+     label2:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b> = r8;
+
+     label3:
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b>;
+
+     label4:
+        virtualinvoke $r3.<java.io.FileOutputStream: void write(byte[],int,int)>($r2, 0, $i0);
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void d(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+     label5:
+        return;
+
+     label6:
+        $r5 := @caughtexception;
+
+        $z0 = staticinvoke <com.google.android.vending.expansion.downloader.l: boolean a()>();
+
+        if $z0 != 0 goto label7;
+
+        r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 499, "external media not mounted while writing destination file");
+
+        throw r9;
+
+     label7:
+        $r4 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        $r6 = staticinvoke <com.google.android.vending.expansion.downloader.l: java.io.File a(java.lang.String)>($r4);
+
+        $l1 = staticinvoke <com.google.android.vending.expansion.downloader.l: long a(java.io.File)>($r6);
+
+        $l2 = (long) $i0;
+
+        $b3 = $l1 cmp $l2;
+
+        if $b3 >= 0 goto label8;
+
+        r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, 498, "insufficient space while writing destination file", $r5);
+
+        throw r9;
+
+     label8:
+        r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        r10 = new java.lang.StringBuilder;
+
+        specialinvoke r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = virtualinvoke r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while writing destination file: ");
+
+        r11 = (java.io.IOException) $r5;
+
+        $r4 = virtualinvoke r11.<java.io.IOException: java.lang.String toString()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r4 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, 492, $r4, $r5);
+
+        throw r9;
+
+        catch java.io.IOException from label1 to label2 with label6;
+        catch java.io.IOException from label4 to label5 with label6;
+    }
+
+    private boolean a(com.google.android.vending.expansion.downloader.impl.o)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.o $r1;
+        int $i0;
+        java.lang.String $r2;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.o;
+
+        $i0 = $r1.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        if $i0 <= 0 goto label1;
+
+        $r2 = $r1.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String c>;
+
+        if $r2 != null goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    private static final boolean a(java.lang.String)
+    {
+        java.lang.String $r0;
+        java.net.URI $r1;
+        boolean $z0;
+        java.lang.Throwable $r2;
+
+        $r0 := @parameter0: java.lang.String;
+
+        if $r0 != null goto label01;
+
+        return 0;
+
+     label01:
+        $r1 = staticinvoke <java.net.URI: java.net.URI create(java.lang.String)>($r0);
+
+        $r0 = virtualinvoke $r1.<java.net.URI: java.lang.String getHost()>();
+
+     label02:
+        if $r0 == null goto label11;
+
+     label03:
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("localhost");
+
+     label04:
+        if $z0 != 0 goto label09;
+
+     label05:
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean equals(java.lang.Object)>("127.0.0.1");
+
+     label06:
+        if $z0 != 0 goto label09;
+
+     label07:
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean equals(java.lang.Object)>("[::1]");
+
+     label08:
+        if $z0 == 0 goto label11;
+
+     label09:
+        return 1;
+
+     label10:
+        $r2 := @caughtexception;
+
+     label11:
+        return 0;
+
+        catch java.lang.IllegalArgumentException from label01 to label02 with label10;
+        catch java.lang.IllegalArgumentException from label03 to label04 with label10;
+        catch java.lang.IllegalArgumentException from label05 to label06 with label10;
+        catch java.lang.IllegalArgumentException from label07 to label08 with label10;
+    }
+
+    private int b(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o, byte[], java.io.InputStream)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        byte[] $r3;
+        java.io.InputStream $r4;
+        int $i0;
+        java.lang.Throwable $r5;
+        com.google.android.vending.expansion.downloader.impl.k $r6;
+        long $l1;
+        com.google.android.vending.expansion.downloader.impl.t $r7;
+        boolean $z0;
+        java.lang.StringBuilder $r8, r10;
+        java.lang.String $r9;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest r11;
+        java.io.IOException r12;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 := @parameter2: byte[];
+
+        $r4 := @parameter3: java.io.InputStream;
+
+     label1:
+        $i0 = virtualinvoke $r4.<java.io.InputStream: int read(byte[])>($r3);
+
+     label2:
+        return $i0;
+
+     label3:
+        $r5 := @caughtexception;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void c()>();
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $i0 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $l1 = (long) $i0;
+
+        $r6.<com.google.android.vending.expansion.downloader.impl.k: long f> = $l1;
+
+        $r7 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        virtualinvoke $r7.<com.google.android.vending.expansion.downloader.impl.t: boolean c(com.google.android.vending.expansion.downloader.impl.k)>($r6);
+
+        $z0 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: boolean a(com.google.android.vending.expansion.downloader.impl.o)>($r2);
+
+        if $z0 == 0 goto label4;
+
+        r10 = new java.lang.StringBuilder;
+
+        specialinvoke r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while reading response: ");
+
+        r12 = (java.io.IOException) $r5;
+
+        $r9 = virtualinvoke r12.<java.io.IOException: java.lang.String toString()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", can\'t resume interrupted download with no ETag");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        r11 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke r11.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, 489, $r9, $r5);
+
+        throw r11;
+
+     label4:
+        r11 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $i0 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: int f(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        r10 = new java.lang.StringBuilder;
+
+        specialinvoke r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while reading response: ");
+
+        r12 = (java.io.IOException) $r5;
+
+        $r9 = virtualinvoke r12.<java.io.IOException: java.lang.String toString()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r11.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, $i0, $r9, $r5);
+
+        throw r11;
+
+        catch java.io.IOException from label1 to label2 with label3;
+    }
+
+    private java.lang.String b()
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        r1 = $r0.<com.google.android.vending.expansion.downloader.impl.a: java.lang.String f>;
+
+        return r1;
+    }
+
+    private org.apache.http.HttpResponse b(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.c, org.apache.http.client.methods.HttpGet)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.c $r2;
+        org.apache.http.client.methods.HttpGet $r3;
+        org.apache.http.HttpResponse $r4;
+        java.lang.Throwable $r5, $r8;
+        java.lang.StringBuilder $r6, r9;
+        java.lang.String $r7;
+        int $i0;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest r10;
+        java.lang.IllegalArgumentException r11;
+        java.io.IOException r12;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r3 := @parameter2: org.apache.http.client.methods.HttpGet;
+
+     label1:
+        $r4 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r3);
+
+     label2:
+        return $r4;
+
+     label3:
+        $r5 := @caughtexception;
+
+        r10 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while trying to execute request: ");
+
+        r11 = (java.lang.IllegalArgumentException) $r5;
+
+        $r7 = virtualinvoke r11.<java.lang.IllegalArgumentException: java.lang.String toString()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r10.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, 495, $r7, $r5);
+
+        throw r10;
+
+     label4:
+        $r8 := @caughtexception;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void c()>();
+
+        r10 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $i0 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: int f(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while trying to execute request: ");
+
+        r12 = (java.io.IOException) $r8;
+
+        $r7 = virtualinvoke r12.<java.io.IOException: java.lang.String toString()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r10.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, $i0, $r7, $r8);
+
+        throw r10;
+
+        catch java.lang.IllegalArgumentException from label1 to label2 with label3;
+        catch java.io.IOException from label1 to label2 with label4;
+    }
+
+    private void b(int, boolean, int, int, boolean, java.lang.String)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        int $i0, $i1, $i2;
+        boolean $z0, $z1;
+        java.lang.String $r1;
+        long $l3;
+        com.google.android.vending.expansion.downloader.impl.k $r2;
+        com.google.android.vending.expansion.downloader.impl.t $r3;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $i0 := @parameter0: int;
+
+        $z0 := @parameter1: boolean;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $z1 := @parameter4: boolean;
+
+        $r1 := @parameter5: java.lang.String;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.k: int h> = $i0;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.k: int k> = $i1;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.k: int l> = $i2;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l3 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.k: long g> = $l3;
+
+        if $z0 != 0 goto label2;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.k: int j> = 0;
+
+     label1:
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        virtualinvoke $r3.<com.google.android.vending.expansion.downloader.impl.t: boolean c(com.google.android.vending.expansion.downloader.impl.k)>($r2);
+
+        return;
+
+     label2:
+        if $z1 == 0 goto label3;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.k: int j> = 1;
+
+        goto label1;
+
+     label3:
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $i0 = $r2.<com.google.android.vending.expansion.downloader.impl.k: int j>;
+
+        $i0 = $i0 + 1;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.k: int j> = $i0;
+
+        goto label1;
+    }
+
+    private void b(com.google.android.vending.expansion.downloader.impl.p)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        java.lang.String $r2, $r5, $r6;
+        com.google.android.vending.expansion.downloader.impl.b $r3;
+        com.google.android.vending.expansion.downloader.impl.k $r4;
+        boolean $z0;
+        java.io.File $r7, $r8;
+        long $l0, $l2;
+        byte $b1;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r9;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void c(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        $r2 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r5 = $r4.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String c>;
+
+        $r5 = staticinvoke <com.google.android.vending.expansion.downloader.l: java.lang.String a(android.content.Context,java.lang.String)>($r3, $r5);
+
+        $r6 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>($r5);
+
+        if $z0 != 0 goto label2;
+
+        $r7 = new java.io.File;
+
+        specialinvoke $r7.<java.io.File: void <init>(java.lang.String)>($r2);
+
+        $r8 = new java.io.File;
+
+        specialinvoke $r8.<java.io.File: void <init>(java.lang.String)>($r5);
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l0 = $r4.<com.google.android.vending.expansion.downloader.impl.k: long e>;
+
+        $b1 = $l0 cmp -1L;
+
+        if $b1 == 0 goto label1;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l0 = $r4.<com.google.android.vending.expansion.downloader.impl.k: long f>;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l2 = $r4.<com.google.android.vending.expansion.downloader.impl.k: long e>;
+
+        $b1 = $l0 cmp $l2;
+
+        if $b1 != 0 goto label1;
+
+        $z0 = virtualinvoke $r7.<java.io.File: boolean renameTo(java.io.File)>($r8);
+
+        if $z0 != 0 goto label2;
+
+        $r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 492, "unable to finalize destination file");
+
+        throw $r9;
+
+     label1:
+        $r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 487, "file delivered with incorrect size. probably due to network not browser configured");
+
+        throw $r9;
+
+     label2:
+        return;
+    }
+
+    private void b(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        com.google.android.vending.expansion.downloader.impl.k $r3;
+        int $i0, $i2;
+        long $l1;
+        com.google.android.vending.expansion.downloader.impl.t $r4;
+        java.lang.String $r5;
+        boolean $z0;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r6;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $i0 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $l1 = (long) $i0;
+
+        $r3.<com.google.android.vending.expansion.downloader.impl.k: long f> = $l1;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        virtualinvoke $r4.<com.google.android.vending.expansion.downloader.impl.t: boolean c(com.google.android.vending.expansion.downloader.impl.k)>($r3);
+
+        $r5 = $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String e>;
+
+        if $r5 == null goto label2;
+
+        $i0 = $r2.<com.google.android.vending.expansion.downloader.impl.o: int a>;
+
+        $r5 = $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String e>;
+
+        $i2 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r5);
+
+        if $i0 == $i2 goto label2;
+
+        $z0 = 1;
+
+     label1:
+        if $z0 == 0 goto label4;
+
+        $z0 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: boolean a(com.google.android.vending.expansion.downloader.impl.o)>($r2);
+
+        if $z0 == 0 goto label3;
+
+        $r6 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r6.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 489, "mismatched content length");
+
+        throw $r6;
+
+     label2:
+        $z0 = 0;
+
+        goto label1;
+
+     label3:
+        $r6 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $i0 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: int f(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        specialinvoke $r6.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, $i0, "closed socket before end of file");
+
+        throw $r6;
+
+     label4:
+        return;
+    }
+
+    private void b(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o, org.apache.http.HttpResponse)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        org.apache.http.HttpResponse $r3;
+        org.apache.http.Header $r4;
+        java.lang.String $r5, $r6;
+        boolean $z0;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r7;
+        long $l0, $l2;
+        byte $b1;
+        com.google.android.vending.expansion.downloader.impl.k $r8;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 := @parameter2: org.apache.http.HttpResponse;
+
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("Content-Disposition");
+
+        if $r4 == null goto label01;
+
+        $r5 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String f> = $r5;
+
+     label01:
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("Content-Location");
+
+        if $r4 == null goto label02;
+
+        $r5 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String g> = $r5;
+
+     label02:
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("ETag");
+
+        if $r4 == null goto label03;
+
+        $r5 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String c> = $r5;
+
+     label03:
+        $r5 = null;
+
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("Transfer-Encoding");
+
+        if $r4 == null goto label04;
+
+        $r5 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+     label04:
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("Content-Type");
+
+        if $r4 == null goto label05;
+
+        $r6 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("application/vnd.android.obb");
+
+        if $z0 != 0 goto label05;
+
+        $r7 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r7.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 487, "file delivered with incorrect Mime type");
+
+        throw $r7;
+
+     label05:
+        if $r5 != null goto label06;
+
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("Content-Length");
+
+        if $r4 == null goto label06;
+
+        $r6 = interfaceinvoke $r4.<org.apache.http.Header: java.lang.String getValue()>();
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String e> = $r6;
+
+        $r6 = $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String e>;
+
+        $l0 = staticinvoke <java.lang.Long: long parseLong(java.lang.String)>($r6);
+
+        $b1 = $l0 cmp -1L;
+
+        if $b1 == 0 goto label06;
+
+        $r8 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l2 = $r8.<com.google.android.vending.expansion.downloader.impl.k: long e>;
+
+        $b1 = $l0 cmp $l2;
+
+        if $b1 == 0 goto label06;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("LVLDL", "Incorrect file size delivered.");
+
+     label06:
+        $r6 = $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String e>;
+
+        if $r6 != null goto label09;
+
+        if $r5 == null goto label07;
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("chunked");
+
+        if $z0 != 0 goto label09;
+
+     label07:
+        $z0 = 1;
+
+     label08:
+        if $z0 == 0 goto label10;
+
+        $r7 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r7.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 495, "can\'t know size of download, giving up");
+
+        throw $r7;
+
+     label09:
+        $z0 = 0;
+
+        goto label08;
+
+     label10:
+        return;
+    }
+
+    private void b(com.google.android.vending.expansion.downloader.impl.p, org.apache.http.HttpResponse)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        org.apache.http.HttpResponse $r2;
+        org.apache.http.Header $r3;
+        java.lang.String $r4;
+        int $i0, $i1;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r5;
+        java.util.Random $r6;
+        java.lang.Throwable $r7;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: org.apache.http.HttpResponse;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: boolean c> = 1;
+
+        $r3 = interfaceinvoke $r2.<org.apache.http.HttpResponse: org.apache.http.Header getFirstHeader(java.lang.String)>("Retry-After");
+
+        if $r3 == null goto label3;
+
+     label1:
+        $r4 = interfaceinvoke $r3.<org.apache.http.Header: java.lang.String getValue()>();
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r4);
+
+     label2:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int d> = $i0;
+
+        $i0 = $r1.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        if $i0 >= 0 goto label4;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int d> = 0;
+
+     label3:
+        $r5 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke $r5.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 194, "got 503 Service Unavailable, will retry later");
+
+        throw $r5;
+
+     label4:
+        $i0 = $r1.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        if $i0 >= 30 goto label9;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int d> = 30;
+
+     label5:
+        $i0 = $r1.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        $r6 = <com.google.android.vending.expansion.downloader.l: java.util.Random a>;
+
+     label6:
+        $i1 = virtualinvoke $r6.<java.util.Random: int nextInt(int)>(31);
+
+     label7:
+        $i0 = $i0 + $i1;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int d> = $i0;
+
+        $i0 = $r1.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        $i0 = $i0 * 1000;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int d> = $i0;
+
+        goto label3;
+
+     label8:
+        $r7 := @caughtexception;
+
+        goto label3;
+
+     label9:
+        $i0 = $r1.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        if $i0 <= 86400 goto label5;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int d> = 86400;
+
+        goto label5;
+
+        catch java.lang.NumberFormatException from label1 to label2 with label8;
+        catch java.lang.NumberFormatException from label6 to label7 with label8;
+    }
+
+    private void c()
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        java.lang.StringBuilder $r1;
+        com.google.android.vending.expansion.downloader.impl.b $r2;
+        com.google.android.vending.expansion.downloader.impl.t $r3;
+        int $i0;
+        java.lang.String $r4;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Net ");
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: int a(com.google.android.vending.expansion.downloader.impl.t)>($r3);
+
+        if $i0 != 1 goto label2;
+
+        $r4 = "Up";
+
+     label1:
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r4 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("LVLDL", $r4);
+
+        return;
+
+     label2:
+        $r4 = "Down";
+
+        goto label1;
+    }
+
+    private void c(com.google.android.vending.expansion.downloader.impl.p)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        java.io.FileOutputStream $r2, $r3;
+        java.lang.String $r4;
+        java.io.FileDescriptor $r5;
+        java.lang.Throwable $r6, $r8, $r10, $r12, $r13, $r15, $r16, $r19, $r21, $r22;
+        java.lang.RuntimeException $r7, $r11, $r14, $r17, $r18, $r20, $r23;
+        java.lang.StringBuilder $r9;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 = null;
+
+     label01:
+        $r3 = new java.io.FileOutputStream;
+
+     label02:
+        $r4 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+     label03:
+        specialinvoke $r3.<java.io.FileOutputStream: void <init>(java.lang.String,boolean)>($r4, 1);
+
+     label04:
+        $r5 = virtualinvoke $r3.<java.io.FileOutputStream: java.io.FileDescriptor getFD()>();
+
+        virtualinvoke $r5.<java.io.FileDescriptor: void sync()>();
+
+     label05:
+        if $r3 == null goto label49;
+
+     label06:
+        virtualinvoke $r3.<java.io.FileOutputStream: void close()>();
+
+     label07:
+        return;
+
+     label08:
+        $r6 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "IOException while closing synced file: ", $r6);
+
+        return;
+
+     label09:
+        $r7 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "exception while closing file: ", $r7);
+
+        return;
+
+     label10:
+        $r8 := @caughtexception;
+
+        $r3 = null;
+
+     label11:
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("file ");
+
+        $r4 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" not found: ");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r8);
+
+        $r4 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("LVLDL", $r4);
+
+     label12:
+        if $r3 == null goto label49;
+
+     label13:
+        virtualinvoke $r3.<java.io.FileOutputStream: void close()>();
+
+     label14:
+        return;
+
+     label15:
+        $r10 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "IOException while closing synced file: ", $r10);
+
+        return;
+
+     label16:
+        $r11 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "exception while closing file: ", $r11);
+
+        return;
+
+     label17:
+        $r12 := @caughtexception;
+
+     label18:
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("file ");
+
+        $r4 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" sync failed: ");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r12);
+
+        $r4 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("LVLDL", $r4);
+
+     label19:
+        if $r2 == null goto label49;
+
+     label20:
+        virtualinvoke $r2.<java.io.FileOutputStream: void close()>();
+
+     label21:
+        return;
+
+     label22:
+        $r13 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "IOException while closing synced file: ", $r13);
+
+        return;
+
+     label23:
+        $r14 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "exception while closing file: ", $r14);
+
+        return;
+
+     label24:
+        $r15 := @caughtexception;
+
+     label25:
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("IOException trying to sync ");
+
+        $r4 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(": ");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r15);
+
+        $r4 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("LVLDL", $r4);
+
+     label26:
+        if $r2 == null goto label49;
+
+     label27:
+        virtualinvoke $r2.<java.io.FileOutputStream: void close()>();
+
+     label28:
+        return;
+
+     label29:
+        $r16 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "IOException while closing synced file: ", $r16);
+
+        return;
+
+     label30:
+        $r17 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "exception while closing file: ", $r17);
+
+        return;
+
+     label31:
+        $r18 := @caughtexception;
+
+     label32:
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "exception while syncing file: ", $r18);
+
+     label33:
+        if $r2 == null goto label49;
+
+     label34:
+        virtualinvoke $r2.<java.io.FileOutputStream: void close()>();
+
+     label35:
+        return;
+
+     label36:
+        $r19 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "IOException while closing synced file: ", $r19);
+
+        return;
+
+     label37:
+        $r20 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "exception while closing file: ", $r20);
+
+        return;
+
+     label38:
+        $r21 := @caughtexception;
+
+     label39:
+        if $r2 == null goto label41;
+
+     label40:
+        virtualinvoke $r2.<java.io.FileOutputStream: void close()>();
+
+     label41:
+        throw $r21;
+
+     label42:
+        $r22 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "IOException while closing synced file: ", $r22);
+
+        goto label41;
+
+     label43:
+        $r23 := @caughtexception;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LVLDL", "exception while closing file: ", $r23);
+
+        goto label41;
+
+     label44:
+        $r21 := @caughtexception;
+
+        $r2 = $r3;
+
+        goto label39;
+
+     label45:
+        $r18 := @caughtexception;
+
+        $r2 = $r3;
+
+        goto label32;
+
+     label46:
+        $r15 := @caughtexception;
+
+        $r2 = $r3;
+
+        goto label25;
+
+     label47:
+        $r12 := @caughtexception;
+
+        $r2 = $r3;
+
+        goto label18;
+
+     label48:
+        $r8 := @caughtexception;
+
+        goto label11;
+
+     label49:
+        return;
+
+        catch java.io.FileNotFoundException from label03 to label04 with label10;
+        catch java.io.SyncFailedException from label03 to label04 with label17;
+        catch java.io.IOException from label03 to label04 with label24;
+        catch java.lang.RuntimeException from label02 to label04 with label31;
+        catch java.lang.Throwable from label01 to label04 with label38;
+        catch java.io.FileNotFoundException from label04 to label05 with label48;
+        catch java.io.SyncFailedException from label04 to label05 with label47;
+        catch java.io.IOException from label04 to label05 with label46;
+        catch java.lang.RuntimeException from label04 to label05 with label45;
+        catch java.lang.Throwable from label04 to label05 with label44;
+        catch java.io.IOException from label06 to label07 with label08;
+        catch java.lang.RuntimeException from label06 to label07 with label09;
+        catch java.lang.Throwable from label11 to label12 with label44;
+        catch java.io.IOException from label13 to label14 with label15;
+        catch java.lang.RuntimeException from label13 to label14 with label16;
+        catch java.lang.Throwable from label18 to label19 with label38;
+        catch java.io.IOException from label20 to label21 with label22;
+        catch java.lang.RuntimeException from label20 to label21 with label23;
+        catch java.lang.Throwable from label25 to label26 with label38;
+        catch java.io.IOException from label27 to label28 with label29;
+        catch java.lang.RuntimeException from label27 to label28 with label30;
+        catch java.lang.Throwable from label32 to label33 with label38;
+        catch java.io.IOException from label34 to label35 with label36;
+        catch java.lang.RuntimeException from label34 to label35 with label37;
+        catch java.io.IOException from label40 to label41 with label42;
+        catch java.lang.RuntimeException from label40 to label41 with label43;
+    }
+
+    private void c(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        com.google.android.vending.expansion.downloader.impl.k $r3;
+        java.lang.String $r4;
+        com.google.android.vending.expansion.downloader.impl.t $r5;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r4 = $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String c>;
+
+        $r3.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String d> = $r4;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        virtualinvoke $r5.<com.google.android.vending.expansion.downloader.impl.t: boolean c(com.google.android.vending.expansion.downloader.impl.k)>($r3);
+
+        return;
+    }
+
+    private void c(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o, org.apache.http.HttpResponse)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        org.apache.http.HttpResponse $r3;
+        org.apache.http.StatusLine $r4;
+        int $i0, $i1;
+        com.google.android.vending.expansion.downloader.impl.k $r5;
+        boolean $z0;
+        short $s2;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 := @parameter2: org.apache.http.HttpResponse;
+
+        $r4 = interfaceinvoke $r3.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>();
+
+        $i0 = interfaceinvoke $r4.<org.apache.http.StatusLine: int getStatusCode()>();
+
+        if $i0 != 503 goto label1;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $i1 = $r5.<com.google.android.vending.expansion.downloader.impl.k: int j>;
+
+        if $i1 >= 5 goto label1;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void b(com.google.android.vending.expansion.downloader.impl.p,org.apache.http.HttpResponse)>($r1, $r3);
+
+     label1:
+        if $i0 == 301 goto label2;
+
+        if $i0 == 302 goto label2;
+
+        if $i0 == 303 goto label2;
+
+        if $i0 != 307 goto label3;
+
+     label2:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,org.apache.http.HttpResponse,int)>($r1, $r3, $i0);
+
+     label3:
+        $z0 = $r2.<com.google.android.vending.expansion.downloader.impl.o: boolean d>;
+
+        if $z0 == 0 goto label5;
+
+        $s2 = 206;
+
+     label4:
+        if $i0 == $s2 goto label6;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.o,int)>($r1, $r2, $i0);
+
+        return;
+
+     label5:
+        $s2 = 200;
+
+        goto label4;
+
+     label6:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: int e> = 0;
+
+        return;
+    }
+
+    private void d(com.google.android.vending.expansion.downloader.impl.p)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        java.io.FileOutputStream $r2;
+        java.lang.Throwable $r3;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b>;
+
+        if $r2 == null goto label4;
+
+        $r2 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b>;
+
+     label1:
+        virtualinvoke $r2.<java.io.FileOutputStream: void close()>();
+
+     label2:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b> = null;
+
+        return;
+
+     label3:
+        $r3 := @caughtexception;
+
+     label4:
+        return;
+
+        catch java.io.IOException from label1 to label2 with label3;
+    }
+
+    private void d(com.google.android.vending.expansion.downloader.impl.p, com.google.android.vending.expansion.downloader.impl.o)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.o $r2;
+        java.lang.String $r3;
+        boolean $z0;
+        java.io.File $r4, r10;
+        long $l0;
+        byte $b1;
+        java.io.FileOutputStream $r5, r11;
+        com.google.android.vending.expansion.downloader.impl.k $r6;
+        int $i2;
+        java.lang.Throwable $r7;
+        java.lang.StringBuilder $r8, r12;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest r9;
+        java.io.FileNotFoundException r13;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 := @parameter1: com.google.android.vending.expansion.downloader.impl.o;
+
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        if $r3 == null goto label2;
+
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        $z0 = staticinvoke <com.google.android.vending.expansion.downloader.l: boolean b(java.lang.String)>($r3);
+
+        if $z0 != 0 goto label1;
+
+        r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 492, "found invalid internal destination filename");
+
+        throw r9;
+
+     label1:
+        r10 = new java.io.File;
+
+        $r4 = r10;
+
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        specialinvoke r10.<java.io.File: void <init>(java.lang.String)>($r3);
+
+        $z0 = virtualinvoke $r4.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label2;
+
+        $l0 = virtualinvoke $r4.<java.io.File: long length()>();
+
+        $b1 = $l0 cmp 0L;
+
+        if $b1 != 0 goto label3;
+
+        virtualinvoke $r4.<java.io.File: boolean delete()>();
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a> = null;
+
+     label2:
+        $r5 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b>;
+
+        if $r5 == null goto label9;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void d(com.google.android.vending.expansion.downloader.impl.p)>($r1);
+
+        return;
+
+     label3:
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r3 = $r6.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String d>;
+
+        if $r3 != null goto label4;
+
+        virtualinvoke $r4.<java.io.File: boolean delete()>();
+
+        r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        specialinvoke r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, 489, "Trying to resume a download that can\'t be resumed");
+
+        throw r9;
+
+     label4:
+        r11 = new java.io.FileOutputStream;
+
+        $r3 = $r1.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+     label5:
+        specialinvoke r11.<java.io.FileOutputStream: void <init>(java.lang.String,boolean)>($r3, 1);
+
+     label6:
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: java.io.FileOutputStream b> = r11;
+
+        $i2 = (int) $l0;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: int a> = $i2;
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l0 = $r6.<com.google.android.vending.expansion.downloader.impl.k: long e>;
+
+        $b1 = $l0 cmp -1L;
+
+        if $b1 == 0 goto label7;
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $l0 = $r6.<com.google.android.vending.expansion.downloader.impl.k: long e>;
+
+        $r3 = staticinvoke <java.lang.Long: java.lang.String toString(long)>($l0);
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String e> = $r3;
+
+     label7:
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r3 = $r6.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String d>;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: java.lang.String c> = $r3;
+
+        $r2.<com.google.android.vending.expansion.downloader.impl.o: boolean d> = 1;
+
+        goto label2;
+
+     label8:
+        $r7 := @caughtexception;
+
+        r9 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        r12 = new java.lang.StringBuilder;
+
+        specialinvoke r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("while opening destination for resuming: ");
+
+        r13 = (java.io.FileNotFoundException) $r7;
+
+        $r3 = virtualinvoke r13.<java.io.FileNotFoundException: java.lang.String toString()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r9.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String,java.lang.Throwable)>($r0, 492, $r3, $r7);
+
+        throw r9;
+
+     label9:
+        return;
+
+        catch java.io.FileNotFoundException from label5 to label6 with label8;
+    }
+
+    private void e(com.google.android.vending.expansion.downloader.impl.p)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.b $r2;
+        int $i0;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r3;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: int j()>();
+
+        if $i0 != 1 goto label4;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: int k()>();
+
+        lookupswitch($i0)
+        {
+            case 193: goto label2;
+            case 490: goto label3;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $r3 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: int k()>();
+
+        specialinvoke $r3.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, $i0, "download paused");
+
+        throw $r3;
+
+     label3:
+        $r3 = new com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: int k()>();
+
+        specialinvoke $r3.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void <init>(com.google.android.vending.expansion.downloader.impl.a,int,java.lang.String)>($r0, $i0, "download cancelled");
+
+        throw $r3;
+
+     label4:
+        return;
+    }
+
+    private int f(com.google.android.vending.expansion.downloader.impl.p)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        com.google.android.vending.expansion.downloader.impl.p $r1;
+        com.google.android.vending.expansion.downloader.impl.b $r2;
+        com.google.android.vending.expansion.downloader.impl.t $r3;
+        int $i0;
+        com.google.android.vending.expansion.downloader.impl.k $r4;
+        java.lang.StringBuilder $r5;
+        java.lang.String $r6;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: com.google.android.vending.expansion.downloader.impl.p;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.t d>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.b: int a(com.google.android.vending.expansion.downloader.impl.t)>($r3);
+
+        if $i0 == 1 goto label1;
+
+        return 195;
+
+     label1:
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $i0 = $r4.<com.google.android.vending.expansion.downloader.impl.k: int j>;
+
+        if $i0 >= 5 goto label2;
+
+        $r1.<com.google.android.vending.expansion.downloader.impl.p: boolean c> = 1;
+
+        return 194;
+
+     label2:
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("reached max retries for ");
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $i0 = $r4.<com.google.android.vending.expansion.downloader.impl.k: int j>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("LVLDL", $r6);
+
+        return 495;
+    }
+
+    public org.apache.http.HttpHost a(android.content.Context, java.lang.String)
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        boolean $z0;
+        com.google.android.vending.expansion.downloader.impl.b $r3;
+        org.apache.http.HttpHost $r4;
+        int $i0;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $z0 = staticinvoke <com.google.android.vending.expansion.downloader.impl.a: boolean a(java.lang.String)>($r2);
+
+        if $z0 != 0 goto label1;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        $z0 = virtualinvoke $r3.<com.google.android.vending.expansion.downloader.impl.b: boolean e()>();
+
+        if $z0 != 0 goto label1;
+
+        $r2 = staticinvoke <android.net.Proxy: java.lang.String getHost(android.content.Context)>($r1);
+
+        if $r2 == null goto label1;
+
+        $r4 = new org.apache.http.HttpHost;
+
+        $i0 = staticinvoke <android.net.Proxy: int getPort(android.content.Context)>($r1);
+
+        specialinvoke $r4.<org.apache.http.HttpHost: void <init>(java.lang.String,int,java.lang.String)>($r2, $i0, "http");
+
+        return $r4;
+
+     label1:
+        return null;
+    }
+
+    public void a()
+    {
+        com.google.android.vending.expansion.downloader.impl.a $r0;
+        java.lang.String $r1;
+        com.google.android.vending.expansion.downloader.impl.c $r2, $r11;
+        com.google.android.vending.expansion.downloader.impl.p $r3;
+        com.google.android.vending.expansion.downloader.impl.k $r4;
+        com.google.android.vending.expansion.downloader.impl.b $r5;
+        android.content.Context $r6;
+        java.lang.Object $r7;
+        android.os.PowerManager $r8;
+        android.os.PowerManager$WakeLock $r9, $r10;
+        boolean $z0, $z1;
+        org.apache.http.params.HttpParams $r12;
+        org.apache.http.HttpHost $r13;
+        org.apache.http.client.methods.HttpGet $r14;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$RetryDownload $r15;
+        com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest $r16;
+        java.lang.StringBuilder $r17;
+        int $i0, $i1, $i2;
+        java.lang.Throwable $r18, $r19, $r20, $r21;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.a;
+
+        $r2 = null;
+
+        staticinvoke <android.os.Process: void setThreadPriority(int)>(10);
+
+        $r3 = new com.google.android.vending.expansion.downloader.impl.p;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.b c>;
+
+        specialinvoke $r3.<com.google.android.vending.expansion.downloader.impl.p: void <init>(com.google.android.vending.expansion.downloader.impl.k,com.google.android.vending.expansion.downloader.impl.b)>($r4, $r5);
+
+     label01:
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: android.content.Context a>;
+
+     label02:
+        $r7 = virtualinvoke $r6.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("power");
+
+     label03:
+        $r8 = (android.os.PowerManager) $r7;
+
+     label04:
+        $r9 = virtualinvoke $r8.<android.os.PowerManager: android.os.PowerManager$WakeLock newWakeLock(int,java.lang.String)>(1, "LVLDL");
+
+     label05:
+        $r10 = $r9;
+
+     label06:
+        virtualinvoke $r9.<android.os.PowerManager$WakeLock: void acquire()>();
+
+        $r1 = specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: java.lang.String b()>();
+
+     label07:
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: android.content.Context a>;
+
+     label08:
+        $r11 = staticinvoke <com.google.android.vending.expansion.downloader.impl.c: com.google.android.vending.expansion.downloader.impl.c a(java.lang.String,android.content.Context)>($r1, $r6);
+
+     label09:
+        $r2 = $r11;
+
+        $z0 = 0;
+
+     label10:
+        if $z0 != 0 goto label34;
+
+     label11:
+        $r12 = virtualinvoke $r11.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.params.HttpParams getParams()>();
+
+     label12:
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.a: android.content.Context a>;
+
+        $r1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String h>;
+
+     label13:
+        $r13 = virtualinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: org.apache.http.HttpHost a(android.content.Context,java.lang.String)>($r6, $r1);
+
+        staticinvoke <org.apache.http.conn.params.ConnRouteParams: void setDefaultProxy(org.apache.http.params.HttpParams,org.apache.http.HttpHost)>($r12, $r13);
+
+     label14:
+        $r14 = new org.apache.http.client.methods.HttpGet;
+
+        $r1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String h>;
+
+     label15:
+        specialinvoke $r14.<org.apache.http.client.methods.HttpGet: void <init>(java.lang.String)>($r1);
+
+     label16:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,com.google.android.vending.expansion.downloader.impl.c,org.apache.http.client.methods.HttpGet)>($r3, $r11, $r14);
+
+     label17:
+        virtualinvoke $r14.<org.apache.http.client.methods.HttpGet: void abort()>();
+
+     label18:
+        $z0 = 1;
+
+        goto label10;
+
+     label19:
+        $r15 := @caughtexception;
+
+     label20:
+        virtualinvoke $r14.<org.apache.http.client.methods.HttpGet: void abort()>();
+
+     label21:
+        goto label10;
+
+     label22:
+        $r16 := @caughtexception;
+
+     label23:
+        $r17 = new java.lang.StringBuilder;
+
+        specialinvoke $r17.<java.lang.StringBuilder: void <init>()>();
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Aborting request for download ");
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r1 = $r4.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String c>;
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(": ");
+
+        $r1 = virtualinvoke $r16.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: java.lang.String getMessage()>();
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("LVLDL", $r1);
+
+        virtualinvoke $r16.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: void printStackTrace()>();
+
+        $i0 = $r16.<com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest: int mFinalStatus>;
+
+     label24:
+        if $r9 == null goto label25;
+
+        virtualinvoke $r9.<android.os.PowerManager$WakeLock: void release()>();
+
+     label25:
+        if $r2 == null goto label26;
+
+        virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.c: void a()>();
+
+     label26:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,int)>($r3, $i0);
+
+        $z0 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean c>;
+
+        $i1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        $i2 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int e>;
+
+        $z1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean g>;
+
+        $r1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(int,boolean,int,int,boolean,java.lang.String)>($i0, $z0, $i1, $i2, $z1, $r1);
+
+        return;
+
+     label27:
+        $r18 := @caughtexception;
+
+     label28:
+        virtualinvoke $r14.<org.apache.http.client.methods.HttpGet: void abort()>();
+
+        throw $r18;
+
+     label29:
+        $r19 := @caughtexception;
+
+     label30:
+        $r17 = new java.lang.StringBuilder;
+
+        specialinvoke $r17.<java.lang.StringBuilder: void <init>()>();
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Exception for ");
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.a: com.google.android.vending.expansion.downloader.impl.k b>;
+
+        $r1 = $r4.<com.google.android.vending.expansion.downloader.impl.k: java.lang.String c>;
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(": ");
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r19);
+
+        $r1 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("LVLDL", $r1);
+
+     label31:
+        if $r10 == null goto label32;
+
+        virtualinvoke $r10.<android.os.PowerManager$WakeLock: void release()>();
+
+     label32:
+        if $r2 == null goto label33;
+
+        virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.c: void a()>();
+
+     label33:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,int)>($r3, 491);
+
+        $z0 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean c>;
+
+        $i0 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        $i1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int e>;
+
+        $z1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean g>;
+
+        $r1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(int,boolean,int,int,boolean,java.lang.String)>(491, $z0, $i0, $i1, $z1, $r1);
+
+        return;
+
+     label34:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void b(com.google.android.vending.expansion.downloader.impl.p)>($r3);
+
+     label35:
+        if $r9 == null goto label36;
+
+        virtualinvoke $r9.<android.os.PowerManager$WakeLock: void release()>();
+
+     label36:
+        if $r11 == null goto label37;
+
+        virtualinvoke $r11.<com.google.android.vending.expansion.downloader.impl.c: void a()>();
+
+     label37:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,int)>($r3, 200);
+
+        $z0 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean c>;
+
+        $i0 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        $i1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int e>;
+
+        $z1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean g>;
+
+        $r1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(int,boolean,int,int,boolean,java.lang.String)>(200, $z0, $i0, $i1, $z1, $r1);
+
+        return;
+
+     label38:
+        if $r10 == null goto label39;
+
+        virtualinvoke $r10.<android.os.PowerManager$WakeLock: void release()>();
+
+     label39:
+        if $r2 == null goto label40;
+
+        virtualinvoke $r2.<com.google.android.vending.expansion.downloader.impl.c: void a()>();
+
+     label40:
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(com.google.android.vending.expansion.downloader.impl.p,int)>($r3, 491);
+
+        $z0 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean c>;
+
+        $i0 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int d>;
+
+        $i1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: int e>;
+
+        $z1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: boolean g>;
+
+        $r1 = $r3.<com.google.android.vending.expansion.downloader.impl.p: java.lang.String a>;
+
+        specialinvoke $r0.<com.google.android.vending.expansion.downloader.impl.a: void a(int,boolean,int,int,boolean,java.lang.String)>(491, $z0, $i0, $i1, $z1, $r1);
+
+        throw $r18;
+
+     label41:
+        $r20 := @caughtexception;
+
+        $r18 = $r20;
+
+        goto label38;
+
+     label42:
+        $r21 := @caughtexception;
+
+        $r18 = $r21;
+
+        $r10 = $r9;
+
+        goto label38;
+
+     label43:
+        $r19 := @caughtexception;
+
+        $r10 = null;
+
+        goto label30;
+
+     label44:
+        $r16 := @caughtexception;
+
+        $r9 = null;
+
+        goto label23;
+
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label02 to label03 with label44;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label04 to label05 with label44;
+        catch java.lang.Throwable from label01 to label05 with label43;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label06 to label07 with label22;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label08 to label09 with label22;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label11 to label12 with label22;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label13 to label14 with label22;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label15 to label16 with label22;
+        catch java.lang.Throwable from label06 to label09 with label29;
+        catch java.lang.Throwable from label11 to label16 with label29;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$RetryDownload from label16 to label17 with label19;
+        catch java.lang.Throwable from label16 to label17 with label27;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label17 to label18 with label22;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label20 to label21 with label22;
+        catch java.lang.Throwable from label17 to label18 with label29;
+        catch java.lang.Throwable from label20 to label21 with label29;
+        catch java.lang.Throwable from label23 to label24 with label42;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label28 to label29 with label22;
+        catch java.lang.Throwable from label28 to label29 with label29;
+        catch java.lang.Throwable from label30 to label31 with label41;
+        catch com.google.android.vending.expansion.downloader.impl.DownloadThread$StopRequest from label34 to label35 with label22;
+        catch java.lang.Throwable from label34 to label35 with label29;
+    }
+}

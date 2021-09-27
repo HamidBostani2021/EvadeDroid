@@ -1,0 +1,472 @@
+public class com.seattleclouds.widget.DateTimePicker extends android.widget.LinearLayout
+{
+    private android.content.Context a;
+    private android.widget.Button b;
+    private android.widget.Button c;
+    private java.lang.Object d;
+    private java.lang.Object e;
+    private android.app.DatePickerDialog f;
+    private android.app.TimePickerDialog g;
+    private java.util.Calendar h;
+    private int i;
+
+    public void <init>(android.content.Context)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        android.content.Context $r1;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<android.widget.LinearLayout: void <init>(android.content.Context)>($r1);
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: int i> = 0;
+
+        specialinvoke $r0.<com.seattleclouds.widget.DateTimePicker: void a(android.content.Context)>($r1);
+
+        return;
+    }
+
+    public void <init>(android.content.Context, android.util.AttributeSet)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        android.content.Context $r1;
+        android.util.AttributeSet $r2;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.util.AttributeSet;
+
+        specialinvoke $r0.<android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet)>($r1, $r2);
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: int i> = 0;
+
+        specialinvoke $r0.<com.seattleclouds.widget.DateTimePicker: void a(android.content.Context)>($r1);
+
+        return;
+    }
+
+    static java.util.Calendar a(com.seattleclouds.widget.DateTimePicker)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        java.util.Calendar r1;
+
+        $r0 := @parameter0: com.seattleclouds.widget.DateTimePicker;
+
+        r1 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        return r1;
+    }
+
+    private void a(android.content.Context)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        android.content.Context $r1;
+        android.view.LayoutInflater $r2;
+        int $i0, $i1, $i2;
+        android.view.View $r3, $r4;
+        android.widget.Button $r5;
+        java.util.Date $r6;
+        boolean $z0;
+        com.seattleclouds.widget.c $r7;
+        android.app.DatePickerDialog $r8;
+        java.lang.Object $r9;
+        android.app.DatePickerDialog$OnDateSetListener $r10;
+        java.util.Calendar $r11;
+        com.seattleclouds.widget.d $r12;
+        android.app.TimePickerDialog $r13;
+        android.app.TimePickerDialog$OnTimeSetListener $r14;
+        com.seattleclouds.widget.e $r15;
+        com.seattleclouds.widget.f $r16;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: android.content.Context a> = $r1;
+
+        $r2 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r1);
+
+        $i0 = <com.seattleclouds.j: int date_time_picker>;
+
+        $r3 = virtualinvoke $r2.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r0, 1);
+
+        $i0 = <com.seattleclouds.h: int dateButton>;
+
+        $r4 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Button) $r4;
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button b> = $r5;
+
+        $i0 = <com.seattleclouds.h: int timeButton>;
+
+        $r3 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Button) $r3;
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button c> = $r5;
+
+        $r6 = new java.util.Date;
+
+        specialinvoke $r6.<java.util.Date: void <init>()>();
+
+        virtualinvoke $r0.<com.seattleclouds.widget.DateTimePicker: void setDate(java.util.Date)>($r6);
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.widget.DateTimePicker: boolean isInEditMode()>();
+
+        if $z0 != 0 goto label1;
+
+        $r7 = new com.seattleclouds.widget.c;
+
+        specialinvoke $r7.<com.seattleclouds.widget.c: void <init>(com.seattleclouds.widget.DateTimePicker)>($r0);
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: java.lang.Object d> = $r7;
+
+        $r8 = new android.app.DatePickerDialog;
+
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.content.Context a>;
+
+        $r9 = $r0.<com.seattleclouds.widget.DateTimePicker: java.lang.Object d>;
+
+        $r10 = (android.app.DatePickerDialog$OnDateSetListener) $r9;
+
+        $r11 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $i0 = virtualinvoke $r11.<java.util.Calendar: int get(int)>(1);
+
+        $r11 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $i1 = virtualinvoke $r11.<java.util.Calendar: int get(int)>(2);
+
+        $r11 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $i2 = virtualinvoke $r11.<java.util.Calendar: int get(int)>(5);
+
+        specialinvoke $r8.<android.app.DatePickerDialog: void <init>(android.content.Context,android.app.DatePickerDialog$OnDateSetListener,int,int,int)>($r1, $r10, $i0, $i1, $i2);
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: android.app.DatePickerDialog f> = $r8;
+
+        $r12 = new com.seattleclouds.widget.d;
+
+        specialinvoke $r12.<com.seattleclouds.widget.d: void <init>(com.seattleclouds.widget.DateTimePicker)>($r0);
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: java.lang.Object e> = $r12;
+
+        $r13 = new android.app.TimePickerDialog;
+
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.content.Context a>;
+
+        $r9 = $r0.<com.seattleclouds.widget.DateTimePicker: java.lang.Object e>;
+
+        $r14 = (android.app.TimePickerDialog$OnTimeSetListener) $r9;
+
+        $r11 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $i0 = virtualinvoke $r11.<java.util.Calendar: int get(int)>(11);
+
+        $r11 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $i1 = virtualinvoke $r11.<java.util.Calendar: int get(int)>(12);
+
+        specialinvoke $r13.<android.app.TimePickerDialog: void <init>(android.content.Context,android.app.TimePickerDialog$OnTimeSetListener,int,int,boolean)>($r1, $r14, $i0, $i1, 0);
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: android.app.TimePickerDialog g> = $r13;
+
+        $r5 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button b>;
+
+        $r15 = new com.seattleclouds.widget.e;
+
+        specialinvoke $r15.<com.seattleclouds.widget.e: void <init>(com.seattleclouds.widget.DateTimePicker)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r15);
+
+        $r5 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button c>;
+
+        $r16 = new com.seattleclouds.widget.f;
+
+        specialinvoke $r16.<com.seattleclouds.widget.f: void <init>(com.seattleclouds.widget.DateTimePicker)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r16);
+
+     label1:
+        return;
+    }
+
+    static android.app.DatePickerDialog b(com.seattleclouds.widget.DateTimePicker)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        android.app.DatePickerDialog r1;
+
+        $r0 := @parameter0: com.seattleclouds.widget.DateTimePicker;
+
+        r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.app.DatePickerDialog f>;
+
+        return r1;
+    }
+
+    static android.app.TimePickerDialog c(com.seattleclouds.widget.DateTimePicker)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        android.app.TimePickerDialog r1;
+
+        $r0 := @parameter0: com.seattleclouds.widget.DateTimePicker;
+
+        r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.app.TimePickerDialog g>;
+
+        return r1;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        java.util.Calendar $r1;
+        java.util.Date $r2;
+        android.widget.Button $r3;
+        java.lang.StringBuilder $r4;
+        java.lang.CharSequence $r5;
+        android.content.Context $r6;
+        java.text.DateFormat $r7;
+        java.lang.String $r8;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $r2 = virtualinvoke $r1.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r3 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button b>;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $r5 = staticinvoke <android.text.format.DateFormat: java.lang.CharSequence format(java.lang.CharSequence,java.util.Calendar)>("EEE, ", $r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r5);
+
+        $r6 = $r0.<com.seattleclouds.widget.DateTimePicker: android.content.Context a>;
+
+        $r7 = staticinvoke <android.text.format.DateFormat: java.text.DateFormat getMediumDateFormat(android.content.Context)>($r6);
+
+        $r8 = virtualinvoke $r7.<java.text.DateFormat: java.lang.String format(java.util.Date)>($r2);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r8 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r3.<android.widget.Button: void setText(java.lang.CharSequence)>($r8);
+
+        $r3 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button c>;
+
+        $r6 = $r0.<com.seattleclouds.widget.DateTimePicker: android.content.Context a>;
+
+        $r7 = staticinvoke <android.text.format.DateFormat: java.text.DateFormat getTimeFormat(android.content.Context)>($r6);
+
+        $r8 = virtualinvoke $r7.<java.text.DateFormat: java.lang.String format(java.util.Date)>($r2);
+
+        virtualinvoke $r3.<android.widget.Button: void setText(java.lang.CharSequence)>($r8);
+
+        return;
+    }
+
+    public java.util.Calendar getCalendar()
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        java.util.Calendar r1;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        r1 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        return r1;
+    }
+
+    public java.util.Date getDate()
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        java.util.Date $r1;
+        java.util.Calendar $r2;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r2 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $r1 = virtualinvoke $r2.<java.util.Calendar: java.util.Date getTime()>();
+
+        return $r1;
+    }
+
+    public int getMode()
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        i0 = $r0.<com.seattleclouds.widget.DateTimePicker: int i>;
+
+        return i0;
+    }
+
+    public void onRestoreInstanceState(android.os.Parcelable)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        long $l0;
+        android.os.Parcelable $r1;
+        boolean $z0;
+        com.seattleclouds.widget.DateTimePicker$SavedState $r2;
+        int $i1;
+        java.util.Date $r3;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r1 := @parameter0: android.os.Parcelable;
+
+        $z0 = $r1 instanceof com.seattleclouds.widget.DateTimePicker$SavedState;
+
+        if $z0 != 0 goto label1;
+
+        specialinvoke $r0.<android.widget.LinearLayout: void onRestoreInstanceState(android.os.Parcelable)>($r1);
+
+        return;
+
+     label1:
+        $r2 = (com.seattleclouds.widget.DateTimePicker$SavedState) $r1;
+
+        $r1 = virtualinvoke $r2.<com.seattleclouds.widget.DateTimePicker$SavedState: android.os.Parcelable getSuperState()>();
+
+        specialinvoke $r0.<android.widget.LinearLayout: void onRestoreInstanceState(android.os.Parcelable)>($r1);
+
+        $i1 = $r2.<com.seattleclouds.widget.DateTimePicker$SavedState: int a>;
+
+        virtualinvoke $r0.<com.seattleclouds.widget.DateTimePicker: void setMode(int)>($i1);
+
+        $r3 = new java.util.Date;
+
+        $l0 = $r2.<com.seattleclouds.widget.DateTimePicker$SavedState: long b>;
+
+        specialinvoke $r3.<java.util.Date: void <init>(long)>($l0);
+
+        virtualinvoke $r0.<com.seattleclouds.widget.DateTimePicker: void setDate(java.util.Date)>($r3);
+
+        return;
+    }
+
+    public android.os.Parcelable onSaveInstanceState()
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        com.seattleclouds.widget.DateTimePicker$SavedState $r1;
+        android.os.Parcelable $r2;
+        int $i0;
+        java.util.Calendar $r3;
+        long $l1;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r2 = specialinvoke $r0.<android.widget.LinearLayout: android.os.Parcelable onSaveInstanceState()>();
+
+        $r1 = new com.seattleclouds.widget.DateTimePicker$SavedState;
+
+        specialinvoke $r1.<com.seattleclouds.widget.DateTimePicker$SavedState: void <init>(android.os.Parcelable)>($r2);
+
+        $i0 = $r0.<com.seattleclouds.widget.DateTimePicker: int i>;
+
+        $r1.<com.seattleclouds.widget.DateTimePicker$SavedState: int a> = $i0;
+
+        $r3 = $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h>;
+
+        $l1 = virtualinvoke $r3.<java.util.Calendar: long getTimeInMillis()>();
+
+        $r1.<com.seattleclouds.widget.DateTimePicker$SavedState: long b> = $l1;
+
+        return $r1;
+    }
+
+    public void setCalendar(java.util.Calendar)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        java.util.Calendar $r1;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r1 := @parameter0: java.util.Calendar;
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: java.util.Calendar h> = $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.widget.DateTimePicker: void a()>();
+
+        return;
+    }
+
+    public void setDate(java.util.Date)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        java.util.Date $r1;
+        java.util.Calendar $r2;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $r1 := @parameter0: java.util.Date;
+
+        $r2 = staticinvoke <java.util.Calendar: java.util.Calendar getInstance()>();
+
+        virtualinvoke $r2.<java.util.Calendar: void setTime(java.util.Date)>($r1);
+
+        virtualinvoke $r0.<com.seattleclouds.widget.DateTimePicker: void setCalendar(java.util.Calendar)>($r2);
+
+        return;
+    }
+
+    public void setMode(int)
+    {
+        com.seattleclouds.widget.DateTimePicker $r0;
+        int $i0;
+        android.widget.Button $r1;
+
+        $r0 := @this: com.seattleclouds.widget.DateTimePicker;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.widget.DateTimePicker: int i> = $i0;
+
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button b>;
+
+        virtualinvoke $r1.<android.widget.Button: void setVisibility(int)>(0);
+
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button c>;
+
+        virtualinvoke $r1.<android.widget.Button: void setVisibility(int)>(0);
+
+        $i0 = $r0.<com.seattleclouds.widget.DateTimePicker: int i>;
+
+        lookupswitch($i0)
+        {
+            case 1: goto label2;
+            case 2: goto label3;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button c>;
+
+        virtualinvoke $r1.<android.widget.Button: void setVisibility(int)>(8);
+
+        return;
+
+     label3:
+        $r1 = $r0.<com.seattleclouds.widget.DateTimePicker: android.widget.Button b>;
+
+        virtualinvoke $r1.<android.widget.Button: void setVisibility(int)>(8);
+
+        return;
+    }
+}

@@ -1,0 +1,5 @@
+interface  com.seattleclouds.modules.i.l extends java.lang.Object
+{
+
+    public abstract void a(java.io.File, boolean);
+}

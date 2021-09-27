@@ -1,0 +1,138 @@
+class com.seattleclouds.previewer.bt extends com.seattleclouds.api.d
+{
+    final com.seattleclouds.previewer.bc a;
+
+    public void <init>(com.seattleclouds.previewer.bc, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.previewer.bt $r0;
+        com.seattleclouds.previewer.bc $r1;
+        android.support.v4.app.Fragment $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.bt;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.bc;
+
+        $r2 := @parameter1: android.support.v4.app.Fragment;
+
+        $r0.<com.seattleclouds.previewer.bt: com.seattleclouds.previewer.bc a> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void <init>(android.support.v4.app.Fragment)>($r2);
+
+        return;
+    }
+
+    protected volatile java.lang.Object a(java.lang.Object[])
+    {
+        com.seattleclouds.previewer.bt $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.bt;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.bt: java.lang.String a(java.lang.Void[])>($r3);
+
+        return "ok";
+    }
+
+    protected transient java.lang.String a(java.lang.Void[])
+    {
+        com.seattleclouds.previewer.bt $r0;
+        java.lang.Void[] $r1;
+        com.seattleclouds.api.b $r2;
+        java.lang.String $r3, $r6;
+        com.seattleclouds.previewer.bc $r4;
+        com.seattleclouds.previewer.bq $r5;
+        org.json.JSONObject $r7;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.previewer.bt;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r2 = staticinvoke <com.seattleclouds.api.b: com.seattleclouds.api.b a()>();
+
+        $r3 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r4 = $r0.<com.seattleclouds.previewer.bt: com.seattleclouds.previewer.bc a>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.bc: com.seattleclouds.previewer.bq b(com.seattleclouds.previewer.bc)>($r4);
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.previewer.bq: java.lang.String a()>();
+
+        $r7 = virtualinvoke $r2.<com.seattleclouds.api.b: org.json.JSONObject d(java.lang.String,java.lang.String)>($r3, $r6);
+
+        $r4 = $r0.<com.seattleclouds.previewer.bt: com.seattleclouds.previewer.bc a>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.bc: com.seattleclouds.previewer.bq b(com.seattleclouds.previewer.bc)>($r4);
+
+        $l0 = virtualinvoke $r7.<org.json.JSONObject: long getLong(java.lang.String)>("resourcesSize");
+
+        virtualinvoke $r5.<com.seattleclouds.previewer.bq: void b(long)>($l0);
+
+        return "ok";
+    }
+
+    protected void c(java.lang.String)
+    {
+        com.seattleclouds.previewer.bt $r0;
+        java.lang.String $r1;
+        com.seattleclouds.previewer.bc $r2;
+        android.widget.TextView $r3;
+        com.seattleclouds.previewer.bq $r4;
+        long $l0;
+        android.widget.Button $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.bt;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.previewer.bt: com.seattleclouds.previewer.bc a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.bc: android.widget.TextView c(com.seattleclouds.previewer.bc)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.previewer.bt: com.seattleclouds.previewer.bc a>;
+
+        $r4 = staticinvoke <com.seattleclouds.previewer.bc: com.seattleclouds.previewer.bq b(com.seattleclouds.previewer.bc)>($r2);
+
+        $l0 = virtualinvoke $r4.<com.seattleclouds.previewer.bq: long h()>();
+
+        $r1 = staticinvoke <com.seattleclouds.previewer.bq: java.lang.String a(long)>($l0);
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r1);
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.previewer.bt: com.seattleclouds.previewer.bc a>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.bc: android.widget.Button a(com.seattleclouds.previewer.bc)>($r2);
+
+        virtualinvoke $r5.<android.widget.Button: void setEnabled(boolean)>(1);
+
+        return;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.previewer.bt $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.bt;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.bt: void c(java.lang.String)>($r2);
+
+        return;
+    }
+}

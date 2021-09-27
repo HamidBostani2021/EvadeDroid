@@ -1,0 +1,317 @@
+public class com.seattleclouds.modules.videolist.c extends android.os.AsyncTask
+{
+    static final java.lang.String a;
+    com.seattleclouds.util.bi b;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/modules/videolist/c;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.modules.videolist.c: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.videolist.c $r0;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.c;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        return;
+    }
+
+    private java.util.List a(java.lang.String)
+    {
+        com.seattleclouds.modules.videolist.c $r0;
+        java.lang.String $r1, $r11;
+        java.util.ArrayList $r2;
+        boolean $z0;
+        java.io.FileNotFoundException $r3;
+        java.lang.StringBuilder $r4;
+        com.seattleclouds.modules.videolist.x $r5;
+        java.io.InputStream $r6;
+        java.util.List $r7;
+        java.util.Iterator $r8;
+        java.lang.Object $r9;
+        com.seattleclouds.modules.videolist.a $r10;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>(int)>(0);
+
+        $z0 = staticinvoke <com.seattleclouds.App: boolean n(java.lang.String)>($r1);
+
+        if $z0 != 0 goto label1;
+
+        $r3 = new java.io.FileNotFoundException;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("XML file not found! Path:");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r3.<java.io.FileNotFoundException: void <init>(java.lang.String)>($r1);
+
+        throw $r3;
+
+     label1:
+        $r5 = new com.seattleclouds.modules.videolist.x;
+
+        specialinvoke $r5.<com.seattleclouds.modules.videolist.x: void <init>()>();
+
+        $r6 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>($r1);
+
+        if $r6 != null goto label2;
+
+        $r3 = new java.io.FileNotFoundException;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("XML file not found! Path:");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r3.<java.io.FileNotFoundException: void <init>(java.lang.String)>($r1);
+
+        throw $r3;
+
+     label2:
+        $r7 = virtualinvoke $r5.<com.seattleclouds.modules.videolist.x: java.util.List a(java.io.InputStream)>($r6);
+
+        $r8 = interfaceinvoke $r7.<java.util.List: java.util.Iterator iterator()>();
+
+     label3:
+        $z0 = interfaceinvoke $r8.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label4;
+
+        $r9 = interfaceinvoke $r8.<java.util.Iterator: java.lang.Object next()>();
+
+        $r10 = (com.seattleclouds.modules.videolist.a) $r9;
+
+        $r1 = virtualinvoke $r10.<com.seattleclouds.modules.videolist.a: java.lang.String g()>();
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.modules.videolist.c: java.lang.String b(java.lang.String)>($r1);
+
+        virtualinvoke $r10.<com.seattleclouds.modules.videolist.a: void f(java.lang.String)>($r1);
+
+        goto label3;
+
+     label4:
+        $r8 = interfaceinvoke $r7.<java.util.List: java.util.Iterator iterator()>();
+
+     label5:
+        $z0 = interfaceinvoke $r8.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label6;
+
+        $r9 = interfaceinvoke $r8.<java.util.Iterator: java.lang.Object next()>();
+
+        $r10 = (com.seattleclouds.modules.videolist.a) $r9;
+
+        $r1 = <com.seattleclouds.modules.videolist.c: java.lang.String a>;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("uid: ");
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.videolist.a: java.lang.String b()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" title: ");
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.videolist.a: java.lang.String a()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" image_thmb: ");
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.videolist.a: java.lang.String h()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" file_url: ");
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.videolist.a: java.lang.String g()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r11 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r11);
+
+        goto label5;
+
+     label6:
+        return $r7;
+    }
+
+    private java.lang.String b(java.lang.String)
+    {
+        com.seattleclouds.modules.videolist.c $r0;
+        java.lang.String $r1;
+        android.net.Uri $r2;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label1;
+
+        $r2 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r2.<android.net.Uri: java.lang.String getLastPathSegment()>();
+
+        return $r1;
+
+     label1:
+        return "";
+    }
+
+    protected transient java.util.List a(java.lang.Object[])
+    {
+        com.seattleclouds.modules.videolist.c $r0;
+        java.lang.Object[] $r1;
+        java.util.ArrayList $r2;
+        java.lang.Class $r3;
+        java.lang.Object $r4;
+        java.lang.String $r5, $r10;
+        com.seattleclouds.util.bi $r6;
+        java.util.List $r7;
+        java.lang.Exception $r8;
+        java.lang.StringBuilder $r9;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.c;
+
+        $r1 := @parameter0: java.lang.Object[];
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>(int)>(0);
+
+        $r3 = class "Ljava/lang/String;";
+
+     label1:
+        $r4 = $r1[0];
+
+        $r4 = virtualinvoke $r3.<java.lang.Class: java.lang.Object cast(java.lang.Object)>($r4);
+
+        $r5 = (java.lang.String) $r4;
+
+     label2:
+        $r3 = class "Lcom/seattleclouds/util/bi;";
+
+     label3:
+        $r4 = $r1[1];
+
+        $r4 = virtualinvoke $r3.<java.lang.Class: java.lang.Object cast(java.lang.Object)>($r4);
+
+        $r6 = (com.seattleclouds.util.bi) $r4;
+
+        $r0.<com.seattleclouds.modules.videolist.c: com.seattleclouds.util.bi b> = $r6;
+
+        $r7 = specialinvoke $r0.<com.seattleclouds.modules.videolist.c: java.util.List a(java.lang.String)>($r5);
+
+     label4:
+        return $r7;
+
+     label5:
+        $r8 := @caughtexception;
+
+        $r5 = <com.seattleclouds.modules.videolist.c: java.lang.String a>;
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR: ");
+
+        $r10 = virtualinvoke $r8.<java.lang.Exception: java.lang.String getLocalizedMessage()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r10 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r5, $r10, $r8);
+
+        return $r2;
+
+        catch java.lang.Exception from label1 to label2 with label5;
+        catch java.lang.Exception from label3 to label4 with label5;
+    }
+
+    protected void a(java.util.List)
+    {
+        com.seattleclouds.modules.videolist.c $r0;
+        java.util.List $r1;
+        com.seattleclouds.util.bi $r2;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.c;
+
+        $r1 := @parameter0: java.util.List;
+
+        $r2 = $r0.<com.seattleclouds.modules.videolist.c: com.seattleclouds.util.bi b>;
+
+        interfaceinvoke $r2.<com.seattleclouds.util.bi: void a(java.lang.Object)>($r1);
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.videolist.c $r0;
+        java.lang.Object[] $r1;
+        java.util.List $r2;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.c;
+
+        $r1 := @parameter0: java.lang.Object[];
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.videolist.c: java.util.List a(java.lang.Object[])>($r1);
+
+        return $r2;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.videolist.c $r0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.c;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.util.List) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.videolist.c: void a(java.util.List)>($r2);
+
+        return;
+    }
+}

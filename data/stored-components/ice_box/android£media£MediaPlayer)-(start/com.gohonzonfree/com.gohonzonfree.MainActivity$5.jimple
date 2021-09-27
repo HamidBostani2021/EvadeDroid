@@ -1,0 +1,47 @@
+class com.gohonzonfree.MainActivity$5 extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.gohonzonfree.MainActivity this$0;
+
+    void <init>(com.gohonzonfree.MainActivity)
+    {
+        com.gohonzonfree.MainActivity$5 $r0;
+        com.gohonzonfree.MainActivity $r1;
+
+        $r0 := @this: com.gohonzonfree.MainActivity$5;
+
+        $r1 := @parameter0: com.gohonzonfree.MainActivity;
+
+        $r0.<com.gohonzonfree.MainActivity$5: com.gohonzonfree.MainActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.gohonzonfree.MainActivity$5 $r0;
+        android.view.View $r1;
+        android.content.Intent $r2;
+        android.net.Uri $r3;
+        com.gohonzonfree.MainActivity $r4;
+
+        $r0 := @this: com.gohonzonfree.MainActivity$5;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.VIEW");
+
+        $r3 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>("http://www.contagiosamente.com/nyrk-download/");
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setData(android.net.Uri)>($r3);
+
+        $r4 = $r0.<com.gohonzonfree.MainActivity$5: com.gohonzonfree.MainActivity this$0>;
+
+        virtualinvoke $r4.<com.gohonzonfree.MainActivity: void startActivity(android.content.Intent)>($r2);
+
+        return;
+    }
+}

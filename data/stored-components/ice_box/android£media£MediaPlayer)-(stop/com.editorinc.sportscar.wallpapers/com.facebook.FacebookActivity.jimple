@@ -1,0 +1,297 @@
+public class com.facebook.FacebookActivity extends android.support.v4.app.ac
+{
+    public static java.lang.String m;
+    private static java.lang.String n;
+    private static final java.lang.String o;
+    private android.support.v4.app.Fragment p;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        <com.facebook.FacebookActivity: java.lang.String m> = "PassThrough";
+
+        <com.facebook.FacebookActivity: java.lang.String n> = "SingleFragment";
+
+        $r1 = class "Lcom/facebook/FacebookActivity;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getName()>();
+
+        <com.facebook.FacebookActivity: java.lang.String o> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.facebook.FacebookActivity $r0;
+
+        $r0 := @this: com.facebook.FacebookActivity;
+
+        specialinvoke $r0.<android.support.v4.app.ac: void <init>()>();
+
+        return;
+    }
+
+    private void j()
+    {
+        com.facebook.FacebookActivity $r0;
+        android.content.Intent $r1;
+        android.os.Bundle $r2;
+        com.facebook.FacebookException $r3;
+
+        $r0 := @this: com.facebook.FacebookActivity;
+
+        $r1 = virtualinvoke $r0.<com.facebook.FacebookActivity: android.content.Intent getIntent()>();
+
+        $r2 = staticinvoke <com.facebook.internal.al: android.os.Bundle d(android.content.Intent)>($r1);
+
+        $r3 = staticinvoke <com.facebook.internal.al: com.facebook.FacebookException a(android.os.Bundle)>($r2);
+
+        $r1 = virtualinvoke $r0.<com.facebook.FacebookActivity: android.content.Intent getIntent()>();
+
+        $r1 = staticinvoke <com.facebook.internal.al: android.content.Intent a(android.content.Intent,android.os.Bundle,com.facebook.FacebookException)>($r1, null, $r3);
+
+        virtualinvoke $r0.<com.facebook.FacebookActivity: void setResult(int,android.content.Intent)>(0, $r1);
+
+        virtualinvoke $r0.<com.facebook.FacebookActivity: void finish()>();
+
+        return;
+    }
+
+    protected android.support.v4.app.Fragment h()
+    {
+        com.facebook.FacebookActivity $r0;
+        android.content.Intent $r1;
+        android.support.v4.app.aj $r2;
+        java.lang.String $r3, $r5;
+        android.support.v4.app.Fragment $r4;
+        boolean $z0;
+        com.facebook.internal.w $r6;
+        com.facebook.share.internal.DeviceShareDialogFragment $r7;
+        android.os.Parcelable $r8;
+        com.facebook.share.model.ShareContent $r9;
+        com.facebook.login.t $r10;
+        android.support.v4.app.ax $r11;
+        int $i0;
+
+        $r0 := @this: com.facebook.FacebookActivity;
+
+        $r1 = virtualinvoke $r0.<com.facebook.FacebookActivity: android.content.Intent getIntent()>();
+
+        $r2 = virtualinvoke $r0.<com.facebook.FacebookActivity: android.support.v4.app.aj f()>();
+
+        $r3 = <com.facebook.FacebookActivity: java.lang.String n>;
+
+        $r4 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.Fragment a(java.lang.String)>($r3);
+
+        if $r4 != null goto label3;
+
+        $r3 = "FacebookDialogFragment";
+
+        $r5 = virtualinvoke $r1.<android.content.Intent: java.lang.String getAction()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>($r5);
+
+        if $z0 == 0 goto label1;
+
+        $r6 = new com.facebook.internal.w;
+
+        specialinvoke $r6.<com.facebook.internal.w: void <init>()>();
+
+        virtualinvoke $r6.<com.facebook.internal.w: void d(boolean)>(1);
+
+        $r3 = <com.facebook.FacebookActivity: java.lang.String n>;
+
+        virtualinvoke $r6.<com.facebook.internal.w: void a(android.support.v4.app.aj,java.lang.String)>($r2, $r3);
+
+        return $r6;
+
+     label1:
+        $r3 = "DeviceShareDialogFragment";
+
+        $r5 = virtualinvoke $r1.<android.content.Intent: java.lang.String getAction()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>($r5);
+
+        if $z0 == 0 goto label2;
+
+        $r7 = new com.facebook.share.internal.DeviceShareDialogFragment;
+
+        specialinvoke $r7.<com.facebook.share.internal.DeviceShareDialogFragment: void <init>()>();
+
+        virtualinvoke $r7.<com.facebook.share.internal.DeviceShareDialogFragment: void d(boolean)>(1);
+
+        $r8 = virtualinvoke $r1.<android.content.Intent: android.os.Parcelable getParcelableExtra(java.lang.String)>("content");
+
+        $r9 = (com.facebook.share.model.ShareContent) $r8;
+
+        virtualinvoke $r7.<com.facebook.share.internal.DeviceShareDialogFragment: void a(com.facebook.share.model.ShareContent)>($r9);
+
+        $r3 = <com.facebook.FacebookActivity: java.lang.String n>;
+
+        virtualinvoke $r7.<com.facebook.share.internal.DeviceShareDialogFragment: void a(android.support.v4.app.aj,java.lang.String)>($r2, $r3);
+
+        return $r7;
+
+     label2:
+        $r10 = new com.facebook.login.t;
+
+        specialinvoke $r10.<com.facebook.login.t: void <init>()>();
+
+        virtualinvoke $r10.<android.support.v4.app.Fragment: void d(boolean)>(1);
+
+        $r11 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $i0 = <com.facebook.ay: int com_facebook_fragment_container>;
+
+        $r3 = <com.facebook.FacebookActivity: java.lang.String n>;
+
+        $r11 = virtualinvoke $r11.<android.support.v4.app.ax: android.support.v4.app.ax a(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r10, $r3);
+
+        virtualinvoke $r11.<android.support.v4.app.ax: int b()>();
+
+        return $r10;
+
+     label3:
+        return $r4;
+    }
+
+    public android.support.v4.app.Fragment i()
+    {
+        com.facebook.FacebookActivity $r0;
+        android.support.v4.app.Fragment r1;
+
+        $r0 := @this: com.facebook.FacebookActivity;
+
+        r1 = $r0.<com.facebook.FacebookActivity: android.support.v4.app.Fragment p>;
+
+        return r1;
+    }
+
+    public void onConfigurationChanged(android.content.res.Configuration)
+    {
+        com.facebook.FacebookActivity $r0;
+        android.content.res.Configuration $r1;
+        android.support.v4.app.Fragment $r2;
+
+        $r0 := @this: com.facebook.FacebookActivity;
+
+        $r1 := @parameter0: android.content.res.Configuration;
+
+        specialinvoke $r0.<android.support.v4.app.ac: void onConfigurationChanged(android.content.res.Configuration)>($r1);
+
+        $r2 = $r0.<com.facebook.FacebookActivity: android.support.v4.app.Fragment p>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.facebook.FacebookActivity: android.support.v4.app.Fragment p>;
+
+        virtualinvoke $r2.<android.support.v4.app.Fragment: void onConfigurationChanged(android.content.res.Configuration)>($r1);
+
+     label1:
+        return;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        com.facebook.FacebookActivity $r0;
+        android.os.Bundle $r1;
+        android.content.Intent $r2;
+        boolean $z0;
+        java.lang.String $r3, $r5;
+        android.content.Context $r4;
+        int $i0;
+        android.support.v4.app.Fragment $r6;
+
+        $r0 := @this: com.facebook.FacebookActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.support.v4.app.ac: void onCreate(android.os.Bundle)>($r1);
+
+        $r2 = virtualinvoke $r0.<com.facebook.FacebookActivity: android.content.Intent getIntent()>();
+
+        $z0 = staticinvoke <com.facebook.s: boolean a()>();
+
+        if $z0 != 0 goto label1;
+
+        $r3 = <com.facebook.FacebookActivity: java.lang.String o>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r3, "Facebook SDK not initialized. Make sure you call sdkInitialize inside your Application\'s onCreate method.");
+
+        $r4 = virtualinvoke $r0.<com.facebook.FacebookActivity: android.content.Context getApplicationContext()>();
+
+        staticinvoke <com.facebook.s: void a(android.content.Context)>($r4);
+
+     label1:
+        $i0 = <com.facebook.az: int com_facebook_activity_layout>;
+
+        virtualinvoke $r0.<com.facebook.FacebookActivity: void setContentView(int)>($i0);
+
+        $r3 = <com.facebook.FacebookActivity: java.lang.String m>;
+
+        $r5 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>($r5);
+
+        if $z0 == 0 goto label2;
+
+        specialinvoke $r0.<com.facebook.FacebookActivity: void j()>();
+
+        return;
+
+     label2:
+        $r6 = virtualinvoke $r0.<com.facebook.FacebookActivity: android.support.v4.app.Fragment h()>();
+
+        $r0.<com.facebook.FacebookActivity: android.support.v4.app.Fragment p> = $r6;
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.facebook.FacebookActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.facebook.FacebookActivity;
+
+        $r0 = this.<com.facebook.FacebookActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.facebook.FacebookActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.facebook.FacebookActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.facebook.FacebookActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.facebook.FacebookActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.facebook.FacebookActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.facebook.FacebookActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

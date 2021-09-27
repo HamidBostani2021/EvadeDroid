@@ -1,0 +1,27 @@
+public class Slicecom.angelworks.eatloseweightmethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.angelworks.eatloseweightmethod this;
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.conn.ClientConnectionManager $r1;
+        org.apache.http.params.HttpParams $r2;
+        java.lang.IllegalStateException r3;
+        com.google.android.vending.expansion.downloader.impl.e r4;
+
+        this := @this: Slicecom.angelworks.eatloseweightmethod;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        r3 = new java.lang.IllegalStateException;
+
+        specialinvoke r3.<java.lang.IllegalStateException: void <init>(java.lang.String)>("AndroidHttpClient created and never closed");
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.c: java.lang.RuntimeException e> = r3;
+
+        r4 = new com.google.android.vending.expansion.downloader.impl.e;
+
+        return;
+    }
+}

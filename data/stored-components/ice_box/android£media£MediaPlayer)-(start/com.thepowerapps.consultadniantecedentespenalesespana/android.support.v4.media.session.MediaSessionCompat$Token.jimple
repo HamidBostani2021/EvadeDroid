@@ -1,0 +1,4 @@
+public final class android.support.v4.media.session.MediaSessionCompat$Token extends java.lang.Object implements android.os.Parcelable
+{
+
+}

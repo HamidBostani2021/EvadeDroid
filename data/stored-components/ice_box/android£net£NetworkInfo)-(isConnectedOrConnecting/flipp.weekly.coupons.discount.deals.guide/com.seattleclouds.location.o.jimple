@@ -1,0 +1,169 @@
+class com.seattleclouds.location.o extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final double b;
+    final double c;
+    final com.seattleclouds.location.a d;
+    private java.lang.String e;
+
+    void <init>(com.seattleclouds.location.a, java.lang.String, double, double)
+    {
+        com.seattleclouds.location.o $r0;
+        com.seattleclouds.location.a $r1;
+        java.lang.String $r2;
+        double $d0, $d1;
+
+        $r0 := @this: com.seattleclouds.location.o;
+
+        $r1 := @parameter0: com.seattleclouds.location.a;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $d0 := @parameter2: double;
+
+        $d1 := @parameter3: double;
+
+        $r0.<com.seattleclouds.location.o: com.seattleclouds.location.a d> = $r1;
+
+        $r0.<com.seattleclouds.location.o: java.lang.String a> = null;
+
+        $r0.<com.seattleclouds.location.o: double b> = $d0;
+
+        $r0.<com.seattleclouds.location.o: double c> = $d1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.location.o: java.lang.String a>;
+
+        $r0.<com.seattleclouds.location.o: java.lang.String e> = $r2;
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.location.o $r0;
+        com.seattleclouds.location.a $r1;
+        android.location.Geocoder $r2;
+        double $d0, $d1;
+        java.util.List $r3;
+        int $i0, $i1;
+        java.lang.Object $r4;
+        android.location.Address $r5;
+        java.lang.String $r6;
+        java.lang.StringBuilder $r7;
+        java.lang.Throwable $r8;
+
+        $r0 := @this: com.seattleclouds.location.o;
+
+        $r1 = $r0.<com.seattleclouds.location.o: com.seattleclouds.location.a d>;
+
+     label01:
+        $r2 = staticinvoke <com.seattleclouds.location.a: android.location.Geocoder a(com.seattleclouds.location.a)>($r1);
+
+     label02:
+        $d0 = $r0.<com.seattleclouds.location.o: double b>;
+
+        $d1 = $r0.<com.seattleclouds.location.o: double c>;
+
+     label03:
+        $r3 = virtualinvoke $r2.<android.location.Geocoder: java.util.List getFromLocation(double,double,int)>($d0, $d1, 1);
+
+     label04:
+        $r1 = $r0.<com.seattleclouds.location.o: com.seattleclouds.location.a d>;
+
+     label05:
+        staticinvoke <com.seattleclouds.location.a: boolean a(com.seattleclouds.location.a,boolean)>($r1, 1);
+
+        $i0 = interfaceinvoke $r3.<java.util.List: int size()>();
+
+     label06:
+        if $i0 <= 0 goto label19;
+
+     label07:
+        $r4 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>(0);
+
+     label08:
+        $r5 = (android.location.Address) $r4;
+
+     label09:
+        $r6 = virtualinvoke $r5.<android.location.Address: java.lang.String getAddressLine(int)>(0);
+
+        $r4 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>(0);
+
+     label10:
+        $r5 = (android.location.Address) $r4;
+
+     label11:
+        $i0 = virtualinvoke $r5.<android.location.Address: int getMaxAddressLineIndex()>();
+
+     label12:
+        $i1 = 1;
+
+     label13:
+        if $i1 > $i0 goto label18;
+
+        $r7 = new java.lang.StringBuilder;
+
+     label14:
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", ");
+
+        $r4 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>(0);
+
+     label15:
+        $r5 = (android.location.Address) $r4;
+
+     label16:
+        $r6 = virtualinvoke $r5.<android.location.Address: java.lang.String getAddressLine(int)>($i1);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label17:
+        $i1 = $i1 + 1;
+
+        goto label13;
+
+     label18:
+        $r0.<com.seattleclouds.location.o: java.lang.String e> = $r6;
+
+     label19:
+        $r1 = $r0.<com.seattleclouds.location.o: com.seattleclouds.location.a d>;
+
+        $r6 = $r0.<com.seattleclouds.location.o: java.lang.String e>;
+
+     label20:
+        staticinvoke <com.seattleclouds.location.a: void a(com.seattleclouds.location.a,java.lang.Object)>($r1, $r6);
+
+     label21:
+        return;
+
+     label22:
+        $r8 := @caughtexception;
+
+        $r1 = $r0.<com.seattleclouds.location.o: com.seattleclouds.location.a d>;
+
+        staticinvoke <com.seattleclouds.location.a: boolean a(com.seattleclouds.location.a,boolean)>($r1, 0);
+
+        $r1 = $r0.<com.seattleclouds.location.o: com.seattleclouds.location.a d>;
+
+        staticinvoke <com.seattleclouds.location.a: void a(com.seattleclouds.location.a,java.lang.Object)>($r1, null);
+
+        return;
+
+        catch java.io.IOException from label01 to label02 with label22;
+        catch java.io.IOException from label03 to label04 with label22;
+        catch java.io.IOException from label05 to label06 with label22;
+        catch java.io.IOException from label07 to label08 with label22;
+        catch java.io.IOException from label09 to label10 with label22;
+        catch java.io.IOException from label11 to label12 with label22;
+        catch java.io.IOException from label14 to label15 with label22;
+        catch java.io.IOException from label16 to label17 with label22;
+        catch java.io.IOException from label20 to label21 with label22;
+    }
+}

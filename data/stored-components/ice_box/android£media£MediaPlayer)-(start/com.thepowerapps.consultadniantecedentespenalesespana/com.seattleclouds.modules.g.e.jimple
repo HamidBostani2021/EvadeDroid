@@ -1,0 +1,107 @@
+class com.seattleclouds.modules.g.e extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final int a;
+    final com.seattleclouds.modules.g.d b;
+
+    void <init>(com.seattleclouds.modules.g.d, int)
+    {
+        com.seattleclouds.modules.g.e $r0;
+        com.seattleclouds.modules.g.d $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.g.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.g.d;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.g.e: com.seattleclouds.modules.g.d b> = $r1;
+
+        $r0.<com.seattleclouds.modules.g.e: int a> = $i0;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.g.e $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.modules.g.d $r2;
+        com.seattleclouds.modules.g.a $r3;
+        org.json.JSONException $r4;
+        java.lang.String $r5, $r7;
+        java.lang.StringBuilder $r6;
+
+        $r0 := @this: com.seattleclouds.modules.g.e;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        lookupswitch($i0)
+        {
+            case -1: goto label2;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.g.e: com.seattleclouds.modules.g.d b>;
+
+        $r3 = $r2.<com.seattleclouds.modules.g.d: com.seattleclouds.modules.g.a a>;
+
+        $i0 = $r0.<com.seattleclouds.modules.g.e: int a>;
+
+     label3:
+        staticinvoke <com.seattleclouds.modules.g.a: void a(com.seattleclouds.modules.g.a,int)>($r3, $i0);
+
+     label4:
+        $r2 = $r0.<com.seattleclouds.modules.g.e: com.seattleclouds.modules.g.d b>;
+
+        $r3 = $r2.<com.seattleclouds.modules.g.d: com.seattleclouds.modules.g.a a>;
+
+        staticinvoke <com.seattleclouds.modules.g.a: void d(com.seattleclouds.modules.g.a)>($r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.g.e: com.seattleclouds.modules.g.d b>;
+
+        $r3 = $r2.<com.seattleclouds.modules.g.d: com.seattleclouds.modules.g.a a>;
+
+        staticinvoke <com.seattleclouds.modules.g.a: void e(com.seattleclouds.modules.g.a)>($r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.g.e: com.seattleclouds.modules.g.d b>;
+
+        $r3 = $r2.<com.seattleclouds.modules.g.d: com.seattleclouds.modules.g.a a>;
+
+        staticinvoke <com.seattleclouds.modules.g.a: void a(com.seattleclouds.modules.g.a,boolean)>($r3, 1);
+
+        return;
+
+     label5:
+        $r4 := @caughtexception;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.g.a: java.lang.String ab()>();
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR: ");
+
+        $r7 = virtualinvoke $r4.<org.json.JSONException: java.lang.String getLocalizedMessage()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r5, $r7, $r4);
+
+        goto label4;
+
+        catch org.json.JSONException from label3 to label4 with label5;
+    }
+}

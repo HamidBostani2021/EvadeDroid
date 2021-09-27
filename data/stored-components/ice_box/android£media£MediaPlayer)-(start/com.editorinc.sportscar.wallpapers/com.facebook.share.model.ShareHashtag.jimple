@@ -1,0 +1,114 @@
+public class com.facebook.share.model.ShareHashtag extends java.lang.Object implements com.facebook.share.model.ShareModel
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    private final java.lang.String a;
+
+    static void <clinit>()
+    {
+        com.facebook.share.model.b $r0;
+
+        $r0 = new com.facebook.share.model.b;
+
+        specialinvoke $r0.<com.facebook.share.model.b: void <init>()>();
+
+        <com.facebook.share.model.ShareHashtag: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    void <init>(android.os.Parcel)
+    {
+        com.facebook.share.model.ShareHashtag $r0;
+        android.os.Parcel $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.facebook.share.model.ShareHashtag;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.share.model.ShareHashtag: java.lang.String a> = $r2;
+
+        return;
+    }
+
+    private void <init>(com.facebook.share.model.c)
+    {
+        com.facebook.share.model.ShareHashtag $r0;
+        com.facebook.share.model.c $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.facebook.share.model.ShareHashtag;
+
+        $r1 := @parameter0: com.facebook.share.model.c;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = staticinvoke <com.facebook.share.model.c: java.lang.String a(com.facebook.share.model.c)>($r1);
+
+        $r0.<com.facebook.share.model.ShareHashtag: java.lang.String a> = $r2;
+
+        return;
+    }
+
+    void <init>(com.facebook.share.model.c, com.facebook.share.model.b)
+    {
+        com.facebook.share.model.ShareHashtag $r0;
+        com.facebook.share.model.c $r1;
+        com.facebook.share.model.b $r2;
+
+        $r0 := @this: com.facebook.share.model.ShareHashtag;
+
+        $r1 := @parameter0: com.facebook.share.model.c;
+
+        $r2 := @parameter1: com.facebook.share.model.b;
+
+        specialinvoke $r0.<com.facebook.share.model.ShareHashtag: void <init>(com.facebook.share.model.c)>($r1);
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.facebook.share.model.ShareHashtag $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.share.model.ShareHashtag;
+
+        r1 = $r0.<com.facebook.share.model.ShareHashtag: java.lang.String a>;
+
+        return r1;
+    }
+
+    public int describeContents()
+    {
+        com.facebook.share.model.ShareHashtag $r0;
+
+        $r0 := @this: com.facebook.share.model.ShareHashtag;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.share.model.ShareHashtag $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        java.lang.String $r2;
+
+        $r0 := @this: com.facebook.share.model.ShareHashtag;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.facebook.share.model.ShareHashtag: java.lang.String a>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        return;
+    }
+}

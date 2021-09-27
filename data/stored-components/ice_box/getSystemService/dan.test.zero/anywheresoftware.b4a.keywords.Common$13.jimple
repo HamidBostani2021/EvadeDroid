@@ -1,0 +1,160 @@
+class anywheresoftware.b4a.keywords.Common$13 extends java.lang.Object implements java.lang.Runnable
+{
+    private final anywheresoftware.b4a.BA val$ba;
+    private final anywheresoftware.b4a.BA$ResumableSub val$rs;
+
+    void <init>(anywheresoftware.b4a.BA, anywheresoftware.b4a.BA$ResumableSub)
+    {
+        anywheresoftware.b4a.keywords.Common$13 $r0;
+        anywheresoftware.b4a.BA $r1;
+        anywheresoftware.b4a.BA$ResumableSub $r2;
+
+        $r0 := @this: anywheresoftware.b4a.keywords.Common$13;
+
+        $r1 := @parameter0: anywheresoftware.b4a.BA;
+
+        $r2 := @parameter1: anywheresoftware.b4a.BA$ResumableSub;
+
+        $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba> = $r1;
+
+        $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA$ResumableSub val$rs> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        anywheresoftware.b4a.keywords.Common$13 $r0;
+        java.lang.Exception $r1;
+        anywheresoftware.b4a.BA $r2, $r5;
+        boolean $z0, $z1;
+        anywheresoftware.b4a.BA$SharedProcessBA $r3;
+        java.lang.ref.WeakReference $r4;
+        java.lang.Object $r6;
+        java.lang.StringBuilder $r7;
+        anywheresoftware.b4a.BA$ResumableSub $r8;
+        java.lang.Class $r9;
+        java.lang.String $r10;
+        java.lang.RuntimeException $r11;
+
+        $r0 := @this: anywheresoftware.b4a.keywords.Common$13;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba>;
+
+        $r2 = $r2.<anywheresoftware.b4a.BA: anywheresoftware.b4a.BA processBA>;
+
+        if $r2 == null goto label3;
+
+        $z0 = 1;
+
+     label1:
+        if $z0 == 0 goto label4;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba>;
+
+        $r2 = $r2.<anywheresoftware.b4a.BA: anywheresoftware.b4a.BA processBA>;
+
+        $r3 = $r2.<anywheresoftware.b4a.BA: anywheresoftware.b4a.BA$SharedProcessBA sharedProcessBA>;
+
+        $r4 = $r3.<anywheresoftware.b4a.BA$SharedProcessBA: java.lang.ref.WeakReference activityBA>;
+
+        if $r4 == null goto label2;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba>;
+
+        $r5 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba>;
+
+        $r5 = $r5.<anywheresoftware.b4a.BA: anywheresoftware.b4a.BA processBA>;
+
+        $r3 = $r5.<anywheresoftware.b4a.BA: anywheresoftware.b4a.BA$SharedProcessBA sharedProcessBA>;
+
+        $r4 = $r3.<anywheresoftware.b4a.BA$SharedProcessBA: java.lang.ref.WeakReference activityBA>;
+
+        $r6 = virtualinvoke $r4.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        if $r2 == $r6 goto label4;
+
+     label2:
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>(java.lang.String)>("Sleep not resumed (context destroyed): ");
+
+        $r8 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA$ResumableSub val$rs>;
+
+        $r9 = virtualinvoke $r8.<java.lang.Object: java.lang.Class getClass()>();
+
+        $r10 = virtualinvoke $r9.<java.lang.Class: java.lang.String getName()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r10 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <anywheresoftware.b4a.BA: void LogInfo(java.lang.String)>($r10);
+
+        return;
+
+     label3:
+        $z0 = 0;
+
+        goto label1;
+
+     label4:
+        $r2 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba>;
+
+        $z1 = virtualinvoke $r2.<anywheresoftware.b4a.BA: boolean isActivityPaused()>();
+
+        if $z1 == 0 goto label6;
+
+        if $z0 == 0 goto label5;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba>;
+
+        $r2 = $r2.<anywheresoftware.b4a.BA: anywheresoftware.b4a.BA processBA>;
+
+        virtualinvoke $r2.<anywheresoftware.b4a.BA: void addMessageToPausedMessageQueue(java.lang.String,java.lang.Runnable)>("sleep", $r0);
+
+        return;
+
+     label5:
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>(java.lang.String)>("Sleep not resumed (context is paused): ");
+
+        $r8 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA$ResumableSub val$rs>;
+
+        $r9 = virtualinvoke $r8.<java.lang.Object: java.lang.Class getClass()>();
+
+        $r10 = virtualinvoke $r9.<java.lang.Class: java.lang.String getName()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r10 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <anywheresoftware.b4a.BA: void LogInfo(java.lang.String)>($r10);
+
+        return;
+
+     label6:
+        $r8 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA$ResumableSub val$rs>;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.Common$13: anywheresoftware.b4a.BA val$ba>;
+
+        virtualinvoke $r8.<anywheresoftware.b4a.BA$ResumableSub: void resume(anywheresoftware.b4a.BA,java.lang.Object[])>($r2, null);
+
+     label7:
+        return;
+
+     label8:
+        $r1 := @caughtexception;
+
+        $r11 = new java.lang.RuntimeException;
+
+        specialinvoke $r11.<java.lang.RuntimeException: void <init>(java.lang.Throwable)>($r1);
+
+        throw $r11;
+
+        catch java.lang.Exception from label6 to label7 with label8;
+    }
+}

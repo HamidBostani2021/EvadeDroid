@@ -1,0 +1,384 @@
+class com.facebook.internal.bp extends android.os.AsyncTask
+{
+    final com.facebook.internal.bh a;
+    private java.lang.String b;
+    private android.os.Bundle c;
+    private java.lang.Exception[] d;
+
+    void <init>(com.facebook.internal.bh, java.lang.String, android.os.Bundle)
+    {
+        com.facebook.internal.bp $r0;
+        com.facebook.internal.bh $r1;
+        java.lang.String $r2;
+        android.os.Bundle $r3;
+
+        $r0 := @this: com.facebook.internal.bp;
+
+        $r1 := @parameter0: com.facebook.internal.bh;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $r0.<com.facebook.internal.bp: com.facebook.internal.bh a> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.facebook.internal.bp: java.lang.String b> = $r2;
+
+        $r0.<com.facebook.internal.bp: android.os.Bundle c> = $r3;
+
+        return;
+    }
+
+    static java.lang.Exception[] a(com.facebook.internal.bp)
+    {
+        com.facebook.internal.bp $r0;
+        java.lang.Exception[] r1;
+
+        $r0 := @parameter0: com.facebook.internal.bp;
+
+        r1 = $r0.<com.facebook.internal.bp: java.lang.Exception[] d>;
+
+        return r1;
+    }
+
+    protected void a(java.lang.String[])
+    {
+        com.facebook.internal.bp $r0;
+        java.lang.String[] $r1;
+        com.facebook.internal.bh $r2;
+        android.app.ProgressDialog $r3;
+        java.lang.Exception[] $r4;
+        int $i0, $i1;
+        java.lang.Exception $r5;
+        com.facebook.FacebookException $r6;
+        java.util.List $r7;
+        boolean $z0;
+        android.os.Bundle $r8;
+        org.json.JSONArray $r9;
+        java.lang.String $r10, $r12;
+        java.lang.StringBuilder $r11;
+        android.net.Uri $r13;
+        android.widget.ImageView $r14;
+        android.graphics.drawable.Drawable $r15;
+
+        $r0 := @this: com.facebook.internal.bp;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $r2 = $r0.<com.facebook.internal.bp: com.facebook.internal.bh a>;
+
+        $r3 = staticinvoke <com.facebook.internal.bh: android.app.ProgressDialog c(com.facebook.internal.bh)>($r2);
+
+        virtualinvoke $r3.<android.app.ProgressDialog: void dismiss()>();
+
+        $r4 = $r0.<com.facebook.internal.bp: java.lang.Exception[] d>;
+
+        $i0 = lengthof $r4;
+
+        $i1 = 0;
+
+     label1:
+        if $i1 >= $i0 goto label3;
+
+        $r5 = $r4[$i1];
+
+        if $r5 == null goto label2;
+
+        $r2 = $r0.<com.facebook.internal.bp: com.facebook.internal.bh a>;
+
+        virtualinvoke $r2.<com.facebook.internal.bh: void a(java.lang.Throwable)>($r5);
+
+        return;
+
+     label2:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label3:
+        if $r1 != null goto label4;
+
+        $r2 = $r0.<com.facebook.internal.bp: com.facebook.internal.bh a>;
+
+        $r6 = new com.facebook.FacebookException;
+
+        specialinvoke $r6.<com.facebook.FacebookException: void <init>(java.lang.String)>("Failed to stage photos for web dialog");
+
+        virtualinvoke $r2.<com.facebook.internal.bh: void a(java.lang.Throwable)>($r6);
+
+        return;
+
+     label4:
+        $r7 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($r1);
+
+        $z0 = interfaceinvoke $r7.<java.util.List: boolean contains(java.lang.Object)>(null);
+
+        if $z0 == 0 goto label5;
+
+        $r2 = $r0.<com.facebook.internal.bp: com.facebook.internal.bh a>;
+
+        $r6 = new com.facebook.FacebookException;
+
+        specialinvoke $r6.<com.facebook.FacebookException: void <init>(java.lang.String)>("Failed to stage photos for web dialog");
+
+        virtualinvoke $r2.<com.facebook.internal.bh: void a(java.lang.Throwable)>($r6);
+
+        return;
+
+     label5:
+        $r8 = $r0.<com.facebook.internal.bp: android.os.Bundle c>;
+
+        $r9 = new org.json.JSONArray;
+
+        specialinvoke $r9.<org.json.JSONArray: void <init>(java.util.Collection)>($r7);
+
+        staticinvoke <com.facebook.internal.ax: boolean a(android.os.Bundle,java.lang.String,java.lang.Object)>($r8, "media", $r9);
+
+        $r10 = staticinvoke <com.facebook.internal.aw: java.lang.String a()>();
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = staticinvoke <com.facebook.s: java.lang.String g()>();
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("dialog/");
+
+        $r12 = $r0.<com.facebook.internal.bp: java.lang.String b>;
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r8 = $r0.<com.facebook.internal.bp: android.os.Bundle c>;
+
+        $r13 = staticinvoke <com.facebook.internal.ax: android.net.Uri a(java.lang.String,java.lang.String,android.os.Bundle)>($r10, $r12, $r8);
+
+        $r2 = $r0.<com.facebook.internal.bp: com.facebook.internal.bh a>;
+
+        $r10 = virtualinvoke $r13.<android.net.Uri: java.lang.String toString()>();
+
+        staticinvoke <com.facebook.internal.bh: java.lang.String a(com.facebook.internal.bh,java.lang.String)>($r2, $r10);
+
+        $r2 = $r0.<com.facebook.internal.bp: com.facebook.internal.bh a>;
+
+        $r14 = staticinvoke <com.facebook.internal.bh: android.widget.ImageView f(com.facebook.internal.bh)>($r2);
+
+        $r15 = virtualinvoke $r14.<android.widget.ImageView: android.graphics.drawable.Drawable getDrawable()>();
+
+        $i0 = virtualinvoke $r15.<android.graphics.drawable.Drawable: int getIntrinsicWidth()>();
+
+        $r2 = $r0.<com.facebook.internal.bp: com.facebook.internal.bh a>;
+
+        $i0 = $i0 / 2;
+
+        $i0 = $i0 + 1;
+
+        staticinvoke <com.facebook.internal.bh: void a(com.facebook.internal.bh,int)>($r2, $i0);
+
+        return;
+    }
+
+    protected transient java.lang.String[] a(java.lang.Void[])
+    {
+        com.facebook.internal.bp $r0;
+        java.lang.Void[] $r1;
+        java.util.concurrent.CountDownLatch $r2;
+        java.util.concurrent.ConcurrentLinkedQueue $r3;
+        android.os.Bundle $r4;
+        java.lang.String[] $r5, $r6;
+        int $i0, $i1;
+        java.lang.Exception[] $r7;
+        com.facebook.AccessToken $r8;
+        boolean $z0;
+        java.util.Iterator $r9;
+        java.lang.Object $r10;
+        android.os.AsyncTask $r11;
+        java.lang.Exception $r12;
+        java.lang.String $r13;
+        android.net.Uri $r14;
+        com.facebook.internal.bq $r15;
+        com.facebook.GraphRequest $r16;
+        com.facebook.aj $r17;
+
+        $r0 := @this: com.facebook.internal.bp;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r4 = $r0.<com.facebook.internal.bp: android.os.Bundle c>;
+
+        $r5 = virtualinvoke $r4.<android.os.Bundle: java.lang.String[] getStringArray(java.lang.String)>("media");
+
+        $i0 = lengthof $r5;
+
+        $r6 = newarray (java.lang.String)[$i0];
+
+        $i0 = lengthof $r5;
+
+        $r7 = newarray (java.lang.Exception)[$i0];
+
+        $r0.<com.facebook.internal.bp: java.lang.Exception[] d> = $r7;
+
+        $r2 = new java.util.concurrent.CountDownLatch;
+
+        $i0 = lengthof $r5;
+
+        specialinvoke $r2.<java.util.concurrent.CountDownLatch: void <init>(int)>($i0);
+
+        $r3 = new java.util.concurrent.ConcurrentLinkedQueue;
+
+        specialinvoke $r3.<java.util.concurrent.ConcurrentLinkedQueue: void <init>()>();
+
+        $r8 = staticinvoke <com.facebook.AccessToken: com.facebook.AccessToken a()>();
+
+        $i0 = 0;
+
+     label01:
+        $i1 = lengthof $r5;
+
+     label02:
+        if $i0 >= $i1 goto label20;
+
+     label03:
+        $z0 = virtualinvoke $r0.<com.facebook.internal.bp: boolean isCancelled()>();
+
+     label04:
+        if $z0 == 0 goto label13;
+
+     label05:
+        $r9 = virtualinvoke $r3.<java.util.concurrent.ConcurrentLinkedQueue: java.util.Iterator iterator()>();
+
+     label06:
+        $z0 = interfaceinvoke $r9.<java.util.Iterator: boolean hasNext()>();
+
+     label07:
+        if $z0 == 0 goto label12;
+
+     label08:
+        $r10 = interfaceinvoke $r9.<java.util.Iterator: java.lang.Object next()>();
+
+        $r11 = (android.os.AsyncTask) $r10;
+
+        virtualinvoke $r11.<android.os.AsyncTask: boolean cancel(boolean)>(1);
+
+     label09:
+        goto label06;
+
+     label10:
+        $r12 := @caughtexception;
+
+        $r9 = virtualinvoke $r3.<java.util.concurrent.ConcurrentLinkedQueue: java.util.Iterator iterator()>();
+
+     label11:
+        $z0 = interfaceinvoke $r9.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label22;
+
+        $r10 = interfaceinvoke $r9.<java.util.Iterator: java.lang.Object next()>();
+
+        $r11 = (android.os.AsyncTask) $r10;
+
+        virtualinvoke $r11.<android.os.AsyncTask: boolean cancel(boolean)>(1);
+
+        goto label11;
+
+     label12:
+        return null;
+
+     label13:
+        $r13 = $r5[$i0];
+
+        $r14 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r13);
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean b(android.net.Uri)>($r14);
+
+     label14:
+        if $z0 == 0 goto label17;
+
+     label15:
+        $r13 = virtualinvoke $r14.<android.net.Uri: java.lang.String toString()>();
+
+        $r6[$i0] = $r13;
+
+        virtualinvoke $r2.<java.util.concurrent.CountDownLatch: void countDown()>();
+
+     label16:
+        $i0 = $i0 + 1;
+
+        goto label01;
+
+     label17:
+        $r15 = new com.facebook.internal.bq;
+
+     label18:
+        specialinvoke $r15.<com.facebook.internal.bq: void <init>(com.facebook.internal.bp,java.lang.String[],int,java.util.concurrent.CountDownLatch)>($r0, $r6, $i0, $r2);
+
+        $r16 = staticinvoke <com.facebook.share.internal.o: com.facebook.GraphRequest a(com.facebook.AccessToken,android.net.Uri,com.facebook.ad)>($r8, $r14, $r15);
+
+        $r17 = virtualinvoke $r16.<com.facebook.GraphRequest: com.facebook.aj j()>();
+
+        virtualinvoke $r3.<java.util.concurrent.ConcurrentLinkedQueue: boolean add(java.lang.Object)>($r17);
+
+     label19:
+        goto label16;
+
+     label20:
+        virtualinvoke $r2.<java.util.concurrent.CountDownLatch: void await()>();
+
+     label21:
+        return $r6;
+
+     label22:
+        return null;
+
+        catch java.lang.Exception from label01 to label02 with label10;
+        catch java.lang.Exception from label03 to label04 with label10;
+        catch java.lang.Exception from label05 to label07 with label10;
+        catch java.lang.Exception from label08 to label09 with label10;
+        catch java.lang.Exception from label13 to label14 with label10;
+        catch java.lang.Exception from label15 to label16 with label10;
+        catch java.lang.Exception from label18 to label19 with label10;
+        catch java.lang.Exception from label20 to label21 with label10;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.facebook.internal.bp $r0;
+        java.lang.String[] $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.facebook.internal.bp;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.facebook.internal.bp: java.lang.String[] a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.facebook.internal.bp $r0;
+        java.lang.Object $r1;
+        java.lang.String[] $r2;
+
+        $r0 := @this: com.facebook.internal.bp;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String[]) $r1;
+
+        virtualinvoke $r0.<com.facebook.internal.bp: void a(java.lang.String[])>($r2);
+
+        return;
+    }
+}

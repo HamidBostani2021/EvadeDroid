@@ -1,0 +1,3 @@
+com.jb.gokeyboard.langpack.guide.GuideActivity
+com.jb.gokeyboard.langpack.guide.IConstant
+com.jb.gokeyboard.langpack.guide.Utils

@@ -1,0 +1,87 @@
+class com.seattleclouds.modules.g.k extends java.lang.Object implements com.seattleclouds.util.cc
+{
+    final com.seattleclouds.modules.g.i a;
+
+    void <init>(com.seattleclouds.modules.g.i)
+    {
+        com.seattleclouds.modules.g.k $r0;
+        com.seattleclouds.modules.g.i $r1;
+
+        $r0 := @this: com.seattleclouds.modules.g.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.g.i;
+
+        $r0.<com.seattleclouds.modules.g.k: com.seattleclouds.modules.g.i a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.modules.g.k $r0;
+
+        $r0 := @this: com.seattleclouds.modules.g.k;
+
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.g.k $r0;
+        java.lang.String $r1, $r2, $r5;
+        java.lang.StringBuilder $r3;
+        com.seattleclouds.modules.g.i $r4;
+        com.seattleclouds.modules.g.l $r6;
+        java.lang.Object[] $r7;
+
+        $r0 := @this: com.seattleclouds.modules.g.k;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.g.k: com.seattleclouds.modules.g.i a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.g.i: java.lang.String d(com.seattleclouds.modules.g.i)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = $r0.<com.seattleclouds.modules.g.k: com.seattleclouds.modules.g.i a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.g.i: java.lang.String c(com.seattleclouds.modules.g.i)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".chartdata.json");
+
+        $r5 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.g.k: com.seattleclouds.modules.g.i a>;
+
+        $r6 = staticinvoke <com.seattleclouds.modules.g.i: com.seattleclouds.modules.g.l f(com.seattleclouds.modules.g.i)>($r4);
+
+        $r7 = newarray (java.lang.Object)[4];
+
+        $r7[0] = $r5;
+
+        $r4 = $r0.<com.seattleclouds.modules.g.k: com.seattleclouds.modules.g.i a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.g.i: java.lang.String b(com.seattleclouds.modules.g.i)>($r4);
+
+        $r7[1] = $r5;
+
+        $r7[2] = $r1;
+
+        $r7[3] = $r2;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.g.l: android.os.AsyncTask execute(java.lang.Object[])>($r7);
+
+        return;
+    }
+}

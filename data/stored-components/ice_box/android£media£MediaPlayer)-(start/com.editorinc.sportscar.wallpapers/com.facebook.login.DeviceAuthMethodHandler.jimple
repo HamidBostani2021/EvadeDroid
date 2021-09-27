@@ -1,0 +1,258 @@
+class com.facebook.login.DeviceAuthMethodHandler extends com.facebook.login.LoginMethodHandler
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    private static java.util.concurrent.ScheduledThreadPoolExecutor c;
+
+    static void <clinit>()
+    {
+        com.facebook.login.h $r0;
+
+        $r0 = new com.facebook.login.h;
+
+        specialinvoke $r0.<com.facebook.login.h: void <init>()>();
+
+        <com.facebook.login.DeviceAuthMethodHandler: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    protected void <init>(android.os.Parcel)
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        android.os.Parcel $r1;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<com.facebook.login.LoginMethodHandler: void <init>(android.os.Parcel)>($r1);
+
+        return;
+    }
+
+    void <init>(com.facebook.login.LoginClient)
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        com.facebook.login.LoginClient $r1;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient;
+
+        specialinvoke $r0.<com.facebook.login.LoginMethodHandler: void <init>(com.facebook.login.LoginClient)>($r1);
+
+        return;
+    }
+
+    private void b(com.facebook.login.LoginClient$Request)
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        com.facebook.login.LoginClient$Request $r1;
+        com.facebook.login.DeviceAuthDialog $r2;
+        com.facebook.login.LoginClient $r3;
+        android.support.v4.app.ac $r4;
+        android.support.v4.app.aj $r5;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient$Request;
+
+        $r2 = new com.facebook.login.DeviceAuthDialog;
+
+        specialinvoke $r2.<com.facebook.login.DeviceAuthDialog: void <init>()>();
+
+        $r3 = $r0.<com.facebook.login.DeviceAuthMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r4 = virtualinvoke $r3.<com.facebook.login.LoginClient: android.support.v4.app.ac b()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        virtualinvoke $r2.<com.facebook.login.DeviceAuthDialog: void a(android.support.v4.app.aj,java.lang.String)>($r5, "login_with_facebook");
+
+        virtualinvoke $r2.<com.facebook.login.DeviceAuthDialog: void a(com.facebook.login.LoginClient$Request)>($r1);
+
+        return;
+    }
+
+    public static java.util.concurrent.ScheduledThreadPoolExecutor c()
+    {
+        java.util.concurrent.ScheduledThreadPoolExecutor $r0;
+        java.lang.Throwable $r1;
+
+        entermonitor class "Lcom/facebook/login/DeviceAuthMethodHandler;";
+
+     label1:
+        $r0 = <com.facebook.login.DeviceAuthMethodHandler: java.util.concurrent.ScheduledThreadPoolExecutor c>;
+
+        if $r0 != null goto label2;
+
+        $r0 = new java.util.concurrent.ScheduledThreadPoolExecutor;
+
+        specialinvoke $r0.<java.util.concurrent.ScheduledThreadPoolExecutor: void <init>(int)>(1);
+
+        <com.facebook.login.DeviceAuthMethodHandler: java.util.concurrent.ScheduledThreadPoolExecutor c> = $r0;
+
+     label2:
+        $r0 = <com.facebook.login.DeviceAuthMethodHandler: java.util.concurrent.ScheduledThreadPoolExecutor c>;
+
+     label3:
+        exitmonitor class "Lcom/facebook/login/DeviceAuthMethodHandler;";
+
+        return $r0;
+
+     label4:
+        $r1 := @caughtexception;
+
+        exitmonitor class "Lcom/facebook/login/DeviceAuthMethodHandler;";
+
+        throw $r1;
+
+        catch java.lang.Throwable from label1 to label3 with label4;
+    }
+
+    java.lang.String a()
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        return "device_auth";
+    }
+
+    public void a(java.lang.Exception)
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        java.lang.Exception $r1;
+        com.facebook.login.LoginClient $r2;
+        com.facebook.login.LoginClient$Request $r3;
+        java.lang.String $r4;
+        com.facebook.login.LoginClient$Result $r5;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 := @parameter0: java.lang.Exception;
+
+        $r2 = $r0.<com.facebook.login.DeviceAuthMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r3 = virtualinvoke $r2.<com.facebook.login.LoginClient: com.facebook.login.LoginClient$Request c()>();
+
+        $r4 = virtualinvoke $r1.<java.lang.Exception: java.lang.String getMessage()>();
+
+        $r5 = staticinvoke <com.facebook.login.LoginClient$Result: com.facebook.login.LoginClient$Result a(com.facebook.login.LoginClient$Request,java.lang.String,java.lang.String)>($r3, null, $r4);
+
+        $r2 = $r0.<com.facebook.login.DeviceAuthMethodHandler: com.facebook.login.LoginClient b>;
+
+        virtualinvoke $r2.<com.facebook.login.LoginClient: void a(com.facebook.login.LoginClient$Result)>($r5);
+
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.String, java.lang.String, java.util.Collection, java.util.Collection, com.facebook.AccessTokenSource, java.util.Date, java.util.Date)
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        java.lang.String $r1, $r2, $r3;
+        java.util.Collection $r4, $r5;
+        com.facebook.AccessTokenSource $r6;
+        java.util.Date $r7, $r8;
+        com.facebook.AccessToken $r9;
+        com.facebook.login.LoginClient $r10;
+        com.facebook.login.LoginClient$Request $r11;
+        com.facebook.login.LoginClient$Result $r12;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.util.Collection;
+
+        $r5 := @parameter4: java.util.Collection;
+
+        $r6 := @parameter5: com.facebook.AccessTokenSource;
+
+        $r7 := @parameter6: java.util.Date;
+
+        $r8 := @parameter7: java.util.Date;
+
+        $r9 = new com.facebook.AccessToken;
+
+        specialinvoke $r9.<com.facebook.AccessToken: void <init>(java.lang.String,java.lang.String,java.lang.String,java.util.Collection,java.util.Collection,com.facebook.AccessTokenSource,java.util.Date,java.util.Date)>($r1, $r2, $r3, $r4, $r5, $r6, null, null);
+
+        $r10 = $r0.<com.facebook.login.DeviceAuthMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r11 = virtualinvoke $r10.<com.facebook.login.LoginClient: com.facebook.login.LoginClient$Request c()>();
+
+        $r12 = staticinvoke <com.facebook.login.LoginClient$Result: com.facebook.login.LoginClient$Result a(com.facebook.login.LoginClient$Request,com.facebook.AccessToken)>($r11, $r9);
+
+        $r10 = $r0.<com.facebook.login.DeviceAuthMethodHandler: com.facebook.login.LoginClient b>;
+
+        virtualinvoke $r10.<com.facebook.login.LoginClient: void a(com.facebook.login.LoginClient$Result)>($r12);
+
+        return;
+    }
+
+    boolean a(com.facebook.login.LoginClient$Request)
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        com.facebook.login.LoginClient$Request $r1;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient$Request;
+
+        specialinvoke $r0.<com.facebook.login.DeviceAuthMethodHandler: void b(com.facebook.login.LoginClient$Request)>($r1);
+
+        return 1;
+    }
+
+    public void c_()
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        com.facebook.login.LoginClient $r1;
+        com.facebook.login.LoginClient$Request $r2;
+        com.facebook.login.LoginClient$Result $r3;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 = $r0.<com.facebook.login.DeviceAuthMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r2 = virtualinvoke $r1.<com.facebook.login.LoginClient: com.facebook.login.LoginClient$Request c()>();
+
+        $r3 = staticinvoke <com.facebook.login.LoginClient$Result: com.facebook.login.LoginClient$Result a(com.facebook.login.LoginClient$Request,java.lang.String)>($r2, "User canceled log in.");
+
+        $r1 = $r0.<com.facebook.login.DeviceAuthMethodHandler: com.facebook.login.LoginClient b>;
+
+        virtualinvoke $r1.<com.facebook.login.LoginClient: void a(com.facebook.login.LoginClient$Result)>($r3);
+
+        return;
+    }
+
+    public int describeContents()
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.login.DeviceAuthMethodHandler $r0;
+        android.os.Parcel $r1;
+        int $i0;
+
+        $r0 := @this: com.facebook.login.DeviceAuthMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.facebook.login.LoginMethodHandler: void writeToParcel(android.os.Parcel,int)>($r1, $i0);
+
+        return;
+    }
+}

@@ -1,0 +1,108 @@
+class com.seattleclouds.billing.l extends java.lang.Object implements com.android.vending.billing.util.m
+{
+    final com.seattleclouds.billing.k a;
+
+    void <init>(com.seattleclouds.billing.k)
+    {
+        com.seattleclouds.billing.l $r0;
+        com.seattleclouds.billing.k $r1;
+
+        $r0 := @this: com.seattleclouds.billing.l;
+
+        $r1 := @parameter0: com.seattleclouds.billing.k;
+
+        $r0.<com.seattleclouds.billing.l: com.seattleclouds.billing.k a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(com.android.vending.billing.util.n, com.android.vending.billing.util.o)
+    {
+        com.seattleclouds.billing.l $r0;
+        com.android.vending.billing.util.n $r1;
+        com.android.vending.billing.util.o $r2;
+        com.seattleclouds.billing.j $r3;
+        boolean $z0;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5;
+        com.seattleclouds.billing.k $r6;
+        com.android.vending.billing.util.l $r7;
+
+        $r0 := @this: com.seattleclouds.billing.l;
+
+        $r1 := @parameter0: com.android.vending.billing.util.n;
+
+        $r2 := @parameter1: com.android.vending.billing.util.o;
+
+        staticinvoke <com.seattleclouds.billing.j: void j(java.lang.String)>("Query inventory finished.");
+
+        staticinvoke <com.seattleclouds.billing.j: boolean b(boolean)>(1);
+
+        $r3 = staticinvoke <com.seattleclouds.billing.j: com.seattleclouds.billing.j e()>();
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $z0 = virtualinvoke $r1.<com.android.vending.billing.util.n: boolean d()>();
+
+        if $z0 == 0 goto label2;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Failed to query inventory: ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r1);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.billing.j: void k(java.lang.String)>($r5);
+
+        $r6 = $r0.<com.seattleclouds.billing.l: com.seattleclouds.billing.k a>;
+
+        $r7 = $r6.<com.seattleclouds.billing.k: com.android.vending.billing.util.l a>;
+
+        if $r7 == null goto label3;
+
+        $r6 = $r0.<com.seattleclouds.billing.l: com.seattleclouds.billing.k a>;
+
+        $r7 = $r6.<com.seattleclouds.billing.k: com.android.vending.billing.util.l a>;
+
+        interfaceinvoke $r7.<com.android.vending.billing.util.l: void a(com.android.vending.billing.util.n)>($r1);
+
+        return;
+
+     label2:
+        staticinvoke <com.seattleclouds.billing.j: void j(java.lang.String)>("Query inventory was successful.");
+
+        $r3 = staticinvoke <com.seattleclouds.billing.j: com.seattleclouds.billing.j e()>();
+
+        staticinvoke <com.seattleclouds.billing.j: void a(com.seattleclouds.billing.j,com.android.vending.billing.util.o)>($r3, $r2);
+
+        staticinvoke <com.seattleclouds.billing.j: void j(java.lang.String)>("Query inventory processing finished.");
+
+        $r6 = $r0.<com.seattleclouds.billing.l: com.seattleclouds.billing.k a>;
+
+        $r7 = $r6.<com.seattleclouds.billing.k: com.android.vending.billing.util.l a>;
+
+        if $r7 == null goto label3;
+
+        $r6 = $r0.<com.seattleclouds.billing.l: com.seattleclouds.billing.k a>;
+
+        $r7 = $r6.<com.seattleclouds.billing.k: com.android.vending.billing.util.l a>;
+
+        $r1 = new com.android.vending.billing.util.n;
+
+        specialinvoke $r1.<com.android.vending.billing.util.n: void <init>(int,java.lang.String)>(0, "Instance setup successful.");
+
+        interfaceinvoke $r7.<com.android.vending.billing.util.l: void a(com.android.vending.billing.util.n)>($r1);
+
+     label3:
+        return;
+    }
+}

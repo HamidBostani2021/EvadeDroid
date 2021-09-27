@@ -1,0 +1,780 @@
+public class com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity extends com.seattleclouds.p
+{
+    private java.util.ArrayList m;
+    private java.util.ArrayList n;
+    private android.graphics.Paint o;
+    private android.graphics.Paint p;
+    private android.graphics.Paint q;
+    private android.graphics.Paint r;
+    private int s;
+    private int t;
+    private android.graphics.Rect u;
+    private com.seattleclouds.modules.signaturestamp.c v;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        specialinvoke $r0.<com.seattleclouds.p: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList m> = $r1;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList n> = $r1;
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int s> = 0;
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int t> = 0;
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u> = null;
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        specialinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void l()>();
+
+        return;
+    }
+
+    static java.util.ArrayList b(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList m>;
+
+        return r1;
+    }
+
+    static java.util.ArrayList c(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList n>;
+
+        return r1;
+    }
+
+    static android.graphics.Rect d(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.graphics.Rect r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u>;
+
+        return r1;
+    }
+
+    static android.graphics.Paint e(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.graphics.Paint r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint r>;
+
+        return r1;
+    }
+
+    static android.graphics.Paint f(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.graphics.Paint r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        return r1;
+    }
+
+    static android.graphics.Paint g(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.graphics.Paint r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint p>;
+
+        return r1;
+    }
+
+    static android.graphics.Paint h(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.graphics.Paint r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint q>;
+
+        return r1;
+    }
+
+    private void l()
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.graphics.Rect $r1;
+        com.seattleclouds.modules.signaturestamp.c $r2;
+        int $i0, $i1, $i2, $i3, $i4, $i5;
+        java.util.ArrayList $r3;
+        java.util.Iterator $r4;
+        boolean $z0;
+        java.lang.Object $r5;
+        com.seattleclouds.modules.signaturestamp.DrawHistory $r6;
+        float $f0, $f1, $f2;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u>;
+
+        if $r1 == null goto label3;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i0 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getWidth()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i1 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getHeight()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u>;
+
+        $i2 = virtualinvoke $r1.<android.graphics.Rect: int width()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u>;
+
+        $i3 = virtualinvoke $r1.<android.graphics.Rect: int height()>();
+
+        $i0 = $i0 - $i2;
+
+        $i0 = $i0 / 2;
+
+        $i1 = $i1 - $i3;
+
+        $i1 = $i1 / 2;
+
+        $r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u>;
+
+        $i2 = $i2 + $i0;
+
+        $i3 = $i3 + $i1;
+
+        virtualinvoke $r1.<android.graphics.Rect: void set(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: void a()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList n>;
+
+        $r4 = virtualinvoke $r3.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label2:
+        $z0 = interfaceinvoke $r4.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label7;
+
+        $r5 = interfaceinvoke $r4.<java.util.Iterator: java.lang.Object next()>();
+
+        $r6 = (com.seattleclouds.modules.signaturestamp.DrawHistory) $r5;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: void a(com.seattleclouds.modules.signaturestamp.DrawHistory)>($r6);
+
+        goto label2;
+
+     label3:
+        $i3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int s>;
+
+        if $i3 <= 0 goto label6;
+
+        $i3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int t>;
+
+        if $i3 <= 0 goto label6;
+
+        $i0 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int s>;
+
+        $i1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int t>;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i4 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getWidth()>();
+
+        $i2 = $i4;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i5 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getHeight()>();
+
+        $i3 = $i5;
+
+        if $i4 > $i0 goto label4;
+
+        if $i5 <= $i1 goto label5;
+
+     label4:
+        $f0 = (float) $i4;
+
+        $i3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int s>;
+
+        $f1 = (float) $i3;
+
+        $f0 = $f0 / $f1;
+
+        $f1 = (float) $i5;
+
+        $i3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int t>;
+
+        $f2 = (float) $i3;
+
+        $f1 = $f1 / $f2;
+
+        $f0 = staticinvoke <java.lang.Math: float min(float,float)>($f0, $f1);
+
+        $f1 = (float) $i0;
+
+        $f1 = $f1 * $f0;
+
+        $i2 = (int) $f1;
+
+        $f1 = (float) $i1;
+
+        $f0 = $f0 * $f1;
+
+        $i3 = (int) $f0;
+
+     label5:
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i0 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getWidth()>();
+
+        $i0 = $i0 / 2;
+
+        $i1 = $i2 / 2;
+
+        $i0 = $i0 - $i1;
+
+        $i0 = $i0 + 1;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i1 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getHeight()>();
+
+        $i1 = $i1 / 2;
+
+        $i5 = $i3 / 2;
+
+        $i1 = $i1 - $i5;
+
+        $r1 = new android.graphics.Rect;
+
+        $i2 = $i2 + $i0;
+
+        $i3 = $i3 + $i1;
+
+        specialinvoke $r1.<android.graphics.Rect: void <init>(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u> = $r1;
+
+        goto label1;
+
+     label6:
+        $r1 = new android.graphics.Rect;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i3 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getWidth()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $i2 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: int getHeight()>();
+
+        specialinvoke $r1.<android.graphics.Rect: void <init>(int,int,int,int)>(0, 0, $i3, $i2);
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u> = $r1;
+
+        goto label1;
+
+     label7:
+        return;
+    }
+
+    private void o()
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        com.seattleclouds.modules.signaturestamp.c $r1;
+        android.graphics.Bitmap $r2;
+        java.lang.StringBuilder $r3;
+        java.lang.String $r4, $r8;
+        java.io.File $r5;
+        java.text.SimpleDateFormat $r6;
+        java.util.Date $r7;
+        java.io.FileOutputStream $r9;
+        android.graphics.Bitmap$CompressFormat $r10;
+        java.lang.Boolean $r11;
+        boolean $z0;
+        android.content.Intent $r12;
+        java.lang.Exception $r13;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r1 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.modules.signaturestamp.c: android.graphics.Bitmap b()>();
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = staticinvoke <com.seattleclouds.App: java.lang.String l()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/SignatureStamp");
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = new java.io.File;
+
+        specialinvoke $r5.<java.io.File: void <init>(java.lang.String)>($r4);
+
+        virtualinvoke $r5.<java.io.File: boolean mkdirs()>();
+
+        $r6 = new java.text.SimpleDateFormat;
+
+        specialinvoke $r6.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("dd-MM-yyyy_HH-mm-ss");
+
+        $r7 = new java.util.Date;
+
+        specialinvoke $r7.<java.util.Date: void <init>()>();
+
+        $r8 = virtualinvoke $r6.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>($r7);
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".png");
+
+        $r8 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r9 = new java.io.FileOutputStream;
+
+     label1:
+        specialinvoke $r9.<java.io.FileOutputStream: void <init>(java.lang.String)>($r4);
+
+     label2:
+        $r10 = <android.graphics.Bitmap$CompressFormat: android.graphics.Bitmap$CompressFormat PNG>;
+
+     label3:
+        virtualinvoke $r2.<android.graphics.Bitmap: boolean compress(android.graphics.Bitmap$CompressFormat,int,java.io.OutputStream)>($r10, 90, $r9);
+
+        $r11 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(1);
+
+     label4:
+        $z0 = virtualinvoke $r11.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label6;
+
+        $r12 = new android.content.Intent;
+
+        specialinvoke $r12.<android.content.Intent: void <init>()>();
+
+        virtualinvoke $r12.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("ARG_IMAGE_PATH", $r4);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void setResult(int,android.content.Intent)>(-1, $r12);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void finish()>();
+
+        return;
+
+     label5:
+        $r13 := @caughtexception;
+
+        $r11 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        goto label4;
+
+     label6:
+        virtualinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void setResult(int)>(0);
+
+        $i0 = <com.seattleclouds.l: int draw_surface_info>;
+
+        $i1 = <com.seattleclouds.l: int draw_surface_save_error>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r0, $i0, $i1);
+
+        return;
+
+        catch java.lang.Exception from label1 to label2 with label5;
+        catch java.lang.Exception from label3 to label4 with label5;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.os.Bundle $r1, $r8;
+        com.seattleclouds.modules.signaturestamp.c $r2;
+        android.graphics.Paint $r3;
+        android.graphics.Paint$Style $r4;
+        android.graphics.Paint$Join $r5;
+        android.graphics.Paint$Cap $r6;
+        android.content.Intent $r7;
+        int $i0;
+        java.util.ArrayList $r9, $r10;
+        android.os.Parcelable $r11;
+        android.graphics.Rect $r12;
+        android.view.ViewTreeObserver $r13;
+        com.seattleclouds.modules.signaturestamp.b $r14;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.p: void onCreate(android.os.Bundle)>($r1);
+
+        $r2 = new com.seattleclouds.modules.signaturestamp.c;
+
+        specialinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: void <init>(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity,android.content.Context)>($r0, $r0);
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: void setLayerType(int,android.graphics.Paint)>(0, null);
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void setContentView(android.view.View)>($r2);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void setResult(int)>(0);
+
+        $r3 = new android.graphics.Paint;
+
+        specialinvoke $r3.<android.graphics.Paint: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setDither(boolean)>(1);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setColor(int)>(-16777216);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        $r4 = <android.graphics.Paint$Style: android.graphics.Paint$Style STROKE>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r4);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        $r5 = <android.graphics.Paint$Join: android.graphics.Paint$Join ROUND>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStrokeJoin(android.graphics.Paint$Join)>($r5);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        $r6 = <android.graphics.Paint$Cap: android.graphics.Paint$Cap ROUND>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStrokeCap(android.graphics.Paint$Cap)>($r6);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setAntiAlias(boolean)>(1);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint o>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStrokeWidth(float)>(4.0F);
+
+        $r3 = new android.graphics.Paint;
+
+        specialinvoke $r3.<android.graphics.Paint: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint p> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint p>;
+
+        $r4 = <android.graphics.Paint$Style: android.graphics.Paint$Style FILL>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r4);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint p>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setColor(int)>(-16777216);
+
+        $r3 = new android.graphics.Paint;
+
+        specialinvoke $r3.<android.graphics.Paint: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint q> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint q>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setColor(int)>(-10496);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint q>;
+
+        $r4 = <android.graphics.Paint$Style: android.graphics.Paint$Style STROKE>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r4);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint q>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStrokeWidth(float)>(3.0F);
+
+        $r3 = new android.graphics.Paint;
+
+        specialinvoke $r3.<android.graphics.Paint: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint r> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint r>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setColor(int)>(-1);
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Paint r>;
+
+        $r4 = <android.graphics.Paint$Style: android.graphics.Paint$Style FILL>;
+
+        virtualinvoke $r3.<android.graphics.Paint: void setStyle(android.graphics.Paint$Style)>($r4);
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.content.Intent getIntent()>();
+
+        $r8 = virtualinvoke $r7.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r8 == null goto label1;
+
+        $i0 = virtualinvoke $r8.<android.os.Bundle: int getInt(java.lang.String,int)>("ARG_SURFACE_WIDTH", 0);
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int s> = $i0;
+
+        $i0 = virtualinvoke $r8.<android.os.Bundle: int getInt(java.lang.String,int)>("ARG_SURFACE_HEIGHT", 0);
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: int t> = $i0;
+
+     label1:
+        if $r1 == null goto label3;
+
+        $r9 = virtualinvoke $r1.<android.os.Bundle: java.util.ArrayList getParcelableArrayList(java.lang.String)>("STATE_DRAW_HISTORY");
+
+        if $r9 == null goto label2;
+
+        $r10 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList n>;
+
+        virtualinvoke $r10.<java.util.ArrayList: boolean addAll(java.util.Collection)>($r9);
+
+     label2:
+        $r11 = virtualinvoke $r1.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("STATE_BOUND_RECT");
+
+        $r12 = (android.graphics.Rect) $r11;
+
+        $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u> = $r12;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        $r13 = virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: android.view.ViewTreeObserver getViewTreeObserver()>();
+
+        $r14 = new com.seattleclouds.modules.signaturestamp.b;
+
+        specialinvoke $r14.<com.seattleclouds.modules.signaturestamp.b: void <init>(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)>($r0);
+
+        virtualinvoke $r13.<android.view.ViewTreeObserver: void addOnGlobalLayoutListener(android.view.ViewTreeObserver$OnGlobalLayoutListener)>($r14);
+
+        return;
+    }
+
+    public boolean onCreateOptionsMenu(android.view.Menu)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.view.Menu $r1;
+        int $i0;
+        android.view.MenuInflater $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.view.MenuInflater getMenuInflater()>();
+
+        $i0 = <com.seattleclouds.k: int draw_surface_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.p: boolean onCreateOptionsMenu(android.view.Menu)>($r1);
+
+        return $z0;
+    }
+
+    public boolean onOptionsItemSelected(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        com.seattleclouds.modules.signaturestamp.c $r2;
+        java.util.ArrayList $r3;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int draw_surface_menu_use>;
+
+        if $i0 != $i1 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void o()>();
+
+        return 1;
+
+     label1:
+        $i1 = <com.seattleclouds.h: int draw_surface_menu_clear>;
+
+        if $i0 != $i1 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: com.seattleclouds.modules.signaturestamp.c v>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.signaturestamp.c: void a()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList n>;
+
+        virtualinvoke $r3.<java.util.ArrayList: void clear()>();
+
+        return 1;
+
+     label2:
+        $z0 = specialinvoke $r0.<com.seattleclouds.p: boolean onOptionsItemSelected(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    protected void onSaveInstanceState(android.os.Bundle)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        java.util.ArrayList $r2;
+        android.graphics.Rect $r3;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList n>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putParcelableArrayList(java.lang.String,java.util.ArrayList)>("STATE_DRAW_HISTORY", $r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: java.util.ArrayList n>;
+
+        $i0 = virtualinvoke $r2.<java.util.ArrayList: int size()>();
+
+        if $i0 <= 0 goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.graphics.Rect u>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("STATE_BOUND_RECT", $r3);
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.p: void onSaveInstanceState(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r0 = this.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

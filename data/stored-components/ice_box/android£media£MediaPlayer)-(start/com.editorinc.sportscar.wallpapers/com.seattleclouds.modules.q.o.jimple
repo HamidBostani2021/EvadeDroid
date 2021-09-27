@@ -1,0 +1,113 @@
+public class com.seattleclouds.modules.q.o extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.lang.String b;
+    private java.lang.String c;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.q.o $r0;
+
+        $r0 := @this: com.seattleclouds.modules.q.o;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.o: java.lang.String a> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.o: java.lang.String b> = "example@mail.com";
+
+        $r0.<com.seattleclouds.modules.q.o: java.lang.String c> = "undefined";
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.q.o a(org.json.JSONObject)
+    {
+        org.json.JSONObject $r0;
+        com.seattleclouds.modules.q.o $r1;
+        java.lang.String $r2;
+        org.json.JSONException $r3, $r4, $r5;
+
+        $r0 := @parameter0: org.json.JSONObject;
+
+        $r1 = new com.seattleclouds.modules.q.o;
+
+        specialinvoke $r1.<com.seattleclouds.modules.q.o: void <init>()>();
+
+     label1:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("companyName");
+
+        virtualinvoke $r1.<com.seattleclouds.modules.q.o: void a(java.lang.String)>($r2);
+
+     label2:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("adminEmail");
+
+     label3:
+        $r1.<com.seattleclouds.modules.q.o: java.lang.String b> = $r2;
+
+     label4:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("brief");
+
+     label5:
+        $r1.<com.seattleclouds.modules.q.o: java.lang.String c> = $r2;
+
+        return $r1;
+
+     label6:
+        $r3 := @caughtexception;
+
+        return $r1;
+
+     label7:
+        $r4 := @caughtexception;
+
+        goto label4;
+
+     label8:
+        $r5 := @caughtexception;
+
+        goto label2;
+
+        catch org.json.JSONException from label1 to label2 with label8;
+        catch org.json.JSONException from label2 to label3 with label7;
+        catch org.json.JSONException from label4 to label5 with label6;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.modules.q.o $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.o;
+
+        r1 = $r0.<com.seattleclouds.modules.q.o: java.lang.String a>;
+
+        return r1;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.q.o $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.o;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.q.o: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.modules.q.o $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.o;
+
+        r1 = $r0.<com.seattleclouds.modules.q.o: java.lang.String c>;
+
+        return r1;
+    }
+}

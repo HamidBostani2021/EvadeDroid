@@ -1,0 +1,218 @@
+class com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver extends android.os.ResultReceiver
+{
+    final com.seattleclouds.modules.dropbox.medialist.a a;
+    private java.lang.String b;
+
+    public void <init>(com.seattleclouds.modules.dropbox.medialist.a, android.os.Handler)
+    {
+        com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver $r0;
+        com.seattleclouds.modules.dropbox.medialist.a $r1;
+        android.os.Handler $r2;
+
+        $r0 := @this: com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver;
+
+        $r1 := @parameter0: com.seattleclouds.modules.dropbox.medialist.a;
+
+        $r2 := @parameter1: android.os.Handler;
+
+        $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a> = $r1;
+
+        specialinvoke $r0.<android.os.ResultReceiver: void <init>(android.os.Handler)>($r2);
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    protected void onReceiveResult(int, android.os.Bundle)
+    {
+        com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver $r0;
+        int $i0, $i1, $i2;
+        android.os.Bundle $r1;
+        com.seattleclouds.modules.dropbox.medialist.a $r2;
+        android.support.v4.app.ac $r3;
+        boolean $z0;
+        java.util.List $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.modules.dropbox.medialist.b $r6;
+        com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus $r7, $r11;
+        com.seattleclouds.modules.dropbox.medialist.s $r8;
+        java.lang.IndexOutOfBoundsException $r9;
+        java.lang.String $r10;
+        java.io.File $r12;
+        android.content.res.Resources $r13;
+        android.widget.Toast $r14;
+
+        $r0 := @this: com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.os.Bundle;
+
+        specialinvoke $r0.<android.os.ResultReceiver: void onReceiveResult(int,android.os.Bundle)>($i0, $r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.dropbox.medialist.a: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label01;
+
+        return;
+
+     label01:
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.modules.dropbox.medialist.a: boolean w()>();
+
+        if $z0 == 0 goto label10;
+
+        if $i0 != 8344 goto label10;
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("progress");
+
+        $i1 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("pos");
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: java.util.List b(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        if $r4 != null goto label02;
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: java.util.List b(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        $i2 = interfaceinvoke $r4.<java.util.List: int size()>();
+
+        $i2 = $i2 + -1;
+
+        if $i2 < $i1 goto label10;
+
+     label02:
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+     label03:
+        $r4 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: java.util.List b(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        $r5 = interfaceinvoke $r4.<java.util.List: java.lang.Object get(int)>($i1);
+
+     label04:
+        $r6 = (com.seattleclouds.modules.dropbox.medialist.b) $r5;
+
+        if $i0 != 100 goto label07;
+
+        $r7 = <com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus: com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus LOCAL>;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.dropbox.medialist.b: void a(com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus)>($r7);
+
+     label05:
+        $i2 = virtualinvoke $r6.<com.seattleclouds.modules.dropbox.medialist.b: int c()>();
+
+        if $i0 == $i2 goto label10;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.dropbox.medialist.b: void a(int)>($i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: void a(com.seattleclouds.modules.dropbox.medialist.a,int,int)>($r2, $i1, $i0);
+
+        if $i0 != 100 goto label10;
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: com.seattleclouds.modules.dropbox.medialist.s a(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        virtualinvoke $r8.<com.seattleclouds.modules.dropbox.medialist.s: void notifyDataSetChanged()>();
+
+        return;
+
+     label06:
+        $r9 := @caughtexception;
+
+        $r10 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: java.lang.String aa()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r10, "Unable to extras media file ", $r9);
+
+        return;
+
+     label07:
+        $r7 = virtualinvoke $r6.<com.seattleclouds.modules.dropbox.medialist.b: com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus a()>();
+
+        $r11 = <com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus: com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus DOWNLOADING>;
+
+        if $r7 == $r11 goto label08;
+
+        $r7 = <com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus: com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus DOWNLOADING>;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.dropbox.medialist.b: void a(com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus)>($r7);
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: com.seattleclouds.modules.dropbox.medialist.s a(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        virtualinvoke $r8.<com.seattleclouds.modules.dropbox.medialist.s: void notifyDataSetChanged()>();
+
+        goto label05;
+
+     label08:
+        if $i0 >= 0 goto label05;
+
+        $r12 = new java.io.File;
+
+        $r10 = virtualinvoke $r6.<com.seattleclouds.modules.dropbox.medialist.b: java.lang.String b()>();
+
+        specialinvoke $r12.<java.io.File: void <init>(java.lang.String)>($r10);
+
+        $z0 = virtualinvoke $r12.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label09;
+
+        virtualinvoke $r12.<java.io.File: boolean delete()>();
+
+     label09:
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.dropbox.medialist.a: android.support.v4.app.ac n()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r13 = virtualinvoke $r2.<com.seattleclouds.modules.dropbox.medialist.a: android.content.res.Resources o()>();
+
+        $i2 = <com.seattleclouds.l: int dropbox_medialist_download_canceled_message>;
+
+        $r10 = virtualinvoke $r13.<android.content.res.Resources: java.lang.String getString(int)>($i2);
+
+        $r14 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r3, $r10, 0);
+
+        virtualinvoke $r14.<android.widget.Toast: void show()>();
+
+        $r7 = <com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus: com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus ONLINE>;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.dropbox.medialist.b: void a(com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus)>($r7);
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.DropboxMediaListFragment$DownloadReceiver: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: com.seattleclouds.modules.dropbox.medialist.s a(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        virtualinvoke $r8.<com.seattleclouds.modules.dropbox.medialist.s: void notifyDataSetChanged()>();
+
+        goto label05;
+
+     label10:
+        return;
+
+        catch java.lang.IndexOutOfBoundsException from label03 to label04 with label06;
+    }
+}

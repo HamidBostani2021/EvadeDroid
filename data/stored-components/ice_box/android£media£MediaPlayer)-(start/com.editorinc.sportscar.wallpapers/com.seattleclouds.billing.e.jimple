@@ -1,0 +1,133 @@
+class com.seattleclouds.billing.e extends java.lang.Object implements com.android.vending.billing.util.m
+{
+    final com.seattleclouds.billing.b a;
+
+    void <init>(com.seattleclouds.billing.b)
+    {
+        com.seattleclouds.billing.e $r0;
+        com.seattleclouds.billing.b $r1;
+
+        $r0 := @this: com.seattleclouds.billing.e;
+
+        $r1 := @parameter0: com.seattleclouds.billing.b;
+
+        $r0.<com.seattleclouds.billing.e: com.seattleclouds.billing.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(com.android.vending.billing.util.n, com.android.vending.billing.util.o)
+    {
+        com.seattleclouds.billing.e $r0;
+        com.android.vending.billing.util.n $r1;
+        com.android.vending.billing.util.o $r2;
+        boolean $z0, $z1;
+        com.seattleclouds.billing.j $r3;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5, $r8;
+        com.seattleclouds.billing.b $r6;
+        com.android.vending.billing.util.r $r7;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.billing.e;
+
+        $r1 := @parameter0: com.android.vending.billing.util.n;
+
+        $r2 := @parameter1: com.android.vending.billing.util.o;
+
+        $z0 = 0;
+
+        $r3 = staticinvoke <com.seattleclouds.billing.j: com.seattleclouds.billing.j b()>();
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $z1 = virtualinvoke $r1.<com.android.vending.billing.util.n: boolean d()>();
+
+        if $z1 == 0 goto label2;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error querying invetory: ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r1);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("IabFragment", $r5);
+
+        return;
+
+     label2:
+        $r6 = $r0.<com.seattleclouds.billing.e: com.seattleclouds.billing.b a>;
+
+        $r5 = staticinvoke <com.seattleclouds.billing.b: java.lang.String b(com.seattleclouds.billing.b)>($r6);
+
+        $z1 = virtualinvoke $r2.<com.android.vending.billing.util.o: boolean c(java.lang.String)>($r5);
+
+        if $z1 == 0 goto label6;
+
+        $r6 = $r0.<com.seattleclouds.billing.e: com.seattleclouds.billing.b a>;
+
+        $r5 = staticinvoke <com.seattleclouds.billing.b: java.lang.String b(com.seattleclouds.billing.b)>($r6);
+
+        $r7 = virtualinvoke $r2.<com.android.vending.billing.util.o: com.android.vending.billing.util.r a(java.lang.String)>($r5);
+
+        $r5 = "inapp";
+
+        $r8 = virtualinvoke $r7.<com.android.vending.billing.util.r: java.lang.String b()>();
+
+        $z1 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>($r8);
+
+        if $z1 == 0 goto label4;
+
+        $r6 = $r0.<com.seattleclouds.billing.e: com.seattleclouds.billing.b a>;
+
+        staticinvoke <com.seattleclouds.billing.b: void f(com.seattleclouds.billing.b)>($r6);
+
+     label3:
+        if $z0 == 0 goto label7;
+
+        $r6 = $r0.<com.seattleclouds.billing.e: com.seattleclouds.billing.b a>;
+
+        staticinvoke <com.seattleclouds.billing.b: void b(com.seattleclouds.billing.b,java.lang.String)>($r6, "Invalid product type: Error querying inventory");
+
+        return;
+
+     label4:
+        $r5 = "subs";
+
+        $r8 = virtualinvoke $r7.<com.android.vending.billing.util.r: java.lang.String b()>();
+
+        $z1 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>($r8);
+
+        if $z1 == 0 goto label5;
+
+        $r6 = $r0.<com.seattleclouds.billing.e: com.seattleclouds.billing.b a>;
+
+        $i0 = <com.seattleclouds.l: int purchase_invalid_product>;
+
+        staticinvoke <com.seattleclouds.billing.b: void a(com.seattleclouds.billing.b,int,java.lang.String,boolean)>($r6, $i0, "Invalid product Id", 0);
+
+        goto label3;
+
+     label5:
+        $z0 = 1;
+
+        goto label3;
+
+     label6:
+        $z0 = 1;
+
+        goto label3;
+
+     label7:
+        return;
+    }
+}

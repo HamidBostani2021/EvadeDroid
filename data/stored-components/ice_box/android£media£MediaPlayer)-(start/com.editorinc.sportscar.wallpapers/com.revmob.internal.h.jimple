@@ -1,0 +1,43 @@
+final class com.revmob.internal.h extends com.revmob.internal.t
+{
+    private com.revmob.internal.g a;
+
+    void <init>(com.revmob.internal.g)
+    {
+        com.revmob.internal.h $r0;
+        com.revmob.internal.g $r1;
+
+        $r0 := @this: com.revmob.internal.h;
+
+        $r1 := @parameter0: com.revmob.internal.g;
+
+        $r0.<com.revmob.internal.h: com.revmob.internal.g a> = $r1;
+
+        specialinvoke $r0.<com.revmob.internal.t: void <init>(com.revmob.b,com.revmob.internal.u)>(null, null);
+
+        return;
+    }
+
+    public final void onPageFinished(android.webkit.WebView, java.lang.String)
+    {
+        com.revmob.internal.h $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        com.revmob.internal.g $r3;
+        com.revmob.internal.e $r4;
+
+        $r0 := @this: com.revmob.internal.h;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.revmob.internal.h: com.revmob.internal.g a>;
+
+        $r4 = $r3.<com.revmob.internal.g: com.revmob.internal.e a>;
+
+        virtualinvoke $r4.<com.revmob.internal.e: void a(java.lang.String)>($r2);
+
+        return;
+    }
+}

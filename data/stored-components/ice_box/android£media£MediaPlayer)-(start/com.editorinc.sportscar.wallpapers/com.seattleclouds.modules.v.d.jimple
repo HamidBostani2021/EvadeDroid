@@ -1,0 +1,15 @@
+class com.seattleclouds.modules.v.d extends java.lang.Object
+{
+    android.widget.ImageView a;
+
+    void <init>()
+    {
+        com.seattleclouds.modules.v.d $r0;
+
+        $r0 := @this: com.seattleclouds.modules.v.d;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

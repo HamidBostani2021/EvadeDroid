@@ -1,0 +1,240 @@
+public class com.seattleclouds.modules.q.p extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.lang.String b;
+    private java.lang.String c;
+    private java.lang.String d;
+    private java.lang.String e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private java.lang.String h;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.q.p $r0;
+
+        $r0 := @this: com.seattleclouds.modules.q.p;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String a> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String b> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String c> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String d> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String e> = "http://example.com";
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String f> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String g> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.p: java.lang.String h> = "undefined";
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.q.p a(org.json.JSONObject)
+    {
+        org.json.JSONObject $r0;
+        com.seattleclouds.modules.q.p $r1;
+        java.lang.String $r2;
+        org.json.JSONException $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10;
+
+        $r0 := @parameter0: org.json.JSONObject;
+
+        $r1 = new com.seattleclouds.modules.q.p;
+
+        specialinvoke $r1.<com.seattleclouds.modules.q.p: void <init>()>();
+
+     label01:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("address1");
+
+     label02:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String a> = $r2;
+
+     label03:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("city");
+
+     label04:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String b> = $r2;
+
+     label05:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("state");
+
+     label06:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String c> = $r2;
+
+     label07:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("zip");
+
+     label08:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String d> = $r2;
+
+     label09:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("webSite");
+
+     label10:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String e> = $r2;
+
+     label11:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("telephone");
+
+     label12:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String f> = $r2;
+
+     label13:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("latitude");
+
+     label14:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String g> = $r2;
+
+     label15:
+        $r2 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("longitude");
+
+     label16:
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String h> = $r2;
+
+        return $r1;
+
+     label17:
+        $r3 := @caughtexception;
+
+        $r1.<com.seattleclouds.modules.q.p: java.lang.String e> = "http://example.com";
+
+        goto label11;
+
+     label18:
+        $r4 := @caughtexception;
+
+        return $r1;
+
+     label19:
+        $r5 := @caughtexception;
+
+        goto label15;
+
+     label20:
+        $r6 := @caughtexception;
+
+        goto label13;
+
+     label21:
+        $r7 := @caughtexception;
+
+        goto label09;
+
+     label22:
+        $r8 := @caughtexception;
+
+        goto label07;
+
+     label23:
+        $r9 := @caughtexception;
+
+        goto label05;
+
+     label24:
+        $r10 := @caughtexception;
+
+        goto label03;
+
+        catch org.json.JSONException from label01 to label02 with label24;
+        catch org.json.JSONException from label03 to label04 with label23;
+        catch org.json.JSONException from label05 to label06 with label22;
+        catch org.json.JSONException from label07 to label08 with label21;
+        catch org.json.JSONException from label09 to label10 with label17;
+        catch org.json.JSONException from label11 to label12 with label20;
+        catch org.json.JSONException from label13 to label14 with label19;
+        catch org.json.JSONException from label15 to label16 with label18;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.modules.q.p $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.p;
+
+        r1 = $r0.<com.seattleclouds.modules.q.p: java.lang.String b>;
+
+        return r1;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.modules.q.p $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.p;
+
+        r1 = $r0.<com.seattleclouds.modules.q.p: java.lang.String a>;
+
+        return r1;
+    }
+
+    public java.lang.String c()
+    {
+        com.seattleclouds.modules.q.p $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.p;
+
+        r1 = $r0.<com.seattleclouds.modules.q.p: java.lang.String c>;
+
+        return r1;
+    }
+
+    public java.lang.String d()
+    {
+        com.seattleclouds.modules.q.p $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.p;
+
+        r1 = $r0.<com.seattleclouds.modules.q.p: java.lang.String d>;
+
+        return r1;
+    }
+
+    public java.lang.String e()
+    {
+        com.seattleclouds.modules.q.p $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.q.p;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.p: java.lang.String b()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.p: java.lang.String a()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.p: java.lang.String c()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.p: java.lang.String d()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+}

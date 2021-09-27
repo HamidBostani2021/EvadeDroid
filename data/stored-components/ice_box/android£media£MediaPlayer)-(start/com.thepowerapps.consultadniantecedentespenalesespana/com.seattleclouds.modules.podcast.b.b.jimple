@@ -1,0 +1,140 @@
+class com.seattleclouds.modules.podcast.b.b extends java.lang.Object implements java.util.Comparator
+{
+    final com.seattleclouds.modules.podcast.b.a a;
+
+    void <init>(com.seattleclouds.modules.podcast.b.a)
+    {
+        com.seattleclouds.modules.podcast.b.b $r0;
+        com.seattleclouds.modules.podcast.b.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.b.a;
+
+        $r0.<com.seattleclouds.modules.podcast.b.b: com.seattleclouds.modules.podcast.b.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public int a(com.seattleclouds.modules.podcast.PodcastListItem, com.seattleclouds.modules.podcast.PodcastListItem)
+    {
+        com.seattleclouds.modules.podcast.b.b $r0;
+        com.seattleclouds.modules.podcast.PodcastListItem $r1, $r2;
+        java.util.Date $r3, $r5, $r6;
+        com.seattleclouds.modules.podcast.PodcastItem $r4;
+        int $i0;
+        com.seattleclouds.modules.podcast.PodcastCategory $r7;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.PodcastListItem;
+
+        $r2 := @parameter1: com.seattleclouds.modules.podcast.PodcastListItem;
+
+        $r3 = null;
+
+        $r4 = $r1.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a>;
+
+        if $r4 == null goto label3;
+
+        $r4 = $r1.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a>;
+
+        $r5 = $r4.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+        if $r5 == null goto label3;
+
+        $r4 = $r1.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a>;
+
+        $r5 = $r4.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+     label1:
+        $r4 = $r2.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a>;
+
+        if $r4 == null goto label4;
+
+        $r4 = $r2.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a>;
+
+        $r6 = $r4.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+        if $r6 == null goto label4;
+
+        $r4 = $r2.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a>;
+
+        $r3 = $r4.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+     label2:
+        if $r5 == null goto label5;
+
+        if $r3 == null goto label5;
+
+        $i0 = virtualinvoke $r3.<java.util.Date: int compareTo(java.util.Date)>($r5);
+
+        return $i0;
+
+     label3:
+        $r7 = $r1.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b>;
+
+        if $r7 == null goto label6;
+
+        $r7 = $r1.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b>;
+
+        $r5 = virtualinvoke $r7.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.Date getLastItemPublishDate()>();
+
+        if $r5 == null goto label6;
+
+        $r7 = $r1.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b>;
+
+        $r5 = virtualinvoke $r7.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.Date getLastItemPublishDate()>();
+
+        goto label1;
+
+     label4:
+        $r7 = $r2.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b>;
+
+        if $r7 == null goto label2;
+
+        $r7 = $r2.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b>;
+
+        $r6 = virtualinvoke $r7.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.Date getLastItemPublishDate()>();
+
+        if $r6 == null goto label2;
+
+        $r7 = $r2.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b>;
+
+        $r3 = virtualinvoke $r7.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.Date getLastItemPublishDate()>();
+
+        goto label2;
+
+     label5:
+        return 0;
+
+     label6:
+        $r5 = null;
+
+        goto label1;
+    }
+
+    public int compare(java.lang.Object, java.lang.Object)
+    {
+        com.seattleclouds.modules.podcast.b.b $r0;
+        int $i0;
+        java.lang.Object $r1, $r2;
+        com.seattleclouds.modules.podcast.PodcastListItem $r3, $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.b;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $r3 = (com.seattleclouds.modules.podcast.PodcastListItem) $r1;
+
+        $r4 = (com.seattleclouds.modules.podcast.PodcastListItem) $r2;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.b: int a(com.seattleclouds.modules.podcast.PodcastListItem,com.seattleclouds.modules.podcast.PodcastListItem)>($r3, $r4);
+
+        return $i0;
+    }
+}

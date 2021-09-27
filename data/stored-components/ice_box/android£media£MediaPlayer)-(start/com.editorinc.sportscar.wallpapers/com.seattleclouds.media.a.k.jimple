@@ -1,0 +1,11 @@
+public interface  com.seattleclouds.media.a.k extends java.lang.Object
+{
+
+    public abstract void a();
+
+    public abstract void a(int);
+
+    public abstract void a(android.support.v4.media.MediaMetadataCompat);
+
+    public abstract void a(java.lang.String);
+}

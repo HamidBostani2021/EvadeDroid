@@ -1,0 +1,44 @@
+class com.seattleclouds.modules.t.ad extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.t.ab a;
+
+    void <init>(com.seattleclouds.modules.t.ab)
+    {
+        com.seattleclouds.modules.t.ad $r0;
+        com.seattleclouds.modules.t.ab $r1;
+
+        $r0 := @this: com.seattleclouds.modules.t.ad;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.ab;
+
+        $r0.<com.seattleclouds.modules.t.ad: com.seattleclouds.modules.t.ab a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.t.ad $r0;
+        boolean $z0;
+        com.seattleclouds.modules.t.ab $r1;
+
+        $r0 := @this: com.seattleclouds.modules.t.ad;
+
+        $r1 = $r0.<com.seattleclouds.modules.t.ad: com.seattleclouds.modules.t.ab a>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.t.ab: boolean b(com.seattleclouds.modules.t.ab)>($r1);
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.t.ad: com.seattleclouds.modules.t.ab a>;
+
+        staticinvoke <com.seattleclouds.modules.t.ab: void a(com.seattleclouds.modules.t.ab,boolean)>($r1, 0);
+
+        return;
+    }
+}

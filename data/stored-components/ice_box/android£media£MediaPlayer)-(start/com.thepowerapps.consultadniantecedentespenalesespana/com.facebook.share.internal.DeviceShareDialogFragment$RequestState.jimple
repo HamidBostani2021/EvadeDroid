@@ -1,0 +1,140 @@
+class com.facebook.share.internal.DeviceShareDialogFragment$RequestState extends java.lang.Object implements android.os.Parcelable
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    private java.lang.String a;
+    private long b;
+
+    static void <clinit>()
+    {
+        com.facebook.share.internal.d $r0;
+
+        $r0 = new com.facebook.share.internal.d;
+
+        specialinvoke $r0.<com.facebook.share.internal.d: void <init>()>();
+
+        <com.facebook.share.internal.DeviceShareDialogFragment$RequestState: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    void <init>()
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    protected void <init>(android.os.Parcel)
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+        android.os.Parcel $r1;
+        java.lang.String $r2;
+        long $l0;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: java.lang.String a> = $r2;
+
+        $l0 = virtualinvoke $r1.<android.os.Parcel: long readLong()>();
+
+        $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: long b> = $l0;
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        r1 = $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: java.lang.String a>;
+
+        return r1;
+    }
+
+    public void a(long)
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+        long $l0;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        $l0 := @parameter0: long;
+
+        $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: long b> = $l0;
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    public long b()
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+        long l0;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        l0 = $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: long b>;
+
+        return l0;
+    }
+
+    public int describeContents()
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.share.internal.DeviceShareDialogFragment$RequestState $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        java.lang.String $r2;
+        long $l1;
+
+        $r0 := @this: com.facebook.share.internal.DeviceShareDialogFragment$RequestState;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: java.lang.String a>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $l1 = $r0.<com.facebook.share.internal.DeviceShareDialogFragment$RequestState: long b>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeLong(long)>($l1);
+
+        return;
+    }
+}

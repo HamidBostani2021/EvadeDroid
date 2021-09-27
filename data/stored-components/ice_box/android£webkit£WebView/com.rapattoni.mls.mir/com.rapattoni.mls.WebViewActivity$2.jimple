@@ -1,0 +1,57 @@
+class com.rapattoni.mls.WebViewActivity$2 extends android.webkit.WebChromeClient
+{
+    final com.rapattoni.mls.WebViewActivity this$0;
+
+    void <init>(com.rapattoni.mls.WebViewActivity)
+    {
+        com.rapattoni.mls.WebViewActivity$2 $r0;
+        com.rapattoni.mls.WebViewActivity $r1;
+
+        $r0 := @this: com.rapattoni.mls.WebViewActivity$2;
+
+        $r1 := @parameter0: com.rapattoni.mls.WebViewActivity;
+
+        $r0.<com.rapattoni.mls.WebViewActivity$2: com.rapattoni.mls.WebViewActivity this$0> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebChromeClient: void <init>()>();
+
+        return;
+    }
+
+    public boolean onCreateWindow(android.webkit.WebView, boolean, boolean, android.os.Message)
+    {
+        com.rapattoni.mls.WebViewActivity$2 $r0;
+        android.webkit.WebView $r1, $r3;
+        boolean $z0, $z1;
+        android.os.Message $r2;
+        android.content.Context $r4;
+        java.lang.Object $r5;
+        android.webkit.WebView$WebViewTransport $r6;
+
+        $r0 := @this: com.rapattoni.mls.WebViewActivity$2;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 := @parameter2: boolean;
+
+        $r2 := @parameter3: android.os.Message;
+
+        $r3 = new android.webkit.WebView;
+
+        $r4 = virtualinvoke $r1.<android.webkit.WebView: android.content.Context getContext()>();
+
+        specialinvoke $r3.<android.webkit.WebView: void <init>(android.content.Context)>($r4);
+
+        $r5 = $r2.<android.os.Message: java.lang.Object obj>;
+
+        $r6 = (android.webkit.WebView$WebViewTransport) $r5;
+
+        virtualinvoke $r6.<android.webkit.WebView$WebViewTransport: void setWebView(android.webkit.WebView)>($r3);
+
+        virtualinvoke $r2.<android.os.Message: void sendToTarget()>();
+
+        return 1;
+    }
+}

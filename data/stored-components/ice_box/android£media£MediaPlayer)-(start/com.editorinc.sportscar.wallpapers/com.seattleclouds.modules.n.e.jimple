@@ -1,0 +1,55 @@
+class com.seattleclouds.modules.n.e extends java.util.TimerTask
+{
+    final int a;
+    final com.seattleclouds.modules.n.a b;
+
+    void <init>(com.seattleclouds.modules.n.a, int)
+    {
+        com.seattleclouds.modules.n.e $r0;
+        com.seattleclouds.modules.n.a $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.n.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.n.a;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.n.e: com.seattleclouds.modules.n.a b> = $r1;
+
+        $r0.<com.seattleclouds.modules.n.e: int a> = $i0;
+
+        specialinvoke $r0.<java.util.TimerTask: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.n.e $r0;
+        com.seattleclouds.modules.n.f $r1;
+        com.seattleclouds.modules.n.a $r2;
+        android.support.v4.app.ac $r3;
+
+        $r0 := @this: com.seattleclouds.modules.n.e;
+
+        $r2 = $r0.<com.seattleclouds.modules.n.e: com.seattleclouds.modules.n.a b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.n.a: android.support.v4.app.ac n()>();
+
+        if $r3 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.n.e: com.seattleclouds.modules.n.a b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.n.a: android.support.v4.app.ac n()>();
+
+        $r1 = new com.seattleclouds.modules.n.f;
+
+        specialinvoke $r1.<com.seattleclouds.modules.n.f: void <init>(com.seattleclouds.modules.n.e)>($r0);
+
+        virtualinvoke $r3.<android.support.v4.app.ac: void runOnUiThread(java.lang.Runnable)>($r1);
+
+     label1:
+        return;
+    }
+}

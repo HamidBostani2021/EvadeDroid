@@ -1,0 +1,129 @@
+public class com.gohonzonfree.MainActivity1 extends android.app.Activity
+{
+    private android.media.MediaPlayer mp;
+    public boolean on;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.gohonzonfree.MainActivity1 $r0;
+
+        $r0 := @this: com.gohonzonfree.MainActivity1;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.gohonzonfree.MainActivity1 $r0;
+        android.os.Bundle $r1;
+        android.view.Window $r2;
+        android.media.MediaPlayer $r3;
+
+        $r0 := @this: com.gohonzonfree.MainActivity1;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r0.<com.gohonzonfree.MainActivity1: boolean on> = 0;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.gohonzonfree.MainActivity1: void setContentView(int)>(2130903042);
+
+        $r2 = virtualinvoke $r0.<com.gohonzonfree.MainActivity1: android.view.Window getWindow()>();
+
+        virtualinvoke $r2.<android.view.Window: void addFlags(int)>(128);
+
+        virtualinvoke $r0.<com.gohonzonfree.MainActivity1: void setVolumeControlStream(int)>(3);
+
+        $r3 = $r0.<com.gohonzonfree.MainActivity1: android.media.MediaPlayer mp>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.gohonzonfree.MainActivity1: android.media.MediaPlayer mp>;
+
+        virtualinvoke $r3.<android.media.MediaPlayer: void release()>();
+
+     label1:
+        $r3 = staticinvoke <android.media.MediaPlayer: android.media.MediaPlayer create(android.content.Context,int)>($r0, 2130968576);
+
+        $r0.<com.gohonzonfree.MainActivity1: android.media.MediaPlayer mp> = $r3;
+
+        $r3 = $r0.<com.gohonzonfree.MainActivity1: android.media.MediaPlayer mp>;
+
+        virtualinvoke $r3.<android.media.MediaPlayer: void setLooping(boolean)>(1);
+
+        $r3 = $r0.<com.gohonzonfree.MainActivity1: android.media.MediaPlayer mp>;
+
+        virtualinvoke $r3.<android.media.MediaPlayer: void start()>();
+
+        return;
+    }
+
+    protected void onDestroy()
+    {
+        com.gohonzonfree.MainActivity1 $r0;
+        android.media.MediaPlayer $r1;
+
+        $r0 := @this: com.gohonzonfree.MainActivity1;
+
+        $r1 = $r0.<com.gohonzonfree.MainActivity1: android.media.MediaPlayer mp>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.gohonzonfree.MainActivity1: android.media.MediaPlayer mp>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void release()>();
+
+     label1:
+        specialinvoke $r0.<android.app.Activity: void onDestroy()>();
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.gohonzonfree.MainActivity1 this;
+        android.content.Intent $r0;
+
+        this := @this: com.gohonzonfree.MainActivity1;
+
+        $r0 = this.<com.gohonzonfree.MainActivity1: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.gohonzonfree.MainActivity1 this;
+        android.content.Intent parameter0;
+
+        this := @this: com.gohonzonfree.MainActivity1;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.gohonzonfree.MainActivity1: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.gohonzonfree.MainActivity1 this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.gohonzonfree.MainActivity1;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.gohonzonfree.MainActivity1: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

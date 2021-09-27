@@ -1,0 +1,12 @@
+public class Slicecom.thepowerapps.consultadniantecedentespenalesespanamethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.thepowerapps.consultadniantecedentespenalesespanamethod this;
+
+        this := @this: Slicecom.thepowerapps.consultadniantecedentespenalesespanamethod;
+
+        return;
+    }
+}

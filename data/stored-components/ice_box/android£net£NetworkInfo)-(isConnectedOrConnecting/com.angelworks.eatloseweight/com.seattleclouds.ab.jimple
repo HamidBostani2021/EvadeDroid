@@ -1,0 +1,888 @@
+public abstract class com.seattleclouds.ab extends com.seattleclouds.p
+{
+    private static java.lang.String n;
+    private com.seattleclouds.location.geofencing.a m;
+    private boolean o;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.ab: java.lang.String n> = "com.seattleclouds.modules.baidumap.GeofenceUtil.BaiduGeofenceManager";
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.ab $r0;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        specialinvoke $r0.<com.seattleclouds.p: void <init>()>();
+
+        $r0.<com.seattleclouds.ab: boolean o> = 0;
+
+        return;
+    }
+
+    public static java.lang.String b(int)
+    {
+        int $i0;
+        java.lang.StringBuilder $r0;
+        java.lang.String $r1;
+
+        $i0 := @parameter0: int;
+
+        $r0 = new java.lang.StringBuilder;
+
+        specialinvoke $r0.<java.lang.StringBuilder: void <init>()>();
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("tab");
+
+        $i0 = $i0 + 1;
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".html");
+
+        $r1 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r1;
+    }
+
+    private void o()
+    {
+        com.seattleclouds.ab $r0;
+        android.support.v7.a.a $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.ab: android.support.v7.a.a h()>();
+
+        virtualinvoke $r1.<android.support.v7.a.a: void a(int)>(0);
+
+        $i0 = <com.seattleclouds.j: int activity_no_resources>;
+
+        virtualinvoke $r0.<com.seattleclouds.ab: void setContentView(int)>($i0);
+
+        return;
+    }
+
+    private void p()
+    {
+        com.seattleclouds.ab $r0;
+        int $i0;
+        com.seattleclouds.ce $r1;
+        boolean $z0;
+        int[] $r2;
+        com.seattleclouds.location.geofencing.a $r3;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.ce: boolean C()>();
+
+        if $z0 != 0 goto label1;
+
+        $r1 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.ce: boolean D()>();
+
+        if $z0 == 0 goto label7;
+
+     label1:
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a()>();
+
+        if $z0 == 0 goto label5;
+
+        $i0 = staticinvoke <android.support.v4.content.c: int a(android.content.Context,java.lang.String)>($r0, "android.permission.ACCESS_FINE_LOCATION");
+
+        if $i0 != 0 goto label3;
+
+        $z0 = 1;
+
+     label2:
+        if $z0 != 0 goto label5;
+
+        $z0 = $r0.<com.seattleclouds.ab: boolean o>;
+
+        if $z0 == 0 goto label4;
+
+        return;
+
+     label3:
+        $z0 = 0;
+
+        goto label2;
+
+     label4:
+        $r0.<com.seattleclouds.ab: boolean o> = 1;
+
+        $r2 = newarray (int)[2];
+
+        $i0 = <com.seattleclouds.l: int geofences_permission_location_rational>;
+
+        $r2[0] = $i0;
+
+        $i0 = <com.seattleclouds.l: int geofences_permission_location_toast>;
+
+        $r2[1] = $i0;
+
+        staticinvoke <com.seattleclouds.util.w: void a(android.support.v7.a.v,int,java.lang.String,int[])>($r0, 1005, "android.permission.ACCESS_FINE_LOCATION", $r2);
+
+        return;
+
+     label5:
+        $r1 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.ce: boolean C()>();
+
+        if $z0 == 0 goto label6;
+
+        $r3 = new com.seattleclouds.location.geofencing.a;
+
+        specialinvoke $r3.<com.seattleclouds.location.geofencing.a: void <init>(android.content.Context)>($r0);
+
+        $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        virtualinvoke $r3.<com.seattleclouds.location.geofencing.a: void a()>();
+
+        return;
+
+     label6:
+        $r1 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.ce: boolean D()>();
+
+        if $z0 == 0 goto label7;
+
+        virtualinvoke $r0.<com.seattleclouds.ab: void r()>();
+
+     label7:
+        return;
+    }
+
+    protected com.seattleclouds.FragmentInfo a(java.lang.String)
+    {
+        com.seattleclouds.ab $r0;
+        java.lang.String $r1, $r2;
+        boolean $z0;
+        com.seattleclouds.FragmentInfo $r3;
+        android.os.Bundle $r4;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label3;
+
+        $r2 = staticinvoke <com.seattleclouds.App: java.lang.String h(java.lang.String)>($r1);
+
+        $r3 = staticinvoke <com.seattleclouds.App: com.seattleclouds.FragmentInfo a(java.lang.String,android.content.Context)>($r2, $r0);
+
+     label1:
+        if $r3 != null goto label2;
+
+        $r1 = staticinvoke <com.seattleclouds.App: java.lang.String h(java.lang.String)>($r1);
+
+        $r3 = staticinvoke <com.seattleclouds.App: com.seattleclouds.FragmentInfo q(java.lang.String)>($r1);
+
+     label2:
+        if $r3 == null goto label4;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.FragmentInfo: android.os.Bundle c()>();
+
+        virtualinvoke $r4.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("ARG_IS_ROOT_FRAGMENT", 1);
+
+        return $r3;
+
+     label3:
+        $r3 = staticinvoke <com.seattleclouds.App: com.seattleclouds.FragmentInfo a(java.lang.String,android.content.Context)>($r1, $r0);
+
+        goto label1;
+
+     label4:
+        return $r3;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.ab $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 := @parameter0: java.lang.String;
+
+        staticinvoke <com.seattleclouds.App: void c(android.content.Context,java.lang.String)>($r0, $r1);
+
+        return;
+    }
+
+    protected abstract void l();
+
+    protected void onActivityResult(int, int, android.content.Intent)
+    {
+        com.seattleclouds.ab $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        com.seattleclouds.location.geofencing.a $r2;
+        boolean $z0;
+        java.lang.String $r3, $r4;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        lookupswitch($i0)
+        {
+            case 1: goto label02;
+            case 2: goto label07;
+            case 3: goto label10;
+            default: goto label01;
+        };
+
+     label01:
+        $r2 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        if $r2 == null goto label11;
+
+        $r2 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.location.geofencing.a: boolean a(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+        if $z0 == 0 goto label11;
+
+        return;
+
+     label02:
+        if $i1 != 1 goto label05;
+
+        $r3 = <com.seattleclouds.App: java.lang.String x>;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean startsWith(java.lang.String)>("Tx7EcUcOd70UeXxV0b0L_");
+
+        if $z0 == 0 goto label04;
+
+        $r3 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r4 = "Tx7EcUcOd70UeXxV0b0L_";
+
+        $i0 = virtualinvoke $r4.<java.lang.String: int length()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String substring(int)>($i0);
+
+        staticinvoke <com.seattleclouds.AppStarterActivity: void a(android.app.Activity,java.lang.String)>($r0, $r3);
+
+     label03:
+        virtualinvoke $r0.<com.seattleclouds.ab: void finish()>();
+
+        return;
+
+     label04:
+        staticinvoke <com.seattleclouds.AppStarterActivity: void c(android.app.Activity)>($r0);
+
+        goto label03;
+
+     label05:
+        if $i1 != 2 goto label06;
+
+        specialinvoke $r0.<com.seattleclouds.ab: void o()>();
+
+        return;
+
+     label06:
+        if $i1 != 3 goto label12;
+
+        staticinvoke <com.seattleclouds.appauth.e: void c(android.app.Activity)>($r0);
+
+        return;
+
+     label07:
+        if $i1 != -1 goto label09;
+
+        $z0 = staticinvoke <com.seattleclouds.startupoptions.WelcomeActivity: boolean a(android.content.Context)>($r0);
+
+        if $z0 == 0 goto label08;
+
+        staticinvoke <com.seattleclouds.startupoptions.WelcomeActivity: void a(android.app.Activity,int)>($r0, 3);
+
+        return;
+
+     label08:
+        staticinvoke <com.seattleclouds.appauth.e: void a(android.app.Activity)>($r0);
+
+        return;
+
+     label09:
+        virtualinvoke $r0.<com.seattleclouds.ab: void finish()>();
+
+        return;
+
+     label10:
+        staticinvoke <com.seattleclouds.appauth.e: void a(android.app.Activity)>($r0);
+
+        return;
+
+     label11:
+        specialinvoke $r0.<com.seattleclouds.p: void onActivityResult(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+     label12:
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.ab $r0;
+        android.os.Bundle $r1, $r5;
+        com.seattleclouds.util.an $r2;
+        java.lang.String $r3;
+        android.content.Intent $r4;
+        boolean $z0, $z1;
+        android.support.v7.a.a $r6;
+        com.seattleclouds.ce $r7;
+        int $i0;
+        android.support.v4.app.aj $r8;
+        android.support.v4.app.Fragment $r9;
+        android.support.v4.app.z $r10;
+        com.seattleclouds.location.geofencing.a $r11;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.p: void onCreate(android.os.Bundle)>($r1);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.ab: android.content.Intent getIntent()>();
+
+        $r5 = virtualinvoke $r4.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r5 == null goto label02;
+
+        $z0 = virtualinvoke $r5.<android.os.Bundle: boolean getBoolean(java.lang.String)>("restart");
+
+        if $z0 == 0 goto label01;
+
+        staticinvoke <com.seattleclouds.AppStarterActivity: void c(android.app.Activity)>($r0);
+
+        virtualinvoke $r0.<com.seattleclouds.ab: void finish()>();
+
+        return;
+
+     label01:
+        $z0 = virtualinvoke $r5.<android.os.Bundle: boolean getBoolean(java.lang.String)>("finishApp");
+
+        if $z0 == 0 goto label02;
+
+        virtualinvoke $r0.<com.seattleclouds.ab: void finish()>();
+
+        return;
+
+     label02:
+        $r6 = virtualinvoke $r0.<com.seattleclouds.ab: android.support.v7.a.a h()>();
+
+        if $r6 == null goto label03;
+
+        virtualinvoke $r6.<android.support.v7.a.a: void a(boolean)>(0);
+
+     label03:
+        $r7 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.ce: boolean a()>();
+
+        if $z0 != 0 goto label04;
+
+        $i0 = <com.seattleclouds.l: int error_initializing_app>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int)>($r0, $i0);
+
+        specialinvoke $r0.<com.seattleclouds.ab: void o()>();
+
+        return;
+
+     label04:
+        specialinvoke $r0.<com.seattleclouds.ab: void p()>();
+
+        if $r1 == null goto label09;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("STATE_RESUME_BG_PLAYER");
+
+        $z1 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("STATE_LOCATION_PERMISSION_REQUESTED");
+
+        $r0.<com.seattleclouds.ab: boolean o> = $z1;
+
+        $z1 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("STATE_CONNECTING_BG_PLAYER");
+
+        if $z1 == 0 goto label05;
+
+        $r2 = <com.seattleclouds.App: com.seattleclouds.util.an P>;
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.ab: android.support.v4.app.aj f()>();
+
+        $r3 = <com.seattleclouds.util.ap: java.lang.String ai>;
+
+        $r9 = virtualinvoke $r8.<android.support.v4.app.aj: android.support.v4.app.Fragment a(java.lang.String)>($r3);
+
+        $r10 = (android.support.v4.app.z) $r9;
+
+        virtualinvoke $r2.<com.seattleclouds.util.an: void a(android.support.v4.app.z)>($r10);
+
+     label05:
+        if $z0 == 0 goto label06;
+
+        $r2 = <com.seattleclouds.App: com.seattleclouds.util.an P>;
+
+        virtualinvoke $r2.<com.seattleclouds.util.an: void a()>();
+
+     label06:
+        $r11 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        if $r11 == null goto label07;
+
+        $r11 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("STATE_ALREADY_SHOWED_PLAY_SRV_MESSAGE");
+
+        virtualinvoke $r11.<com.seattleclouds.location.geofencing.a: void a(boolean)>($z0);
+
+     label07:
+        staticinvoke <com.seattleclouds.App: void a(boolean)>(1);
+
+     label08:
+        staticinvoke <com.seattleclouds.ads.h: void b(android.app.Activity)>($r0);
+
+        virtualinvoke $r0.<com.seattleclouds.ab: void l()>();
+
+        return;
+
+     label09:
+        $z0 = staticinvoke <com.seattleclouds.startupoptions.AgreementActivity: boolean a(android.content.Context)>($r0);
+
+        if $z0 == 0 goto label10;
+
+        staticinvoke <com.seattleclouds.startupoptions.AgreementActivity: void a(android.app.Activity,int)>($r0, 2);
+
+        goto label08;
+
+     label10:
+        $z0 = staticinvoke <com.seattleclouds.startupoptions.WelcomeActivity: boolean a(android.content.Context)>($r0);
+
+        if $z0 == 0 goto label11;
+
+        staticinvoke <com.seattleclouds.startupoptions.WelcomeActivity: void a(android.app.Activity,int)>($r0, 3);
+
+        goto label08;
+
+     label11:
+        staticinvoke <com.seattleclouds.appauth.e: void a(android.app.Activity)>($r0);
+
+        goto label08;
+    }
+
+    public boolean onCreateOptionsMenu(android.view.Menu)
+    {
+        com.seattleclouds.ab $r0;
+        android.view.Menu $r1;
+        int $i0;
+        boolean $z0;
+        com.seattleclouds.ce $r2;
+        android.view.MenuInflater $r3;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 != 0 goto label1;
+
+        $r2 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.ce: boolean f()>();
+
+        if $z0 == 0 goto label3;
+
+     label1:
+        $z0 = 1;
+
+     label2:
+        if $z0 == 0 goto label4;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.ab: android.view.MenuInflater getMenuInflater()>();
+
+        $i0 = <com.seattleclouds.k: int app_main>;
+
+        virtualinvoke $r3.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        return 1;
+
+     label3:
+        $z0 = 0;
+
+        goto label2;
+
+     label4:
+        $z0 = specialinvoke $r0.<com.seattleclouds.p: boolean onCreateOptionsMenu(android.view.Menu)>($r1);
+
+        return $z0;
+    }
+
+    protected void onDestroy()
+    {
+        com.seattleclouds.ab $r0;
+        com.seattleclouds.util.an $r1;
+        com.seattleclouds.location.geofencing.a $r2;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 = <com.seattleclouds.App: com.seattleclouds.util.an O>;
+
+        virtualinvoke $r1.<com.seattleclouds.util.an: void c()>();
+
+        $r1 = <com.seattleclouds.App: com.seattleclouds.util.an P>;
+
+        virtualinvoke $r1.<com.seattleclouds.util.an: void b()>();
+
+        staticinvoke <com.seattleclouds.App: void a(boolean)>(0);
+
+        <com.seattleclouds.modules.k.a: java.lang.String a> = null;
+
+        <com.seattleclouds.modules.k.a: java.lang.String b> = null;
+
+        staticinvoke <com.seattleclouds.ads.h: void c(android.app.Activity)>($r0);
+
+        $r2 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        virtualinvoke $r2.<com.seattleclouds.location.geofencing.a: void c()>();
+
+     label1:
+        staticinvoke <com.seattleclouds.c.b: void a()>();
+
+        specialinvoke $r0.<com.seattleclouds.p: void onDestroy()>();
+
+        return;
+    }
+
+    public boolean onOptionsItemSelected(android.view.MenuItem)
+    {
+        com.seattleclouds.ab $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        android.content.Intent $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int settings>;
+
+        if $i0 != $i1 goto label1;
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lcom/seattleclouds/SettingsActivity;");
+
+        virtualinvoke $r0.<com.seattleclouds.ab: void startActivityForResult(android.content.Intent,int)>($r2, 1);
+
+        return 1;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.p: boolean onOptionsItemSelected(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public void onRequestPermissionsResult(int, java.lang.String[], int[])
+    {
+        com.seattleclouds.ab $r0;
+        int $i0;
+        java.lang.String[] $r1;
+        int[] $r2;
+        boolean $z0;
+        android.os.Handler $r3;
+        android.os.Looper $r4;
+        com.seattleclouds.ac $r5;
+        android.widget.Toast $r6;
+        com.seattleclouds.ce $r7;
+        com.seattleclouds.location.geofencing.a $r8;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.String[];
+
+        $r2 := @parameter2: int[];
+
+        if $i0 != 1005 goto label3;
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(java.lang.String[],int[],java.lang.String)>($r1, $r2, "android.permission.ACCESS_FINE_LOCATION");
+
+        if $z0 != 0 goto label1;
+
+        $r3 = new android.os.Handler;
+
+        $r4 = staticinvoke <android.os.Looper: android.os.Looper myLooper()>();
+
+        specialinvoke $r3.<android.os.Handler: void <init>(android.os.Looper)>($r4);
+
+        $r5 = new com.seattleclouds.ac;
+
+        specialinvoke $r5.<com.seattleclouds.ac: void <init>(com.seattleclouds.ab)>($r0);
+
+        virtualinvoke $r3.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 400L);
+
+        return;
+
+     label1:
+        $i0 = <com.seattleclouds.l: int common_permission_granted>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r0, $i0, 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        $r7 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.ce: boolean C()>();
+
+        if $z0 == 0 goto label2;
+
+        $r8 = new com.seattleclouds.location.geofencing.a;
+
+        specialinvoke $r8.<com.seattleclouds.location.geofencing.a: void <init>(android.content.Context)>($r0);
+
+        $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m> = $r8;
+
+        $r8 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        virtualinvoke $r8.<com.seattleclouds.location.geofencing.a: void a()>();
+
+        return;
+
+     label2:
+        $r7 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.ce: boolean D()>();
+
+        if $z0 == 0 goto label4;
+
+        virtualinvoke $r0.<com.seattleclouds.ab: void r()>();
+
+        return;
+
+     label3:
+        specialinvoke $r0.<com.seattleclouds.p: void onRequestPermissionsResult(int,java.lang.String[],int[])>($i0, $r1, $r2);
+
+     label4:
+        return;
+    }
+
+    protected void onSaveInstanceState(android.os.Bundle)
+    {
+        com.seattleclouds.ab $r0;
+        android.os.Bundle $r1;
+        com.seattleclouds.util.an $r2;
+        boolean $z0;
+        com.seattleclouds.location.geofencing.a $r3;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = <com.seattleclouds.App: com.seattleclouds.util.an P>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.util.an: boolean e()>();
+
+        virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("STATE_RESUME_BG_PLAYER", $z0);
+
+        $r2 = <com.seattleclouds.App: com.seattleclouds.util.an P>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.util.an: boolean g()>();
+
+        virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("STATE_CONNECTING_BG_PLAYER", $z0);
+
+        $z0 = $r0.<com.seattleclouds.ab: boolean o>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("STATE_LOCATION_PERMISSION_REQUESTED", $z0);
+
+        $r3 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.ab: com.seattleclouds.location.geofencing.a m>;
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.location.geofencing.a: boolean d()>();
+
+        virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("STATE_ALREADY_SHOWED_PLAY_SRV_MESSAGE", $z0);
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.p: void onSaveInstanceState(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    protected void r()
+    {
+        com.seattleclouds.ab $r0;
+        java.lang.String $r1;
+        java.lang.Class $r2;
+        android.content.Intent $r3, r12;
+        android.content.Context $r4;
+        android.os.Bundle $r5, r13;
+        com.seattleclouds.ce $r6;
+        boolean $z0;
+        java.lang.Throwable $r7, $r11;
+        java.lang.StringBuilder $r8, r14;
+        java.lang.StackTraceElement[] $r9;
+        java.lang.ClassNotFoundException $r10;
+        java.lang.SecurityException r15;
+        java.lang.IllegalStateException r16;
+
+        $r0 := @this: com.seattleclouds.ab;
+
+        $r1 = <com.seattleclouds.ab: java.lang.String n>;
+
+     label01:
+        $r2 = staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>($r1);
+
+     label02:
+        if $r2 == null goto label21;
+
+        r12 = new android.content.Intent;
+
+        $r3 = r12;
+
+     label03:
+        $r4 = virtualinvoke $r0.<com.seattleclouds.ab: android.content.Context getApplicationContext()>();
+
+        specialinvoke r12.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, $r2);
+
+     label04:
+        r13 = new android.os.Bundle;
+
+        $r5 = r13;
+
+     label05:
+        specialinvoke r13.<android.os.Bundle: void <init>()>();
+
+     label06:
+        $r6 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+     label07:
+        $z0 = virtualinvoke $r6.<com.seattleclouds.ce: boolean D()>();
+
+        virtualinvoke $r5.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("isGeofencingEnabled", $z0);
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtras(android.os.Bundle)>($r5);
+
+     label08:
+        if $r3 == null goto label21;
+
+     label09:
+        virtualinvoke $r0.<com.seattleclouds.ab: android.content.ComponentName startService(android.content.Intent)>($r3);
+
+     label10:
+        return;
+
+     label11:
+        $r7 := @caughtexception;
+
+        r14 = new java.lang.StringBuilder;
+
+        $r8 = r14;
+
+     label12:
+        specialinvoke r14.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Started BaiduGeofenceManager service catch SecurityException, ");
+
+     label13:
+        r15 = (java.lang.SecurityException) $r7;
+
+     label14:
+        $r9 = virtualinvoke r15.<java.lang.SecurityException: java.lang.StackTraceElement[] getStackTrace()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r9);
+
+        $r1 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("BaseAppActivity", $r1);
+
+     label15:
+        return;
+
+     label16:
+        $r10 := @caughtexception;
+
+        r14 = new java.lang.StringBuilder;
+
+        specialinvoke r14.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke r14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Failed to load BaiduGeofenceManager: ");
+
+        $r1 = <com.seattleclouds.ab: java.lang.String n>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("BaseAppActivity", $r1, $r10);
+
+        return;
+
+     label17:
+        $r11 := @caughtexception;
+
+        r14 = new java.lang.StringBuilder;
+
+        $r8 = r14;
+
+     label18:
+        specialinvoke r14.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Started BaiduGeofenceManager service catch IllegalStateException, ");
+
+     label19:
+        r16 = (java.lang.IllegalStateException) $r11;
+
+     label20:
+        $r9 = virtualinvoke r16.<java.lang.IllegalStateException: java.lang.StackTraceElement[] getStackTrace()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r9);
+
+        $r1 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("BaseAppActivity", $r1);
+
+     label21:
+        return;
+
+        catch java.lang.ClassNotFoundException from label01 to label02 with label16;
+        catch java.lang.ClassNotFoundException from label03 to label04 with label16;
+        catch java.lang.ClassNotFoundException from label05 to label06 with label16;
+        catch java.lang.ClassNotFoundException from label07 to label08 with label16;
+        catch java.lang.SecurityException from label09 to label10 with label11;
+        catch java.lang.IllegalStateException from label09 to label10 with label17;
+        catch java.lang.ClassNotFoundException from label09 to label10 with label16;
+        catch java.lang.ClassNotFoundException from label12 to label13 with label16;
+        catch java.lang.ClassNotFoundException from label14 to label15 with label16;
+        catch java.lang.ClassNotFoundException from label18 to label19 with label16;
+        catch java.lang.ClassNotFoundException from label20 to label21 with label16;
+    }
+}

@@ -1,0 +1,37 @@
+class com.seattleclouds.f.m extends java.lang.Object implements com.seattleclouds.f.c
+{
+    final com.seattleclouds.f.j a;
+
+    void <init>(com.seattleclouds.f.j)
+    {
+        com.seattleclouds.f.m $r0;
+        com.seattleclouds.f.j $r1;
+
+        $r0 := @this: com.seattleclouds.f.m;
+
+        $r1 := @parameter0: com.seattleclouds.f.j;
+
+        $r0.<com.seattleclouds.f.m: com.seattleclouds.f.j a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.f.m $r0;
+        boolean $z0;
+        com.seattleclouds.f.j $r1;
+
+        $r0 := @this: com.seattleclouds.f.m;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.f.m: com.seattleclouds.f.j a>;
+
+        virtualinvoke $r1.<com.seattleclouds.f.j: void h(boolean)>(0);
+
+        return;
+    }
+}

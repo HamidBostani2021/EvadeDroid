@@ -1,0 +1,70 @@
+public class com.seattleclouds.modules.k.c extends com.seattleclouds.g.j
+{
+    private static final java.lang.String c;
+    private com.seattleclouds.modules.k.g d;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/modules/k/c;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.modules.k.c: java.lang.String c> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.k.c $r0;
+
+        $r0 := @this: com.seattleclouds.modules.k.c;
+
+        specialinvoke $r0.<com.seattleclouds.g.j: void <init>()>();
+
+        return;
+    }
+
+    static com.seattleclouds.modules.k.g a(com.seattleclouds.modules.k.c)
+    {
+        com.seattleclouds.modules.k.c $r0;
+        com.seattleclouds.modules.k.g r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.k.c;
+
+        r1 = $r0.<com.seattleclouds.modules.k.c: com.seattleclouds.modules.k.g d>;
+
+        return r1;
+    }
+
+    public void a(com.seattleclouds.modules.k.g)
+    {
+        com.seattleclouds.modules.k.c $r0;
+        com.seattleclouds.modules.k.g $r1;
+
+        $r0 := @this: com.seattleclouds.modules.k.c;
+
+        $r1 := @parameter0: com.seattleclouds.modules.k.g;
+
+        $r0.<com.seattleclouds.modules.k.c: com.seattleclouds.modules.k.g d> = $r1;
+
+        return;
+    }
+
+    protected android.webkit.WebViewClient aj()
+    {
+        com.seattleclouds.modules.k.c $r0;
+        com.seattleclouds.modules.k.d $r1;
+
+        $r0 := @this: com.seattleclouds.modules.k.c;
+
+        $r1 = new com.seattleclouds.modules.k.d;
+
+        specialinvoke $r1.<com.seattleclouds.modules.k.d: void <init>(com.seattleclouds.modules.k.c)>($r0);
+
+        return $r1;
+    }
+}

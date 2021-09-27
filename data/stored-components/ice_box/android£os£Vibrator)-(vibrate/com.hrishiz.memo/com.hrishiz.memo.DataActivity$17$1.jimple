@@ -1,0 +1,422 @@
+class com.hrishiz.memo.DataActivity$17$1 extends java.lang.Object implements java.lang.Runnable
+{
+    final com.hrishiz.memo.DataActivity$17 this$1;
+
+    void <init>(com.hrishiz.memo.DataActivity$17)
+    {
+        com.hrishiz.memo.DataActivity$17$1 $r0;
+        com.hrishiz.memo.DataActivity$17 $r1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$17$1;
+
+        $r1 := @parameter0: com.hrishiz.memo.DataActivity$17;
+
+        $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.hrishiz.memo.DataActivity$17$1 $r0;
+        com.hrishiz.memo.DataActivity$17 $r1;
+        com.hrishiz.memo.DataActivity $r2;
+        android.widget.TextView $r3;
+        android.content.Intent $r4;
+        java.lang.String $r5;
+        android.widget.EditText $r6;
+        android.content.SharedPreferences $r7;
+        android.widget.Switch $r8;
+        boolean $z0;
+        android.widget.Spinner $r9;
+        int $i0;
+        android.graphics.Typeface $r10;
+        android.text.Editable $r11;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$17$1;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r3 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.TextView access$17(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r4 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r5 = virtualinvoke $r4.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r7 = staticinvoke <com.hrishiz.memo.DataActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r4 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r5 = virtualinvoke $r4.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r5 = interfaceinvoke $r7.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r5, "");
+
+        virtualinvoke $r6.<android.widget.EditText: void setText(java.lang.CharSequence)>($r5);
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Switch access$24(com.hrishiz.memo.DataActivity)>($r2);
+
+        $z0 = virtualinvoke $r8.<android.widget.Switch: boolean isChecked()>();
+
+        if $z0 == 0 goto label04;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Switch access$25(com.hrishiz.memo.DataActivity)>($r2);
+
+        $z0 = virtualinvoke $r8.<android.widget.Switch: boolean isChecked()>();
+
+        if $z0 == 0 goto label04;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 0 goto label01;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 3);
+
+     label01:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 1 goto label02;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface SERIF>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 3);
+
+     label02:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 2 goto label03;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface MONOSPACE>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 3);
+
+     label03:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r11 = virtualinvoke $r6.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r5 = interfaceinvoke $r11.<android.text.Editable: java.lang.String toString()>();
+
+        $i0 = virtualinvoke $r5.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label14;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        staticinvoke <com.hrishiz.memo.DataActivity: void access$1(com.hrishiz.memo.DataActivity,java.lang.String)>($r2, "Data Loaded");
+
+        return;
+
+     label04:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Switch access$24(com.hrishiz.memo.DataActivity)>($r2);
+
+        $z0 = virtualinvoke $r8.<android.widget.Switch: boolean isChecked()>();
+
+        if $z0 != 0 goto label05;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Switch access$25(com.hrishiz.memo.DataActivity)>($r2);
+
+        $z0 = virtualinvoke $r8.<android.widget.Switch: boolean isChecked()>();
+
+        if $z0 == 0 goto label11;
+
+     label05:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Switch access$24(com.hrishiz.memo.DataActivity)>($r2);
+
+        $z0 = virtualinvoke $r8.<android.widget.Switch: boolean isChecked()>();
+
+        if $z0 == 0 goto label08;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 0 goto label06;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 1);
+
+     label06:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 1 goto label07;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface SERIF>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 1);
+
+     label07:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 2 goto label08;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface MONOSPACE>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 1);
+
+     label08:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r8 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Switch access$25(com.hrishiz.memo.DataActivity)>($r2);
+
+        $z0 = virtualinvoke $r8.<android.widget.Switch: boolean isChecked()>();
+
+        if $z0 == 0 goto label03;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 0 goto label09;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 2);
+
+     label09:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 1 goto label10;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface SERIF>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 2);
+
+     label10:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 2 goto label03;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface MONOSPACE>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r10, 2);
+
+        goto label03;
+
+     label11:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 0 goto label12;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface)>($r10);
+
+     label12:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 1 goto label13;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface SERIF>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface)>($r10);
+
+     label13:
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r9 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)>($r2);
+
+        $i0 = virtualinvoke $r9.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        if $i0 != 2 goto label03;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity$17$1: com.hrishiz.memo.DataActivity$17 this$1>;
+
+        $r2 = staticinvoke <com.hrishiz.memo.DataActivity$17: com.hrishiz.memo.DataActivity access$0(com.hrishiz.memo.DataActivity$17)>($r1);
+
+        $r6 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r10 = <android.graphics.Typeface: android.graphics.Typeface MONOSPACE>;
+
+        virtualinvoke $r6.<android.widget.EditText: void setTypeface(android.graphics.Typeface)>($r10);
+
+        goto label03;
+
+     label14:
+        return;
+    }
+}

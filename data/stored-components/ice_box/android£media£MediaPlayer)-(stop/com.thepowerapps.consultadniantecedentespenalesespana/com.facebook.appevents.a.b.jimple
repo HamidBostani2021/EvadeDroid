@@ -1,0 +1,118 @@
+final class com.facebook.appevents.a.b extends java.lang.Object implements android.app.Application$ActivityLifecycleCallbacks
+{
+
+    void <init>()
+    {
+        com.facebook.appevents.a.b $r0;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onActivityCreated(android.app.Activity, android.os.Bundle)
+    {
+        com.facebook.appevents.a.b $r0;
+        android.app.Activity $r1;
+        android.os.Bundle $r2;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        staticinvoke <com.facebook.appevents.a.g: void b()>();
+
+        staticinvoke <com.facebook.appevents.a.a: void a(android.app.Activity)>($r1);
+
+        return;
+    }
+
+    public void onActivityDestroyed(android.app.Activity)
+    {
+        com.facebook.appevents.a.b $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        return;
+    }
+
+    public void onActivityPaused(android.app.Activity)
+    {
+        com.facebook.appevents.a.b $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        staticinvoke <com.facebook.appevents.a.g: void b()>();
+
+        staticinvoke <com.facebook.appevents.a.a: void c(android.app.Activity)>($r1);
+
+        return;
+    }
+
+    public void onActivityResumed(android.app.Activity)
+    {
+        com.facebook.appevents.a.b $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        staticinvoke <com.facebook.appevents.a.g: void b()>();
+
+        staticinvoke <com.facebook.appevents.a.a: void b(android.app.Activity)>($r1);
+
+        return;
+    }
+
+    public void onActivitySaveInstanceState(android.app.Activity, android.os.Bundle)
+    {
+        com.facebook.appevents.a.b $r0;
+        android.app.Activity $r1;
+        android.os.Bundle $r2;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        return;
+    }
+
+    public void onActivityStarted(android.app.Activity)
+    {
+        com.facebook.appevents.a.b $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        return;
+    }
+
+    public void onActivityStopped(android.app.Activity)
+    {
+        com.facebook.appevents.a.b $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.facebook.appevents.a.b;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        staticinvoke <com.facebook.appevents.AppEventsLogger: void c()>();
+
+        return;
+    }
+}

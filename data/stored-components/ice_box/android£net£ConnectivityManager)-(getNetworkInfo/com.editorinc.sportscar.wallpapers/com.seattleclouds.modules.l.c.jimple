@@ -1,0 +1,154 @@
+public class com.seattleclouds.modules.l.c extends com.seattleclouds.r
+{
+    private com.seattleclouds.modules.l.e a;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.l.c $r0;
+
+        $r0 := @this: com.seattleclouds.modules.l.c;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    static com.seattleclouds.modules.l.e a(com.seattleclouds.modules.l.c)
+    {
+        com.seattleclouds.modules.l.c $r0;
+        com.seattleclouds.modules.l.e r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.l.c;
+
+        r1 = $r0.<com.seattleclouds.modules.l.c: com.seattleclouds.modules.l.e a>;
+
+        return r1;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.l.c $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        com.seattleclouds.modules.l.d $r4;
+        int $i0;
+        android.view.View $r5, $r6;
+        android.widget.EditText $r7, $r8;
+        android.graphics.Typeface $r9;
+        android.widget.Button $r10;
+
+        $r0 := @this: com.seattleclouds.modules.l.c;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: android.view.View a(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>($r1, $r2, $r3);
+
+        $i0 = <com.seattleclouds.j: int login_register_login_fragment>;
+
+        $r5 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int login_register_email>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.EditText) $r6;
+
+        $i0 = <com.seattleclouds.h: int login_register_password>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.EditText) $r6;
+
+        $r9 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r8.<android.widget.EditText: void setTypeface(android.graphics.Typeface)>($r9);
+
+        $i0 = <com.seattleclouds.h: int login_register_login_button>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.Button) $r6;
+
+        $r4 = new com.seattleclouds.modules.l.d;
+
+        specialinvoke $r4.<com.seattleclouds.modules.l.d: void <init>(com.seattleclouds.modules.l.c,android.widget.EditText,android.widget.EditText)>($r0, $r7, $r8);
+
+        virtualinvoke $r10.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r4);
+
+        return $r5;
+    }
+
+    public void a(android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.modules.l.c $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.l.c;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 := @parameter1: android.view.MenuInflater;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.Menu,android.view.MenuInflater)>($r1, $r2);
+
+        $i0 = <com.seattleclouds.k: int login_register_register_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        return;
+    }
+
+    public void a(com.seattleclouds.modules.l.e)
+    {
+        com.seattleclouds.modules.l.c $r0;
+        com.seattleclouds.modules.l.e $r1;
+
+        $r0 := @this: com.seattleclouds.modules.l.c;
+
+        $r1 := @parameter0: com.seattleclouds.modules.l.e;
+
+        $r0.<com.seattleclouds.modules.l.c: com.seattleclouds.modules.l.e a> = $r1;
+
+        return;
+    }
+
+    public boolean a(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.l.c $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        android.support.v4.app.ac $r2;
+        android.content.Intent $r3;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.l.c;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int login_register_register_action>;
+
+        if $i0 != $i1 goto label1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.l.c: android.support.v4.app.ac n()>();
+
+        $r3 = staticinvoke <com.seattleclouds.OneFragmentActivity: android.content.Intent a(android.content.Context,java.lang.Class)>($r2, class "Lcom/seattleclouds/modules/l/g;");
+
+        virtualinvoke $r0.<com.seattleclouds.modules.l.c: void a(android.content.Intent)>($r3);
+
+        return 1;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.r: boolean a(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+}

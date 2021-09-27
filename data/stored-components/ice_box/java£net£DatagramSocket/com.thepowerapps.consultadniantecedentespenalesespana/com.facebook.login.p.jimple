@@ -1,0 +1,7 @@
+interface  com.facebook.login.p extends java.lang.Object
+{
+
+    public abstract void a();
+
+    public abstract void b();
+}

@@ -1,0 +1,5 @@
+public interface  com.facebook.login.q extends java.lang.Object
+{
+
+    public abstract void a(com.facebook.login.LoginClient$Result);
+}

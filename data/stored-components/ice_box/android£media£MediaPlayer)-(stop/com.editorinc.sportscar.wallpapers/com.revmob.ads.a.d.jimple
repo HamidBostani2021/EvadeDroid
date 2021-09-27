@@ -1,0 +1,224 @@
+public abstract class com.revmob.ads.a.d extends java.lang.Object
+{
+    private long a;
+    private java.util.List b;
+
+    public void <init>()
+    {
+        com.revmob.ads.a.d $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.revmob.ads.a.d;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.revmob.ads.a.d: long a> = 500L;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.revmob.ads.a.d: java.util.List b> = $r1;
+
+        return;
+    }
+
+    public abstract android.view.animation.Animation a();
+
+    public final void a(long)
+    {
+        com.revmob.ads.a.d $r0;
+        long $l0;
+
+        $r0 := @this: com.revmob.ads.a.d;
+
+        $l0 := @parameter0: long;
+
+        $r0.<com.revmob.ads.a.d: long a> = $l0;
+
+        return;
+    }
+
+    public final void a(java.lang.String)
+    {
+        com.revmob.ads.a.d $r0;
+        java.lang.String $r1;
+        java.util.List $r2;
+
+        $r0 := @this: com.revmob.ads.a.d;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.revmob.ads.a.d: java.util.List b>;
+
+        interfaceinvoke $r2.<java.util.List: boolean add(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    public abstract android.view.animation.Animation b();
+
+    public abstract android.view.animation.Animation c();
+
+    public abstract android.view.animation.Animation d();
+
+    public abstract android.view.animation.Animation e();
+
+    public abstract android.view.animation.Animation f();
+
+    public abstract android.view.animation.Animation g();
+
+    public abstract android.view.animation.Animation h();
+
+    public abstract android.view.animation.Animation i();
+
+    public abstract android.view.animation.Animation j();
+
+    public final android.view.animation.Animation k()
+    {
+        com.revmob.ads.a.d $r0;
+        android.view.animation.AnimationSet $r1;
+        java.util.List $r2;
+        java.util.Iterator $r3;
+        boolean $z0;
+        java.lang.Object $r4;
+        java.lang.String $r5;
+        android.view.animation.Animation $r6;
+        long $l0;
+
+        $r0 := @this: com.revmob.ads.a.d;
+
+        $r1 = new android.view.animation.AnimationSet;
+
+        specialinvoke $r1.<android.view.animation.AnimationSet: void <init>(boolean)>(1);
+
+        $r2 = $r0.<com.revmob.ads.a.d: java.util.List b>;
+
+        $r3 = interfaceinvoke $r2.<java.util.List: java.util.Iterator iterator()>();
+
+     label01:
+        $z0 = interfaceinvoke $r3.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label11;
+
+        $r4 = interfaceinvoke $r3.<java.util.Iterator: java.lang.Object next()>();
+
+        $r5 = (java.lang.String) $r4;
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("fade_in");
+
+        if $z0 == 0 goto label02;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation a()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label02:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("fade_out");
+
+        if $z0 == 0 goto label03;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation b()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label03:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("zoom_in");
+
+        if $z0 == 0 goto label04;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation g()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label04:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("zoom_out");
+
+        if $z0 == 0 goto label05;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation h()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label05:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("slide_up");
+
+        if $z0 == 0 goto label06;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation c()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label06:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("slide_down");
+
+        if $z0 == 0 goto label07;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation d()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label07:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("slide_right");
+
+        if $z0 == 0 goto label08;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation e()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label08:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("slide_left");
+
+        if $z0 == 0 goto label09;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation f()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label09:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("rotate_clockwise");
+
+        if $z0 == 0 goto label10;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation i()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label10:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("rotate_counterclockwise");
+
+        if $z0 == 0 goto label01;
+
+        $r6 = virtualinvoke $r0.<com.revmob.ads.a.d: android.view.animation.Animation j()>();
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void addAnimation(android.view.animation.Animation)>($r6);
+
+        goto label01;
+
+     label11:
+        $l0 = $r0.<com.revmob.ads.a.d: long a>;
+
+        virtualinvoke $r1.<android.view.animation.AnimationSet: void setDuration(long)>($l0);
+
+        return $r1;
+    }
+}

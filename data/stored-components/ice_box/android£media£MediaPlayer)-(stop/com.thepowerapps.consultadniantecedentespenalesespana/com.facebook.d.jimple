@@ -1,0 +1,31 @@
+class com.facebook.d extends java.lang.Object
+{
+
+    void <init>()
+    {
+        com.facebook.d $r0;
+
+        $r0 := @this: com.facebook.d;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public com.facebook.ao a()
+    {
+        com.facebook.d $r0;
+        com.facebook.ao $r1;
+        android.content.Context $r2;
+
+        $r0 := @this: com.facebook.d;
+
+        $r1 = new com.facebook.ao;
+
+        $r2 = staticinvoke <com.facebook.s: android.content.Context f()>();
+
+        specialinvoke $r1.<com.facebook.ao: void <init>(android.content.Context)>($r2);
+
+        return $r1;
+    }
+}

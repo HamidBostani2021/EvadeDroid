@@ -1,0 +1,58 @@
+class com.seattleclouds.modules.photoeffect.n extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.modules.photoeffect.j a;
+
+    void <init>(com.seattleclouds.modules.photoeffect.j)
+    {
+        com.seattleclouds.modules.photoeffect.n $r0;
+        com.seattleclouds.modules.photoeffect.j $r1;
+
+        $r0 := @this: com.seattleclouds.modules.photoeffect.n;
+
+        $r1 := @parameter0: com.seattleclouds.modules.photoeffect.j;
+
+        $r0.<com.seattleclouds.modules.photoeffect.n: com.seattleclouds.modules.photoeffect.j a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.modules.photoeffect.n $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.photoeffect.State $r2;
+        com.seattleclouds.modules.photoeffect.j $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.photoeffect.n;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r3 = $r0.<com.seattleclouds.modules.photoeffect.n: com.seattleclouds.modules.photoeffect.j a>;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.photoeffect.j: void ac()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.photoeffect.n: com.seattleclouds.modules.photoeffect.j a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.photoeffect.j: com.seattleclouds.modules.photoeffect.State i(com.seattleclouds.modules.photoeffect.j)>($r3);
+
+        $i0 = $r2.<com.seattleclouds.modules.photoeffect.State: int b>;
+
+        if $i0 != 1 goto label1;
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.photoeffect.n: com.seattleclouds.modules.photoeffect.j a>;
+
+        staticinvoke <com.seattleclouds.modules.photoeffect.j: void a(com.seattleclouds.modules.photoeffect.j,int)>($r3, 1);
+
+        $r3 = $r0.<com.seattleclouds.modules.photoeffect.n: com.seattleclouds.modules.photoeffect.j a>;
+
+        staticinvoke <com.seattleclouds.modules.photoeffect.j: boolean b(com.seattleclouds.modules.photoeffect.j,boolean)>($r3, 0);
+
+        return;
+    }
+}

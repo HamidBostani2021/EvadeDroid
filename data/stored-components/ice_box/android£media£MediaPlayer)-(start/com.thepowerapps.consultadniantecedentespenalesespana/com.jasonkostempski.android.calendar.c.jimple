@@ -1,0 +1,102 @@
+class com.jasonkostempski.android.calendar.c extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.jasonkostempski.android.calendar.CalendarView a;
+
+    void <init>(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.c $r0;
+        com.jasonkostempski.android.calendar.CalendarView $r1;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.c;
+
+        $r1 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.jasonkostempski.android.calendar.c $r0;
+        android.view.View $r1;
+        com.jasonkostempski.android.calendar.CalendarView $r2;
+        android.widget.Button $r3;
+        byte $b0;
+        int $i1;
+        com.jasonkostempski.android.calendar.j $r4;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.c;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        $r3 = staticinvoke <com.jasonkostempski.android.calendar.CalendarView: android.widget.Button g(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        if $r1 != $r3 goto label2;
+
+        $b0 = 1;
+
+     label1:
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        $i1 = staticinvoke <com.jasonkostempski.android.calendar.CalendarView: int h(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        if $i1 != 2 goto label3;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        $r4 = staticinvoke <com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j i(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        virtualinvoke $r4.<com.jasonkostempski.android.calendar.j: void c(int)>($b0);
+
+        return;
+
+     label2:
+        $b0 = -1;
+
+        goto label1;
+
+     label3:
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        $i1 = staticinvoke <com.jasonkostempski.android.calendar.CalendarView: int h(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        if $i1 != 1 goto label4;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        $r4 = staticinvoke <com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j i(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        virtualinvoke $r4.<com.jasonkostempski.android.calendar.j: void d(int)>($b0);
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        staticinvoke <com.jasonkostempski.android.calendar.CalendarView: void j(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        return;
+
+     label4:
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        $i1 = staticinvoke <com.jasonkostempski.android.calendar.CalendarView: int h(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        if $i1 != 3 goto label5;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        $r4 = staticinvoke <com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j i(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+        virtualinvoke $r4.<com.jasonkostempski.android.calendar.j: void b(int)>($b0);
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.c: com.jasonkostempski.android.calendar.CalendarView a>;
+
+        staticinvoke <com.jasonkostempski.android.calendar.CalendarView: void f(com.jasonkostempski.android.calendar.CalendarView)>($r2);
+
+     label5:
+        return;
+    }
+}

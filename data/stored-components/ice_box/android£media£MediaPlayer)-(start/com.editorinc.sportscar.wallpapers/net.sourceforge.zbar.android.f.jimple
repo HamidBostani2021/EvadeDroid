@@ -1,0 +1,50 @@
+class net.sourceforge.zbar.android.f extends java.lang.Object implements java.lang.Runnable
+{
+    final net.sourceforge.zbar.android.ZBarScanner a;
+
+    void <init>(net.sourceforge.zbar.android.ZBarScanner)
+    {
+        net.sourceforge.zbar.android.f $r0;
+        net.sourceforge.zbar.android.ZBarScanner $r1;
+
+        $r0 := @this: net.sourceforge.zbar.android.f;
+
+        $r1 := @parameter0: net.sourceforge.zbar.android.ZBarScanner;
+
+        $r0.<net.sourceforge.zbar.android.f: net.sourceforge.zbar.android.ZBarScanner a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        net.sourceforge.zbar.android.f $r0;
+        net.sourceforge.zbar.android.ZBarScanner $r1;
+        boolean $z0;
+        android.hardware.Camera $r2;
+        android.hardware.Camera$AutoFocusCallback $r3;
+
+        $r0 := @this: net.sourceforge.zbar.android.f;
+
+        $r1 = $r0.<net.sourceforge.zbar.android.f: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z0 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean d(net.sourceforge.zbar.android.ZBarScanner)>($r1);
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<net.sourceforge.zbar.android.f: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r2 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera b(net.sourceforge.zbar.android.ZBarScanner)>($r1);
+
+        $r1 = $r0.<net.sourceforge.zbar.android.f: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r3 = $r1.<net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera$AutoFocusCallback r>;
+
+        virtualinvoke $r2.<android.hardware.Camera: void autoFocus(android.hardware.Camera$AutoFocusCallback)>($r3);
+
+     label1:
+        return;
+    }
+}

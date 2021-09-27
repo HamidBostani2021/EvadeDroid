@@ -1,0 +1,98 @@
+public class com.facebook.FacebookServiceException extends com.facebook.FacebookException
+{
+    private static final long serialVersionUID;
+    private final com.facebook.FacebookRequestError error;
+
+    public void <init>(com.facebook.FacebookRequestError, java.lang.String)
+    {
+        com.facebook.FacebookServiceException $r0;
+        com.facebook.FacebookRequestError $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.facebook.FacebookServiceException;
+
+        $r1 := @parameter0: com.facebook.FacebookRequestError;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.facebook.FacebookException: void <init>(java.lang.String)>($r2);
+
+        $r0.<com.facebook.FacebookServiceException: com.facebook.FacebookRequestError error> = $r1;
+
+        return;
+    }
+
+    public final com.facebook.FacebookRequestError getRequestError()
+    {
+        com.facebook.FacebookServiceException $r0;
+        com.facebook.FacebookRequestError r1;
+
+        $r0 := @this: com.facebook.FacebookServiceException;
+
+        r1 = $r0.<com.facebook.FacebookServiceException: com.facebook.FacebookRequestError error>;
+
+        return r1;
+    }
+
+    public final java.lang.String toString()
+    {
+        com.facebook.FacebookServiceException $r0;
+        java.lang.StringBuilder $r1;
+        com.facebook.FacebookRequestError $r2;
+        int $i0;
+        java.lang.String $r3;
+
+        $r0 := @this: com.facebook.FacebookServiceException;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("{FacebookServiceException: ");
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("httpResponseCode: ");
+
+        $r2 = $r0.<com.facebook.FacebookServiceException: com.facebook.FacebookRequestError error>;
+
+        $i0 = virtualinvoke $r2.<com.facebook.FacebookRequestError: int b()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", facebookErrorCode: ");
+
+        $r2 = $r0.<com.facebook.FacebookServiceException: com.facebook.FacebookRequestError error>;
+
+        $i0 = virtualinvoke $r2.<com.facebook.FacebookRequestError: int c()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", facebookErrorType: ");
+
+        $r2 = $r0.<com.facebook.FacebookServiceException: com.facebook.FacebookRequestError error>;
+
+        $r3 = virtualinvoke $r2.<com.facebook.FacebookRequestError: java.lang.String e()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", message: ");
+
+        $r2 = $r0.<com.facebook.FacebookServiceException: com.facebook.FacebookRequestError error>;
+
+        $r3 = virtualinvoke $r2.<com.facebook.FacebookRequestError: java.lang.String f()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("}");
+
+        $r3 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r3;
+    }
+
+    public static void <clinit>()
+    {
+        <com.facebook.FacebookServiceException: long serialVersionUID> = 1L;
+
+        return;
+    }
+}

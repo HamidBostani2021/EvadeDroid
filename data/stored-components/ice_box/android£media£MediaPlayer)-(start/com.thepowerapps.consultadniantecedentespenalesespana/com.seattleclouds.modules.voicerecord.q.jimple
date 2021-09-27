@@ -1,0 +1,37 @@
+class com.seattleclouds.modules.voicerecord.q extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.modules.voicerecord.k a;
+
+    void <init>(com.seattleclouds.modules.voicerecord.k)
+    {
+        com.seattleclouds.modules.voicerecord.q $r0;
+        com.seattleclouds.modules.voicerecord.k $r1;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.q;
+
+        $r1 := @parameter0: com.seattleclouds.modules.voicerecord.k;
+
+        $r0.<com.seattleclouds.modules.voicerecord.q: com.seattleclouds.modules.voicerecord.k a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.voicerecord.q $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.q;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        interfaceinvoke $r1.<android.content.DialogInterface: void cancel()>();
+
+        return;
+    }
+}

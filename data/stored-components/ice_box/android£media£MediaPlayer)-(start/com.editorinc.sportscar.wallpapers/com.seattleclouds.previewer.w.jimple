@@ -1,0 +1,45 @@
+class com.seattleclouds.previewer.w extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.previewer.r a;
+
+    void <init>(com.seattleclouds.previewer.r)
+    {
+        com.seattleclouds.previewer.w $r0;
+        com.seattleclouds.previewer.r $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.w;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.r;
+
+        $r0.<com.seattleclouds.previewer.w: com.seattleclouds.previewer.r a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.previewer.w $r0;
+        android.view.View $r1;
+        com.seattleclouds.previewer.r $r2, $r3;
+        android.support.v4.app.ac $r4;
+        android.content.Intent $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.w;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.previewer.w: com.seattleclouds.previewer.r a>;
+
+        $r3 = $r0.<com.seattleclouds.previewer.w: com.seattleclouds.previewer.r a>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.PreviewerOneFragmentActivity: android.content.Intent b(android.content.Context,java.lang.Class,boolean)>($r4, class "Lcom/seattleclouds/previewer/f;", 1);
+
+        virtualinvoke $r2.<com.seattleclouds.previewer.r: void a(android.content.Intent)>($r5);
+
+        return;
+    }
+}

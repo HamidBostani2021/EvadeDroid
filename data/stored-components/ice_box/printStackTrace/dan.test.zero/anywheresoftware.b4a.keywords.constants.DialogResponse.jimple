@@ -1,0 +1,28 @@
+public class anywheresoftware.b4a.keywords.constants.DialogResponse extends java.lang.Object
+{
+    public static final int CANCEL;
+    public static final int NEGATIVE;
+    public static final int POSITIVE;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.keywords.constants.DialogResponse $r0;
+
+        $r0 := @this: anywheresoftware.b4a.keywords.constants.DialogResponse;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <anywheresoftware.b4a.keywords.constants.DialogResponse: int POSITIVE> = -1;
+
+        <anywheresoftware.b4a.keywords.constants.DialogResponse: int NEGATIVE> = -2;
+
+        <anywheresoftware.b4a.keywords.constants.DialogResponse: int CANCEL> = -3;
+
+        return;
+    }
+}

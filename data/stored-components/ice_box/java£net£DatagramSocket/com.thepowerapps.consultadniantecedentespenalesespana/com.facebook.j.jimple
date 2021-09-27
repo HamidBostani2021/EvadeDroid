@@ -1,0 +1,30 @@
+class com.facebook.j extends java.lang.Object
+{
+    public java.lang.String a;
+    public int b;
+
+    private void <init>()
+    {
+        com.facebook.j $r0;
+
+        $r0 := @this: com.facebook.j;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.facebook.f)
+    {
+        com.facebook.j $r0;
+        com.facebook.f $r1;
+
+        $r0 := @this: com.facebook.j;
+
+        $r1 := @parameter0: com.facebook.f;
+
+        specialinvoke $r0.<com.facebook.j: void <init>()>();
+
+        return;
+    }
+}

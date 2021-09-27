@@ -1,0 +1,556 @@
+final class com.facebook.e extends java.lang.Object
+{
+    private static volatile com.facebook.e a;
+    private final android.support.v4.content.q b;
+    private final com.facebook.c c;
+    private com.facebook.AccessToken d;
+    private java.util.concurrent.atomic.AtomicBoolean e;
+    private java.util.Date f;
+
+    void <init>(android.support.v4.content.q, com.facebook.c)
+    {
+        com.facebook.e $r0;
+        android.support.v4.content.q $r1;
+        com.facebook.c $r2;
+        java.util.concurrent.atomic.AtomicBoolean $r3;
+        java.util.Date $r4;
+
+        $r0 := @this: com.facebook.e;
+
+        $r1 := @parameter0: android.support.v4.content.q;
+
+        $r2 := @parameter1: com.facebook.c;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r3 = new java.util.concurrent.atomic.AtomicBoolean;
+
+        specialinvoke $r3.<java.util.concurrent.atomic.AtomicBoolean: void <init>(boolean)>(0);
+
+        $r0.<com.facebook.e: java.util.concurrent.atomic.AtomicBoolean e> = $r3;
+
+        $r4 = new java.util.Date;
+
+        specialinvoke $r4.<java.util.Date: void <init>(long)>(0L);
+
+        $r0.<com.facebook.e: java.util.Date f> = $r4;
+
+        staticinvoke <com.facebook.internal.bg: void a(java.lang.Object,java.lang.String)>($r1, "localBroadcastManager");
+
+        staticinvoke <com.facebook.internal.bg: void a(java.lang.Object,java.lang.String)>($r2, "accessTokenCache");
+
+        $r0.<com.facebook.e: android.support.v4.content.q b> = $r1;
+
+        $r0.<com.facebook.e: com.facebook.c c> = $r2;
+
+        return;
+    }
+
+    private static com.facebook.GraphRequest a(com.facebook.AccessToken, com.facebook.ad)
+    {
+        com.facebook.AccessToken $r0;
+        com.facebook.ad $r1;
+        com.facebook.GraphRequest $r2;
+        android.os.Bundle $r3;
+        com.facebook.HttpMethod $r4;
+
+        $r0 := @parameter0: com.facebook.AccessToken;
+
+        $r1 := @parameter1: com.facebook.ad;
+
+        $r3 = new android.os.Bundle;
+
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+
+        $r2 = new com.facebook.GraphRequest;
+
+        $r4 = <com.facebook.HttpMethod: com.facebook.HttpMethod GET>;
+
+        specialinvoke $r2.<com.facebook.GraphRequest: void <init>(com.facebook.AccessToken,java.lang.String,android.os.Bundle,com.facebook.HttpMethod,com.facebook.ad)>($r0, "me/permissions", $r3, $r4, $r1);
+
+        return $r2;
+    }
+
+    static com.facebook.e a()
+    {
+        com.facebook.c $r0;
+        com.facebook.e $r1;
+        android.content.Context $r2;
+        android.support.v4.content.q $r3;
+        java.lang.Throwable $r4;
+
+        $r1 = <com.facebook.e: com.facebook.e a>;
+
+        if $r1 != null goto label3;
+
+        entermonitor class "Lcom/facebook/e;";
+
+     label1:
+        $r1 = <com.facebook.e: com.facebook.e a>;
+
+        if $r1 != null goto label2;
+
+        $r2 = staticinvoke <com.facebook.s: android.content.Context f()>();
+
+        $r3 = staticinvoke <android.support.v4.content.q: android.support.v4.content.q a(android.content.Context)>($r2);
+
+        $r0 = new com.facebook.c;
+
+        specialinvoke $r0.<com.facebook.c: void <init>()>();
+
+        $r1 = new com.facebook.e;
+
+        specialinvoke $r1.<com.facebook.e: void <init>(android.support.v4.content.q,com.facebook.c)>($r3, $r0);
+
+        <com.facebook.e: com.facebook.e a> = $r1;
+
+     label2:
+        exitmonitor class "Lcom/facebook/e;";
+
+     label3:
+        $r1 = <com.facebook.e: com.facebook.e a>;
+
+        return $r1;
+
+     label4:
+        $r4 := @caughtexception;
+
+     label5:
+        exitmonitor class "Lcom/facebook/e;";
+
+     label6:
+        throw $r4;
+
+        catch java.lang.Throwable from label1 to label3 with label4;
+        catch java.lang.Throwable from label5 to label6 with label4;
+    }
+
+    static java.util.concurrent.atomic.AtomicBoolean a(com.facebook.e)
+    {
+        com.facebook.e $r0;
+        java.util.concurrent.atomic.AtomicBoolean r1;
+
+        $r0 := @parameter0: com.facebook.e;
+
+        r1 = $r0.<com.facebook.e: java.util.concurrent.atomic.AtomicBoolean e>;
+
+        return r1;
+    }
+
+    private void a(com.facebook.AccessToken, com.facebook.AccessToken)
+    {
+        com.facebook.e $r0;
+        com.facebook.AccessToken $r1, $r2;
+        android.content.Intent $r3;
+        android.support.v4.content.q $r4;
+
+        $r0 := @this: com.facebook.e;
+
+        $r1 := @parameter0: com.facebook.AccessToken;
+
+        $r2 := @parameter1: com.facebook.AccessToken;
+
+        $r3 = new android.content.Intent;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String)>("com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("com.facebook.sdk.EXTRA_OLD_ACCESS_TOKEN", $r1);
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("com.facebook.sdk.EXTRA_NEW_ACCESS_TOKEN", $r2);
+
+        $r4 = $r0.<com.facebook.e: android.support.v4.content.q b>;
+
+        virtualinvoke $r4.<android.support.v4.content.q: boolean a(android.content.Intent)>($r3);
+
+        return;
+    }
+
+    private void a(com.facebook.AccessToken, boolean)
+    {
+        com.facebook.e $r0;
+        com.facebook.AccessToken $r1, $r2;
+        boolean $z0;
+        java.util.concurrent.atomic.AtomicBoolean $r3;
+        java.util.Date $r4;
+        com.facebook.c $r5;
+        android.content.Context $r6;
+
+        $r0 := @this: com.facebook.e;
+
+        $r1 := @parameter0: com.facebook.AccessToken;
+
+        $z0 := @parameter1: boolean;
+
+        $r2 = $r0.<com.facebook.e: com.facebook.AccessToken d>;
+
+        $r0.<com.facebook.e: com.facebook.AccessToken d> = $r1;
+
+        $r3 = $r0.<com.facebook.e: java.util.concurrent.atomic.AtomicBoolean e>;
+
+        virtualinvoke $r3.<java.util.concurrent.atomic.AtomicBoolean: void set(boolean)>(0);
+
+        $r4 = new java.util.Date;
+
+        specialinvoke $r4.<java.util.Date: void <init>(long)>(0L);
+
+        $r0.<com.facebook.e: java.util.Date f> = $r4;
+
+        if $z0 == 0 goto label1;
+
+        if $r1 == null goto label2;
+
+        $r5 = $r0.<com.facebook.e: com.facebook.c c>;
+
+        virtualinvoke $r5.<com.facebook.c: void a(com.facebook.AccessToken)>($r1);
+
+     label1:
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.Object,java.lang.Object)>($r2, $r1);
+
+        if $z0 != 0 goto label3;
+
+        specialinvoke $r0.<com.facebook.e: void a(com.facebook.AccessToken,com.facebook.AccessToken)>($r2, $r1);
+
+        return;
+
+     label2:
+        $r5 = $r0.<com.facebook.e: com.facebook.c c>;
+
+        virtualinvoke $r5.<com.facebook.c: void b()>();
+
+        $r6 = staticinvoke <com.facebook.s: android.content.Context f()>();
+
+        staticinvoke <com.facebook.internal.ax: void b(android.content.Context)>($r6);
+
+        goto label1;
+
+     label3:
+        return;
+    }
+
+    static void a(com.facebook.e, com.facebook.b)
+    {
+        com.facebook.e $r0;
+        com.facebook.b $r1;
+
+        $r0 := @parameter0: com.facebook.e;
+
+        $r1 := @parameter1: com.facebook.b;
+
+        specialinvoke $r0.<com.facebook.e: void b(com.facebook.b)>($r1);
+
+        return;
+    }
+
+    private static com.facebook.GraphRequest b(com.facebook.AccessToken, com.facebook.ad)
+    {
+        com.facebook.AccessToken $r0;
+        com.facebook.ad $r1;
+        android.os.Bundle $r2;
+        com.facebook.HttpMethod $r3;
+        com.facebook.GraphRequest $r4;
+
+        $r0 := @parameter0: com.facebook.AccessToken;
+
+        $r1 := @parameter1: com.facebook.ad;
+
+        $r2 = new android.os.Bundle;
+
+        specialinvoke $r2.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("grant_type", "fb_extend_sso_token");
+
+        $r4 = new com.facebook.GraphRequest;
+
+        $r3 = <com.facebook.HttpMethod: com.facebook.HttpMethod GET>;
+
+        specialinvoke $r4.<com.facebook.GraphRequest: void <init>(com.facebook.AccessToken,java.lang.String,android.os.Bundle,com.facebook.HttpMethod,com.facebook.ad)>($r0, "oauth/access_token", $r2, $r3, $r1);
+
+        return $r4;
+    }
+
+    private void b(com.facebook.b)
+    {
+        com.facebook.e $r0;
+        com.facebook.b $r1;
+        com.facebook.AccessToken $r2;
+        java.util.concurrent.atomic.AtomicBoolean $r3;
+        com.facebook.j $r4;
+        java.util.HashSet $r5, $r6;
+        com.facebook.ak $r7;
+        com.facebook.FacebookException $r8;
+        boolean $z0;
+        java.util.Date $r9;
+        com.facebook.GraphRequest[] $r10;
+        com.facebook.g $r11;
+        com.facebook.GraphRequest $r12;
+        com.facebook.h $r13;
+        com.facebook.i $r14;
+
+        $r0 := @this: com.facebook.e;
+
+        $r1 := @parameter0: com.facebook.b;
+
+        $r2 = $r0.<com.facebook.e: com.facebook.AccessToken d>;
+
+        if $r2 != null goto label1;
+
+        if $r1 == null goto label3;
+
+        $r8 = new com.facebook.FacebookException;
+
+        specialinvoke $r8.<com.facebook.FacebookException: void <init>(java.lang.String)>("No current access token to refresh");
+
+        interfaceinvoke $r1.<com.facebook.b: void a(com.facebook.FacebookException)>($r8);
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.facebook.e: java.util.concurrent.atomic.AtomicBoolean e>;
+
+        $z0 = virtualinvoke $r3.<java.util.concurrent.atomic.AtomicBoolean: boolean compareAndSet(boolean,boolean)>(0, 1);
+
+        if $z0 != 0 goto label2;
+
+        if $r1 == null goto label3;
+
+        $r8 = new com.facebook.FacebookException;
+
+        specialinvoke $r8.<com.facebook.FacebookException: void <init>(java.lang.String)>("Refresh already in progress");
+
+        interfaceinvoke $r1.<com.facebook.b: void a(com.facebook.FacebookException)>($r8);
+
+        return;
+
+     label2:
+        $r9 = new java.util.Date;
+
+        specialinvoke $r9.<java.util.Date: void <init>()>();
+
+        $r0.<com.facebook.e: java.util.Date f> = $r9;
+
+        $r5 = new java.util.HashSet;
+
+        specialinvoke $r5.<java.util.HashSet: void <init>()>();
+
+        $r6 = new java.util.HashSet;
+
+        specialinvoke $r6.<java.util.HashSet: void <init>()>();
+
+        $r3 = new java.util.concurrent.atomic.AtomicBoolean;
+
+        specialinvoke $r3.<java.util.concurrent.atomic.AtomicBoolean: void <init>(boolean)>(0);
+
+        $r4 = new com.facebook.j;
+
+        specialinvoke $r4.<com.facebook.j: void <init>(com.facebook.f)>(null);
+
+        $r7 = new com.facebook.ak;
+
+        $r10 = newarray (com.facebook.GraphRequest)[2];
+
+        $r11 = new com.facebook.g;
+
+        specialinvoke $r11.<com.facebook.g: void <init>(com.facebook.e,java.util.concurrent.atomic.AtomicBoolean,java.util.Set,java.util.Set)>($r0, $r3, $r5, $r6);
+
+        $r12 = staticinvoke <com.facebook.e: com.facebook.GraphRequest a(com.facebook.AccessToken,com.facebook.ad)>($r2, $r11);
+
+        $r10[0] = $r12;
+
+        $r13 = new com.facebook.h;
+
+        specialinvoke $r13.<com.facebook.h: void <init>(com.facebook.e,com.facebook.j)>($r0, $r4);
+
+        $r12 = staticinvoke <com.facebook.e: com.facebook.GraphRequest b(com.facebook.AccessToken,com.facebook.ad)>($r2, $r13);
+
+        $r10[1] = $r12;
+
+        specialinvoke $r7.<com.facebook.ak: void <init>(com.facebook.GraphRequest[])>($r10);
+
+        $r14 = new com.facebook.i;
+
+        specialinvoke $r14.<com.facebook.i: void <init>(com.facebook.e,com.facebook.AccessToken,com.facebook.b,java.util.concurrent.atomic.AtomicBoolean,com.facebook.j,java.util.Set,java.util.Set)>($r0, $r2, $r1, $r3, $r4, $r5, $r6);
+
+        virtualinvoke $r7.<com.facebook.ak: void a(com.facebook.al)>($r14);
+
+        virtualinvoke $r7.<com.facebook.ak: com.facebook.aj h()>();
+
+     label3:
+        return;
+    }
+
+    private boolean e()
+    {
+        com.facebook.e $r0;
+        com.facebook.AccessToken $r1;
+        java.util.Date $r2;
+        long $l0, $l1;
+        java.lang.Long $r3;
+        com.facebook.AccessTokenSource $r4;
+        boolean $z0;
+        byte $b2;
+
+        $r0 := @this: com.facebook.e;
+
+        $r1 = $r0.<com.facebook.e: com.facebook.AccessToken d>;
+
+        if $r1 != null goto label1;
+
+        return 0;
+
+     label1:
+        $r2 = new java.util.Date;
+
+        specialinvoke $r2.<java.util.Date: void <init>()>();
+
+        $l0 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        $r3 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l0);
+
+        $r1 = $r0.<com.facebook.e: com.facebook.AccessToken d>;
+
+        $r4 = virtualinvoke $r1.<com.facebook.AccessToken: com.facebook.AccessTokenSource f()>();
+
+        $z0 = virtualinvoke $r4.<com.facebook.AccessTokenSource: boolean canExtendToken()>();
+
+        if $z0 == 0 goto label2;
+
+        $l0 = virtualinvoke $r3.<java.lang.Long: long longValue()>();
+
+        $r2 = $r0.<com.facebook.e: java.util.Date f>;
+
+        $l1 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        $l0 = $l0 - $l1;
+
+        $b2 = $l0 cmp 3600000L;
+
+        if $b2 <= 0 goto label2;
+
+        $l0 = virtualinvoke $r3.<java.lang.Long: long longValue()>();
+
+        $r1 = $r0.<com.facebook.e: com.facebook.AccessToken d>;
+
+        $r2 = virtualinvoke $r1.<com.facebook.AccessToken: java.util.Date g()>();
+
+        $l1 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        $l0 = $l0 - $l1;
+
+        $b2 = $l0 cmp 86400000L;
+
+        if $b2 <= 0 goto label2;
+
+        return 1;
+
+     label2:
+        return 0;
+    }
+
+    void a(com.facebook.AccessToken)
+    {
+        com.facebook.e $r0;
+        com.facebook.AccessToken $r1;
+
+        $r0 := @this: com.facebook.e;
+
+        $r1 := @parameter0: com.facebook.AccessToken;
+
+        specialinvoke $r0.<com.facebook.e: void a(com.facebook.AccessToken,boolean)>($r1, 1);
+
+        return;
+    }
+
+    void a(com.facebook.b)
+    {
+        com.facebook.e $r0;
+        com.facebook.b $r1;
+        android.os.Looper $r2, $r3;
+        boolean $z0;
+        android.os.Handler $r4;
+        com.facebook.f $r5;
+
+        $r0 := @this: com.facebook.e;
+
+        $r1 := @parameter0: com.facebook.b;
+
+        $r2 = staticinvoke <android.os.Looper: android.os.Looper getMainLooper()>();
+
+        $r3 = staticinvoke <android.os.Looper: android.os.Looper myLooper()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.Object: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.facebook.e: void b(com.facebook.b)>(null);
+
+        return;
+
+     label1:
+        $r4 = new android.os.Handler;
+
+        $r2 = staticinvoke <android.os.Looper: android.os.Looper getMainLooper()>();
+
+        specialinvoke $r4.<android.os.Handler: void <init>(android.os.Looper)>($r2);
+
+        $r5 = new com.facebook.f;
+
+        specialinvoke $r5.<com.facebook.f: void <init>(com.facebook.e,com.facebook.b)>($r0, null);
+
+        virtualinvoke $r4.<android.os.Handler: boolean post(java.lang.Runnable)>($r5);
+
+        return;
+    }
+
+    com.facebook.AccessToken b()
+    {
+        com.facebook.e $r0;
+        com.facebook.AccessToken r1;
+
+        $r0 := @this: com.facebook.e;
+
+        r1 = $r0.<com.facebook.e: com.facebook.AccessToken d>;
+
+        return r1;
+    }
+
+    boolean c()
+    {
+        com.facebook.e $r0;
+        com.facebook.AccessToken $r1;
+        com.facebook.c $r2;
+
+        $r0 := @this: com.facebook.e;
+
+        $r2 = $r0.<com.facebook.e: com.facebook.c c>;
+
+        $r1 = virtualinvoke $r2.<com.facebook.c: com.facebook.AccessToken a()>();
+
+        if $r1 == null goto label1;
+
+        specialinvoke $r0.<com.facebook.e: void a(com.facebook.AccessToken,boolean)>($r1, 0);
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    void d()
+    {
+        com.facebook.e $r0;
+        boolean $z0;
+
+        $r0 := @this: com.facebook.e;
+
+        $z0 = specialinvoke $r0.<com.facebook.e: boolean e()>();
+
+        if $z0 != 0 goto label1;
+
+        return;
+
+     label1:
+        virtualinvoke $r0.<com.facebook.e: void a(com.facebook.b)>(null);
+
+        return;
+    }
+}

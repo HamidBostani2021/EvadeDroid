@@ -1,0 +1,265 @@
+public class com.seattleclouds.aj extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.lang.String b;
+    private java.lang.String c;
+    private int d;
+    private int e;
+    private int f;
+    private java.lang.Integer g;
+    private java.lang.String h;
+    private java.lang.String i;
+
+    public void <init>()
+    {
+        com.seattleclouds.aj $r0;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.aj: java.lang.String a> = "item";
+
+        $r0.<com.seattleclouds.aj: int d> = -3355444;
+
+        $r0.<com.seattleclouds.aj: int e> = -3355444;
+
+        $r0.<com.seattleclouds.aj: int f> = 0;
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        r1 = $r0.<com.seattleclouds.aj: java.lang.String a>;
+
+        return r1;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.aj $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.aj: int d> = $i0;
+
+        return;
+    }
+
+    public void a(java.lang.Integer)
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.Integer $r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $r1 := @parameter0: java.lang.Integer;
+
+        $r0.<com.seattleclouds.aj: java.lang.Integer g> = $r1;
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.aj: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        r1 = $r0.<com.seattleclouds.aj: java.lang.String b>;
+
+        return r1;
+    }
+
+    public void b(int)
+    {
+        com.seattleclouds.aj $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.aj: int e> = $i0;
+
+        return;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.aj: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    public java.lang.String c()
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        r1 = $r0.<com.seattleclouds.aj: java.lang.String c>;
+
+        return r1;
+    }
+
+    public void c(int)
+    {
+        com.seattleclouds.aj $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.aj: int f> = $i0;
+
+        return;
+    }
+
+    public void c(java.lang.String)
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.aj: java.lang.String c> = $r1;
+
+        return;
+    }
+
+    public int d()
+    {
+        com.seattleclouds.aj $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        i0 = $r0.<com.seattleclouds.aj: int d>;
+
+        return i0;
+    }
+
+    public void d(java.lang.String)
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.aj: java.lang.String h> = $r1;
+
+        return;
+    }
+
+    public int e()
+    {
+        com.seattleclouds.aj $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        i0 = $r0.<com.seattleclouds.aj: int e>;
+
+        return i0;
+    }
+
+    public void e(java.lang.String)
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.aj: java.lang.String i> = $r1;
+
+        return;
+    }
+
+    public int f()
+    {
+        com.seattleclouds.aj $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        i0 = $r0.<com.seattleclouds.aj: int f>;
+
+        return i0;
+    }
+
+    public java.lang.Integer g()
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.Integer r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        r1 = $r0.<com.seattleclouds.aj: java.lang.Integer g>;
+
+        return r1;
+    }
+
+    public java.lang.String h()
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        r1 = $r0.<com.seattleclouds.aj: java.lang.String h>;
+
+        return r1;
+    }
+
+    public java.lang.String i()
+    {
+        com.seattleclouds.aj $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.aj;
+
+        r1 = $r0.<com.seattleclouds.aj: java.lang.String i>;
+
+        return r1;
+    }
+}

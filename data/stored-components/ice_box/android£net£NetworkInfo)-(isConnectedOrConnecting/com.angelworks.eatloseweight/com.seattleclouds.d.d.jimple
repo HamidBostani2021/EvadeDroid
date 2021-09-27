@@ -1,0 +1,121 @@
+public class com.seattleclouds.d.d extends com.seattleclouds.d.a
+{
+    private int a;
+
+    public void <init>()
+    {
+        com.seattleclouds.d.d $r0;
+
+        $r0 := @this: com.seattleclouds.d.d;
+
+        specialinvoke $r0.<com.seattleclouds.d.a: void <init>()>();
+
+        $r0.<com.seattleclouds.d.d: int a> = 1;
+
+        return;
+    }
+
+    public void <init>(com.seattleclouds.d.a)
+    {
+        com.seattleclouds.d.d $r0;
+        com.seattleclouds.d.a $r1;
+        java.lang.String $r2;
+        double $d0;
+        java.util.ArrayList $r3;
+
+        $r0 := @this: com.seattleclouds.d.d;
+
+        $r1 := @parameter0: com.seattleclouds.d.a;
+
+        specialinvoke $r0.<com.seattleclouds.d.a: void <init>()>();
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.d.a: java.lang.String f()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void b(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.d.a: java.lang.String a()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void a(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.d.a: java.lang.String j()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void f(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.d.a: java.lang.String i()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void e(java.lang.String)>($r2);
+
+        $d0 = virtualinvoke $r1.<com.seattleclouds.d.a: double b()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void a(double)>($d0);
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.d.a: java.lang.String g()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void c(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.d.a: java.lang.String h()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void d(java.lang.String)>($r2);
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void b(int)>(1);
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.d.a: java.util.ArrayList d()>();
+
+        virtualinvoke $r0.<com.seattleclouds.d.d: void a(java.util.ArrayList)>($r3);
+
+        return;
+    }
+
+    public void b(int)
+    {
+        com.seattleclouds.d.d $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.d.d;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.d.d: int a> = $i0;
+
+        return;
+    }
+
+    public boolean equals(java.lang.Object)
+    {
+        com.seattleclouds.d.d $r0;
+        java.lang.Object $r1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.d.d;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.d.a: boolean equals(java.lang.Object)>($r1);
+
+        return $z0;
+    }
+
+    public int hashCode()
+    {
+        com.seattleclouds.d.d $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.d.d;
+
+        $i0 = specialinvoke $r0.<com.seattleclouds.d.a: int hashCode()>();
+
+        return $i0;
+    }
+
+    public int k()
+    {
+        com.seattleclouds.d.d $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.d.d;
+
+        i0 = $r0.<com.seattleclouds.d.d: int a>;
+
+        return i0;
+    }
+}

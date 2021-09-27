@@ -1,0 +1,144 @@
+public class com.seattleclouds.modules.peopledirectory.i extends com.google.android.bitmapfun.v
+{
+
+    public void <init>(android.content.Context, int, boolean)
+    {
+        com.seattleclouds.modules.peopledirectory.i $r0;
+        android.content.Context $r1;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.i;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $i0 := @parameter1: int;
+
+        $z0 := @parameter2: boolean;
+
+        specialinvoke $r0.<com.google.android.bitmapfun.v: void <init>(android.content.Context,int,boolean)>($r1, $i0, $z0);
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.peopledirectory.i a(android.content.Context, android.support.v4.app.aj, int)
+    {
+        android.content.Context $r0;
+        android.support.v4.app.aj $r1;
+        int $i0;
+        com.google.android.bitmapfun.t $r2;
+        com.seattleclouds.modules.peopledirectory.i $r3;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: android.support.v4.app.aj;
+
+        $i0 := @parameter2: int;
+
+        $r2 = new com.google.android.bitmapfun.t;
+
+        specialinvoke $r2.<com.google.android.bitmapfun.t: void <init>(android.content.Context,java.lang.String)>($r0, "people_directory");
+
+        $r2.<com.google.android.bitmapfun.t: boolean g> = 0;
+
+        virtualinvoke $r2.<com.google.android.bitmapfun.t: void a(float)>(0.05F);
+
+        $r2.<com.google.android.bitmapfun.t: boolean i> = 1;
+
+        $r3 = new com.seattleclouds.modules.peopledirectory.i;
+
+        specialinvoke $r3.<com.seattleclouds.modules.peopledirectory.i: void <init>(android.content.Context,int,boolean)>($r0, $i0, 0);
+
+        virtualinvoke $r3.<com.seattleclouds.modules.peopledirectory.i: void a(android.support.v4.app.aj,com.google.android.bitmapfun.t)>($r1, $r2);
+
+        $i0 = <com.seattleclouds.g: int people_directory_photo_placeholder>;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.peopledirectory.i: void b(int)>($i0);
+
+        return $r3;
+    }
+
+    protected android.graphics.Bitmap a(java.lang.Object)
+    {
+        com.seattleclouds.modules.peopledirectory.i $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+        int $i0, $i1;
+        boolean $z0;
+        android.graphics.Bitmap $r3;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.i;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        if $r1 != null goto label1;
+
+        return null;
+
+     label1:
+        $r2 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        $i0 = virtualinvoke $r2.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label4;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("http://");
+
+        if $z0 != 0 goto label2;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("https://");
+
+        if $z0 == 0 goto label3;
+
+     label2:
+        $r3 = specialinvoke $r0.<com.google.android.bitmapfun.v: android.graphics.Bitmap a(java.lang.Object)>($r1);
+
+        return $r3;
+
+     label3:
+        $i0 = $r0.<com.seattleclouds.modules.peopledirectory.i: int a>;
+
+        $i1 = $r0.<com.seattleclouds.modules.peopledirectory.i: int b>;
+
+        $i0 = staticinvoke <java.lang.Math: int max(int,int)>($i0, $i1);
+
+        $r3 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap a(java.lang.String,int)>($r2, $i0);
+
+        if $r3 != null goto label5;
+
+        $i0 = $r0.<com.seattleclouds.modules.peopledirectory.i: int a>;
+
+        $i1 = $r0.<com.seattleclouds.modules.peopledirectory.i: int b>;
+
+        $i0 = staticinvoke <java.lang.Math: int max(int,int)>($i0, $i1);
+
+        $r3 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap b(java.lang.String,int)>($r2, $i0);
+
+        return $r3;
+
+     label4:
+        return null;
+
+     label5:
+        return $r3;
+    }
+
+    protected void a(android.widget.ImageView, android.graphics.drawable.Drawable)
+    {
+        com.seattleclouds.modules.peopledirectory.i $r0;
+        android.widget.ImageView $r1;
+        android.graphics.drawable.Drawable $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.i;
+
+        $r1 := @parameter0: android.widget.ImageView;
+
+        $r2 := @parameter1: android.graphics.drawable.Drawable;
+
+        specialinvoke $r0.<com.google.android.bitmapfun.v: void a(android.widget.ImageView,android.graphics.drawable.Drawable)>($r1, $r2);
+
+        virtualinvoke $r1.<android.widget.ImageView: void setBackgroundColor(int)>(0);
+
+        return;
+    }
+}

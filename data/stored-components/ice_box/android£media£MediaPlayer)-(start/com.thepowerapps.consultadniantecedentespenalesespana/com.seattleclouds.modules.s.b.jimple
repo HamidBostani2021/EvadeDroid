@@ -1,0 +1,296 @@
+public class com.seattleclouds.modules.s.b extends android.webkit.WebViewClient
+{
+    final com.seattleclouds.modules.s.a a;
+    private java.lang.String b;
+    private java.lang.String c;
+
+    protected void <init>(com.seattleclouds.modules.s.a)
+    {
+        com.seattleclouds.modules.s.b $r0;
+        com.seattleclouds.modules.s.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.s.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.s.a;
+
+        $r0.<com.seattleclouds.modules.s.b: com.seattleclouds.modules.s.a a> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void <init>()>();
+
+        return;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.modules.s.b $r0;
+        java.lang.String $r1, $r3, $r4;
+        android.net.Uri $r2;
+        int $i0, $i1;
+        boolean $z0;
+        java.lang.StringBuilder $r5;
+
+        $r0 := @this: com.seattleclouds.modules.s.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r2.<android.net.Uri: java.lang.String getQuery()>();
+
+        if $r3 == null goto label2;
+
+        $r3 = virtualinvoke $r2.<android.net.Uri: java.lang.String getQuery()>();
+
+        $r4 = virtualinvoke $r3.<java.lang.String: java.lang.String toString()>();
+
+     label1:
+        $i0 = virtualinvoke $r4.<java.lang.String: int indexOf(java.lang.String,int)>("=", 0);
+
+        if $i0 == -1 goto label3;
+
+        $r3 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>(0, $i0);
+
+        $i0 = $i0 + 1;
+
+        $i1 = virtualinvoke $r4.<java.lang.String: int length()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>($i0, $i1);
+
+        if $r3 == null goto label3;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("");
+
+        if $z0 != 0 goto label3;
+
+        if $r4 == null goto label3;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("");
+
+        if $z0 != 0 goto label3;
+
+        staticinvoke <com.seattleclouds.util.m: void a(java.lang.String,java.lang.String)>($r3, $r4);
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Save jkey/jvalue pair: ");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("QuizActivity.MyWebViewClient", $r1);
+
+        return;
+
+     label2:
+        $r4 = "";
+
+        goto label1;
+
+     label3:
+        return;
+    }
+
+    public void onPageStarted(android.webkit.WebView, java.lang.String, android.graphics.Bitmap)
+    {
+        com.seattleclouds.modules.s.b $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        android.graphics.Bitmap $r3;
+
+        $r0 := @this: com.seattleclouds.modules.s.b;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.graphics.Bitmap;
+
+        return;
+    }
+
+    public void onReceivedError(android.webkit.WebView, int, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.s.b $r0;
+        android.webkit.WebView $r1;
+        int $i0;
+        java.lang.String $r2, $r3, $r5;
+        java.lang.StringBuilder $r4;
+
+        $r0 := @this: com.seattleclouds.modules.s.b;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r3 := @parameter3: java.lang.String;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("onReceivedError: failingUrl = ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", error code = ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" [ ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ]");
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("QuizActivity.MyWebViewClient", $r5);
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String)>($r1, $i0, $r2, $r3);
+
+        return;
+    }
+
+    public boolean shouldOverrideUrlLoading(android.webkit.WebView, java.lang.String)
+    {
+        com.seattleclouds.modules.s.b $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2, $r4, $r12;
+        android.net.Uri $r3;
+        com.seattleclouds.ce $r5;
+        java.util.Map $r6;
+        java.lang.Object $r7;
+        com.seattleclouds.t $r8;
+        boolean $z0;
+        com.seattleclouds.modules.s.a $r9;
+        java.io.InputStream $r10;
+        java.lang.Throwable $r11;
+
+        $r0 := @this: com.seattleclouds.modules.s.b;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r2);
+
+        $r4 = virtualinvoke $r3.<android.net.Uri: java.lang.String getLastPathSegment()>();
+
+        $r5 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.ce: java.util.Map w()>();
+
+        $r7 = interfaceinvoke $r6.<java.util.Map: java.lang.Object get(java.lang.Object)>($r4);
+
+        $r8 = (com.seattleclouds.t) $r7;
+
+        $r0.<com.seattleclouds.modules.s.b: java.lang.String c> = null;
+
+        $r0.<com.seattleclouds.modules.s.b: java.lang.String b> = $r2;
+
+        if $r8 != null goto label01;
+
+        return 0;
+
+     label01:
+        virtualinvoke $r0.<com.seattleclouds.modules.s.b: void a(java.lang.String)>($r2);
+
+        $r5 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r5.<com.seattleclouds.ce: boolean u()>();
+
+        if $z0 == 0 goto label13;
+
+        $r2 = virtualinvoke $r8.<com.seattleclouds.t: java.lang.String b()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("quizquestion");
+
+        if $z0 != 0 goto label02;
+
+        $r2 = virtualinvoke $r8.<com.seattleclouds.t: java.lang.String b()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("quizresult");
+
+        if $z0 == 0 goto label13;
+
+     label02:
+        $r9 = $r0.<com.seattleclouds.modules.s.b: com.seattleclouds.modules.s.a a>;
+
+        $r4 = virtualinvoke $r9.<com.seattleclouds.modules.s.a: java.lang.String ac()>();
+
+        $r2 = $r4;
+
+        if $r4 == null goto label03;
+
+        if $r4 == null goto label04;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("");
+
+        if $z0 == 0 goto label04;
+
+     label03:
+        $r2 = "Results.html";
+
+     label04:
+        $r4 = staticinvoke <com.seattleclouds.App: java.lang.String h(java.lang.String)>($r2);
+
+        $r0.<com.seattleclouds.modules.s.b: java.lang.String b> = $r4;
+
+     label05:
+        $r10 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>($r2);
+
+        $r2 = staticinvoke <com.seattleclouds.util.bn: java.lang.String b(java.io.InputStream)>($r10);
+
+     label06:
+        if $r2 == null goto label09;
+
+     label07:
+        $r2 = staticinvoke <com.seattleclouds.util.m: java.lang.String a(java.lang.String)>($r2);
+
+     label08:
+        $r0.<com.seattleclouds.modules.s.b: java.lang.String c> = $r2;
+
+     label09:
+        $r2 = $r0.<com.seattleclouds.modules.s.b: java.lang.String c>;
+
+        if $r2 != null goto label12;
+
+        $r2 = $r0.<com.seattleclouds.modules.s.b: java.lang.String b>;
+
+        virtualinvoke $r1.<android.webkit.WebView: void loadUrl(java.lang.String)>($r2);
+
+     label10:
+        return 1;
+
+     label11:
+        $r11 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("QuizActivity.MyWebViewClient", "Error getting rawHtml");
+
+        goto label09;
+
+     label12:
+        $r4 = $r0.<com.seattleclouds.modules.s.b: java.lang.String b>;
+
+        $r12 = $r0.<com.seattleclouds.modules.s.b: java.lang.String c>;
+
+        $r2 = $r0.<com.seattleclouds.modules.s.b: java.lang.String b>;
+
+        virtualinvoke $r1.<android.webkit.WebView: void loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>($r4, $r12, null, "UTF-8", $r2);
+
+        goto label10;
+
+     label13:
+        $r2 = $r4;
+
+        goto label05;
+
+        catch java.io.IOException from label05 to label06 with label11;
+        catch java.io.IOException from label07 to label08 with label11;
+    }
+}

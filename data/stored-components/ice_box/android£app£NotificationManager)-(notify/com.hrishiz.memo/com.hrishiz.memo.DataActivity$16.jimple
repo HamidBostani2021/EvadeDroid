@@ -1,0 +1,66 @@
+class com.hrishiz.memo.DataActivity$16 extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.hrishiz.memo.DataActivity this$0;
+
+    void <init>(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity$16 $r0;
+        com.hrishiz.memo.DataActivity $r1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$16;
+
+        $r1 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r0.<com.hrishiz.memo.DataActivity$16: com.hrishiz.memo.DataActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.hrishiz.memo.DataActivity$16 $r0;
+        android.view.View $r1;
+        com.hrishiz.memo.DataActivity$16$1 $r2;
+        com.hrishiz.memo.DataActivity $r3;
+        android.app.AlertDialog$Builder $r4;
+        android.app.AlertDialog $r5;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$16;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$16: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder access$28(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setTitle(java.lang.CharSequence)>("Info");
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$16: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder access$28(com.hrishiz.memo.DataActivity)>($r3);
+
+        virtualinvoke $r4.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setMessage(java.lang.CharSequence)>("Saving Location=Internalstorage/android/Data/com.memo.hrishiz/filename.txt");
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$16: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder access$28(com.hrishiz.memo.DataActivity)>($r3);
+
+        $r2 = new com.hrishiz.memo.DataActivity$16$1;
+
+        specialinvoke $r2.<com.hrishiz.memo.DataActivity$16$1: void <init>(com.hrishiz.memo.DataActivity$16)>($r0);
+
+        virtualinvoke $r4.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("Ok", $r2);
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity$16: com.hrishiz.memo.DataActivity this$0>;
+
+        $r4 = staticinvoke <com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder access$28(com.hrishiz.memo.DataActivity)>($r3);
+
+        $r5 = virtualinvoke $r4.<android.app.AlertDialog$Builder: android.app.AlertDialog create()>();
+
+        virtualinvoke $r5.<android.app.AlertDialog: void show()>();
+
+        return;
+    }
+}

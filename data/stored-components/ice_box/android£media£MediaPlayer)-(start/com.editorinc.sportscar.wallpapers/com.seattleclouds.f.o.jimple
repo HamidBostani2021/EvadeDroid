@@ -1,0 +1,42 @@
+class com.seattleclouds.f.o extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.f.j a;
+
+    void <init>(com.seattleclouds.f.j)
+    {
+        com.seattleclouds.f.o $r0;
+        com.seattleclouds.f.j $r1;
+
+        $r0 := @this: com.seattleclouds.f.o;
+
+        $r1 := @parameter0: com.seattleclouds.f.j;
+
+        $r0.<com.seattleclouds.f.o: com.seattleclouds.f.j a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.f.o $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.f.j $r2;
+
+        $r0 := @this: com.seattleclouds.f.o;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.f.o: com.seattleclouds.f.j a>;
+
+        staticinvoke <com.seattleclouds.f.j: int a(com.seattleclouds.f.j,int)>($r2, $i0);
+
+        interfaceinvoke $r1.<android.content.DialogInterface: void dismiss()>();
+
+        return;
+    }
+}

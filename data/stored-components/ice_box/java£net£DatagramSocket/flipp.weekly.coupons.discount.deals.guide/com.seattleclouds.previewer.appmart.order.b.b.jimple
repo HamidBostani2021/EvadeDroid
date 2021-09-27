@@ -1,0 +1,167 @@
+public class com.seattleclouds.previewer.appmart.order.b.b extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.lang.String b;
+    private int c;
+    private java.lang.String d;
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String a>;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String a>;
+
+        return r1;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.b.b: int c> = $i0;
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String b>;
+
+        return r1;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    public java.lang.String c()
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.StringBuilder $r1;
+        int $i0;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" $ ");
+
+        $i0 = $r0.<com.seattleclouds.previewer.appmart.order.b.b: int c>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+
+    public void c(java.lang.String)
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String d> = $r1;
+
+        return;
+    }
+
+    public java.lang.String d()
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String d>;
+
+        return r1;
+    }
+
+    public java.lang.String toString()
+    {
+        com.seattleclouds.previewer.appmart.order.b.b $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.b.b;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String a>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" $");
+
+        $i0 = $r0.<com.seattleclouds.previewer.appmart.order.b.b: int c>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+}

@@ -1,0 +1,246 @@
+public abstract class com.seattleclouds.modules.esignature.d extends com.seattleclouds.r
+{
+    protected android.view.View a;
+    protected android.view.View b;
+    protected android.view.MenuItem c;
+    protected android.widget.Button d;
+    protected android.view.ViewGroup e;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.esignature.d $r0;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.d;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.esignature.d $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4;
+        android.widget.Button $r5;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.d;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.modules.esignature.d: int ab()>();
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r2 = (android.view.ViewGroup) $r4;
+
+        $r0.<com.seattleclouds.modules.esignature.d: android.view.ViewGroup e> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.ViewGroup e>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.ViewGroup e>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.esignature.d: void a(android.view.ViewGroup,android.os.Bundle)>($r2, $r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.ViewGroup e>;
+
+        $i0 = <com.seattleclouds.h: int sign_in_button>;
+
+        $r4 = virtualinvoke $r2.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Button) $r4;
+
+        $r0.<com.seattleclouds.modules.esignature.d: android.widget.Button d> = $r5;
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.ViewGroup e>;
+
+        $i0 = <com.seattleclouds.h: int container_list>;
+
+        $r4 = virtualinvoke $r2.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.esignature.d: android.view.View a> = $r4;
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.ViewGroup e>;
+
+        $i0 = <com.seattleclouds.h: int container_message>;
+
+        $r4 = virtualinvoke $r2.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.esignature.d: android.view.View b> = $r4;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.ViewGroup e>;
+
+        return $r2;
+    }
+
+    public void a(android.view.Menu)
+    {
+        com.seattleclouds.modules.esignature.d $r0;
+        android.view.Menu $r1;
+        boolean $z0;
+        android.view.MenuItem $r2;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.d;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.MenuItem c>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.d: android.view.MenuItem c>;
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean c()>();
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>($z0);
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.Menu)>($r1);
+
+        return;
+    }
+
+    public void a(android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.modules.esignature.d $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        boolean $z0;
+        int $i0;
+        android.view.MenuItem $r3;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.d;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 := @parameter1: android.view.MenuInflater;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.Menu,android.view.MenuInflater)>($r1, $r2);
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean b()>();
+
+        if $z0 == 0 goto label1;
+
+        $i0 = <com.seattleclouds.k: int esignature_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        $i0 = <com.seattleclouds.h: int sign_out>;
+
+        $r3 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.esignature.d: android.view.MenuItem c> = $r3;
+
+     label1:
+        return;
+    }
+
+    protected abstract void a(android.view.ViewGroup, android.os.Bundle);
+
+    public boolean a(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.esignature.d $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        android.support.v4.app.ac $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.d;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int sign_out>;
+
+        if $i0 != $i1 goto label1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.esignature.d: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.appauth.e: void b(android.app.Activity,boolean)>($r2, 0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.esignature.d: void ac()>();
+
+        return 1;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.r: boolean a(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.modules.esignature.d $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.d;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a_(boolean)>($z0);
+
+        if $z0 == 0 goto label1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.esignature.d: void ac()>();
+
+     label1:
+        return;
+    }
+
+    protected abstract int ab();
+
+    public void ac()
+    {
+        com.seattleclouds.modules.esignature.d $r0;
+        boolean $z0;
+        android.view.View $r1;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.d;
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean c()>();
+
+        if $z0 == 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.esignature.d: android.view.View a>;
+
+        virtualinvoke $r1.<android.view.View: void setVisibility(int)>(0);
+
+        $r1 = $r0.<com.seattleclouds.modules.esignature.d: android.view.View b>;
+
+        virtualinvoke $r1.<android.view.View: void setVisibility(int)>(8);
+
+     label1:
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean b()>();
+
+        if $z0 == 0 goto label3;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.esignature.d: void aa()>();
+
+        return;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.esignature.d: android.view.View b>;
+
+        virtualinvoke $r1.<android.view.View: void setVisibility(int)>(0);
+
+        $r1 = $r0.<com.seattleclouds.modules.esignature.d: android.view.View a>;
+
+        virtualinvoke $r1.<android.view.View: void setVisibility(int)>(8);
+
+        goto label1;
+
+     label3:
+        return;
+    }
+}

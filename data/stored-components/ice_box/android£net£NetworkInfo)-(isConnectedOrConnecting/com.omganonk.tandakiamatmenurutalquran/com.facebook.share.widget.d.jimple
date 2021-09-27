@@ -1,0 +1,86 @@
+class com.facebook.share.widget.d extends java.lang.Object implements com.facebook.internal.t
+{
+    final com.facebook.internal.a a;
+    final com.facebook.share.model.ShareContent b;
+    final boolean c;
+    final com.facebook.share.widget.c d;
+
+    void <init>(com.facebook.share.widget.c, com.facebook.internal.a, com.facebook.share.model.ShareContent, boolean)
+    {
+        com.facebook.share.widget.d $r0;
+        com.facebook.share.widget.c $r1;
+        com.facebook.internal.a $r2;
+        com.facebook.share.model.ShareContent $r3;
+        boolean $z0;
+
+        $r0 := @this: com.facebook.share.widget.d;
+
+        $r1 := @parameter0: com.facebook.share.widget.c;
+
+        $r2 := @parameter1: com.facebook.internal.a;
+
+        $r3 := @parameter2: com.facebook.share.model.ShareContent;
+
+        $z0 := @parameter3: boolean;
+
+        $r0.<com.facebook.share.widget.d: com.facebook.share.widget.c d> = $r1;
+
+        $r0.<com.facebook.share.widget.d: com.facebook.internal.a a> = $r2;
+
+        $r0.<com.facebook.share.widget.d: com.facebook.share.model.ShareContent b> = $r3;
+
+        $r0.<com.facebook.share.widget.d: boolean c> = $z0;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public android.os.Bundle a()
+    {
+        com.facebook.share.widget.d $r0;
+        com.facebook.share.model.ShareContent $r1;
+        boolean $z0;
+        com.facebook.internal.a $r2;
+        java.util.UUID $r3;
+        android.os.Bundle $r4;
+
+        $r0 := @this: com.facebook.share.widget.d;
+
+        $r2 = $r0.<com.facebook.share.widget.d: com.facebook.internal.a a>;
+
+        $r3 = virtualinvoke $r2.<com.facebook.internal.a: java.util.UUID c()>();
+
+        $r1 = $r0.<com.facebook.share.widget.d: com.facebook.share.model.ShareContent b>;
+
+        $z0 = $r0.<com.facebook.share.widget.d: boolean c>;
+
+        $r4 = staticinvoke <com.facebook.share.internal.f: android.os.Bundle a(java.util.UUID,com.facebook.share.model.ShareContent,boolean)>($r3, $r1, $z0);
+
+        return $r4;
+    }
+
+    public android.os.Bundle b()
+    {
+        com.facebook.share.widget.d $r0;
+        com.facebook.share.model.ShareContent $r1;
+        boolean $z0;
+        com.facebook.internal.a $r2;
+        java.util.UUID $r3;
+        android.os.Bundle $r4;
+
+        $r0 := @this: com.facebook.share.widget.d;
+
+        $r2 = $r0.<com.facebook.share.widget.d: com.facebook.internal.a a>;
+
+        $r3 = virtualinvoke $r2.<com.facebook.internal.a: java.util.UUID c()>();
+
+        $r1 = $r0.<com.facebook.share.widget.d: com.facebook.share.model.ShareContent b>;
+
+        $z0 = $r0.<com.facebook.share.widget.d: boolean c>;
+
+        $r4 = staticinvoke <com.facebook.share.internal.e: android.os.Bundle a(java.util.UUID,com.facebook.share.model.ShareContent,boolean)>($r3, $r1, $z0);
+
+        return $r4;
+    }
+}

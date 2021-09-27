@@ -1,0 +1,278 @@
+public class com.seattleclouds.modules.peopledirectory.o extends com.seattleclouds.r
+{
+    private com.seattleclouds.modules.peopledirectory.Person a;
+    private com.google.android.bitmapfun.v b;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.peopledirectory.o $r0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.o;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.peopledirectory.o $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r6;
+        com.seattleclouds.modules.peopledirectory.Person $r5;
+        android.widget.ImageView $r7;
+        java.lang.String $r8;
+        boolean $z0;
+        android.support.v4.app.ac $r9;
+        android.support.v4.app.aj $r10;
+        com.seattleclouds.modules.peopledirectory.i $r11;
+        com.google.android.bitmapfun.v $r12;
+        android.widget.TextView $r13, $r14, $r15;
+        java.util.regex.Pattern $r16;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.o;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int people_directory_person_info>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        if $r5 != null goto label1;
+
+        virtualinvoke $r4.<android.view.View: void setVisibility(int)>(0);
+
+        return $r4;
+
+     label1:
+        $i0 = <com.seattleclouds.h: int imageView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.ImageView) $r6;
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String f>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r8);
+
+        if $z0 != 0 goto label2;
+
+        $r9 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.o: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r9, 100.0F);
+
+        $r9 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.o: android.support.v4.app.ac n()>();
+
+        $r10 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.o: android.support.v4.app.aj p()>();
+
+        $r11 = staticinvoke <com.seattleclouds.modules.peopledirectory.i: com.seattleclouds.modules.peopledirectory.i a(android.content.Context,android.support.v4.app.aj,int)>($r9, $r10, $i0);
+
+        $r0.<com.seattleclouds.modules.peopledirectory.o: com.google.android.bitmapfun.v b> = $r11;
+
+        $r12 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.google.android.bitmapfun.v b>;
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String f>;
+
+        virtualinvoke $r12.<com.google.android.bitmapfun.v: void a(java.lang.Object,android.widget.ImageView)>($r8, $r7);
+
+     label2:
+        $i0 = <com.seattleclouds.h: int nameTextView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r13 = (android.widget.TextView) $r6;
+
+        $i0 = <com.seattleclouds.h: int secondNameTextView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r14 = (android.widget.TextView) $r6;
+
+        $i0 = <com.seattleclouds.h: int titleTextView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r15 = (android.widget.TextView) $r6;
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        virtualinvoke $r13.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        virtualinvoke $r14.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c>;
+
+        virtualinvoke $r15.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String d>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r8);
+
+        if $z0 == 0 goto label6;
+
+        $i0 = <com.seattleclouds.h: int phoneLayout>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        virtualinvoke $r6.<android.view.View: void setVisibility(int)>(8);
+
+     label3:
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String e>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r8);
+
+        if $z0 == 0 goto label7;
+
+        $i0 = <com.seattleclouds.h: int emailLayout>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        virtualinvoke $r6.<android.view.View: void setVisibility(int)>(8);
+
+     label4:
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String g>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r8);
+
+        if $z0 == 0 goto label8;
+
+        $i0 = <com.seattleclouds.h: int descriptionTextView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        virtualinvoke $r6.<android.view.View: void setVisibility(int)>(8);
+
+     label5:
+        return $r4;
+
+     label6:
+        $i0 = <com.seattleclouds.h: int phoneTextView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r13 = (android.widget.TextView) $r6;
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String d>;
+
+        virtualinvoke $r13.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        $r16 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>(".*");
+
+        staticinvoke <android.text.util.Linkify: void addLinks(android.widget.TextView,java.util.regex.Pattern,java.lang.String)>($r13, $r16, "tel:");
+
+        goto label3;
+
+     label7:
+        $i0 = <com.seattleclouds.h: int emailTextView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r13 = (android.widget.TextView) $r6;
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String e>;
+
+        virtualinvoke $r13.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        staticinvoke <android.text.util.Linkify: boolean addLinks(android.widget.TextView,int)>($r13, 2);
+
+        goto label4;
+
+     label8:
+        $i0 = <com.seattleclouds.h: int descriptionTextView>;
+
+        $r6 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r13 = (android.widget.TextView) $r6;
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a>;
+
+        $r8 = $r5.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String g>;
+
+        virtualinvoke $r13.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        staticinvoke <android.text.util.Linkify: boolean addLinks(android.widget.TextView,int)>($r13, 15);
+
+        goto label5;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.peopledirectory.o $r0;
+        android.os.Bundle $r1;
+        android.os.Parcelable $r2;
+        com.seattleclouds.modules.peopledirectory.Person $r3;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.o;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.o: android.os.Bundle j()>();
+
+        if $r1 == null goto label1;
+
+        $r2 = virtualinvoke $r1.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("ARG_PERSON");
+
+        $r3 = (com.seattleclouds.modules.peopledirectory.Person) $r2;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.o: com.seattleclouds.modules.peopledirectory.Person a> = $r3;
+
+     label1:
+        return;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.modules.peopledirectory.o $r0;
+        com.google.android.bitmapfun.v $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.o;
+
+        specialinvoke $r0.<com.seattleclouds.r: void g()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.google.android.bitmapfun.v b>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.o: com.google.android.bitmapfun.v b>;
+
+        virtualinvoke $r1.<com.google.android.bitmapfun.v: void i()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.o: com.google.android.bitmapfun.v b> = null;
+
+     label1:
+        return;
+    }
+}

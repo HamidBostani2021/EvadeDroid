@@ -1,0 +1,394 @@
+class com.seattleclouds.previewer.aa extends android.os.AsyncTask
+{
+    final com.seattleclouds.previewer.r a;
+
+    private void <init>(com.seattleclouds.previewer.r)
+    {
+        com.seattleclouds.previewer.aa $r0;
+        com.seattleclouds.previewer.r $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.aa;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.r;
+
+        $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.previewer.r, com.seattleclouds.previewer.s)
+    {
+        com.seattleclouds.previewer.aa $r0;
+        com.seattleclouds.previewer.r $r1;
+        com.seattleclouds.previewer.s $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.aa;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.r;
+
+        $r2 := @parameter1: com.seattleclouds.previewer.s;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.aa: void <init>(com.seattleclouds.previewer.r)>($r1);
+
+        return;
+    }
+
+    protected transient java.lang.String a(com.seattleclouds.util.ak[])
+    {
+        com.seattleclouds.previewer.aa $r0;
+        com.seattleclouds.util.ak[] $r1;
+        java.lang.String $r2, $r6, $r7;
+        com.seattleclouds.util.ak $r3;
+        java.util.HashMap $r4;
+        java.lang.StringBuilder $r5;
+        boolean $z0;
+        org.json.JSONObject $r8;
+        com.seattleclouds.previewer.z $r9;
+        com.seattleclouds.previewer.r $r10, $r11;
+        java.lang.String[] $r12;
+        java.lang.Throwable $r13, $r14;
+        int $i0;
+        org.json.JSONException $r15;
+
+        $r0 := @this: com.seattleclouds.previewer.aa;
+
+        $r1 := @parameter0: com.seattleclouds.util.ak[];
+
+        $r2 = null;
+
+        $r3 = $r1[0];
+
+        $r4 = new java.util.HashMap;
+
+     label01:
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+     label02:
+        $r5 = new java.lang.StringBuilder;
+
+     label03:
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("unknown.email.");
+
+        $r6 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String a()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("@facebook.com");
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label04:
+        $r7 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String b()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r7);
+
+     label05:
+        if $z0 != 0 goto label07;
+
+     label06:
+        $r6 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String b()>();
+
+     label07:
+        $r7 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String a()>();
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("id", $r7);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("email", $r6);
+
+        $r6 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String e()>();
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("first_name", $r6);
+
+        $r6 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String d()>();
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("last_name", $r6);
+
+     label08:
+        $r6 = "male";
+
+     label09:
+        $r7 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String g()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r7);
+
+     label10:
+        if $z0 != 0 goto label12;
+
+     label11:
+        $r6 = virtualinvoke $r3.<com.seattleclouds.util.ak: java.lang.String g()>();
+
+     label12:
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("gender", $r6);
+
+     label13:
+        $r6 = <com.seattleclouds.App: java.lang.String v>;
+
+     label14:
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r6);
+
+     label15:
+        $r5 = new java.lang.StringBuilder;
+
+     label16:
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = staticinvoke <com.seattleclouds.previewer.r: java.lang.String ah()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("fbmobauth.ashx");
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r6 = staticinvoke <com.seattleclouds.util.a: java.lang.String b(java.lang.String,java.util.Map)>($r6, $r4);
+
+     label17:
+        $r8 = new org.json.JSONObject;
+
+     label18:
+        specialinvoke $r8.<org.json.JSONObject: void <init>(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r8.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("resp");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("success");
+
+     label19:
+        if $z0 == 0 goto label28;
+
+        $r2 = "OK";
+
+        $r9 = new com.seattleclouds.previewer.z;
+
+        $r10 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+        $r11 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+     label20:
+        specialinvoke $r9.<com.seattleclouds.previewer.z: void <init>(com.seattleclouds.previewer.r,android.support.v4.app.Fragment)>($r10, $r11);
+
+     label21:
+        $r12 = newarray (java.lang.String)[2];
+
+     label22:
+        $r6 = virtualinvoke $r8.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("username");
+
+     label23:
+        $r12[0] = $r6;
+
+     label24:
+        $r6 = virtualinvoke $r8.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("password");
+
+     label25:
+        $r12[1] = $r6;
+
+     label26:
+        virtualinvoke $r9.<com.seattleclouds.previewer.z: android.os.AsyncTask execute(java.lang.Object[])>($r12);
+
+     label27:
+        return "OK";
+
+     label28:
+        $r10 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+     label29:
+        $r6 = virtualinvoke $r8.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("error");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,java.lang.String)>($r10, $r6);
+
+     label30:
+        return null;
+
+     label31:
+        $r13 := @caughtexception;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error performing auth with Facebook request: ");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r13);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("PreviewerLoginFragment", $r6, $r13);
+
+        $r10 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,int)>($r10, $i0);
+
+        return $r2;
+
+     label32:
+        $r14 := @caughtexception;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error performing auth with Facebook request: ");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r14);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("PreviewerLoginFragment", $r6, $r14);
+
+        $r10 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+        $r11 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+        $r6 = staticinvoke <com.seattleclouds.previewer.r: java.lang.String e(com.seattleclouds.previewer.r)>($r11);
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,java.lang.String)>($r10, $r6);
+
+        return $r2;
+
+     label33:
+        $r15 := @caughtexception;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error performing auth with Facebook request: ");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r15);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("PreviewerLoginFragment", $r6, $r15);
+
+        $r10 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,int)>($r10, $i0);
+
+        return $r2;
+
+        catch java.net.MalformedURLException from label01 to label02 with label31;
+        catch java.net.MalformedURLException from label03 to label04 with label31;
+        catch java.net.MalformedURLException from label04 to label05 with label31;
+        catch java.net.MalformedURLException from label06 to label07 with label31;
+        catch java.net.MalformedURLException from label07 to label08 with label31;
+        catch java.net.MalformedURLException from label09 to label10 with label31;
+        catch java.net.MalformedURLException from label11 to label12 with label31;
+        catch java.net.MalformedURLException from label12 to label13 with label31;
+        catch java.net.MalformedURLException from label14 to label15 with label31;
+        catch java.net.MalformedURLException from label16 to label17 with label31;
+        catch java.net.MalformedURLException from label18 to label19 with label31;
+        catch java.net.MalformedURLException from label20 to label21 with label31;
+        catch java.net.MalformedURLException from label22 to label23 with label31;
+        catch java.net.MalformedURLException from label24 to label25 with label31;
+        catch java.net.MalformedURLException from label26 to label27 with label31;
+        catch java.net.MalformedURLException from label29 to label30 with label31;
+        catch java.io.IOException from label01 to label02 with label32;
+        catch java.io.IOException from label03 to label04 with label32;
+        catch java.io.IOException from label04 to label05 with label32;
+        catch java.io.IOException from label06 to label07 with label32;
+        catch java.io.IOException from label07 to label08 with label32;
+        catch java.io.IOException from label09 to label10 with label32;
+        catch java.io.IOException from label11 to label12 with label32;
+        catch java.io.IOException from label12 to label13 with label32;
+        catch java.io.IOException from label14 to label15 with label32;
+        catch java.io.IOException from label16 to label17 with label32;
+        catch java.io.IOException from label18 to label19 with label32;
+        catch java.io.IOException from label20 to label21 with label32;
+        catch java.io.IOException from label22 to label23 with label32;
+        catch java.io.IOException from label24 to label25 with label32;
+        catch java.io.IOException from label26 to label27 with label32;
+        catch java.io.IOException from label29 to label30 with label32;
+        catch org.json.JSONException from label01 to label02 with label33;
+        catch org.json.JSONException from label03 to label04 with label33;
+        catch org.json.JSONException from label04 to label05 with label33;
+        catch org.json.JSONException from label06 to label07 with label33;
+        catch org.json.JSONException from label07 to label08 with label33;
+        catch org.json.JSONException from label09 to label10 with label33;
+        catch org.json.JSONException from label11 to label12 with label33;
+        catch org.json.JSONException from label12 to label13 with label33;
+        catch org.json.JSONException from label14 to label15 with label33;
+        catch org.json.JSONException from label16 to label17 with label33;
+        catch org.json.JSONException from label18 to label19 with label33;
+        catch org.json.JSONException from label20 to label21 with label33;
+        catch org.json.JSONException from label22 to label23 with label33;
+        catch org.json.JSONException from label24 to label25 with label33;
+        catch org.json.JSONException from label26 to label27 with label33;
+        catch org.json.JSONException from label29 to label30 with label33;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.previewer.aa $r0;
+        java.lang.String $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.previewer.r $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.aa;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r3 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        if $r1 != null goto label2;
+
+        $r3 = $r0.<com.seattleclouds.previewer.aa: com.seattleclouds.previewer.r a>;
+
+        staticinvoke <com.seattleclouds.previewer.r: void b(com.seattleclouds.previewer.r,boolean)>($r3, 0);
+
+     label2:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.previewer.aa $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        com.seattleclouds.util.ak[] $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.aa;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (com.seattleclouds.util.ak[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.previewer.aa: java.lang.String a(com.seattleclouds.util.ak[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.previewer.aa $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.aa;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.aa: void a(java.lang.String)>($r2);
+
+        return;
+    }
+}

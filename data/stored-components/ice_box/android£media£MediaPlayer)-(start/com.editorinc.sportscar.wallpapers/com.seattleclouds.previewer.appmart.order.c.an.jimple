@@ -1,0 +1,60 @@
+public class com.seattleclouds.previewer.appmart.order.c.an extends java.lang.Object
+{
+    public java.lang.String a;
+    public long b;
+    public java.lang.String c;
+    public java.lang.String d;
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.appmart.order.c.an $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.an;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public java.lang.String toString()
+    {
+        com.seattleclouds.previewer.appmart.order.c.an $r0;
+        long $l0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.an;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("name : ");
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.an: java.lang.String a>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ; size : ");
+
+        $l0 = $r0.<com.seattleclouds.previewer.appmart.order.c.an: long b>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ; path : ");
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.an: java.lang.String d>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ; mime : ");
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.an: java.lang.String c>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+}

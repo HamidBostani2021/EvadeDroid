@@ -1,0 +1,42 @@
+class com.seattleclouds.modules.w.j extends java.lang.Object
+{
+    public int a;
+    public int b;
+    public int c;
+    public java.lang.String d;
+    final com.seattleclouds.modules.w.a e;
+
+    public void <init>(com.seattleclouds.modules.w.a, int, int, int, java.lang.String)
+    {
+        com.seattleclouds.modules.w.j $r0;
+        com.seattleclouds.modules.w.a $r1;
+        int $i0, $i1, $i2;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.w.j;
+
+        $r1 := @parameter0: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $r2 := @parameter4: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.w.j: com.seattleclouds.modules.w.a e> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.w.j: int a> = $i0;
+
+        $r0.<com.seattleclouds.modules.w.j: int b> = $i1;
+
+        $r0.<com.seattleclouds.modules.w.j: int c> = $i2;
+
+        $r0.<com.seattleclouds.modules.w.j: java.lang.String d> = $r2;
+
+        return;
+    }
+}

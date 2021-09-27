@@ -1,0 +1,140 @@
+public class com.seattleclouds.util.x extends android.support.v4.app.z
+{
+    private boolean ai;
+    private int aj;
+
+    public void <init>()
+    {
+        com.seattleclouds.util.x $r0;
+
+        $r0 := @this: com.seattleclouds.util.x;
+
+        specialinvoke $r0.<android.support.v4.app.z: void <init>()>();
+
+        $r0.<com.seattleclouds.util.x: boolean ai> = 0;
+
+        return;
+    }
+
+    public static com.seattleclouds.util.x a(boolean, int)
+    {
+        boolean $z0;
+        int $i0;
+        android.os.Bundle $r0;
+        com.seattleclouds.util.x $r1;
+
+        $z0 := @parameter0: boolean;
+
+        $i0 := @parameter1: int;
+
+        $r0 = new android.os.Bundle;
+
+        specialinvoke $r0.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r0.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("finish", 0);
+
+        virtualinvoke $r0.<android.os.Bundle: void putInt(java.lang.String,int)>("message", $i0);
+
+        $r1 = new com.seattleclouds.util.x;
+
+        specialinvoke $r1.<com.seattleclouds.util.x: void <init>()>();
+
+        virtualinvoke $r1.<com.seattleclouds.util.x: void g(android.os.Bundle)>($r0);
+
+        return $r1;
+    }
+
+    public android.app.Dialog c(android.os.Bundle)
+    {
+        com.seattleclouds.util.x $r0;
+        android.os.Bundle $r1;
+        boolean $z0;
+        int $i0;
+        android.app.AlertDialog$Builder $r2;
+        android.support.v4.app.ac $r3;
+        java.lang.String $r4, $r6;
+        java.lang.Object[] $r5;
+        android.app.AlertDialog $r7;
+
+        $r0 := @this: com.seattleclouds.util.x;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.util.x: android.os.Bundle j()>();
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("finish");
+
+        $r0.<com.seattleclouds.util.x: boolean ai> = $z0;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.util.x: android.os.Bundle j()>();
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("message");
+
+        $r0.<com.seattleclouds.util.x: int aj> = $i0;
+
+        $r2 = new android.app.AlertDialog$Builder;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.util.x: android.support.v4.app.ac n()>();
+
+        specialinvoke $r2.<android.app.AlertDialog$Builder: void <init>(android.content.Context)>($r3);
+
+        $i0 = $r0.<com.seattleclouds.util.x: int aj>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.util.x: java.lang.String a_(int)>($i0);
+
+        $r5 = newarray (java.lang.Object)[1];
+
+        $i0 = <com.seattleclouds.l: int app_name>;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.util.x: java.lang.String a_(int)>($i0);
+
+        $r5[0] = $r6;
+
+        $r4 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r4, $r5);
+
+        $r2 = virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setMessage(java.lang.CharSequence)>($r4);
+
+        $i0 = <com.seattleclouds.l: int OK>;
+
+        $r2 = virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setPositiveButton(int,android.content.DialogInterface$OnClickListener)>($i0, null);
+
+        $r7 = virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog create()>();
+
+        return $r7;
+    }
+
+    public void onDismiss(android.content.DialogInterface)
+    {
+        com.seattleclouds.util.x $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        boolean $z0;
+        android.support.v4.app.ac $r2;
+        android.widget.Toast $r3;
+
+        $r0 := @this: com.seattleclouds.util.x;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        specialinvoke $r0.<android.support.v4.app.z: void onDismiss(android.content.DialogInterface)>($r1);
+
+        $z0 = $r0.<com.seattleclouds.util.x: boolean ai>;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.util.x: android.support.v4.app.ac n()>();
+
+        $i0 = $r0.<com.seattleclouds.util.x: int aj>;
+
+        $r3 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r2, $i0, 0);
+
+        virtualinvoke $r3.<android.widget.Toast: void show()>();
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.util.x: android.support.v4.app.ac n()>();
+
+        virtualinvoke $r2.<android.support.v4.app.ac: void finish()>();
+
+     label1:
+        return;
+    }
+}

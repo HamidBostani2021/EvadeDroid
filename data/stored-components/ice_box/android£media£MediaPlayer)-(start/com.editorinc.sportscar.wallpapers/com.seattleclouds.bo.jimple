@@ -1,0 +1,65 @@
+class com.seattleclouds.bo extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.bn a;
+
+    void <init>(com.seattleclouds.bn)
+    {
+        com.seattleclouds.bo $r0;
+        com.seattleclouds.bn $r1;
+
+        $r0 := @this: com.seattleclouds.bo;
+
+        $r1 := @parameter0: com.seattleclouds.bn;
+
+        $r0.<com.seattleclouds.bo: com.seattleclouds.bn a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.bo $r0;
+        android.view.View $r1;
+        com.seattleclouds.bn $r2;
+        boolean $z0;
+        android.content.Intent $r3;
+        android.net.Uri $r4;
+        android.support.v4.app.ac $r5;
+
+        $r0 := @this: com.seattleclouds.bo;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.bo: com.seattleclouds.bn a>;
+
+        $z0 = staticinvoke <com.seattleclouds.bn: boolean a(com.seattleclouds.bn)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("SCMapFragment", "\"Get Google Play Services\" workaround activated");
+
+     label1:
+        $r3 = new android.content.Intent;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.VIEW");
+
+        $r4 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>("http://play.google.com/store/apps/details?id=com.google.android.gms");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent setData(android.net.Uri)>($r4);
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent setFlags(int)>(524288);
+
+        $r2 = $r0.<com.seattleclouds.bo: com.seattleclouds.bn a>;
+
+        $r5 = virtualinvoke $r2.<com.seattleclouds.bn: android.support.v4.app.ac n()>();
+
+        if $r5 == null goto label2;
+
+        virtualinvoke $r5.<android.app.Activity: void startActivityForResult(android.content.Intent,int)>($r3, 0);
+
+     label2:
+        return;
+    }
+}

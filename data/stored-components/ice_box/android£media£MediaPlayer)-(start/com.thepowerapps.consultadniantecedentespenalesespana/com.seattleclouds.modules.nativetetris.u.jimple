@@ -1,0 +1,28 @@
+class com.seattleclouds.modules.nativetetris.u extends android.os.Handler
+{
+
+    private void <init>()
+    {
+        com.seattleclouds.modules.nativetetris.u $r0;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.u;
+
+        specialinvoke $r0.<android.os.Handler: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.nativetetris.s)
+    {
+        com.seattleclouds.modules.nativetetris.u $r0;
+        com.seattleclouds.modules.nativetetris.s $r1;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.u;
+
+        $r1 := @parameter0: com.seattleclouds.modules.nativetetris.s;
+
+        specialinvoke $r0.<com.seattleclouds.modules.nativetetris.u: void <init>()>();
+
+        return;
+    }
+}

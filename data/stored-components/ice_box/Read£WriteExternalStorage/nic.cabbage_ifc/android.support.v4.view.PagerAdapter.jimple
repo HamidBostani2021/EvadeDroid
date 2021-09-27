@@ -1,0 +1,12 @@
+public abstract class android.support.v4.view.PagerAdapter extends java.lang.Object
+{
+
+    public static void <clinit>()
+    {
+        <android.support.v4.view.PagerAdapter: int POSITION_UNCHANGED> = -1;
+
+        <android.support.v4.view.PagerAdapter: int POSITION_NONE> = -2;
+
+        return;
+    }
+}

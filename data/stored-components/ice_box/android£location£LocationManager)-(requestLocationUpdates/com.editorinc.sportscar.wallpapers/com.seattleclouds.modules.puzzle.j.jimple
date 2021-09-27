@@ -1,0 +1,242 @@
+class com.seattleclouds.modules.puzzle.j extends android.widget.ImageView
+{
+    public int a;
+    public int b;
+    final com.seattleclouds.modules.puzzle.a c;
+    private int d;
+    private int e;
+
+    public void <init>(com.seattleclouds.modules.puzzle.a, android.content.Context)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        com.seattleclouds.modules.puzzle.a $r1;
+        android.content.Context $r2;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        $r1 := @parameter0: com.seattleclouds.modules.puzzle.a;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: com.seattleclouds.modules.puzzle.a c> = $r1;
+
+        specialinvoke $r0.<android.widget.ImageView: void <init>(android.content.Context)>($r2);
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int d> = 0;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int e> = 0;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int a> = 0;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int b> = 0;
+
+        return;
+    }
+
+    static int a(com.seattleclouds.modules.puzzle.j)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.puzzle.j;
+
+        i0 = $r0.<com.seattleclouds.modules.puzzle.j: int d>;
+
+        return i0;
+    }
+
+    static int a(com.seattleclouds.modules.puzzle.j, int)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.puzzle.j;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int d> = $i0;
+
+        return $i0;
+    }
+
+    static int b(com.seattleclouds.modules.puzzle.j)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.puzzle.j;
+
+        i0 = $r0.<com.seattleclouds.modules.puzzle.j: int e>;
+
+        return i0;
+    }
+
+    static int b(com.seattleclouds.modules.puzzle.j, int)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.puzzle.j;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int e> = $i0;
+
+        return $i0;
+    }
+
+    public int a()
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        i0 = $r0.<com.seattleclouds.modules.puzzle.j: int d>;
+
+        return i0;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int d> = $i0;
+
+        return;
+    }
+
+    public void a(int, int)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int $i0, $i1;
+        android.view.ViewGroup$LayoutParams $r1;
+        android.widget.RelativeLayout$LayoutParams $r2;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int a> = $i0;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int b> = $i1;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.puzzle.j: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r2 = (android.widget.RelativeLayout$LayoutParams) $r1;
+
+        if $r2 == null goto label1;
+
+        $r2.<android.widget.RelativeLayout$LayoutParams: int leftMargin> = $i0;
+
+        $r2.<android.widget.RelativeLayout$LayoutParams: int topMargin> = $i1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.puzzle.j: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r2);
+
+     label1:
+        return;
+    }
+
+    public int b()
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        i0 = $r0.<com.seattleclouds.modules.puzzle.j: int e>;
+
+        return i0;
+    }
+
+    public void b(int)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.puzzle.j: int e> = $i0;
+
+        return;
+    }
+
+    public void b(int, int)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int $i0, $i1;
+        android.view.ViewGroup$LayoutParams $r1;
+        android.widget.RelativeLayout$LayoutParams $r2;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.puzzle.j: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r2 = (android.widget.RelativeLayout$LayoutParams) $r1;
+
+        if $r2 == null goto label1;
+
+        $i0 = $i0 + -1;
+
+        $r2.<android.widget.RelativeLayout$LayoutParams: int width> = $i0;
+
+        $i0 = $i1 + -1;
+
+        $r2.<android.widget.RelativeLayout$LayoutParams: int height> = $i0;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.puzzle.j: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r2);
+
+     label1:
+        return;
+    }
+
+    public com.seattleclouds.modules.puzzle.SCPuzzleGameFragment$PuzzlePieceState c()
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        com.seattleclouds.modules.puzzle.SCPuzzleGameFragment$PuzzlePieceState $r1;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        $r1 = new com.seattleclouds.modules.puzzle.SCPuzzleGameFragment$PuzzlePieceState;
+
+        $i0 = $r0.<com.seattleclouds.modules.puzzle.j: int d>;
+
+        $i1 = $r0.<com.seattleclouds.modules.puzzle.j: int e>;
+
+        specialinvoke $r1.<com.seattleclouds.modules.puzzle.SCPuzzleGameFragment$PuzzlePieceState: void <init>(int,int)>($i0, $i1);
+
+        return $r1;
+    }
+
+    public void c(int, int)
+    {
+        com.seattleclouds.modules.puzzle.j $r0;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.j;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.puzzle.j: void a(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.puzzle.j: void b(int)>($i1);
+
+        return;
+    }
+}

@@ -1,0 +1,165 @@
+public class com.seattleclouds.modules.r.c extends com.seattleclouds.r
+{
+    android.widget.ListView a;
+    com.seattleclouds.modules.r.d b;
+    private android.view.View c;
+    private java.util.ArrayList d;
+    private android.os.Bundle e;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.r.c $r0;
+
+        $r0 := @this: com.seattleclouds.modules.r.c;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.r.c: android.view.View c> = null;
+
+        return;
+    }
+
+    static java.util.ArrayList a(com.seattleclouds.modules.r.c)
+    {
+        com.seattleclouds.modules.r.c $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.r.c;
+
+        r1 = $r0.<com.seattleclouds.modules.r.c: java.util.ArrayList d>;
+
+        return r1;
+    }
+
+    static android.os.Bundle b(com.seattleclouds.modules.r.c)
+    {
+        com.seattleclouds.modules.r.c $r0;
+        android.os.Bundle r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.r.c;
+
+        r1 = $r0.<com.seattleclouds.modules.r.c: android.os.Bundle e>;
+
+        return r1;
+    }
+
+    private void b(android.view.View)
+    {
+        com.seattleclouds.modules.r.c $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.r.d $r2;
+        int $i0;
+        android.widget.ListView $r3;
+
+        $r0 := @this: com.seattleclouds.modules.r.c;
+
+        $r1 := @parameter0: android.view.View;
+
+        $i0 = <com.seattleclouds.h: int quiz_highscores_list>;
+
+        $r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.ListView) $r1;
+
+        $r0.<com.seattleclouds.modules.r.c: android.widget.ListView a> = $r3;
+
+        $r2 = new com.seattleclouds.modules.r.d;
+
+        specialinvoke $r2.<com.seattleclouds.modules.r.d: void <init>(com.seattleclouds.modules.r.c)>($r0);
+
+        $r0.<com.seattleclouds.modules.r.c: com.seattleclouds.modules.r.d b> = $r2;
+
+        $r3 = $r0.<com.seattleclouds.modules.r.c: android.widget.ListView a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.r.c: com.seattleclouds.modules.r.d b>;
+
+        virtualinvoke $r3.<android.widget.ListView: void setAdapter(android.widget.ListAdapter)>($r2);
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.r.c $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        java.util.ArrayList $r4;
+        int $i0;
+        android.view.View $r5;
+        android.support.v4.app.ac $r6;
+        com.seattleclouds.modules.r.t $r7;
+        com.seattleclouds.modules.r.f $r8;
+        java.lang.String $r9;
+        android.graphics.drawable.Drawable $r10;
+
+        $r0 := @this: com.seattleclouds.modules.r.c;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $r4 = new java.util.ArrayList;
+
+        specialinvoke $r4.<java.util.ArrayList: void <init>(int)>(0);
+
+        $r0.<com.seattleclouds.modules.r.c: java.util.ArrayList d> = $r4;
+
+        $i0 = <com.seattleclouds.j: int quiz_highscores>;
+
+        $r5 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r0.<com.seattleclouds.modules.r.c: android.view.View c> = $r5;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.r.c: android.support.v4.app.ac n()>();
+
+        $r7 = staticinvoke <com.seattleclouds.modules.r.t: com.seattleclouds.modules.r.t a(android.content.Context)>($r6);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.r.c: android.support.v4.app.ac n()>();
+
+        $r8 = staticinvoke <com.seattleclouds.modules.r.f: com.seattleclouds.modules.r.f a(android.content.Context)>($r6);
+
+        $r9 = virtualinvoke $r8.<com.seattleclouds.modules.r.f: java.lang.String j()>();
+
+        $r4 = virtualinvoke $r7.<com.seattleclouds.modules.r.t: java.util.ArrayList a(java.lang.String)>($r9);
+
+        $r0.<com.seattleclouds.modules.r.c: java.util.ArrayList d> = $r4;
+
+        $r5 = $r0.<com.seattleclouds.modules.r.c: android.view.View c>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.r.c: void b(android.view.View)>($r5);
+
+        $r5 = $r0.<com.seattleclouds.modules.r.c: android.view.View c>;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.r.c: android.support.v4.app.ac n()>();
+
+        $r8 = staticinvoke <com.seattleclouds.modules.r.f: com.seattleclouds.modules.r.f a(android.content.Context)>($r6);
+
+        $r9 = virtualinvoke $r8.<com.seattleclouds.modules.r.f: java.lang.String k()>();
+
+        $r10 = staticinvoke <com.seattleclouds.App: android.graphics.drawable.Drawable j(java.lang.String)>($r9);
+
+        virtualinvoke $r5.<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>($r10);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.r.c: android.os.Bundle j()>();
+
+        if $r3 == null goto label1;
+
+        $r3 = virtualinvoke $r3.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        $r0.<com.seattleclouds.modules.r.c: android.os.Bundle e> = $r3;
+
+        $r5 = $r0.<com.seattleclouds.modules.r.c: android.view.View c>;
+
+        $r3 = $r0.<com.seattleclouds.modules.r.c: android.os.Bundle e>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r5, $r3);
+
+     label1:
+        $r5 = $r0.<com.seattleclouds.modules.r.c: android.view.View c>;
+
+        return $r5;
+    }
+}

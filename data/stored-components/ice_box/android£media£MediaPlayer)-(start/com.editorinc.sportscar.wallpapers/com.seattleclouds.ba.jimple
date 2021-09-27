@@ -1,0 +1,70 @@
+class com.seattleclouds.ba extends java.lang.Object implements java.lang.Runnable
+{
+    final int a;
+    final com.seattleclouds.ax b;
+
+    void <init>(com.seattleclouds.ax, int)
+    {
+        com.seattleclouds.ba $r0;
+        com.seattleclouds.ax $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.ba;
+
+        $r1 := @parameter0: com.seattleclouds.ax;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.ba: com.seattleclouds.ax b> = $r1;
+
+        $r0.<com.seattleclouds.ba: int a> = $i0;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.ba $r0;
+        com.seattleclouds.ax $r1;
+        com.seattleclouds.ap $r2;
+        android.widget.ProgressBar $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.ba;
+
+        $r1 = $r0.<com.seattleclouds.ba: com.seattleclouds.ax b>;
+
+        $r2 = $r1.<com.seattleclouds.ax: com.seattleclouds.ap a>;
+
+        $r3 = staticinvoke <com.seattleclouds.ap: android.widget.ProgressBar d(com.seattleclouds.ap)>($r2);
+
+        $i0 = virtualinvoke $r3.<android.widget.ProgressBar: int getMax()>();
+
+        if $i0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.ba: com.seattleclouds.ax b>;
+
+        $r2 = $r1.<com.seattleclouds.ax: com.seattleclouds.ap a>;
+
+        $r3 = staticinvoke <com.seattleclouds.ap: android.widget.ProgressBar d(com.seattleclouds.ap)>($r2);
+
+        virtualinvoke $r3.<android.widget.ProgressBar: void setProgress(int)>(0);
+
+        return;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.ba: com.seattleclouds.ax b>;
+
+        $r2 = $r1.<com.seattleclouds.ax: com.seattleclouds.ap a>;
+
+        $r3 = staticinvoke <com.seattleclouds.ap: android.widget.ProgressBar d(com.seattleclouds.ap)>($r2);
+
+        $i0 = $r0.<com.seattleclouds.ba: int a>;
+
+        virtualinvoke $r3.<android.widget.ProgressBar: void setProgress(int)>($i0);
+
+        return;
+    }
+}

@@ -1,0 +1,7 @@
+public interface  com.seattleclouds.modules.k.g extends java.lang.Object
+{
+
+    public abstract void a();
+
+    public abstract void a(java.lang.String);
+}

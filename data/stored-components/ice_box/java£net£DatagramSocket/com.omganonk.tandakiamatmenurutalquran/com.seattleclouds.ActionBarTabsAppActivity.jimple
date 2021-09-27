@@ -1,0 +1,228 @@
+public class com.seattleclouds.ActionBarTabsAppActivity extends com.seattleclouds.z
+{
+    private boolean m;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.ActionBarTabsAppActivity $r0;
+
+        $r0 := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        specialinvoke $r0.<com.seattleclouds.z: void <init>()>();
+
+        $r0.<com.seattleclouds.ActionBarTabsAppActivity: boolean m> = 0;
+
+        return;
+    }
+
+    private void c(int)
+    {
+        com.seattleclouds.ActionBarTabsAppActivity $r0;
+        int $i0;
+        android.support.v7.a.a $r1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        $i0 := @parameter0: int;
+
+        $z0 = 1;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.ActionBarTabsAppActivity: android.support.v7.a.a h()>();
+
+        if $i0 != 1 goto label2;
+
+     label1:
+        virtualinvoke $r1.<android.support.v7.a.a: void b(boolean)>($z0);
+
+        return;
+
+     label2:
+        $z0 = 0;
+
+        goto label1;
+    }
+
+    protected void l()
+    {
+        com.seattleclouds.ActionBarTabsAppActivity $r0;
+        android.content.res.Resources $r1;
+        android.content.res.Configuration $r2;
+        int $i0, $i1;
+        android.support.v7.a.a $r3;
+        com.seattleclouds.cc $r4;
+        java.util.List $r5;
+        java.lang.String $r6, $r9, $r10;
+        java.lang.Object $r7;
+        com.seattleclouds.ah $r8;
+        java.lang.StringBuilder $r11;
+        com.seattleclouds.FragmentInfo $r12;
+        android.support.v7.a.d $r13;
+        com.seattleclouds.u $r14;
+
+        $r0 := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.ActionBarTabsAppActivity: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.content.res.Configuration getConfiguration()>();
+
+        $i0 = $r2.<android.content.res.Configuration: int orientation>;
+
+        specialinvoke $r0.<com.seattleclouds.ActionBarTabsAppActivity: void c(int)>($i0);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.ActionBarTabsAppActivity: android.support.v7.a.a h()>();
+
+        virtualinvoke $r3.<android.support.v7.a.a: void a(int)>(2);
+
+        $i0 = 0;
+
+     label1:
+        $r4 = <com.seattleclouds.App: com.seattleclouds.cc c>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.cc: java.util.List c()>();
+
+        $i1 = interfaceinvoke $r5.<java.util.List: int size()>();
+
+        if $i0 >= $i1 goto label3;
+
+        $r6 = staticinvoke <com.seattleclouds.ActionBarTabsAppActivity: java.lang.String b(int)>($i0);
+
+        $r4 = <com.seattleclouds.App: com.seattleclouds.cc c>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.cc: java.util.List c()>();
+
+        $r7 = interfaceinvoke $r5.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r8 = (com.seattleclouds.ah) $r7;
+
+        $r9 = virtualinvoke $r8.<com.seattleclouds.ah: java.lang.String a()>();
+
+        $r10 = $r9;
+
+        if $r9 != null goto label2;
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>()>();
+
+        $i1 = <com.seattleclouds.l: int tab>;
+
+        $r9 = virtualinvoke $r0.<com.seattleclouds.ActionBarTabsAppActivity: java.lang.String getString(int)>($i1);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r10 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label2:
+        $r12 = specialinvoke $r0.<com.seattleclouds.z: com.seattleclouds.FragmentInfo a(java.lang.String)>($r6);
+
+        $r13 = virtualinvoke $r3.<android.support.v7.a.a: android.support.v7.a.d b()>();
+
+        $r13 = virtualinvoke $r13.<android.support.v7.a.d: android.support.v7.a.d a(java.lang.CharSequence)>($r10);
+
+        $r14 = new com.seattleclouds.u;
+
+        specialinvoke $r14.<com.seattleclouds.u: void <init>(com.seattleclouds.ActionBarTabsAppActivity,java.lang.String,com.seattleclouds.FragmentInfo)>($r0, $r6, $r12);
+
+        $r13 = virtualinvoke $r13.<android.support.v7.a.d: android.support.v7.a.d a(android.support.v7.a.e)>($r14);
+
+        virtualinvoke $r3.<android.support.v7.a.a: void a(android.support.v7.a.d)>($r13);
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label3:
+        return;
+    }
+
+    public void onConfigurationChanged(android.content.res.Configuration)
+    {
+        com.seattleclouds.ActionBarTabsAppActivity $r0;
+        android.content.res.Configuration $r1;
+        boolean $z0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        $r1 := @parameter0: android.content.res.Configuration;
+
+        specialinvoke $r0.<com.seattleclouds.z: void onConfigurationChanged(android.content.res.Configuration)>($r1);
+
+        $z0 = $r0.<com.seattleclouds.ActionBarTabsAppActivity: boolean m>;
+
+        if $z0 != 0 goto label1;
+
+        $i0 = $r1.<android.content.res.Configuration: int orientation>;
+
+        specialinvoke $r0.<com.seattleclouds.ActionBarTabsAppActivity: void c(int)>($i0);
+
+     label1:
+        return;
+    }
+
+    protected void onSaveInstanceState(android.os.Bundle)
+    {
+        com.seattleclouds.ActionBarTabsAppActivity $r0;
+        android.os.Bundle $r1;
+
+        $r0 := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.z: void onSaveInstanceState(android.os.Bundle)>($r1);
+
+        $r0.<com.seattleclouds.ActionBarTabsAppActivity: boolean m> = 1;
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.ActionBarTabsAppActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        $r0 = this.<com.seattleclouds.ActionBarTabsAppActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.ActionBarTabsAppActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.ActionBarTabsAppActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.ActionBarTabsAppActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.ActionBarTabsAppActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.ActionBarTabsAppActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

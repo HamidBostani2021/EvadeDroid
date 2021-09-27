@@ -1,0 +1,57 @@
+class com.seattleclouds.api.e extends java.lang.Object implements java.lang.Runnable
+{
+    final android.app.Activity a;
+    final java.lang.String b;
+    final com.seattleclouds.api.d c;
+
+    void <init>(com.seattleclouds.api.d, android.app.Activity, java.lang.String)
+    {
+        com.seattleclouds.api.e $r0;
+        com.seattleclouds.api.d $r1;
+        android.app.Activity $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.api.e;
+
+        $r1 := @parameter0: com.seattleclouds.api.d;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r0.<com.seattleclouds.api.e: com.seattleclouds.api.d c> = $r1;
+
+        $r0.<com.seattleclouds.api.e: android.app.Activity a> = $r2;
+
+        $r0.<com.seattleclouds.api.e: java.lang.String b> = $r3;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.api.e $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+        com.seattleclouds.api.d $r3;
+
+        $r0 := @this: com.seattleclouds.api.e;
+
+        $r2 = $r0.<com.seattleclouds.api.e: android.app.Activity a>;
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.api.e: com.seattleclouds.api.d c>;
+
+        $r1 = $r0.<com.seattleclouds.api.e: java.lang.String b>;
+
+        virtualinvoke $r3.<com.seattleclouds.api.d: void b(java.lang.String)>($r1);
+
+        return;
+    }
+}

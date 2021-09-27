@@ -1,0 +1,1393 @@
+public class com.seattleclouds.modules.j.c extends com.seattleclouds.r
+{
+    private android.widget.SeekBar a;
+    private java.lang.Boolean ai;
+    private android.media.MediaPlayer aj;
+    private java.util.Timer ak;
+    private java.util.ArrayList al;
+    private boolean am;
+    private int an;
+    private java.lang.String ao;
+    private java.lang.String ap;
+    private android.widget.ImageButton b;
+    private android.webkit.WebView c;
+    private java.lang.Boolean d;
+    private java.lang.Boolean e;
+    private java.lang.Boolean f;
+    private java.lang.Boolean g;
+    private java.lang.Boolean h;
+    private java.lang.Boolean i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean $r1;
+        java.util.ArrayList $r2;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean d> = $r1;
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean e> = $r1;
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean f> = $r1;
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean g> = $r1;
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean h> = $r1;
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean i> = $r1;
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean ai> = $r1;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.j.c: java.util.ArrayList al> = $r2;
+
+        return;
+    }
+
+    static int a(com.seattleclouds.modules.j.c, int)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.j.c: int an> = $i0;
+
+        return $i0;
+    }
+
+    static android.media.MediaPlayer a(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.media.MediaPlayer r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        return r1;
+    }
+
+    static java.lang.Boolean a(com.seattleclouds.modules.j.c, java.lang.Boolean)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter1: java.lang.Boolean;
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean h> = $r1;
+
+        return $r1;
+    }
+
+    static void a(com.seattleclouds.modules.j.c, java.lang.String)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void d(java.lang.String)>($r1);
+
+        return;
+    }
+
+    private void ab()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean $r1;
+        boolean $z0;
+        android.media.MediaPlayer $r2;
+        android.widget.SeekBar $r3;
+        int $i0;
+        com.seattleclouds.modules.j.d $r4;
+        android.widget.ImageButton $r5;
+        com.seattleclouds.modules.j.e $r6;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean i>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label4;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean ai>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(1);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean ai> = $r1;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        if $r2 == null goto label3;
+
+        $r3 = $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        $i0 = virtualinvoke $r2.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+        virtualinvoke $r3.<android.widget.SeekBar: void setProgress(int)>($i0);
+
+        $r3 = $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a>;
+
+        virtualinvoke $r3.<android.widget.SeekBar: void incrementProgressBy(int)>(100);
+
+        $r3 = $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        $i0 = virtualinvoke $r2.<android.media.MediaPlayer: int getDuration()>();
+
+        virtualinvoke $r3.<android.widget.SeekBar: void setMax(int)>($i0);
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a>;
+
+        $r4 = new com.seattleclouds.modules.j.d;
+
+        specialinvoke $r4.<com.seattleclouds.modules.j.d: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r3.<android.widget.SeekBar: void setOnSeekBarChangeListener(android.widget.SeekBar$OnSeekBarChangeListener)>($r4);
+
+        $r5 = $r0.<com.seattleclouds.modules.j.c: android.widget.ImageButton b>;
+
+        $r6 = new com.seattleclouds.modules.j.e;
+
+        specialinvoke $r6.<com.seattleclouds.modules.j.e: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r5.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r6);
+
+        return;
+
+     label3:
+        $r3 = $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a>;
+
+        virtualinvoke $r3.<android.widget.SeekBar: void setProgress(int)>(0);
+
+        $r3 = $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a>;
+
+        virtualinvoke $r3.<android.widget.SeekBar: void setMax(int)>(0);
+
+        goto label2;
+
+     label4:
+        return;
+    }
+
+    private void ac()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        com.seattleclouds.modules.j.i $r1;
+        android.support.v4.app.ac $r2;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.j.c: android.support.v4.app.ac n()>();
+
+        $r1 = new com.seattleclouds.modules.j.i;
+
+        specialinvoke $r1.<com.seattleclouds.modules.j.i: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r2.<android.support.v4.app.ac: void runOnUiThread(java.lang.Runnable)>($r1);
+
+        return;
+    }
+
+    private void ad()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        boolean $z0;
+        android.media.MediaPlayer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        if $r1 == null goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        $z0 = virtualinvoke $r1.<android.media.MediaPlayer: boolean isPlaying()>();
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean af()>();
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean ae()>();
+
+     label2:
+        return;
+    }
+
+    private java.lang.Boolean ae()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.media.MediaPlayer $r1;
+        java.lang.Boolean $r2;
+        boolean $z0;
+        int $i0;
+        android.widget.ImageButton $r3;
+        java.lang.Throwable $r4, $r5;
+        java.lang.IllegalStateException r6;
+        java.io.IOException r7;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        if $r1 == null goto label09;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean g>;
+
+     label01:
+        $z0 = virtualinvoke $r2.<java.lang.Boolean: boolean booleanValue()>();
+
+     label02:
+        if $z0 == 0 goto label10;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label03:
+        virtualinvoke $r1.<android.media.MediaPlayer: void start()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ag()>();
+
+        $r2 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+     label04:
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean d> = $r2;
+
+     label05:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        $i0 = $r0.<com.seattleclouds.modules.j.c: int an>;
+
+     label06:
+        virtualinvoke $r1.<android.media.MediaPlayer: void seekTo(int)>($i0);
+
+     label07:
+        $r3 = $r0.<com.seattleclouds.modules.j.c: android.widget.ImageButton b>;
+
+        $i0 = <com.seattleclouds.g: int ic_media_pause_alpha>;
+
+     label08:
+        virtualinvoke $r3.<android.widget.ImageButton: void setImageResource(int)>($i0);
+
+     label09:
+        $r2 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        return $r2;
+
+     label10:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label11:
+        virtualinvoke $r1.<android.media.MediaPlayer: void prepare()>();
+
+     label12:
+        goto label05;
+
+     label13:
+        $r4 := @caughtexception;
+
+        r6 = (java.lang.IllegalStateException) $r4;
+
+        virtualinvoke r6.<java.lang.IllegalStateException: void printStackTrace()>();
+
+        goto label09;
+
+     label14:
+        $r5 := @caughtexception;
+
+        r7 = (java.io.IOException) $r5;
+
+        virtualinvoke r7.<java.io.IOException: void printStackTrace()>();
+
+        goto label09;
+
+        catch java.lang.IllegalStateException from label01 to label02 with label13;
+        catch java.lang.IllegalStateException from label03 to label04 with label13;
+        catch java.lang.IllegalStateException from label06 to label07 with label13;
+        catch java.lang.IllegalStateException from label08 to label09 with label13;
+        catch java.io.IOException from label01 to label02 with label14;
+        catch java.io.IOException from label03 to label04 with label14;
+        catch java.io.IOException from label06 to label07 with label14;
+        catch java.io.IOException from label08 to label09 with label14;
+        catch java.lang.IllegalStateException from label11 to label12 with label13;
+        catch java.io.IOException from label11 to label12 with label14;
+    }
+
+    private java.lang.Boolean af()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        int $i0;
+        android.media.MediaPlayer $r1;
+        boolean $z0;
+        android.widget.ImageButton $r2;
+        java.lang.Boolean $r3;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        $z0 = virtualinvoke $r1.<android.media.MediaPlayer: boolean isPlaying()>();
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void pause()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.widget.ImageButton b>;
+
+        $i0 = <com.seattleclouds.g: int ic_media_play_alpha>;
+
+        virtualinvoke $r2.<android.widget.ImageButton: void setImageResource(int)>($i0);
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ah()>();
+
+     label1:
+        $r3 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(1);
+
+        return $r3;
+    }
+
+    private void ag()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        com.seattleclouds.modules.j.j $r1;
+        java.util.Timer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ah()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: java.util.Timer ak>;
+
+        if $r2 != null goto label1;
+
+        $r2 = new java.util.Timer;
+
+        specialinvoke $r2.<java.util.Timer: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.j.c: java.util.Timer ak> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: java.util.Timer ak>;
+
+        $r1 = new com.seattleclouds.modules.j.j;
+
+        specialinvoke $r1.<com.seattleclouds.modules.j.j: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r2.<java.util.Timer: void schedule(java.util.TimerTask,long,long)>($r1, 500L, 500L);
+
+     label1:
+        return;
+    }
+
+    private void ah()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.util.Timer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.util.Timer ak>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.util.Timer ak>;
+
+        virtualinvoke $r1.<java.util.Timer: void cancel()>();
+
+        $r0.<com.seattleclouds.modules.j.c: java.util.Timer ak> = null;
+
+     label1:
+        return;
+    }
+
+    private void ai()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.media.MediaPlayer $r1;
+        boolean $z0;
+        java.io.FileInputStream $r2;
+        java.io.File $r3;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5;
+        java.io.FileDescriptor $r6;
+        com.seattleclouds.modules.j.k $r7;
+        com.seattleclouds.modules.j.l $r8;
+        com.seattleclouds.modules.j.m $r9;
+        android.support.v4.app.ac $r10;
+        android.content.res.AssetManager $r11;
+        android.content.res.AssetFileDescriptor $r12;
+        long $l0, $l1;
+        java.lang.Throwable $r13, $r14, $r15;
+        java.lang.Exception $r16;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 = new android.media.MediaPlayer;
+
+     label01:
+        specialinvoke $r1.<android.media.MediaPlayer: void <init>()>();
+
+     label02:
+        $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj> = $r1;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label03:
+        virtualinvoke $r1.<android.media.MediaPlayer: void setScreenOnWhilePlaying(boolean)>(1);
+
+     label04:
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 != 0 goto label05;
+
+        $z0 = <com.seattleclouds.App: boolean E>;
+
+        if $z0 == 0 goto label23;
+
+     label05:
+        $r2 = new java.io.FileInputStream;
+
+        $r3 = new java.io.File;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label06:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = staticinvoke <com.seattleclouds.App: java.lang.String g()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+     label07:
+        $r5 = $r0.<com.seattleclouds.modules.j.c: java.lang.String ao>;
+
+     label08:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r5);
+
+        specialinvoke $r2.<java.io.FileInputStream: void <init>(java.io.File)>($r3);
+
+        $r6 = virtualinvoke $r2.<java.io.FileInputStream: java.io.FileDescriptor getFD()>();
+
+     label09:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label10:
+        virtualinvoke $r1.<android.media.MediaPlayer: void setDataSource(java.io.FileDescriptor)>($r6);
+
+     label11:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label12:
+        $r7 = new com.seattleclouds.modules.j.k;
+
+     label13:
+        specialinvoke $r7.<com.seattleclouds.modules.j.k: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnPreparedListener(android.media.MediaPlayer$OnPreparedListener)>($r7);
+
+     label14:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label15:
+        $r8 = new com.seattleclouds.modules.j.l;
+
+     label16:
+        specialinvoke $r8.<com.seattleclouds.modules.j.l: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnCompletionListener(android.media.MediaPlayer$OnCompletionListener)>($r8);
+
+     label17:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label18:
+        $r9 = new com.seattleclouds.modules.j.m;
+
+     label19:
+        specialinvoke $r9.<com.seattleclouds.modules.j.m: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnSeekCompleteListener(android.media.MediaPlayer$OnSeekCompleteListener)>($r9);
+
+     label20:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label21:
+        virtualinvoke $r1.<android.media.MediaPlayer: void prepare()>();
+
+     label22:
+        return;
+
+     label23:
+        $r10 = virtualinvoke $r0.<com.seattleclouds.modules.j.c: android.support.v4.app.ac n()>();
+
+        $r11 = virtualinvoke $r10.<android.support.v4.app.ac: android.content.res.AssetManager getAssets()>();
+
+     label24:
+        $r4 = new java.lang.StringBuilder;
+
+     label25:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Main/");
+
+     label26:
+        $r5 = $r0.<com.seattleclouds.modules.j.c: java.lang.String ao>;
+
+     label27:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r12 = virtualinvoke $r11.<android.content.res.AssetManager: android.content.res.AssetFileDescriptor openFd(java.lang.String)>($r5);
+
+     label28:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+     label29:
+        $r6 = virtualinvoke $r12.<android.content.res.AssetFileDescriptor: java.io.FileDescriptor getFileDescriptor()>();
+
+        $l0 = virtualinvoke $r12.<android.content.res.AssetFileDescriptor: long getStartOffset()>();
+
+        $l1 = virtualinvoke $r12.<android.content.res.AssetFileDescriptor: long getLength()>();
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setDataSource(java.io.FileDescriptor,long,long)>($r6, $l0, $l1);
+
+     label30:
+        goto label11;
+
+     label31:
+        $r13 := @caughtexception;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("playSource: ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r13);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("Karaoke", $r5, $r13);
+
+        return;
+
+     label32:
+        $r14 := @caughtexception;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("playSource: ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r14);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("Karaoke", $r5, $r14);
+
+        return;
+
+     label33:
+        $r15 := @caughtexception;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("playSource: ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r15);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("Karaoke", $r5, $r15);
+
+        return;
+
+     label34:
+        $r16 := @caughtexception;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("exception: ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r16);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("Karaoke", $r5, $r16);
+
+        return;
+
+        catch java.lang.IllegalArgumentException from label01 to label02 with label31;
+        catch java.lang.IllegalArgumentException from label03 to label04 with label31;
+        catch java.lang.IllegalArgumentException from label06 to label07 with label31;
+        catch java.lang.IllegalArgumentException from label08 to label09 with label31;
+        catch java.lang.IllegalArgumentException from label10 to label11 with label31;
+        catch java.lang.IllegalArgumentException from label13 to label14 with label31;
+        catch java.lang.IllegalArgumentException from label16 to label17 with label31;
+        catch java.lang.IllegalArgumentException from label19 to label20 with label31;
+        catch java.lang.IllegalArgumentException from label21 to label22 with label31;
+        catch java.lang.IllegalArgumentException from label23 to label24 with label31;
+        catch java.lang.IllegalArgumentException from label25 to label26 with label31;
+        catch java.lang.IllegalArgumentException from label27 to label28 with label31;
+        catch java.lang.IllegalArgumentException from label29 to label30 with label31;
+        catch java.lang.IllegalStateException from label01 to label02 with label32;
+        catch java.lang.IllegalStateException from label03 to label04 with label32;
+        catch java.lang.IllegalStateException from label06 to label07 with label32;
+        catch java.lang.IllegalStateException from label08 to label09 with label32;
+        catch java.lang.IllegalStateException from label10 to label11 with label32;
+        catch java.lang.IllegalStateException from label13 to label14 with label32;
+        catch java.lang.IllegalStateException from label16 to label17 with label32;
+        catch java.lang.IllegalStateException from label19 to label20 with label32;
+        catch java.lang.IllegalStateException from label21 to label22 with label32;
+        catch java.lang.IllegalStateException from label23 to label24 with label32;
+        catch java.lang.IllegalStateException from label25 to label26 with label32;
+        catch java.lang.IllegalStateException from label27 to label28 with label32;
+        catch java.lang.IllegalStateException from label29 to label30 with label32;
+        catch java.io.IOException from label01 to label02 with label33;
+        catch java.io.IOException from label03 to label04 with label33;
+        catch java.io.IOException from label06 to label07 with label33;
+        catch java.io.IOException from label08 to label09 with label33;
+        catch java.io.IOException from label10 to label11 with label33;
+        catch java.io.IOException from label13 to label14 with label33;
+        catch java.io.IOException from label16 to label17 with label33;
+        catch java.io.IOException from label19 to label20 with label33;
+        catch java.io.IOException from label21 to label22 with label33;
+        catch java.io.IOException from label23 to label24 with label33;
+        catch java.io.IOException from label25 to label26 with label33;
+        catch java.io.IOException from label27 to label28 with label33;
+        catch java.io.IOException from label29 to label30 with label33;
+        catch java.lang.Exception from label01 to label04 with label34;
+        catch java.lang.Exception from label06 to label12 with label34;
+        catch java.lang.Exception from label13 to label15 with label34;
+        catch java.lang.Exception from label16 to label18 with label34;
+        catch java.lang.Exception from label19 to label22 with label34;
+        catch java.lang.Exception from label23 to label24 with label34;
+        catch java.lang.Exception from label25 to label30 with label34;
+    }
+
+    static int b(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        i0 = $r0.<com.seattleclouds.modules.j.c: int an>;
+
+        return i0;
+    }
+
+    static java.lang.Boolean b(com.seattleclouds.modules.j.c, java.lang.Boolean)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter1: java.lang.Boolean;
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean f> = $r1;
+
+        return $r1;
+    }
+
+    static java.lang.Boolean c(com.seattleclouds.modules.j.c, java.lang.Boolean)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter1: java.lang.Boolean;
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean g> = $r1;
+
+        return $r1;
+    }
+
+    private void c(android.os.Bundle)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        java.lang.Boolean $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        if $r1 == null goto label1;
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String,int)>("STATE_CURRENT_PLAYER_POSITION", 0);
+
+        $r0.<com.seattleclouds.modules.j.c: int an> = $i0;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean d>;
+
+        $z0 = virtualinvoke $r2.<java.lang.Boolean: boolean booleanValue()>();
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String,boolean)>("STATE_WAS_PLAYING", $z0);
+
+        $r2 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean d> = $r2;
+
+     label1:
+        return;
+    }
+
+    static void c(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ad()>();
+
+        return;
+    }
+
+    private void c(java.lang.String)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.String $r1, $r4;
+        android.webkit.WebView $r2;
+        android.webkit.WebSettings $r3;
+        java.io.InputStream $r5;
+        com.seattleclouds.modules.j.f $r6;
+        com.seattleclouds.modules.j.h $r7;
+        java.lang.Throwable $r8, $r9;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.webkit.WebView c>;
+
+        $r3 = virtualinvoke $r2.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r3.<android.webkit.WebSettings: void setJavaScriptEnabled(boolean)>(1);
+
+        $r4 = "";
+
+     label1:
+        $r5 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>($r1);
+
+        $r1 = staticinvoke <com.seattleclouds.util.bn: java.lang.String b(java.io.InputStream)>($r5);
+
+     label2:
+        $r4 = $r1;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.webkit.WebView c>;
+
+        $r1 = staticinvoke <com.seattleclouds.App: java.lang.String h(java.lang.String)>("");
+
+        virtualinvoke $r2.<android.webkit.WebView: void loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>($r1, $r4, null, "UTF-8", null);
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.webkit.WebView c>;
+
+        $r6 = new com.seattleclouds.modules.j.f;
+
+        specialinvoke $r6.<com.seattleclouds.modules.j.f: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r2.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r6, "karaokeJSInterface");
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.webkit.WebView c>;
+
+        $r7 = new com.seattleclouds.modules.j.h;
+
+        specialinvoke $r7.<com.seattleclouds.modules.j.h: void <init>(com.seattleclouds.modules.j.c)>($r0);
+
+        virtualinvoke $r2.<android.webkit.WebView: void setWebViewClient(android.webkit.WebViewClient)>($r7);
+
+        return;
+
+     label4:
+        $r8 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("Karaoke", "IOException", $r8);
+
+        goto label3;
+
+     label5:
+        $r9 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("Karaoke", "IllegalArgumentException", $r9);
+
+        goto label3;
+
+        catch java.io.IOException from label1 to label2 with label4;
+        catch java.lang.IllegalArgumentException from label1 to label2 with label5;
+    }
+
+    static java.lang.Boolean d(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean d>;
+
+        return r1;
+    }
+
+    private void d(java.lang.String)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.String $r1, $r6;
+        int $i0, $i1, $i2;
+        java.lang.String[] $r2, $r3;
+        java.util.ArrayList $r4;
+        com.seattleclouds.modules.j.b $r5;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = virtualinvoke $r1.<java.lang.String: java.lang.String[] split(java.lang.String)>(" ");
+
+        $i0 = lengthof $r2;
+
+        $i1 = 0;
+
+     label1:
+        if $i1 >= $i0 goto label6;
+
+        $r1 = $r2[$i1];
+
+        $r3 = virtualinvoke $r1.<java.lang.String: java.lang.String[] split(java.lang.String)>(",");
+
+        $i2 = lengthof $r3;
+
+        lookupswitch($i2)
+        {
+            case 1: goto label5;
+            case 2: goto label4;
+            default: goto label2;
+        };
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.modules.j.c: java.util.ArrayList al>;
+
+        $r5 = new com.seattleclouds.modules.j.b;
+
+        specialinvoke $r5.<com.seattleclouds.modules.j.b: void <init>(java.lang.String,java.lang.String)>("00:00:00", "00:00:00");
+
+        virtualinvoke $r4.<java.util.ArrayList: boolean add(java.lang.Object)>($r5);
+
+     label3:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label4:
+        $r4 = $r0.<com.seattleclouds.modules.j.c: java.util.ArrayList al>;
+
+        $r5 = new com.seattleclouds.modules.j.b;
+
+        $r1 = $r3[0];
+
+        $r6 = $r3[1];
+
+        specialinvoke $r5.<com.seattleclouds.modules.j.b: void <init>(java.lang.String,java.lang.String)>($r1, $r6);
+
+        virtualinvoke $r4.<java.util.ArrayList: boolean add(java.lang.Object)>($r5);
+
+        goto label3;
+
+     label5:
+        $r4 = $r0.<com.seattleclouds.modules.j.c: java.util.ArrayList al>;
+
+        $r5 = new com.seattleclouds.modules.j.b;
+
+        $r1 = $r3[0];
+
+        specialinvoke $r5.<com.seattleclouds.modules.j.b: void <init>(java.lang.String,java.lang.String)>($r1, "00:00:00");
+
+        virtualinvoke $r4.<java.util.ArrayList: boolean add(java.lang.Object)>($r5);
+
+        goto label3;
+
+     label6:
+        return;
+    }
+
+    static java.lang.Boolean e(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean g>;
+
+        return r1;
+    }
+
+    static boolean f(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        boolean z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        z0 = $r0.<com.seattleclouds.modules.j.c: boolean am>;
+
+        return z0;
+    }
+
+    static java.lang.Boolean g(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean ae()>();
+
+        return $r1;
+    }
+
+    static android.widget.SeekBar h(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.widget.SeekBar r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a>;
+
+        return r1;
+    }
+
+    static android.webkit.WebView i(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.webkit.WebView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: android.webkit.WebView c>;
+
+        return r1;
+    }
+
+    static java.lang.Boolean j(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean h>;
+
+        return r1;
+    }
+
+    static void k(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ac()>();
+
+        return;
+    }
+
+    static void l(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ab()>();
+
+        return;
+    }
+
+    static java.lang.Boolean m(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean f>;
+
+        return r1;
+    }
+
+    static android.widget.ImageButton n(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.widget.ImageButton r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.j.c;
+
+        r1 = $r0.<com.seattleclouds.modules.j.c: android.widget.ImageButton b>;
+
+        return r1;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.widget.SeekBar $r6;
+        android.widget.ImageButton $r7;
+        android.webkit.WebView $r8;
+        java.lang.Boolean $r9;
+        java.lang.String $r10;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int karaoke_view>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int seekBar1>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.SeekBar) $r5;
+
+        $r0.<com.seattleclouds.modules.j.c: android.widget.SeekBar a> = $r6;
+
+        $i0 = <com.seattleclouds.h: int imageButton1>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.ImageButton) $r5;
+
+        $r0.<com.seattleclouds.modules.j.c: android.widget.ImageButton b> = $r7;
+
+        $i0 = <com.seattleclouds.h: int web_view>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.webkit.WebView) $r5;
+
+        $r0.<com.seattleclouds.modules.j.c: android.webkit.WebView c> = $r8;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void c(android.os.Bundle)>($r3);
+
+        $r9 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(1);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean i> = $r9;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ai()>();
+
+        $r10 = $r0.<com.seattleclouds.modules.j.c: java.lang.String ap>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void c(java.lang.String)>($r10);
+
+        return $r4;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.os.Bundle $r1, $r2;
+        java.lang.String $r3;
+        boolean $z0;
+        java.lang.Boolean $r4;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $r0.<com.seattleclouds.modules.j.c: int an> = 0;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.j.c: android.os.Bundle j()>();
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("pageId");
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.String ap> = $r3;
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("songFile");
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.String ao> = $r3;
+
+        $z0 = virtualinvoke $r2.<android.os.Bundle: boolean getBoolean(java.lang.String)>("autoStart");
+
+        $r4 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean d> = $r4;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void c(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        boolean $z0;
+        java.lang.Boolean $r1;
+        android.media.MediaPlayer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a_(boolean)>($z0);
+
+        $r0.<com.seattleclouds.modules.j.c: boolean am> = $z0;
+
+        if $z0 == 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean g>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label4;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean f>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label4;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean d>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean e>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label4;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean ae()>();
+
+        return;
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        if $r2 == null goto label3;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean g>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        $z0 = virtualinvoke $r2.<android.media.MediaPlayer: boolean isPlaying()>();
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean e> = $r1;
+
+     label3:
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean af()>();
+
+     label4:
+        return;
+    }
+
+    public void c(int)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        int $i0, $i1, $i2;
+        java.util.ArrayList $r1;
+        java.lang.Object $r2;
+        com.seattleclouds.modules.j.b $r3;
+        java.lang.Boolean $r4;
+        boolean $z0;
+        android.webkit.WebView $r5;
+        java.lang.StringBuilder $r6;
+        java.lang.String $r7;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $i0 := @parameter0: int;
+
+        $i1 = 0;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.util.ArrayList al>;
+
+        $i2 = virtualinvoke $r1.<java.util.ArrayList: int size()>();
+
+        if $i1 >= $i2 goto label3;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.c: java.util.ArrayList al>;
+
+        $r2 = virtualinvoke $r1.<java.util.ArrayList: java.lang.Object get(int)>($i1);
+
+        $r3 = (com.seattleclouds.modules.j.b) $r2;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.j.b: java.lang.Boolean a(int)>($i0);
+
+        $z0 = virtualinvoke $r4.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label2;
+
+        $r5 = $r0.<com.seattleclouds.modules.j.c: android.webkit.WebView c>;
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("javascript:colorLine(");
+
+        $i0 = $i1 + 1;
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(");void(0);");
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r5.<android.webkit.WebView: void loadUrl(java.lang.String)>($r7);
+
+        return;
+
+     label2:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label3:
+        return;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.j.c $r0;
+        android.os.Bundle $r1;
+        boolean $z0;
+        int $i0;
+        java.lang.Boolean $r2;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $i0 = $r0.<com.seattleclouds.modules.j.c: int an>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putInt(java.lang.String,int)>("STATE_CURRENT_PLAYER_POSITION", $i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean e>;
+
+        $z0 = virtualinvoke $r2.<java.lang.Boolean: boolean booleanValue()>();
+
+        virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("STATE_WAS_PLAYING", $z0);
+
+        specialinvoke $r0.<com.seattleclouds.r: void e(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.modules.j.c $r0;
+        java.lang.Boolean $r1;
+        android.media.MediaPlayer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.j.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean af()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.j.c: void ah()>();
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.j.c: java.lang.Boolean ai> = $r1;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        virtualinvoke $r2.<android.media.MediaPlayer: void stop()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj>;
+
+        virtualinvoke $r2.<android.media.MediaPlayer: void release()>();
+
+        $r0.<com.seattleclouds.modules.j.c: android.media.MediaPlayer aj> = null;
+
+        specialinvoke $r0.<com.seattleclouds.r: void g()>();
+
+        return;
+    }
+}

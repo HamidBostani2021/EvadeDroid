@@ -1,0 +1,107 @@
+class com.seattleclouds.modules.feedback.d extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.modules.feedback.a a;
+    final com.seattleclouds.modules.feedback.Field b;
+    final com.seattleclouds.modules.feedback.c c;
+
+    void <init>(com.seattleclouds.modules.feedback.c, com.seattleclouds.modules.feedback.a, com.seattleclouds.modules.feedback.Field)
+    {
+        com.seattleclouds.modules.feedback.d $r0;
+        com.seattleclouds.modules.feedback.c $r1;
+        com.seattleclouds.modules.feedback.a $r2;
+        com.seattleclouds.modules.feedback.Field $r3;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.d;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.c;
+
+        $r2 := @parameter1: com.seattleclouds.modules.feedback.a;
+
+        $r3 := @parameter2: com.seattleclouds.modules.feedback.Field;
+
+        $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.c c> = $r1;
+
+        $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.a a> = $r2;
+
+        $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.Field b> = $r3;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.modules.feedback.d $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.feedback.c $r2;
+        com.seattleclouds.modules.feedback.a $r3;
+        com.seattleclouds.modules.feedback.Field $r4;
+        java.util.List $r5;
+        int $i0;
+        java.lang.CharSequence[] $r6;
+        java.lang.Object[] $r7;
+        android.support.v7.a.u $r8;
+        android.support.v4.app.ac $r9;
+        com.seattleclouds.modules.feedback.e $r10;
+        android.support.v7.a.t $r11;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.d;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.c c>;
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.a a>;
+
+        staticinvoke <com.seattleclouds.modules.feedback.c: com.seattleclouds.modules.feedback.a a(com.seattleclouds.modules.feedback.c,com.seattleclouds.modules.feedback.a)>($r2, $r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.c c>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.feedback.c: void b(android.view.View)>($r1);
+
+        $r4 = $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.Field b>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.feedback.Field: java.util.List e()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.c c>;
+
+        $i0 = interfaceinvoke $r5.<java.util.List: int size()>();
+
+        $r6 = newarray (java.lang.CharSequence)[$i0];
+
+        $r7 = interfaceinvoke $r5.<java.util.List: java.lang.Object[] toArray(java.lang.Object[])>($r6);
+
+        $r6 = (java.lang.CharSequence[]) $r7;
+
+        staticinvoke <com.seattleclouds.modules.feedback.c: java.lang.CharSequence[] a(com.seattleclouds.modules.feedback.c,java.lang.CharSequence[])>($r2, $r6);
+
+        $r8 = new android.support.v7.a.u;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.c c>;
+
+        $r9 = virtualinvoke $r2.<com.seattleclouds.modules.feedback.c: android.support.v4.app.ac n()>();
+
+        specialinvoke $r8.<android.support.v7.a.u: void <init>(android.content.Context)>($r9);
+
+        $i0 = <com.seattleclouds.l: int feedback_list_title>;
+
+        virtualinvoke $r8.<android.support.v7.a.u: android.support.v7.a.u a(int)>($i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.d: com.seattleclouds.modules.feedback.c c>;
+
+        $r6 = staticinvoke <com.seattleclouds.modules.feedback.c: java.lang.CharSequence[] i(com.seattleclouds.modules.feedback.c)>($r2);
+
+        $r10 = new com.seattleclouds.modules.feedback.e;
+
+        specialinvoke $r10.<com.seattleclouds.modules.feedback.e: void <init>(com.seattleclouds.modules.feedback.d)>($r0);
+
+        virtualinvoke $r8.<android.support.v7.a.u: android.support.v7.a.u a(java.lang.CharSequence[],android.content.DialogInterface$OnClickListener)>($r6, $r10);
+
+        $r11 = virtualinvoke $r8.<android.support.v7.a.u: android.support.v7.a.t b()>();
+
+        virtualinvoke $r11.<android.support.v7.a.t: void show()>();
+
+        return;
+    }
+}

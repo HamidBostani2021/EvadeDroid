@@ -1,0 +1,605 @@
+class com.seattleclouds.f.ab extends android.webkit.WebChromeClient
+{
+    private static android.webkit.ValueCallback a;
+    private java.lang.ref.WeakReference b;
+
+    private void <init>()
+    {
+        com.seattleclouds.f.ab $r0;
+
+        $r0 := @this: com.seattleclouds.f.ab;
+
+        specialinvoke $r0.<android.webkit.WebChromeClient: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.f.k)
+    {
+        com.seattleclouds.f.ab $r0;
+        com.seattleclouds.f.k $r1;
+
+        $r0 := @this: com.seattleclouds.f.ab;
+
+        $r1 := @parameter0: com.seattleclouds.f.k;
+
+        specialinvoke $r0.<com.seattleclouds.f.ab: void <init>()>();
+
+        return;
+    }
+
+    private android.support.v4.app.Fragment a()
+    {
+        com.seattleclouds.f.ab $r0;
+        java.lang.Object $r1;
+        java.lang.ref.WeakReference $r2;
+        android.support.v4.app.Fragment $r3;
+
+        $r0 := @this: com.seattleclouds.f.ab;
+
+        $r2 = $r0.<com.seattleclouds.f.ab: java.lang.ref.WeakReference b>;
+
+        if $r2 != null goto label1;
+
+        return null;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.f.ab: java.lang.ref.WeakReference b>;
+
+        $r1 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r3 = (android.support.v4.app.Fragment) $r1;
+
+        return $r3;
+    }
+
+    private boolean b(android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.f.ab $r0;
+        android.support.v4.app.Fragment $r1;
+        boolean $z0;
+        android.content.Context $r2;
+        int[] $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.f.ab;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a()>();
+
+        if $z0 == 0 goto label2;
+
+        $r2 = virtualinvoke $r1.<android.support.v4.app.Fragment: android.content.Context m()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(android.content.Context,java.lang.String)>($r2, "android.permission.CAMERA");
+
+        if $z0 != 0 goto label1;
+
+        $r3 = newarray (int)[2];
+
+        $i0 = <com.seattleclouds.l: int web_view_camera_rational>;
+
+        $r3[0] = $i0;
+
+        $i0 = <com.seattleclouds.l: int web_view_permission_camera_required_toast>;
+
+        $r3[1] = $i0;
+
+        staticinvoke <com.seattleclouds.util.w: void a(android.support.v4.app.Fragment,int,java.lang.String,int[])>($r1, 1789, "android.permission.CAMERA", $r3);
+
+     label1:
+        if $z0 != 0 goto label2;
+
+        return 1;
+
+     label2:
+        return 0;
+    }
+
+    public void a(android.content.Context, int, int, android.content.Intent)
+    {
+        com.seattleclouds.f.ab $r0;
+        android.content.Context $r1;
+        int $i0, $i1;
+        android.content.Intent $r2;
+        android.webkit.ValueCallback $r3;
+        android.net.Uri[] $r4;
+        android.content.ClipData $r5;
+        java.lang.String $r6;
+        java.io.File $r7;
+        boolean $z0, $z1;
+        android.net.Uri $r8;
+        android.content.ClipData$Item $r9;
+        android.support.v4.app.Fragment $r10;
+        int[] $r11;
+        android.widget.Toast $r12;
+
+        $r0 := @this: com.seattleclouds.f.ab;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 := @parameter3: android.content.Intent;
+
+        if $i0 != 4821 goto label18;
+
+        $r3 = <com.seattleclouds.f.ab: android.webkit.ValueCallback a>;
+
+        if $r3 != null goto label01;
+
+        return;
+
+     label01:
+        $r4 = newarray (android.net.Uri)[0];
+
+        if $i1 != -1 goto label17;
+
+        if $r2 == null goto label02;
+
+        $r5 = virtualinvoke $r2.<android.content.Intent: android.content.ClipData getClipData()>();
+
+        if $r5 != null goto label06;
+
+        $r6 = virtualinvoke $r2.<android.content.Intent: java.lang.String getDataString()>();
+
+        if $r6 != null goto label06;
+
+     label02:
+        $r7 = staticinvoke <com.seattleclouds.f.j: java.io.File an()>();
+
+        $z0 = virtualinvoke $r7.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label17;
+
+        $r7 = staticinvoke <com.seattleclouds.f.j: java.io.File an()>();
+
+        $r8 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>($r7);
+
+        $r4 = newarray (android.net.Uri)[1];
+
+        $r4[0] = $r8;
+
+        $z0 = 1;
+
+     label03:
+        if $z0 != 0 goto label04;
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(android.content.Context,java.lang.String)>($r1, "android.permission.READ_EXTERNAL_STORAGE");
+
+        if $z0 == 0 goto label14;
+
+     label04:
+        $r3 = <com.seattleclouds.f.ab: android.webkit.ValueCallback a>;
+
+        interfaceinvoke $r3.<android.webkit.ValueCallback: void onReceiveValue(java.lang.Object)>($r4);
+
+     label05:
+        <com.seattleclouds.f.ab: android.webkit.ValueCallback a> = null;
+
+        return;
+
+     label06:
+        $r5 = virtualinvoke $r2.<android.content.Intent: android.content.ClipData getClipData()>();
+
+        if $r5 == null goto label11;
+
+        $i0 = virtualinvoke $r5.<android.content.ClipData: int getItemCount()>();
+
+        $r4 = newarray (android.net.Uri)[$i0];
+
+        $i0 = 0;
+
+        $z0 = 1;
+
+     label07:
+        $i1 = virtualinvoke $r5.<android.content.ClipData: int getItemCount()>();
+
+        if $i0 >= $i1 goto label10;
+
+        $r9 = virtualinvoke $r5.<android.content.ClipData: android.content.ClipData$Item getItemAt(int)>($i0);
+
+        $r8 = virtualinvoke $r9.<android.content.ClipData$Item: android.net.Uri getUri()>();
+
+        $r4[$i0] = $r8;
+
+        $i1 = virtualinvoke $r1.<android.content.Context: int checkCallingOrSelfUriPermission(android.net.Uri,int)>($r8, 1);
+
+        if $i1 != 0 goto label09;
+
+        $z1 = 1;
+
+     label08:
+        $z0 = $z0 & $z1;
+
+        $i0 = $i0 + 1;
+
+        goto label07;
+
+     label09:
+        $z1 = 0;
+
+        goto label08;
+
+     label10:
+        goto label03;
+
+     label11:
+        $r6 = virtualinvoke $r2.<android.content.Intent: java.lang.String getDataString()>();
+
+        if $r6 == null goto label17;
+
+        $r8 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r6);
+
+        $r4 = newarray (android.net.Uri)[1];
+
+        $r4[0] = $r8;
+
+        $i0 = virtualinvoke $r1.<android.content.Context: int checkCallingOrSelfUriPermission(android.net.Uri,int)>($r8, 1);
+
+        if $i0 != 0 goto label13;
+
+        $z0 = 1;
+
+     label12:
+        goto label03;
+
+     label13:
+        $z0 = 0;
+
+        goto label12;
+
+     label14:
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a()>();
+
+        if $z0 == 0 goto label16;
+
+        $r10 = specialinvoke $r0.<com.seattleclouds.f.ab: android.support.v4.app.Fragment a()>();
+
+        if $r10 == null goto label15;
+
+        $r11 = newarray (int)[2];
+
+        $i0 = <com.seattleclouds.l: int web_view_read_external_storage_permission_rational>;
+
+        $r11[0] = $i0;
+
+        $i0 = <com.seattleclouds.l: int web_view_read_external_storage_permission_toast>;
+
+        $r11[1] = $i0;
+
+        staticinvoke <com.seattleclouds.util.w: void a(android.support.v4.app.Fragment,int,java.lang.String,int[])>($r10, 5821, "android.permission.READ_EXTERNAL_STORAGE", $r11);
+
+     label15:
+        $r3 = <com.seattleclouds.f.ab: android.webkit.ValueCallback a>;
+
+        $r4 = newarray (android.net.Uri)[0];
+
+        interfaceinvoke $r3.<android.webkit.ValueCallback: void onReceiveValue(java.lang.Object)>($r4);
+
+        goto label05;
+
+     label16:
+        $i0 = <com.seattleclouds.l: int web_view_no_read_external_storage_permission>;
+
+        $r12 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r1, $i0, 1);
+
+        virtualinvoke $r12.<android.widget.Toast: void show()>();
+
+        goto label15;
+
+     label17:
+        $z0 = 1;
+
+        goto label03;
+
+     label18:
+        return;
+    }
+
+    public void a(android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.f.ab $r0;
+        android.support.v4.app.Fragment $r1;
+        java.lang.ref.WeakReference $r2;
+
+        $r0 := @this: com.seattleclouds.f.ab;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        if $r1 == null goto label1;
+
+        $r2 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r2.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.f.ab: java.lang.ref.WeakReference b> = $r2;
+
+     label1:
+        return;
+    }
+
+    public boolean onShowFileChooser(android.webkit.WebView, android.webkit.ValueCallback, android.webkit.WebChromeClient$FileChooserParams)
+    {
+        com.seattleclouds.f.ab $r0;
+        android.webkit.WebView $r1;
+        android.webkit.ValueCallback $r2;
+        android.webkit.WebChromeClient$FileChooserParams $r3;
+        android.content.Intent $r4, $r16, r35;
+        android.content.ComponentName $r5, r36;
+        android.support.v4.app.Fragment $r6;
+        java.io.File $r7, $r10, r33;
+        java.lang.StringBuilder $r8, r30;
+        java.lang.String $r9, $r23, $r24;
+        boolean $z0;
+        android.net.Uri $r11;
+        java.util.ArrayList $r12, $r15, r34;
+        java.lang.String[] $r13;
+        java.util.List $r14;
+        android.support.v4.app.ac $r17;
+        android.content.pm.PackageManager $r18;
+        java.util.Iterator $r19;
+        java.lang.Object $r20;
+        android.content.pm.ResolveInfo $r21;
+        android.content.pm.ActivityInfo $r22;
+        java.lang.Throwable $r25;
+        int $i0;
+        java.lang.Object[] $r26;
+        android.content.Context $r27;
+        android.os.Parcelable[] $r28;
+        android.widget.Toast $r29;
+        java.text.SimpleDateFormat r31;
+        java.util.Date r32;
+        java.io.IOException r37;
+
+        $r0 := @this: com.seattleclouds.f.ab;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: android.webkit.ValueCallback;
+
+        $r3 := @parameter2: android.webkit.WebChromeClient$FileChooserParams;
+
+        $r6 = specialinvoke $r0.<com.seattleclouds.f.ab: android.support.v4.app.Fragment a()>();
+
+        if $r6 != null goto label01;
+
+        return 0;
+
+     label01:
+        $r10 = new java.io.File;
+
+        $r7 = $r10;
+
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = staticinvoke <com.seattleclouds.f.j: java.lang.String am()>();
+
+        $r8 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ImageCapture");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r10.<java.io.File: void <init>(java.lang.String)>($r9);
+
+        $z0 = virtualinvoke $r7.<java.io.File: boolean exists()>();
+
+        if $z0 != 0 goto label04;
+
+        virtualinvoke $r7.<java.io.File: boolean mkdirs()>();
+
+     label02:
+        r31 = new java.text.SimpleDateFormat;
+
+        specialinvoke r31.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("yyyyMMdd_HHmmss");
+
+        r32 = new java.util.Date;
+
+        specialinvoke r32.<java.util.Date: void <init>()>();
+
+        $r9 = virtualinvoke r31.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>(r32);
+
+        r33 = new java.io.File;
+
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("IMG_");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".jpeg");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r33.<java.io.File: void <init>(java.io.File,java.lang.String)>($r7, $r9);
+
+        staticinvoke <com.seattleclouds.f.j: java.io.File a(java.io.File)>(r33);
+
+        $r7 = staticinvoke <com.seattleclouds.f.j: java.io.File an()>();
+
+        $r11 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>($r7);
+
+        $r15 = new java.util.ArrayList;
+
+        $r12 = $r15;
+
+        $r13 = virtualinvoke $r3.<android.webkit.WebChromeClient$FileChooserParams: java.lang.String[] getAcceptTypes()>();
+
+        $r14 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($r13);
+
+        specialinvoke $r15.<java.util.ArrayList: void <init>(java.util.Collection)>($r14);
+
+        interfaceinvoke $r12.<java.util.List: boolean add(java.lang.Object)>("image/*");
+
+        interfaceinvoke $r12.<java.util.List: boolean add(java.lang.Object)>("video/*");
+
+        interfaceinvoke $r12.<java.util.List: boolean add(java.lang.Object)>("audio/*");
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.f.ab: boolean b(android.support.v4.app.Fragment)>($r6);
+
+        if $z0 != 0 goto label11;
+
+        r34 = new java.util.ArrayList;
+
+        $r15 = r34;
+
+        specialinvoke r34.<java.util.ArrayList: void <init>()>();
+
+        $r4 = new android.content.Intent;
+
+        $r16 = $r4;
+
+        specialinvoke $r4.<android.content.Intent: void <init>(java.lang.String)>("android.media.action.IMAGE_CAPTURE");
+
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("output", $r11);
+
+        $r17 = virtualinvoke $r6.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $r18 = virtualinvoke $r17.<android.support.v4.app.ac: android.content.pm.PackageManager getPackageManager()>();
+
+        $r14 = virtualinvoke $r18.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>($r16, 0);
+
+        $r19 = interfaceinvoke $r14.<java.util.List: java.util.Iterator iterator()>();
+
+     label03:
+        $z0 = interfaceinvoke $r19.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label07;
+
+        $r20 = interfaceinvoke $r19.<java.util.Iterator: java.lang.Object next()>();
+
+        $r21 = (android.content.pm.ResolveInfo) $r20;
+
+        $r22 = $r21.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>;
+
+        $r9 = $r22.<android.content.pm.ActivityInfo: java.lang.String packageName>;
+
+        r35 = new android.content.Intent;
+
+        $r4 = r35;
+
+        specialinvoke r35.<android.content.Intent: void <init>(android.content.Intent)>($r16);
+
+        r36 = new android.content.ComponentName;
+
+        $r22 = $r21.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>;
+
+        $r23 = $r22.<android.content.pm.ActivityInfo: java.lang.String packageName>;
+
+        $r22 = $r21.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>;
+
+        $r24 = $r22.<android.content.pm.ActivityInfo: java.lang.String name>;
+
+        specialinvoke r36.<android.content.ComponentName: void <init>(java.lang.String,java.lang.String)>($r23, $r24);
+
+        virtualinvoke $r4.<android.content.Intent: android.content.Intent setComponent(android.content.ComponentName)>(r36);
+
+        virtualinvoke $r4.<android.content.Intent: android.content.Intent setPackage(java.lang.String)>($r9);
+
+        interfaceinvoke $r15.<java.util.List: boolean add(java.lang.Object)>($r4);
+
+        goto label03;
+
+     label04:
+        staticinvoke <org.apache.commons.io.b: void e(java.io.File)>($r7);
+
+     label05:
+        goto label02;
+
+     label06:
+        $r25 := @caughtexception;
+
+        r37 = (java.io.IOException) $r25;
+
+        virtualinvoke r37.<java.io.IOException: void printStackTrace()>();
+
+        goto label02;
+
+     label07:
+        $r4 = new android.content.Intent;
+
+        $r16 = $r4;
+
+        specialinvoke $r4.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.GET_CONTENT");
+
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent setType(java.lang.String)>("*/*");
+
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent addCategory(java.lang.String)>("android.intent.category.OPENABLE");
+
+        $i0 = virtualinvoke $r3.<android.webkit.WebChromeClient$FileChooserParams: int getMode()>();
+
+        if $i0 != 1 goto label09;
+
+        $z0 = 1;
+
+     label08:
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean)>("android.intent.extra.ALLOW_MULTIPLE", $z0);
+
+        $i0 = interfaceinvoke $r12.<java.util.List: int size()>();
+
+        $r13 = newarray (java.lang.String)[$i0];
+
+        $r26 = interfaceinvoke $r12.<java.util.List: java.lang.Object[] toArray(java.lang.Object[])>($r13);
+
+        $r13 = (java.lang.String[]) $r26;
+
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>("android.intent.extra.MIME_TYPES", $r13);
+
+        $r27 = virtualinvoke $r6.<android.support.v4.app.Fragment: android.content.Context m()>();
+
+        $r18 = virtualinvoke $r27.<android.content.Context: android.content.pm.PackageManager getPackageManager()>();
+
+        $r5 = virtualinvoke $r16.<android.content.Intent: android.content.ComponentName resolveActivity(android.content.pm.PackageManager)>($r18);
+
+        if $r5 == null goto label10;
+
+        <com.seattleclouds.f.ab: android.webkit.ValueCallback a> = $r2;
+
+        $i0 = <com.seattleclouds.l: int web_view_file_picker_title>;
+
+        $r9 = virtualinvoke $r6.<android.support.v4.app.Fragment: java.lang.String b(int)>($i0);
+
+        $r16 = staticinvoke <android.content.Intent: android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)>($r16, $r9);
+
+        $i0 = interfaceinvoke $r15.<java.util.List: int size()>();
+
+        $r28 = newarray (android.os.Parcelable)[$i0];
+
+        $r26 = interfaceinvoke $r15.<java.util.List: java.lang.Object[] toArray(java.lang.Object[])>($r28);
+
+        $r28 = (android.os.Parcelable[]) $r26;
+
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable[])>("android.intent.extra.INITIAL_INTENTS", $r28);
+
+        virtualinvoke $r6.<android.support.v4.app.Fragment: void startActivityForResult(android.content.Intent,int)>($r16, 4821);
+
+        return 1;
+
+     label09:
+        $z0 = 0;
+
+        goto label08;
+
+     label10:
+        $r27 = virtualinvoke $r6.<android.support.v4.app.Fragment: android.content.Context m()>();
+
+        $i0 = <com.seattleclouds.l: int web_view_unable_to_open_file_picker>;
+
+        $r29 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r27, $i0, 1);
+
+        virtualinvoke $r29.<android.widget.Toast: void show()>();
+
+     label11:
+        return 0;
+
+        catch java.io.IOException from label04 to label05 with label06;
+    }
+}

@@ -1,0 +1,628 @@
+public class com.seattleclouds.modules.goaltracker.f extends com.seattleclouds.r
+{
+    private android.widget.TextView a;
+    private android.os.Bundle ai;
+    private java.lang.String aj;
+    private boolean ak;
+    private android.widget.TextView b;
+    private android.widget.TextView c;
+    private android.widget.SeekBar d;
+    private android.widget.Button e;
+    private java.lang.String f;
+    private java.util.HashMap g;
+    private int h;
+    private com.seattleclouds.modules.goaltracker.a i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: boolean ak> = 0;
+
+        return;
+    }
+
+    static int a(com.seattleclouds.modules.goaltracker.f)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.goaltracker.f;
+
+        i0 = $r0.<com.seattleclouds.modules.goaltracker.f: int h>;
+
+        return i0;
+    }
+
+    static int a(com.seattleclouds.modules.goaltracker.f, int)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.goaltracker.f;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: int h> = $i0;
+
+        return $i0;
+    }
+
+    private void a(java.lang.String, android.app.Activity, boolean)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        java.lang.String $r1, $r9;
+        android.app.Activity $r2;
+        boolean $z0;
+        com.seattleclouds.modules.goaltracker.a $r3;
+        java.util.HashMap $r4;
+        android.widget.TextView $r5;
+        java.lang.Object $r6;
+        java.lang.CharSequence $r7;
+        int $i0, $i1;
+        java.lang.StringBuilder $r8;
+        java.lang.Object[] $r10;
+        android.widget.SeekBar $r11;
+        android.widget.Button $r12;
+        java.lang.Throwable $r13;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        $z0 := @parameter2: boolean;
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: com.seattleclouds.modules.goaltracker.a i>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.goaltracker.a: java.util.HashMap b(java.lang.String)>($r1);
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g>;
+
+        if $r4 != null goto label1;
+
+        return;
+
+     label1:
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView b>;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g>;
+
+        $r6 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("title");
+
+        $r7 = (java.lang.CharSequence) $r6;
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView c>;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g>;
+
+        $r6 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("note");
+
+        $r7 = (java.lang.CharSequence) $r6;
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g>;
+
+        $r6 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("progress");
+
+        $r1 = (java.lang.String) $r6;
+
+     label2:
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r1);
+
+     label3:
+        $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r1);
+
+     label4:
+        $r0.<com.seattleclouds.modules.goaltracker.f: int h> = $i1;
+
+     label5:
+        if $z0 == 0 goto label6;
+
+        if $i0 >= 100 goto label6;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $i1 = <com.seattleclouds.l: int goal_tracker_goal_details_fragment_goal_curret_progress_message>;
+
+        $r9 = virtualinvoke $r2.<android.app.Activity: java.lang.String getString(int)>($i1);
+
+        $r10 = newarray (java.lang.Object)[1];
+
+        $r10[0] = $r1;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r9, $r10);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("%");
+
+        $r1 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView a>;
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>($r1);
+
+        $r11 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.SeekBar d>;
+
+        $i1 = $r0.<com.seattleclouds.modules.goaltracker.f: int h>;
+
+        virtualinvoke $r11.<android.widget.SeekBar: void setProgress(int)>($i1);
+
+     label6:
+        if $i0 < 100 goto label8;
+
+        $r11 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.SeekBar d>;
+
+        virtualinvoke $r11.<android.widget.SeekBar: void setVisibility(int)>(8);
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView a>;
+
+        $i0 = <com.seattleclouds.l: int goal_tracker_goal_details_fragment_goal_congratulation>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>($r1);
+
+        $r12 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.Button e>;
+
+        virtualinvoke $r12.<android.widget.Button: void setVisibility(int)>(8);
+
+        return;
+
+     label7:
+        $r13 := @caughtexception;
+
+        $r11 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.SeekBar d>;
+
+        virtualinvoke $r11.<android.widget.SeekBar: void setProgress(int)>(0);
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: int h> = 0;
+
+        $i0 = 0;
+
+        goto label5;
+
+     label8:
+        return;
+
+        catch java.lang.NumberFormatException from label2 to label3 with label7;
+        catch java.lang.NumberFormatException from label3 to label4 with label7;
+    }
+
+    private void ab()
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.os.Bundle $r1, $r7;
+        java.util.HashMap $r2;
+        java.lang.Object $r3;
+        java.lang.String $r4;
+        int $i0;
+        com.seattleclouds.FragmentInfo $r5;
+        java.lang.Class $r6;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 = new android.os.Bundle;
+
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g>;
+
+        $r3 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("category_id");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("CATEGORY_ID_KEY", $r4);
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g>;
+
+        $r3 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("id");
+
+        $r4 = (java.lang.String) $r3;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("GOAL_ID_KEY", $r4);
+
+        $i0 = $r0.<com.seattleclouds.modules.goaltracker.f: int h>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putInt(java.lang.String,int)>("GOAL_PROGRESS_KEY", $i0);
+
+        $r5 = new com.seattleclouds.FragmentInfo;
+
+        $r6 = class "Lcom/seattleclouds/modules/goaltracker/j;";
+
+        $r4 = virtualinvoke $r6.<java.lang.Class: java.lang.String getName()>();
+
+        specialinvoke $r5.<com.seattleclouds.FragmentInfo: void <init>(java.lang.String,android.os.Bundle)>($r4, $r1);
+
+        $r1 = virtualinvoke $r5.<com.seattleclouds.FragmentInfo: android.os.Bundle c()>();
+
+        $r7 = $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle ai>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putBundle(java.lang.String,android.os.Bundle)>("PAGE_STYLE", $r7);
+
+        $r1 = virtualinvoke $r5.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.f: java.lang.String aj>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("PAGE_TRANSITION", $r4);
+
+        staticinvoke <com.seattleclouds.App: void a(com.seattleclouds.FragmentInfo,android.support.v4.app.Fragment)>($r5, $r0);
+
+        return;
+    }
+
+    static java.util.HashMap b(com.seattleclouds.modules.goaltracker.f)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        java.util.HashMap r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.goaltracker.f;
+
+        r1 = $r0.<com.seattleclouds.modules.goaltracker.f: java.util.HashMap g>;
+
+        return r1;
+    }
+
+    static com.seattleclouds.modules.goaltracker.a c(com.seattleclouds.modules.goaltracker.f)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        com.seattleclouds.modules.goaltracker.a r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.goaltracker.f;
+
+        r1 = $r0.<com.seattleclouds.modules.goaltracker.f: com.seattleclouds.modules.goaltracker.a i>;
+
+        return r1;
+    }
+
+    static android.widget.TextView d(com.seattleclouds.modules.goaltracker.f)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.goaltracker.f;
+
+        r1 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView a>;
+
+        return r1;
+    }
+
+    public void D()
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.support.v4.app.ac $r1;
+        boolean $z0;
+        com.seattleclouds.modules.goaltracker.a $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        specialinvoke $r0.<com.seattleclouds.r: void D()>();
+
+        $z0 = $r0.<com.seattleclouds.modules.goaltracker.f: boolean ak>;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.f: com.seattleclouds.modules.goaltracker.a i>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.goaltracker.a: void a()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: java.lang.String f>;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.goaltracker.f: android.support.v4.app.ac n()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.goaltracker.f: void a(java.lang.String,android.app.Activity,boolean)>($r3, $r1, 0);
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: boolean ak> = 0;
+
+     label1:
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3, $r5;
+        java.lang.String $r4;
+        int $i0;
+        android.view.View $r6, $r7;
+        android.widget.TextView $r8;
+        android.widget.SeekBar $r9;
+        android.widget.Button $r10;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle j()>();
+
+        if $r3 == null goto label1;
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("GOAL_ID_KEY");
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: java.lang.String f> = $r4;
+
+        $r5 = virtualinvoke $r3.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle ai> = $r5;
+
+        $r4 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_TRANSITION");
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: java.lang.String aj> = $r4;
+
+     label1:
+        $i0 = <com.seattleclouds.j: int goal_tracker_details_goal_fragment>;
+
+        $r6 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r6, $r3);
+
+        $i0 = <com.seattleclouds.h: int goal_tracker_goal_details_fragment_progress_text>;
+
+        $r7 = virtualinvoke $r6.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView a> = $r8;
+
+        $r8 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView a>;
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r8, $r3);
+
+        $i0 = <com.seattleclouds.h: int goal_tracker_goal_details_fragment_progress_seek>;
+
+        $r7 = virtualinvoke $r6.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.SeekBar) $r7;
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.SeekBar d> = $r9;
+
+        $i0 = <com.seattleclouds.h: int goal_tracker_goal_details_fragment_title_text>;
+
+        $r7 = virtualinvoke $r6.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView b> = $r8;
+
+        $r8 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView b>;
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r8, $r3);
+
+        $i0 = <com.seattleclouds.h: int goal_tracker_goal_details_fragment_note_text>;
+
+        $r7 = virtualinvoke $r6.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView c> = $r8;
+
+        $r8 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView c>;
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r8, $r3);
+
+        $i0 = <com.seattleclouds.h: int goal_tracker_goal_details_fragment_apply_button>;
+
+        $r7 = virtualinvoke $r6.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.Button) $r7;
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.Button e> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.Button e>;
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r10, $r3);
+
+        return $r6;
+    }
+
+    public void a(android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 := @parameter1: android.view.MenuInflater;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.Menu,android.view.MenuInflater)>($r1, $r2);
+
+        $i0 = <com.seattleclouds.k: int goal_tracker_details_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        return;
+    }
+
+    public void a(android.view.View, android.os.Bundle)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.view.View $r1;
+        android.os.Bundle $r2;
+        android.support.v4.app.ac $r3;
+        com.seattleclouds.modules.goaltracker.a $r4;
+        android.widget.Button $r5;
+        com.seattleclouds.modules.goaltracker.g $r6;
+        android.widget.SeekBar $r7;
+        com.seattleclouds.modules.goaltracker.h $r8;
+        java.lang.String $r9;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.View,android.os.Bundle)>($r1, $r2);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.goaltracker.f: android.support.v4.app.ac n()>();
+
+        $r4 = staticinvoke <com.seattleclouds.modules.goaltracker.a: com.seattleclouds.modules.goaltracker.a a(android.content.Context)>($r3);
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: com.seattleclouds.modules.goaltracker.a i> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.f: com.seattleclouds.modules.goaltracker.a i>;
+
+        virtualinvoke $r4.<com.seattleclouds.modules.goaltracker.a: void a()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.Button e>;
+
+        $r6 = new com.seattleclouds.modules.goaltracker.g;
+
+        specialinvoke $r6.<com.seattleclouds.modules.goaltracker.g: void <init>(com.seattleclouds.modules.goaltracker.f)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r6);
+
+        $r7 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.SeekBar d>;
+
+        $r8 = new com.seattleclouds.modules.goaltracker.h;
+
+        specialinvoke $r8.<com.seattleclouds.modules.goaltracker.h: void <init>(com.seattleclouds.modules.goaltracker.f,android.app.Activity)>($r0, $r3);
+
+        virtualinvoke $r7.<android.widget.SeekBar: void setOnSeekBarChangeListener(android.widget.SeekBar$OnSeekBarChangeListener)>($r8);
+
+        $r9 = $r0.<com.seattleclouds.modules.goaltracker.f: java.lang.String f>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.goaltracker.f: android.support.v4.app.ac n()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.goaltracker.f: void a(java.lang.String,android.app.Activity,boolean)>($r9, $r3, 1);
+
+        return;
+    }
+
+    public boolean a(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i1 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i0 = <com.seattleclouds.h: int goal_tracker_edit_goal_menu_item>;
+
+        if $i1 != $i0 goto label1;
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: boolean ak> = 1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.goaltracker.f: void ab()>();
+
+        return 1;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.r: boolean a(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public void d(android.os.Bundle)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.os.Bundle $r1;
+        android.widget.SeekBar $r2;
+        int $i0;
+        android.widget.TextView $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void d(android.os.Bundle)>($r1);
+
+        if $r1 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.SeekBar d>;
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("PROGRESS_STATE");
+
+        virtualinvoke $r2.<android.widget.SeekBar: void setProgress(int)>($i0);
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView a>;
+
+        $r4 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PROGRESS_STATE_STRING");
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("INTEGER_PROGRESS_VALUE");
+
+        $r0.<com.seattleclouds.modules.goaltracker.f: int h> = $i0;
+
+     label1:
+        return;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.goaltracker.f $r0;
+        android.os.Bundle $r1;
+        android.widget.SeekBar $r2;
+        int $i0;
+        android.widget.TextView $r3;
+        java.lang.CharSequence $r4;
+        java.lang.String $r5;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.f;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void e(android.os.Bundle)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.SeekBar d>;
+
+        $i0 = virtualinvoke $r2.<android.widget.SeekBar: int getProgress()>();
+
+        virtualinvoke $r1.<android.os.Bundle: void putInt(java.lang.String,int)>("PROGRESS_STATE", $i0);
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.f: android.widget.TextView a>;
+
+        $r4 = virtualinvoke $r3.<android.widget.TextView: java.lang.CharSequence getText()>();
+
+        $r5 = interfaceinvoke $r4.<java.lang.CharSequence: java.lang.String toString()>();
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("PROGRESS_STATE_STRING", $r5);
+
+        $i0 = $r0.<com.seattleclouds.modules.goaltracker.f: int h>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putInt(java.lang.String,int)>("INTEGER_PROGRESS_VALUE", $i0);
+
+        return;
+    }
+}

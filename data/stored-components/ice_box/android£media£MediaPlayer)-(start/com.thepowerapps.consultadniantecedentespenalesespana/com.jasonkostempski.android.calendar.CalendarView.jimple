@@ -1,0 +1,1351 @@
+public class com.jasonkostempski.android.calendar.CalendarView extends android.widget.LinearLayout
+{
+    private com.jasonkostempski.android.calendar.k a;
+    private android.view.View$OnClickListener b;
+    private android.view.View$OnClickListener c;
+    private android.view.View$OnClickListener d;
+    private android.view.View$OnClickListener e;
+    private android.view.View$OnClickListener f;
+    private final int g;
+    private final int h;
+    private final int i;
+    private final int j;
+    private com.jasonkostempski.android.calendar.j k;
+    private android.widget.TableLayout l;
+    private android.widget.TableLayout m;
+    private android.widget.TableLayout n;
+    private android.widget.LinearLayout o;
+    private android.widget.Button p;
+    private android.widget.Button q;
+    private android.widget.Button r;
+    private com.jasonkostempski.android.calendar.h s;
+    private com.jasonkostempski.android.calendar.i t;
+    private int u;
+    private int v;
+    private int w;
+
+    public void <init>(android.content.Context)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        android.content.Context $r1;
+        com.jasonkostempski.android.calendar.b $r2;
+        com.jasonkostempski.android.calendar.c $r3;
+        com.jasonkostempski.android.calendar.d $r4;
+        com.jasonkostempski.android.calendar.e $r5;
+        com.jasonkostempski.android.calendar.f $r6;
+        com.jasonkostempski.android.calendar.g $r7;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<android.widget.LinearLayout: void <init>(android.content.Context)>($r1);
+
+        $r2 = new com.jasonkostempski.android.calendar.b;
+
+        specialinvoke $r2.<com.jasonkostempski.android.calendar.b: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.k a> = $r2;
+
+        $r3 = new com.jasonkostempski.android.calendar.c;
+
+        specialinvoke $r3.<com.jasonkostempski.android.calendar.c: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener b> = $r3;
+
+        $r4 = new com.jasonkostempski.android.calendar.d;
+
+        specialinvoke $r4.<com.jasonkostempski.android.calendar.d: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener c> = $r4;
+
+        $r5 = new com.jasonkostempski.android.calendar.e;
+
+        specialinvoke $r5.<com.jasonkostempski.android.calendar.e: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener d> = $r5;
+
+        $r6 = new com.jasonkostempski.android.calendar.f;
+
+        specialinvoke $r6.<com.jasonkostempski.android.calendar.f: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener e> = $r6;
+
+        $r7 = new com.jasonkostempski.android.calendar.g;
+
+        specialinvoke $r7.<com.jasonkostempski.android.calendar.g: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener f> = $r7;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int g> = 5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int h> = 4;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int i> = 3;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int j> = 0;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void a(android.content.Context)>($r1);
+
+        return;
+    }
+
+    public void <init>(android.content.Context, android.util.AttributeSet)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        android.content.Context $r1;
+        android.util.AttributeSet $r2;
+        com.jasonkostempski.android.calendar.b $r3;
+        com.jasonkostempski.android.calendar.c $r4;
+        com.jasonkostempski.android.calendar.d $r5;
+        com.jasonkostempski.android.calendar.e $r6;
+        com.jasonkostempski.android.calendar.f $r7;
+        com.jasonkostempski.android.calendar.g $r8;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.util.AttributeSet;
+
+        specialinvoke $r0.<android.widget.LinearLayout: void <init>(android.content.Context,android.util.AttributeSet)>($r1, $r2);
+
+        $r3 = new com.jasonkostempski.android.calendar.b;
+
+        specialinvoke $r3.<com.jasonkostempski.android.calendar.b: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.k a> = $r3;
+
+        $r4 = new com.jasonkostempski.android.calendar.c;
+
+        specialinvoke $r4.<com.jasonkostempski.android.calendar.c: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener b> = $r4;
+
+        $r5 = new com.jasonkostempski.android.calendar.d;
+
+        specialinvoke $r5.<com.jasonkostempski.android.calendar.d: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener c> = $r5;
+
+        $r6 = new com.jasonkostempski.android.calendar.e;
+
+        specialinvoke $r6.<com.jasonkostempski.android.calendar.e: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener d> = $r6;
+
+        $r7 = new com.jasonkostempski.android.calendar.f;
+
+        specialinvoke $r7.<com.jasonkostempski.android.calendar.f: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener e> = $r7;
+
+        $r8 = new com.jasonkostempski.android.calendar.g;
+
+        specialinvoke $r8.<com.jasonkostempski.android.calendar.g: void <init>(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener f> = $r8;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int g> = 5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int h> = 4;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int i> = 3;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int j> = 0;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void a(android.content.Context)>($r1);
+
+        return;
+    }
+
+    static int a(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        int i0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int v>;
+
+        return i0;
+    }
+
+    private android.widget.TextView a(android.widget.TableRow, int)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        android.widget.TableRow $r1;
+        int $i0;
+        android.view.View $r2;
+        android.widget.TextView $r3;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: android.widget.TableRow;
+
+        $i0 := @parameter1: int;
+
+        $r2 = virtualinvoke $r1.<android.widget.TableRow: android.view.View getChildAt(int)>($i0);
+
+        $i0 = <com.seattleclouds.h: int day_text>;
+
+        $r2 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        return $r3;
+    }
+
+    private void a()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.j $r1;
+        int[] $r2, $r10;
+        int $i0, $i1, $i2, $i3, $i4;
+        android.widget.TableLayout $r3;
+        android.view.View $r4;
+        android.widget.TableRow $r5;
+        android.widget.TextView $r6;
+        java.lang.StringBuilder $r7;
+        java.lang.String $r8;
+        android.content.Context $r9;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r2 = virtualinvoke $r1.<com.jasonkostempski.android.calendar.j: int[] f()>();
+
+        $i0 = -1;
+
+        $i1 = 0;
+
+        $i2 = 0;
+
+        $i3 = 1;
+
+     label1:
+        $i4 = lengthof $r2;
+
+        if $i1 >= $i4 goto label6;
+
+        $i4 = $r2[$i1];
+
+        if $i4 != 1 goto label7;
+
+        $i0 = $i0 + 1;
+
+     label2:
+        $r3 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout l>;
+
+        $r4 = virtualinvoke $r3.<android.widget.TableLayout: android.view.View getChildAt(int)>($i3);
+
+        $r5 = (android.widget.TableRow) $r4;
+
+        $r6 = specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TextView a(android.widget.TableRow,int)>($r5, $i2);
+
+        staticinvoke <com.seattleclouds.util.bl: void a(android.view.View,android.graphics.drawable.Drawable)>($r6, null);
+
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+        $i4 = $r2[$i1];
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i4);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        if $i0 != 0 goto label5;
+
+        $r9 = virtualinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: android.content.Context getContext()>();
+
+        $i4 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r9, 16842806);
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>($i4);
+
+     label3:
+        $r10 = newarray (int)[2];
+
+        $r10[0] = $i0;
+
+        $i4 = $r2[$i1];
+
+        $r10[1] = $i4;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTag(java.lang.Object)>($r10);
+
+        $i2 = $i2 + 1;
+
+        if $i2 != 7 goto label4;
+
+        $i3 = $i3 + 1;
+
+        $i2 = 0;
+
+     label4:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label5:
+        $r9 = virtualinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: android.content.Context getContext()>();
+
+        $i4 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r9, 16842808);
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>($i4);
+
+        goto label3;
+
+     label6:
+        return;
+
+     label7:
+        goto label2;
+    }
+
+    private void a(android.content.Context)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        android.content.Context $r1;
+        android.view.LayoutInflater $r2;
+        int $i0, $i1, $i2;
+        android.view.View $r3, $r5;
+        com.jasonkostempski.android.calendar.j $r4;
+        android.widget.TableLayout $r6;
+        android.widget.Button $r7;
+        android.widget.LinearLayout $r8;
+        java.lang.String[] $r9;
+        android.widget.TableRow $r10;
+        boolean $z0;
+        java.lang.Boolean $r11;
+        android.widget.TextView $r12;
+        java.lang.String $r13;
+        android.view.View$OnClickListener $r14;
+        java.lang.Integer $r15;
+        com.jasonkostempski.android.calendar.k $r16;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r1);
+
+        $i0 = <com.seattleclouds.j: int calendar_view>;
+
+        $r3 = virtualinvoke $r2.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r0, 1);
+
+        $r4 = new com.jasonkostempski.android.calendar.j;
+
+        specialinvoke $r4.<com.jasonkostempski.android.calendar.j: void <init>()>();
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k> = $r4;
+
+        $i0 = <com.seattleclouds.h: int days>;
+
+        $r5 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TableLayout) $r5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout l> = $r6;
+
+        $i0 = <com.seattleclouds.h: int months>;
+
+        $r5 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TableLayout) $r5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout m> = $r6;
+
+        $i0 = <com.seattleclouds.h: int years>;
+
+        $r5 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TableLayout) $r5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout n> = $r6;
+
+        $i0 = <com.seattleclouds.h: int up>;
+
+        $r5 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p> = $r7;
+
+        $i0 = <com.seattleclouds.h: int previous>;
+
+        $r5 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button q> = $r7;
+
+        $i0 = <com.seattleclouds.h: int next>;
+
+        $r5 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r5;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button r> = $r7;
+
+        $i0 = <com.seattleclouds.h: int events>;
+
+        $r3 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.LinearLayout) $r3;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.LinearLayout o> = $r8;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void c()>();
+
+        $r4 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r9 = virtualinvoke $r4.<com.jasonkostempski.android.calendar.j: java.lang.String[] d()>();
+
+        $i0 = 0;
+
+     label01:
+        if $i0 >= 7 goto label08;
+
+        $r6 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout l>;
+
+        $r3 = virtualinvoke $r6.<android.widget.TableLayout: android.view.View getChildAt(int)>($i0);
+
+        $r10 = (android.widget.TableRow) $r3;
+
+        $i1 = 0;
+
+     label02:
+        if $i1 >= 7 goto label07;
+
+        if $i0 != 0 goto label05;
+
+        $z0 = 1;
+
+     label03:
+        $r11 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $r3 = virtualinvoke $r10.<android.widget.TableRow: android.view.View getChildAt(int)>($i1);
+
+        $i2 = <com.seattleclouds.h: int day_text>;
+
+        $r5 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i2);
+
+        $r12 = (android.widget.TextView) $r5;
+
+        $z0 = virtualinvoke $r11.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label06;
+
+        $r13 = $r9[$i1];
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r13);
+
+     label04:
+        $i1 = $i1 + 1;
+
+        goto label02;
+
+     label05:
+        $z0 = 0;
+
+        goto label03;
+
+     label06:
+        $r14 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener c>;
+
+        virtualinvoke $r3.<android.view.View: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+        goto label04;
+
+     label07:
+        $i0 = $i0 + 1;
+
+        goto label01;
+
+     label08:
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void a()>();
+
+        $r4 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r9 = virtualinvoke $r4.<com.jasonkostempski.android.calendar.j: java.lang.String[] e()>();
+
+        $i0 = 0;
+
+        $i1 = 0;
+
+     label09:
+        if $i0 >= 3 goto label12;
+
+        $r6 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout m>;
+
+        $r3 = virtualinvoke $r6.<android.widget.TableLayout: android.view.View getChildAt(int)>($i0);
+
+        $r10 = (android.widget.TableRow) $r3;
+
+        $i2 = 0;
+
+     label10:
+        if $i2 >= 4 goto label11;
+
+        $r3 = virtualinvoke $r10.<android.widget.TableRow: android.view.View getChildAt(int)>($i2);
+
+        $r12 = (android.widget.TextView) $r3;
+
+        $r14 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener d>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+        $r13 = $r9[$i1];
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r13);
+
+        $r15 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i1);
+
+        virtualinvoke $r12.<android.widget.TextView: void setTag(java.lang.Object)>($r15);
+
+        $i1 = $i1 + 1;
+
+        $i2 = $i2 + 1;
+
+        goto label10;
+
+     label11:
+        $i0 = $i0 + 1;
+
+        goto label09;
+
+     label12:
+        $i0 = 0;
+
+     label13:
+        if $i0 >= 3 goto label16;
+
+        $r6 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout n>;
+
+        $r3 = virtualinvoke $r6.<android.widget.TableLayout: android.view.View getChildAt(int)>($i0);
+
+        $r10 = (android.widget.TableRow) $r3;
+
+        $i1 = 0;
+
+     label14:
+        if $i1 >= 4 goto label15;
+
+        $r3 = virtualinvoke $r10.<android.widget.TableRow: android.view.View getChildAt(int)>($i1);
+
+        $r12 = (android.widget.TextView) $r3;
+
+        $r14 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener e>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+        $i1 = $i1 + 1;
+
+        goto label14;
+
+     label15:
+        $i0 = $i0 + 1;
+
+        goto label13;
+
+     label16:
+        $r4 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r16 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.k a>;
+
+        virtualinvoke $r4.<com.jasonkostempski.android.calendar.j: void a(com.jasonkostempski.android.calendar.k)>($r16);
+
+        $r7 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        $r14 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener f>;
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+        $r7 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button q>;
+
+        $r14 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener b>;
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+        $r7 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button r>;
+
+        $r14 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.view.View$OnClickListener b>;
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+        virtualinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void setView(int)>(2);
+
+        return;
+    }
+
+    static int b(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        int i0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int w>;
+
+        return i0;
+    }
+
+    private void b()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        int $i0;
+        android.widget.Button $r1;
+        com.jasonkostempski.android.calendar.j $r2;
+        java.lang.String $r3;
+        java.lang.StringBuilder $r4;
+        java.util.Calendar $r5;
+        java.lang.CharSequence $r6;
+        android.content.Context $r7;
+        java.text.DateFormat $r8;
+        java.util.Date $r9;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        lookupswitch($i0)
+        {
+            case 0: goto label7;
+            case 1: goto label6;
+            case 2: goto label2;
+            case 3: goto label3;
+            case 4: goto label5;
+            case 5: goto label4;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r3 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.lang.String a(java.lang.CharSequence)>("MMMM yyyy");
+
+        virtualinvoke $r1.<android.widget.Button: void setText(java.lang.CharSequence)>($r3);
+
+        return;
+
+     label3:
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r3 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.lang.String a(java.lang.CharSequence)>("yyyy");
+
+        virtualinvoke $r1.<android.widget.Button: void setText(java.lang.CharSequence)>($r3);
+
+        return;
+
+     label4:
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        virtualinvoke $r1.<android.widget.Button: void setText(java.lang.CharSequence)>("CENTURY_VIEW");
+
+        return;
+
+     label5:
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        virtualinvoke $r1.<android.widget.Button: void setText(java.lang.CharSequence)>("DECADE_VIEW");
+
+        return;
+
+     label6:
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r5 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.util.Calendar g()>();
+
+        $r6 = staticinvoke <android.text.format.DateFormat: java.lang.CharSequence format(java.lang.CharSequence,java.util.Calendar)>("EEEE, ", $r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r6);
+
+        $r7 = virtualinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: android.content.Context getContext()>();
+
+        $r8 = staticinvoke <android.text.format.DateFormat: java.text.DateFormat getMediumDateFormat(android.content.Context)>($r7);
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r5 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.util.Calendar g()>();
+
+        $r9 = virtualinvoke $r5.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r3 = virtualinvoke $r8.<java.text.DateFormat: java.lang.String format(java.util.Date)>($r9);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r1.<android.widget.Button: void setText(java.lang.CharSequence)>($r3);
+
+        return;
+
+     label7:
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        virtualinvoke $r1.<android.widget.Button: void setText(java.lang.CharSequence)>("ITEM_VIEW");
+
+        return;
+    }
+
+    private void c()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.j $r1;
+        int $i0;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $i0 = virtualinvoke $r1.<com.jasonkostempski.android.calendar.j: int a()>();
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int v> = $i0;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $i0 = virtualinvoke $r1.<com.jasonkostempski.android.calendar.j: int b()>();
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int w> = $i0;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        virtualinvoke $r1.<com.jasonkostempski.android.calendar.j: int c()>();
+
+        return;
+    }
+
+    static void c(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void a()>();
+
+        return;
+    }
+
+    private void d()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.h $r1;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.h s>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.h s>;
+
+        interfaceinvoke $r1.<com.jasonkostempski.android.calendar.h: void a(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+     label1:
+        return;
+    }
+
+    static void d(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void d()>();
+
+        return;
+    }
+
+    private void e()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.i $r1;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.i t>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.i t>;
+
+        interfaceinvoke $r1.<com.jasonkostempski.android.calendar.i: void a(com.jasonkostempski.android.calendar.CalendarView)>($r0);
+
+     label1:
+        return;
+    }
+
+    static void e(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void c()>();
+
+        return;
+    }
+
+    static void f(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void b()>();
+
+        return;
+    }
+
+    static android.widget.Button g(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        android.widget.Button r1;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button r>;
+
+        return r1;
+    }
+
+    static int h(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        int i0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        return i0;
+    }
+
+    static com.jasonkostempski.android.calendar.j i(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.j r1;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        return r1;
+    }
+
+    static void j(com.jasonkostempski.android.calendar.CalendarView)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+
+        $r0 := @parameter0: com.jasonkostempski.android.calendar.CalendarView;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void e()>();
+
+        return;
+    }
+
+    public void a(java.util.Set, int)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        java.util.Set $r1;
+        int $i0, $i1, $i2, $i3, $i4;
+        com.jasonkostempski.android.calendar.j $r2;
+        java.util.Calendar $r3, $r5;
+        java.util.Date $r4;
+        android.widget.TableLayout $r6;
+        android.view.View $r7, $r9;
+        android.widget.TableRow $r8;
+        boolean $z0;
+        android.content.Context $r10;
+        android.graphics.drawable.Drawable $r11;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: java.util.Set;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r3 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.util.Calendar h()>();
+
+        $r4 = virtualinvoke $r3.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r3 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar b(java.util.Date)>($r4);
+
+        $r5 = staticinvoke <java.util.Calendar: java.util.Calendar getInstance()>();
+
+        $i1 = 0;
+
+        $i2 = 0;
+
+        $i3 = 1;
+
+     label1:
+        if $i1 >= 42 goto label7;
+
+        $r6 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout l>;
+
+        $r7 = virtualinvoke $r6.<android.widget.TableLayout: android.view.View getChildAt(int)>($i3);
+
+        $r8 = (android.widget.TableRow) $r7;
+
+        $r7 = virtualinvoke $r8.<android.widget.TableRow: android.view.View getChildAt(int)>($i2);
+
+        $i4 = <com.seattleclouds.h: int day_marker>;
+
+        $r9 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i4);
+
+        $z0 = interfaceinvoke $r1.<java.util.Set: boolean contains(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label5;
+
+        $i4 = <com.seattleclouds.h: int day_marker>;
+
+        $r9 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i4);
+
+        virtualinvoke $r9.<android.view.View: void setVisibility(int)>(0);
+
+        virtualinvoke $r9.<android.view.View: void setBackgroundColor(int)>($i0);
+
+     label2:
+        $z0 = staticinvoke <com.seattleclouds.util.bo: boolean a(java.util.Calendar,java.util.Calendar)>($r3, $r5);
+
+        if $z0 == 0 goto label6;
+
+        $r10 = virtualinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: android.content.Context getContext()>();
+
+        $i4 = <com.seattleclouds.g: int calendar_today_marker>;
+
+        $r11 = staticinvoke <android.support.v4.content.c: android.graphics.drawable.Drawable a(android.content.Context,int)>($r10, $i4);
+
+        staticinvoke <com.seattleclouds.util.bl: void a(android.view.View,android.graphics.drawable.Drawable)>($r7, $r11);
+
+     label3:
+        virtualinvoke $r3.<java.util.Calendar: void add(int,int)>(5, 1);
+
+        $i2 = $i2 + 1;
+
+        if $i2 != 7 goto label4;
+
+        $i3 = $i3 + 1;
+
+        $i2 = 0;
+
+     label4:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label5:
+        virtualinvoke $r9.<android.view.View: void setVisibility(int)>(8);
+
+        goto label2;
+
+     label6:
+        staticinvoke <com.seattleclouds.util.bl: void a(android.view.View,android.graphics.drawable.Drawable)>($r7, null);
+
+        goto label3;
+
+     label7:
+        return;
+    }
+
+    public java.util.Calendar getSelectedDay()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        java.util.Calendar $r1;
+        com.jasonkostempski.android.calendar.j $r2;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r1 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.util.Calendar g()>();
+
+        return $r1;
+    }
+
+    public int getView()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        int i0;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        return i0;
+    }
+
+    public java.util.Calendar getVisibleEndDate()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        java.util.Calendar $r1;
+        com.jasonkostempski.android.calendar.j $r2;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r1 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.util.Calendar i()>();
+
+        return $r1;
+    }
+
+    public java.util.Calendar getVisibleStartDate()
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        java.util.Calendar $r1;
+        com.jasonkostempski.android.calendar.j $r2;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r1 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.util.Calendar h()>();
+
+        return $r1;
+    }
+
+    public void setDaysWithEvents(com.jasonkostempski.android.calendar.a[])
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.a[] $r1;
+        int $i0, $i1, $i2, $i3, $i4, $i5, $i6, $i7;
+        com.jasonkostempski.android.calendar.j $r2;
+        java.util.Calendar $r3;
+        android.widget.TableLayout $r4;
+        android.view.View $r5;
+        android.widget.TableRow $r6;
+        android.widget.TextView $r7;
+        java.lang.Object $r8;
+        int[] $r9;
+        com.jasonkostempski.android.calendar.a $r10;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: com.jasonkostempski.android.calendar.a[];
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        $r3 = virtualinvoke $r2.<com.jasonkostempski.android.calendar.j: java.util.Calendar h()>();
+
+        $i1 = 0;
+
+        $i2 = 0;
+
+        $i3 = 1;
+
+        $i4 = 0;
+
+     label1:
+        if $i1 >= 42 goto label8;
+
+        $i0 = lengthof $r1;
+
+        if $i4 != $i0 goto label2;
+
+        return;
+
+     label2:
+        $r4 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout l>;
+
+        $r5 = virtualinvoke $r4.<android.widget.TableLayout: android.view.View getChildAt(int)>($i3);
+
+        $r6 = (android.widget.TableRow) $r5;
+
+        $r7 = specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TextView a(android.widget.TableRow,int)>($r6, $i2);
+
+        $r8 = virtualinvoke $r7.<android.widget.TextView: java.lang.Object getTag()>();
+
+        $r9 = (int[]) $r8;
+
+        $i0 = $r9[1];
+
+        $i5 = 0;
+
+     label3:
+        $i6 = lengthof $r1;
+
+        if $i5 >= $i6 goto label7;
+
+        $r10 = $r1[$i5];
+
+        $i6 = virtualinvoke $r3.<java.util.Calendar: int get(int)>(1);
+
+        $i7 = virtualinvoke $r10.<com.jasonkostempski.android.calendar.a: int a()>();
+
+        if $i6 != $i7 goto label6;
+
+        $i6 = virtualinvoke $r3.<java.util.Calendar: int get(int)>(2);
+
+        $i7 = virtualinvoke $r10.<com.jasonkostempski.android.calendar.a: int b()>();
+
+        if $i6 != $i7 goto label6;
+
+        $i6 = virtualinvoke $r10.<com.jasonkostempski.android.calendar.a: int c()>();
+
+        if $i0 != $i6 goto label6;
+
+        $i0 = virtualinvoke $r10.<com.jasonkostempski.android.calendar.a: int d()>();
+
+        virtualinvoke $r7.<android.widget.TextView: void setBackgroundColor(int)>($i0);
+
+        $i4 = $i4 + 1;
+
+     label4:
+        virtualinvoke $r3.<java.util.Calendar: void add(int,int)>(5, 1);
+
+        $i2 = $i2 + 1;
+
+        if $i2 != 7 goto label5;
+
+        $i3 = $i3 + 1;
+
+        $i2 = 0;
+
+     label5:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label6:
+        $i5 = $i5 + 1;
+
+        goto label3;
+
+     label7:
+        goto label4;
+
+     label8:
+        return;
+    }
+
+    public void setListViewItems(android.view.View[])
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        android.view.View[] $r1;
+        android.view.View $r2;
+        android.widget.LinearLayout $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: android.view.View[];
+
+        $r3 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.LinearLayout o>;
+
+        virtualinvoke $r3.<android.widget.LinearLayout: void removeAllViews()>();
+
+        $i0 = 0;
+
+     label1:
+        $i1 = lengthof $r1;
+
+        if $i0 >= $i1 goto label2;
+
+        $r3 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.LinearLayout o>;
+
+        $r2 = $r1[$i0];
+
+        virtualinvoke $r3.<android.widget.LinearLayout: void addView(android.view.View)>($r2);
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label2:
+        return;
+    }
+
+    public void setOnMonthChangedListener(com.jasonkostempski.android.calendar.h)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.h $r1;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: com.jasonkostempski.android.calendar.h;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.h s> = $r1;
+
+        return;
+    }
+
+    public void setOnSelectedDayChangedListener(com.jasonkostempski.android.calendar.i)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        com.jasonkostempski.android.calendar.i $r1;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: com.jasonkostempski.android.calendar.i;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.i t> = $r1;
+
+        return;
+    }
+
+    public void setSelectedDay(java.util.Calendar)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        java.util.Calendar $r1, $r2;
+        boolean $z0;
+        com.jasonkostempski.android.calendar.j $r3;
+        int $i0;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $r1 := @parameter0: java.util.Calendar;
+
+        $r2 = virtualinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: java.util.Calendar getSelectedDay()>();
+
+        $z0 = virtualinvoke $r2.<java.util.Calendar: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 != 0 goto label2;
+
+        $r3 = $r0.<com.jasonkostempski.android.calendar.CalendarView: com.jasonkostempski.android.calendar.j k>;
+
+        virtualinvoke $r3.<com.jasonkostempski.android.calendar.j: void a(java.util.Calendar)>($r1);
+
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i0 != 1 goto label1;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void e()>();
+
+        return;
+
+     label1:
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i0 != 3 goto label2;
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void b()>();
+
+     label2:
+        return;
+    }
+
+    public void setView(int)
+    {
+        com.jasonkostempski.android.calendar.CalendarView $r0;
+        int $i0, $i2;
+        byte $b1, $b3;
+        boolean $z0;
+        android.widget.LinearLayout $r1;
+        android.widget.TableLayout $r2;
+        android.widget.Button $r3;
+
+        $r0 := @this: com.jasonkostempski.android.calendar.CalendarView;
+
+        $i0 := @parameter0: int;
+
+        $b1 = 8;
+
+        $z0 = 0;
+
+        $i2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i2 == $i0 goto label9;
+
+        $r0.<com.jasonkostempski.android.calendar.CalendarView: int u> = $i0;
+
+        $r1 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.LinearLayout o>;
+
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i0 != 1 goto label6;
+
+        $b3 = 0;
+
+     label1:
+        virtualinvoke $r1.<android.widget.LinearLayout: void setVisibility(int)>($b3);
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout n>;
+
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i0 != 4 goto label7;
+
+        $b3 = 0;
+
+     label2:
+        virtualinvoke $r2.<android.widget.TableLayout: void setVisibility(int)>($b3);
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout m>;
+
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i0 != 3 goto label8;
+
+        $b3 = 0;
+
+     label3:
+        virtualinvoke $r2.<android.widget.TableLayout: void setVisibility(int)>($b3);
+
+        $r2 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.TableLayout l>;
+
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i0 != 2 goto label4;
+
+        $b1 = 0;
+
+     label4:
+        virtualinvoke $r2.<android.widget.TableLayout: void setVisibility(int)>($b1);
+
+        $r3 = $r0.<com.jasonkostempski.android.calendar.CalendarView: android.widget.Button p>;
+
+        $i0 = $r0.<com.jasonkostempski.android.calendar.CalendarView: int u>;
+
+        if $i0 == 3 goto label5;
+
+        $z0 = 1;
+
+     label5:
+        virtualinvoke $r3.<android.widget.Button: void setEnabled(boolean)>($z0);
+
+        specialinvoke $r0.<com.jasonkostempski.android.calendar.CalendarView: void b()>();
+
+        return;
+
+     label6:
+        $b3 = 8;
+
+        goto label1;
+
+     label7:
+        $b3 = 8;
+
+        goto label2;
+
+     label8:
+        $b3 = 8;
+
+        goto label3;
+
+     label9:
+        return;
+    }
+}

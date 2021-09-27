@@ -1,0 +1,168 @@
+public class com.seattleclouds.modules.mosaic.e extends android.widget.BaseAdapter
+{
+    final com.seattleclouds.modules.mosaic.b a;
+    private int b;
+    private android.content.Context c;
+
+    public void <init>(com.seattleclouds.modules.mosaic.b, android.content.Context)
+    {
+        com.seattleclouds.modules.mosaic.e $r0;
+        com.seattleclouds.modules.mosaic.b $r1;
+        android.content.Context $r2;
+        android.support.v4.app.ac $r3;
+        int[] $r4;
+        android.content.res.TypedArray $r5;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.mosaic.b;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r0.<com.seattleclouds.modules.mosaic.e: com.seattleclouds.modules.mosaic.b a> = $r1;
+
+        specialinvoke $r0.<android.widget.BaseAdapter: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.mosaic.e: android.content.Context c> = $r2;
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.modules.mosaic.b: android.support.v4.app.ac n()>();
+
+        $r4 = <com.seattleclouds.n: int[] Gallery>;
+
+        $r5 = virtualinvoke $r3.<android.support.v4.app.ac: android.content.res.TypedArray obtainStyledAttributes(int[])>($r4);
+
+        $i0 = <com.seattleclouds.n: int Gallery_android_galleryItemBackground>;
+
+        $i0 = virtualinvoke $r5.<android.content.res.TypedArray: int getResourceId(int,int)>($i0, 0);
+
+        $r0.<com.seattleclouds.modules.mosaic.e: int b> = $i0;
+
+        virtualinvoke $r5.<android.content.res.TypedArray: void recycle()>();
+
+        return;
+    }
+
+    public int getCount()
+    {
+        com.seattleclouds.modules.mosaic.e $r0;
+        com.seattleclouds.modules.mosaic.b $r1;
+        java.util.ArrayList $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.e;
+
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.e: com.seattleclouds.modules.mosaic.b a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.mosaic.b: java.util.ArrayList b(com.seattleclouds.modules.mosaic.b)>($r1);
+
+        $i0 = virtualinvoke $r2.<java.util.ArrayList: int size()>();
+
+        return $i0;
+    }
+
+    public java.lang.Object getItem(int)
+    {
+        com.seattleclouds.modules.mosaic.e $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.e;
+
+        $i0 := @parameter0: int;
+
+        return null;
+    }
+
+    public long getItemId(int)
+    {
+        com.seattleclouds.modules.mosaic.e $r0;
+        int $i0;
+        long $l1;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.e;
+
+        $i0 := @parameter0: int;
+
+        $l1 = (long) $i0;
+
+        return $l1;
+    }
+
+    public android.view.View getView(int, android.view.View, android.view.ViewGroup)
+    {
+        com.seattleclouds.modules.mosaic.e $r0;
+        int $i0, $i1, $i2;
+        android.view.ViewGroup $r1;
+        android.view.View $r2;
+        android.widget.ImageView $r3;
+        android.content.Context $r4;
+        android.widget.AbsListView$LayoutParams $r5;
+        com.seattleclouds.modules.mosaic.b $r6;
+        android.widget.ImageView$ScaleType $r7;
+        java.util.ArrayList $r8;
+        java.lang.Object $r9;
+        com.seattleclouds.modules.mosaic.ImgMetadata $r10;
+        java.lang.String $r11;
+        com.seattleclouds.modules.mosaic.f $r12;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.e;
+
+        $i0 := @parameter0: int;
+
+        $r2 := @parameter1: android.view.View;
+
+        $r1 := @parameter2: android.view.ViewGroup;
+
+        if $r2 != null goto label2;
+
+        $r3 = new android.widget.ImageView;
+
+        $r4 = $r0.<com.seattleclouds.modules.mosaic.e: android.content.Context c>;
+
+        specialinvoke $r3.<android.widget.ImageView: void <init>(android.content.Context)>($r4);
+
+        $r5 = new android.widget.AbsListView$LayoutParams;
+
+        $r6 = $r0.<com.seattleclouds.modules.mosaic.e: com.seattleclouds.modules.mosaic.b a>;
+
+        $i1 = staticinvoke <com.seattleclouds.modules.mosaic.b: int f(com.seattleclouds.modules.mosaic.b)>($r6);
+
+        $r6 = $r0.<com.seattleclouds.modules.mosaic.e: com.seattleclouds.modules.mosaic.b a>;
+
+        $i2 = staticinvoke <com.seattleclouds.modules.mosaic.b: int f(com.seattleclouds.modules.mosaic.b)>($r6);
+
+        specialinvoke $r5.<android.widget.AbsListView$LayoutParams: void <init>(int,int)>($i1, $i2);
+
+        virtualinvoke $r3.<android.widget.ImageView: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r5);
+
+        $r7 = <android.widget.ImageView$ScaleType: android.widget.ImageView$ScaleType CENTER_CROP>;
+
+        virtualinvoke $r3.<android.widget.ImageView: void setScaleType(android.widget.ImageView$ScaleType)>($r7);
+
+     label1:
+        virtualinvoke $r3.<android.widget.ImageView: void setBackgroundColor(int)>(-16777216);
+
+        $r6 = $r0.<com.seattleclouds.modules.mosaic.e: com.seattleclouds.modules.mosaic.b a>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.mosaic.b: java.util.ArrayList b(com.seattleclouds.modules.mosaic.b)>($r6);
+
+        $r9 = virtualinvoke $r8.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r10 = (com.seattleclouds.modules.mosaic.ImgMetadata) $r9;
+
+        $r11 = $r10.<com.seattleclouds.modules.mosaic.ImgMetadata: java.lang.String b>;
+
+        $r6 = $r0.<com.seattleclouds.modules.mosaic.e: com.seattleclouds.modules.mosaic.b a>;
+
+        $r12 = staticinvoke <com.seattleclouds.modules.mosaic.b: com.seattleclouds.modules.mosaic.f g(com.seattleclouds.modules.mosaic.b)>($r6);
+
+        virtualinvoke $r12.<com.seattleclouds.modules.mosaic.f: void a(java.lang.Object,android.widget.ImageView)>($r11, $r3);
+
+        return $r3;
+
+     label2:
+        $r3 = (android.widget.ImageView) $r2;
+
+        goto label1;
+    }
+}

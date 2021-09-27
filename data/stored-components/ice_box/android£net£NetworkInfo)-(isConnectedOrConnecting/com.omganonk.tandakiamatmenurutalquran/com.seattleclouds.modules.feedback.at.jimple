@@ -1,0 +1,140 @@
+class com.seattleclouds.modules.feedback.at extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.modules.feedback.a a;
+    final com.seattleclouds.modules.feedback.c b;
+
+    void <init>(com.seattleclouds.modules.feedback.c, com.seattleclouds.modules.feedback.a)
+    {
+        com.seattleclouds.modules.feedback.at $r0;
+        com.seattleclouds.modules.feedback.c $r1;
+        com.seattleclouds.modules.feedback.a $r2;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.at;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.c;
+
+        $r2 := @parameter1: com.seattleclouds.modules.feedback.a;
+
+        $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.c b> = $r1;
+
+        $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.a a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.modules.feedback.at $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.feedback.c $r2;
+        boolean $z0;
+        com.seattleclouds.modules.feedback.a $r3;
+        android.content.Intent $r4;
+        java.io.File $r5, $r6;
+        java.lang.StringBuilder $r7;
+        com.seattleclouds.modules.feedback.Field $r8;
+        java.lang.String $r9;
+        android.net.Uri $r10;
+        java.lang.Throwable $r11;
+        android.support.v4.app.ac $r12;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.at;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.c b>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.feedback.c: boolean a(com.seattleclouds.modules.feedback.c,int)>($r2, 31);
+
+        if $z0 == 0 goto label01;
+
+        return;
+
+     label01:
+        $r2 = $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.c b>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.feedback.c: boolean a(com.seattleclouds.modules.feedback.c,int)>($r2, 32);
+
+        if $z0 != 0 goto label15;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.c b>;
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.a a>;
+
+     label02:
+        staticinvoke <com.seattleclouds.modules.feedback.c: com.seattleclouds.modules.feedback.a a(com.seattleclouds.modules.feedback.c,com.seattleclouds.modules.feedback.a)>($r2, $r3);
+
+     label03:
+        $r4 = new android.content.Intent;
+
+     label04:
+        specialinvoke $r4.<android.content.Intent: void <init>(java.lang.String)>("android.media.action.IMAGE_CAPTURE");
+
+     label05:
+        $r5 = new java.io.File;
+
+     label06:
+        $r6 = staticinvoke <android.os.Environment: java.io.File getExternalStorageDirectory()>();
+
+     label07:
+        $r7 = new java.lang.StringBuilder;
+
+     label08:
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+     label09:
+        $r3 = $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.a a>;
+
+        $r8 = $r3.<com.seattleclouds.modules.feedback.a: com.seattleclouds.modules.feedback.Field l>;
+
+        $r9 = $r8.<com.seattleclouds.modules.feedback.Field: java.lang.String a>;
+
+     label10:
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".jpg");
+
+        $r9 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r5.<java.io.File: void <init>(java.io.File,java.lang.String)>($r6, $r9);
+
+        $r10 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>($r5);
+
+        virtualinvoke $r4.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("output", $r10);
+
+     label11:
+        $r2 = $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.c b>;
+
+     label12:
+        virtualinvoke $r2.<com.seattleclouds.modules.feedback.c: void startActivityForResult(android.content.Intent,int)>($r4, 1302);
+
+     label13:
+        return;
+
+     label14:
+        $r11 := @caughtexception;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.at: com.seattleclouds.modules.feedback.c b>;
+
+        $r12 = virtualinvoke $r2.<com.seattleclouds.modules.feedback.c: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int warning>;
+
+        $i1 = <com.seattleclouds.l: int feature_cant_take_photos>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r12, $i0, $i1);
+
+     label15:
+        return;
+
+        catch android.content.ActivityNotFoundException from label02 to label03 with label14;
+        catch android.content.ActivityNotFoundException from label04 to label05 with label14;
+        catch android.content.ActivityNotFoundException from label06 to label07 with label14;
+        catch android.content.ActivityNotFoundException from label08 to label09 with label14;
+        catch android.content.ActivityNotFoundException from label10 to label11 with label14;
+        catch android.content.ActivityNotFoundException from label12 to label13 with label14;
+    }
+}

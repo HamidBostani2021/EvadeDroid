@@ -1,0 +1,67 @@
+class com.seattleclouds.location.ac extends java.lang.Object implements com.seattleclouds.util.bi
+{
+    final com.seattleclouds.location.w a;
+
+    void <init>(com.seattleclouds.location.w)
+    {
+        com.seattleclouds.location.ac $r0;
+        com.seattleclouds.location.w $r1;
+
+        $r0 := @this: com.seattleclouds.location.ac;
+
+        $r1 := @parameter0: com.seattleclouds.location.w;
+
+        $r0.<com.seattleclouds.location.ac: com.seattleclouds.location.w a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(java.lang.Object)
+    {
+        com.seattleclouds.location.ac $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+        com.seattleclouds.location.w $r3;
+        com.google.android.gms.maps.model.LatLng $r4;
+        double $d0, $d1;
+        int $i0;
+        android.widget.TextView $r5;
+
+        $r0 := @this: com.seattleclouds.location.ac;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        if $r2 != null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.location.ac: com.seattleclouds.location.w a>;
+
+        $r4 = staticinvoke <com.seattleclouds.location.w: com.google.android.gms.maps.model.LatLng g(com.seattleclouds.location.w)>($r3);
+
+        $d0 = $r4.<com.google.android.gms.maps.model.LatLng: double a>;
+
+        $r3 = $r0.<com.seattleclouds.location.ac: com.seattleclouds.location.w a>;
+
+        $r4 = staticinvoke <com.seattleclouds.location.w: com.google.android.gms.maps.model.LatLng g(com.seattleclouds.location.w)>($r3);
+
+        $d1 = $r4.<com.google.android.gms.maps.model.LatLng: double b>;
+
+        $r3 = $r0.<com.seattleclouds.location.ac: com.seattleclouds.location.w a>;
+
+        $i0 = staticinvoke <com.seattleclouds.location.w: int h(com.seattleclouds.location.w)>($r3);
+
+        $r2 = staticinvoke <com.seattleclouds.location.ai: java.lang.String a(double,double,int)>($d0, $d1, $i0);
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.location.ac: com.seattleclouds.location.w a>;
+
+        $r5 = staticinvoke <com.seattleclouds.location.w: android.widget.TextView b(com.seattleclouds.location.w)>($r3);
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>($r2);
+
+        return;
+    }
+}

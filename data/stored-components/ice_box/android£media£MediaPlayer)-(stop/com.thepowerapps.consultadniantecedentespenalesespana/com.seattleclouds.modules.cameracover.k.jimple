@@ -1,0 +1,81 @@
+class com.seattleclouds.modules.cameracover.k extends java.lang.Object implements android.view.ViewTreeObserver$OnGlobalLayoutListener
+{
+    final com.seattleclouds.modules.cameracover.CoverCamera a;
+
+    void <init>(com.seattleclouds.modules.cameracover.CoverCamera)
+    {
+        com.seattleclouds.modules.cameracover.k $r0;
+        com.seattleclouds.modules.cameracover.CoverCamera $r1;
+
+        $r0 := @this: com.seattleclouds.modules.cameracover.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.cameracover.CoverCamera;
+
+        $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onGlobalLayout()
+    {
+        com.seattleclouds.modules.cameracover.k $r0;
+        com.seattleclouds.modules.cameracover.CoverCamera $r1, $r2;
+        android.widget.Gallery $r3;
+        int $i0;
+        com.seattleclouds.modules.cameracover.r $r4;
+        android.view.ViewTreeObserver $r5;
+        android.view.ViewTreeObserver$OnGlobalLayoutListener $r6;
+
+        $r0 := @this: com.seattleclouds.modules.cameracover.k;
+
+        $r1 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: android.widget.Gallery e(com.seattleclouds.modules.cameracover.CoverCamera)>($r2);
+
+        $i0 = virtualinvoke $r3.<android.widget.Gallery: int getWidth()>();
+
+        staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: int a(com.seattleclouds.modules.cameracover.CoverCamera,int)>($r1, $i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: android.widget.Gallery e(com.seattleclouds.modules.cameracover.CoverCamera)>($r2);
+
+        $i0 = virtualinvoke $r3.<android.widget.Gallery: int getHeight()>();
+
+        staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: int b(com.seattleclouds.modules.cameracover.CoverCamera,int)>($r1, $i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: android.widget.Gallery e(com.seattleclouds.modules.cameracover.CoverCamera)>($r1);
+
+        $r4 = new com.seattleclouds.modules.cameracover.r;
+
+        $r1 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        specialinvoke $r4.<com.seattleclouds.modules.cameracover.r: void <init>(com.seattleclouds.modules.cameracover.CoverCamera,android.content.Context)>($r1, $r2);
+
+        virtualinvoke $r3.<android.widget.Gallery: void setAdapter(android.widget.SpinnerAdapter)>($r4);
+
+        $r1 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: android.widget.Gallery e(com.seattleclouds.modules.cameracover.CoverCamera)>($r1);
+
+        $r5 = virtualinvoke $r3.<android.widget.Gallery: android.view.ViewTreeObserver getViewTreeObserver()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.cameracover.k: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r6 = $r1.<com.seattleclouds.modules.cameracover.CoverCamera: android.view.ViewTreeObserver$OnGlobalLayoutListener m>;
+
+        virtualinvoke $r5.<android.view.ViewTreeObserver: void removeGlobalOnLayoutListener(android.view.ViewTreeObserver$OnGlobalLayoutListener)>($r6);
+
+        return;
+    }
+}

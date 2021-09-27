@@ -1,0 +1,46 @@
+class com.seattleclouds.location.q extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.Object a;
+    final com.seattleclouds.location.a b;
+
+    void <init>(com.seattleclouds.location.a, java.lang.Object)
+    {
+        com.seattleclouds.location.q $r0;
+        com.seattleclouds.location.a $r1;
+        java.lang.Object $r2;
+
+        $r0 := @this: com.seattleclouds.location.q;
+
+        $r1 := @parameter0: com.seattleclouds.location.a;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $r0.<com.seattleclouds.location.q: com.seattleclouds.location.a b> = $r1;
+
+        $r0.<com.seattleclouds.location.q: java.lang.Object a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.location.q $r0;
+        java.lang.Object $r1;
+        com.seattleclouds.util.bi $r2;
+        com.seattleclouds.location.a $r3;
+
+        $r0 := @this: com.seattleclouds.location.q;
+
+        $r3 = $r0.<com.seattleclouds.location.q: com.seattleclouds.location.a b>;
+
+        $r2 = staticinvoke <com.seattleclouds.location.a: com.seattleclouds.util.bi b(com.seattleclouds.location.a)>($r3);
+
+        $r1 = $r0.<com.seattleclouds.location.q: java.lang.Object a>;
+
+        interfaceinvoke $r2.<com.seattleclouds.util.bi: void a(java.lang.Object)>($r1);
+
+        return;
+    }
+}

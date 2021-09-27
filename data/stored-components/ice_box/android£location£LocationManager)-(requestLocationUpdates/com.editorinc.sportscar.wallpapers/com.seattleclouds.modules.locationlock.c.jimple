@@ -1,0 +1,1639 @@
+public class com.seattleclouds.modules.locationlock.c extends com.seattleclouds.r
+{
+    private android.view.View a;
+    private float ai;
+    private java.util.Map aj;
+    private int ak;
+    private boolean al;
+    private int am;
+    private java.lang.String an;
+    private java.lang.String ao;
+    private java.util.Date ap;
+    private boolean aq;
+    private boolean ar;
+    private java.util.concurrent.ScheduledThreadPoolExecutor as;
+    private java.util.concurrent.ScheduledFuture at;
+    private boolean au;
+    private android.widget.Button b;
+    private android.widget.TextView c;
+    private android.widget.ProgressBar d;
+    private java.lang.String e;
+    private java.lang.String f;
+    private com.seattleclouds.location.l g;
+    private android.location.Location h;
+    private int i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.concurrent.ScheduledThreadPoolExecutor $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String e> = "";
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String f> = "com.seattleclouds.modules.locationlock.LocationLockFragment";
+
+        $r0.<com.seattleclouds.modules.locationlock.c: int i> = 0;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: float ai> = 5.0F;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj> = null;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: int ak> = 0;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean al> = 1;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: int am> = 10;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String an> = "";
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean aq> = 1;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean ar> = 0;
+
+        $r1 = new java.util.concurrent.ScheduledThreadPoolExecutor;
+
+        specialinvoke $r1.<java.util.concurrent.ScheduledThreadPoolExecutor: void <init>(int)>(1);
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledThreadPoolExecutor as> = $r1;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledFuture at> = null;
+
+        return;
+    }
+
+    private double a(android.location.Location, com.seattleclouds.location.geofencing.k)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.location.Location $r1, $r3;
+        com.seattleclouds.location.geofencing.k $r2;
+        double $d0;
+        float $f0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: android.location.Location;
+
+        $r2 := @parameter1: com.seattleclouds.location.geofencing.k;
+
+        $r3 = new android.location.Location;
+
+        specialinvoke $r3.<android.location.Location: void <init>(java.lang.String)>("codeGenerated");
+
+        $d0 = virtualinvoke $r2.<com.seattleclouds.location.geofencing.k: double c()>();
+
+        virtualinvoke $r3.<android.location.Location: void setLatitude(double)>($d0);
+
+        $d0 = virtualinvoke $r2.<com.seattleclouds.location.geofencing.k: double d()>();
+
+        virtualinvoke $r3.<android.location.Location: void setLongitude(double)>($d0);
+
+        $f0 = virtualinvoke $r1.<android.location.Location: float distanceTo(android.location.Location)>($r3);
+
+        $d0 = (double) $f0;
+
+        return $d0;
+    }
+
+    static int a(com.seattleclouds.modules.locationlock.c, int)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: int am> = $i0;
+
+        return $i0;
+    }
+
+    private int a(java.util.Date)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.Date $r1, $r2;
+        long $l0, $l1;
+        int $i2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: java.util.Date;
+
+        if $r1 != null goto label1;
+
+        return 2147483647;
+
+     label1:
+        $r2 = new java.util.Date;
+
+        specialinvoke $r2.<java.util.Date: void <init>()>();
+
+        $l0 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        $l1 = virtualinvoke $r1.<java.util.Date: long getTime()>();
+
+        $l0 = $l0 - $l1;
+
+        $l0 = $l0 / 60000L;
+
+        $i2 = (int) $l0;
+
+        return $i2;
+    }
+
+    static android.location.Location a(com.seattleclouds.modules.locationlock.c, android.location.Location)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.location.Location $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter1: android.location.Location;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: android.location.Location h> = $r1;
+
+        return $r1;
+    }
+
+    static java.util.Map a(com.seattleclouds.modules.locationlock.c, java.util.Map)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.Map $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter1: java.util.Map;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj> = $r1;
+
+        return $r1;
+    }
+
+    static java.util.concurrent.ScheduledFuture a(com.seattleclouds.modules.locationlock.c, java.util.concurrent.ScheduledFuture)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.concurrent.ScheduledFuture $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter1: java.util.concurrent.ScheduledFuture;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledFuture at> = null;
+
+        return null;
+    }
+
+    static void a(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ab()>();
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.locationlock.c, java.lang.String)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void c(java.lang.String)>($r1);
+
+        return;
+    }
+
+    private boolean a(com.seattleclouds.location.geofencing.k)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        com.seattleclouds.location.geofencing.k $r1;
+        double $d0;
+        byte $b0;
+        java.util.Date $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: com.seattleclouds.location.geofencing.k;
+
+        $d0 = virtualinvoke $r1.<com.seattleclouds.location.geofencing.k: double c()>();
+
+        $b0 = $d0 cmpl 0.0;
+
+        if $b0 != 0 goto label1;
+
+        $d0 = virtualinvoke $r1.<com.seattleclouds.location.geofencing.k: double d()>();
+
+        $b0 = $d0 cmpl 0.0;
+
+        if $b0 != 0 goto label1;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.location.geofencing.k: java.util.Date f()>();
+
+        if $r2 == null goto label1;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.location.geofencing.k: java.util.Date g()>();
+
+        if $r2 == null goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    static boolean a(com.seattleclouds.modules.locationlock.c, boolean)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean al> = $z0;
+
+        return $z0;
+    }
+
+    private void ab()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.Map $r1;
+        com.seattleclouds.modules.locationlock.i $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void h(boolean)>(1);
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean ar> = 0;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: int i> = 0;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: android.location.Location h> = null;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        if $r1 == null goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ac()>();
+
+        return;
+
+     label1:
+        $r2 = new com.seattleclouds.modules.locationlock.i;
+
+        specialinvoke $r2.<com.seattleclouds.modules.locationlock.i: void <init>(com.seattleclouds.modules.locationlock.c,com.seattleclouds.modules.locationlock.d)>($r0, null);
+
+        $r3 = newarray (java.lang.Void)[0];
+
+        virtualinvoke $r2.<com.seattleclouds.modules.locationlock.i: android.os.AsyncTask execute(java.lang.Object[])>($r3);
+
+        return;
+    }
+
+    private void ac()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int $i0, $i1;
+        android.support.v4.app.ac $r1;
+        java.util.Map $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        if $r2 == null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        $i0 = interfaceinvoke $r2.<java.util.Map: int size()>();
+
+        if $i0 <= 0 goto label2;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ad()>();
+
+        return;
+
+     label2:
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void h(boolean)>(0);
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int error>;
+
+        $i1 = <com.seattleclouds.l: int location_lock_no_locations>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r1, $i0, $i1);
+
+        return;
+    }
+
+    private void ad()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.support.v4.app.ac $r1;
+        com.seattleclouds.location.l $r2;
+        com.seattleclouds.modules.locationlock.e $r3;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ak()>();
+
+        $r2 = new com.seattleclouds.location.l;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $r3 = new com.seattleclouds.modules.locationlock.e;
+
+        specialinvoke $r3.<com.seattleclouds.modules.locationlock.e: void <init>(com.seattleclouds.modules.locationlock.c,boolean)>($r0, 0);
+
+        specialinvoke $r2.<com.seattleclouds.location.l: void <init>(android.content.Context,android.location.LocationListener)>($r1, $r3);
+
+        $r0.<com.seattleclouds.modules.locationlock.c: com.seattleclouds.location.l g> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: com.seattleclouds.location.l g>;
+
+        $r2 = virtualinvoke $r2.<com.seattleclouds.location.l: com.seattleclouds.location.l a(long)>(500L);
+
+        $r2 = virtualinvoke $r2.<com.seattleclouds.location.l: com.seattleclouds.location.l a(boolean)>(0);
+
+        virtualinvoke $r2.<com.seattleclouds.location.l: void a()>();
+
+        return;
+    }
+
+    private void ae()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        com.seattleclouds.location.l $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: com.seattleclouds.location.l g>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: com.seattleclouds.location.l g>;
+
+        virtualinvoke $r1.<com.seattleclouds.location.l: void b()>();
+
+        $r0.<com.seattleclouds.modules.locationlock.c: com.seattleclouds.location.l g> = null;
+
+     label1:
+        return;
+    }
+
+    private void af()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.Map $r1;
+        boolean $z0;
+        com.seattleclouds.location.geofencing.k $r2;
+        java.lang.String $r3;
+        java.util.Date $r4;
+        int $i0, $i1;
+        java.lang.Object $r5;
+        android.location.Location $r6;
+        android.support.v4.app.ac $r7;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean ar>;
+
+        if $z0 != 0 goto label6;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean ar> = 1;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: com.seattleclouds.location.geofencing.k ag()>();
+
+        if $r2 == null goto label2;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.location.geofencing.k: java.lang.String a()>();
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String ao> = $r3;
+
+        $r4 = new java.util.Date;
+
+        specialinvoke $r4.<java.util.Date: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.Date ap> = $r4;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ai()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void b(com.seattleclouds.location.geofencing.k)>($r2);
+
+        return;
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String ao>;
+
+        if $r3 == null goto label4;
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String ao>;
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label4;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String ao>;
+
+        $r5 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>($r3);
+
+        $r2 = (com.seattleclouds.location.geofencing.k) $r5;
+
+        if $r2 == null goto label4;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: boolean a(com.seattleclouds.location.geofencing.k)>($r2);
+
+        if $z0 != 0 goto label4;
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean al>;
+
+        if $z0 == 0 goto label3;
+
+        $r4 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Date ap>;
+
+        $i0 = specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: int a(java.util.Date)>($r4);
+
+        $i1 = $r0.<com.seattleclouds.modules.locationlock.c: int am>;
+
+        if $i0 >= $i1 goto label4;
+
+     label3:
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void b(com.seattleclouds.location.geofencing.k)>($r2);
+
+        return;
+
+     label4:
+        $r6 = $r0.<com.seattleclouds.modules.locationlock.c: android.location.Location h>;
+
+        if $r6 != null goto label5;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void h(boolean)>(0);
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int error>;
+
+        $i1 = <com.seattleclouds.l: int location_lock_couldnt_get_location>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r7, $i0, $i1);
+
+        return;
+
+     label5:
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void aj()>();
+
+     label6:
+        return;
+    }
+
+    private com.seattleclouds.location.geofencing.k ag()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        com.seattleclouds.location.geofencing.k $r1, $r8;
+        java.util.Map $r2;
+        android.location.Location $r3;
+        double $d0, $d1, $d2;
+        java.util.Set $r4;
+        java.util.Iterator $r5;
+        boolean $z0;
+        java.lang.Object $r6;
+        java.lang.String $r7;
+        byte $b0;
+        java.util.Date $r9, $r10;
+        float $f0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = null;
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        if $r2 == null goto label10;
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.c: android.location.Location h>;
+
+        if $r3 != null goto label01;
+
+        return null;
+
+     label01:
+        $d0 = -1.0;
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        $r4 = interfaceinvoke $r2.<java.util.Map: java.util.Set keySet()>();
+
+        $r5 = interfaceinvoke $r4.<java.util.Set: java.util.Iterator iterator()>();
+
+     label02:
+        $z0 = interfaceinvoke $r5.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label11;
+
+        $r6 = interfaceinvoke $r5.<java.util.Iterator: java.lang.Object next()>();
+
+        $r7 = (java.lang.String) $r6;
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Map aj>;
+
+        $r6 = interfaceinvoke $r2.<java.util.Map: java.lang.Object get(java.lang.Object)>($r7);
+
+        $r8 = (com.seattleclouds.location.geofencing.k) $r6;
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.c: android.location.Location h>;
+
+        $d1 = specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: double a(android.location.Location,com.seattleclouds.location.geofencing.k)>($r3, $r8);
+
+        $d2 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: double c()>();
+
+        $b0 = $d2 cmpl 0.0;
+
+        if $b0 == 0 goto label03;
+
+        $d2 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: double d()>();
+
+        $b0 = $d2 cmpl 0.0;
+
+        if $b0 != 0 goto label04;
+
+     label03:
+        $r9 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: java.util.Date f()>();
+
+        if $r9 == null goto label04;
+
+        $r9 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: java.util.Date g()>();
+
+        if $r9 != null goto label05;
+
+     label04:
+        $f0 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: float e()>();
+
+        $d2 = (double) $f0;
+
+        $b0 = $d1 cmpl $d2;
+
+        if $b0 > 0 goto label02;
+
+     label05:
+        $r9 = new java.util.Date;
+
+        specialinvoke $r9.<java.util.Date: void <init>()>();
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: java.util.Date f()>();
+
+        if $r10 == null goto label06;
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: java.util.Date g()>();
+
+        if $r10 == null goto label06;
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: java.util.Date f()>();
+
+        $z0 = virtualinvoke $r9.<java.util.Date: boolean before(java.util.Date)>($r10);
+
+        if $z0 != 0 goto label02;
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.location.geofencing.k: java.util.Date g()>();
+
+        $z0 = virtualinvoke $r9.<java.util.Date: boolean after(java.util.Date)>($r10);
+
+        if $z0 != 0 goto label02;
+
+     label06:
+        $b0 = $d0 cmpg 0.0;
+
+        if $b0 < 0 goto label07;
+
+        $b0 = $d1 cmpg $d0;
+
+        if $b0 >= 0 goto label09;
+
+     label07:
+        $r1 = $r8;
+
+        $d0 = $d1;
+
+     label08:
+        goto label02;
+
+     label09:
+        goto label08;
+
+     label10:
+        return null;
+
+     label11:
+        return $r1;
+    }
+
+    private void ah()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.support.v4.app.ac $r1;
+        java.lang.String $r2;
+        android.content.SharedPreferences $r3;
+        java.util.Date $r4;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String f>;
+
+        $r3 = virtualinvoke $r1.<android.support.v4.app.ac: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r2, 0);
+
+        $r2 = interfaceinvoke $r3.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("unlockedGeofenceId", "");
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String ao> = $r2;
+
+        $r4 = new java.util.Date;
+
+        $l0 = interfaceinvoke $r3.<android.content.SharedPreferences: long getLong(java.lang.String,long)>("unlockedGeofenceDate", 0L);
+
+        specialinvoke $r4.<java.util.Date: void <init>(long)>($l0);
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.Date ap> = $r4;
+
+        return;
+    }
+
+    private void ai()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.support.v4.app.ac $r1;
+        java.lang.String $r2;
+        android.content.SharedPreferences $r3;
+        android.content.SharedPreferences$Editor $r4;
+        java.util.Date $r5;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String f>;
+
+        $r3 = virtualinvoke $r1.<android.support.v4.app.ac: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r2, 0);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String ao>;
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("unlockedGeofenceId", $r2);
+
+        $r5 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.Date ap>;
+
+        $l0 = virtualinvoke $r5.<java.util.Date: long getTime()>();
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("unlockedGeofenceDate", $l0);
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+    }
+
+    private void aj()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int $i0, $i1;
+        java.lang.String $r1;
+        android.support.v4.app.ac $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String an>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String an>;
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String an>;
+
+        staticinvoke <com.seattleclouds.App: void a(java.lang.String,android.support.v4.app.Fragment)>($r1, $r0);
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void h(boolean)>(0);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int warning>;
+
+        $i1 = <com.seattleclouds.l: int location_lock_locked_message>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r2, $i0, $i1);
+
+        return;
+    }
+
+    private void ak()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.concurrent.ScheduledThreadPoolExecutor $r1;
+        com.seattleclouds.modules.locationlock.f $r2;
+        java.util.concurrent.TimeUnit $r3;
+        java.util.concurrent.ScheduledFuture $r4;
+        int $i0;
+        long $l1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void al()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledThreadPoolExecutor as>;
+
+        $r2 = new com.seattleclouds.modules.locationlock.f;
+
+        specialinvoke $r2.<com.seattleclouds.modules.locationlock.f: void <init>(com.seattleclouds.modules.locationlock.c)>($r0);
+
+        $i0 = $r0.<com.seattleclouds.modules.locationlock.c: int ak>;
+
+        if $i0 <= 0 goto label2;
+
+        $i0 = $r0.<com.seattleclouds.modules.locationlock.c: int ak>;
+
+        $l1 = (long) $i0;
+
+     label1:
+        $r3 = <java.util.concurrent.TimeUnit: java.util.concurrent.TimeUnit SECONDS>;
+
+        $r4 = virtualinvoke $r1.<java.util.concurrent.ScheduledThreadPoolExecutor: java.util.concurrent.ScheduledFuture schedule(java.lang.Runnable,long,java.util.concurrent.TimeUnit)>($r2, $l1, $r3);
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledFuture at> = $r4;
+
+        return;
+
+     label2:
+        $l1 = 10L;
+
+        goto label1;
+    }
+
+    private void al()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.concurrent.ScheduledFuture $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledFuture at>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledFuture at>;
+
+        interfaceinvoke $r1.<java.util.concurrent.ScheduledFuture: boolean cancel(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledFuture at> = null;
+
+     label1:
+        return;
+    }
+
+    private void am()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean aq>;
+
+        if $z0 == 0 goto label1;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean aq> = 0;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ab()>();
+
+     label1:
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean ar>;
+
+        if $z0 == 0 goto label2;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void h(boolean)>(0);
+
+     label2:
+        return;
+    }
+
+    private boolean an()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int $i0;
+        android.support.v4.app.ac $r1;
+        boolean $z0;
+        int[] $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <android.support.v4.content.c: int a(android.content.Context,java.lang.String)>($r1, "android.permission.ACCESS_FINE_LOCATION");
+
+        if $i0 != 0 goto label2;
+
+        $z0 = 1;
+
+     label1:
+        if $z0 != 0 goto label3;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean au> = 1;
+
+        $r2 = newarray (int)[2];
+
+        $i0 = <com.seattleclouds.l: int location_lock_permission_rationale>;
+
+        $r2[0] = $i0;
+
+        $i0 = <com.seattleclouds.l: int location_lock_permission_required_toast>;
+
+        $r2[1] = $i0;
+
+        staticinvoke <com.seattleclouds.util.w: void a(android.support.v4.app.Fragment,int,java.lang.String,int[])>($r0, 102, "android.permission.ACCESS_FINE_LOCATION", $r2);
+
+        return 1;
+
+     label2:
+        $z0 = 0;
+
+        goto label1;
+
+     label3:
+        return 0;
+    }
+
+    static int b(com.seattleclouds.modules.locationlock.c, int)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: int ak> = $i0;
+
+        return $i0;
+    }
+
+    static java.lang.String b(com.seattleclouds.modules.locationlock.c, java.lang.String)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String an> = $r1;
+
+        return $r1;
+    }
+
+    private void b(com.seattleclouds.location.geofencing.k)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        com.seattleclouds.location.geofencing.k $r1;
+        android.support.v4.app.ac $r2;
+        java.lang.String $r3, $r4;
+        boolean $z0;
+        java.util.Map $r5;
+        java.lang.Object $r6;
+        int $i0, $i3;
+        com.seattleclouds.FragmentInfo $r7;
+        long $l1, $l2;
+        java.util.Date $r8;
+        android.content.Intent $r9;
+        android.os.Bundle $r10;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: com.seattleclouds.location.geofencing.k;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $r3 = "page";
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.location.geofencing.k: java.lang.String h()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label4;
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.location.geofencing.k: java.util.Map i()>();
+
+        $r6 = interfaceinvoke $r5.<java.util.Map: java.lang.Object get(java.lang.Object)>("pageId");
+
+        if $r6 == null goto label4;
+
+        $z0 = $r6 instanceof java.lang.String;
+
+        if $z0 == 0 goto label4;
+
+        $r3 = (java.lang.String) $r6;
+
+        $r4 = virtualinvoke $r3.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r4.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label4;
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean al>;
+
+        if $z0 != 0 goto label2;
+
+        staticinvoke <com.seattleclouds.App: void a(java.lang.String,android.support.v4.app.Fragment)>($r3, $r0);
+
+        return;
+
+     label2:
+        $r3 = staticinvoke <com.seattleclouds.App: java.lang.String h(java.lang.String)>($r3);
+
+        $r7 = staticinvoke <com.seattleclouds.App: com.seattleclouds.FragmentInfo a(java.lang.String,android.content.Context)>($r3, $r2);
+
+        if $r7 == null goto label4;
+
+        $i0 = $r0.<com.seattleclouds.modules.locationlock.c: int am>;
+
+        $l1 = (long) $i0;
+
+        $l1 = $l1 * 60L;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: boolean a(com.seattleclouds.location.geofencing.k)>($r1);
+
+        if $z0 == 0 goto label3;
+
+        $r8 = virtualinvoke $r1.<com.seattleclouds.location.geofencing.k: java.util.Date g()>();
+
+        $l1 = virtualinvoke $r8.<java.util.Date: long getTime()>();
+
+        $l2 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $l1 = $l1 - $l2;
+
+        $l1 = $l1 / 1000L;
+
+     label3:
+        $r9 = new android.content.Intent;
+
+        specialinvoke $r9.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r2, class "Lcom/seattleclouds/modules/locationlock/AutoFinishPageFragmentActivity;");
+
+        virtualinvoke $r9.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("ARG_PAGE_FRAGMENT_INFO", $r7);
+
+        $r10 = virtualinvoke $r7.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+        $r3 = virtualinvoke $r10.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_TRANSITION");
+
+        virtualinvoke $r9.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("PAGE_TRANSITION", $r3);
+
+        virtualinvoke $r9.<android.content.Intent: android.content.Intent putExtra(java.lang.String,long)>("ARG_FINISH_TIMEOUT", $l1);
+
+        virtualinvoke $r2.<android.app.Activity: void startActivity(android.content.Intent)>($r9);
+
+        return;
+
+     label4:
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void h(boolean)>(0);
+
+        $i0 = <com.seattleclouds.l: int error>;
+
+        $i3 = <com.seattleclouds.l: int location_lock_no_unlocked_page_configured>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r2, $i0, $i3);
+
+        return;
+    }
+
+    static boolean b(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        boolean z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean ar>;
+
+        return z0;
+    }
+
+    static boolean b(com.seattleclouds.modules.locationlock.c, boolean)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean au> = 0;
+
+        return 0;
+    }
+
+    static int c(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int $i0, $i1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $i0 = $r0.<com.seattleclouds.modules.locationlock.c: int i>;
+
+        $i1 = $i0 + 1;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: int i> = $i1;
+
+        return $i0;
+    }
+
+    private void c(java.lang.String)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ae()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void af()>();
+
+        return;
+    }
+
+    static android.location.Location d(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.location.Location r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        r1 = $r0.<com.seattleclouds.modules.locationlock.c: android.location.Location h>;
+
+        return r1;
+    }
+
+    static int e(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        i0 = $r0.<com.seattleclouds.modules.locationlock.c: int ak>;
+
+        return i0;
+    }
+
+    static float f(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        float f0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        f0 = $r0.<com.seattleclouds.modules.locationlock.c: float ai>;
+
+        return f0;
+    }
+
+    static void g(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void al()>();
+
+        return;
+    }
+
+    static java.lang.String h(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String e>;
+
+        return r1;
+    }
+
+    private void h(boolean)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        boolean $z0;
+        android.view.View $r1;
+        byte $b0, $b1;
+        android.widget.Button $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $z0 := @parameter0: boolean;
+
+        $b0 = 8;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: android.view.View a>;
+
+        if $z0 == 0 goto label3;
+
+        $b1 = 0;
+
+     label1:
+        virtualinvoke $r1.<android.view.View: void setVisibility(int)>($b1);
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.Button b>;
+
+        if $z0 == 0 goto label4;
+
+     label2:
+        virtualinvoke $r2.<android.widget.Button: void setVisibility(int)>($b0);
+
+        return;
+
+     label3:
+        $b1 = 8;
+
+        goto label1;
+
+     label4:
+        $b0 = 0;
+
+        goto label2;
+    }
+
+    static void i(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ah()>();
+
+        return;
+    }
+
+    static void j(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ac()>();
+
+        return;
+    }
+
+    public void D()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.r: void D()>();
+
+        return;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        java.util.concurrent.ScheduledThreadPoolExecutor $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.r: void F()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledThreadPoolExecutor as>;
+
+        virtualinvoke $r1.<java.util.concurrent.ScheduledThreadPoolExecutor: void shutdown()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void ae()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3, $r10;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.widget.Button $r6;
+        com.seattleclouds.modules.locationlock.d $r7;
+        android.widget.TextView $r8;
+        android.widget.ProgressBar $r9;
+        java.lang.String $r11, $r13;
+        java.lang.StringBuilder $r12;
+        boolean $z0;
+        android.support.v4.app.ac $r14;
+        android.support.v4.app.aj $r15;
+        android.support.v4.app.Fragment $r16;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int fragment_location_lock>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int unlock_button>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.Button) $r5;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: android.widget.Button b> = $r6;
+
+        $r6 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.Button b>;
+
+        $r7 = new com.seattleclouds.modules.locationlock.d;
+
+        specialinvoke $r7.<com.seattleclouds.modules.locationlock.d: void <init>(com.seattleclouds.modules.locationlock.c)>($r0);
+
+        virtualinvoke $r6.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r7);
+
+        $i0 = <com.seattleclouds.h: int locating_container>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.locationlock.c: android.view.View a> = $r5;
+
+        $i0 = <com.seattleclouds.h: int locating_label>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: android.widget.TextView c> = $r8;
+
+        $i0 = <com.seattleclouds.h: int progress_bar_location_lock>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.ProgressBar) $r5;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: android.widget.ProgressBar d> = $r9;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean au> = 0;
+
+        $r10 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.os.Bundle j()>();
+
+        if $r10 == null goto label3;
+
+        $r11 = virtualinvoke $r10.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_ID");
+
+        if $r11 == null goto label1;
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $i0 = virtualinvoke $r11.<java.lang.String: int lastIndexOf(java.lang.String)>(".");
+
+        $r11 = virtualinvoke $r11.<java.lang.String: java.lang.String substring(int,int)>(0, $i0);
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".json");
+
+        $r11 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String e> = $r11;
+
+     label1:
+        $r11 = virtualinvoke $r10.<android.os.Bundle: java.lang.String getString(java.lang.String)>("ARG_STORE_ID");
+
+        if $r11 == null goto label2;
+
+        $r13 = virtualinvoke $r11.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r13.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label2;
+
+        $r0.<com.seattleclouds.modules.locationlock.c: java.lang.String f> = $r11;
+
+     label2:
+        $r10 = virtualinvoke $r10.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r4, $r10);
+
+        $i0 = <com.seattleclouds.h: int locating_label>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r5;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r8, $r10);
+
+     label3:
+        if $r3 == null goto label5;
+
+        $z0 = virtualinvoke $r3.<android.os.Bundle: boolean getBoolean(java.lang.String)>("keyRotation");
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean au> = $z0;
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean au>;
+
+        if $z0 != 0 goto label4;
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean au>;
+
+        if $z0 != 0 goto label5;
+
+        $r14 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $r15 = virtualinvoke $r14.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        $r16 = virtualinvoke $r15.<android.support.v4.app.aj: android.support.v4.app.Fragment a(java.lang.String)>("permissionDialog");
+
+        if $r16 == null goto label5;
+
+     label4:
+        $r8 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.TextView c>;
+
+        $i0 = <com.seattleclouds.l: int location_lock_permission_rationale_info>;
+
+        virtualinvoke $r8.<android.widget.TextView: void setText(int)>($i0);
+
+        $r9 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.ProgressBar d>;
+
+        virtualinvoke $r9.<android.widget.ProgressBar: void setVisibility(int)>(8);
+
+     label5:
+        return $r4;
+    }
+
+    public void a(int, java.lang.String[], int[])
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        int $i0;
+        java.lang.String[] $r1;
+        int[] $r2;
+        boolean $z0;
+        android.os.Handler $r3;
+        android.os.Looper $r4;
+        com.seattleclouds.modules.locationlock.h $r5;
+        android.support.v4.app.ac $r6;
+        android.widget.Toast $r7;
+        android.widget.TextView $r8;
+        android.widget.ProgressBar $r9;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.String[];
+
+        $r2 := @parameter2: int[];
+
+        lookupswitch($i0)
+        {
+            case 102: goto label2;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(java.lang.String[],int[],java.lang.String)>($r1, $r2, "android.permission.ACCESS_FINE_LOCATION");
+
+        if $z0 != 0 goto label3;
+
+        $r3 = new android.os.Handler;
+
+        $r4 = staticinvoke <android.os.Looper: android.os.Looper myLooper()>();
+
+        specialinvoke $r3.<android.os.Handler: void <init>(android.os.Looper)>($r4);
+
+        $r5 = new com.seattleclouds.modules.locationlock.h;
+
+        specialinvoke $r5.<com.seattleclouds.modules.locationlock.h: void <init>(com.seattleclouds.modules.locationlock.c)>($r0);
+
+        virtualinvoke $r3.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 400L);
+
+        return;
+
+     label3:
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int common_permission_granted>;
+
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r6, $i0, 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+        $r0.<com.seattleclouds.modules.locationlock.c: boolean au> = 0;
+
+        $r8 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.TextView c>;
+
+        $i0 = <com.seattleclouds.l: int location_lock_locating>;
+
+        virtualinvoke $r8.<android.widget.TextView: void setText(int)>($i0);
+
+        $r9 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.ProgressBar d>;
+
+        virtualinvoke $r9.<android.widget.ProgressBar: void setVisibility(int)>(0);
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void am()>();
+
+        return;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.os.Bundle $r1;
+        java.util.concurrent.ScheduledThreadPoolExecutor $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledThreadPoolExecutor as>;
+
+        virtualinvoke $r2.<java.util.concurrent.ScheduledThreadPoolExecutor: void setExecuteExistingDelayedTasksAfterShutdownPolicy(boolean)>(0);
+
+        return;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        boolean $z0;
+        android.support.v4.app.ac $r1;
+        android.support.v4.app.aj $r2;
+        android.support.v4.app.Fragment $r3;
+        android.widget.TextView $r4;
+        int $i0;
+        android.widget.ProgressBar $r5;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a_(boolean)>($z0);
+
+        if $z0 == 0 goto label3;
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a()>();
+
+        if $z0 == 0 goto label2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        $r2 = virtualinvoke $r1.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.Fragment a(java.lang.String)>("permissionDialog");
+
+        if $r3 != null goto label3;
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean au>;
+
+        if $z0 != 0 goto label3;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: boolean an()>();
+
+        if $z0 != 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void am()>();
+
+        return;
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.TextView c>;
+
+        $i0 = <com.seattleclouds.l: int location_lock_permission_rationale_info>;
+
+        virtualinvoke $r4.<android.widget.TextView: void setText(int)>($i0);
+
+        $r5 = $r0.<com.seattleclouds.modules.locationlock.c: android.widget.ProgressBar d>;
+
+        virtualinvoke $r5.<android.widget.ProgressBar: void setVisibility(int)>(8);
+
+        return;
+
+     label2:
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void am()>();
+
+     label3:
+        return;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        android.os.Bundle $r1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean au>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("keyRotation", $z0);
+
+        specialinvoke $r0.<com.seattleclouds.r: void e(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void f()
+    {
+        com.seattleclouds.modules.locationlock.c $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.c;
+
+        specialinvoke $r0.<com.seattleclouds.r: void f()>();
+
+        $z0 = $r0.<com.seattleclouds.modules.locationlock.c: boolean ar>;
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.c: void h(boolean)>(0);
+
+     label1:
+        return;
+    }
+}

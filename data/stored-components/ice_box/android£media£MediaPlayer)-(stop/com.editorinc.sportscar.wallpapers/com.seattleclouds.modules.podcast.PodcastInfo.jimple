@@ -1,0 +1,350 @@
+public class com.seattleclouds.modules.podcast.PodcastInfo extends java.lang.Object implements java.io.Serializable
+{
+    private static final long serialVersionUID;
+    public java.util.ArrayList categories;
+    public java.lang.String description;
+    public java.lang.String imageUrl;
+    public java.lang.String lasBuildDate;
+    public java.lang.String link;
+    private java.util.Date mLastBuildDate;
+    public java.lang.String title;
+    public java.lang.String url;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.podcast.PodcastInfo $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastInfo;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.ArrayList categories> = $r1;
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.podcast.PodcastInfo load(java.lang.String)
+    {
+        java.lang.String $r0;
+        java.io.ObjectInputStream $r1, $r3;
+        java.io.FileInputStream $r2;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.podcast.PodcastInfo $r5;
+        java.lang.Exception $r6, $r11;
+        java.lang.Throwable $r7, $r8, $r9, $r10;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r3 = null;
+
+        $r0 = staticinvoke <com.seattleclouds.modules.podcast.x: java.lang.String d(java.lang.String)>($r0);
+
+     label01:
+        $r2 = new java.io.FileInputStream;
+
+     label02:
+        specialinvoke $r2.<java.io.FileInputStream: void <init>(java.lang.String)>($r0);
+
+     label03:
+        $r1 = new java.io.ObjectInputStream;
+
+     label04:
+        specialinvoke $r1.<java.io.ObjectInputStream: void <init>(java.io.InputStream)>($r2);
+
+     label05:
+        $r4 = virtualinvoke $r1.<java.io.ObjectInputStream: java.lang.Object readObject()>();
+
+        $r5 = (com.seattleclouds.modules.podcast.PodcastInfo) $r4;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.podcast.PodcastInfo: void synchronize()>();
+
+     label06:
+        if $r1 == null goto label22;
+
+     label07:
+        virtualinvoke $r1.<java.io.ObjectInputStream: void close()>();
+
+     label08:
+        return $r5;
+
+     label09:
+        $r6 := @caughtexception;
+
+        $r1 = null;
+
+     label10:
+        if $r1 == null goto label12;
+
+     label11:
+        virtualinvoke $r1.<java.io.ObjectInputStream: void close()>();
+
+     label12:
+        return null;
+
+     label13:
+        $r7 := @caughtexception;
+
+     label14:
+        if $r3 == null goto label16;
+
+     label15:
+        virtualinvoke $r3.<java.io.ObjectInputStream: void close()>();
+
+     label16:
+        throw $r7;
+
+     label17:
+        $r8 := @caughtexception;
+
+        return $r5;
+
+     label18:
+        $r9 := @caughtexception;
+
+        goto label12;
+
+     label19:
+        $r10 := @caughtexception;
+
+        goto label16;
+
+     label20:
+        $r7 := @caughtexception;
+
+        $r3 = $r1;
+
+        goto label14;
+
+     label21:
+        $r11 := @caughtexception;
+
+        goto label10;
+
+     label22:
+        return $r5;
+
+        catch java.lang.Exception from label02 to label03 with label09;
+        catch java.lang.Exception from label04 to label05 with label09;
+        catch java.lang.Throwable from label01 to label05 with label13;
+        catch java.lang.Exception from label05 to label06 with label21;
+        catch java.lang.Throwable from label05 to label06 with label20;
+        catch java.io.IOException from label07 to label08 with label17;
+        catch java.io.IOException from label11 to label12 with label18;
+        catch java.io.IOException from label15 to label16 with label19;
+    }
+
+    public java.util.Date getLastBuildDate()
+    {
+        com.seattleclouds.modules.podcast.PodcastInfo $r0;
+        java.lang.String $r1;
+        int $i0;
+        java.util.Date $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastInfo;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.lang.String lasBuildDate>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.lang.String lasBuildDate>;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label2;
+
+     label1:
+        return null;
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.Date mLastBuildDate>;
+
+        if $r2 != null goto label3;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.lang.String lasBuildDate>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.x: java.util.Date a(java.lang.String)>($r1);
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.Date mLastBuildDate> = $r2;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.Date mLastBuildDate>;
+
+        return $r2;
+    }
+
+    public void save()
+    {
+        com.seattleclouds.modules.podcast.PodcastInfo $r0;
+        java.io.FileOutputStream $r1;
+        java.lang.String $r2;
+        java.io.ObjectOutputStream $r3, $r4;
+        java.lang.Exception $r5, $r11;
+        java.lang.Throwable $r6, $r7, $r8, $r9, $r10;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastInfo;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.lang.String url>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.x: java.lang.String d(java.lang.String)>($r2);
+
+        $r3 = null;
+
+     label01:
+        $r1 = new java.io.FileOutputStream;
+
+     label02:
+        specialinvoke $r1.<java.io.FileOutputStream: void <init>(java.lang.String)>($r2);
+
+     label03:
+        $r4 = new java.io.ObjectOutputStream;
+
+     label04:
+        specialinvoke $r4.<java.io.ObjectOutputStream: void <init>(java.io.OutputStream)>($r1);
+
+     label05:
+        virtualinvoke $r4.<java.io.ObjectOutputStream: void writeObject(java.lang.Object)>($r0);
+
+     label06:
+        if $r4 == null goto label22;
+
+     label07:
+        virtualinvoke $r4.<java.io.ObjectOutputStream: void close()>();
+
+     label08:
+        return;
+
+     label09:
+        $r5 := @caughtexception;
+
+        $r4 = null;
+
+     label10:
+        if $r4 == null goto label22;
+
+     label11:
+        virtualinvoke $r4.<java.io.ObjectOutputStream: void close()>();
+
+     label12:
+        return;
+
+     label13:
+        $r6 := @caughtexception;
+
+        return;
+
+     label14:
+        $r7 := @caughtexception;
+
+     label15:
+        if $r3 == null goto label17;
+
+     label16:
+        virtualinvoke $r3.<java.io.ObjectOutputStream: void close()>();
+
+     label17:
+        throw $r7;
+
+     label18:
+        $r8 := @caughtexception;
+
+        return;
+
+     label19:
+        $r9 := @caughtexception;
+
+        goto label17;
+
+     label20:
+        $r10 := @caughtexception;
+
+        $r3 = $r4;
+
+        $r7 = $r10;
+
+        goto label15;
+
+     label21:
+        $r11 := @caughtexception;
+
+        goto label10;
+
+     label22:
+        return;
+
+        catch java.lang.Exception from label02 to label03 with label09;
+        catch java.lang.Exception from label04 to label05 with label09;
+        catch java.lang.Throwable from label01 to label05 with label14;
+        catch java.lang.Exception from label05 to label06 with label21;
+        catch java.lang.Throwable from label05 to label06 with label20;
+        catch java.io.IOException from label07 to label08 with label18;
+        catch java.io.IOException from label11 to label12 with label13;
+        catch java.io.IOException from label16 to label17 with label19;
+    }
+
+    public void synchronize()
+    {
+        com.seattleclouds.modules.podcast.PodcastInfo $r0;
+        java.util.ArrayList $r1, $r4;
+        java.lang.String $r2;
+        com.seattleclouds.modules.podcast.w $r3;
+        java.util.Iterator $r5, $r8;
+        boolean $z0;
+        java.lang.Object $r6;
+        com.seattleclouds.modules.podcast.PodcastCategory $r7;
+        com.seattleclouds.modules.podcast.PodcastItem $r9;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastInfo;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.lang.String url>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.w: com.seattleclouds.modules.podcast.w a(java.lang.String)>($r2);
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.ArrayList categories>;
+
+        $r5 = virtualinvoke $r4.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r5.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label3;
+
+        $r6 = interfaceinvoke $r5.<java.util.Iterator: java.lang.Object next()>();
+
+        $r7 = (com.seattleclouds.modules.podcast.PodcastCategory) $r6;
+
+        $r4 = $r7.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.ArrayList items>;
+
+        $r8 = virtualinvoke $r4.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label2:
+        $z0 = interfaceinvoke $r8.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label1;
+
+        $r6 = interfaceinvoke $r8.<java.util.Iterator: java.lang.Object next()>();
+
+        $r9 = (com.seattleclouds.modules.podcast.PodcastItem) $r6;
+
+        $z0 = virtualinvoke $r9.<com.seattleclouds.modules.podcast.PodcastItem: boolean isDownloaded()>();
+
+        if $z0 == 0 goto label2;
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r9);
+
+        goto label2;
+
+     label3:
+        virtualinvoke $r3.<com.seattleclouds.modules.podcast.w: void a(java.util.List)>($r1);
+
+        return;
+    }
+}

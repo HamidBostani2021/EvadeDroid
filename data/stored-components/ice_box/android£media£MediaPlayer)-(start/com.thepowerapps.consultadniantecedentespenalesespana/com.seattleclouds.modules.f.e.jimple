@@ -1,0 +1,67 @@
+class com.seattleclouds.modules.f.e extends java.lang.Object implements android.widget.AdapterView$OnItemLongClickListener
+{
+    final com.seattleclouds.modules.f.c a;
+
+    void <init>(com.seattleclouds.modules.f.c)
+    {
+        com.seattleclouds.modules.f.e $r0;
+        com.seattleclouds.modules.f.c $r1;
+
+        $r0 := @this: com.seattleclouds.modules.f.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.f.c;
+
+        $r0.<com.seattleclouds.modules.f.e: com.seattleclouds.modules.f.c a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public boolean onItemLongClick(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.f.e $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0, $i2;
+        long $l1;
+        android.support.v7.a.u $r3;
+        com.seattleclouds.modules.f.c $r4;
+        android.support.v4.app.ac $r5;
+        com.seattleclouds.modules.f.f $r6;
+
+        $r0 := @this: com.seattleclouds.modules.f.e;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = new android.support.v7.a.u;
+
+        $r4 = $r0.<com.seattleclouds.modules.f.e: com.seattleclouds.modules.f.c a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.f.c: android.support.v4.app.ac n()>();
+
+        specialinvoke $r3.<android.support.v7.a.u: void <init>(android.content.Context)>($r5);
+
+        $i2 = <com.seattleclouds.l: int favorites_remove_confirm_dialog>;
+
+        $r3 = virtualinvoke $r3.<android.support.v7.a.u: android.support.v7.a.u b(int)>($i2);
+
+        $r6 = new com.seattleclouds.modules.f.f;
+
+        specialinvoke $r6.<com.seattleclouds.modules.f.f: void <init>(com.seattleclouds.modules.f.e,int)>($r0, $i0);
+
+        $r3 = virtualinvoke $r3.<android.support.v7.a.u: android.support.v7.a.u a(int,android.content.DialogInterface$OnClickListener)>(17039379, $r6);
+
+        $r3 = virtualinvoke $r3.<android.support.v7.a.u: android.support.v7.a.u b(int,android.content.DialogInterface$OnClickListener)>(17039369, null);
+
+        virtualinvoke $r3.<android.support.v7.a.u: android.support.v7.a.t c()>();
+
+        return 1;
+    }
+}

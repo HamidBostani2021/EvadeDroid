@@ -1,0 +1,61 @@
+class com.seattleclouds.previewer.appmart.order.c.ai extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final int[] a;
+    final com.seattleclouds.previewer.appmart.order.c.af b;
+
+    void <init>(com.seattleclouds.previewer.appmart.order.c.af, int[])
+    {
+        com.seattleclouds.previewer.appmart.order.c.ai $r0;
+        com.seattleclouds.previewer.appmart.order.c.af $r1;
+        int[] $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ai;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.appmart.order.c.af;
+
+        $r2 := @parameter1: int[];
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ai: com.seattleclouds.previewer.appmart.order.c.af b> = $r1;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ai: int[] a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ai $r0;
+        android.view.View $r1;
+        com.seattleclouds.previewer.appmart.order.c.af $r2, $r3, $r5;
+        int $i0, $i1;
+        int[] $r4;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ai;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ai: com.seattleclouds.previewer.appmart.order.c.af b>;
+
+        $i0 = <com.seattleclouds.l: int new_order_design_dialog_title_primary>;
+
+        $r3 = $r0.<com.seattleclouds.previewer.appmart.order.c.ai: com.seattleclouds.previewer.appmart.order.c.af b>;
+
+        $r4 = $r0.<com.seattleclouds.previewer.appmart.order.c.ai: int[] a>;
+
+        $r5 = $r0.<com.seattleclouds.previewer.appmart.order.c.ai: com.seattleclouds.previewer.appmart.order.c.af b>;
+
+        $i1 = staticinvoke <com.seattleclouds.previewer.appmart.order.c.af: int c(com.seattleclouds.previewer.appmart.order.c.af)>($r5);
+
+        $r4 = staticinvoke <com.seattleclouds.previewer.appmart.order.c.af: int[] a(com.seattleclouds.previewer.appmart.order.c.af,int[],int)>($r3, $r4, $i1);
+
+        $r3 = $r0.<com.seattleclouds.previewer.appmart.order.c.ai: com.seattleclouds.previewer.appmart.order.c.af b>;
+
+        $i1 = staticinvoke <com.seattleclouds.previewer.appmart.order.c.af: int c(com.seattleclouds.previewer.appmart.order.c.af)>($r3);
+
+        staticinvoke <com.seattleclouds.previewer.appmart.order.c.af: void a(com.seattleclouds.previewer.appmart.order.c.af,int,int[],int,int,int,java.lang.String)>($r2, $i0, $r4, $i1, 4, 103, "colorPickerPalettePrimary");
+
+        return;
+    }
+}

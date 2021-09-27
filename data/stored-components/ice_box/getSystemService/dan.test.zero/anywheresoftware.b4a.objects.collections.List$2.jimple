@@ -1,0 +1,126 @@
+class anywheresoftware.b4a.objects.collections.List$2 extends java.lang.Object implements java.util.Comparator
+{
+    final anywheresoftware.b4a.objects.collections.List this$0;
+    private final boolean val$Ascending;
+    private final boolean val$caseInsensitive;
+    private final java.lang.reflect.Field val$f;
+
+    void <init>(anywheresoftware.b4a.objects.collections.List, boolean, java.lang.reflect.Field, boolean)
+    {
+        anywheresoftware.b4a.objects.collections.List$2 $r0;
+        anywheresoftware.b4a.objects.collections.List $r1;
+        boolean $z0, $z1;
+        java.lang.reflect.Field $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List$2;
+
+        $r1 := @parameter0: anywheresoftware.b4a.objects.collections.List;
+
+        $z0 := @parameter1: boolean;
+
+        $r2 := @parameter2: java.lang.reflect.Field;
+
+        $z1 := @parameter3: boolean;
+
+        $r0.<anywheresoftware.b4a.objects.collections.List$2: anywheresoftware.b4a.objects.collections.List this$0> = $r1;
+
+        $r0.<anywheresoftware.b4a.objects.collections.List$2: boolean val$caseInsensitive> = $z0;
+
+        $r0.<anywheresoftware.b4a.objects.collections.List$2: java.lang.reflect.Field val$f> = $r2;
+
+        $r0.<anywheresoftware.b4a.objects.collections.List$2: boolean val$Ascending> = $z1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public int compare(java.lang.Object, java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.List$2 $r0;
+        java.lang.Object $r1, $r2;
+        java.lang.Exception $r3;
+        boolean $z0;
+        java.lang.reflect.Field $r4;
+        java.lang.String $r5, $r6;
+        int $i0;
+        byte $b1;
+        java.lang.Comparable $r7;
+        java.lang.RuntimeException $r8;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List$2;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 := @parameter1: java.lang.Object;
+
+     label01:
+        $z0 = $r0.<anywheresoftware.b4a.objects.collections.List$2: boolean val$caseInsensitive>;
+
+     label02:
+        if $z0 == 0 goto label07;
+
+     label03:
+        $r4 = $r0.<anywheresoftware.b4a.objects.collections.List$2: java.lang.reflect.Field val$f>;
+
+        $r1 = virtualinvoke $r4.<java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r5 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        $r4 = $r0.<anywheresoftware.b4a.objects.collections.List$2: java.lang.reflect.Field val$f>;
+
+        $r1 = virtualinvoke $r4.<java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>($r2);
+
+        $r6 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        $i0 = virtualinvoke $r5.<java.lang.String: int compareToIgnoreCase(java.lang.String)>($r6);
+
+     label04:
+        $z0 = $r0.<anywheresoftware.b4a.objects.collections.List$2: boolean val$Ascending>;
+
+     label05:
+        if $z0 == 0 goto label09;
+
+        $b1 = 1;
+
+     label06:
+        $i0 = $b1 * $i0;
+
+        return $i0;
+
+     label07:
+        $r4 = $r0.<anywheresoftware.b4a.objects.collections.List$2: java.lang.reflect.Field val$f>;
+
+        $r1 = virtualinvoke $r4.<java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r7 = (java.lang.Comparable) $r1;
+
+        $r4 = $r0.<anywheresoftware.b4a.objects.collections.List$2: java.lang.reflect.Field val$f>;
+
+        $r1 = virtualinvoke $r4.<java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>($r2);
+
+        $i0 = interfaceinvoke $r7.<java.lang.Comparable: int compareTo(java.lang.Object)>($r1);
+
+     label08:
+        goto label04;
+
+     label09:
+        $b1 = -1;
+
+        goto label06;
+
+     label10:
+        $r3 := @caughtexception;
+
+        $r8 = new java.lang.RuntimeException;
+
+        specialinvoke $r8.<java.lang.RuntimeException: void <init>(java.lang.Throwable)>($r3);
+
+        throw $r8;
+
+        catch java.lang.Exception from label01 to label02 with label10;
+        catch java.lang.Exception from label03 to label04 with label10;
+        catch java.lang.Exception from label04 to label05 with label10;
+        catch java.lang.Exception from label07 to label08 with label10;
+    }
+}

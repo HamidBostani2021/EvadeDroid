@@ -1,0 +1,134 @@
+class com.flashlightnew.byzm.net.MainActivity$LooperThread$1 extends java.util.TimerTask
+{
+    final com.flashlightnew.byzm.net.MainActivity$LooperThread this$1;
+
+    void <init>(com.flashlightnew.byzm.net.MainActivity$LooperThread)
+    {
+        com.flashlightnew.byzm.net.MainActivity$LooperThread$1 $r0;
+        com.flashlightnew.byzm.net.MainActivity$LooperThread $r1;
+
+        $r0 := @this: com.flashlightnew.byzm.net.MainActivity$LooperThread$1;
+
+        $r1 := @parameter0: com.flashlightnew.byzm.net.MainActivity$LooperThread;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1> = $r1;
+
+        specialinvoke $r0.<java.util.TimerTask: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.flashlightnew.byzm.net.MainActivity$LooperThread$1 $r0;
+        java.io.PrintStream $r1;
+        com.flashlightnew.byzm.net.MainActivity$LooperThread $r2;
+        com.flashlightnew.byzm.net.MainActivity $r3, $r5;
+        android.hardware.Camera $r4;
+        android.hardware.Camera$Parameters $r6;
+        java.lang.Exception $r7, $r8;
+
+        $r0 := @this: com.flashlightnew.byzm.net.MainActivity$LooperThread$1;
+
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+     label1:
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("on...");
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r4 = staticinvoke <android.hardware.Camera: android.hardware.Camera open()>();
+
+        $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera> = $r4;
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r5 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r4 = $r5.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera>;
+
+        $r6 = virtualinvoke $r4.<android.hardware.Camera: android.hardware.Camera$Parameters getParameters()>();
+
+        $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters> = $r6;
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters>;
+
+        virtualinvoke $r6.<android.hardware.Camera$Parameters: void setFlashMode(java.lang.String)>("torch");
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r4 = $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera>;
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters>;
+
+        virtualinvoke $r4.<android.hardware.Camera: void setParameters(android.hardware.Camera$Parameters)>($r6);
+
+     label2:
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+     label3:
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("off...");
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters>;
+
+        virtualinvoke $r6.<android.hardware.Camera$Parameters: void setFlashMode(java.lang.String)>("off");
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r4 = $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera>;
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters>;
+
+        virtualinvoke $r4.<android.hardware.Camera: void setParameters(android.hardware.Camera$Parameters)>($r6);
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity$LooperThread$1: com.flashlightnew.byzm.net.MainActivity$LooperThread this$1>;
+
+        $r3 = staticinvoke <com.flashlightnew.byzm.net.MainActivity$LooperThread: com.flashlightnew.byzm.net.MainActivity access$0(com.flashlightnew.byzm.net.MainActivity$LooperThread)>($r2);
+
+        $r4 = $r3.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera>;
+
+        virtualinvoke $r4.<android.hardware.Camera: void release()>();
+
+     label4:
+        return;
+
+     label5:
+        $r7 := @caughtexception;
+
+        return;
+
+     label6:
+        $r8 := @caughtexception;
+
+        goto label2;
+
+        catch java.lang.Exception from label1 to label2 with label6;
+        catch java.lang.Exception from label3 to label4 with label5;
+    }
+}

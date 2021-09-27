@@ -1,0 +1,59 @@
+class com.seattleclouds.modules.savephoto.b extends java.lang.Object implements com.seattleclouds.util.bi
+{
+    final com.seattleclouds.modules.savephoto.SavePhotoActivity a;
+
+    void <init>(com.seattleclouds.modules.savephoto.SavePhotoActivity)
+    {
+        com.seattleclouds.modules.savephoto.b $r0;
+        com.seattleclouds.modules.savephoto.SavePhotoActivity $r1;
+
+        $r0 := @this: com.seattleclouds.modules.savephoto.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.savephoto.SavePhotoActivity;
+
+        $r0.<com.seattleclouds.modules.savephoto.b: com.seattleclouds.modules.savephoto.SavePhotoActivity a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(java.lang.Object)
+    {
+        com.seattleclouds.modules.savephoto.b $r0;
+        java.lang.Object $r1;
+        com.seattleclouds.modules.savephoto.SavePhotoActivity $r2, $r4;
+        java.lang.String $r3;
+        android.widget.EditText $r5;
+        android.text.Editable $r6;
+
+        $r0 := @this: com.seattleclouds.modules.savephoto.b;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        if $r1 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.savephoto.b: com.seattleclouds.modules.savephoto.SavePhotoActivity a>;
+
+        $r3 = (java.lang.String) $r1;
+
+        staticinvoke <com.seattleclouds.modules.savephoto.SavePhotoActivity: void b(com.seattleclouds.modules.savephoto.SavePhotoActivity,java.lang.String)>($r2, $r3);
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.savephoto.b: com.seattleclouds.modules.savephoto.SavePhotoActivity a>;
+
+        $r4 = $r0.<com.seattleclouds.modules.savephoto.b: com.seattleclouds.modules.savephoto.SavePhotoActivity a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.savephoto.SavePhotoActivity: android.widget.EditText f(com.seattleclouds.modules.savephoto.SavePhotoActivity)>($r4);
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r3 = virtualinvoke $r6.<java.lang.Object: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.modules.savephoto.SavePhotoActivity: void b(com.seattleclouds.modules.savephoto.SavePhotoActivity,java.lang.String)>($r2, $r3);
+
+        return;
+    }
+}

@@ -1,0 +1,318 @@
+public class com.AutoCamping.MapActivity extends android.app.Activity implements android.webkit.GeolocationPermissions$Callback
+{
+    private static final int FILECHOOSER_RESULTCODE;
+    static final java.lang.String TAG;
+    android.app.Activity activity;
+    private android.webkit.ValueCallback mUploadMessage;
+    android.app.ProgressDialog pd;
+    android.widget.FrameLayout show_movie;
+    android.webkit.WebView webview;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.AutoCamping.MapActivity $r0;
+
+        $r0 := @this: com.AutoCamping.MapActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r0.<com.AutoCamping.MapActivity: android.app.ProgressDialog pd> = null;
+
+        return;
+    }
+
+    public void invoke(java.lang.String, boolean, boolean)
+    {
+        com.AutoCamping.MapActivity $r0;
+        java.lang.String $r1;
+        boolean $z0, $z1;
+
+        $r0 := @this: com.AutoCamping.MapActivity;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 := @parameter2: boolean;
+
+        return;
+    }
+
+    protected void onActivityResult(int, int, android.content.Intent)
+    {
+        com.AutoCamping.MapActivity $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        android.net.Uri $r2;
+        android.webkit.ValueCallback $r3;
+
+        $r0 := @this: com.AutoCamping.MapActivity;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        if $i0 != 1 goto label5;
+
+        $r3 = $r0.<com.AutoCamping.MapActivity: android.webkit.ValueCallback mUploadMessage>;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        if $r1 == null goto label2;
+
+        if $i1 == -1 goto label4;
+
+     label2:
+        $r2 = null;
+
+     label3:
+        $r3 = $r0.<com.AutoCamping.MapActivity: android.webkit.ValueCallback mUploadMessage>;
+
+        interfaceinvoke $r3.<android.webkit.ValueCallback: void onReceiveValue(java.lang.Object)>($r2);
+
+        $r0.<com.AutoCamping.MapActivity: android.webkit.ValueCallback mUploadMessage> = null;
+
+        return;
+
+     label4:
+        $r2 = virtualinvoke $r1.<android.content.Intent: android.net.Uri getData()>();
+
+        goto label3;
+
+     label5:
+        return;
+    }
+
+    public void onBackPressed()
+    {
+        com.AutoCamping.MapActivity $r0;
+
+        $r0 := @this: com.AutoCamping.MapActivity;
+
+        virtualinvoke $r0.<com.AutoCamping.MapActivity: void finish()>();
+
+        return;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        com.AutoCamping.MapActivity $r0;
+        android.os.Bundle $r1;
+        com.AutoCamping.MapActivity$MyWebChromeClient $r2;
+        android.content.Intent $r3;
+        java.lang.String $r4;
+        android.view.View $r5;
+        android.webkit.WebView $r6, $r12;
+        android.webkit.WebSettings $r7;
+        android.webkit.WebSettings$PluginState $r8;
+        android.webkit.WebSettings$RenderPriority $r9;
+        com.AutoCamping.MapActivity$JavaScriptInterface $r10;
+        android.content.Context $r11;
+        android.app.Activity $r13;
+        com.AutoCamping.MapActivity$AutoCampingViewClient $r14;
+        com.AutoCamping.MapActivity$BackPressCloseHandler $r15;
+
+        $r0 := @this: com.AutoCamping.MapActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.AutoCamping.MapActivity: boolean requestWindowFeature(int)>(1);
+
+        virtualinvoke $r0.<com.AutoCamping.MapActivity: void setContentView(int)>(2130903040);
+
+        $r3 = virtualinvoke $r0.<com.AutoCamping.MapActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("URL");
+
+        $r5 = virtualinvoke $r0.<com.AutoCamping.MapActivity: android.view.View findViewById(int)>(2131099648);
+
+        $r6 = (android.webkit.WebView) $r5;
+
+        $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview> = $r6;
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setJavaScriptEnabled(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setJavaScriptCanOpenWindowsAutomatically(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setGeolocationEnabled(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setSupportZoom(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setBlockNetworkImage(boolean)>(0);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setLoadsImagesAutomatically(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setUseWideViewPort(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        $r8 = <android.webkit.WebSettings$PluginState: android.webkit.WebSettings$PluginState ON>;
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setPluginState(android.webkit.WebSettings$PluginState)>($r8);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void clearCache(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setCacheMode(int)>(2);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        $r9 = <android.webkit.WebSettings$RenderPriority: android.webkit.WebSettings$RenderPriority HIGH>;
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setRenderPriority(android.webkit.WebSettings$RenderPriority)>($r9);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setSupportMultipleWindows(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void setHorizontalScrollBarEnabled(boolean)>(0);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void setVerticalScrollBarEnabled(boolean)>(0);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r10 = new com.AutoCamping.MapActivity$JavaScriptInterface;
+
+        $r11 = virtualinvoke $r0.<com.AutoCamping.MapActivity: android.content.Context getApplicationContext()>();
+
+        $r12 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        specialinvoke $r10.<com.AutoCamping.MapActivity$JavaScriptInterface: void <init>(com.AutoCamping.MapActivity,android.content.Context,android.webkit.WebView,java.lang.String)>($r0, $r11, $r12, $r4);
+
+        virtualinvoke $r6.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r10, "margoScript");
+
+        $r2 = new com.AutoCamping.MapActivity$MyWebChromeClient;
+
+        $r13 = $r0.<com.AutoCamping.MapActivity: android.app.Activity activity>;
+
+        specialinvoke $r2.<com.AutoCamping.MapActivity$MyWebChromeClient: void <init>(com.AutoCamping.MapActivity,android.app.Activity)>($r0, $r13);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void setWebChromeClient(android.webkit.WebChromeClient)>($r2);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        $r14 = new com.AutoCamping.MapActivity$AutoCampingViewClient;
+
+        specialinvoke $r14.<com.AutoCamping.MapActivity$AutoCampingViewClient: void <init>(com.AutoCamping.MapActivity,com.AutoCamping.MapActivity$AutoCampingViewClient)>($r0, null);
+
+        virtualinvoke $r6.<android.webkit.WebView: void setWebViewClient(android.webkit.WebViewClient)>($r14);
+
+        virtualinvoke $r2.<com.AutoCamping.MapActivity$MyWebChromeClient: void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback)>("", $r0);
+
+        $r6 = $r0.<com.AutoCamping.MapActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void loadUrl(java.lang.String)>($r4);
+
+        $r15 = new com.AutoCamping.MapActivity$BackPressCloseHandler;
+
+        specialinvoke $r15.<com.AutoCamping.MapActivity$BackPressCloseHandler: void <init>(com.AutoCamping.MapActivity,android.app.Activity)>($r0, $r0);
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.AutoCamping.MapActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.AutoCamping.MapActivity;
+
+        $r0 = this.<com.AutoCamping.MapActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.AutoCamping.MapActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.AutoCamping.MapActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.AutoCamping.MapActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.AutoCamping.MapActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.AutoCamping.MapActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.AutoCamping.MapActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <com.AutoCamping.MapActivity: java.lang.String TAG> = "MapActivity";
+
+        <com.AutoCamping.MapActivity: int FILECHOOSER_RESULTCODE> = 1;
+
+        return;
+    }
+}

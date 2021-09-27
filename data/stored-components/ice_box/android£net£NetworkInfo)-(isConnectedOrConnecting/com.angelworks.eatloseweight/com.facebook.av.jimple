@@ -1,0 +1,55 @@
+class com.facebook.av extends java.lang.Object implements java.lang.Runnable
+{
+    final com.facebook.am a;
+    final com.facebook.au b;
+
+    void <init>(com.facebook.au, com.facebook.am)
+    {
+        com.facebook.av $r0;
+        com.facebook.au $r1;
+        com.facebook.am $r2;
+
+        $r0 := @this: com.facebook.av;
+
+        $r1 := @parameter0: com.facebook.au;
+
+        $r2 := @parameter1: com.facebook.am;
+
+        $r0.<com.facebook.av: com.facebook.au b> = $r1;
+
+        $r0.<com.facebook.av: com.facebook.am a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.facebook.av $r0;
+        com.facebook.am $r1;
+        com.facebook.au $r2;
+        com.facebook.ak $r3;
+        long $l0, $l1;
+
+        $r0 := @this: com.facebook.av;
+
+        $r1 = $r0.<com.facebook.av: com.facebook.am a>;
+
+        $r2 = $r0.<com.facebook.av: com.facebook.au b>;
+
+        $r3 = staticinvoke <com.facebook.au: com.facebook.ak a(com.facebook.au)>($r2);
+
+        $r2 = $r0.<com.facebook.av: com.facebook.au b>;
+
+        $l0 = staticinvoke <com.facebook.au: long b(com.facebook.au)>($r2);
+
+        $r2 = $r0.<com.facebook.av: com.facebook.au b>;
+
+        $l1 = staticinvoke <com.facebook.au: long c(com.facebook.au)>($r2);
+
+        interfaceinvoke $r1.<com.facebook.am: void a(com.facebook.ak,long,long)>($r3, $l0, $l1);
+
+        return;
+    }
+}

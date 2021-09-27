@@ -1,0 +1,49 @@
+class com.seattleclouds.previewer.bn extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.previewer.bk a;
+
+    void <init>(com.seattleclouds.previewer.bk)
+    {
+        com.seattleclouds.previewer.bn $r0;
+        com.seattleclouds.previewer.bk $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.bn;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.bk;
+
+        $r0.<com.seattleclouds.previewer.bn: com.seattleclouds.previewer.bk a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.previewer.bn $r0;
+        com.seattleclouds.previewer.bk $r1;
+        com.seattleclouds.previewer.aw $r2;
+        com.seattleclouds.previewer.bo $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.bn;
+
+        $r1 = $r0.<com.seattleclouds.previewer.bn: com.seattleclouds.previewer.bk a>;
+
+        $r2 = $r1.<com.seattleclouds.previewer.bk: com.seattleclouds.previewer.aw a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.aw: com.seattleclouds.previewer.bo k(com.seattleclouds.previewer.aw)>($r2);
+
+        if $r3 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.bn: com.seattleclouds.previewer.bk a>;
+
+        $r2 = $r1.<com.seattleclouds.previewer.bk: com.seattleclouds.previewer.aw a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.aw: com.seattleclouds.previewer.bo k(com.seattleclouds.previewer.aw)>($r2);
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.bo: void a(boolean)>(1);
+
+     label1:
+        return;
+    }
+}

@@ -1,0 +1,55 @@
+class com.hrishiz.memo.DataActivity$9 extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.hrishiz.memo.DataActivity this$0;
+
+    void <init>(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity$9 $r0;
+        com.hrishiz.memo.DataActivity $r1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$9;
+
+        $r1 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r0.<com.hrishiz.memo.DataActivity$9: com.hrishiz.memo.DataActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.hrishiz.memo.DataActivity$9 $r0;
+        android.view.View $r1;
+        com.hrishiz.memo.DataActivity $r2;
+        java.lang.Object $r3;
+        android.content.ClipboardManager $r4;
+        android.widget.EditText $r5;
+        java.lang.CharSequence $r6;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity$9;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$9: com.hrishiz.memo.DataActivity this$0>;
+
+        $r3 = virtualinvoke $r2.<com.hrishiz.memo.DataActivity: java.lang.Object getSystemService(java.lang.String)>("clipboard");
+
+        $r4 = (android.content.ClipboardManager) $r3;
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$9: com.hrishiz.memo.DataActivity this$0>;
+
+        $r5 = staticinvoke <com.hrishiz.memo.DataActivity: android.widget.EditText access$0(com.hrishiz.memo.DataActivity)>($r2);
+
+        $r6 = virtualinvoke $r4.<android.content.ClipboardManager: java.lang.CharSequence getText()>();
+
+        virtualinvoke $r5.<android.widget.EditText: void setText(java.lang.CharSequence)>($r6);
+
+        $r2 = $r0.<com.hrishiz.memo.DataActivity$9: com.hrishiz.memo.DataActivity this$0>;
+
+        staticinvoke <com.hrishiz.memo.DataActivity: void access$1(com.hrishiz.memo.DataActivity,java.lang.String)>($r2, "Pasted");
+
+        return;
+    }
+}

@@ -1,0 +1,773 @@
+public class com.seattleclouds.modules.a.a extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.a.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.a.a;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    private static java.util.Map a(java.lang.String)
+    {
+        java.lang.String $r0;
+        java.util.HashMap $r1;
+        com.seattleclouds.ce $r2;
+        java.util.Map $r3;
+        java.lang.Object $r4;
+        com.seattleclouds.t $r5;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 = new java.util.HashMap;
+
+        specialinvoke $r1.<java.util.HashMap: void <init>()>();
+
+        $r2 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.ce: java.util.Map w()>();
+
+        $r4 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>($r0);
+
+        $r5 = (com.seattleclouds.t) $r4;
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String V()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("description", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String W()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("sharelink", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String aM()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("storelink", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String X()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("iphone", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String Y()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("ipad", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String Z()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("android", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String aa()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("kindle", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String ab()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("appmartstore", $r0);
+
+        $r0 = virtualinvoke $r5.<com.seattleclouds.t: java.lang.String ac()>();
+
+        virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("primarystore", $r0);
+
+        return $r1;
+    }
+
+    public static void a(android.content.Context, java.lang.String)
+    {
+        android.content.Context $r0;
+        java.lang.String $r1, $r8, $r9;
+        java.lang.Object[] $r2;
+        java.util.Map $r3;
+        java.util.HashMap $r4;
+        android.content.res.Resources $r5;
+        com.seattleclouds.ce $r6;
+        java.lang.Object $r7;
+        int $i0;
+        android.content.Intent $r10;
+        java.lang.String[] $r11;
+        java.lang.StringBuilder $r12;
+        android.text.Spanned $r13;
+        java.lang.Throwable $r14;
+        android.widget.Toast $r15;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.a.a: java.util.Map a(java.lang.String)>($r1);
+
+        $r4 = (java.util.HashMap) $r3;
+
+        if $r4 != null goto label1;
+
+        return;
+
+     label1:
+        $r5 = virtualinvoke $r0.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $r6 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r3 = virtualinvoke $r6.<com.seattleclouds.ce: java.util.Map r()>();
+
+        $r7 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>("appname");
+
+        $r1 = (java.lang.String) $r7;
+
+        if $r1 != null goto label8;
+
+        $i0 = <com.seattleclouds.l: int app_name>;
+
+        $r8 = virtualinvoke $r5.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+     label2:
+        $r7 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("storelink");
+
+        $r1 = (java.lang.String) $r7;
+
+        if $r1 == null goto label3;
+
+        $r9 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r9.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label4;
+
+     label3:
+        $r7 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("sharelink");
+
+        $r1 = (java.lang.String) $r7;
+
+     label4:
+        $r10 = new android.content.Intent;
+
+        specialinvoke $r10.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        $r11 = newarray (java.lang.String)[0];
+
+        virtualinvoke $r10.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>("android.intent.extra.EMAIL", $r11);
+
+        $i0 = <com.seattleclouds.l: int appshare_subject>;
+
+        $r9 = virtualinvoke $r5.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $r2[0] = $r8;
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r9, $r2);
+
+        virtualinvoke $r10.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.SUBJECT", $r8);
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("description");
+
+        $r8 = (java.lang.String) $r7;
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $i0 = <com.seattleclouds.l: int appshare_email_app_link>;
+
+        $r8 = virtualinvoke $r5.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $r2[0] = $r1;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r8, $r2);
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r13 = staticinvoke <android.text.Html: android.text.Spanned fromHtml(java.lang.String)>($r1);
+
+        virtualinvoke $r10.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.CharSequence)>("android.intent.extra.TEXT", $r13);
+
+        virtualinvoke $r10.<android.content.Intent: android.content.Intent setType(java.lang.String)>("message/rfc822");
+
+        $i0 = <com.seattleclouds.l: int appshare_choose_client>;
+
+     label5:
+        $r1 = virtualinvoke $r5.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r10 = staticinvoke <android.content.Intent: android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)>($r10, $r1);
+
+        virtualinvoke $r0.<android.content.Context: void startActivity(android.content.Intent)>($r10);
+
+     label6:
+        return;
+
+     label7:
+        $r14 := @caughtexception;
+
+        $i0 = <com.seattleclouds.l: int appshare_choose_client_notfound>;
+
+        $r15 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r0, $i0, 0);
+
+        virtualinvoke $r15.<android.widget.Toast: void show()>();
+
+        return;
+
+     label8:
+        $r8 = $r1;
+
+        goto label2;
+
+        catch android.content.ActivityNotFoundException from label5 to label6 with label7;
+    }
+
+    public static void b(android.content.Context, java.lang.String)
+    {
+        android.content.Context $r0;
+        java.lang.String $r1, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r16, $r17;
+        java.util.Map $r2;
+        java.util.HashMap $r3;
+        android.content.res.Resources $r4;
+        com.seattleclouds.ce $r5;
+        java.lang.Object $r6;
+        int $i0;
+        java.lang.Object[] $r14;
+        java.lang.StringBuilder $r15;
+        boolean $z0;
+        android.content.Intent $r18;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.a.a: java.util.Map a(java.lang.String)>($r1);
+
+        $r3 = (java.util.HashMap) $r2;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r4 = virtualinvoke $r0.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $r5 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r2 = virtualinvoke $r5.<com.seattleclouds.ce: java.util.Map r()>();
+
+        $r6 = interfaceinvoke $r2.<java.util.Map: java.lang.Object get(java.lang.Object)>("appname");
+
+        $r1 = (java.lang.String) $r6;
+
+        if $r1 != null goto label9;
+
+        $i0 = <com.seattleclouds.l: int app_name>;
+
+        $r7 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+     label2:
+        $r6 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("iphone");
+
+        $r8 = (java.lang.String) $r6;
+
+        $r6 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("ipad");
+
+        $r9 = (java.lang.String) $r6;
+
+        $r6 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("android");
+
+        $r10 = (java.lang.String) $r6;
+
+        $r6 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("kindle");
+
+        $r11 = (java.lang.String) $r6;
+
+        $r6 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("appmartstore");
+
+        $r1 = (java.lang.String) $r6;
+
+        $r6 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("primarystore");
+
+        $r12 = (java.lang.String) $r6;
+
+        $i0 = <com.seattleclouds.l: int appshare_subject>;
+
+        $r13 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r14 = newarray (java.lang.Object)[1];
+
+        $r14[0] = $r7;
+
+        $r7 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r13, $r14);
+
+        $r15 = new java.lang.StringBuilder;
+
+        specialinvoke $r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("description");
+
+        $r13 = (java.lang.String) $r6;
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n");
+
+        $r16 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r13 = $r16;
+
+        if $r12 == null goto label3;
+
+        $r17 = virtualinvoke $r12.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r17.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label3;
+
+        $r15 = new java.lang.StringBuilder;
+
+        specialinvoke $r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r16);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $i0 = <com.seattleclouds.l: int appshare_app_link_name_primary>;
+
+        $r13 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r14 = newarray (java.lang.Object)[1];
+
+        $r14[0] = $r12;
+
+        $r13 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r13, $r14);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r13 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label3:
+        if $r8 == null goto label4;
+
+        $r16 = virtualinvoke $r8.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r16.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label4;
+
+        $z0 = virtualinvoke $r8.<java.lang.String: boolean equals(java.lang.Object)>($r12);
+
+        if $z0 != 0 goto label4;
+
+        $r15 = new java.lang.StringBuilder;
+
+        specialinvoke $r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $i0 = <com.seattleclouds.l: int appshare_app_link_name_iphone>;
+
+        $r13 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r14 = newarray (java.lang.Object)[1];
+
+        $r14[0] = $r8;
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r13, $r14);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r13 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label4:
+        if $r9 == null goto label5;
+
+        $r8 = virtualinvoke $r9.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r8.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label5;
+
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean equals(java.lang.Object)>($r12);
+
+        if $z0 != 0 goto label5;
+
+        $r15 = new java.lang.StringBuilder;
+
+        specialinvoke $r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $i0 = <com.seattleclouds.l: int appshare_app_link_name_ipad>;
+
+        $r8 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r14 = newarray (java.lang.Object)[1];
+
+        $r14[0] = $r9;
+
+        $r9 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r8, $r14);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r13 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label5:
+        if $r10 == null goto label6;
+
+        $r9 = virtualinvoke $r10.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r9.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label6;
+
+        $z0 = virtualinvoke $r10.<java.lang.String: boolean equals(java.lang.Object)>($r12);
+
+        if $z0 != 0 goto label6;
+
+        $r15 = new java.lang.StringBuilder;
+
+        specialinvoke $r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $i0 = <com.seattleclouds.l: int appshare_app_link_name_android>;
+
+        $r9 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r14 = newarray (java.lang.Object)[1];
+
+        $r14[0] = $r10;
+
+        $r10 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r9, $r14);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r13 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label6:
+        if $r11 == null goto label7;
+
+        $r10 = virtualinvoke $r11.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r10.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label7;
+
+        $z0 = virtualinvoke $r11.<java.lang.String: boolean equals(java.lang.Object)>($r12);
+
+        if $z0 != 0 goto label7;
+
+        $r15 = new java.lang.StringBuilder;
+
+        specialinvoke $r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $i0 = <com.seattleclouds.l: int appshare_app_link_name_amazon>;
+
+        $r10 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r14 = newarray (java.lang.Object)[1];
+
+        $r14[0] = $r11;
+
+        $r11 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r10, $r14);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r13 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label7:
+        if $r1 == null goto label8;
+
+        $r11 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r11.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label8;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>($r12);
+
+        if $z0 != 0 goto label8;
+
+        $r15 = new java.lang.StringBuilder;
+
+        specialinvoke $r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $i0 = <com.seattleclouds.l: int appshare_app_link_name_appmart>;
+
+        $r12 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r14 = newarray (java.lang.Object)[1];
+
+        $r14[0] = $r1;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r12, $r14);
+
+        $r15 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r13 = virtualinvoke $r15.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label8:
+        $r18 = new android.content.Intent;
+
+        specialinvoke $r18.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        virtualinvoke $r18.<android.content.Intent: android.content.Intent setType(java.lang.String)>("text/plain");
+
+        virtualinvoke $r18.<android.content.Intent: android.content.Intent addFlags(int)>(524288);
+
+        virtualinvoke $r18.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.SUBJECT", $r7);
+
+        virtualinvoke $r18.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.TEXT", $r13);
+
+        $i0 = <com.seattleclouds.l: int appshare_create_chooser_title>;
+
+        $r1 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r18 = staticinvoke <android.content.Intent: android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)>($r18, $r1);
+
+        virtualinvoke $r0.<android.content.Context: void startActivity(android.content.Intent)>($r18);
+
+        return;
+
+     label9:
+        $r7 = $r1;
+
+        goto label2;
+    }
+
+    public void a(com.seattleclouds.r, java.lang.String)
+    {
+        com.seattleclouds.modules.a.a $r0;
+        com.seattleclouds.r $r1;
+        java.lang.String $r2, $r8, $r12;
+        com.seattleclouds.ce $r3;
+        java.util.Map $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.t $r6;
+        java.util.HashMap $r7;
+        int $i0;
+        java.lang.String[] $r9;
+        java.lang.StringBuilder $r10;
+        android.content.res.Resources $r11;
+        android.os.Bundle $r13;
+        android.support.v4.app.ac $r14;
+        java.lang.Exception $r15;
+
+        $r0 := @this: com.seattleclouds.modules.a.a;
+
+        $r1 := @parameter0: com.seattleclouds.r;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.ce: java.util.Map w()>();
+
+        $r5 = interfaceinvoke $r4.<java.util.Map: java.lang.Object get(java.lang.Object)>($r2);
+
+        $r6 = (com.seattleclouds.t) $r5;
+
+        if $r6 != null goto label01;
+
+        return;
+
+     label01:
+        $r4 = staticinvoke <com.seattleclouds.modules.a.a: java.util.Map a(java.lang.String)>($r2);
+
+        $r7 = (java.util.HashMap) $r4;
+
+        if $r7 == null goto label14;
+
+        $r5 = virtualinvoke $r7.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("storelink");
+
+        $r2 = (java.lang.String) $r5;
+
+        if $r2 == null goto label02;
+
+        $r8 = virtualinvoke $r2.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r8.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label03;
+
+     label02:
+        $r5 = virtualinvoke $r7.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("sharelink");
+
+        $r2 = (java.lang.String) $r5;
+
+     label03:
+        $r9 = virtualinvoke $r2.<java.lang.String: java.lang.String[] split(java.lang.String)>("=");
+
+        $i0 = lengthof $r9;
+
+        if $i0 != 2 goto label13;
+
+        $r10 = new java.lang.StringBuilder;
+
+        specialinvoke $r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = $r9[0];
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("=");
+
+        $r2 = $r9[1];
+
+        $r2 = staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String)>($r2);
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label04:
+        $r3 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.ce: java.util.Map r()>();
+
+        $r5 = interfaceinvoke $r4.<java.util.Map: java.lang.Object get(java.lang.Object)>("appname");
+
+        $r8 = (java.lang.String) $r5;
+
+        if $r8 != null goto label05;
+
+        $r11 = virtualinvoke $r1.<com.seattleclouds.r: android.content.res.Resources o()>();
+
+        $i0 = <com.seattleclouds.l: int app_name>;
+
+        $r8 = virtualinvoke $r11.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+     label05:
+        $r10 = new java.lang.StringBuilder;
+
+     label06:
+        specialinvoke $r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+     label07:
+        $r12 = <com.seattleclouds.App: java.lang.String q>;
+
+     label08:
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r12 = staticinvoke <com.seattleclouds.App: java.lang.String p()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/bigicon.png");
+
+        $r12 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label09:
+        $r13 = new android.os.Bundle;
+
+     label10:
+        specialinvoke $r13.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r13.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("appName", $r8);
+
+        virtualinvoke $r13.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("slink", $r2);
+
+        $r5 = virtualinvoke $r7.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("description");
+
+        $r2 = (java.lang.String) $r5;
+
+        virtualinvoke $r13.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("description", $r2);
+
+        virtualinvoke $r13.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("iconUrlString", $r12);
+
+        $r14 = virtualinvoke $r1.<com.seattleclouds.r: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.util.ag: void a(android.app.Activity,android.os.Bundle)>($r14, $r13);
+
+     label11:
+        return;
+
+     label12:
+        $r15 := @caughtexception;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("AppShare", "share on facebook", $r15);
+
+        return;
+
+     label13:
+        goto label04;
+
+     label14:
+        return;
+
+        catch java.lang.Exception from label06 to label07 with label12;
+        catch java.lang.Exception from label08 to label09 with label12;
+        catch java.lang.Exception from label10 to label11 with label12;
+    }
+
+    public void a(com.seattleclouds.r, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.a.a $r0;
+        com.seattleclouds.r $r1;
+        java.lang.String $r2, $r3;
+        boolean $z0;
+        android.support.v4.app.ac $r4;
+
+        $r0 := @this: com.seattleclouds.modules.a.a;
+
+        $r1 := @parameter0: com.seattleclouds.r;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("email");
+
+        if $z0 == 0 goto label1;
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.r: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.modules.a.a: void a(android.content.Context,java.lang.String)>($r4, $r3);
+
+        return;
+
+     label1:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("facebook");
+
+        if $z0 == 0 goto label2;
+
+        $r0 = new com.seattleclouds.modules.a.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.a.a: void <init>()>();
+
+        virtualinvoke $r0.<com.seattleclouds.modules.a.a: void a(com.seattleclouds.r,java.lang.String)>($r1, $r3);
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("apps");
+
+        if $z0 == 0 goto label3;
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.r: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.modules.a.a: void b(android.content.Context,java.lang.String)>($r4, $r3);
+
+     label3:
+        return;
+    }
+}

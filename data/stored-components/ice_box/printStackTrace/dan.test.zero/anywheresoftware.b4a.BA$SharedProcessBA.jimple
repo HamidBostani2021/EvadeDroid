@@ -1,0 +1,39 @@
+public class anywheresoftware.b4a.BA$SharedProcessBA extends java.lang.Object
+{
+    public java.lang.ref.WeakReference activityBA;
+    boolean ignoreEventsFromOtherThreadsDuringMsgboxError;
+    volatile boolean isActivityPaused;
+    public final boolean isService;
+    java.lang.Exception lastException;
+    java.util.ArrayList messagesDuringPaused;
+    int numberOfStackedEvents;
+    int onActivityResultCode;
+    java.util.HashMap onActivityResultMap;
+    public java.lang.Object sender;
+
+    public void <init>(boolean)
+    {
+        anywheresoftware.b4a.BA$SharedProcessBA $r0;
+        boolean $z0;
+
+        $r0 := @this: anywheresoftware.b4a.BA$SharedProcessBA;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<anywheresoftware.b4a.BA$SharedProcessBA: int numberOfStackedEvents> = 0;
+
+        $r0.<anywheresoftware.b4a.BA$SharedProcessBA: java.lang.Exception lastException> = null;
+
+        $r0.<anywheresoftware.b4a.BA$SharedProcessBA: boolean ignoreEventsFromOtherThreadsDuringMsgboxError> = 0;
+
+        $r0.<anywheresoftware.b4a.BA$SharedProcessBA: boolean isActivityPaused> = 1;
+
+        $r0.<anywheresoftware.b4a.BA$SharedProcessBA: int onActivityResultCode> = 1;
+
+        $r0.<anywheresoftware.b4a.BA$SharedProcessBA: boolean isService> = $z0;
+
+        return;
+    }
+}

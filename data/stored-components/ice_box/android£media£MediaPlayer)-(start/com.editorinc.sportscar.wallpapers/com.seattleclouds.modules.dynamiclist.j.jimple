@@ -1,0 +1,50 @@
+class com.seattleclouds.modules.dynamiclist.j extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.dynamiclist.i a;
+
+    void <init>(com.seattleclouds.modules.dynamiclist.i)
+    {
+        com.seattleclouds.modules.dynamiclist.j $r0;
+        com.seattleclouds.modules.dynamiclist.i $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.j;
+
+        $r1 := @parameter0: com.seattleclouds.modules.dynamiclist.i;
+
+        $r0.<com.seattleclouds.modules.dynamiclist.j: com.seattleclouds.modules.dynamiclist.i a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.dynamiclist.j $r0;
+        com.seattleclouds.modules.dynamiclist.i $r1;
+        com.seattleclouds.modules.dynamiclist.g $r2;
+        boolean $z0;
+        android.view.View $r3;
+
+        $r0 := @this: com.seattleclouds.modules.dynamiclist.j;
+
+        $r1 = $r0.<com.seattleclouds.modules.dynamiclist.j: com.seattleclouds.modules.dynamiclist.i a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.dynamiclist.i: com.seattleclouds.modules.dynamiclist.g a>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.dynamiclist.g: boolean b(com.seattleclouds.modules.dynamiclist.g)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.dynamiclist.j: com.seattleclouds.modules.dynamiclist.i a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.dynamiclist.i: com.seattleclouds.modules.dynamiclist.g a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.dynamiclist.g: android.view.View c(com.seattleclouds.modules.dynamiclist.g)>($r2);
+
+        virtualinvoke $r3.<android.view.View: void setVisibility(int)>(0);
+
+     label1:
+        return;
+    }
+}

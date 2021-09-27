@@ -1,0 +1,739 @@
+public class com.seattleclouds.appauth.AppAuthRegisterActivity extends com.seattleclouds.p
+{
+    private static int m;
+    private boolean n;
+    private com.seattleclouds.util.as o;
+    private boolean p;
+    private android.support.v4.app.Fragment q;
+    private com.seattleclouds.appauth.p r;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.appauth.AppAuthRegisterActivity: int m> = 0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        specialinvoke $r0.<com.seattleclouds.p: void <init>()>();
+
+        return;
+    }
+
+    static android.support.v4.app.Fragment a(com.seattleclouds.appauth.AppAuthRegisterActivity)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        android.support.v4.app.Fragment r1;
+
+        $r0 := @parameter0: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.Fragment q>;
+
+        return r1;
+    }
+
+    static android.support.v4.app.Fragment a(com.seattleclouds.appauth.AppAuthRegisterActivity, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        android.support.v4.app.Fragment $r1;
+
+        $r0 := @parameter0: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 := @parameter1: android.support.v4.app.Fragment;
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.Fragment q> = null;
+
+        return null;
+    }
+
+    static void a(com.seattleclouds.appauth.AppAuthRegisterActivity, boolean, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean $z0;
+        android.support.v4.app.Fragment $r1;
+
+        $r0 := @parameter0: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $z0 := @parameter1: boolean;
+
+        $r1 := @parameter2: android.support.v4.app.Fragment;
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void a(boolean,android.support.v4.app.Fragment)>(0, $r1);
+
+        return;
+    }
+
+    private void a(boolean, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean $z0, $z1;
+        android.support.v4.app.Fragment $r1, $r6;
+        android.support.v4.app.aj $r2;
+        java.util.List $r3;
+        java.util.Iterator $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.appauth.o $r7;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 := @parameter1: android.support.v4.app.Fragment;
+
+        $z1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean n>;
+
+        if $z0 == $z1 goto label8;
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean n> = $z0;
+
+        if $z0 == 0 goto label1;
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.Fragment q> = $r1;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.aj f()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.aj: java.util.List e()>();
+
+        if $r3 != null goto label2;
+
+        return;
+
+     label2:
+        $r4 = interfaceinvoke $r3.<java.util.List: java.util.Iterator iterator()>();
+
+     label3:
+        $z1 = interfaceinvoke $r4.<java.util.Iterator: boolean hasNext()>();
+
+        if $z1 == 0 goto label6;
+
+        $r5 = interfaceinvoke $r4.<java.util.Iterator: java.lang.Object next()>();
+
+        $r6 = (android.support.v4.app.Fragment) $r5;
+
+        $z1 = $r6 instanceof com.seattleclouds.appauth.o;
+
+        if $z1 == 0 goto label3;
+
+        $r7 = (com.seattleclouds.appauth.o) $r6;
+
+        if $r6 != $r1 goto label5;
+
+        $z1 = 1;
+
+     label4:
+        interfaceinvoke $r7.<com.seattleclouds.appauth.o: void a(boolean,boolean)>($z0, $z1);
+
+        goto label3;
+
+     label5:
+        $z1 = 0;
+
+        goto label4;
+
+     label6:
+        if $z0 == 0 goto label7;
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void v()>();
+
+        return;
+
+     label7:
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void w()>();
+
+     label8:
+        return;
+    }
+
+    private void c(boolean)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean $z0, $z1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $z0 := @parameter0: boolean;
+
+        $z1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean p>;
+
+        if $z0 == $z1 goto label2;
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean p> = $z0;
+
+        if $z0 == 0 goto label1;
+
+        $i0 = <com.seattleclouds.l: int app_auth_title_register>;
+
+        virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void setTitle(int)>($i0);
+
+        return;
+
+     label1:
+        $i0 = <com.seattleclouds.l: int app_auth_title_sign_in>;
+
+        virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void setTitle(int)>($i0);
+
+     label2:
+        return;
+    }
+
+    public static boolean l()
+    {
+        int $i0;
+
+        $i0 = <com.seattleclouds.appauth.AppAuthRegisterActivity: int m>;
+
+        if $i0 <= 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    private void t()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        int $i0;
+        com.seattleclouds.appauth.r $r1;
+        android.support.v4.app.aj $r2;
+        android.support.v4.app.ax $r3;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 = new com.seattleclouds.appauth.r;
+
+        specialinvoke $r1.<com.seattleclouds.appauth.r: void <init>()>();
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.aj f()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $i0 = <com.seattleclouds.h: int app_auth_fragment_container>;
+
+        $r3 = virtualinvoke $r3.<android.support.v4.app.ax: android.support.v4.app.ax a(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r1, "AUTHENTICATE_FRAGMENT_TAG");
+
+        virtualinvoke $r3.<android.support.v4.app.ax: int b()>();
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void c(boolean)>(0);
+
+        return;
+    }
+
+    private void u()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        int $i0;
+        com.seattleclouds.appauth.w $r1;
+        android.support.v4.app.aj $r2;
+        android.support.v4.app.ax $r3;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 = new com.seattleclouds.appauth.w;
+
+        specialinvoke $r1.<com.seattleclouds.appauth.w: void <init>()>();
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.aj f()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $i0 = <com.seattleclouds.h: int app_auth_fragment_container>;
+
+        $r3 = virtualinvoke $r3.<android.support.v4.app.ax: android.support.v4.app.ax a(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r1, "REGISTER_FRAGMENT_TAG");
+
+        virtualinvoke $r3.<android.support.v4.app.ax: int b()>();
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void c(boolean)>(1);
+
+        return;
+    }
+
+    private void v()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        long $l0;
+        com.seattleclouds.util.as $r1;
+        com.seattleclouds.appauth.n $r2;
+        android.content.res.Resources $r3;
+        int $i1;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.util.as o>;
+
+        if $r1 != null goto label1;
+
+        $r1 = new com.seattleclouds.util.as;
+
+        $r2 = new com.seattleclouds.appauth.n;
+
+        specialinvoke $r2.<com.seattleclouds.appauth.n: void <init>(com.seattleclouds.appauth.AppAuthRegisterActivity)>($r0);
+
+        specialinvoke $r1.<com.seattleclouds.util.as: void <init>(java.lang.Runnable)>($r2);
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.util.as o> = $r1;
+
+     label1:
+        $r3 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.content.res.Resources getResources()>();
+
+        $i1 = <com.seattleclouds.i: int default_anim_duration>;
+
+        $i1 = virtualinvoke $r3.<android.content.res.Resources: int getInteger(int)>($i1);
+
+        $i1 = $i1 + 100;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.util.as o>;
+
+        $l0 = (long) $i1;
+
+        virtualinvoke $r1.<com.seattleclouds.util.as: void a(long)>($l0);
+
+        return;
+    }
+
+    private void w()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        com.seattleclouds.util.as $r1;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.util.as o>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.util.as o>;
+
+        virtualinvoke $r1.<com.seattleclouds.util.as: void a()>();
+
+     label1:
+        return;
+    }
+
+    void a(android.text.GetChars, android.text.GetChars)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        android.text.GetChars $r1, $r2;
+        com.seattleclouds.appauth.p $r3;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 := @parameter0: android.text.GetChars;
+
+        $r2 := @parameter1: android.text.GetChars;
+
+        $r3 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r>;
+
+        staticinvoke <com.seattleclouds.appauth.p: void a(com.seattleclouds.appauth.p)>($r3);
+
+     label1:
+        $r3 = new com.seattleclouds.appauth.p;
+
+        specialinvoke $r3.<com.seattleclouds.appauth.p: void <init>(android.text.GetChars,android.text.GetChars,com.seattleclouds.appauth.n)>($r1, $r2, null);
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r> = $r3;
+
+        return;
+    }
+
+    public boolean o()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        z0 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean n>;
+
+        return z0;
+    }
+
+    public void onBackPressed()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean $z0;
+        android.content.Intent $r1;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean g()>();
+
+        if $z0 != 0 goto label1;
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean f()>();
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        staticinvoke <com.seattleclouds.appauth.e: void h()>();
+
+        return;
+
+     label2:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.content.Intent getIntent()>();
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean a(android.content.Intent)>($r1);
+
+        if $z0 == 0 goto label3;
+
+        virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void finish()>();
+
+        return;
+
+     label3:
+        staticinvoke <com.seattleclouds.AppStarterActivity: void e(android.app.Activity)>($r0);
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        android.support.v7.a.a $r2;
+        com.seattleclouds.appauth.p $r3;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.p: void onCreate(android.os.Bundle)>($r1);
+
+        $i0 = <com.seattleclouds.j: int activity_app_auth_register>;
+
+        virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void setContentView(int)>($i0);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v7.a.a h()>();
+
+        if $r2 == null goto label1;
+
+        virtualinvoke $r2.<android.support.v7.a.a: void a(boolean)>(0);
+
+     label1:
+        if $r1 != null goto label3;
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void t()>();
+
+     label2:
+        $i0 = <com.seattleclouds.appauth.AppAuthRegisterActivity: int m>;
+
+        $i0 = $i0 + 1;
+
+        <com.seattleclouds.appauth.AppAuthRegisterActivity: int m> = $i0;
+
+        return;
+
+     label3:
+        $r3 = staticinvoke <com.seattleclouds.appauth.p: com.seattleclouds.appauth.p a(android.os.Bundle,java.lang.String)>($r1, "saveUserCredentials");
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r> = $r3;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("saveRegisterScreenIsActive");
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void c(boolean)>($z0);
+
+        goto label2;
+    }
+
+    protected void onDestroy()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        int $i0;
+        com.seattleclouds.util.as $r1;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $i0 = <com.seattleclouds.appauth.AppAuthRegisterActivity: int m>;
+
+        $i0 = $i0 + -1;
+
+        <com.seattleclouds.appauth.AppAuthRegisterActivity: int m> = $i0;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.util.as o>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.util.as o>;
+
+        virtualinvoke $r1.<com.seattleclouds.util.as: void a()>();
+
+     label1:
+        virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void s()>();
+
+        specialinvoke $r0.<com.seattleclouds.p: void onDestroy()>();
+
+        return;
+    }
+
+    protected void onSaveInstanceState(android.os.Bundle)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        android.os.Bundle $r1;
+        com.seattleclouds.appauth.p $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.p: void onSaveInstanceState(android.os.Bundle)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r>;
+
+        staticinvoke <com.seattleclouds.appauth.p: void a(com.seattleclouds.appauth.p,android.os.Bundle,java.lang.String)>($r2, $r1, "saveUserCredentials");
+
+     label1:
+        $z0 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean p>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("saveRegisterScreenIsActive", $z0);
+
+        return;
+    }
+
+    protected void onStart()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        specialinvoke $r0.<com.seattleclouds.p: void onStart()>();
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean c()>();
+
+        if $z0 != 0 goto label1;
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean a()>();
+
+        if $z0 != 0 goto label2;
+
+        $z0 = staticinvoke <com.seattleclouds.appauth.e: boolean b()>();
+
+        if $z0 != 0 goto label2;
+
+     label1:
+        virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void finish()>();
+
+     label2:
+        return;
+    }
+
+    public void p()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean $z0;
+        android.support.v4.app.aj $r1;
+        android.support.v4.app.Fragment $r2;
+        java.lang.Object $r3;
+        android.support.v4.app.ax $r4;
+        int $i0, $i1;
+        com.seattleclouds.appauth.r r5;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $z0 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean n>;
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.aj f()>();
+
+        $r2 = virtualinvoke $r1.<android.support.v4.app.aj: android.support.v4.app.Fragment a(java.lang.String)>("AUTHENTICATE_FRAGMENT_TAG");
+
+        $r3 = $r2;
+
+        if $r2 != null goto label2;
+
+        r5 = new com.seattleclouds.appauth.r;
+
+        $r3 = r5;
+
+        specialinvoke r5.<com.seattleclouds.appauth.r: void <init>()>();
+
+     label2:
+        $r4 = virtualinvoke $r1.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $i0 = <com.seattleclouds.b: int sc_push_left_enter>;
+
+        $i1 = <com.seattleclouds.b: int sc_push_left_exit>;
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax a(int,int)>($i0, $i1);
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax a(java.lang.String)>(null);
+
+        $i0 = <com.seattleclouds.h: int app_auth_fragment_container>;
+
+        $r2 = (android.support.v4.app.Fragment) $r3;
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax b(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r2, "AUTHENTICATE_FRAGMENT_TAG");
+
+        virtualinvoke $r4.<android.support.v4.app.ax: int b()>();
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void c(boolean)>(0);
+
+        $r2 = (android.support.v4.app.Fragment) $r3;
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void a(boolean,android.support.v4.app.Fragment)>(1, $r2);
+
+        return;
+    }
+
+    public void q()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        boolean $z0;
+        android.support.v4.app.aj $r1;
+        android.support.v4.app.Fragment $r2;
+        java.lang.Object $r3;
+        android.support.v4.app.ax $r4;
+        int $i0, $i1;
+        com.seattleclouds.appauth.w r5;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $z0 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: boolean n>;
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.support.v4.app.aj f()>();
+
+        $r2 = virtualinvoke $r1.<android.support.v4.app.aj: android.support.v4.app.Fragment a(java.lang.String)>("REGISTER_FRAGMENT_TAG");
+
+        $r3 = $r2;
+
+        if $r2 != null goto label2;
+
+        r5 = new com.seattleclouds.appauth.w;
+
+        $r3 = r5;
+
+        specialinvoke r5.<com.seattleclouds.appauth.w: void <init>()>();
+
+     label2:
+        $r4 = virtualinvoke $r1.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $i0 = <com.seattleclouds.b: int sc_push_right_enter>;
+
+        $i1 = <com.seattleclouds.b: int sc_push_right_exit>;
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax a(int,int)>($i0, $i1);
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax a(java.lang.String)>(null);
+
+        $i0 = <com.seattleclouds.h: int app_auth_fragment_container>;
+
+        $r2 = (android.support.v4.app.Fragment) $r3;
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax b(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r2, "REGISTER_FRAGMENT_TAG");
+
+        virtualinvoke $r4.<android.support.v4.app.ax: int b()>();
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void c(boolean)>(1);
+
+        $r2 = (android.support.v4.app.Fragment) $r3;
+
+        specialinvoke $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: void a(boolean,android.support.v4.app.Fragment)>(1, $r2);
+
+        return;
+    }
+
+    com.seattleclouds.appauth.p r()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        com.seattleclouds.appauth.p r1;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r>;
+
+        return r1;
+    }
+
+    void s()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity $r0;
+        com.seattleclouds.appauth.p $r1;
+
+        $r0 := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r>;
+
+        staticinvoke <com.seattleclouds.appauth.p: void a(com.seattleclouds.appauth.p)>($r1);
+
+        $r0.<com.seattleclouds.appauth.AppAuthRegisterActivity: com.seattleclouds.appauth.p r> = null;
+
+     label1:
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        $r0 = this.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.appauth.AppAuthRegisterActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.appauth.AppAuthRegisterActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.appauth.AppAuthRegisterActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

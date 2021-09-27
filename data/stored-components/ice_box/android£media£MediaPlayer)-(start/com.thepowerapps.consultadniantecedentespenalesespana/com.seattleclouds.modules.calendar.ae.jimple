@@ -1,0 +1,103 @@
+class com.seattleclouds.modules.calendar.ae extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.modules.calendar.EventEditActivity a;
+
+    void <init>(com.seattleclouds.modules.calendar.EventEditActivity)
+    {
+        com.seattleclouds.modules.calendar.ae $r0;
+        com.seattleclouds.modules.calendar.EventEditActivity $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.ae;
+
+        $r1 := @parameter0: com.seattleclouds.modules.calendar.EventEditActivity;
+
+        $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.modules.calendar.ae $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.calendar.EventEditActivity $r2, $r6;
+        java.lang.String $r3;
+        int $i0;
+        boolean $z0;
+        com.seattleclouds.FragmentInfo $r4;
+        android.os.Bundle $r5;
+        android.content.Intent $r7;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.ae;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.EventEditActivity: java.lang.String e(com.seattleclouds.modules.calendar.EventEditActivity)>($r2);
+
+        if $r3 == null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.EventEditActivity: java.lang.String e(com.seattleclouds.modules.calendar.EventEditActivity)>($r2);
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.EventEditActivity: java.lang.String e(com.seattleclouds.modules.calendar.EventEditActivity)>($r2);
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean startsWith(java.lang.String)>("local://");
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.EventEditActivity: java.lang.String e(com.seattleclouds.modules.calendar.EventEditActivity)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        staticinvoke <com.seattleclouds.App: boolean b(java.lang.String,android.app.Activity)>($r3, $r2);
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.EventEditActivity: java.lang.String e(com.seattleclouds.modules.calendar.EventEditActivity)>($r2);
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean startsWith(java.lang.String)>("html:");
+
+        if $z0 == 0 goto label2;
+
+        $r4 = staticinvoke <com.seattleclouds.App: com.seattleclouds.FragmentInfo q(java.lang.String)>(null);
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.FragmentInfo: android.os.Bundle c()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.EventEditActivity: java.lang.String e(com.seattleclouds.modules.calendar.EventEditActivity)>($r2);
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String substring(int)>(5);
+
+        virtualinvoke $r5.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("ARG_HTML_STRING", $r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r6 = $r0.<com.seattleclouds.modules.calendar.ae: com.seattleclouds.modules.calendar.EventEditActivity a>;
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.Intent a(com.seattleclouds.FragmentInfo,android.content.Context)>($r4, $r6);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.EventEditActivity: void startActivity(android.content.Intent)>($r7);
+
+     label2:
+        return;
+    }
+}

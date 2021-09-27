@@ -1,0 +1,402 @@
+public class com.hrishiz.memo.SplashActivity extends android.app.Activity
+{
+    private java.util.Timer _timer;
+    private android.widget.LinearLayout actbar;
+    private android.widget.LinearLayout cart;
+    private android.content.Intent i;
+    private android.widget.ImageView imageview1;
+    private android.widget.LinearLayout linear3;
+    private android.widget.LinearLayout linear4;
+    private android.content.SharedPreferences noty;
+    private android.content.SharedPreferences p;
+    private java.util.TimerTask splasy;
+    private android.widget.TextView textview1;
+    private android.widget.TextView textview2;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        java.util.Timer $r1;
+        android.content.Intent $r2;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r1 = new java.util.Timer;
+
+        specialinvoke $r1.<java.util.Timer: void <init>()>();
+
+        $r0.<com.hrishiz.memo.SplashActivity: java.util.Timer _timer> = $r1;
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>()>();
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.content.Intent i> = $r2;
+
+        return;
+    }
+
+    static android.content.SharedPreferences access$0(com.hrishiz.memo.SplashActivity)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        android.content.SharedPreferences r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.SplashActivity;
+
+        r1 = $r0.<com.hrishiz.memo.SplashActivity: android.content.SharedPreferences p>;
+
+        return r1;
+    }
+
+    static android.content.SharedPreferences access$1(com.hrishiz.memo.SplashActivity)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        android.content.SharedPreferences r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.SplashActivity;
+
+        r1 = $r0.<com.hrishiz.memo.SplashActivity: android.content.SharedPreferences noty>;
+
+        return r1;
+    }
+
+    static android.content.Intent access$2(com.hrishiz.memo.SplashActivity)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        android.content.Intent r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.SplashActivity;
+
+        r1 = $r0.<com.hrishiz.memo.SplashActivity: android.content.Intent i>;
+
+        return r1;
+    }
+
+    private float getDip(int)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        int $i0;
+        float $f0;
+        android.content.res.Resources $r1;
+        android.util.DisplayMetrics $r2;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $i0 := @parameter0: int;
+
+        $f0 = (float) $i0;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        $f0 = staticinvoke <android.util.TypedValue: float applyDimension(int,float,android.util.DisplayMetrics)>(1, $f0, $r2);
+
+        return $f0;
+    }
+
+    private int getDisplayHeightPixels()
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        android.content.res.Resources $r1;
+        android.util.DisplayMetrics $r2;
+        int i0;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        i0 = $r2.<android.util.DisplayMetrics: int heightPixels>;
+
+        return i0;
+    }
+
+    private int getDisplayWidthPixels()
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        android.content.res.Resources $r1;
+        android.util.DisplayMetrics $r2;
+        int i0;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        i0 = $r2.<android.util.DisplayMetrics: int widthPixels>;
+
+        return i0;
+    }
+
+    private int getRandom(int, int)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        int $i0, $i1;
+        java.util.Random $r1;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 = new java.util.Random;
+
+        specialinvoke $r1.<java.util.Random: void <init>()>();
+
+        $i1 = $i1 - $i0;
+
+        $i1 = $i1 + 1;
+
+        $i1 = virtualinvoke $r1.<java.util.Random: int nextInt(int)>($i1);
+
+        $i0 = $i1 + $i0;
+
+        return $i0;
+    }
+
+    private void initialize()
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        int $i0;
+        android.view.View $r1;
+        android.widget.LinearLayout $r2;
+        android.widget.ImageView $r3;
+        android.widget.TextView $r4;
+        android.content.SharedPreferences $r5;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $i0 = <com.hrishiz.memo.R$id: int actbar>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.widget.LinearLayout actbar> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int cart>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.widget.LinearLayout cart> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear4>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.widget.LinearLayout linear4> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int imageview1>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.ImageView) $r1;
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.widget.ImageView imageview1> = $r3;
+
+        $i0 = <com.hrishiz.memo.R$id: int textview1>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r1;
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.widget.TextView textview1> = $r4;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear3>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.widget.LinearLayout linear3> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int textview2>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r1;
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.widget.TextView textview2> = $r4;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("noty", 0);
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.content.SharedPreferences noty> = $r5;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("p", 0);
+
+        $r0.<com.hrishiz.memo.SplashActivity: android.content.SharedPreferences p> = $r5;
+
+        return;
+    }
+
+    private void initializeLogic()
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        java.util.TimerTask $r1;
+        com.hrishiz.memo.SplashActivity$1 $r2;
+        java.util.Timer $r3;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $r2 = new com.hrishiz.memo.SplashActivity$1;
+
+        specialinvoke $r2.<com.hrishiz.memo.SplashActivity$1: void <init>(com.hrishiz.memo.SplashActivity)>($r0);
+
+        $r0.<com.hrishiz.memo.SplashActivity: java.util.TimerTask splasy> = $r2;
+
+        $r3 = $r0.<com.hrishiz.memo.SplashActivity: java.util.Timer _timer>;
+
+        $r1 = $r0.<com.hrishiz.memo.SplashActivity: java.util.TimerTask splasy>;
+
+        virtualinvoke $r3.<java.util.Timer: void schedule(java.util.TimerTask,long)>($r1, 2800L);
+
+        return;
+    }
+
+    private void showMessage(java.lang.String)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        java.lang.String $r1;
+        android.content.Context $r2;
+        android.widget.Toast $r3;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: android.content.Context getApplicationContext()>();
+
+        $r3 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r2, $r1, 0);
+
+        virtualinvoke $r3.<android.widget.Toast: void show()>();
+
+        return;
+    }
+
+    public java.util.ArrayList getCheckedItemPositionsToArray(android.widget.ListView)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        android.widget.ListView $r1;
+        java.util.ArrayList $r2;
+        double $d0;
+        android.util.SparseBooleanArray $r3;
+        int $i0, $i1;
+        boolean $z0;
+        java.lang.Double $r4;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $r1 := @parameter0: android.widget.ListView;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r3 = virtualinvoke $r1.<android.widget.ListView: android.util.SparseBooleanArray getCheckedItemPositions()>();
+
+        $i0 = 0;
+
+     label1:
+        $i1 = virtualinvoke $r3.<android.util.SparseBooleanArray: int size()>();
+
+        if $i0 < $i1 goto label2;
+
+        return $r2;
+
+     label2:
+        $z0 = virtualinvoke $r3.<android.util.SparseBooleanArray: boolean valueAt(int)>($i0);
+
+        if $z0 == 0 goto label3;
+
+        $i1 = virtualinvoke $r3.<android.util.SparseBooleanArray: int keyAt(int)>($i0);
+
+        $d0 = (double) $i1;
+
+        $r4 = staticinvoke <java.lang.Double: java.lang.Double valueOf(double)>($d0);
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4);
+
+     label3:
+        $i0 = $i0 + 1;
+
+        goto label1;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.hrishiz.memo.SplashActivity $r0;
+        android.os.Bundle $r1;
+        int $i0;
+
+        $r0 := @this: com.hrishiz.memo.SplashActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        $i0 = <com.hrishiz.memo.R$layout: int splash>;
+
+        virtualinvoke $r0.<com.hrishiz.memo.SplashActivity: void setContentView(int)>($i0);
+
+        specialinvoke $r0.<com.hrishiz.memo.SplashActivity: void initialize()>();
+
+        specialinvoke $r0.<com.hrishiz.memo.SplashActivity: void initializeLogic()>();
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.hrishiz.memo.SplashActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.hrishiz.memo.SplashActivity;
+
+        $r0 = this.<com.hrishiz.memo.SplashActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.hrishiz.memo.SplashActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.hrishiz.memo.SplashActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.hrishiz.memo.SplashActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.hrishiz.memo.SplashActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.hrishiz.memo.SplashActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.hrishiz.memo.SplashActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

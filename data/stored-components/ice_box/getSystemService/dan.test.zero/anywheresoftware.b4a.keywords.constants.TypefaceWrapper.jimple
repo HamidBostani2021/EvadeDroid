@@ -1,0 +1,135 @@
+public class anywheresoftware.b4a.keywords.constants.TypefaceWrapper extends anywheresoftware.b4a.AbsObjectWrapper
+{
+    public static final android.graphics.Typeface DEFAULT;
+    public static final android.graphics.Typeface DEFAULT_BOLD;
+    public static final android.graphics.Typeface MONOSPACE;
+    public static final android.graphics.Typeface SANS_SERIF;
+    public static final android.graphics.Typeface SERIF;
+    public static final int STYLE_BOLD;
+    public static final int STYLE_BOLD_ITALIC;
+    public static final int STYLE_ITALIC;
+    public static final int STYLE_NORMAL;
+
+    static void <clinit>()
+    {
+        android.graphics.Typeface $r0;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: int STYLE_ITALIC> = 2;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: int STYLE_BOLD_ITALIC> = 3;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: int STYLE_BOLD> = 1;
+
+        $r0 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: android.graphics.Typeface DEFAULT> = $r0;
+
+        $r0 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT_BOLD>;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: android.graphics.Typeface DEFAULT_BOLD> = $r0;
+
+        $r0 = <android.graphics.Typeface: android.graphics.Typeface SANS_SERIF>;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: android.graphics.Typeface SANS_SERIF> = $r0;
+
+        $r0 = <android.graphics.Typeface: android.graphics.Typeface SERIF>;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: android.graphics.Typeface SERIF> = $r0;
+
+        $r0 = <android.graphics.Typeface: android.graphics.Typeface MONOSPACE>;
+
+        <anywheresoftware.b4a.keywords.constants.TypefaceWrapper: android.graphics.Typeface MONOSPACE> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.keywords.constants.TypefaceWrapper $r0;
+
+        $r0 := @this: anywheresoftware.b4a.keywords.constants.TypefaceWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.AbsObjectWrapper: void <init>()>();
+
+        return;
+    }
+
+    public static android.graphics.Typeface CreateNew(android.graphics.Typeface, int)
+    {
+        android.graphics.Typeface $r0;
+        int $i0;
+
+        $r0 := @parameter0: android.graphics.Typeface;
+
+        $i0 := @parameter1: int;
+
+        $r0 = staticinvoke <android.graphics.Typeface: android.graphics.Typeface create(android.graphics.Typeface,int)>($r0, $i0);
+
+        return $r0;
+    }
+
+    public static android.graphics.Typeface LoadFromAssets(java.lang.String) throws java.io.IOException
+    {
+        java.lang.String $r0, $r1;
+        java.io.File $r2;
+        android.graphics.Typeface $r3;
+        android.app.Application $r4;
+        android.content.res.AssetManager $r5;
+        java.util.Locale $r6;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 = <anywheresoftware.b4a.objects.streams.File: java.lang.String virtualAssetsFolder>;
+
+        if $r1 == null goto label1;
+
+        $r2 = new java.io.File;
+
+        $r1 = <anywheresoftware.b4a.objects.streams.File: java.lang.String virtualAssetsFolder>;
+
+        $r0 = staticinvoke <anywheresoftware.b4a.objects.streams.File: java.lang.String getUnpackedVirtualAssetFile(java.lang.String)>($r0);
+
+        specialinvoke $r2.<java.io.File: void <init>(java.lang.String,java.lang.String)>($r1, $r0);
+
+        $r3 = staticinvoke <android.graphics.Typeface: android.graphics.Typeface createFromFile(java.io.File)>($r2);
+
+        return $r3;
+
+     label1:
+        $r4 = <anywheresoftware.b4a.BA: android.app.Application applicationContext>;
+
+        $r5 = virtualinvoke $r4.<android.app.Application: android.content.res.AssetManager getAssets()>();
+
+        $r6 = <anywheresoftware.b4a.BA: java.util.Locale cul>;
+
+        $r0 = virtualinvoke $r0.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r6);
+
+        $r3 = staticinvoke <android.graphics.Typeface: android.graphics.Typeface createFromAsset(android.content.res.AssetManager,java.lang.String)>($r5, $r0);
+
+        return $r3;
+    }
+
+    public static android.graphics.Typeface getFONTAWESOME()
+    {
+        android.graphics.Typeface $r0;
+        java.lang.String $r1;
+
+        $r1 = <anywheresoftware.b4a.objects.TextViewWrapper: java.lang.String fontAwesomeFile>;
+
+        $r0 = staticinvoke <anywheresoftware.b4a.objects.TextViewWrapper: android.graphics.Typeface getTypeface(java.lang.String)>($r1);
+
+        return $r0;
+    }
+
+    public static android.graphics.Typeface getMATERIALICONS()
+    {
+        android.graphics.Typeface $r0;
+        java.lang.String $r1;
+
+        $r1 = <anywheresoftware.b4a.objects.TextViewWrapper: java.lang.String materialIconsFile>;
+
+        $r0 = staticinvoke <anywheresoftware.b4a.objects.TextViewWrapper: android.graphics.Typeface getTypeface(java.lang.String)>($r1);
+
+        return $r0;
+    }
+}

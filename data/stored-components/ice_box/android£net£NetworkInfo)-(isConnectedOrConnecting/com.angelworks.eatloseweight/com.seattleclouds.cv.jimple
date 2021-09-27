@@ -1,0 +1,44 @@
+class com.seattleclouds.cv extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.AppStarterActivity a;
+
+    void <init>(com.seattleclouds.AppStarterActivity)
+    {
+        com.seattleclouds.cv $r0;
+        com.seattleclouds.AppStarterActivity $r1;
+
+        $r0 := @this: com.seattleclouds.cv;
+
+        $r1 := @parameter0: com.seattleclouds.AppStarterActivity;
+
+        $r0.<com.seattleclouds.cv: com.seattleclouds.AppStarterActivity a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.cv $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.AppStarterActivity $r2;
+
+        $r0 := @this: com.seattleclouds.cv;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.cv: com.seattleclouds.AppStarterActivity a>;
+
+        staticinvoke <com.seattleclouds.AppStarterActivity: boolean a(com.seattleclouds.AppStarterActivity,boolean)>($r2, 1);
+
+        $r2 = $r0.<com.seattleclouds.cv: com.seattleclouds.AppStarterActivity a>;
+
+        virtualinvoke $r2.<com.seattleclouds.AppStarterActivity: void finish()>();
+
+        return;
+    }
+}

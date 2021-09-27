@@ -1,0 +1,29 @@
+class com.seattleclouds.modules.t.z extends android.graphics.Paint
+{
+    final com.seattleclouds.modules.t.x a;
+
+    void <init>(com.seattleclouds.modules.t.x)
+    {
+        com.seattleclouds.modules.t.z $r0;
+        com.seattleclouds.modules.t.x $r1;
+        android.graphics.Paint$Style $r2;
+
+        $r0 := @this: com.seattleclouds.modules.t.z;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.x;
+
+        $r0.<com.seattleclouds.modules.t.z: com.seattleclouds.modules.t.x a> = $r1;
+
+        specialinvoke $r0.<android.graphics.Paint: void <init>()>();
+
+        virtualinvoke $r0.<com.seattleclouds.modules.t.z: void setColor(int)>(-16776961);
+
+        $r2 = <android.graphics.Paint$Style: android.graphics.Paint$Style STROKE>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.t.z: void setStyle(android.graphics.Paint$Style)>($r2);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.t.z: void setStrokeWidth(float)>(2.0F);
+
+        return;
+    }
+}

@@ -1,0 +1,98 @@
+class com.hrishiz.memo.MainActivity$3 extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.hrishiz.memo.MainActivity this$0;
+
+    void <init>(com.hrishiz.memo.MainActivity)
+    {
+        com.hrishiz.memo.MainActivity$3 $r0;
+        com.hrishiz.memo.MainActivity $r1;
+
+        $r0 := @this: com.hrishiz.memo.MainActivity$3;
+
+        $r1 := @parameter0: com.hrishiz.memo.MainActivity;
+
+        $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    static com.hrishiz.memo.MainActivity access$0(com.hrishiz.memo.MainActivity$3)
+    {
+        com.hrishiz.memo.MainActivity$3 $r0;
+        com.hrishiz.memo.MainActivity r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.MainActivity$3;
+
+        r1 = $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0>;
+
+        return r1;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.hrishiz.memo.MainActivity$3 $r0;
+        android.view.View $r1;
+        com.hrishiz.memo.MainActivity $r2;
+        android.app.AlertDialog$Builder $r3;
+        int $i0;
+        com.hrishiz.memo.MainActivity$3$1 $r4;
+        com.hrishiz.memo.MainActivity$3$2 $r5;
+        android.app.AlertDialog $r6;
+
+        $r0 := @this: com.hrishiz.memo.MainActivity$3;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.MainActivity: android.app.AlertDialog$Builder access$17(com.hrishiz.memo.MainActivity)>($r2);
+
+        $i0 = <com.hrishiz.memo.R$drawable: int delete>;
+
+        virtualinvoke $r3.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setIcon(int)>($i0);
+
+        $r2 = $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.MainActivity: android.app.AlertDialog$Builder access$17(com.hrishiz.memo.MainActivity)>($r2);
+
+        virtualinvoke $r3.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setTitle(java.lang.CharSequence)>("Delete");
+
+        $r2 = $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.MainActivity: android.app.AlertDialog$Builder access$17(com.hrishiz.memo.MainActivity)>($r2);
+
+        virtualinvoke $r3.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setMessage(java.lang.CharSequence)>("Do you want to delete all your memos?");
+
+        $r2 = $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.MainActivity: android.app.AlertDialog$Builder access$17(com.hrishiz.memo.MainActivity)>($r2);
+
+        $r4 = new com.hrishiz.memo.MainActivity$3$1;
+
+        specialinvoke $r4.<com.hrishiz.memo.MainActivity$3$1: void <init>(com.hrishiz.memo.MainActivity$3)>($r0);
+
+        virtualinvoke $r3.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("I\'m sure", $r4);
+
+        $r2 = $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.MainActivity: android.app.AlertDialog$Builder access$17(com.hrishiz.memo.MainActivity)>($r2);
+
+        $r5 = new com.hrishiz.memo.MainActivity$3$2;
+
+        specialinvoke $r5.<com.hrishiz.memo.MainActivity$3$2: void <init>(com.hrishiz.memo.MainActivity$3)>($r0);
+
+        virtualinvoke $r3.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setNegativeButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("Cancel", $r5);
+
+        $r2 = $r0.<com.hrishiz.memo.MainActivity$3: com.hrishiz.memo.MainActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.MainActivity: android.app.AlertDialog$Builder access$17(com.hrishiz.memo.MainActivity)>($r2);
+
+        $r6 = virtualinvoke $r3.<android.app.AlertDialog$Builder: android.app.AlertDialog create()>();
+
+        virtualinvoke $r6.<android.app.AlertDialog: void show()>();
+
+        return;
+    }
+}

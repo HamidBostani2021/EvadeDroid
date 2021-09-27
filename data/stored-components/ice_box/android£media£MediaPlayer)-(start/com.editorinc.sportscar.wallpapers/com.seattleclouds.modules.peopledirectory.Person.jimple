@@ -1,0 +1,200 @@
+public class com.seattleclouds.modules.peopledirectory.Person extends java.lang.Object implements android.os.Parcelable
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    java.lang.String a;
+    java.lang.String b;
+    java.lang.String c;
+    java.lang.String d;
+    java.lang.String e;
+    java.lang.String f;
+    java.lang.String g;
+    java.util.List h;
+    java.lang.String i;
+
+    static void <clinit>()
+    {
+        com.seattleclouds.modules.peopledirectory.n $r0;
+
+        $r0 = new com.seattleclouds.modules.peopledirectory.n;
+
+        specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.n: void <init>()>();
+
+        <com.seattleclouds.modules.peopledirectory.Person: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    protected void <init>(android.os.Parcel)
+    {
+        com.seattleclouds.modules.peopledirectory.Person $r0;
+        android.os.Parcel $r1;
+        java.lang.String $r2;
+        byte $b0;
+        java.util.ArrayList $r3;
+        java.util.List $r4;
+        java.lang.Class $r5;
+        java.lang.ClassLoader $r6;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.Person;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String d> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String e> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String f> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String g> = $r2;
+
+        $b0 = virtualinvoke $r1.<android.os.Parcel: byte readByte()>();
+
+        if $b0 != 1 goto label2;
+
+        $r3 = new java.util.ArrayList;
+
+        specialinvoke $r3.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h> = $r3;
+
+        $r4 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h>;
+
+        $r5 = class "Ljava/lang/String;";
+
+        $r6 = virtualinvoke $r5.<java.lang.Class: java.lang.ClassLoader getClassLoader()>();
+
+        virtualinvoke $r1.<android.os.Parcel: void readList(java.util.List,java.lang.ClassLoader)>($r4, $r6);
+
+     label1:
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String i> = $r2;
+
+        return;
+
+     label2:
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h> = null;
+
+        goto label1;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.peopledirectory.Person $r0;
+        java.lang.String $r1, $r2, $r3;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.Person;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a> = $r1;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b> = $r2;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c> = $r3;
+
+        return;
+    }
+
+    public int describeContents()
+    {
+        com.seattleclouds.modules.peopledirectory.Person $r0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.Person;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.seattleclouds.modules.peopledirectory.Person $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        java.lang.String $r2;
+        java.util.List $r3;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.Person;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String d>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String e>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String f>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String g>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h>;
+
+        if $r3 != null goto label2;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeByte(byte)>(0);
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String i>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        return;
+
+     label2:
+        virtualinvoke $r1.<android.os.Parcel: void writeByte(byte)>(1);
+
+        $r3 = $r0.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeList(java.util.List)>($r3);
+
+        goto label1;
+    }
+}

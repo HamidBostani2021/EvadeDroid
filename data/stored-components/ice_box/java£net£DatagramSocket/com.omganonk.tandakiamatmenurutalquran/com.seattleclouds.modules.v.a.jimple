@@ -1,0 +1,578 @@
+public class com.seattleclouds.modules.v.a extends com.seattleclouds.r implements com.seattleclouds.modules.v.h
+{
+    final android.view.ViewTreeObserver$OnGlobalLayoutListener a;
+    private int ai;
+    private java.util.ArrayList b;
+    private android.widget.Gallery c;
+    private android.widget.ImageView d;
+    private android.widget.ProgressBar e;
+    private int f;
+    private int g;
+    private com.seattleclouds.modules.v.g h;
+    private com.google.android.bitmapfun.v i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        java.util.ArrayList $r1;
+        com.seattleclouds.modules.v.c $r2;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.v.a: java.util.ArrayList b> = $r1;
+
+        $r0.<com.seattleclouds.modules.v.a: android.widget.Gallery c> = null;
+
+        $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d> = null;
+
+        $r0.<com.seattleclouds.modules.v.a: android.widget.ProgressBar e> = null;
+
+        $r0.<com.seattleclouds.modules.v.a: int f> = 100;
+
+        $r0.<com.seattleclouds.modules.v.a: int g> = 100;
+
+        $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h> = null;
+
+        $r2 = new com.seattleclouds.modules.v.c;
+
+        specialinvoke $r2.<com.seattleclouds.modules.v.c: void <init>(com.seattleclouds.modules.v.a)>($r0);
+
+        $r0.<com.seattleclouds.modules.v.a: android.view.ViewTreeObserver$OnGlobalLayoutListener a> = $r2;
+
+        return;
+    }
+
+    static android.widget.ImageView a(com.seattleclouds.modules.v.a)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.widget.ImageView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.v.a;
+
+        r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        return r1;
+    }
+
+    static void a(com.seattleclouds.modules.v.a, int)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.v.a;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.seattleclouds.modules.v.a: void c(int)>($i0);
+
+        return;
+    }
+
+    static int b(com.seattleclouds.modules.v.a)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.v.a;
+
+        i0 = $r0.<com.seattleclouds.modules.v.a: int ai>;
+
+        return i0;
+    }
+
+    static int b(com.seattleclouds.modules.v.a, int)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.v.a;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.v.a: int f> = $i0;
+
+        return $i0;
+    }
+
+    static int c(com.seattleclouds.modules.v.a, int)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.v.a;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.v.a: int g> = $i0;
+
+        return $i0;
+    }
+
+    static com.google.android.bitmapfun.v c(com.seattleclouds.modules.v.a)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        com.google.android.bitmapfun.v r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.v.a;
+
+        r1 = $r0.<com.seattleclouds.modules.v.a: com.google.android.bitmapfun.v i>;
+
+        return r1;
+    }
+
+    private void c(int)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        int $i0, $i1, $i2;
+        android.widget.ImageView $r1;
+        java.lang.Object $r2;
+        java.lang.Integer $r3;
+        java.util.ArrayList $r4;
+        com.seattleclouds.modules.mosaic.ImgMetadata $r5;
+        java.lang.String $r6;
+        com.seattleclouds.modules.v.g $r7;
+        boolean $z0;
+        java.lang.String[] $r8;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        $r2 = virtualinvoke $r1.<android.widget.ImageView: java.lang.Object getTag()>();
+
+        $r3 = (java.lang.Integer) $r2;
+
+        $i1 = virtualinvoke $r3.<java.lang.Integer: int intValue()>();
+
+        if $i0 != $i1 goto label1;
+
+        return;
+
+     label1:
+        $r0.<com.seattleclouds.modules.v.a: int ai> = $i0;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        $i1 = $r0.<com.seattleclouds.modules.v.a: int ai>;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i1);
+
+        virtualinvoke $r1.<android.widget.ImageView: void setTag(java.lang.Object)>($r3);
+
+        $r4 = $r0.<com.seattleclouds.modules.v.a: java.util.ArrayList b>;
+
+        $i1 = virtualinvoke $r4.<java.util.ArrayList: int size()>();
+
+        if $i0 >= $i1 goto label5;
+
+        $r4 = $r0.<com.seattleclouds.modules.v.a: java.util.ArrayList b>;
+
+        $r2 = virtualinvoke $r4.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r5 = (com.seattleclouds.modules.mosaic.ImgMetadata) $r2;
+
+        $r6 = $r5.<com.seattleclouds.modules.mosaic.ImgMetadata: java.lang.String b>;
+
+        $r7 = $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h>;
+
+        if $r7 == null goto label2;
+
+        $r7 = $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h>;
+
+        virtualinvoke $r7.<com.seattleclouds.modules.v.g: boolean cancel(boolean)>(1);
+
+     label2:
+        $r7 = new com.seattleclouds.modules.v.g;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        $i2 = $r0.<com.seattleclouds.modules.v.a: int f>;
+
+        $i0 = $r0.<com.seattleclouds.modules.v.a: int g>;
+
+        $i1 = $r0.<com.seattleclouds.modules.v.a: int ai>;
+
+        specialinvoke $r7.<com.seattleclouds.modules.v.g: void <init>(android.widget.ImageView,int,int,int)>($r1, $i2, $i0, $i1);
+
+        $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h> = $r7;
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean startsWith(java.lang.String)>("http://");
+
+        if $z0 != 0 goto label3;
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean startsWith(java.lang.String)>("https://");
+
+        if $z0 == 0 goto label4;
+
+     label3:
+        $r7 = $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h>;
+
+        virtualinvoke $r7.<com.seattleclouds.modules.v.g: void a(com.seattleclouds.modules.v.h)>($r0);
+
+     label4:
+        $r7 = $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h>;
+
+        $r8 = newarray (java.lang.String)[1];
+
+        $r8[0] = $r6;
+
+        virtualinvoke $r7.<com.seattleclouds.modules.v.g: android.os.AsyncTask execute(java.lang.Object[])>($r8);
+
+     label5:
+        return;
+    }
+
+    public void D()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        java.util.ArrayList $r1, $r2;
+        android.support.v4.app.ac $r3;
+        android.widget.Gallery $r4;
+        com.seattleclouds.modules.v.e $r5;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        specialinvoke $r0.<com.seattleclouds.r: void D()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.v.a: android.widget.Gallery c>;
+
+        $r5 = new com.seattleclouds.modules.v.e;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.v.a: android.support.v4.app.ac n()>();
+
+        $r1 = new java.util.ArrayList;
+
+        $r2 = $r0.<com.seattleclouds.modules.v.a: java.util.ArrayList b>;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>(java.util.Collection)>($r2);
+
+        specialinvoke $r5.<com.seattleclouds.modules.v.e: void <init>(com.seattleclouds.modules.v.a,android.content.Context,java.util.ArrayList)>($r0, $r3, $r1);
+
+        virtualinvoke $r4.<android.widget.Gallery: void setAdapter(android.widget.SpinnerAdapter)>($r5);
+
+        $r4 = $r0.<com.seattleclouds.modules.v.a: android.widget.Gallery c>;
+
+        $i0 = $r0.<com.seattleclouds.modules.v.a: int ai>;
+
+        virtualinvoke $r4.<android.widget.Gallery: void setSelection(int)>($i0);
+
+        $i0 = $r0.<com.seattleclouds.modules.v.a: int ai>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.v.a: void c(int)>($i0);
+
+        return;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.widget.Gallery $r1;
+        android.widget.SpinnerAdapter $r2;
+        com.seattleclouds.modules.v.e $r3;
+        android.widget.ImageView $r4;
+        java.lang.Integer $r5;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        specialinvoke $r0.<com.seattleclouds.r: void E()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.Gallery c>;
+
+        $r2 = virtualinvoke $r1.<android.widget.Gallery: android.widget.SpinnerAdapter getAdapter()>();
+
+        $r3 = (com.seattleclouds.modules.v.e) $r2;
+
+        if $r3 == null goto label1;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.v.e: void a()>();
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        virtualinvoke $r4.<android.widget.ImageView: void setImageBitmap(android.graphics.Bitmap)>(null);
+
+        $r4 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(-1);
+
+        virtualinvoke $r4.<android.widget.ImageView: void setTag(java.lang.Object)>($r5);
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.Gallery c>;
+
+        virtualinvoke $r1.<android.widget.Gallery: void setAdapter(android.widget.SpinnerAdapter)>(null);
+
+        return;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        com.google.android.bitmapfun.v $r1;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: com.google.android.bitmapfun.v i>;
+
+        virtualinvoke $r1.<com.google.android.bitmapfun.v: void i()>();
+
+        specialinvoke $r0.<com.seattleclouds.r: void F()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.widget.Gallery $r6;
+        com.seattleclouds.modules.v.b $r7;
+        android.widget.ImageView $r8;
+        java.lang.Integer $r9;
+        android.view.ViewTreeObserver $r10;
+        android.view.ViewTreeObserver$OnGlobalLayoutListener $r11;
+        android.widget.ProgressBar $r12;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int slideshow_view>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int thumbnail_gallery>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.Gallery) $r5;
+
+        $r0.<com.seattleclouds.modules.v.a: android.widget.Gallery c> = $r6;
+
+        $r6 = $r0.<com.seattleclouds.modules.v.a: android.widget.Gallery c>;
+
+        $r7 = new com.seattleclouds.modules.v.b;
+
+        specialinvoke $r7.<com.seattleclouds.modules.v.b: void <init>(com.seattleclouds.modules.v.a)>($r0);
+
+        virtualinvoke $r6.<android.widget.Gallery: void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)>($r7);
+
+        $i0 = <com.seattleclouds.h: int full_image>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.ImageView) $r5;
+
+        $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d> = $r8;
+
+        $r8 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        $r9 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(-1);
+
+        virtualinvoke $r8.<android.widget.ImageView: void setTag(java.lang.Object)>($r9);
+
+        $r8 = $r0.<com.seattleclouds.modules.v.a: android.widget.ImageView d>;
+
+        $r10 = virtualinvoke $r8.<android.widget.ImageView: android.view.ViewTreeObserver getViewTreeObserver()>();
+
+        $r11 = $r0.<com.seattleclouds.modules.v.a: android.view.ViewTreeObserver$OnGlobalLayoutListener a>;
+
+        virtualinvoke $r10.<android.view.ViewTreeObserver: void addOnGlobalLayoutListener(android.view.ViewTreeObserver$OnGlobalLayoutListener)>($r11);
+
+        $i0 = <com.seattleclouds.h: int progressBar>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r12 = (android.widget.ProgressBar) $r5;
+
+        $r0.<com.seattleclouds.modules.v.a: android.widget.ProgressBar e> = $r12;
+
+        return $r4;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.os.Bundle $r1, $r2;
+        java.util.ArrayList $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.v.a: android.os.Bundle j()>();
+
+        if $r2 == null goto label1;
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.util.ArrayList getParcelableArrayList(java.lang.String)>("ARG_IMAGES");
+
+        if $r3 == null goto label1;
+
+        $r0.<com.seattleclouds.modules.v.a: java.util.ArrayList b> = $r3;
+
+     label1:
+        if $r1 == null goto label2;
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String,int)>("STATE_CURRENT_POSITION", 0);
+
+        $r0.<com.seattleclouds.modules.v.a: int ai> = $i0;
+
+     label2:
+        return;
+    }
+
+    public void ab()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.widget.ProgressBar $r1;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.ProgressBar e>;
+
+        virtualinvoke $r1.<android.widget.ProgressBar: void setVisibility(int)>(0);
+
+        return;
+    }
+
+    public void ac()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.widget.ProgressBar $r1;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.ProgressBar e>;
+
+        virtualinvoke $r1.<android.widget.ProgressBar: void setVisibility(int)>(8);
+
+        return;
+    }
+
+    public void ad()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.widget.ProgressBar $r1;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: android.widget.ProgressBar e>;
+
+        virtualinvoke $r1.<android.widget.ProgressBar: void setVisibility(int)>(8);
+
+        return;
+    }
+
+    public void d(android.os.Bundle)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.os.Bundle $r1;
+        com.google.android.bitmapfun.t $r2;
+        android.support.v4.app.ac $r3;
+        int $i0;
+        com.seattleclouds.modules.v.f $r4;
+        com.google.android.bitmapfun.v $r5;
+        android.support.v4.app.aj $r6;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void d(android.os.Bundle)>($r1);
+
+        $r2 = new com.google.android.bitmapfun.t;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.v.a: android.support.v4.app.ac n()>();
+
+        specialinvoke $r2.<com.google.android.bitmapfun.t: void <init>(android.content.Context,java.lang.String)>($r3, "slideshow");
+
+        $r2.<com.google.android.bitmapfun.t: boolean g> = 0;
+
+        virtualinvoke $r2.<com.google.android.bitmapfun.t: void a(float)>(0.05F);
+
+        $r2.<com.google.android.bitmapfun.t: boolean i> = 1;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.v.a: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r3, 120.0F);
+
+        $r4 = new com.seattleclouds.modules.v.f;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.v.a: android.support.v4.app.ac n()>();
+
+        specialinvoke $r4.<com.seattleclouds.modules.v.f: void <init>(android.content.Context,int,boolean)>($r3, $i0, 0);
+
+        $r0.<com.seattleclouds.modules.v.a: com.google.android.bitmapfun.v i> = $r4;
+
+        $r5 = $r0.<com.seattleclouds.modules.v.a: com.google.android.bitmapfun.v i>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.v.a: android.support.v4.app.ac n()>();
+
+        $r6 = virtualinvoke $r3.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        virtualinvoke $r5.<com.google.android.bitmapfun.v: void a(android.support.v4.app.aj,com.google.android.bitmapfun.t)>($r6, $r2);
+
+        return;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.v.a $r0;
+        android.os.Bundle $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $i0 = $r0.<com.seattleclouds.modules.v.a: int ai>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putInt(java.lang.String,int)>("STATE_CURRENT_POSITION", $i0);
+
+        specialinvoke $r0.<com.seattleclouds.r: void e(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.modules.v.a $r0;
+        com.seattleclouds.modules.v.g $r1;
+
+        $r0 := @this: com.seattleclouds.modules.v.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.v.g: boolean cancel(boolean)>(1);
+
+        $r0.<com.seattleclouds.modules.v.a: com.seattleclouds.modules.v.g h> = null;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.r: void g()>();
+
+        return;
+    }
+}

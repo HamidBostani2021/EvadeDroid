@@ -1,0 +1,96 @@
+class com.seattleclouds.modules.dropbox.medialist.p extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.modules.dropbox.medialist.a a;
+
+    void <init>(com.seattleclouds.modules.dropbox.medialist.a)
+    {
+        com.seattleclouds.modules.dropbox.medialist.p $r0;
+        com.seattleclouds.modules.dropbox.medialist.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.dropbox.medialist.p;
+
+        $r1 := @parameter0: com.seattleclouds.modules.dropbox.medialist.a;
+
+        $r0.<com.seattleclouds.modules.dropbox.medialist.p: com.seattleclouds.modules.dropbox.medialist.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.dropbox.medialist.p $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.modules.dropbox.medialist.a $r2;
+        java.util.List $r3;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.dropbox.medialist.b $r5;
+        java.io.File $r6;
+        java.lang.String $r7, $r11;
+        boolean $z0;
+        com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus $r8;
+        com.seattleclouds.modules.dropbox.medialist.s $r9;
+        java.lang.StringBuilder $r10;
+
+        $r0 := @this: com.seattleclouds.modules.dropbox.medialist.p;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.p: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: java.util.List b(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.p: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: int d(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        $r4 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r5 = (com.seattleclouds.modules.dropbox.medialist.b) $r4;
+
+        $r6 = new java.io.File;
+
+        $r7 = virtualinvoke $r5.<com.seattleclouds.modules.dropbox.medialist.b: java.lang.String b()>();
+
+        specialinvoke $r6.<java.io.File: void <init>(java.lang.String)>($r7);
+
+        $z0 = virtualinvoke $r6.<java.io.File: boolean delete()>();
+
+        if $z0 == 0 goto label1;
+
+        $r8 = <com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus: com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus ONLINE>;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.dropbox.medialist.b: void a(com.seattleclouds.modules.dropbox.medialist.MediaFile$MediaFileStatus)>($r8);
+
+        $r2 = $r0.<com.seattleclouds.modules.dropbox.medialist.p: com.seattleclouds.modules.dropbox.medialist.a a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: com.seattleclouds.modules.dropbox.medialist.s a(com.seattleclouds.modules.dropbox.medialist.a)>($r2);
+
+        virtualinvoke $r9.<com.seattleclouds.modules.dropbox.medialist.s: void notifyDataSetChanged()>();
+
+        return;
+
+     label1:
+        $r7 = staticinvoke <com.seattleclouds.modules.dropbox.medialist.a: java.lang.String aa()>();
+
+        $r10 = new java.lang.StringBuilder;
+
+        specialinvoke $r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ERROR deleting file:");
+
+        $r11 = virtualinvoke $r5.<com.seattleclouds.modules.dropbox.medialist.b: java.lang.String b()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r11 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r7, $r11);
+
+        return;
+    }
+}

@@ -1,0 +1,47 @@
+public class com.seattleclouds.modules.podcast.PodcastCategory extends java.lang.Object implements java.io.Serializable
+{
+    private static final long serialVersionUID;
+    public java.util.ArrayList items;
+    public com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem;
+    public java.lang.String title;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.podcast.PodcastCategory $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastCategory;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.ArrayList items> = $r1;
+
+        return;
+    }
+
+    public java.util.Date getLastItemPublishDate()
+    {
+        com.seattleclouds.modules.podcast.PodcastCategory $r0;
+        com.seattleclouds.modules.podcast.PodcastItem $r1;
+        java.util.Date r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.PodcastCategory;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        r2 = $r1.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+        return r2;
+
+     label1:
+        return null;
+    }
+}

@@ -1,0 +1,50 @@
+class com.seattleclouds.modules.voicerecord.z extends java.util.TimerTask
+{
+    final com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity a;
+
+    void <init>(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)
+    {
+        com.seattleclouds.modules.voicerecord.z $r0;
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r1;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.z;
+
+        $r1 := @parameter0: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r0.<com.seattleclouds.modules.voicerecord.z: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity a> = $r1;
+
+        specialinvoke $r0.<java.util.TimerTask: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.voicerecord.z $r0;
+        long $l0;
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r1, $r2;
+        com.seattleclouds.modules.voicerecord.aa $r3;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.z;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.z: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.z: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity a>;
+
+        $l0 = staticinvoke <com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long d(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)>($r2);
+
+        $l0 = $l0 + 500L;
+
+        staticinvoke <com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long a(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity,long)>($r1, $l0);
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.z: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity a>;
+
+        $r3 = new com.seattleclouds.modules.voicerecord.aa;
+
+        specialinvoke $r3.<com.seattleclouds.modules.voicerecord.aa: void <init>(com.seattleclouds.modules.voicerecord.z)>($r0);
+
+        virtualinvoke $r1.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void runOnUiThread(java.lang.Runnable)>($r3);
+
+        return;
+    }
+}

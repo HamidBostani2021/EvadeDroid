@@ -1,0 +1,83 @@
+class com.seattleclouds.modules.h.b extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.modules.h.a a;
+
+    void <init>(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.b $r0;
+        com.seattleclouds.modules.h.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.h.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r0.<com.seattleclouds.modules.h.b: com.seattleclouds.modules.h.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.h.b $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.modules.h.a $r2;
+        android.widget.TextView $r3;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5;
+
+        $r0 := @this: com.seattleclouds.modules.h.b;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.b: com.seattleclouds.modules.h.a a>;
+
+        staticinvoke <com.seattleclouds.modules.h.a: void a(com.seattleclouds.modules.h.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.h.b: com.seattleclouds.modules.h.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.h.a: android.widget.TextView b(com.seattleclouds.modules.h.a)>($r2);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r2 = $r0.<com.seattleclouds.modules.h.b: com.seattleclouds.modules.h.a a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.h.a: int a(com.seattleclouds.modules.h.a,java.lang.String)>($r2, "player1Property");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+        $r2 = $r0.<com.seattleclouds.modules.h.b: com.seattleclouds.modules.h.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.h.a: android.widget.TextView c(com.seattleclouds.modules.h.a)>($r2);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r2 = $r0.<com.seattleclouds.modules.h.b: com.seattleclouds.modules.h.a a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.h.a: int a(com.seattleclouds.modules.h.a,java.lang.String)>($r2, "player2Property");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+        return;
+    }
+}

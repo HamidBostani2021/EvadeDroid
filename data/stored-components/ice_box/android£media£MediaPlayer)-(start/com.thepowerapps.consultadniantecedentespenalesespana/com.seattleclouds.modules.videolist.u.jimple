@@ -1,0 +1,82 @@
+class com.seattleclouds.modules.videolist.u extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.modules.videolist.b a;
+
+    void <init>(com.seattleclouds.modules.videolist.b)
+    {
+        com.seattleclouds.modules.videolist.u $r0;
+        com.seattleclouds.modules.videolist.b $r1;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.u;
+
+        $r1 := @parameter0: com.seattleclouds.modules.videolist.b;
+
+        $r0.<com.seattleclouds.modules.videolist.u: com.seattleclouds.modules.videolist.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.videolist.u $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.modules.videolist.VideoFile$Status $r2, $r7;
+        com.seattleclouds.modules.videolist.b $r3, $r8;
+        java.util.List $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.modules.videolist.a $r6;
+        com.seattleclouds.modules.videolist.w $r9;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.u;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r3 = $r0.<com.seattleclouds.modules.videolist.u: com.seattleclouds.modules.videolist.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.videolist.b: java.util.List a(com.seattleclouds.modules.videolist.b)>($r3);
+
+        $r3 = $r0.<com.seattleclouds.modules.videolist.u: com.seattleclouds.modules.videolist.b a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.videolist.b: int d(com.seattleclouds.modules.videolist.b)>($r3);
+
+        $r5 = interfaceinvoke $r4.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r6 = (com.seattleclouds.modules.videolist.a) $r5;
+
+        $r7 = virtualinvoke $r6.<com.seattleclouds.modules.videolist.a: com.seattleclouds.modules.videolist.VideoFile$Status c()>();
+
+        $r2 = <com.seattleclouds.modules.videolist.VideoFile$Status: com.seattleclouds.modules.videolist.VideoFile$Status LOCAL>;
+
+        if $r7 != $r2 goto label1;
+
+        return;
+
+     label1:
+        $r2 = <com.seattleclouds.modules.videolist.VideoFile$Status: com.seattleclouds.modules.videolist.VideoFile$Status ONLINE>;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.videolist.a: void a(com.seattleclouds.modules.videolist.VideoFile$Status)>($r2);
+
+        virtualinvoke $r6.<com.seattleclouds.modules.videolist.a: void a(int)>(0);
+
+        $r3 = $r0.<com.seattleclouds.modules.videolist.u: com.seattleclouds.modules.videolist.b a>;
+
+        $r8 = $r0.<com.seattleclouds.modules.videolist.u: com.seattleclouds.modules.videolist.b a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.videolist.b: int d(com.seattleclouds.modules.videolist.b)>($r8);
+
+        staticinvoke <com.seattleclouds.modules.videolist.b: void b(com.seattleclouds.modules.videolist.b,int)>($r3, $i0);
+
+        $r3 = $r0.<com.seattleclouds.modules.videolist.u: com.seattleclouds.modules.videolist.b a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.videolist.b: com.seattleclouds.modules.videolist.w e(com.seattleclouds.modules.videolist.b)>($r3);
+
+        virtualinvoke $r9.<com.seattleclouds.modules.videolist.w: void notifyDataSetChanged()>();
+
+        return;
+    }
+}

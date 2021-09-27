@@ -1,0 +1,9 @@
+public interface  anywheresoftware.b4a.B4AClass extends java.lang.Object
+{
+
+    public abstract boolean IsInitialized();
+
+    public abstract anywheresoftware.b4a.BA getActivityBA();
+
+    public abstract anywheresoftware.b4a.BA getBA();
+}

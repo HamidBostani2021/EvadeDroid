@@ -1,0 +1,825 @@
+public final class com.google.android.vending.expansion.downloader.impl.c extends java.lang.Object implements org.apache.http.client.HttpClient
+{
+    static java.lang.Class a;
+    public static long b;
+    private static final org.apache.http.HttpRequestInterceptor c;
+    private final org.apache.http.client.HttpClient d;
+    private java.lang.RuntimeException e;
+    private volatile com.google.android.vending.expansion.downloader.impl.g f;
+
+    static void <clinit>()
+    {
+        java.lang.Class $r0;
+        com.google.android.vending.expansion.downloader.impl.d $r1;
+        java.lang.Exception $r2;
+
+     label1:
+        $r0 = staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>("android.net.SSLSessionCache");
+
+     label2:
+        <com.google.android.vending.expansion.downloader.impl.c: java.lang.Class a> = $r0;
+
+     label3:
+        <com.google.android.vending.expansion.downloader.impl.c: long b> = 256L;
+
+        $r1 = new com.google.android.vending.expansion.downloader.impl.d;
+
+        specialinvoke $r1.<com.google.android.vending.expansion.downloader.impl.d: void <init>()>();
+
+        <com.google.android.vending.expansion.downloader.impl.c: org.apache.http.HttpRequestInterceptor c> = $r1;
+
+        return;
+
+     label4:
+        $r2 := @caughtexception;
+
+        goto label3;
+
+        catch java.lang.Exception from label1 to label2 with label4;
+    }
+
+    private void <init>(org.apache.http.conn.ClientConnectionManager, org.apache.http.params.HttpParams)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.conn.ClientConnectionManager $r1;
+        org.apache.http.params.HttpParams $r2;
+        java.lang.IllegalStateException r3;
+        com.google.android.vending.expansion.downloader.impl.e r4;
+        org.apache.http.client.HttpClient r5;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.conn.ClientConnectionManager;
+
+        $r2 := @parameter1: org.apache.http.params.HttpParams;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        r3 = new java.lang.IllegalStateException;
+
+        specialinvoke r3.<java.lang.IllegalStateException: void <init>(java.lang.String)>("AndroidHttpClient created and never closed");
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.c: java.lang.RuntimeException e> = r3;
+
+        r4 = new com.google.android.vending.expansion.downloader.impl.e;
+
+        specialinvoke r4.<com.google.android.vending.expansion.downloader.impl.e: void <init>(com.google.android.vending.expansion.downloader.impl.c,org.apache.http.conn.ClientConnectionManager,org.apache.http.params.HttpParams)>($r0, $r1, $r2);
+
+        r5 = (org.apache.http.client.HttpClient) r4;
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d> = r5;
+
+        return;
+    }
+
+    public static com.google.android.vending.expansion.downloader.impl.c a(java.lang.String, android.content.Context)
+    {
+        java.lang.String $r0;
+        android.content.Context $r1;
+        org.apache.http.params.BasicHttpParams $r2, r24;
+        java.lang.Class $r3, $r10;
+        java.lang.Class[] $r4;
+        java.lang.reflect.Constructor $r5;
+        java.lang.Object[] $r6;
+        java.lang.Object $r7;
+        org.apache.http.conn.scheme.SchemeRegistry $r8, r25;
+        org.apache.http.conn.scheme.PlainSocketFactory $r9;
+        java.lang.reflect.Method $r11;
+        java.lang.Integer $r12;
+        java.lang.Throwable $r13, $r14, $r15, $r16, $r17, $r18, $r19, $r20, $r21, $r22, $r23;
+        org.apache.http.conn.scheme.Scheme r26;
+        org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager r27;
+        com.google.android.vending.expansion.downloader.impl.c r28;
+        org.apache.http.params.HttpParams r29;
+        org.apache.http.conn.scheme.SocketFactory r30;
+        java.lang.SecurityException r31;
+        java.lang.NoSuchMethodException r32;
+        java.lang.IllegalArgumentException r33;
+        java.lang.InstantiationException r34;
+        java.lang.IllegalAccessException r35;
+        java.lang.reflect.InvocationTargetException r36;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 := @parameter1: android.content.Context;
+
+        r24 = new org.apache.http.params.BasicHttpParams;
+
+        $r2 = r24;
+
+        specialinvoke r24.<org.apache.http.params.BasicHttpParams: void <init>()>();
+
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        staticinvoke <org.apache.http.params.HttpConnectionParams: void setStaleCheckingEnabled(org.apache.http.params.HttpParams,boolean)>(r29, 0);
+
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        staticinvoke <org.apache.http.params.HttpConnectionParams: void setConnectionTimeout(org.apache.http.params.HttpParams,int)>(r29, 60000);
+
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        staticinvoke <org.apache.http.params.HttpConnectionParams: void setSoTimeout(org.apache.http.params.HttpParams,int)>(r29, 60000);
+
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        staticinvoke <org.apache.http.params.HttpConnectionParams: void setSocketBufferSize(org.apache.http.params.HttpParams,int)>(r29, 8192);
+
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        staticinvoke <org.apache.http.client.params.HttpClientParams: void setRedirecting(org.apache.http.params.HttpParams,boolean)>(r29, 0);
+
+        if $r1 == null goto label19;
+
+        $r3 = <com.google.android.vending.expansion.downloader.impl.c: java.lang.Class a>;
+
+        if $r3 == null goto label19;
+
+        $r3 = <com.google.android.vending.expansion.downloader.impl.c: java.lang.Class a>;
+
+        $r4 = newarray (java.lang.Class)[1];
+
+        $r4[0] = class "Landroid/content/Context;";
+
+     label01:
+        $r5 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Constructor getConstructor(java.lang.Class[])>($r4);
+
+     label02:
+        $r6 = newarray (java.lang.Object)[1];
+
+        $r6[0] = $r1;
+
+     label03:
+        $r7 = virtualinvoke $r5.<java.lang.reflect.Constructor: java.lang.Object newInstance(java.lang.Object[])>($r6);
+
+     label04:
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        staticinvoke <org.apache.http.params.HttpProtocolParams: void setUserAgent(org.apache.http.params.HttpParams,java.lang.String)>(r29, $r0);
+
+        r25 = new org.apache.http.conn.scheme.SchemeRegistry;
+
+        $r8 = r25;
+
+        specialinvoke r25.<org.apache.http.conn.scheme.SchemeRegistry: void <init>()>();
+
+        r26 = new org.apache.http.conn.scheme.Scheme;
+
+        $r9 = staticinvoke <org.apache.http.conn.scheme.PlainSocketFactory: org.apache.http.conn.scheme.PlainSocketFactory getSocketFactory()>();
+
+        r30 = (org.apache.http.conn.scheme.SocketFactory) $r9;
+
+        specialinvoke r26.<org.apache.http.conn.scheme.Scheme: void <init>(java.lang.String,org.apache.http.conn.scheme.SocketFactory,int)>("http", r30, 80);
+
+        virtualinvoke $r8.<org.apache.http.conn.scheme.SchemeRegistry: org.apache.http.conn.scheme.Scheme register(org.apache.http.conn.scheme.Scheme)>(r26);
+
+        if $r7 == null goto label25;
+
+        $r3 = class "Landroid/net/SSLCertificateSocketFactory;";
+
+        $r4 = newarray (java.lang.Class)[2];
+
+        $r10 = <java.lang.Integer: java.lang.Class TYPE>;
+
+        $r4[0] = $r10;
+
+        $r10 = <com.google.android.vending.expansion.downloader.impl.c: java.lang.Class a>;
+
+        $r4[1] = $r10;
+
+     label05:
+        $r11 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>("getHttpSocketFactory", $r4);
+
+     label06:
+        $r6 = newarray (java.lang.Object)[2];
+
+     label07:
+        $r12 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(60000);
+
+     label08:
+        $r6[0] = $r12;
+
+        $r6[1] = $r7;
+
+     label09:
+        $r7 = virtualinvoke $r11.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>(null, $r6);
+
+     label10:
+        $r7 = (org.apache.http.conn.scheme.SocketFactory) $r7;
+
+     label11:
+        if $r7 != null goto label12;
+
+        $r7 = staticinvoke <org.apache.http.conn.ssl.SSLSocketFactory: org.apache.http.conn.ssl.SSLSocketFactory getSocketFactory()>();
+
+     label12:
+        r26 = new org.apache.http.conn.scheme.Scheme;
+
+        r30 = (org.apache.http.conn.scheme.SocketFactory) $r7;
+
+        specialinvoke r26.<org.apache.http.conn.scheme.Scheme: void <init>(java.lang.String,org.apache.http.conn.scheme.SocketFactory,int)>("https", r30, 443);
+
+        virtualinvoke $r8.<org.apache.http.conn.scheme.SchemeRegistry: org.apache.http.conn.scheme.Scheme register(org.apache.http.conn.scheme.Scheme)>(r26);
+
+        r27 = new org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        specialinvoke r27.<org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager: void <init>(org.apache.http.params.HttpParams,org.apache.http.conn.scheme.SchemeRegistry)>(r29, $r8);
+
+        r28 = new com.google.android.vending.expansion.downloader.impl.c;
+
+        r29 = (org.apache.http.params.HttpParams) $r2;
+
+        specialinvoke r28.<com.google.android.vending.expansion.downloader.impl.c: void <init>(org.apache.http.conn.ClientConnectionManager,org.apache.http.params.HttpParams)>(r27, r29);
+
+        return r28;
+
+     label13:
+        $r13 := @caughtexception;
+
+        r31 = (java.lang.SecurityException) $r13;
+
+        virtualinvoke r31.<java.lang.SecurityException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label04;
+
+     label14:
+        $r14 := @caughtexception;
+
+        r32 = (java.lang.NoSuchMethodException) $r14;
+
+        virtualinvoke r32.<java.lang.NoSuchMethodException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label04;
+
+     label15:
+        $r15 := @caughtexception;
+
+        r33 = (java.lang.IllegalArgumentException) $r15;
+
+        virtualinvoke r33.<java.lang.IllegalArgumentException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label04;
+
+     label16:
+        $r16 := @caughtexception;
+
+        r34 = (java.lang.InstantiationException) $r16;
+
+        virtualinvoke r34.<java.lang.InstantiationException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label04;
+
+     label17:
+        $r17 := @caughtexception;
+
+        r35 = (java.lang.IllegalAccessException) $r17;
+
+        virtualinvoke r35.<java.lang.IllegalAccessException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label04;
+
+     label18:
+        $r18 := @caughtexception;
+
+        r36 = (java.lang.reflect.InvocationTargetException) $r18;
+
+        virtualinvoke r36.<java.lang.reflect.InvocationTargetException: void printStackTrace()>();
+
+     label19:
+        $r7 = null;
+
+        goto label04;
+
+     label20:
+        $r19 := @caughtexception;
+
+        r31 = (java.lang.SecurityException) $r19;
+
+        virtualinvoke r31.<java.lang.SecurityException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label11;
+
+     label21:
+        $r20 := @caughtexception;
+
+        r32 = (java.lang.NoSuchMethodException) $r20;
+
+        virtualinvoke r32.<java.lang.NoSuchMethodException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label11;
+
+     label22:
+        $r21 := @caughtexception;
+
+        r33 = (java.lang.IllegalArgumentException) $r21;
+
+        virtualinvoke r33.<java.lang.IllegalArgumentException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label11;
+
+     label23:
+        $r22 := @caughtexception;
+
+        r35 = (java.lang.IllegalAccessException) $r22;
+
+        virtualinvoke r35.<java.lang.IllegalAccessException: void printStackTrace()>();
+
+        $r7 = null;
+
+        goto label11;
+
+     label24:
+        $r23 := @caughtexception;
+
+        r36 = (java.lang.reflect.InvocationTargetException) $r23;
+
+        virtualinvoke r36.<java.lang.reflect.InvocationTargetException: void printStackTrace()>();
+
+     label25:
+        $r7 = null;
+
+        goto label11;
+
+        catch java.lang.SecurityException from label01 to label02 with label13;
+        catch java.lang.SecurityException from label03 to label04 with label13;
+        catch java.lang.NoSuchMethodException from label01 to label02 with label14;
+        catch java.lang.NoSuchMethodException from label03 to label04 with label14;
+        catch java.lang.IllegalArgumentException from label01 to label02 with label15;
+        catch java.lang.IllegalArgumentException from label03 to label04 with label15;
+        catch java.lang.InstantiationException from label01 to label02 with label16;
+        catch java.lang.InstantiationException from label03 to label04 with label16;
+        catch java.lang.IllegalAccessException from label01 to label02 with label17;
+        catch java.lang.IllegalAccessException from label03 to label04 with label17;
+        catch java.lang.reflect.InvocationTargetException from label01 to label02 with label18;
+        catch java.lang.reflect.InvocationTargetException from label03 to label04 with label18;
+        catch java.lang.SecurityException from label05 to label06 with label20;
+        catch java.lang.SecurityException from label07 to label08 with label20;
+        catch java.lang.SecurityException from label09 to label10 with label20;
+        catch java.lang.NoSuchMethodException from label05 to label06 with label21;
+        catch java.lang.NoSuchMethodException from label07 to label08 with label21;
+        catch java.lang.NoSuchMethodException from label09 to label10 with label21;
+        catch java.lang.IllegalArgumentException from label05 to label06 with label22;
+        catch java.lang.IllegalArgumentException from label07 to label08 with label22;
+        catch java.lang.IllegalArgumentException from label09 to label10 with label22;
+        catch java.lang.IllegalAccessException from label05 to label06 with label23;
+        catch java.lang.IllegalAccessException from label07 to label08 with label23;
+        catch java.lang.IllegalAccessException from label09 to label10 with label23;
+        catch java.lang.reflect.InvocationTargetException from label05 to label06 with label24;
+        catch java.lang.reflect.InvocationTargetException from label07 to label08 with label24;
+        catch java.lang.reflect.InvocationTargetException from label09 to label10 with label24;
+    }
+
+    static com.google.android.vending.expansion.downloader.impl.g a(com.google.android.vending.expansion.downloader.impl.c)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        com.google.android.vending.expansion.downloader.impl.g r1;
+
+        $r0 := @parameter0: com.google.android.vending.expansion.downloader.impl.c;
+
+        r1 = $r0.<com.google.android.vending.expansion.downloader.impl.c: com.google.android.vending.expansion.downloader.impl.g f>;
+
+        return r1;
+    }
+
+    static java.lang.String a(org.apache.http.client.methods.HttpUriRequest, boolean)
+    {
+        org.apache.http.client.methods.HttpUriRequest $r0;
+        boolean $z0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: org.apache.http.client.methods.HttpUriRequest;
+
+        $z0 := @parameter1: boolean;
+
+        $r1 = staticinvoke <com.google.android.vending.expansion.downloader.impl.c: java.lang.String b(org.apache.http.client.methods.HttpUriRequest,boolean)>($r0, $z0);
+
+        return $r1;
+    }
+
+    private static java.lang.String b(org.apache.http.client.methods.HttpUriRequest, boolean)
+    {
+        boolean $z0, $z1;
+        java.lang.StringBuilder $r0, $r12;
+        org.apache.http.client.methods.HttpUriRequest $r1, $r8;
+        org.apache.http.Header[] $r2;
+        int $i0, $i1;
+        org.apache.http.Header $r3;
+        java.lang.String $r4;
+        java.net.URI $r5;
+        org.apache.http.impl.client.RequestWrapper $r6;
+        org.apache.http.HttpRequest $r7;
+        org.apache.http.HttpEntityEnclosingRequest $r9;
+        org.apache.http.HttpEntity $r10;
+        long $l2;
+        byte $b3;
+        java.io.ByteArrayOutputStream $r11;
+
+        $r1 := @parameter0: org.apache.http.client.methods.HttpUriRequest;
+
+        $z0 := @parameter1: boolean;
+
+        $r0 = new java.lang.StringBuilder;
+
+        specialinvoke $r0.<java.lang.StringBuilder: void <init>()>();
+
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("curl ");
+
+        $r2 = interfaceinvoke $r1.<org.apache.http.client.methods.HttpUriRequest: org.apache.http.Header[] getAllHeaders()>();
+
+        $i0 = lengthof $r2;
+
+        $i1 = 0;
+
+     label1:
+        if $i1 >= $i0 goto label4;
+
+        $r3 = $r2[$i1];
+
+        if $z0 != 0 goto label3;
+
+        $r4 = interfaceinvoke $r3.<org.apache.http.Header: java.lang.String getName()>();
+
+        $z1 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Authorization");
+
+        if $z1 != 0 goto label2;
+
+        $r4 = interfaceinvoke $r3.<org.apache.http.Header: java.lang.String getName()>();
+
+        $z1 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Cookie");
+
+        if $z1 == 0 goto label3;
+
+     label2:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label3:
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("--header \"");
+
+        $r4 = virtualinvoke $r3.<java.lang.Object: java.lang.String toString()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String trim()>();
+
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\" ");
+
+        goto label2;
+
+     label4:
+        $r5 = interfaceinvoke $r1.<org.apache.http.client.methods.HttpUriRequest: java.net.URI getURI()>();
+
+        $z0 = $r1 instanceof org.apache.http.impl.client.RequestWrapper;
+
+        if $z0 == 0 goto label8;
+
+        $r6 = (org.apache.http.impl.client.RequestWrapper) $r1;
+
+        $r7 = virtualinvoke $r6.<org.apache.http.impl.client.RequestWrapper: org.apache.http.HttpRequest getOriginal()>();
+
+        $z0 = $r7 instanceof org.apache.http.client.methods.HttpUriRequest;
+
+        if $z0 == 0 goto label8;
+
+        $r8 = (org.apache.http.client.methods.HttpUriRequest) $r7;
+
+        $r5 = interfaceinvoke $r8.<org.apache.http.client.methods.HttpUriRequest: java.net.URI getURI()>();
+
+     label5:
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\"");
+
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r5);
+
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\"");
+
+        $z0 = $r1 instanceof org.apache.http.HttpEntityEnclosingRequest;
+
+        if $z0 == 0 goto label6;
+
+        $r9 = (org.apache.http.HttpEntityEnclosingRequest) $r1;
+
+        $r10 = interfaceinvoke $r9.<org.apache.http.HttpEntityEnclosingRequest: org.apache.http.HttpEntity getEntity()>();
+
+        if $r10 == null goto label6;
+
+        $z0 = interfaceinvoke $r10.<org.apache.http.HttpEntity: boolean isRepeatable()>();
+
+        if $z0 == 0 goto label6;
+
+        $l2 = interfaceinvoke $r10.<org.apache.http.HttpEntity: long getContentLength()>();
+
+        $b3 = $l2 cmp 1024L;
+
+        if $b3 >= 0 goto label7;
+
+        $r11 = new java.io.ByteArrayOutputStream;
+
+        specialinvoke $r11.<java.io.ByteArrayOutputStream: void <init>()>();
+
+        interfaceinvoke $r10.<org.apache.http.HttpEntity: void writeTo(java.io.OutputStream)>($r11);
+
+        $r4 = virtualinvoke $r11.<java.io.ByteArrayOutputStream: java.lang.String toString()>();
+
+        $r12 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" --data-ascii \"");
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\"");
+
+     label6:
+        $r4 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r4;
+
+     label7:
+        virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" [TOO MUCH DATA TO INCLUDE]");
+
+        goto label6;
+
+     label8:
+        goto label5;
+    }
+
+    static org.apache.http.HttpRequestInterceptor b()
+    {
+        org.apache.http.HttpRequestInterceptor r0;
+
+        r0 = <com.google.android.vending.expansion.downloader.impl.c: org.apache.http.HttpRequestInterceptor c>;
+
+        return r0;
+    }
+
+    public void a()
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.conn.ClientConnectionManager $r1;
+        java.lang.RuntimeException $r2;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.c: java.lang.RuntimeException e>;
+
+        if $r2 == null goto label1;
+
+        $r1 = virtualinvoke $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.conn.ClientConnectionManager getConnectionManager()>();
+
+        interfaceinvoke $r1.<org.apache.http.conn.ClientConnectionManager: void shutdown()>();
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.c: java.lang.RuntimeException e> = null;
+
+     label1:
+        return;
+    }
+
+    public java.lang.Object execute(org.apache.http.HttpHost, org.apache.http.HttpRequest, org.apache.http.client.ResponseHandler)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.HttpHost $r1;
+        org.apache.http.HttpRequest $r2;
+        org.apache.http.client.ResponseHandler $r3;
+        java.lang.Object $r4;
+        org.apache.http.client.HttpClient $r5;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.HttpHost;
+
+        $r2 := @parameter1: org.apache.http.HttpRequest;
+
+        $r3 := @parameter2: org.apache.http.client.ResponseHandler;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r4 = interfaceinvoke $r5.<org.apache.http.client.HttpClient: java.lang.Object execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.client.ResponseHandler)>($r1, $r2, $r3);
+
+        return $r4;
+    }
+
+    public java.lang.Object execute(org.apache.http.HttpHost, org.apache.http.HttpRequest, org.apache.http.client.ResponseHandler, org.apache.http.protocol.HttpContext)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.HttpHost $r1;
+        org.apache.http.HttpRequest $r2;
+        org.apache.http.client.ResponseHandler $r3;
+        org.apache.http.protocol.HttpContext $r4;
+        java.lang.Object $r5;
+        org.apache.http.client.HttpClient $r6;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.HttpHost;
+
+        $r2 := @parameter1: org.apache.http.HttpRequest;
+
+        $r3 := @parameter2: org.apache.http.client.ResponseHandler;
+
+        $r4 := @parameter3: org.apache.http.protocol.HttpContext;
+
+        $r6 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r5 = interfaceinvoke $r6.<org.apache.http.client.HttpClient: java.lang.Object execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.client.ResponseHandler,org.apache.http.protocol.HttpContext)>($r1, $r2, $r3, $r4);
+
+        return $r5;
+    }
+
+    public java.lang.Object execute(org.apache.http.client.methods.HttpUriRequest, org.apache.http.client.ResponseHandler)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.client.methods.HttpUriRequest $r1;
+        org.apache.http.client.ResponseHandler $r2;
+        java.lang.Object $r3;
+        org.apache.http.client.HttpClient $r4;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.client.methods.HttpUriRequest;
+
+        $r2 := @parameter1: org.apache.http.client.ResponseHandler;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r3 = interfaceinvoke $r4.<org.apache.http.client.HttpClient: java.lang.Object execute(org.apache.http.client.methods.HttpUriRequest,org.apache.http.client.ResponseHandler)>($r1, $r2);
+
+        return $r3;
+    }
+
+    public java.lang.Object execute(org.apache.http.client.methods.HttpUriRequest, org.apache.http.client.ResponseHandler, org.apache.http.protocol.HttpContext)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.client.methods.HttpUriRequest $r1;
+        org.apache.http.client.ResponseHandler $r2;
+        org.apache.http.protocol.HttpContext $r3;
+        java.lang.Object $r4;
+        org.apache.http.client.HttpClient $r5;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.client.methods.HttpUriRequest;
+
+        $r2 := @parameter1: org.apache.http.client.ResponseHandler;
+
+        $r3 := @parameter2: org.apache.http.protocol.HttpContext;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r4 = interfaceinvoke $r5.<org.apache.http.client.HttpClient: java.lang.Object execute(org.apache.http.client.methods.HttpUriRequest,org.apache.http.client.ResponseHandler,org.apache.http.protocol.HttpContext)>($r1, $r2, $r3);
+
+        return $r4;
+    }
+
+    public org.apache.http.HttpResponse execute(org.apache.http.HttpHost, org.apache.http.HttpRequest)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.HttpHost $r1;
+        org.apache.http.HttpRequest $r2;
+        org.apache.http.HttpResponse $r3;
+        org.apache.http.client.HttpClient $r4;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.HttpHost;
+
+        $r2 := @parameter1: org.apache.http.HttpRequest;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r3 = interfaceinvoke $r4.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.HttpHost,org.apache.http.HttpRequest)>($r1, $r2);
+
+        return $r3;
+    }
+
+    public org.apache.http.HttpResponse execute(org.apache.http.HttpHost, org.apache.http.HttpRequest, org.apache.http.protocol.HttpContext)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.HttpHost $r1;
+        org.apache.http.HttpRequest $r2;
+        org.apache.http.protocol.HttpContext $r3;
+        org.apache.http.HttpResponse $r4;
+        org.apache.http.client.HttpClient $r5;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.HttpHost;
+
+        $r2 := @parameter1: org.apache.http.HttpRequest;
+
+        $r3 := @parameter2: org.apache.http.protocol.HttpContext;
+
+        $r5 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r4 = interfaceinvoke $r5.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext)>($r1, $r2, $r3);
+
+        return $r4;
+    }
+
+    public org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.client.methods.HttpUriRequest $r1;
+        org.apache.http.HttpResponse $r2;
+        org.apache.http.client.HttpClient $r3;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.client.methods.HttpUriRequest;
+
+        $r3 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r2 = interfaceinvoke $r3.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r1);
+
+        return $r2;
+    }
+
+    public org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest, org.apache.http.protocol.HttpContext)
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.client.methods.HttpUriRequest $r1;
+        org.apache.http.protocol.HttpContext $r2;
+        org.apache.http.HttpResponse $r3;
+        org.apache.http.client.HttpClient $r4;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r1 := @parameter0: org.apache.http.client.methods.HttpUriRequest;
+
+        $r2 := @parameter1: org.apache.http.protocol.HttpContext;
+
+        $r4 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r3 = interfaceinvoke $r4.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest,org.apache.http.protocol.HttpContext)>($r1, $r2);
+
+        return $r3;
+    }
+
+    protected void finalize()
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        java.lang.RuntimeException $r1;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        specialinvoke $r0.<java.lang.Object: void finalize()>();
+
+        $r1 = $r0.<com.google.android.vending.expansion.downloader.impl.c: java.lang.RuntimeException e>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.google.android.vending.expansion.downloader.impl.c: java.lang.RuntimeException e>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("AndroidHttpClient", "Leak found", $r1);
+
+        $r0.<com.google.android.vending.expansion.downloader.impl.c: java.lang.RuntimeException e> = null;
+
+     label1:
+        return;
+    }
+
+    public org.apache.http.conn.ClientConnectionManager getConnectionManager()
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.conn.ClientConnectionManager $r1;
+        org.apache.http.client.HttpClient $r2;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r1 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.conn.ClientConnectionManager getConnectionManager()>();
+
+        return $r1;
+    }
+
+    public org.apache.http.params.HttpParams getParams()
+    {
+        com.google.android.vending.expansion.downloader.impl.c $r0;
+        org.apache.http.params.HttpParams $r1;
+        org.apache.http.client.HttpClient $r2;
+
+        $r0 := @this: com.google.android.vending.expansion.downloader.impl.c;
+
+        $r2 = $r0.<com.google.android.vending.expansion.downloader.impl.c: org.apache.http.client.HttpClient d>;
+
+        $r1 = interfaceinvoke $r2.<org.apache.http.client.HttpClient: org.apache.http.params.HttpParams getParams()>();
+
+        return $r1;
+    }
+}

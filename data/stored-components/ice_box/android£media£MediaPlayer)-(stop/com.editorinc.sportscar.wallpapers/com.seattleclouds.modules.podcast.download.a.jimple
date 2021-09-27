@@ -1,0 +1,1209 @@
+class com.seattleclouds.modules.podcast.download.a extends android.os.AsyncTask
+{
+    final com.seattleclouds.modules.podcast.download.PodcastDownloadService a;
+    private java.lang.String b;
+    private com.seattleclouds.modules.podcast.PodcastItem c;
+    private int d;
+    private int e;
+    private java.util.Timer f;
+    private java.net.HttpURLConnection g;
+    private java.lang.ref.WeakReference h;
+
+    public void <init>(com.seattleclouds.modules.podcast.download.PodcastDownloadService, com.seattleclouds.modules.podcast.PodcastItem)
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r1;
+        com.seattleclouds.modules.podcast.PodcastItem $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.PodcastDownloadService;
+
+        $r2 := @parameter1: com.seattleclouds.modules.podcast.PodcastItem;
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c> = $r2;
+
+        return;
+    }
+
+    static java.net.HttpURLConnection a(com.seattleclouds.modules.podcast.download.a)
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.net.HttpURLConnection r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.a;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+        return r1;
+    }
+
+    private void a()
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        com.seattleclouds.modules.podcast.download.e $r1;
+        java.util.Timer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void b()>();
+
+        $r2 = new java.util.Timer;
+
+        specialinvoke $r2.<java.util.Timer: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.util.Timer f> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.a: java.util.Timer f>;
+
+        $r1 = new com.seattleclouds.modules.podcast.download.e;
+
+        specialinvoke $r1.<com.seattleclouds.modules.podcast.download.e: void <init>(com.seattleclouds.modules.podcast.download.a)>($r0);
+
+        virtualinvoke $r2.<java.util.Timer: void schedule(java.util.TimerTask,long)>($r1, 10100L);
+
+        return;
+    }
+
+    private void b()
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.util.Timer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.a: java.util.Timer f>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.a: java.util.Timer f>;
+
+        virtualinvoke $r1.<java.util.Timer: void cancel()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.util.Timer f> = null;
+
+     label1:
+        return;
+    }
+
+    protected transient java.lang.Void a(java.lang.Void[])
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.lang.Void[] $r1;
+        byte[] $r2;
+        java.io.BufferedInputStream $r3, $r12, r46;
+        java.net.URL $r4, r44;
+        com.seattleclouds.modules.podcast.PodcastItem $r5;
+        java.lang.String $r6;
+        java.net.URLConnection $r7;
+        java.net.HttpURLConnection $r8;
+        int $i0, $i2;
+        java.lang.StringBuilder $r9, r45;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r10;
+        android.content.Context $r11;
+        java.io.InputStream $r13;
+        java.io.File $r14, $r25, r49;
+        java.io.FileOutputStream $r15, r47;
+        java.io.BufferedOutputStream $r16, r48;
+        long $l1, $l3;
+        float $f0, $f1;
+        java.lang.Integer[] $r17;
+        java.lang.Integer $r18;
+        java.lang.Throwable $r19, $r20, $r21, $r22, $r23, $r24, $r26, $r27, $r28, $r29, $r30, $r31, $r32, $r33, $r34, $r35, $r36, $r37, $r38, $r39, $r40, $r41, $r42, $r43;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r3 = null;
+
+     label001:
+        r44 = new java.net.URL;
+
+     label002:
+        $r4 = r44;
+
+     label003:
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+        $r6 = $r5.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String mediaUrlString>;
+
+     label004:
+        specialinvoke r44.<java.net.URL: void <init>(java.lang.String)>($r6);
+
+        $r7 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>();
+
+     label005:
+        $r8 = (java.net.HttpURLConnection) $r7;
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g> = $r8;
+
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+     label006:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void setConnectTimeout(int)>(10000);
+
+     label007:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+     label008:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void setReadTimeout(int)>(10000);
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void a()>();
+
+     label009:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+     label010:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void connect()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void b()>();
+
+     label011:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+     label012:
+        $i0 = virtualinvoke $r8.<java.net.HttpURLConnection: int getResponseCode()>();
+
+     label013:
+        if $i0 == 200 goto label023;
+
+     label014:
+        r45 = new java.lang.StringBuilder;
+
+     label015:
+        $r9 = r45;
+
+     label016:
+        specialinvoke r45.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Server returned HTTP ");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+     label017:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+     label018:
+        $r6 = virtualinvoke $r8.<java.net.HttpURLConnection: java.lang.String getResponseMessage()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label019:
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label020:
+        goto label021;
+
+     label021:
+        goto label022;
+
+     label022:
+        goto label180;
+
+     label023:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+     label024:
+        $i0 = virtualinvoke $r8.<java.net.HttpURLConnection: int getContentLength()>();
+
+     label025:
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+        $r6 = $r5.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String type>;
+
+     label026:
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean startsWith(java.lang.String)>("video");
+
+     label027:
+        if $z0 == 0 goto label036;
+
+        if $i0 <= 41943040 goto label036;
+
+     label028:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+     label029:
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+     label030:
+        $i0 = <com.seattleclouds.l: int podcast_item_exceeds_40Mb>;
+
+     label031:
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+     label032:
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label033:
+        goto label034;
+
+     label034:
+        goto label035;
+
+     label035:
+        goto label180;
+
+     label036:
+        r46 = new java.io.BufferedInputStream;
+
+     label037:
+        $r12 = r46;
+
+     label038:
+        $r13 = virtualinvoke $r4.<java.net.URL: java.io.InputStream openStream()>();
+
+        specialinvoke r46.<java.io.BufferedInputStream: void <init>(java.io.InputStream)>($r13);
+
+     label039:
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+     label040:
+        $r6 = staticinvoke <com.seattleclouds.modules.podcast.x: java.lang.String c(com.seattleclouds.modules.podcast.PodcastItem)>($r5);
+
+     label041:
+        $r25 = new java.io.File;
+
+     label042:
+        $r14 = $r25;
+
+     label043:
+        specialinvoke $r25.<java.io.File: void <init>(java.lang.String)>($r6);
+
+     label044:
+        r47 = new java.io.FileOutputStream;
+
+     label045:
+        $r15 = r47;
+
+     label046:
+        specialinvoke r47.<java.io.FileOutputStream: void <init>(java.io.File)>($r14);
+
+     label047:
+        r48 = new java.io.BufferedOutputStream;
+
+     label048:
+        $r16 = r48;
+
+     label049:
+        specialinvoke r48.<java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>($r15);
+
+     label050:
+        $r2 = newarray (byte)[4096];
+
+     label051:
+        $l1 = 0L;
+
+     label052:
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void a()>();
+
+     label053:
+        $i2 = virtualinvoke $r12.<java.io.BufferedInputStream: int read(byte[])>($r2);
+
+     label054:
+        if $i2 <= -1 goto label067;
+
+     label055:
+        $l3 = (long) $i2;
+
+     label056:
+        $l1 = $l1 + $l3;
+
+     label057:
+        virtualinvoke $r16.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r2, 0, $i2);
+
+     label058:
+        if $i0 <= 0 goto label065;
+
+     label059:
+        $f0 = (float) $l1;
+
+        $f1 = (float) $i0;
+
+     label060:
+        $f0 = $f0 / $f1;
+
+        $f0 = $f0 * 100.0F;
+
+     label061:
+        $i2 = (int) $f0;
+
+        $r17 = newarray (java.lang.Integer)[1];
+
+     label062:
+        $r18 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i2);
+
+     label063:
+        $r17[0] = $r18;
+
+     label064:
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void publishProgress(java.lang.Object[])>($r17);
+
+     label065:
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: boolean isCancelled()>();
+
+     label066:
+        if $z0 == 0 goto label113;
+
+     label067:
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void b()>();
+
+     label068:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g>;
+
+     label069:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void disconnect()>();
+
+     label070:
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection g> = null;
+
+     label071:
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: boolean isCancelled()>();
+
+     label072:
+        if $z0 == 0 goto label116;
+
+        if $r14 == null goto label073;
+
+        virtualinvoke $r14.<java.io.File: boolean delete()>();
+
+     label073:
+        if $r16 == null goto label075;
+
+     label074:
+        virtualinvoke $r16.<java.io.BufferedOutputStream: void close()>();
+
+     label075:
+        if $r12 == null goto label180;
+
+     label076:
+        virtualinvoke $r12.<java.io.BufferedInputStream: void close()>();
+
+     label077:
+        return null;
+
+     label078:
+        $r19 := @caughtexception;
+
+        return null;
+
+     label079:
+        $r20 := @caughtexception;
+
+     label080:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+     label081:
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(android.content.Context,java.lang.String)>($r11, "android.permission.WRITE_EXTERNAL_STORAGE");
+
+     label082:
+        if $z0 != 0 goto label098;
+
+     label083:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+     label084:
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+     label085:
+        $i0 = <com.seattleclouds.l: int podcast_write_external_storage_permission_denied_short>;
+
+     label086:
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+     label087:
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label088:
+        $r17 = newarray (java.lang.Integer)[1];
+
+     label089:
+        $r18 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(100);
+
+     label090:
+        $r17[0] = $r18;
+
+     label091:
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void publishProgress(java.lang.Object[])>($r17);
+
+     label092:
+        if $r14 == null goto label093;
+
+        virtualinvoke $r14.<java.io.File: boolean delete()>();
+
+     label093:
+        goto label094;
+
+     label094:
+        if $r12 == null goto label180;
+
+     label095:
+        virtualinvoke $r12.<java.io.BufferedInputStream: void close()>();
+
+     label096:
+        return null;
+
+     label097:
+        $r21 := @caughtexception;
+
+        return null;
+
+     label098:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+     label099:
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+     label100:
+        $i0 = <com.seattleclouds.l: int podcast_failed_to_create_file>;
+
+     label101:
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+     label102:
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label103:
+        goto label088;
+
+     label104:
+        $r22 := @caughtexception;
+
+        $r16 = null;
+
+     label105:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $i0 = <com.seattleclouds.l: int podcast_malformed_url>;
+
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label106:
+        if $r14 == null goto label107;
+
+        virtualinvoke $r14.<java.io.File: boolean delete()>();
+
+     label107:
+        if $r16 == null goto label109;
+
+     label108:
+        virtualinvoke $r16.<java.io.BufferedOutputStream: void close()>();
+
+     label109:
+        if $r12 == null goto label180;
+
+     label110:
+        virtualinvoke $r12.<java.io.BufferedInputStream: void close()>();
+
+     label111:
+        return null;
+
+     label112:
+        $r23 := @caughtexception;
+
+        return null;
+
+     label113:
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void a()>();
+
+     label114:
+        goto label053;
+
+     label115:
+        $r24 := @caughtexception;
+
+        goto label105;
+
+     label116:
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+     label117:
+        $r6 = staticinvoke <com.seattleclouds.modules.podcast.x: java.lang.String b(com.seattleclouds.modules.podcast.PodcastItem)>($r5);
+
+     label118:
+        r49 = new java.io.File;
+
+     label119:
+        $r25 = r49;
+
+     label120:
+        specialinvoke r49.<java.io.File: void <init>(java.lang.String)>($r6);
+
+        $z0 = virtualinvoke $r14.<java.io.File: boolean renameTo(java.io.File)>($r25);
+
+     label121:
+        if $z0 == 0 goto label135;
+
+     label122:
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+     label123:
+        virtualinvoke $r5.<com.seattleclouds.modules.podcast.PodcastItem: void updateMediaUri()>();
+
+     label124:
+        $r17 = newarray (java.lang.Integer)[1];
+
+     label125:
+        $r18 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(100);
+
+     label126:
+        $r17[0] = $r18;
+
+     label127:
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void publishProgress(java.lang.Object[])>($r17);
+
+     label128:
+        if $r14 == null goto label129;
+
+        virtualinvoke $r14.<java.io.File: boolean delete()>();
+
+     label129:
+        if $r16 == null goto label131;
+
+     label130:
+        virtualinvoke $r16.<java.io.BufferedOutputStream: void close()>();
+
+     label131:
+        if $r12 == null goto label180;
+
+     label132:
+        virtualinvoke $r12.<java.io.BufferedInputStream: void close()>();
+
+     label133:
+        return null;
+
+     label134:
+        $r26 := @caughtexception;
+
+        return null;
+
+     label135:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+     label136:
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+     label137:
+        $i0 = <com.seattleclouds.l: int podcast_failed_to_create_file>;
+
+     label138:
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+     label139:
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label140:
+        goto label124;
+
+     label141:
+        $r27 := @caughtexception;
+
+     label142:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.bt: boolean i(android.content.Context)>($r11);
+
+     label143:
+        if $z0 != 0 goto label153;
+
+     label144:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $i0 = <com.seattleclouds.l: int common_no_network>;
+
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label145:
+        $r17 = newarray (java.lang.Integer)[1];
+
+        $r18 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(100);
+
+        $r17[0] = $r18;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void publishProgress(java.lang.Object[])>($r17);
+
+     label146:
+        if $r14 == null goto label147;
+
+        virtualinvoke $r14.<java.io.File: boolean delete()>();
+
+     label147:
+        if $r16 == null goto label149;
+
+     label148:
+        virtualinvoke $r16.<java.io.BufferedOutputStream: void close()>();
+
+     label149:
+        if $r12 == null goto label180;
+
+     label150:
+        virtualinvoke $r12.<java.io.BufferedInputStream: void close()>();
+
+     label151:
+        return null;
+
+     label152:
+        $r28 := @caughtexception;
+
+        return null;
+
+     label153:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(android.content.Context,java.lang.String)>($r11, "android.permission.WRITE_EXTERNAL_STORAGE");
+
+     label154:
+        if $z0 != 0 goto label164;
+
+     label155:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $i0 = <com.seattleclouds.l: int podcast_write_external_storage_permission_denied_short>;
+
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label156:
+        goto label145;
+
+     label157:
+        $r29 := @caughtexception;
+
+        $r3 = $r12;
+
+        $r30 = $r29;
+
+     label158:
+        if $r14 == null goto label159;
+
+        virtualinvoke $r14.<java.io.File: boolean delete()>();
+
+     label159:
+        if $r16 == null goto label161;
+
+     label160:
+        virtualinvoke $r16.<java.io.BufferedOutputStream: void close()>();
+
+     label161:
+        if $r3 == null goto label163;
+
+     label162:
+        virtualinvoke $r3.<java.io.BufferedInputStream: void close()>();
+
+     label163:
+        throw $r30;
+
+     label164:
+        $r10 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $i0 = <com.seattleclouds.l: int common_network_error>;
+
+        $r6 = virtualinvoke $r11.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b> = $r6;
+
+     label165:
+        goto label145;
+
+     label166:
+        $r31 := @caughtexception;
+
+        goto label075;
+
+     label167:
+        $r32 := @caughtexception;
+
+        goto label131;
+
+     label168:
+        $r33 := @caughtexception;
+
+        goto label109;
+
+     label169:
+        $r34 := @caughtexception;
+
+        goto label149;
+
+     label170:
+        $r35 := @caughtexception;
+
+        goto label161;
+
+     label171:
+        $r36 := @caughtexception;
+
+        goto label163;
+
+     label172:
+        $r30 := @caughtexception;
+
+        $r16 = null;
+
+        $r14 = null;
+
+        goto label158;
+
+     label173:
+        $r37 := @caughtexception;
+
+        $r14 = null;
+
+        $r30 = $r37;
+
+        $r16 = null;
+
+        $r3 = $r12;
+
+        goto label158;
+
+     label174:
+        $r38 := @caughtexception;
+
+        $r16 = null;
+
+        $r3 = $r12;
+
+        $r30 = $r38;
+
+        goto label158;
+
+     label175:
+        $r39 := @caughtexception;
+
+        $r12 = null;
+
+        $r16 = null;
+
+        $r14 = null;
+
+        goto label142;
+
+     label176:
+        $r40 := @caughtexception;
+
+        $r16 = null;
+
+        $r14 = null;
+
+        goto label142;
+
+     label177:
+        $r41 := @caughtexception;
+
+        $r16 = null;
+
+        goto label142;
+
+     label178:
+        $r42 := @caughtexception;
+
+        $r12 = null;
+
+        $r16 = null;
+
+        $r14 = null;
+
+        goto label105;
+
+     label179:
+        $r43 := @caughtexception;
+
+        $r16 = null;
+
+        $r14 = null;
+
+        goto label105;
+
+     label180:
+        return null;
+
+        catch java.net.MalformedURLException from label004 to label005 with label178;
+        catch java.net.MalformedURLException from label006 to label007 with label178;
+        catch java.net.MalformedURLException from label008 to label009 with label178;
+        catch java.net.MalformedURLException from label010 to label011 with label178;
+        catch java.net.MalformedURLException from label012 to label013 with label178;
+        catch java.net.MalformedURLException from label016 to label017 with label178;
+        catch java.net.MalformedURLException from label018 to label019 with label178;
+        catch java.io.IOException from label004 to label005 with label175;
+        catch java.io.IOException from label006 to label007 with label175;
+        catch java.io.IOException from label008 to label009 with label175;
+        catch java.io.IOException from label010 to label011 with label175;
+        catch java.io.IOException from label012 to label013 with label175;
+        catch java.io.IOException from label016 to label017 with label175;
+        catch java.io.IOException from label018 to label019 with label175;
+        catch java.lang.Throwable from label001 to label002 with label172;
+        catch java.lang.Throwable from label003 to label013 with label172;
+        catch java.lang.Throwable from label014 to label015 with label172;
+        catch java.lang.Throwable from label016 to label020 with label172;
+        catch java.net.MalformedURLException from label024 to label025 with label178;
+        catch java.net.MalformedURLException from label026 to label027 with label178;
+        catch java.net.MalformedURLException from label029 to label030 with label178;
+        catch java.net.MalformedURLException from label031 to label032 with label178;
+        catch java.io.IOException from label024 to label025 with label175;
+        catch java.io.IOException from label026 to label027 with label175;
+        catch java.io.IOException from label029 to label030 with label175;
+        catch java.io.IOException from label031 to label032 with label175;
+        catch java.lang.Throwable from label023 to label027 with label172;
+        catch java.lang.Throwable from label028 to label033 with label172;
+        catch java.net.MalformedURLException from label038 to label039 with label178;
+        catch java.io.IOException from label038 to label039 with label175;
+        catch java.lang.Throwable from label036 to label037 with label172;
+        catch java.lang.Throwable from label038 to label039 with label172;
+        catch java.net.MalformedURLException from label040 to label041 with label179;
+        catch java.net.MalformedURLException from label043 to label044 with label179;
+        catch java.io.IOException from label040 to label041 with label176;
+        catch java.io.IOException from label043 to label044 with label176;
+        catch java.lang.Throwable from label039 to label042 with label173;
+        catch java.lang.Throwable from label043 to label044 with label173;
+        catch java.io.IOException from label046 to label047 with label079;
+        catch java.net.MalformedURLException from label046 to label047 with label104;
+        catch java.lang.Throwable from label044 to label045 with label174;
+        catch java.lang.Throwable from label046 to label047 with label174;
+        catch java.net.MalformedURLException from label049 to label050 with label104;
+        catch java.io.IOException from label049 to label050 with label177;
+        catch java.lang.Throwable from label047 to label048 with label174;
+        catch java.lang.Throwable from label049 to label050 with label174;
+        catch java.net.MalformedURLException from label052 to label054 with label115;
+        catch java.net.MalformedURLException from label057 to label058 with label115;
+        catch java.net.MalformedURLException from label062 to label063 with label115;
+        catch java.net.MalformedURLException from label064 to label066 with label115;
+        catch java.net.MalformedURLException from label067 to label068 with label115;
+        catch java.net.MalformedURLException from label069 to label070 with label115;
+        catch java.net.MalformedURLException from label071 to label072 with label115;
+        catch java.io.IOException from label052 to label054 with label141;
+        catch java.io.IOException from label057 to label058 with label141;
+        catch java.io.IOException from label062 to label063 with label141;
+        catch java.io.IOException from label064 to label066 with label141;
+        catch java.io.IOException from label067 to label068 with label141;
+        catch java.io.IOException from label069 to label070 with label141;
+        catch java.io.IOException from label071 to label072 with label141;
+        catch java.lang.Throwable from label050 to label051 with label157;
+        catch java.lang.Throwable from label052 to label054 with label157;
+        catch java.lang.Throwable from label055 to label056 with label157;
+        catch java.lang.Throwable from label057 to label058 with label157;
+        catch java.lang.Throwable from label059 to label060 with label157;
+        catch java.lang.Throwable from label061 to label066 with label157;
+        catch java.lang.Throwable from label067 to label072 with label157;
+        catch java.io.IOException from label074 to label075 with label166;
+        catch java.io.IOException from label076 to label077 with label078;
+        catch java.net.MalformedURLException from label081 to label082 with label104;
+        catch java.net.MalformedURLException from label084 to label085 with label104;
+        catch java.net.MalformedURLException from label086 to label087 with label104;
+        catch java.net.MalformedURLException from label089 to label090 with label104;
+        catch java.net.MalformedURLException from label091 to label092 with label104;
+        catch java.io.IOException from label081 to label082 with label177;
+        catch java.io.IOException from label084 to label085 with label177;
+        catch java.io.IOException from label086 to label087 with label177;
+        catch java.io.IOException from label089 to label090 with label177;
+        catch java.io.IOException from label091 to label092 with label177;
+        catch java.lang.Throwable from label080 to label082 with label174;
+        catch java.lang.Throwable from label083 to label092 with label174;
+        catch java.io.IOException from label095 to label096 with label097;
+        catch java.net.MalformedURLException from label099 to label100 with label104;
+        catch java.net.MalformedURLException from label101 to label102 with label104;
+        catch java.io.IOException from label099 to label100 with label177;
+        catch java.io.IOException from label101 to label102 with label177;
+        catch java.lang.Throwable from label098 to label103 with label174;
+        catch java.lang.Throwable from label105 to label106 with label157;
+        catch java.io.IOException from label108 to label109 with label168;
+        catch java.io.IOException from label110 to label111 with label112;
+        catch java.net.MalformedURLException from label113 to label114 with label115;
+        catch java.net.MalformedURLException from label117 to label118 with label115;
+        catch java.net.MalformedURLException from label120 to label121 with label115;
+        catch java.net.MalformedURLException from label123 to label124 with label115;
+        catch java.net.MalformedURLException from label125 to label126 with label115;
+        catch java.net.MalformedURLException from label127 to label128 with label115;
+        catch java.io.IOException from label113 to label114 with label141;
+        catch java.io.IOException from label117 to label118 with label141;
+        catch java.io.IOException from label120 to label121 with label141;
+        catch java.io.IOException from label123 to label124 with label141;
+        catch java.io.IOException from label125 to label126 with label141;
+        catch java.io.IOException from label127 to label128 with label141;
+        catch java.lang.Throwable from label113 to label114 with label157;
+        catch java.lang.Throwable from label116 to label119 with label157;
+        catch java.lang.Throwable from label120 to label121 with label157;
+        catch java.lang.Throwable from label122 to label128 with label157;
+        catch java.io.IOException from label130 to label131 with label167;
+        catch java.io.IOException from label132 to label133 with label134;
+        catch java.net.MalformedURLException from label136 to label137 with label115;
+        catch java.net.MalformedURLException from label138 to label139 with label115;
+        catch java.io.IOException from label136 to label137 with label141;
+        catch java.io.IOException from label138 to label139 with label141;
+        catch java.lang.Throwable from label135 to label140 with label157;
+        catch java.lang.Throwable from label142 to label143 with label157;
+        catch java.lang.Throwable from label144 to label146 with label157;
+        catch java.io.IOException from label148 to label149 with label169;
+        catch java.io.IOException from label150 to label151 with label152;
+        catch java.lang.Throwable from label153 to label154 with label157;
+        catch java.lang.Throwable from label155 to label156 with label157;
+        catch java.io.IOException from label160 to label161 with label170;
+        catch java.io.IOException from label162 to label163 with label171;
+        catch java.lang.Throwable from label164 to label165 with label157;
+    }
+
+    public void a(android.widget.ProgressBar)
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        android.widget.ProgressBar $r1;
+        java.lang.ref.WeakReference $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 := @parameter0: android.widget.ProgressBar;
+
+        if $r1 != null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.ref.WeakReference h>;
+
+        virtualinvoke $r2.<java.lang.ref.WeakReference: void clear()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.ref.WeakReference h> = null;
+
+        return;
+
+     label1:
+        $i0 = $r0.<com.seattleclouds.modules.podcast.download.a: int d>;
+
+        virtualinvoke $r1.<android.widget.ProgressBar: void setProgress(int)>($i0);
+
+        $r2 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r2.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.ref.WeakReference h> = $r2;
+
+        return;
+    }
+
+    protected void a(java.lang.Void)
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.lang.Void $r1;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.PodcastItem $r2;
+        java.lang.String $r3;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 := @parameter0: java.lang.Void;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.String b>;
+
+        $r2.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String error> = $r3;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: boolean isCancelled()>();
+
+        staticinvoke <com.seattleclouds.modules.podcast.download.PodcastDownloadService: void a(com.seattleclouds.modules.podcast.download.PodcastDownloadService,com.seattleclouds.modules.podcast.PodcastItem,boolean)>($r4, $r2, $z0);
+
+        return;
+    }
+
+    protected transient void a(java.lang.Integer[])
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.lang.Integer[] $r1;
+        com.seattleclouds.modules.podcast.PodcastItem $r2;
+        boolean $z0;
+        java.lang.Integer $r3;
+        int $i0, $i1;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r4, $r5;
+        android.app.Notification $r6;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl $r7;
+        java.lang.ref.WeakReference $r8;
+        java.lang.Object $r9;
+        android.widget.ProgressBar $r10;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 := @parameter0: java.lang.Integer[];
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: boolean isCancelled()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r3 = $r1[0];
+
+        $i0 = virtualinvoke $r3.<java.lang.Integer: int intValue()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: int d> = $i0;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.download.a: int d>;
+
+        $i1 = $r0.<com.seattleclouds.modules.podcast.download.a: int e>;
+
+        if $i0 <= $i1 goto label3;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.download.a: int d>;
+
+        $r0.<com.seattleclouds.modules.podcast.download.a: int e> = $i0;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.download.a: int d>;
+
+        $i0 = $i0 % 2;
+
+        if $i0 != 0 goto label2;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.podcast.download.PodcastDownloadService: int e()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.app.Notification d(com.seattleclouds.modules.podcast.PodcastItem)>($r2);
+
+        virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: void startForeground(int,android.app.Notification)>($i0, $r6);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.podcast.download.PodcastDownloadService: com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl a(com.seattleclouds.modules.podcast.download.PodcastDownloadService)>($r4);
+
+        if $r7 == null goto label2;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.podcast.download.PodcastDownloadService: com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl a(com.seattleclouds.modules.podcast.download.PodcastDownloadService)>($r4);
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.download.a: int d>;
+
+        virtualinvoke $r7.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: void a(int,int)>(100, $i0);
+
+     label2:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.ref.WeakReference h>;
+
+        if $r8 == null goto label3;
+
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.ref.WeakReference h>;
+
+        $r9 = virtualinvoke $r8.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r10 = (android.widget.ProgressBar) $r9;
+
+        if $r10 == null goto label3;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.download.a: int d>;
+
+        virtualinvoke $r10.<android.widget.ProgressBar: void setProgress(int)>($i0);
+
+     label3:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.lang.Void $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: java.lang.Void a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.lang.Object $r1;
+        java.lang.Void $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.Void) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void a(java.lang.Void)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r1, $r3;
+        com.seattleclouds.modules.podcast.PodcastItem $r2;
+        int $i0;
+        android.app.Notification $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.podcast.download.PodcastDownloadService: int e()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.a: com.seattleclouds.modules.podcast.PodcastItem c>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.app.Notification d(com.seattleclouds.modules.podcast.PodcastItem)>($r2);
+
+        virtualinvoke $r1.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: void startForeground(int,android.app.Notification)>($i0, $r4);
+
+        return;
+    }
+
+    protected void onProgressUpdate(java.lang.Object[])
+    {
+        com.seattleclouds.modules.podcast.download.a $r0;
+        java.lang.Object[] $r1;
+        java.lang.Integer[] $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.a;
+
+        $r1 := @parameter0: java.lang.Object[];
+
+        $r2 = (java.lang.Integer[]) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.a: void a(java.lang.Integer[])>($r2);
+
+        return;
+    }
+}

@@ -1,0 +1,64 @@
+class com.seattleclouds.modules.feedback.ak extends com.seattleclouds.location.n
+{
+    final com.seattleclouds.modules.feedback.c b;
+
+    void <init>(com.seattleclouds.modules.feedback.c, boolean)
+    {
+        com.seattleclouds.modules.feedback.ak $r0;
+        com.seattleclouds.modules.feedback.c $r1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ak;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.c;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.seattleclouds.modules.feedback.ak: com.seattleclouds.modules.feedback.c b> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.location.n: void <init>(boolean)>($z0);
+
+        return;
+    }
+
+    public void a(android.location.Location)
+    {
+        com.seattleclouds.modules.feedback.ak $r0;
+        android.location.Location $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+        com.seattleclouds.modules.feedback.c $r4, $r5;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ak;
+
+        $r1 := @parameter0: android.location.Location;
+
+        specialinvoke $r0.<com.seattleclouds.location.n: void a(android.location.Location)>($r1);
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("got location: ");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r1);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("FeedbackActivity", $r3);
+
+        $r4 = $r0.<com.seattleclouds.modules.feedback.ak: com.seattleclouds.modules.feedback.c b>;
+
+        staticinvoke <com.seattleclouds.modules.feedback.c: android.location.Location a(com.seattleclouds.modules.feedback.c,android.location.Location)>($r4, $r1);
+
+        $r4 = $r0.<com.seattleclouds.modules.feedback.ak: com.seattleclouds.modules.feedback.c b>;
+
+        $r5 = $r0.<com.seattleclouds.modules.feedback.ak: com.seattleclouds.modules.feedback.c b>;
+
+        $r1 = staticinvoke <com.seattleclouds.modules.feedback.c: android.location.Location f(com.seattleclouds.modules.feedback.c)>($r5);
+
+        staticinvoke <com.seattleclouds.modules.feedback.c: void b(com.seattleclouds.modules.feedback.c,android.location.Location)>($r4, $r1);
+
+        return;
+    }
+}

@@ -1,0 +1,45 @@
+class nic.cabbage_ifc.Splashscreen$1 extends java.util.TimerTask
+{
+    final nic.cabbage_ifc.Splashscreen this$0;
+
+    void <init>(nic.cabbage_ifc.Splashscreen)
+    {
+        nic.cabbage_ifc.Splashscreen$1 $r0;
+        nic.cabbage_ifc.Splashscreen $r1;
+
+        $r0 := @this: nic.cabbage_ifc.Splashscreen$1;
+
+        $r1 := @parameter0: nic.cabbage_ifc.Splashscreen;
+
+        $r0.<nic.cabbage_ifc.Splashscreen$1: nic.cabbage_ifc.Splashscreen this$0> = $r1;
+
+        specialinvoke $r0.<java.util.TimerTask: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        nic.cabbage_ifc.Splashscreen$1 $r0;
+        android.content.Intent $r1;
+        nic.cabbage_ifc.Splashscreen $r2;
+
+        $r0 := @this: nic.cabbage_ifc.Splashscreen$1;
+
+        $r2 = $r0.<nic.cabbage_ifc.Splashscreen$1: nic.cabbage_ifc.Splashscreen this$0>;
+
+        virtualinvoke $r2.<nic.cabbage_ifc.Splashscreen: void finish()>();
+
+        $r1 = new android.content.Intent;
+
+        $r2 = $r0.<nic.cabbage_ifc.Splashscreen$1: nic.cabbage_ifc.Splashscreen this$0>;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r2, class "Lnic/cabbage_ifc/Demo;");
+
+        $r2 = $r0.<nic.cabbage_ifc.Splashscreen$1: nic.cabbage_ifc.Splashscreen this$0>;
+
+        virtualinvoke $r2.<nic.cabbage_ifc.Splashscreen: void startActivity(android.content.Intent)>($r1);
+
+        return;
+    }
+}

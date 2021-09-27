@@ -1,0 +1,122 @@
+class com.seattleclouds.modules.voicerecord.t extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final android.widget.EditText a;
+    final android.widget.EditText b;
+    final android.widget.EditText c;
+    final java.util.ArrayList d;
+    final com.seattleclouds.modules.voicerecord.k e;
+
+    void <init>(com.seattleclouds.modules.voicerecord.k, android.widget.EditText, android.widget.EditText, android.widget.EditText, java.util.ArrayList)
+    {
+        com.seattleclouds.modules.voicerecord.t $r0;
+        com.seattleclouds.modules.voicerecord.k $r1;
+        android.widget.EditText $r2, $r3, $r4;
+        java.util.ArrayList $r5;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.t;
+
+        $r1 := @parameter0: com.seattleclouds.modules.voicerecord.k;
+
+        $r2 := @parameter1: android.widget.EditText;
+
+        $r3 := @parameter2: android.widget.EditText;
+
+        $r4 := @parameter3: android.widget.EditText;
+
+        $r5 := @parameter4: java.util.ArrayList;
+
+        $r0.<com.seattleclouds.modules.voicerecord.t: com.seattleclouds.modules.voicerecord.k e> = $r1;
+
+        $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText a> = $r2;
+
+        $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText b> = $r3;
+
+        $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText c> = $r4;
+
+        $r0.<com.seattleclouds.modules.voicerecord.t: java.util.ArrayList d> = $r5;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.voicerecord.t $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.modules.voicerecord.k $r2;
+        java.util.ArrayList $r3;
+        android.widget.EditText $r4;
+        java.lang.String $r5, $r6, $r7;
+        android.text.Editable $r8;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.t;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r4 = $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText a>;
+
+        if $r4 != null goto label4;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.t: com.seattleclouds.modules.voicerecord.k e>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.voicerecord.k: java.lang.String c(com.seattleclouds.modules.voicerecord.k)>($r2);
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText b>;
+
+        if $r4 != null goto label5;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.t: com.seattleclouds.modules.voicerecord.k e>;
+
+        $r6 = staticinvoke <com.seattleclouds.modules.voicerecord.k: java.lang.String d(com.seattleclouds.modules.voicerecord.k)>($r2);
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText c>;
+
+        if $r4 != null goto label6;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.t: com.seattleclouds.modules.voicerecord.k e>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.voicerecord.k: java.lang.String e(com.seattleclouds.modules.voicerecord.k)>($r2);
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.t: com.seattleclouds.modules.voicerecord.k e>;
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.t: java.util.ArrayList d>;
+
+        staticinvoke <com.seattleclouds.modules.voicerecord.k: void a(com.seattleclouds.modules.voicerecord.k,java.lang.String,java.lang.String,java.lang.String,java.util.ArrayList)>($r2, $r5, $r6, $r7, $r3);
+
+        return;
+
+     label4:
+        $r4 = $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText a>;
+
+        $r8 = virtualinvoke $r4.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r5 = virtualinvoke $r8.<java.lang.Object: java.lang.String toString()>();
+
+        goto label1;
+
+     label5:
+        $r4 = $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText b>;
+
+        $r8 = virtualinvoke $r4.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r6 = virtualinvoke $r8.<java.lang.Object: java.lang.String toString()>();
+
+        goto label2;
+
+     label6:
+        $r4 = $r0.<com.seattleclouds.modules.voicerecord.t: android.widget.EditText c>;
+
+        $r8 = virtualinvoke $r4.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r7 = virtualinvoke $r8.<java.lang.Object: java.lang.String toString()>();
+
+        goto label3;
+    }
+}

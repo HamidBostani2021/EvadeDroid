@@ -1,0 +1,7 @@
+public interface  com.seattleclouds.modules.podcast.player.c extends java.lang.Object
+{
+
+    public abstract void b(boolean);
+
+    public abstract void f();
+}

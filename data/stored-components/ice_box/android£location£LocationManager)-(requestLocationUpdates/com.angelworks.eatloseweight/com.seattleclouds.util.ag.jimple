@@ -1,0 +1,812 @@
+public class com.seattleclouds.util.ag extends java.lang.Object implements com.facebook.o
+{
+    public static final java.lang.String[] a;
+    private static final java.lang.String e;
+    private static final java.lang.Boolean f;
+    com.seattleclouds.util.al b;
+    com.facebook.k c;
+    com.facebook.o d;
+    private boolean g;
+
+    static void <clinit>()
+    {
+        java.lang.Class $r0;
+        java.lang.String $r1;
+        java.lang.Boolean $r2;
+        java.lang.String[] $r3;
+
+        $r0 = class "Lcom/seattleclouds/util/ag;";
+
+        $r1 = virtualinvoke $r0.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.util.ag: java.lang.String e> = $r1;
+
+        $r2 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(1);
+
+        <com.seattleclouds.util.ag: java.lang.Boolean f> = $r2;
+
+        $r3 = newarray (java.lang.String)[2];
+
+        $r3[0] = "public_profile";
+
+        $r3[1] = "email";
+
+        <com.seattleclouds.util.ag: java.lang.String[] a> = $r3;
+
+        return;
+    }
+
+    public void <init>(com.seattleclouds.util.al)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.seattleclouds.util.al $r1;
+        com.seattleclouds.util.ah $r2;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.seattleclouds.util.al;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = new com.seattleclouds.util.ah;
+
+        specialinvoke $r2.<com.seattleclouds.util.ah: void <init>(com.seattleclouds.util.ag)>($r0);
+
+        $r0.<com.seattleclouds.util.ag: com.facebook.o d> = $r2;
+
+        specialinvoke $r0.<com.seattleclouds.util.ag: void a(com.seattleclouds.util.al)>($r1);
+
+        return;
+    }
+
+    static com.seattleclouds.util.ak a(com.seattleclouds.util.ag, org.json.JSONObject)
+    {
+        com.seattleclouds.util.ag $r0;
+        org.json.JSONObject $r1;
+        com.seattleclouds.util.ak $r2;
+
+        $r0 := @parameter0: com.seattleclouds.util.ag;
+
+        $r1 := @parameter1: org.json.JSONObject;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.util.ag: com.seattleclouds.util.ak a(org.json.JSONObject)>($r1);
+
+        return $r2;
+    }
+
+    private com.seattleclouds.util.ak a(org.json.JSONObject)
+    {
+        com.seattleclouds.util.ag $r0;
+        org.json.JSONObject $r1;
+        com.seattleclouds.util.ak $r2;
+        boolean $z0;
+        java.lang.String $r3;
+        java.lang.StringBuilder $r4;
+        org.json.JSONException $r5;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 = new com.seattleclouds.util.ak;
+
+     label01:
+        specialinvoke $r2.<com.seattleclouds.util.ak: void <init>(com.seattleclouds.util.ag)>($r0);
+
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("id");
+
+     label02:
+        if $z0 == 0 goto label05;
+
+     label03:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+     label04:
+        $r2.<com.seattleclouds.util.ak: java.lang.String a> = $r3;
+
+     label05:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("picture");
+
+     label06:
+        if $z0 == 0 goto label11;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label07:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("https://graph.facebook.com/");
+
+     label08:
+        $r3 = $r2.<com.seattleclouds.util.ak: java.lang.String a>;
+
+     label09:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/picture?width=200&height=150");
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label10:
+        $r2.<com.seattleclouds.util.ak: java.lang.String j> = $r3;
+
+     label11:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("first_name");
+
+     label12:
+        if $z0 == 0 goto label15;
+
+     label13:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("first_name");
+
+     label14:
+        $r2.<com.seattleclouds.util.ak: java.lang.String c> = $r3;
+
+     label15:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("last_name");
+
+     label16:
+        if $z0 == 0 goto label19;
+
+     label17:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("last_name");
+
+     label18:
+        $r2.<com.seattleclouds.util.ak: java.lang.String d> = $r3;
+
+     label19:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("email");
+
+     label20:
+        if $z0 == 0 goto label23;
+
+     label21:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("email");
+
+     label22:
+        $r2.<com.seattleclouds.util.ak: java.lang.String g> = $r3;
+
+     label23:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("gender");
+
+     label24:
+        if $z0 == 0 goto label27;
+
+     label25:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("gender");
+
+     label26:
+        $r2.<com.seattleclouds.util.ak: java.lang.String e> = $r3;
+
+     label27:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("birthday");
+
+     label28:
+        if $z0 == 0 goto label32;
+
+     label29:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("birthday");
+
+     label30:
+        $r2.<com.seattleclouds.util.ak: java.lang.String f> = $r3;
+
+        return $r2;
+
+     label31:
+        $r5 := @caughtexception;
+
+        virtualinvoke $r5.<org.json.JSONException: void printStackTrace()>();
+
+        $r2 = new com.seattleclouds.util.ak;
+
+        specialinvoke $r2.<com.seattleclouds.util.ak: void <init>(com.seattleclouds.util.ag)>($r0);
+
+     label32:
+        return $r2;
+
+        catch org.json.JSONException from label01 to label02 with label31;
+        catch org.json.JSONException from label03 to label04 with label31;
+        catch org.json.JSONException from label05 to label06 with label31;
+        catch org.json.JSONException from label07 to label08 with label31;
+        catch org.json.JSONException from label09 to label10 with label31;
+        catch org.json.JSONException from label11 to label12 with label31;
+        catch org.json.JSONException from label13 to label14 with label31;
+        catch org.json.JSONException from label15 to label16 with label31;
+        catch org.json.JSONException from label17 to label18 with label31;
+        catch org.json.JSONException from label19 to label20 with label31;
+        catch org.json.JSONException from label21 to label22 with label31;
+        catch org.json.JSONException from label23 to label24 with label31;
+        catch org.json.JSONException from label25 to label26 with label31;
+        catch org.json.JSONException from label27 to label28 with label31;
+        catch org.json.JSONException from label29 to label30 with label31;
+    }
+
+    private com.seattleclouds.util.am a(com.facebook.FacebookRequestError)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.FacebookRequestError $r1;
+        com.seattleclouds.util.am $r2;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.facebook.FacebookRequestError;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.util.ag: com.seattleclouds.util.am a(com.facebook.FacebookRequestError,com.facebook.FacebookException)>($r1, null);
+
+        return $r2;
+    }
+
+    private com.seattleclouds.util.am a(com.facebook.FacebookRequestError, com.facebook.FacebookException)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.FacebookRequestError $r1;
+        com.facebook.FacebookException $r2;
+        com.seattleclouds.util.am $r3;
+        java.lang.String $r4;
+        int[] $r5;
+        com.facebook.FacebookRequestError$Category $r6;
+        int $i0;
+        long $l1;
+        android.content.res.Resources $r7;
+        java.lang.Object[] $r8;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.facebook.FacebookRequestError;
+
+        $r2 := @parameter1: com.facebook.FacebookException;
+
+        $r3 = new com.seattleclouds.util.am;
+
+        specialinvoke $r3.<com.seattleclouds.util.am: void <init>()>();
+
+        if $r2 != null goto label4;
+
+        $r4 = virtualinvoke $r1.<com.facebook.FacebookRequestError: java.lang.String g()>();
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void b(java.lang.String)>($r4);
+
+        $r5 = <com.seattleclouds.util.aj: int[] a>;
+
+        $r6 = virtualinvoke $r1.<com.facebook.FacebookRequestError: com.facebook.FacebookRequestError$Category a()>();
+
+        $i0 = virtualinvoke $r6.<com.facebook.FacebookRequestError$Category: int ordinal()>();
+
+        $i0 = $r5[$i0];
+
+        lookupswitch($i0)
+        {
+            case 1: goto label2;
+            case 2: goto label3;
+            default: goto label1;
+        };
+
+     label1:
+        $l1 = <com.seattleclouds.util.am: long c>;
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(long)>($l1);
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int facebook_error_unknown>;
+
+        $r8 = newarray (java.lang.Object)[1];
+
+        $r4 = virtualinvoke $r1.<com.facebook.FacebookRequestError: java.lang.String f()>();
+
+        $r8[0] = $r4;
+
+        $r4 = virtualinvoke $r7.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i0, $r8);
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(java.lang.String)>($r4);
+
+        return $r3;
+
+     label2:
+        $l1 = <com.seattleclouds.util.am: long a>;
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(long)>($l1);
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int facebook_error_authentication_retry>;
+
+        $r8 = newarray (java.lang.Object)[1];
+
+        $r4 = virtualinvoke $r1.<com.facebook.FacebookRequestError: java.lang.String f()>();
+
+        $r8[0] = $r4;
+
+        $r4 = virtualinvoke $r7.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i0, $r8);
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(java.lang.String)>($r4);
+
+        return $r3;
+
+     label3:
+        $l1 = <com.seattleclouds.util.am: long b>;
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(long)>($l1);
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int facebook_error_transient>;
+
+        $r8 = newarray (java.lang.Object)[1];
+
+        $r4 = virtualinvoke $r1.<com.facebook.FacebookRequestError: java.lang.String f()>();
+
+        $r8[0] = $r4;
+
+        $r4 = virtualinvoke $r7.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i0, $r8);
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(java.lang.String)>($r4);
+
+        return $r3;
+
+     label4:
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(long)>(100L);
+
+        $r4 = virtualinvoke $r2.<com.facebook.FacebookException: java.lang.String getLocalizedMessage()>();
+
+        virtualinvoke $r3.<com.seattleclouds.util.am: void a(java.lang.String)>($r4);
+
+        return $r3;
+    }
+
+    static com.seattleclouds.util.am a(com.seattleclouds.util.ag, com.facebook.FacebookException)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.FacebookException $r1;
+        com.seattleclouds.util.am $r2;
+
+        $r0 := @parameter0: com.seattleclouds.util.ag;
+
+        $r1 := @parameter1: com.facebook.FacebookException;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.util.ag: com.seattleclouds.util.am b(com.facebook.FacebookException)>($r1);
+
+        return $r2;
+    }
+
+    static com.seattleclouds.util.am a(com.seattleclouds.util.ag, com.facebook.FacebookRequestError)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.FacebookRequestError $r1;
+        com.seattleclouds.util.am $r2;
+
+        $r0 := @parameter0: com.seattleclouds.util.ag;
+
+        $r1 := @parameter1: com.facebook.FacebookRequestError;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.util.ag: com.seattleclouds.util.am a(com.facebook.FacebookRequestError)>($r1);
+
+        return $r2;
+    }
+
+    public static void a(android.app.Activity, android.os.Bundle)
+    {
+        android.app.Activity $r0;
+        android.os.Bundle $r1;
+        com.facebook.share.model.e $r2;
+        java.lang.String $r3, $r4, $r5, $r6;
+        android.net.Uri $r7;
+        com.facebook.share.model.a $r8;
+        com.facebook.share.model.ShareLinkContent $r9;
+        com.facebook.share.widget.ShareDialog $r10;
+        com.facebook.share.widget.ShareDialog$Mode $r11;
+
+        $r0 := @parameter0: android.app.Activity;
+
+        $r1 := @parameter1: android.os.Bundle;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("appName");
+
+        $r4 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("slink");
+
+        $r5 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("description");
+
+        $r6 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("iconUrlString");
+
+        $r2 = new com.facebook.share.model.e;
+
+        specialinvoke $r2.<com.facebook.share.model.e: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<com.facebook.share.model.e: com.facebook.share.model.e d(java.lang.String)>($r3);
+
+        $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r2.<com.facebook.share.model.e: com.facebook.share.model.a a(android.net.Uri)>($r7);
+
+        $r2 = (com.facebook.share.model.e) $r8;
+
+        $r2 = virtualinvoke $r2.<com.facebook.share.model.e: com.facebook.share.model.e c(java.lang.String)>($r5);
+
+        $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r6);
+
+        $r2 = virtualinvoke $r2.<com.facebook.share.model.e: com.facebook.share.model.e b(android.net.Uri)>($r7);
+
+        $r9 = virtualinvoke $r2.<com.facebook.share.model.e: com.facebook.share.model.ShareLinkContent a()>();
+
+        $r10 = new com.facebook.share.widget.ShareDialog;
+
+        specialinvoke $r10.<com.facebook.share.widget.ShareDialog: void <init>(android.app.Activity)>($r0);
+
+        $r11 = <com.facebook.share.widget.ShareDialog$Mode: com.facebook.share.widget.ShareDialog$Mode AUTOMATIC>;
+
+        virtualinvoke $r10.<com.facebook.share.widget.ShareDialog: void a(com.facebook.share.model.ShareContent,com.facebook.share.widget.ShareDialog$Mode)>($r9, $r11);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.util.ag, com.facebook.login.ac)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.login.ac $r1;
+
+        $r0 := @parameter0: com.seattleclouds.util.ag;
+
+        $r1 := @parameter1: com.facebook.login.ac;
+
+        specialinvoke $r0.<com.seattleclouds.util.ag: void b(com.facebook.login.ac)>($r1);
+
+        return;
+    }
+
+    private void a(com.seattleclouds.util.al)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.seattleclouds.util.al $r1;
+        com.facebook.k $r2;
+        com.facebook.o $r3;
+        com.facebook.login.x $r4;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.seattleclouds.util.al;
+
+        $r2 = staticinvoke <com.facebook.l: com.facebook.k a()>();
+
+        $r0.<com.seattleclouds.util.ag: com.facebook.k c> = $r2;
+
+        $r0.<com.seattleclouds.util.ag: com.seattleclouds.util.al b> = $r1;
+
+        $r4 = staticinvoke <com.facebook.login.x: com.facebook.login.x a()>();
+
+        $r2 = $r0.<com.seattleclouds.util.ag: com.facebook.k c>;
+
+        $r3 = $r0.<com.seattleclouds.util.ag: com.facebook.o d>;
+
+        virtualinvoke $r4.<com.facebook.login.x: void a(com.facebook.k,com.facebook.o)>($r2, $r3);
+
+        return;
+    }
+
+    private com.seattleclouds.util.am b(com.facebook.FacebookException)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.FacebookException $r1;
+        com.seattleclouds.util.am $r2;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.facebook.FacebookException;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.util.ag: com.seattleclouds.util.am a(com.facebook.FacebookRequestError,com.facebook.FacebookException)>(null, $r1);
+
+        return $r2;
+    }
+
+    private void b(com.facebook.login.ac)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.login.ac $r1;
+        com.facebook.AccessToken $r2;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.facebook.login.ac;
+
+        $r2 = virtualinvoke $r1.<com.facebook.login.ac: com.facebook.AccessToken a()>();
+
+        virtualinvoke $r0.<com.seattleclouds.util.ag: void a(com.facebook.AccessToken)>($r2);
+
+        return;
+    }
+
+    public static void c()
+    {
+        com.facebook.login.x $r0;
+
+        $r0 = staticinvoke <com.facebook.login.x: com.facebook.login.x a()>();
+
+        virtualinvoke $r0.<com.facebook.login.x: void b()>();
+
+        return;
+    }
+
+    static java.lang.Boolean f()
+    {
+        java.lang.Boolean r0;
+
+        r0 = <com.seattleclouds.util.ag: java.lang.Boolean f>;
+
+        return r0;
+    }
+
+    static java.lang.String g()
+    {
+        java.lang.String r0;
+
+        r0 = <com.seattleclouds.util.ag: java.lang.String e>;
+
+        return r0;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.util.ag $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 = <com.seattleclouds.util.ag: java.lang.String e>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, "User canceled login");
+
+        return;
+    }
+
+    public void a(com.facebook.AccessToken)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.AccessToken $r1;
+        android.os.Bundle $r2;
+        com.facebook.GraphRequest $r3;
+        com.seattleclouds.util.ai $r4;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.facebook.AccessToken;
+
+        $r4 = new com.seattleclouds.util.ai;
+
+        specialinvoke $r4.<com.seattleclouds.util.ai: void <init>(com.seattleclouds.util.ag,com.facebook.AccessToken)>($r0, $r1);
+
+        $r3 = staticinvoke <com.facebook.GraphRequest: com.facebook.GraphRequest a(com.facebook.AccessToken,com.facebook.ae)>($r1, $r4);
+
+        $r2 = new android.os.Bundle;
+
+        specialinvoke $r2.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("fields", "id, first_name, last_name, email, gender, birthday, location");
+
+        virtualinvoke $r3.<com.facebook.GraphRequest: void a(android.os.Bundle)>($r2);
+
+        virtualinvoke $r3.<com.facebook.GraphRequest: com.facebook.aj j()>();
+
+        return;
+    }
+
+    public void a(com.facebook.FacebookException)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.FacebookException $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.facebook.FacebookException;
+
+        $r2 = <com.seattleclouds.util.ag: java.lang.String e>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, "Login failed", $r1);
+
+        return;
+    }
+
+    public void a(com.facebook.login.ac)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.login.ac $r1;
+        java.lang.String $r2, $r5;
+        java.lang.StringBuilder $r3;
+        com.facebook.AccessToken $r4;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.facebook.login.ac;
+
+        $r2 = <com.seattleclouds.util.ag: java.lang.String e>;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r2, "LoginManager FacebookCallback onSuccess");
+
+        $r2 = <com.seattleclouds.util.ag: java.lang.String e>;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Access Token:: ");
+
+        $r4 = virtualinvoke $r1.<com.facebook.login.ac: com.facebook.AccessToken a()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r4);
+
+        $r5 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r2, $r5);
+
+        virtualinvoke $r0.<com.seattleclouds.util.ag: void d()>();
+
+        $r4 = virtualinvoke $r1.<com.facebook.login.ac: com.facebook.AccessToken a()>();
+
+        if $r4 == null goto label1;
+
+     label1:
+        return;
+    }
+
+    public void a(com.seattleclouds.bd)
+    {
+        com.seattleclouds.util.ag $r0;
+        com.seattleclouds.bd $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        android.support.v4.app.ac $r3;
+        com.facebook.login.x $r4;
+        java.lang.String[] $r5;
+        java.util.List $r6;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: com.seattleclouds.bd;
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $i0 = <com.seattleclouds.l: int facebook_app_id>;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.bd: java.lang.String b(int)>($i0);
+
+        if $r2 == null goto label2;
+
+        $i0 = virtualinvoke $r2.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label3;
+
+     label2:
+        $r3 = virtualinvoke $r1.<com.seattleclouds.bd: android.support.v4.app.ac n()>();
+
+        $i1 = <com.seattleclouds.l: int warning>;
+
+        $i0 = <com.seattleclouds.l: int facebook_error_no_app_id_provided>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r3, $i1, $i0);
+
+        return;
+
+     label3:
+        $r4 = staticinvoke <com.facebook.login.x: com.facebook.login.x a()>();
+
+        $r5 = newarray (java.lang.String)[1];
+
+        $r5[0] = "public_profile";
+
+        $r6 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($r5);
+
+        virtualinvoke $r4.<com.facebook.login.x: void a(android.support.v4.app.Fragment,java.util.Collection)>($r1, $r6);
+
+        return;
+    }
+
+    public void a(java.lang.Object)
+    {
+        com.seattleclouds.util.ag $r0;
+        java.lang.Object $r1;
+        com.facebook.login.ac $r2;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (com.facebook.login.ac) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.util.ag: void a(com.facebook.login.ac)>($r2);
+
+        return;
+    }
+
+    public boolean a(int, int, android.content.Intent)
+    {
+        com.seattleclouds.util.ag $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        boolean $z0;
+        com.facebook.k $r2;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ag: com.facebook.k c>;
+
+        $z0 = interfaceinvoke $r2.<com.facebook.k: boolean a(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+        return $z0;
+    }
+
+    public com.facebook.Profile b()
+    {
+        com.seattleclouds.util.ag $r0;
+        com.facebook.Profile $r1;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 = staticinvoke <com.facebook.Profile: com.facebook.Profile a()>();
+
+        return $r1;
+    }
+
+    public void d()
+    {
+        com.seattleclouds.util.ag $r0;
+        java.lang.String $r1;
+        com.facebook.AccessToken $r2;
+        boolean $z0;
+        com.facebook.Profile $r3;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        $r1 = <com.seattleclouds.util.ag: java.lang.String e>;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r1, "update status ");
+
+        $r2 = staticinvoke <com.facebook.AccessToken: com.facebook.AccessToken a()>();
+
+        if $r2 == null goto label2;
+
+        $z0 = 1;
+
+     label1:
+        $r3 = staticinvoke <com.facebook.Profile: com.facebook.Profile a()>();
+
+        if $z0 == 0 goto label3;
+
+        if $r3 == null goto label3;
+
+        $r0.<com.seattleclouds.util.ag: boolean g> = 1;
+
+        return;
+
+     label2:
+        $z0 = 0;
+
+        goto label1;
+
+     label3:
+        $r0.<com.seattleclouds.util.ag: boolean g> = 0;
+
+        return;
+    }
+
+    public boolean e()
+    {
+        com.seattleclouds.util.ag $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.util.ag;
+
+        virtualinvoke $r0.<com.seattleclouds.util.ag: void d()>();
+
+        z0 = $r0.<com.seattleclouds.util.ag: boolean g>;
+
+        return z0;
+    }
+}

@@ -1,0 +1,82 @@
+class com.myle.toumarket.apk_install$2 extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.myle.toumarket.apk_install this$0;
+
+    void <init>(com.myle.toumarket.apk_install)
+    {
+        com.myle.toumarket.apk_install$2 $r0;
+        com.myle.toumarket.apk_install $r1;
+
+        $r0 := @this: com.myle.toumarket.apk_install$2;
+
+        $r1 := @parameter0: com.myle.toumarket.apk_install;
+
+        $r0.<com.myle.toumarket.apk_install$2: com.myle.toumarket.apk_install this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.myle.toumarket.apk_install$2 $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        java.lang.String $r2;
+        com.myle.toumarket.apk_install $r3, $r8;
+        android.content.SharedPreferences $r4;
+        java.lang.StringBuilder $r5;
+        java.lang.String[] $r6;
+        com.myle.toumarket.service.DownloaderThread_progress $r7;
+        java.lang.Thread $r9;
+
+        $r0 := @this: com.myle.toumarket.apk_install$2;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$2: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = virtualinvoke $r3.<com.myle.toumarket.apk_install: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("TOUMARKET_PREF", 0);
+
+        $r2 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("addresse_ip", "");
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>(java.lang.String)>("TOUMARKET_SUCCESS;0;1;http://");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/toumarket/update/toumarket.apk; ; ; ; ; ;");
+
+        $r2 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r2 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("WriteRights", $r2);
+
+        $r6 = virtualinvoke $r2.<java.lang.String: java.lang.String[] split(java.lang.String)>(";");
+
+        $r2 = $r6[3];
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$2: com.myle.toumarket.apk_install this$0>;
+
+        $r7 = new com.myle.toumarket.service.DownloaderThread_progress;
+
+        $r8 = $r0.<com.myle.toumarket.apk_install$2: com.myle.toumarket.apk_install this$0>;
+
+        $r8 = staticinvoke <com.myle.toumarket.apk_install: com.myle.toumarket.apk_install access$1(com.myle.toumarket.apk_install)>($r8);
+
+        specialinvoke $r7.<com.myle.toumarket.service.DownloaderThread_progress: void <init>(com.myle.toumarket.apk_install,java.lang.String)>($r8, $r2);
+
+        staticinvoke <com.myle.toumarket.apk_install: void access$4(com.myle.toumarket.apk_install,java.lang.Thread)>($r3, $r7);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$2: com.myle.toumarket.apk_install this$0>;
+
+        $r9 = staticinvoke <com.myle.toumarket.apk_install: java.lang.Thread access$3(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r9.<java.lang.Thread: void start()>();
+
+        return;
+    }
+}

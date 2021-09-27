@@ -1,0 +1,5 @@
+public interface  com.seattleclouds.util.e extends java.lang.Object
+{
+
+    public abstract void a(java.lang.String, android.net.Uri);
+}

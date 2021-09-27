@@ -1,0 +1,67 @@
+public final class com.google.zxing.client.a.f extends java.lang.Object
+{
+    private final java.lang.String a;
+    private final long b;
+
+    public void <init>(java.lang.String)
+    {
+        com.google.zxing.client.a.f $r0;
+        java.lang.String $r1;
+        long $l0;
+
+        $r0 := @this: com.google.zxing.client.a.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        specialinvoke $r0.<com.google.zxing.client.a.f: void <init>(java.lang.String,long)>($r1, $l0);
+
+        return;
+    }
+
+    public void <init>(java.lang.String, long)
+    {
+        com.google.zxing.client.a.f $r0;
+        java.lang.String $r1;
+        long $l0;
+
+        $r0 := @this: com.google.zxing.client.a.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $l0 := @parameter1: long;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.google.zxing.client.a.f: java.lang.String a> = $r1;
+
+        $r0.<com.google.zxing.client.a.f: long b> = $l0;
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.google.zxing.client.a.f $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.google.zxing.client.a.f;
+
+        r1 = $r0.<com.google.zxing.client.a.f: java.lang.String a>;
+
+        return r1;
+    }
+
+    public java.lang.String toString()
+    {
+        com.google.zxing.client.a.f $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.google.zxing.client.a.f;
+
+        r1 = $r0.<com.google.zxing.client.a.f: java.lang.String a>;
+
+        return r1;
+    }
+}

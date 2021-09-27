@@ -1,0 +1,106 @@
+class com.seattleclouds.a.b extends java.lang.Object implements java.lang.Runnable
+{
+    final int a;
+    final com.seattleclouds.a.a b;
+
+    void <init>(com.seattleclouds.a.a, int)
+    {
+        com.seattleclouds.a.b $r0;
+        com.seattleclouds.a.a $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.a.b;
+
+        $r1 := @parameter0: com.seattleclouds.a.a;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b> = $r1;
+
+        $r0.<com.seattleclouds.a.b: int a> = 2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.a.b $r0;
+        int $i0;
+        long $l1, $l2;
+        com.seattleclouds.a.a $r1;
+        byte $b3;
+        boolean $z0, $z1;
+        android.content.SharedPreferences$Editor $r2;
+
+        $r0 := @this: com.seattleclouds.a.b;
+
+        $i0 = $r0.<com.seattleclouds.a.b: int a>;
+
+        if $i0 != 2 goto label2;
+
+        $l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $l2 = staticinvoke <com.seattleclouds.a.a: long a(com.seattleclouds.a.a)>($r1);
+
+        $l1 = $l1 - $l2;
+
+        $b3 = $l1 cmp 43200000L;
+
+        if $b3 <= 0 goto label3;
+
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $z0 = staticinvoke <com.seattleclouds.a.a: boolean b(com.seattleclouds.a.a)>($r1);
+
+        $z1 = $z0;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $i0 = $r0.<com.seattleclouds.a.b: int a>;
+
+        $z1 = staticinvoke <com.seattleclouds.a.a: boolean a(com.seattleclouds.a.a,int)>($r1, $i0);
+
+     label1:
+        if $z1 == 0 goto label3;
+
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        staticinvoke <com.seattleclouds.a.a: long a(com.seattleclouds.a.a,long)>($r1, $l1);
+
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $r2 = staticinvoke <com.seattleclouds.a.a: android.content.SharedPreferences$Editor c(com.seattleclouds.a.a)>($r1);
+
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $l1 = staticinvoke <com.seattleclouds.a.a: long a(com.seattleclouds.a.a)>($r1);
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("activationTimestamp", $l1);
+
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $r2 = staticinvoke <com.seattleclouds.a.a: android.content.SharedPreferences$Editor c(com.seattleclouds.a.a)>($r1);
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.a.b: com.seattleclouds.a.a b>;
+
+        $i0 = $r0.<com.seattleclouds.a.b: int a>;
+
+        staticinvoke <com.seattleclouds.a.a: boolean a(com.seattleclouds.a.a,int)>($r1, $i0);
+
+     label3:
+        return;
+    }
+}

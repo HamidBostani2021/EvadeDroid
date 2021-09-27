@@ -1,0 +1,19 @@
+public class Slicecom.hrishiz.memomethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.hrishiz.memomethod this;
+        com.hrishiz.memo.PasswordActivity$7 $r7;
+
+        this := @this: Slicecom.hrishiz.memomethod;
+
+        $r7 = new com.hrishiz.memo.PasswordActivity$7;
+
+        $r7 = null;
+
+        virtualinvoke $r7.<com.hrishiz.memo.PasswordActivity$7: void onClick(android.view.View)>(null);
+
+        return;
+    }
+}

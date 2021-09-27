@@ -1,0 +1,219 @@
+class com.seattleclouds.modules.pollpage.i extends android.widget.BaseAdapter
+{
+    final com.seattleclouds.modules.pollpage.ResultsActivity a;
+    private android.view.LayoutInflater b;
+
+    public void <init>(com.seattleclouds.modules.pollpage.ResultsActivity, android.content.Context)
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+        com.seattleclouds.modules.pollpage.ResultsActivity $r1;
+        android.content.Context $r2;
+        android.view.LayoutInflater $r3;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        $r1 := @parameter0: com.seattleclouds.modules.pollpage.ResultsActivity;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r0.<com.seattleclouds.modules.pollpage.i: com.seattleclouds.modules.pollpage.ResultsActivity a> = $r1;
+
+        specialinvoke $r0.<android.widget.BaseAdapter: void <init>()>();
+
+        $r3 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r2);
+
+        $r0.<com.seattleclouds.modules.pollpage.i: android.view.LayoutInflater b> = $r3;
+
+        return;
+    }
+
+    public java.util.Map a(int)
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+        int $i0;
+        com.seattleclouds.modules.pollpage.ResultsActivity $r1;
+        java.util.ArrayList $r2;
+        java.lang.Object $r3;
+        java.util.Map $r4;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.modules.pollpage.i: com.seattleclouds.modules.pollpage.ResultsActivity a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.pollpage.ResultsActivity: java.util.ArrayList e(com.seattleclouds.modules.pollpage.ResultsActivity)>($r1);
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r4 = (java.util.Map) $r3;
+
+        return $r4;
+    }
+
+    public boolean areAllItemsEnabled()
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        return 0;
+    }
+
+    public int getCount()
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+        com.seattleclouds.modules.pollpage.ResultsActivity $r1;
+        java.util.ArrayList $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        $r1 = $r0.<com.seattleclouds.modules.pollpage.i: com.seattleclouds.modules.pollpage.ResultsActivity a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.pollpage.ResultsActivity: java.util.ArrayList e(com.seattleclouds.modules.pollpage.ResultsActivity)>($r1);
+
+        $i0 = virtualinvoke $r2.<java.util.ArrayList: int size()>();
+
+        return $i0;
+    }
+
+    public java.lang.Object getItem(int)
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+        int $i0;
+        java.util.Map $r1;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.pollpage.i: java.util.Map a(int)>($i0);
+
+        return $r1;
+    }
+
+    public long getItemId(int)
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+        int $i0;
+        long $l1;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        $i0 := @parameter0: int;
+
+        $l1 = (long) $i0;
+
+        return $l1;
+    }
+
+    public android.view.View getView(int, android.view.View, android.view.ViewGroup)
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+        int $i0;
+        android.view.ViewGroup $r1;
+        android.view.View $r2, $r5, $r7;
+        java.util.Map $r3;
+        android.view.LayoutInflater $r4;
+        com.seattleclouds.modules.pollpage.k $r6;
+        android.widget.TextView $r8;
+        java.lang.Object $r9;
+        java.lang.CharSequence $r10;
+        java.lang.String $r11;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        $i0 := @parameter0: int;
+
+        $r2 := @parameter1: android.view.View;
+
+        $r1 := @parameter2: android.view.ViewGroup;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.pollpage.i: java.util.Map a(int)>($i0);
+
+        if $r2 != null goto label2;
+
+        $r4 = $r0.<com.seattleclouds.modules.pollpage.i: android.view.LayoutInflater b>;
+
+        $i0 = <com.seattleclouds.j: int pollpage_results_item_view>;
+
+        $r5 = virtualinvoke $r4.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r1, 0);
+
+        $r2 = $r5;
+
+        $r6 = new com.seattleclouds.modules.pollpage.k;
+
+        specialinvoke $r6.<com.seattleclouds.modules.pollpage.k: void <init>(com.seattleclouds.modules.pollpage.h)>(null);
+
+        $i0 = <com.seattleclouds.h: int pollpage_result_percent_alue>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.pollpage.k: android.widget.TextView a> = $r8;
+
+        $i0 = <com.seattleclouds.h: int pollpage_result_answer_value>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.pollpage.k: android.widget.TextView b> = $r8;
+
+        virtualinvoke $r5.<android.view.View: void setTag(java.lang.Object)>($r6);
+
+     label1:
+        $r8 = $r6.<com.seattleclouds.modules.pollpage.k: android.widget.TextView a>;
+
+        $r9 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>("percents");
+
+        $r10 = (java.lang.CharSequence) $r9;
+
+        virtualinvoke $r8.<android.widget.TextView: void setText(java.lang.CharSequence)>($r10);
+
+        $r8 = $r6.<com.seattleclouds.modules.pollpage.k: android.widget.TextView a>;
+
+        $r9 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>("color");
+
+        $r11 = (java.lang.String) $r9;
+
+        $i0 = staticinvoke <android.graphics.Color: int parseColor(java.lang.String)>($r11);
+
+        virtualinvoke $r8.<android.widget.TextView: void setBackgroundColor(int)>($i0);
+
+        $r8 = $r6.<com.seattleclouds.modules.pollpage.k: android.widget.TextView a>;
+
+        virtualinvoke $r8.<android.widget.TextView: void setTextColor(int)>(-1);
+
+        $r8 = $r6.<com.seattleclouds.modules.pollpage.k: android.widget.TextView b>;
+
+        $r9 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>("label");
+
+        $r10 = (java.lang.CharSequence) $r9;
+
+        virtualinvoke $r8.<android.widget.TextView: void setText(java.lang.CharSequence)>($r10);
+
+        return $r2;
+
+     label2:
+        $r9 = virtualinvoke $r2.<android.view.View: java.lang.Object getTag()>();
+
+        $r6 = (com.seattleclouds.modules.pollpage.k) $r9;
+
+        goto label1;
+    }
+
+    public boolean isEnabled(int)
+    {
+        com.seattleclouds.modules.pollpage.i $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.i;
+
+        $i0 := @parameter0: int;
+
+        return 0;
+    }
+}

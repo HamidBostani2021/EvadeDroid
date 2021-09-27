@@ -1,0 +1,309 @@
+class com.seattleclouds.modules.order.l extends java.lang.Object implements android.widget.AdapterView$OnItemSelectedListener
+{
+    final com.seattleclouds.modules.order.d a;
+
+    void <init>(com.seattleclouds.modules.order.d)
+    {
+        com.seattleclouds.modules.order.l $r0;
+        com.seattleclouds.modules.order.d $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.l;
+
+        $r1 := @parameter0: com.seattleclouds.modules.order.d;
+
+        $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onItemSelected(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.order.l $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        com.seattleclouds.modules.order.d $r3, $r4;
+        android.widget.ArrayAdapter $r5;
+        java.lang.Object $r6;
+        com.seattleclouds.modules.order.q $r7;
+        java.lang.String $r8, $r10;
+        boolean $z0;
+        android.widget.LinearLayout $r9;
+        byte $b2;
+        android.widget.Spinner $r11;
+
+        $r0 := @this: com.seattleclouds.modules.order.l;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r4 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.ArrayAdapter i(com.seattleclouds.modules.order.d)>($r4);
+
+        $r6 = virtualinvoke $r5.<android.widget.ArrayAdapter: java.lang.Object getItem(int)>($i0);
+
+        $r7 = (com.seattleclouds.modules.order.q) $r6;
+
+        staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q a(com.seattleclouds.modules.order.d,com.seattleclouds.modules.order.q)>($r3, $r7);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ag()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label05;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout j(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout k(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(0);
+
+     label01:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String l(com.seattleclouds.modules.order.d)>($r3);
+
+        $r10 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ac()>();
+
+        if $r8 != $r10 goto label04;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout d(com.seattleclouds.modules.order.d)>($r3);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ad()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 != 0 goto label02;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ae()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 != 0 goto label02;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String af()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label11;
+
+     label02:
+        $b2 = 8;
+
+     label03:
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>($b2);
+
+     label04:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r4 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r11 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.Spinner m(com.seattleclouds.modules.order.d)>($r4);
+
+        staticinvoke <com.seattleclouds.modules.order.d: void a(com.seattleclouds.modules.order.d,android.widget.Spinner)>($r3, $r11);
+
+        return;
+
+     label05:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ah()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label06;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout j(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout k(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(0);
+
+        goto label01;
+
+     label06:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ai()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label07;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout j(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(0);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout k(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(0);
+
+        goto label01;
+
+     label07:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ad()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label08;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout j(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout k(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(0);
+
+        goto label01;
+
+     label08:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String ae()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label09;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout j(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout k(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        goto label01;
+
+     label09:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String aj()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label10;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout j(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout k(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(0);
+
+        goto label01;
+
+     label10:
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.order.d: com.seattleclouds.modules.order.q g(com.seattleclouds.modules.order.d)>($r3);
+
+        $r8 = staticinvoke <com.seattleclouds.modules.order.d: java.lang.String af()>();
+
+        $z0 = virtualinvoke $r7.<com.seattleclouds.modules.order.q: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label01;
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout j(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.seattleclouds.modules.order.l: com.seattleclouds.modules.order.d a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.order.d: android.widget.LinearLayout k(com.seattleclouds.modules.order.d)>($r3);
+
+        virtualinvoke $r9.<android.widget.LinearLayout: void setVisibility(int)>(8);
+
+        goto label01;
+
+     label11:
+        $b2 = 0;
+
+        goto label03;
+    }
+
+    public void onNothingSelected(android.widget.AdapterView)
+    {
+        com.seattleclouds.modules.order.l $r0;
+        android.widget.AdapterView $r1;
+
+        $r0 := @this: com.seattleclouds.modules.order.l;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        return;
+    }
+}

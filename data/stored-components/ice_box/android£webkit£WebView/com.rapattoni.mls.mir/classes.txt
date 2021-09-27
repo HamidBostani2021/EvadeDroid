@@ -1,0 +1,9 @@
+com.rapattoni.mls.RapattoniWebViewClient
+com.rapattoni.mls.WebViewActivity$2
+com.rapattoni.mls.WebViewActivity$1
+com.rapattoni.mls.WebViewActivity
+com.rapattoni.mls.MainActivity
+com.rapattoni.mls.RapattoniWebChromeClient
+com.rapattoni.mls.RapattoniWebChromeClient$1
+com.rapattoni.mls.RapattoniWebChromeClient$2
+com.rapattoni.mls.RapattoniWebChromeClient$3

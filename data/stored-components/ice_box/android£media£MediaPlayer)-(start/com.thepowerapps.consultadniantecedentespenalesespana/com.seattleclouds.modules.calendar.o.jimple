@@ -1,0 +1,52 @@
+class com.seattleclouds.modules.calendar.o extends com.seattleclouds.util.b
+{
+    final com.seattleclouds.modules.calendar.a o;
+
+    void <init>(com.seattleclouds.modules.calendar.a, android.content.Context)
+    {
+        com.seattleclouds.modules.calendar.o $r0;
+        com.seattleclouds.modules.calendar.a $r1;
+        android.content.Context $r2;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.o;
+
+        $r1 := @parameter0: com.seattleclouds.modules.calendar.a;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r0.<com.seattleclouds.modules.calendar.o: com.seattleclouds.modules.calendar.a o> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.util.b: void <init>(android.content.Context)>($r2);
+
+        return;
+    }
+
+    protected android.database.Cursor x()
+    {
+        com.seattleclouds.modules.calendar.o $r0;
+        com.seattleclouds.modules.calendar.a $r1;
+        com.seattleclouds.modules.calendar.q $r2;
+        com.jasonkostempski.android.calendar.CalendarView $r3;
+        java.util.Calendar $r4;
+        java.util.Date $r5;
+        android.database.Cursor $r6;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.o;
+
+        $r1 = $r0.<com.seattleclouds.modules.calendar.o: com.seattleclouds.modules.calendar.a o>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.calendar.a: com.seattleclouds.modules.calendar.q i(com.seattleclouds.modules.calendar.a)>($r1);
+
+        $r1 = $r0.<com.seattleclouds.modules.calendar.o: com.seattleclouds.modules.calendar.a o>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.a: com.jasonkostempski.android.calendar.CalendarView e(com.seattleclouds.modules.calendar.a)>($r1);
+
+        $r4 = virtualinvoke $r3.<com.jasonkostempski.android.calendar.CalendarView: java.util.Calendar getSelectedDay()>();
+
+        $r5 = virtualinvoke $r4.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r6 = virtualinvoke $r2.<com.seattleclouds.modules.calendar.q: android.database.Cursor a(java.util.Date)>($r5);
+
+        return $r6;
+    }
+}

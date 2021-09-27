@@ -1,0 +1,68 @@
+public class com.seattleclouds.modules.r.a extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.lang.Boolean b;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.r.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.r.a;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    java.lang.String a()
+    {
+        com.seattleclouds.modules.r.a $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.a;
+
+        r1 = $r0.<com.seattleclouds.modules.r.a: java.lang.String a>;
+
+        return r1;
+    }
+
+    void a(java.lang.Boolean)
+    {
+        com.seattleclouds.modules.r.a $r0;
+        java.lang.Boolean $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.a;
+
+        $r1 := @parameter0: java.lang.Boolean;
+
+        $r0.<com.seattleclouds.modules.r.a: java.lang.Boolean b> = $r1;
+
+        return;
+    }
+
+    void a(java.lang.String)
+    {
+        com.seattleclouds.modules.r.a $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.r.a: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    java.lang.Boolean b()
+    {
+        com.seattleclouds.modules.r.a $r0;
+        java.lang.Boolean r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.a;
+
+        r1 = $r0.<com.seattleclouds.modules.r.a: java.lang.Boolean b>;
+
+        return r1;
+    }
+}

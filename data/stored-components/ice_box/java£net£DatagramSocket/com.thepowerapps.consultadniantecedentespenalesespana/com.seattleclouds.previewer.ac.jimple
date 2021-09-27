@@ -1,0 +1,625 @@
+class com.seattleclouds.previewer.ac extends android.os.AsyncTask
+{
+    protected java.lang.String a;
+    protected java.lang.String b;
+    protected int c;
+    final com.seattleclouds.previewer.r d;
+    private org.json.JSONObject e;
+
+    public void <init>(com.seattleclouds.previewer.r, java.lang.String, java.lang.String, int)
+    {
+        com.seattleclouds.previewer.ac $r0;
+        com.seattleclouds.previewer.r $r1;
+        java.lang.String $r2, $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.r;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $i0 := @parameter3: int;
+
+        $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject e> = null;
+
+        $r0.<com.seattleclouds.previewer.ac: java.lang.String a> = "oauth2:https://www.googleapis.com/auth/userinfo.profile";
+
+        $r0.<com.seattleclouds.previewer.ac: java.lang.String b> = $r2;
+
+        $r0.<com.seattleclouds.previewer.ac: int c> = 1003;
+
+        return;
+    }
+
+    private void a(int)
+    {
+        com.seattleclouds.previewer.ac $r0;
+        int $i0;
+        com.seattleclouds.previewer.ad $r1;
+        com.seattleclouds.previewer.r $r2;
+        android.support.v4.app.ac $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        $i0 := @parameter0: int;
+
+        $r2 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        $r1 = new com.seattleclouds.previewer.ad;
+
+        specialinvoke $r1.<com.seattleclouds.previewer.ad: void <init>(com.seattleclouds.previewer.ac,int)>($r0, $i0);
+
+        virtualinvoke $r3.<android.support.v4.app.ac: void runOnUiThread(java.lang.Runnable)>($r1);
+
+        return;
+    }
+
+    private org.json.JSONObject b(java.lang.String)
+    {
+        com.seattleclouds.previewer.ac $r0;
+        java.lang.String $r1, $r4;
+        java.net.URL $r2;
+        java.lang.StringBuilder $r3;
+        java.net.URLConnection $r5;
+        java.net.HttpURLConnection $r6;
+        int $i0;
+        java.io.InputStream $r7;
+        org.json.JSONObject $r8;
+        com.seattleclouds.previewer.r $r9;
+        android.support.v4.app.ac $r10;
+        com.seattleclouds.api.HttpResponseException $r11;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new java.net.URL;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("https://www.googleapis.com/oauth2/v1/userinfo?access_token=");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r2.<java.net.URL: void <init>(java.lang.String)>($r4);
+
+        $r5 = virtualinvoke $r2.<java.net.URL: java.net.URLConnection openConnection()>();
+
+        $r6 = (java.net.HttpURLConnection) $r5;
+
+        $i0 = virtualinvoke $r6.<java.net.HttpURLConnection: int getResponseCode()>();
+
+        if $i0 != 200 goto label1;
+
+        $r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>();
+
+        $r1 = staticinvoke <com.seattleclouds.util.bn: java.lang.String b(java.io.InputStream)>($r7);
+
+        $r8 = new org.json.JSONObject;
+
+        specialinvoke $r8.<org.json.JSONObject: void <init>(java.lang.String)>($r1);
+
+        return $r8;
+
+     label1:
+        if $i0 != 401 goto label2;
+
+        $r9 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r10 = virtualinvoke $r9.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        if $r10 == null goto label2;
+
+        $r9 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r10 = virtualinvoke $r9.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.google.android.gms.auth.a: void a(android.content.Context,java.lang.String)>($r10, $r1);
+
+     label2:
+        $r11 = new com.seattleclouds.api.HttpResponseException;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Server returned error: ");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r1 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r11.<com.seattleclouds.api.HttpResponseException: void <init>(int,java.lang.String)>($i0, $r1);
+
+        throw $r11;
+    }
+
+    protected transient java.lang.String a(java.lang.Void[])
+    {
+        com.seattleclouds.previewer.ac $r0;
+        java.lang.Void[] $r1;
+        java.lang.String $r2, $r5, $r6;
+        com.seattleclouds.previewer.r $r3, $r11;
+        android.support.v4.app.ac $r4;
+        org.json.JSONObject $r7;
+        java.util.HashMap $r8;
+        boolean $z0;
+        java.lang.StringBuilder $r9;
+        com.seattleclouds.previewer.z $r10;
+        java.lang.String[] $r12;
+        com.google.android.gms.auth.GooglePlayServicesAvailabilityException $r13;
+        int $i0;
+        com.google.android.gms.auth.UserRecoverableAuthException $r14;
+        android.content.Intent $r15;
+        com.google.android.gms.auth.GoogleAuthException $r16;
+        java.lang.Throwable $r17;
+        org.json.JSONException $r18;
+        com.seattleclouds.api.HttpResponseException $r19;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r2 = null;
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        if $r4 != null goto label01;
+
+        return null;
+
+     label01:
+        $r5 = $r0.<com.seattleclouds.previewer.ac: java.lang.String b>;
+
+        $r6 = $r0.<com.seattleclouds.previewer.ac: java.lang.String a>;
+
+     label02:
+        $r5 = staticinvoke <com.google.android.gms.auth.a: java.lang.String a(android.content.Context,java.lang.String,java.lang.String)>($r4, $r5, $r6);
+
+        $r7 = specialinvoke $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject b(java.lang.String)>($r5);
+
+     label03:
+        $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject e> = $r7;
+
+        $r8 = new java.util.HashMap;
+
+     label04:
+        specialinvoke $r8.<java.util.HashMap: void <init>()>();
+
+     label05:
+        $r7 = $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject e>;
+
+     label06:
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        interfaceinvoke $r8.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("id", $r5);
+
+     label07:
+        $r5 = $r0.<com.seattleclouds.previewer.ac: java.lang.String b>;
+
+     label08:
+        interfaceinvoke $r8.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("email", $r5);
+
+     label09:
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+     label10:
+        interfaceinvoke $r8.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r5);
+
+     label11:
+        $r7 = $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject e>;
+
+     label12:
+        $z0 = virtualinvoke $r7.<org.json.JSONObject: boolean has(java.lang.String)>("given_name");
+
+     label13:
+        if $z0 == 0 goto label15;
+
+        $r7 = $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject e>;
+
+     label14:
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("given_name");
+
+        interfaceinvoke $r8.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("given_name", $r5);
+
+     label15:
+        $r7 = $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject e>;
+
+     label16:
+        $z0 = virtualinvoke $r7.<org.json.JSONObject: boolean has(java.lang.String)>("family_name");
+
+     label17:
+        if $z0 == 0 goto label19;
+
+        $r7 = $r0.<com.seattleclouds.previewer.ac: org.json.JSONObject e>;
+
+     label18:
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("family_name");
+
+        interfaceinvoke $r8.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("family_name", $r5);
+
+     label19:
+        $r9 = new java.lang.StringBuilder;
+
+     label20:
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.r: java.lang.String ah()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("googlemobauth.ashx");
+
+        $r5 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = staticinvoke <com.seattleclouds.util.a: java.lang.String b(java.lang.String,java.util.Map)>($r5, $r8);
+
+     label21:
+        $r7 = new org.json.JSONObject;
+
+     label22:
+        specialinvoke $r7.<org.json.JSONObject: void <init>(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("resp");
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("success");
+
+     label23:
+        if $z0 == 0 goto label33;
+
+        $r2 = "OK";
+
+        $r10 = new com.seattleclouds.previewer.z;
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r11 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+     label24:
+        specialinvoke $r10.<com.seattleclouds.previewer.z: void <init>(com.seattleclouds.previewer.r,android.support.v4.app.Fragment)>($r3, $r11);
+
+     label25:
+        $r12 = newarray (java.lang.String)[2];
+
+     label26:
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("username");
+
+     label27:
+        $r12[0] = $r5;
+
+     label28:
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("password");
+
+     label29:
+        $r12[1] = $r5;
+
+     label30:
+        virtualinvoke $r10.<com.seattleclouds.previewer.z: android.os.AsyncTask execute(java.lang.Object[])>($r12);
+
+     label31:
+        return "OK";
+
+     label32:
+        $r13 := @caughtexception;
+
+        $i0 = virtualinvoke $r13.<com.google.android.gms.auth.GooglePlayServicesAvailabilityException: int getConnectionStatusCode()>();
+
+        specialinvoke $r0.<com.seattleclouds.previewer.ac: void a(int)>($i0);
+
+        return $r2;
+
+     label33:
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+     label34:
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("error");
+
+        $r5 = virtualinvoke $r5.<java.lang.String: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,java.lang.String)>($r3, $r5);
+
+     label35:
+        return null;
+
+     label36:
+        $r14 := @caughtexception;
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r15 = virtualinvoke $r14.<com.google.android.gms.auth.UserRecoverableAuthException: android.content.Intent getIntent()>();
+
+        $i0 = $r0.<com.seattleclouds.previewer.ac: int c>;
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.r: void startActivityForResult(android.content.Intent,int)>($r15, $i0);
+
+        return $r2;
+
+     label37:
+        $r16 := @caughtexception;
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Google Auth unrecoverable error: ");
+
+        $r5 = virtualinvoke $r16.<com.google.android.gms.auth.GoogleAuthException: java.lang.String getMessage()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("PreviewerLoginFragment", $r5, $r16);
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Unrecoverable error: ");
+
+        $r5 = virtualinvoke $r16.<com.google.android.gms.auth.GoogleAuthException: java.lang.String getMessage()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,java.lang.String)>($r3, $r5);
+
+        return $r2;
+
+     label38:
+        $r17 := @caughtexception;
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r11 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.r: java.lang.String e(com.seattleclouds.previewer.r)>($r11);
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,java.lang.String)>($r3, $r5);
+
+        return $r2;
+
+     label39:
+        $r18 := @caughtexception;
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Bad response: ");
+
+        $r5 = virtualinvoke $r18.<org.json.JSONException: java.lang.String getMessage()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.Throwable)>($r5, $r18);
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,int)>($r3, $i0);
+
+        return $r2;
+
+     label40:
+        $r19 := @caughtexception;
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $i0 = <com.seattleclouds.l: int previewer_login_google_auth_error>;
+
+        staticinvoke <com.seattleclouds.previewer.r: void a(com.seattleclouds.previewer.r,int)>($r3, $i0);
+
+        return $r2;
+
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label02 to label03 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label04 to label05 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label06 to label07 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label08 to label09 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label10 to label11 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label12 to label13 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label14 to label15 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label16 to label17 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label18 to label19 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label20 to label21 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label22 to label23 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label24 to label25 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label26 to label27 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label28 to label29 with label32;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label30 to label31 with label32;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label02 to label03 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label04 to label05 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label06 to label07 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label08 to label09 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label10 to label11 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label12 to label13 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label14 to label15 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label16 to label17 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label18 to label19 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label20 to label21 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label22 to label23 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label24 to label25 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label26 to label27 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label28 to label29 with label36;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label30 to label31 with label36;
+        catch com.google.android.gms.auth.GoogleAuthException from label02 to label03 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label04 to label05 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label06 to label07 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label08 to label09 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label10 to label11 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label12 to label13 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label14 to label15 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label16 to label17 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label18 to label19 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label20 to label21 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label22 to label23 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label24 to label25 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label26 to label27 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label28 to label29 with label37;
+        catch com.google.android.gms.auth.GoogleAuthException from label30 to label31 with label37;
+        catch java.io.IOException from label02 to label03 with label38;
+        catch java.io.IOException from label04 to label05 with label38;
+        catch java.io.IOException from label06 to label07 with label38;
+        catch java.io.IOException from label08 to label09 with label38;
+        catch java.io.IOException from label10 to label11 with label38;
+        catch java.io.IOException from label12 to label13 with label38;
+        catch java.io.IOException from label14 to label15 with label38;
+        catch java.io.IOException from label16 to label17 with label38;
+        catch java.io.IOException from label18 to label19 with label38;
+        catch java.io.IOException from label20 to label21 with label38;
+        catch java.io.IOException from label22 to label23 with label38;
+        catch java.io.IOException from label24 to label25 with label38;
+        catch java.io.IOException from label26 to label27 with label38;
+        catch java.io.IOException from label28 to label29 with label38;
+        catch java.io.IOException from label30 to label31 with label38;
+        catch org.json.JSONException from label02 to label03 with label39;
+        catch org.json.JSONException from label04 to label05 with label39;
+        catch org.json.JSONException from label06 to label07 with label39;
+        catch org.json.JSONException from label08 to label09 with label39;
+        catch org.json.JSONException from label10 to label11 with label39;
+        catch org.json.JSONException from label12 to label13 with label39;
+        catch org.json.JSONException from label14 to label15 with label39;
+        catch org.json.JSONException from label16 to label17 with label39;
+        catch org.json.JSONException from label18 to label19 with label39;
+        catch org.json.JSONException from label20 to label21 with label39;
+        catch org.json.JSONException from label22 to label23 with label39;
+        catch org.json.JSONException from label24 to label25 with label39;
+        catch org.json.JSONException from label26 to label27 with label39;
+        catch org.json.JSONException from label28 to label29 with label39;
+        catch org.json.JSONException from label30 to label31 with label39;
+        catch com.seattleclouds.api.HttpResponseException from label02 to label03 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label04 to label05 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label06 to label07 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label08 to label09 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label10 to label11 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label12 to label13 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label14 to label15 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label16 to label17 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label18 to label19 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label20 to label21 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label22 to label23 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label24 to label25 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label26 to label27 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label28 to label29 with label40;
+        catch com.seattleclouds.api.HttpResponseException from label30 to label31 with label40;
+        catch com.google.android.gms.auth.GooglePlayServicesAvailabilityException from label34 to label35 with label32;
+        catch com.google.android.gms.auth.UserRecoverableAuthException from label34 to label35 with label36;
+        catch com.google.android.gms.auth.GoogleAuthException from label34 to label35 with label37;
+        catch java.io.IOException from label34 to label35 with label38;
+        catch org.json.JSONException from label34 to label35 with label39;
+        catch com.seattleclouds.api.HttpResponseException from label34 to label35 with label40;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.previewer.ac $r0;
+        java.lang.String $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.previewer.r $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        if $r1 != null goto label2;
+
+        $r3 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        staticinvoke <com.seattleclouds.previewer.r: void b(com.seattleclouds.previewer.r,boolean)>($r3, 0);
+
+     label2:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.previewer.ac $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.previewer.ac: java.lang.String a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.previewer.ac $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.ac: void a(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.previewer.ac $r0;
+        com.seattleclouds.previewer.r $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.ac;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPreExecute()>();
+
+        $r1 = $r0.<com.seattleclouds.previewer.ac: com.seattleclouds.previewer.r d>;
+
+        staticinvoke <com.seattleclouds.previewer.r: void b(com.seattleclouds.previewer.r,boolean)>($r1, 1);
+
+        return;
+    }
+}

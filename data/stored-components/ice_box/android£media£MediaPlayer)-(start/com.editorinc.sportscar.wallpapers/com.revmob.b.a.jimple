@@ -1,0 +1,1031 @@
+public class com.revmob.b.a extends java.lang.Object
+{
+    public static java.lang.String a;
+    public static java.lang.String b;
+    public static java.lang.String c;
+    public static java.lang.String d;
+    private static java.lang.String e;
+    private static final android.util.SparseArray f;
+    private static final java.util.Map g;
+    private static com.revmob.b.a n;
+    private java.lang.String h;
+    private boolean i;
+    private com.revmob.RevMobParallaxMode j;
+    private boolean k;
+    private boolean l;
+    private com.revmob.b m;
+
+    static void <clinit>()
+    {
+        android.util.SparseArray $r0;
+        java.util.HashMap $r1;
+        com.revmob.b.a $r2;
+
+        <com.revmob.b.a: java.lang.String e> = "https://android.revmob.com";
+
+        $r0 = new android.util.SparseArray;
+
+        specialinvoke $r0.<android.util.SparseArray: void <init>()>();
+
+        <com.revmob.b.a: android.util.SparseArray f> = $r0;
+
+        $r1 = new java.util.HashMap;
+
+        specialinvoke $r1.<java.util.HashMap: void <init>()>();
+
+        <com.revmob.b.a: java.util.Map g> = $r1;
+
+        <com.revmob.b.a: java.lang.String a> = "android";
+
+        <com.revmob.b.a: java.lang.String b> = "9.2.3";
+
+        <com.revmob.b.a: java.lang.String c> = "android";
+
+        <com.revmob.b.a: java.lang.String d> = "9.2.3";
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(200, "OK.");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(202, "OK.");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(204, "Ad retrieval failed: No ads for this device/country right now or your App ID is paused.");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(404, "No ad retrieved: did you set a valid App ID? Get one at http://revmob.com.");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(409, "No ad retrieved: did you set a valid Placement ID? Get one at http://revmob.com.");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(422, "Request requirements did not met. Did you set required permissions?");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(423, "Is your ad unit paused? Please, check it in the RevMob Console.");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(500, "Unexpected server error.");
+
+        $r0 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        virtualinvoke $r0.<android.util.SparseArray: void put(int,java.lang.Object)>(503, "Unexpected server error.");
+
+        $r2 = new com.revmob.b.a;
+
+        specialinvoke $r2.<com.revmob.b.a: void <init>()>();
+
+        <com.revmob.b.a: com.revmob.b.a n> = $r2;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.revmob.b.a $r0;
+        com.revmob.RevMobParallaxMode $r1;
+
+        $r0 := @this: com.revmob.b.a;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.revmob.b.a: boolean i> = 0;
+
+        $r1 = <com.revmob.RevMobParallaxMode: com.revmob.RevMobParallaxMode DISABLED>;
+
+        $r0.<com.revmob.b.a: com.revmob.RevMobParallaxMode j> = $r1;
+
+        $r0.<com.revmob.b.a: boolean k> = 0;
+
+        $r0.<com.revmob.b.a: boolean l> = 0;
+
+        return;
+    }
+
+    public static com.revmob.b.a a()
+    {
+        com.revmob.b.a r0;
+
+        r0 = <com.revmob.b.a: com.revmob.b.a n>;
+
+        return r0;
+    }
+
+    static java.lang.String a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, boolean)
+    {
+        java.lang.String $r0, $r1, $r2, $r3, $r5;
+        boolean $z0, $z1;
+        int $i0;
+        java.lang.StringBuilder $r4;
+        java.util.Map $r6;
+        java.lang.Object $r7;
+        java.lang.Object[] $r8;
+
+        $r2 := @parameter0: java.lang.String;
+
+        $r3 := @parameter1: java.lang.String;
+
+        $r0 := @parameter2: java.lang.String;
+
+        $r1 := @parameter3: java.lang.String;
+
+        $z0 := @parameter4: boolean;
+
+        if $r2 == "videos" goto label01;
+
+        if $r2 != "video" goto label02;
+
+     label01:
+        if $z0 == 0 goto label02;
+
+        $r2 = "rewardedVideos";
+
+        $r3 = "rewardedVideos";
+
+     label02:
+        if $r1 == null goto label06;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 24 goto label06;
+
+        $z1 = 1;
+
+     label03:
+        if $z1 == 0 goto label08;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>(java.lang.String)>("fetch_");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_with_placement");
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r6 = <com.revmob.b.a: java.util.Map g>;
+
+        $z1 = interfaceinvoke $r6.<java.util.Map: boolean containsKey(java.lang.Object)>($r5);
+
+        if $z1 == 0 goto label07;
+
+        $r6 = <com.revmob.b.a: java.util.Map g>;
+
+        $r7 = interfaceinvoke $r6.<java.util.Map: java.lang.Object get(java.lang.Object)>($r5);
+
+        $r3 = (java.lang.String) $r7;
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>("PLACEMENT_ID", $r1);
+
+     label04:
+        if $z0 == 0 goto label10;
+
+        if $r2 == "fullscreens" goto label05;
+
+        if $r2 != "fullscreen" goto label10;
+
+     label05:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("?video=true");
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+
+     label06:
+        $z1 = 0;
+
+        goto label03;
+
+     label07:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = <com.revmob.b.a: java.lang.String e>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r8 = newarray (java.lang.Object)[3];
+
+        $r8[0] = $r0;
+
+        $r8[1] = $r1;
+
+        $r8[2] = $r3;
+
+        $r3 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("/api/v4/mobile_apps/%s/placements/%s/%s/fetch_only.json", $r8);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label04;
+
+     label08:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>(java.lang.String)>("fetch_");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r6 = <com.revmob.b.a: java.util.Map g>;
+
+        $z1 = interfaceinvoke $r6.<java.util.Map: boolean containsKey(java.lang.Object)>($r1);
+
+        if $z1 == 0 goto label09;
+
+        $r6 = <com.revmob.b.a: java.util.Map g>;
+
+        $r7 = interfaceinvoke $r6.<java.util.Map: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r3 = (java.lang.String) $r7;
+
+        goto label04;
+
+     label09:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = <com.revmob.b.a: java.lang.String e>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r8 = newarray (java.lang.Object)[2];
+
+        $r8[0] = $r0;
+
+        $r8[1] = $r3;
+
+        $r3 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("/api/v4/mobile_apps/%s/%s/fetch_only.json", $r8);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label04;
+
+     label10:
+        return $r3;
+    }
+
+    private void a(int, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        int $i0;
+        com.revmob.b.f $r1;
+        android.util.SparseArray $r2;
+        java.lang.Object $r3;
+        java.lang.String $r4;
+        java.lang.StringBuilder $r5;
+        boolean $z0;
+        com.revmob.b $r6;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: com.revmob.b.f;
+
+        $r2 = <com.revmob.b.a: android.util.SparseArray f>;
+
+        $r3 = virtualinvoke $r2.<android.util.SparseArray: java.lang.Object get(int,java.lang.Object)>($i0, "RevMob did not answer as expected.");
+
+        $r4 = (java.lang.String) $r3;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" (");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(")");
+
+        $r4 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.revmob.internal.a: void c(java.lang.String)>($r4);
+
+        if $r1 == null goto label1;
+
+        virtualinvoke $r1.<com.revmob.b.f: void b(java.lang.String)>($r4);
+
+     label1:
+        $z0 = $r0.<com.revmob.b.a: boolean k>;
+
+        if $z0 == 0 goto label3;
+
+        $r6 = $r0.<com.revmob.b.a: com.revmob.b m>;
+
+        if $r6 == null goto label2;
+
+        $r6 = $r0.<com.revmob.b.a: com.revmob.b m>;
+
+        virtualinvoke $r6.<com.revmob.b: void a(java.lang.String)>($r4);
+
+     label2:
+        $r0.<com.revmob.b.a: boolean k> = 0;
+
+     label3:
+        return;
+    }
+
+    public static void a(java.lang.String)
+    {
+        java.lang.String $r0, $r3;
+        java.util.Map $r1;
+        boolean $z0;
+        java.lang.Object $r2;
+        com.revmob.internal.d $r4;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 = <com.revmob.b.a: java.util.Map g>;
+
+        $z0 = interfaceinvoke $r1.<java.util.Map: boolean containsKey(java.lang.Object)>("errors");
+
+        if $z0 == 0 goto label1;
+
+        $r1 = <com.revmob.b.a: java.util.Map g>;
+
+        $r2 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("errors");
+
+        $r3 = (java.lang.String) $r2;
+
+        $r4 = new com.revmob.internal.d;
+
+        specialinvoke $r4.<com.revmob.internal.d: void <init>()>();
+
+        virtualinvoke $r4.<com.revmob.internal.d: org.apache.http.HttpResponse a(java.lang.String,java.lang.String)>($r3, $r0);
+
+     label1:
+        return;
+    }
+
+    static void a(java.lang.String, java.lang.String)
+    {
+        java.lang.String $r0, $r1;
+        java.util.Map $r2;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 := @parameter1: java.lang.String;
+
+        if $r0 == null goto label1;
+
+        if $r1 == null goto label1;
+
+        $r2 = <com.revmob.b.a: java.util.Map g>;
+
+        interfaceinvoke $r2.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>($r0, $r1);
+
+     label1:
+        return;
+    }
+
+    private void a(java.lang.String, java.lang.String, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r2;
+        com.revmob.b.f $r3;
+        boolean $z0;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: com.revmob.b.f;
+
+        $z0 = $r0.<com.revmob.b.a: boolean i>;
+
+        if $z0 != 0 goto label1;
+
+        staticinvoke <com.revmob.internal.a: void c(java.lang.String)>("You must call RevMobAds.start(activity, APP_ID).");
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.revmob.b.a: void b(java.lang.String,java.lang.String,com.revmob.b.f)>($r1, $r2, $r3);
+
+        return;
+    }
+
+    private void b(java.lang.String, java.lang.String, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r2;
+        com.revmob.b.f $r3;
+        com.revmob.b.e $r4;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: com.revmob.b.f;
+
+        $r4 = new com.revmob.b.e;
+
+        specialinvoke $r4.<com.revmob.b.e: void <init>(com.revmob.b.a,java.lang.String,java.lang.String,com.revmob.b.f)>($r0, $r1, $r2, $r3);
+
+        virtualinvoke $r4.<java.lang.Thread: void start()>();
+
+        return;
+    }
+
+    private void e(java.lang.String, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r3;
+        com.revmob.b.f $r2;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: com.revmob.b.f;
+
+        <com.revmob.a.e: boolean c> = 1;
+
+        $r3 = staticinvoke <com.revmob.a.e: java.lang.String a()>();
+
+        specialinvoke $r0.<com.revmob.b.a: void a(java.lang.String,java.lang.String,com.revmob.b.f)>($r1, $r3, $r2);
+
+        return;
+    }
+
+    public final void a(com.revmob.b.b)
+    {
+        com.revmob.b.a $r0;
+        com.revmob.b.b $r1;
+        com.revmob.b.c $r2;
+        java.lang.String $r3, $r4, $r5, $r6;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: com.revmob.b.b;
+
+        $r3 = $r1.<com.revmob.b.b: java.lang.String a>;
+
+        if $r3 == null goto label1;
+
+        $r6 = $r1.<com.revmob.b.b: java.lang.String a>;
+
+        $r5 = staticinvoke <com.revmob.a.e: java.lang.String a()>();
+
+        $r2 = new com.revmob.b.c;
+
+        $r3 = $r1.<com.revmob.b.b: java.lang.String d>;
+
+        $r4 = $r1.<com.revmob.b.b: java.lang.String e>;
+
+        specialinvoke $r2.<com.revmob.b.c: void <init>(java.lang.String,java.lang.String)>($r3, $r4);
+
+        specialinvoke $r0.<com.revmob.b.a: void a(java.lang.String,java.lang.String,com.revmob.b.f)>($r6, $r5, $r2);
+
+     label1:
+        return;
+    }
+
+    public final void a(java.lang.String, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r3;
+        com.revmob.b.f $r2;
+        java.util.Map $r4;
+        boolean $z0;
+        java.lang.Object $r5;
+        java.lang.StringBuilder $r6;
+        java.lang.Object[] $r7;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: com.revmob.b.f;
+
+        $r4 = <com.revmob.b.a: java.util.Map g>;
+
+        $z0 = interfaceinvoke $r4.<java.util.Map: boolean containsKey(java.lang.Object)>("install");
+
+        if $z0 == 0 goto label2;
+
+        $r4 = <com.revmob.b.a: java.util.Map g>;
+
+        $r5 = interfaceinvoke $r4.<java.util.Map: java.lang.Object get(java.lang.Object)>("install");
+
+        $r3 = (java.lang.String) $r5;
+
+     label1:
+        specialinvoke $r0.<com.revmob.b.a: void a(java.lang.String,java.lang.String,com.revmob.b.f)>($r3, $r1, $r2);
+
+        return;
+
+     label2:
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = <com.revmob.b.a: java.lang.String e>;
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r7 = newarray (java.lang.Object)[1];
+
+        $r3 = $r0.<com.revmob.b.a: java.lang.String h>;
+
+        $r7[0] = $r3;
+
+        $r3 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("/api/v4/mobile_apps/%s/install.json", $r7);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label1;
+    }
+
+    public final void a(java.lang.String, com.revmob.b.f, int)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r3;
+        com.revmob.b.f $r2;
+        int $i0;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: com.revmob.b.f;
+
+        $i0 := @parameter2: int;
+
+        goto label2;
+
+     label1:
+        specialinvoke $r0.<com.revmob.b.a: void e(java.lang.String,com.revmob.b.f)>($r1, $r2);
+
+        return;
+
+     label2:
+        $r3 = $r0.<com.revmob.b.a: java.lang.String h>;
+
+        $r1 = staticinvoke <com.revmob.b.a: java.lang.String a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)>("video", "videos", $r3, null, 0);
+
+        goto label1;
+    }
+
+    final void a(org.apache.http.HttpResponse, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0, $r9;
+        org.apache.http.HttpResponse $r1;
+        com.revmob.b.f $r2;
+        org.apache.http.StatusLine $r3;
+        int $i0;
+        org.apache.http.HttpEntity $r4;
+        java.lang.String $r5, $r7, $r12;
+        com.revmob.internal.m $r6, r19;
+        boolean $z0;
+        com.revmob.b $r8;
+        java.util.Map $r10;
+        java.lang.Object $r11;
+        java.lang.Thread $r13;
+        java.lang.OutOfMemoryError $r14;
+        com.revmob.internal.w $r15;
+        java.lang.Throwable $r16;
+        org.json.JSONException $r17;
+        java.lang.NullPointerException $r18;
+        java.lang.InterruptedException r20;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: org.apache.http.HttpResponse;
+
+        $r2 := @parameter1: com.revmob.b.f;
+
+        if $r1 != null goto label01;
+
+        specialinvoke $r0.<com.revmob.b.a: void a(int,com.revmob.b.f)>(0, $r2);
+
+        return;
+
+     label01:
+        $r3 = interfaceinvoke $r1.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>();
+
+        $i0 = interfaceinvoke $r3.<org.apache.http.StatusLine: int getStatusCode()>();
+
+        if $i0 == 200 goto label02;
+
+        if $i0 == 202 goto label02;
+
+        specialinvoke $r0.<com.revmob.b.a: void a(int,com.revmob.b.f)>($i0, $r2);
+
+        return;
+
+     label02:
+        $r4 = interfaceinvoke $r1.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>();
+
+        $r5 = staticinvoke <com.revmob.internal.d: java.lang.String a(org.apache.http.HttpEntity)>($r4);
+
+        if $r5 != null goto label03;
+
+        staticinvoke <com.revmob.internal.a: void c(java.lang.String)>("Bad response from server.");
+
+        if $r2 == null goto label41;
+
+        virtualinvoke $r2.<com.revmob.b.f: void b(java.lang.String)>("Bad response from server.");
+
+        return;
+
+     label03:
+        r19 = new com.revmob.internal.m;
+
+     label04:
+        $r6 = r19;
+
+     label05:
+        specialinvoke r19.<com.revmob.internal.m: void <init>()>();
+
+     label06:
+        if $r2 == null goto label08;
+
+     label07:
+        $r7 = virtualinvoke $r6.<com.revmob.internal.m: java.lang.String b(java.lang.String)>($r5);
+
+        virtualinvoke $r2.<com.revmob.b.f: void a(java.lang.String)>($r7);
+
+     label08:
+        $z0 = $r0.<com.revmob.b.a: boolean k>;
+
+     label09:
+        if $z0 == 0 goto label36;
+
+     label10:
+        $r0.<com.revmob.b.a: boolean k> = 0;
+
+        $r8 = $r0.<com.revmob.b.a: com.revmob.b m>;
+
+     label11:
+        if $r8 == null goto label16;
+
+     label12:
+        $r8 = $r0.<com.revmob.b.a: com.revmob.b m>;
+
+     label13:
+        virtualinvoke $r8.<com.revmob.b: void a()>();
+
+     label14:
+        $r8 = $r0.<com.revmob.b.a: com.revmob.b m>;
+
+     label15:
+        virtualinvoke $r8.<com.revmob.b: void b()>();
+
+     label16:
+        $r9 = <com.revmob.b.a: com.revmob.b.a n>;
+
+     label17:
+        $r7 = staticinvoke <com.revmob.a.e: java.lang.String a()>();
+
+     label18:
+        $r10 = <com.revmob.b.a: java.util.Map g>;
+
+     label19:
+        $z0 = interfaceinvoke $r10.<java.util.Map: boolean containsKey(java.lang.Object)>("user_information");
+
+     label20:
+        if $z0 == 0 goto label26;
+
+     label21:
+        $r10 = <com.revmob.b.a: java.util.Map g>;
+
+     label22:
+        $r11 = interfaceinvoke $r10.<java.util.Map: java.lang.Object get(java.lang.Object)>("user_information");
+
+     label23:
+        $r12 = (java.lang.String) $r11;
+
+     label24:
+        $r13 = <com.revmob.a.e: java.lang.Thread f>;
+
+     label25:
+        virtualinvoke $r13.<java.lang.Thread: void join()>();
+
+        specialinvoke $r9.<com.revmob.b.a: void b(java.lang.String,java.lang.String,com.revmob.b.f)>($r12, $r7, null);
+
+     label26:
+        $r0.<com.revmob.b.a: boolean l> = 1;
+
+     label27:
+        return;
+
+     label28:
+        $r14 := @caughtexception;
+
+        staticinvoke <com.revmob.internal.a: void c(java.lang.String)>("It was not possible to load RevMob Ad because your device run out of RAM memory.");
+
+        $r15 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r14, null, $r15, null, "handleSuccess1");
+
+        if $r2 == null goto label41;
+
+        virtualinvoke $r2.<com.revmob.b.f: void b(java.lang.String)>("It was not possible to load RevMob Ad because your device run out of RAM memory.");
+
+        return;
+
+     label29:
+        $r16 := @caughtexception;
+
+     label30:
+        $r15 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+     label31:
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r16, null, $r15, null, "notifyUserInformation");
+
+     label32:
+        r20 = (java.lang.InterruptedException) $r16;
+
+     label33:
+        virtualinvoke r20.<java.lang.InterruptedException: void printStackTrace()>();
+
+     label34:
+        goto label26;
+
+     label35:
+        $r17 := @caughtexception;
+
+        staticinvoke <com.revmob.internal.a: void c(java.lang.String)>("Error on parse response from server.");
+
+        staticinvoke <com.revmob.internal.a: void a(java.lang.String,java.lang.Throwable)>($r5, $r17);
+
+        $r15 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r17, null, $r15, null, "handleSuccess2");
+
+        if $r2 == null goto label41;
+
+        virtualinvoke $r2.<com.revmob.b.f: void b(java.lang.String)>("Error on parse response from server.");
+
+        return;
+
+     label36:
+        $z0 = $r0.<com.revmob.b.a: boolean l>;
+
+     label37:
+        if $z0 == 0 goto label41;
+
+     label38:
+        $r0.<com.revmob.b.a: boolean l> = 0;
+
+     label39:
+        return;
+
+     label40:
+        $r18 := @caughtexception;
+
+        $r15 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r18, null, $r15, null, "handleSuccess3");
+
+        staticinvoke <com.revmob.internal.a: void c(java.lang.String)>("Error on parse response from server. Unknown error.");
+
+        staticinvoke <com.revmob.internal.a: void a(java.lang.String,java.lang.Throwable)>($r5, $r18);
+
+        if $r2 == null goto label41;
+
+        virtualinvoke $r2.<com.revmob.b.f: void b(java.lang.String)>("Error on parse response from server. Unknown error.");
+
+     label41:
+        return;
+
+        catch java.lang.OutOfMemoryError from label03 to label04 with label28;
+        catch java.lang.OutOfMemoryError from label05 to label06 with label28;
+        catch java.lang.OutOfMemoryError from label07 to label08 with label28;
+        catch java.lang.OutOfMemoryError from label13 to label14 with label28;
+        catch java.lang.OutOfMemoryError from label15 to label20 with label28;
+        catch java.lang.OutOfMemoryError from label21 to label23 with label28;
+        catch org.json.JSONException from label05 to label06 with label35;
+        catch org.json.JSONException from label07 to label08 with label35;
+        catch org.json.JSONException from label13 to label14 with label35;
+        catch org.json.JSONException from label15 to label16 with label35;
+        catch org.json.JSONException from label17 to label18 with label35;
+        catch org.json.JSONException from label19 to label20 with label35;
+        catch org.json.JSONException from label22 to label23 with label35;
+        catch java.lang.NullPointerException from label05 to label06 with label40;
+        catch java.lang.NullPointerException from label07 to label09 with label40;
+        catch java.lang.NullPointerException from label10 to label11 with label40;
+        catch java.lang.NullPointerException from label12 to label16 with label40;
+        catch java.lang.NullPointerException from label17 to label18 with label40;
+        catch java.lang.NullPointerException from label19 to label20 with label40;
+        catch java.lang.NullPointerException from label22 to label23 with label40;
+        catch java.lang.InterruptedException from label25 to label26 with label29;
+        catch java.lang.OutOfMemoryError from label24 to label26 with label28;
+        catch org.json.JSONException from label25 to label26 with label35;
+        catch java.lang.NullPointerException from label25 to label26 with label40;
+        catch java.lang.NullPointerException from label26 to label27 with label40;
+        catch java.lang.OutOfMemoryError from label30 to label32 with label28;
+        catch java.lang.OutOfMemoryError from label33 to label34 with label28;
+        catch org.json.JSONException from label31 to label32 with label35;
+        catch org.json.JSONException from label33 to label34 with label35;
+        catch java.lang.NullPointerException from label31 to label32 with label40;
+        catch java.lang.NullPointerException from label33 to label34 with label40;
+        catch java.lang.NullPointerException from label36 to label37 with label40;
+        catch java.lang.NullPointerException from label38 to label39 with label40;
+    }
+
+    public final boolean a(java.lang.String, java.lang.String, com.revmob.b.f, com.revmob.b)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r2, $r6;
+        com.revmob.b.f $r3;
+        com.revmob.b $r4;
+        java.lang.Object[] $r5;
+        boolean $z0;
+        java.lang.StringBuilder $r7;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: com.revmob.b.f;
+
+        $r4 := @parameter3: com.revmob.b;
+
+        $r6 = $r0.<com.revmob.b.a: java.lang.String h>;
+
+        if $r6 == null goto label1;
+
+        $r6 = $r0.<com.revmob.b.a: java.lang.String h>;
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        $r0.<com.revmob.b.a: boolean k> = 1;
+
+        $r0.<com.revmob.b.a: boolean i> = 1;
+
+        $r0.<com.revmob.b.a: java.lang.String h> = $r1;
+
+        $r0.<com.revmob.b.a: com.revmob.b m> = $r4;
+
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = <com.revmob.b.a: java.lang.String e>;
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = newarray (java.lang.Object)[1];
+
+        $r5[0] = $r1;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("/api/v4/mobile_apps/%s/sessions.json", $r5);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r0.<com.revmob.b.a: void b(java.lang.String,java.lang.String,com.revmob.b.f)>($r1, $r2, $r3);
+
+        <com.revmob.internal.d: int a> = 30;
+
+        return 1;
+
+     label2:
+        staticinvoke <com.revmob.internal.a: void c(java.lang.String)>("You can use just one App Id per application.");
+
+        return 0;
+    }
+
+    public final com.revmob.RevMobParallaxMode b()
+    {
+        com.revmob.b.a $r0;
+        com.revmob.RevMobParallaxMode r1;
+
+        $r0 := @this: com.revmob.b.a;
+
+        r1 = $r0.<com.revmob.b.a: com.revmob.RevMobParallaxMode j>;
+
+        return r1;
+    }
+
+    public final void b(com.revmob.b.b)
+    {
+        com.revmob.b.a $r0;
+        com.revmob.b.b $r1;
+        java.lang.String $r2, $r3;
+        boolean $z0;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: com.revmob.b.b;
+
+        $r2 = $r1.<com.revmob.b.b: java.lang.String g>;
+
+        if $r2 == null goto label1;
+
+        $z0 = staticinvoke <com.revmob.internal.d: boolean h()>();
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r1.<com.revmob.b.b: java.lang.String g>;
+
+        $r3 = staticinvoke <com.revmob.a.e: java.lang.String a()>();
+
+        specialinvoke $r0.<com.revmob.b.a: void a(java.lang.String,java.lang.String,com.revmob.b.f)>($r2, $r3, null);
+
+     label1:
+        return;
+    }
+
+    public final void b(java.lang.String, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r3;
+        com.revmob.b.f $r2;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: com.revmob.b.f;
+
+        $r3 = $r0.<com.revmob.b.a: java.lang.String h>;
+
+        $r1 = staticinvoke <com.revmob.b.a: java.lang.String a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)>("fullscreen", "fullscreens", $r3, null, 0);
+
+        specialinvoke $r0.<com.revmob.b.a: void e(java.lang.String,com.revmob.b.f)>($r1, $r2);
+
+        return;
+    }
+
+    public final void c(java.lang.String, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r3;
+        com.revmob.b.f $r2;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: com.revmob.b.f;
+
+        $r3 = $r0.<com.revmob.b.a: java.lang.String h>;
+
+        $r1 = staticinvoke <com.revmob.b.a: java.lang.String a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)>("fullscreen", "fullscreens", $r3, null, 1);
+
+        specialinvoke $r0.<com.revmob.b.a: void e(java.lang.String,com.revmob.b.f)>($r1, $r2);
+
+        return;
+    }
+
+    public final void d(java.lang.String, com.revmob.b.f)
+    {
+        com.revmob.b.a $r0;
+        java.lang.String $r1, $r3;
+        com.revmob.b.f $r2;
+
+        $r0 := @this: com.revmob.b.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: com.revmob.b.f;
+
+        $r3 = $r0.<com.revmob.b.a: java.lang.String h>;
+
+        $r1 = staticinvoke <com.revmob.b.a: java.lang.String a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)>("banner", "banners", $r3, $r1, 0);
+
+        specialinvoke $r0.<com.revmob.b.a: void e(java.lang.String,com.revmob.b.f)>($r1, $r2);
+
+        return;
+    }
+}

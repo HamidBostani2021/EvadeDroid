@@ -1,0 +1,234 @@
+public class com.seattleclouds.b.e extends android.os.AsyncTask
+{
+    private final android.app.Activity a;
+    private android.app.ProgressDialog b;
+    private com.seattleclouds.util.bi c;
+
+    public void <init>(android.app.Activity)
+    {
+        com.seattleclouds.b.e $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.b.e: com.seattleclouds.util.bi c> = null;
+
+        $r0.<com.seattleclouds.b.e: android.app.Activity a> = $r1;
+
+        return;
+    }
+
+    protected transient java.lang.String a(java.lang.String[])
+    {
+        com.seattleclouds.b.e $r0;
+        java.lang.String[] $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $z0 = <com.seattleclouds.App: boolean E>;
+
+        if $z0 != 0 goto label1;
+
+        staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("ParseAppConfigAsyncTask", "Cleaning old resources...");
+
+        staticinvoke <com.seattleclouds.b.d: void a()>();
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.Activity a>;
+
+        staticinvoke <com.seattleclouds.cf: void a(android.content.Context)>($r2);
+
+        return "ok";
+    }
+
+    public void a(com.seattleclouds.util.bi)
+    {
+        com.seattleclouds.b.e $r0;
+        com.seattleclouds.util.bi $r1;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        $r1 := @parameter0: com.seattleclouds.util.bi;
+
+        $r0.<com.seattleclouds.b.e: com.seattleclouds.util.bi c> = $r1;
+
+        return;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.b.e $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        android.app.ProgressDialog $r2;
+        com.seattleclouds.util.bi $r3;
+        java.lang.Throwable $r4;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+        if $r2 == null goto label4;
+
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+     label1:
+        $z0 = virtualinvoke $r2.<android.app.ProgressDialog: boolean isShowing()>();
+
+     label2:
+        if $z0 == 0 goto label4;
+
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+     label3:
+        virtualinvoke $r2.<android.app.ProgressDialog: void dismiss()>();
+
+     label4:
+        $r3 = $r0.<com.seattleclouds.b.e: com.seattleclouds.util.bi c>;
+
+        if $r3 == null goto label6;
+
+        $r3 = $r0.<com.seattleclouds.b.e: com.seattleclouds.util.bi c>;
+
+        interfaceinvoke $r3.<com.seattleclouds.util.bi: void a(java.lang.Object)>(null);
+
+        return;
+
+     label5:
+        $r4 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ParseAppConfigAsyncTask", "Exception while dismissing dialog", $r4);
+
+        goto label4;
+
+     label6:
+        return;
+
+        catch java.lang.IllegalArgumentException from label1 to label2 with label5;
+        catch java.lang.IllegalArgumentException from label3 to label4 with label5;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.b.e $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        virtualinvoke $r0.<com.seattleclouds.b.e: java.lang.String a(java.lang.String[])>($r3);
+
+        return "ok";
+    }
+
+    protected void onCancelled()
+    {
+        com.seattleclouds.b.e $r0;
+        android.app.ProgressDialog $r1;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onCancelled()>();
+
+        $r1 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+        virtualinvoke $r1.<android.app.ProgressDialog: void dismiss()>();
+
+     label1:
+        return;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.b.e $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.b.e: void a(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.b.e $r0;
+        int $i0;
+        android.app.Activity $r1;
+        boolean $z0;
+        android.app.ProgressDialog $r2;
+        java.lang.String $r3;
+        android.view.Window $r4;
+
+        $r0 := @this: com.seattleclouds.b.e;
+
+        $r1 = $r0.<com.seattleclouds.b.e: android.app.Activity a>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean isFinishing()>();
+
+        if $z0 != 0 goto label1;
+
+        $r2 = new android.app.ProgressDialog;
+
+        $r1 = $r0.<com.seattleclouds.b.e: android.app.Activity a>;
+
+        specialinvoke $r2.<android.app.ProgressDialog: void <init>(android.content.Context)>($r1);
+
+        $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+        $r1 = $r0.<com.seattleclouds.b.e: android.app.Activity a>;
+
+        $i0 = <com.seattleclouds.l: int app_state_configuring>;
+
+        $r3 = virtualinvoke $r1.<android.app.Activity: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void setMessage(java.lang.CharSequence)>($r3);
+
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void setCancelable(boolean)>(0);
+
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+        $r4 = virtualinvoke $r2.<android.app.ProgressDialog: android.view.Window getWindow()>();
+
+        virtualinvoke $r4.<android.view.Window: void clearFlags(int)>(2);
+
+        $r2 = $r0.<com.seattleclouds.b.e: android.app.ProgressDialog b>;
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void show()>();
+
+     label1:
+        specialinvoke $r0.<android.os.AsyncTask: void onPreExecute()>();
+
+        return;
+    }
+}

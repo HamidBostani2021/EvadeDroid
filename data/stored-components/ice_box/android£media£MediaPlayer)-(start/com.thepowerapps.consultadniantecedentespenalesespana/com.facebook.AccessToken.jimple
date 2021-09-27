@@ -1,0 +1,947 @@
+public final class com.facebook.AccessToken extends java.lang.Object implements android.os.Parcelable
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    private static final java.util.Date a;
+    private static final java.util.Date b;
+    private static final java.util.Date c;
+    private static final com.facebook.AccessTokenSource d;
+    private final java.util.Date e;
+    private final java.util.Set f;
+    private final java.util.Set g;
+    private final java.lang.String h;
+    private final com.facebook.AccessTokenSource i;
+    private final java.util.Date j;
+    private final java.lang.String k;
+    private final java.lang.String l;
+
+    static void <clinit>()
+    {
+        java.util.Date $r0;
+        com.facebook.AccessTokenSource $r1;
+        com.facebook.a $r2;
+
+        $r0 = new java.util.Date;
+
+        specialinvoke $r0.<java.util.Date: void <init>(long)>(9223372036854775807L);
+
+        <com.facebook.AccessToken: java.util.Date a> = $r0;
+
+        $r0 = <com.facebook.AccessToken: java.util.Date a>;
+
+        <com.facebook.AccessToken: java.util.Date b> = $r0;
+
+        $r0 = new java.util.Date;
+
+        specialinvoke $r0.<java.util.Date: void <init>()>();
+
+        <com.facebook.AccessToken: java.util.Date c> = $r0;
+
+        $r1 = <com.facebook.AccessTokenSource: com.facebook.AccessTokenSource FACEBOOK_APPLICATION_WEB>;
+
+        <com.facebook.AccessToken: com.facebook.AccessTokenSource d> = $r1;
+
+        $r2 = new com.facebook.a;
+
+        specialinvoke $r2.<com.facebook.a: void <init>()>();
+
+        <com.facebook.AccessToken: android.os.Parcelable$Creator CREATOR> = $r2;
+
+        return;
+    }
+
+    void <init>(android.os.Parcel)
+    {
+        com.facebook.AccessToken $r0;
+        android.os.Parcel $r1;
+        java.util.Date $r2;
+        long $l0;
+        java.util.ArrayList $r3;
+        java.util.HashSet $r4;
+        java.util.Set $r5;
+        java.lang.String $r6;
+        com.facebook.AccessTokenSource $r7;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = new java.util.Date;
+
+        $l0 = virtualinvoke $r1.<android.os.Parcel: long readLong()>();
+
+        specialinvoke $r2.<java.util.Date: void <init>(long)>($l0);
+
+        $r0.<com.facebook.AccessToken: java.util.Date e> = $r2;
+
+        $r3 = new java.util.ArrayList;
+
+        specialinvoke $r3.<java.util.ArrayList: void <init>()>();
+
+        virtualinvoke $r1.<android.os.Parcel: void readStringList(java.util.List)>($r3);
+
+        $r4 = new java.util.HashSet;
+
+        specialinvoke $r4.<java.util.HashSet: void <init>(java.util.Collection)>($r3);
+
+        $r5 = staticinvoke <java.util.Collections: java.util.Set unmodifiableSet(java.util.Set)>($r4);
+
+        $r0.<com.facebook.AccessToken: java.util.Set f> = $r5;
+
+        virtualinvoke $r3.<java.util.ArrayList: void clear()>();
+
+        virtualinvoke $r1.<android.os.Parcel: void readStringList(java.util.List)>($r3);
+
+        $r4 = new java.util.HashSet;
+
+        specialinvoke $r4.<java.util.HashSet: void <init>(java.util.Collection)>($r3);
+
+        $r5 = staticinvoke <java.util.Collections: java.util.Set unmodifiableSet(java.util.Set)>($r4);
+
+        $r0.<com.facebook.AccessToken: java.util.Set g> = $r5;
+
+        $r6 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.AccessToken: java.lang.String h> = $r6;
+
+        $r6 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r7 = staticinvoke <com.facebook.AccessTokenSource: com.facebook.AccessTokenSource valueOf(java.lang.String)>($r6);
+
+        $r0.<com.facebook.AccessToken: com.facebook.AccessTokenSource i> = $r7;
+
+        $r2 = new java.util.Date;
+
+        $l0 = virtualinvoke $r1.<android.os.Parcel: long readLong()>();
+
+        specialinvoke $r2.<java.util.Date: void <init>(long)>($l0);
+
+        $r0.<com.facebook.AccessToken: java.util.Date j> = $r2;
+
+        $r6 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.AccessToken: java.lang.String k> = $r6;
+
+        $r6 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.AccessToken: java.lang.String l> = $r6;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String, java.util.Collection, java.util.Collection, com.facebook.AccessTokenSource, java.util.Date, java.util.Date)
+    {
+        com.facebook.AccessToken $r0;
+        java.lang.String $r1, $r2, $r3;
+        java.util.Collection $r4, $r5;
+        com.facebook.AccessTokenSource $r6;
+        java.util.Date $r7, $r8;
+        java.util.HashSet $r9;
+        java.util.Set $r10;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.util.Collection;
+
+        $r5 := @parameter4: java.util.Collection;
+
+        $r6 := @parameter5: com.facebook.AccessTokenSource;
+
+        $r7 := @parameter6: java.util.Date;
+
+        $r8 := @parameter7: java.util.Date;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        staticinvoke <com.facebook.internal.bg: void a(java.lang.String,java.lang.String)>($r1, "accessToken");
+
+        staticinvoke <com.facebook.internal.bg: void a(java.lang.String,java.lang.String)>($r2, "applicationId");
+
+        staticinvoke <com.facebook.internal.bg: void a(java.lang.String,java.lang.String)>($r3, "userId");
+
+        if $r7 == null goto label06;
+
+     label01:
+        $r0.<com.facebook.AccessToken: java.util.Date e> = $r7;
+
+        if $r4 == null goto label07;
+
+        $r9 = new java.util.HashSet;
+
+        specialinvoke $r9.<java.util.HashSet: void <init>(java.util.Collection)>($r4);
+
+     label02:
+        $r10 = staticinvoke <java.util.Collections: java.util.Set unmodifiableSet(java.util.Set)>($r9);
+
+        $r0.<com.facebook.AccessToken: java.util.Set f> = $r10;
+
+        if $r5 == null goto label08;
+
+        $r9 = new java.util.HashSet;
+
+        specialinvoke $r9.<java.util.HashSet: void <init>(java.util.Collection)>($r5);
+
+     label03:
+        $r10 = staticinvoke <java.util.Collections: java.util.Set unmodifiableSet(java.util.Set)>($r9);
+
+        $r0.<com.facebook.AccessToken: java.util.Set g> = $r10;
+
+        $r0.<com.facebook.AccessToken: java.lang.String h> = $r1;
+
+        if $r6 == null goto label09;
+
+     label04:
+        $r0.<com.facebook.AccessToken: com.facebook.AccessTokenSource i> = $r6;
+
+        if $r8 == null goto label10;
+
+     label05:
+        $r0.<com.facebook.AccessToken: java.util.Date j> = $r8;
+
+        $r0.<com.facebook.AccessToken: java.lang.String k> = $r2;
+
+        $r0.<com.facebook.AccessToken: java.lang.String l> = $r3;
+
+        return;
+
+     label06:
+        $r7 = <com.facebook.AccessToken: java.util.Date b>;
+
+        goto label01;
+
+     label07:
+        $r9 = new java.util.HashSet;
+
+        specialinvoke $r9.<java.util.HashSet: void <init>()>();
+
+        goto label02;
+
+     label08:
+        $r9 = new java.util.HashSet;
+
+        specialinvoke $r9.<java.util.HashSet: void <init>()>();
+
+        goto label03;
+
+     label09:
+        $r6 = <com.facebook.AccessToken: com.facebook.AccessTokenSource d>;
+
+        goto label04;
+
+     label10:
+        $r8 = <com.facebook.AccessToken: java.util.Date c>;
+
+        goto label05;
+    }
+
+    public static com.facebook.AccessToken a()
+    {
+        com.facebook.e $r0;
+        com.facebook.AccessToken $r1;
+
+        $r0 = staticinvoke <com.facebook.e: com.facebook.e a()>();
+
+        $r1 = virtualinvoke $r0.<com.facebook.e: com.facebook.AccessToken b()>();
+
+        return $r1;
+    }
+
+    static com.facebook.AccessToken a(android.os.Bundle)
+    {
+        android.os.Bundle $r0;
+        java.util.List $r1, $r2;
+        java.lang.String $r3, $r4, $r6;
+        boolean $z0;
+        org.json.JSONObject $r5;
+        com.facebook.AccessToken $r7;
+        com.facebook.AccessTokenSource $r8;
+        java.util.Date $r9, $r10;
+        org.json.JSONException $r11;
+
+        $r0 := @parameter0: android.os.Bundle;
+
+        $r1 = staticinvoke <com.facebook.AccessToken: java.util.List a(android.os.Bundle,java.lang.String)>($r0, "com.facebook.TokenCachingStrategy.Permissions");
+
+        $r2 = staticinvoke <com.facebook.AccessToken: java.util.List a(android.os.Bundle,java.lang.String)>($r0, "com.facebook.TokenCachingStrategy.DeclinedPermissions");
+
+        $r3 = staticinvoke <com.facebook.ao: java.lang.String d(android.os.Bundle)>($r0);
+
+        $r4 = $r3;
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.String)>($r3);
+
+        if $z0 == 0 goto label1;
+
+        $r4 = staticinvoke <com.facebook.s: java.lang.String j()>();
+
+     label1:
+        $r3 = staticinvoke <com.facebook.ao: java.lang.String b(android.os.Bundle)>($r0);
+
+        $r5 = staticinvoke <com.facebook.internal.ax: org.json.JSONObject d(java.lang.String)>($r3);
+
+     label2:
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+     label3:
+        $r7 = new com.facebook.AccessToken;
+
+        $r8 = staticinvoke <com.facebook.ao: com.facebook.AccessTokenSource c(android.os.Bundle)>($r0);
+
+        $r9 = staticinvoke <com.facebook.ao: java.util.Date a(android.os.Bundle,java.lang.String)>($r0, "com.facebook.TokenCachingStrategy.ExpirationDate");
+
+        $r10 = staticinvoke <com.facebook.ao: java.util.Date a(android.os.Bundle,java.lang.String)>($r0, "com.facebook.TokenCachingStrategy.LastRefreshDate");
+
+        specialinvoke $r7.<com.facebook.AccessToken: void <init>(java.lang.String,java.lang.String,java.lang.String,java.util.Collection,java.util.Collection,com.facebook.AccessTokenSource,java.util.Date,java.util.Date)>($r3, $r4, $r6, $r1, $r2, $r8, $r9, $r10);
+
+        return $r7;
+
+     label4:
+        $r11 := @caughtexception;
+
+        return null;
+
+        catch org.json.JSONException from label2 to label3 with label4;
+    }
+
+    static com.facebook.AccessToken a(org.json.JSONObject)
+    {
+        org.json.JSONObject $r0;
+        java.util.Date $r1, $r2;
+        int $i0;
+        com.facebook.FacebookException $r3;
+        java.lang.String $r4, $r7, $r9;
+        long $l1;
+        org.json.JSONArray $r5, $r6;
+        com.facebook.AccessTokenSource $r8;
+        com.facebook.AccessToken $r10;
+        java.util.List $r11, $r12;
+
+        $r0 := @parameter0: org.json.JSONObject;
+
+        $i0 = virtualinvoke $r0.<org.json.JSONObject: int getInt(java.lang.String)>("version");
+
+        if $i0 <= 1 goto label1;
+
+        $r3 = new com.facebook.FacebookException;
+
+        specialinvoke $r3.<com.facebook.FacebookException: void <init>(java.lang.String)>("Unknown AccessToken serialization format.");
+
+        throw $r3;
+
+     label1:
+        $r4 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("token");
+
+        $r1 = new java.util.Date;
+
+        $l1 = virtualinvoke $r0.<org.json.JSONObject: long getLong(java.lang.String)>("expires_at");
+
+        specialinvoke $r1.<java.util.Date: void <init>(long)>($l1);
+
+        $r5 = virtualinvoke $r0.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("permissions");
+
+        $r6 = virtualinvoke $r0.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("declined_permissions");
+
+        $r2 = new java.util.Date;
+
+        $l1 = virtualinvoke $r0.<org.json.JSONObject: long getLong(java.lang.String)>("last_refresh");
+
+        specialinvoke $r2.<java.util.Date: void <init>(long)>($l1);
+
+        $r7 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("source");
+
+        $r8 = staticinvoke <com.facebook.AccessTokenSource: com.facebook.AccessTokenSource valueOf(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("application_id");
+
+        $r9 = virtualinvoke $r0.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("user_id");
+
+        $r10 = new com.facebook.AccessToken;
+
+        $r11 = staticinvoke <com.facebook.internal.ax: java.util.List a(org.json.JSONArray)>($r5);
+
+        $r12 = staticinvoke <com.facebook.internal.ax: java.util.List a(org.json.JSONArray)>($r6);
+
+        specialinvoke $r10.<com.facebook.AccessToken: void <init>(java.lang.String,java.lang.String,java.lang.String,java.util.Collection,java.util.Collection,com.facebook.AccessTokenSource,java.util.Date,java.util.Date)>($r4, $r7, $r9, $r11, $r12, $r8, $r1, $r2);
+
+        return $r10;
+    }
+
+    static java.util.List a(android.os.Bundle, java.lang.String)
+    {
+        android.os.Bundle $r0;
+        java.lang.String $r1;
+        java.util.ArrayList $r2, $r3;
+        java.util.List $r4;
+
+        $r0 := @parameter0: android.os.Bundle;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r3 = virtualinvoke $r0.<android.os.Bundle: java.util.ArrayList getStringArrayList(java.lang.String)>($r1);
+
+        if $r3 != null goto label1;
+
+        $r4 = staticinvoke <java.util.Collections: java.util.List emptyList()>();
+
+        return $r4;
+
+     label1:
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>(java.util.Collection)>($r3);
+
+        $r4 = staticinvoke <java.util.Collections: java.util.List unmodifiableList(java.util.List)>($r2);
+
+        return $r4;
+    }
+
+    public static void a(com.facebook.AccessToken)
+    {
+        com.facebook.AccessToken $r0;
+        com.facebook.e $r1;
+
+        $r0 := @parameter0: com.facebook.AccessToken;
+
+        $r1 = staticinvoke <com.facebook.e: com.facebook.e a()>();
+
+        virtualinvoke $r1.<com.facebook.e: void a(com.facebook.AccessToken)>($r0);
+
+        return;
+    }
+
+    private void a(java.lang.StringBuilder)
+    {
+        com.facebook.AccessToken $r0;
+        java.lang.StringBuilder $r1;
+        java.util.Set $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 := @parameter0: java.lang.StringBuilder;
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" permissions:");
+
+        $r2 = $r0.<com.facebook.AccessToken: java.util.Set f>;
+
+        if $r2 != null goto label1;
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("null");
+
+        return;
+
+     label1:
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("[");
+
+        $r2 = $r0.<com.facebook.AccessToken: java.util.Set f>;
+
+        $r3 = staticinvoke <android.text.TextUtils: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>(", ", $r2);
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("]");
+
+        return;
+    }
+
+    private java.lang.String k()
+    {
+        com.facebook.AccessToken $r0;
+        boolean $z0;
+        java.lang.String $r1;
+        com.facebook.LoggingBehavior $r2;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 = $r0.<com.facebook.AccessToken: java.lang.String h>;
+
+        if $r1 != null goto label1;
+
+        return "null";
+
+     label1:
+        $r2 = <com.facebook.LoggingBehavior: com.facebook.LoggingBehavior INCLUDE_ACCESS_TOKENS>;
+
+        $z0 = staticinvoke <com.facebook.s: boolean a(com.facebook.LoggingBehavior)>($r2);
+
+        if $z0 == 0 goto label2;
+
+        $r1 = $r0.<com.facebook.AccessToken: java.lang.String h>;
+
+        return $r1;
+
+     label2:
+        return "ACCESS_TOKEN_REMOVED";
+    }
+
+    public java.lang.String b()
+    {
+        com.facebook.AccessToken $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: java.lang.String h>;
+
+        return r1;
+    }
+
+    public java.util.Date c()
+    {
+        com.facebook.AccessToken $r0;
+        java.util.Date r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: java.util.Date e>;
+
+        return r1;
+    }
+
+    public java.util.Set d()
+    {
+        com.facebook.AccessToken $r0;
+        java.util.Set r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: java.util.Set f>;
+
+        return r1;
+    }
+
+    public int describeContents()
+    {
+        com.facebook.AccessToken $r0;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        return 0;
+    }
+
+    public java.util.Set e()
+    {
+        com.facebook.AccessToken $r0;
+        java.util.Set r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: java.util.Set g>;
+
+        return r1;
+    }
+
+    public boolean equals(java.lang.Object)
+    {
+        com.facebook.AccessToken $r0, $r2;
+        java.lang.Object $r1;
+        boolean $z0;
+        java.util.Date $r3, $r4;
+        java.util.Set $r5, $r6;
+        java.lang.String $r7, $r8;
+        com.facebook.AccessTokenSource $r9, $r10;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        if $r0 != $r1 goto label1;
+
+        return 1;
+
+     label1:
+        $z0 = $r1 instanceof com.facebook.AccessToken;
+
+        if $z0 != 0 goto label2;
+
+        return 0;
+
+     label2:
+        $r2 = (com.facebook.AccessToken) $r1;
+
+        $r3 = $r0.<com.facebook.AccessToken: java.util.Date e>;
+
+        $r4 = $r2.<com.facebook.AccessToken: java.util.Date e>;
+
+        $z0 = virtualinvoke $r3.<java.util.Date: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label4;
+
+        $r5 = $r0.<com.facebook.AccessToken: java.util.Set f>;
+
+        $r6 = $r2.<com.facebook.AccessToken: java.util.Set f>;
+
+        $z0 = interfaceinvoke $r5.<java.util.Set: boolean equals(java.lang.Object)>($r6);
+
+        if $z0 == 0 goto label4;
+
+        $r5 = $r0.<com.facebook.AccessToken: java.util.Set g>;
+
+        $r6 = $r2.<com.facebook.AccessToken: java.util.Set g>;
+
+        $z0 = interfaceinvoke $r5.<java.util.Set: boolean equals(java.lang.Object)>($r6);
+
+        if $z0 == 0 goto label4;
+
+        $r7 = $r0.<com.facebook.AccessToken: java.lang.String h>;
+
+        $r8 = $r2.<com.facebook.AccessToken: java.lang.String h>;
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label4;
+
+        $r9 = $r0.<com.facebook.AccessToken: com.facebook.AccessTokenSource i>;
+
+        $r10 = $r2.<com.facebook.AccessToken: com.facebook.AccessTokenSource i>;
+
+        if $r9 != $r10 goto label4;
+
+        $r3 = $r0.<com.facebook.AccessToken: java.util.Date j>;
+
+        $r4 = $r2.<com.facebook.AccessToken: java.util.Date j>;
+
+        $z0 = virtualinvoke $r3.<java.util.Date: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label4;
+
+        $r7 = $r0.<com.facebook.AccessToken: java.lang.String k>;
+
+        if $r7 != null goto label5;
+
+        $r7 = $r2.<com.facebook.AccessToken: java.lang.String k>;
+
+        if $r7 != null goto label4;
+
+     label3:
+        $r7 = $r0.<com.facebook.AccessToken: java.lang.String l>;
+
+        $r8 = $r2.<com.facebook.AccessToken: java.lang.String l>;
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 != 0 goto label6;
+
+     label4:
+        return 0;
+
+     label5:
+        $r7 = $r0.<com.facebook.AccessToken: java.lang.String k>;
+
+        $r8 = $r2.<com.facebook.AccessToken: java.lang.String k>;
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>($r8);
+
+        if $z0 == 0 goto label4;
+
+        goto label3;
+
+     label6:
+        return 1;
+    }
+
+    public com.facebook.AccessTokenSource f()
+    {
+        com.facebook.AccessToken $r0;
+        com.facebook.AccessTokenSource r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: com.facebook.AccessTokenSource i>;
+
+        return r1;
+    }
+
+    public java.util.Date g()
+    {
+        com.facebook.AccessToken $r0;
+        java.util.Date r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: java.util.Date j>;
+
+        return r1;
+    }
+
+    public java.lang.String h()
+    {
+        com.facebook.AccessToken $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: java.lang.String k>;
+
+        return r1;
+    }
+
+    public int hashCode()
+    {
+        com.facebook.AccessToken $r0;
+        java.util.Date $r1;
+        int $i0, $i1;
+        java.util.Set $r2;
+        java.lang.String $r3;
+        com.facebook.AccessTokenSource $r4;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 = $r0.<com.facebook.AccessToken: java.util.Date e>;
+
+        $i0 = virtualinvoke $r1.<java.util.Date: int hashCode()>();
+
+        $i0 = $i0 + 527;
+
+        $i0 = $i0 * 31;
+
+        $r2 = $r0.<com.facebook.AccessToken: java.util.Set f>;
+
+        $i1 = interfaceinvoke $r2.<java.util.Set: int hashCode()>();
+
+        $i0 = $i0 + $i1;
+
+        $i0 = $i0 * 31;
+
+        $r2 = $r0.<com.facebook.AccessToken: java.util.Set g>;
+
+        $i1 = interfaceinvoke $r2.<java.util.Set: int hashCode()>();
+
+        $i0 = $i0 + $i1;
+
+        $i0 = $i0 * 31;
+
+        $r3 = $r0.<com.facebook.AccessToken: java.lang.String h>;
+
+        $i1 = virtualinvoke $r3.<java.lang.String: int hashCode()>();
+
+        $i0 = $i0 + $i1;
+
+        $i0 = $i0 * 31;
+
+        $r4 = $r0.<com.facebook.AccessToken: com.facebook.AccessTokenSource i>;
+
+        $i1 = virtualinvoke $r4.<com.facebook.AccessTokenSource: int hashCode()>();
+
+        $i0 = $i0 + $i1;
+
+        $i0 = $i0 * 31;
+
+        $r1 = $r0.<com.facebook.AccessToken: java.util.Date j>;
+
+        $i1 = virtualinvoke $r1.<java.util.Date: int hashCode()>();
+
+        $i0 = $i0 + $i1;
+
+        $i0 = $i0 * 31;
+
+        $r3 = $r0.<com.facebook.AccessToken: java.lang.String k>;
+
+        if $r3 != null goto label2;
+
+        $i1 = 0;
+
+     label1:
+        $i0 = $i1 + $i0;
+
+        $i0 = $i0 * 31;
+
+        $r3 = $r0.<com.facebook.AccessToken: java.lang.String l>;
+
+        $i1 = virtualinvoke $r3.<java.lang.String: int hashCode()>();
+
+        $i0 = $i0 + $i1;
+
+        return $i0;
+
+     label2:
+        $r3 = $r0.<com.facebook.AccessToken: java.lang.String k>;
+
+        $i1 = virtualinvoke $r3.<java.lang.String: int hashCode()>();
+
+        goto label1;
+    }
+
+    public java.lang.String i()
+    {
+        com.facebook.AccessToken $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        r1 = $r0.<com.facebook.AccessToken: java.lang.String l>;
+
+        return r1;
+    }
+
+    org.json.JSONObject j()
+    {
+        com.facebook.AccessToken $r0;
+        org.json.JSONObject $r1;
+        java.lang.String $r2;
+        java.util.Date $r3;
+        long $l0;
+        org.json.JSONArray $r4;
+        java.util.Set $r5;
+        com.facebook.AccessTokenSource $r6;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 = new org.json.JSONObject;
+
+        specialinvoke $r1.<org.json.JSONObject: void <init>()>();
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>("version", 1);
+
+        $r2 = $r0.<com.facebook.AccessToken: java.lang.String h>;
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("token", $r2);
+
+        $r3 = $r0.<com.facebook.AccessToken: java.util.Date e>;
+
+        $l0 = virtualinvoke $r3.<java.util.Date: long getTime()>();
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,long)>("expires_at", $l0);
+
+        $r4 = new org.json.JSONArray;
+
+        $r5 = $r0.<com.facebook.AccessToken: java.util.Set f>;
+
+        specialinvoke $r4.<org.json.JSONArray: void <init>(java.util.Collection)>($r5);
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("permissions", $r4);
+
+        $r4 = new org.json.JSONArray;
+
+        $r5 = $r0.<com.facebook.AccessToken: java.util.Set g>;
+
+        specialinvoke $r4.<org.json.JSONArray: void <init>(java.util.Collection)>($r5);
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("declined_permissions", $r4);
+
+        $r3 = $r0.<com.facebook.AccessToken: java.util.Date j>;
+
+        $l0 = virtualinvoke $r3.<java.util.Date: long getTime()>();
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,long)>("last_refresh", $l0);
+
+        $r6 = $r0.<com.facebook.AccessToken: com.facebook.AccessTokenSource i>;
+
+        $r2 = virtualinvoke $r6.<com.facebook.AccessTokenSource: java.lang.String name()>();
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("source", $r2);
+
+        $r2 = $r0.<com.facebook.AccessToken: java.lang.String k>;
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("application_id", $r2);
+
+        $r2 = $r0.<com.facebook.AccessToken: java.lang.String l>;
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("user_id", $r2);
+
+        return $r1;
+    }
+
+    public java.lang.String toString()
+    {
+        com.facebook.AccessToken $r0;
+        java.lang.StringBuilder $r1, $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("{AccessToken");
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" token:");
+
+        $r3 = specialinvoke $r0.<com.facebook.AccessToken: java.lang.String k()>();
+
+        virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        specialinvoke $r0.<com.facebook.AccessToken: void a(java.lang.StringBuilder)>($r1);
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("}");
+
+        $r3 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r3;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.AccessToken $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        java.util.Date $r2;
+        long $l1;
+        java.util.ArrayList $r3;
+        java.util.Set $r4;
+        java.lang.String $r5;
+        com.facebook.AccessTokenSource $r6;
+
+        $r0 := @this: com.facebook.AccessToken;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.facebook.AccessToken: java.util.Date e>;
+
+        $l1 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        virtualinvoke $r1.<android.os.Parcel: void writeLong(long)>($l1);
+
+        $r3 = new java.util.ArrayList;
+
+        $r4 = $r0.<com.facebook.AccessToken: java.util.Set f>;
+
+        specialinvoke $r3.<java.util.ArrayList: void <init>(java.util.Collection)>($r4);
+
+        virtualinvoke $r1.<android.os.Parcel: void writeStringList(java.util.List)>($r3);
+
+        $r3 = new java.util.ArrayList;
+
+        $r4 = $r0.<com.facebook.AccessToken: java.util.Set g>;
+
+        specialinvoke $r3.<java.util.ArrayList: void <init>(java.util.Collection)>($r4);
+
+        virtualinvoke $r1.<android.os.Parcel: void writeStringList(java.util.List)>($r3);
+
+        $r5 = $r0.<com.facebook.AccessToken: java.lang.String h>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r5);
+
+        $r6 = $r0.<com.facebook.AccessToken: com.facebook.AccessTokenSource i>;
+
+        $r5 = virtualinvoke $r6.<com.facebook.AccessTokenSource: java.lang.String name()>();
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r5);
+
+        $r2 = $r0.<com.facebook.AccessToken: java.util.Date j>;
+
+        $l1 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        virtualinvoke $r1.<android.os.Parcel: void writeLong(long)>($l1);
+
+        $r5 = $r0.<com.facebook.AccessToken: java.lang.String k>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r5);
+
+        $r5 = $r0.<com.facebook.AccessToken: java.lang.String l>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r5);
+
+        return;
+    }
+}

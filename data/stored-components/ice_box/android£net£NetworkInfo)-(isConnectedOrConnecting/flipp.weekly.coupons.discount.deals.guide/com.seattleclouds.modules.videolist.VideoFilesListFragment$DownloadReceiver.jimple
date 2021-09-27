@@ -1,0 +1,184 @@
+class com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver extends android.os.ResultReceiver
+{
+    final com.seattleclouds.modules.videolist.b a;
+    private java.lang.String b;
+
+    public void <init>(com.seattleclouds.modules.videolist.b, android.os.Handler)
+    {
+        com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver $r0;
+        com.seattleclouds.modules.videolist.b $r1;
+        android.os.Handler $r2;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver;
+
+        $r1 := @parameter0: com.seattleclouds.modules.videolist.b;
+
+        $r2 := @parameter1: android.os.Handler;
+
+        $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a> = $r1;
+
+        specialinvoke $r0.<android.os.ResultReceiver: void <init>(android.os.Handler)>($r2);
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    protected void onReceiveResult(int, android.os.Bundle)
+    {
+        com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver $r0;
+        int $i0, $i1, $i2;
+        android.os.Bundle $r1;
+        com.seattleclouds.modules.videolist.b $r2;
+        boolean $z0;
+        java.util.List $r3;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.videolist.a $r5;
+        com.seattleclouds.modules.videolist.VideoFile$Status $r6, $r8;
+        com.seattleclouds.modules.videolist.w $r7;
+        java.io.File $r9;
+        java.lang.String $r10;
+        android.support.v4.app.ac $r11;
+        android.content.res.Resources $r12;
+        android.widget.Toast $r13;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.os.Bundle;
+
+        specialinvoke $r0.<android.os.ResultReceiver: void onReceiveResult(int,android.os.Bundle)>($i0, $r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.modules.videolist.b: boolean w()>();
+
+        if $z0 != 0 goto label1;
+
+        return;
+
+     label1:
+        if $i0 != 8344 goto label7;
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("progress");
+
+        $i1 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("pos");
+
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.videolist.b: java.util.List a(com.seattleclouds.modules.videolist.b)>($r2);
+
+        $r4 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>($i1);
+
+        $r5 = (com.seattleclouds.modules.videolist.a) $r4;
+
+        if $i0 != 100 goto label4;
+
+        $r6 = <com.seattleclouds.modules.videolist.VideoFile$Status: com.seattleclouds.modules.videolist.VideoFile$Status LOCAL>;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.videolist.a: void a(com.seattleclouds.modules.videolist.VideoFile$Status)>($r6);
+
+     label2:
+        $i2 = virtualinvoke $r5.<com.seattleclouds.modules.videolist.a: int e()>();
+
+        if $i0 == $i2 goto label7;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.videolist.a: void a(int)>($i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        staticinvoke <com.seattleclouds.modules.videolist.b: void a(com.seattleclouds.modules.videolist.b,int,int)>($r2, $i1, $i0);
+
+        if $i0 == 100 goto label3;
+
+        if $i0 >= 10 goto label7;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.videolist.b: com.seattleclouds.modules.videolist.w e(com.seattleclouds.modules.videolist.b)>($r2);
+
+        virtualinvoke $r7.<com.seattleclouds.modules.videolist.w: void notifyDataSetChanged()>();
+
+        return;
+
+     label4:
+        $r6 = virtualinvoke $r5.<com.seattleclouds.modules.videolist.a: com.seattleclouds.modules.videolist.VideoFile$Status c()>();
+
+        $r8 = <com.seattleclouds.modules.videolist.VideoFile$Status: com.seattleclouds.modules.videolist.VideoFile$Status DOWNLOADING>;
+
+        if $r6 == $r8 goto label5;
+
+        $r6 = <com.seattleclouds.modules.videolist.VideoFile$Status: com.seattleclouds.modules.videolist.VideoFile$Status DOWNLOADING>;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.videolist.a: void a(com.seattleclouds.modules.videolist.VideoFile$Status)>($r6);
+
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.videolist.b: com.seattleclouds.modules.videolist.w e(com.seattleclouds.modules.videolist.b)>($r2);
+
+        virtualinvoke $r7.<com.seattleclouds.modules.videolist.w: void notifyDataSetChanged()>();
+
+        goto label2;
+
+     label5:
+        if $i0 >= 0 goto label2;
+
+        $r9 = new java.io.File;
+
+        $r10 = virtualinvoke $r5.<com.seattleclouds.modules.videolist.a: java.lang.String d()>();
+
+        specialinvoke $r9.<java.io.File: void <init>(java.lang.String)>($r10);
+
+        $z0 = virtualinvoke $r9.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label6;
+
+        virtualinvoke $r9.<java.io.File: boolean delete()>();
+
+     label6:
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        $r11 = virtualinvoke $r2.<com.seattleclouds.modules.videolist.b: android.support.v4.app.ac n()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        $r12 = virtualinvoke $r2.<com.seattleclouds.modules.videolist.b: android.content.res.Resources o()>();
+
+        $i2 = <com.seattleclouds.l: int videolist_download_canceled_message>;
+
+        $r10 = virtualinvoke $r12.<android.content.res.Resources: java.lang.String getString(int)>($i2);
+
+        $r13 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r11, $r10, 0);
+
+        virtualinvoke $r13.<android.widget.Toast: void show()>();
+
+        $r6 = <com.seattleclouds.modules.videolist.VideoFile$Status: com.seattleclouds.modules.videolist.VideoFile$Status ONLINE>;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.videolist.a: void a(com.seattleclouds.modules.videolist.VideoFile$Status)>($r6);
+
+        $r2 = $r0.<com.seattleclouds.modules.videolist.VideoFilesListFragment$DownloadReceiver: com.seattleclouds.modules.videolist.b a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.videolist.b: com.seattleclouds.modules.videolist.w e(com.seattleclouds.modules.videolist.b)>($r2);
+
+        virtualinvoke $r7.<com.seattleclouds.modules.videolist.w: void notifyDataSetChanged()>();
+
+        goto label2;
+
+     label7:
+        return;
+    }
+}

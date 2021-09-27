@@ -1,0 +1,18 @@
+public class Slicecom.omganonk.tandakiamatmenurutalquranmethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.omganonk.tandakiamatmenurutalquranmethod this;
+        com.google.android.a.a $r2;
+        boolean $z0;
+
+        this := @this: Slicecom.omganonk.tandakiamatmenurutalquranmethod;
+
+        $r2 = new com.google.android.a.a;
+
+        $z0 = virtualinvoke $r2.<com.google.android.a.a: boolean a(java.lang.String,int)>("pool.ntp.org", 300);
+
+        return;
+    }
+}

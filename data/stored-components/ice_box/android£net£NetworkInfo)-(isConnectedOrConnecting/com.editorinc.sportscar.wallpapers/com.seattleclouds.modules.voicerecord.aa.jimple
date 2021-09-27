@@ -1,0 +1,37 @@
+class com.seattleclouds.modules.voicerecord.aa extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.voicerecord.z a;
+
+    void <init>(com.seattleclouds.modules.voicerecord.z)
+    {
+        com.seattleclouds.modules.voicerecord.aa $r0;
+        com.seattleclouds.modules.voicerecord.z $r1;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.aa;
+
+        $r1 := @parameter0: com.seattleclouds.modules.voicerecord.z;
+
+        $r0.<com.seattleclouds.modules.voicerecord.aa: com.seattleclouds.modules.voicerecord.z a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.voicerecord.aa $r0;
+        com.seattleclouds.modules.voicerecord.z $r1;
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r2;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.aa;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.aa: com.seattleclouds.modules.voicerecord.z a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.voicerecord.z: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity a>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void l()>();
+
+        return;
+    }
+}

@@ -1,0 +1,546 @@
+class com.seattleclouds.widget.r extends android.support.v4.view.bv
+{
+    final com.seattleclouds.widget.b a;
+    private android.util.SparseArray b;
+
+    private void <init>(com.seattleclouds.widget.b)
+    {
+        com.seattleclouds.widget.r $r0;
+        com.seattleclouds.widget.b $r1;
+        android.util.SparseArray $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.widget.r;
+
+        $r1 := @parameter0: com.seattleclouds.widget.b;
+
+        $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a> = $r1;
+
+        specialinvoke $r0.<android.support.v4.view.bv: void <init>()>();
+
+        $r2 = new android.util.SparseArray;
+
+        $r1 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i0 = staticinvoke <com.seattleclouds.widget.b: int d(com.seattleclouds.widget.b)>($r1);
+
+        specialinvoke $r2.<android.util.SparseArray: void <init>(int)>($i0);
+
+        $r0.<com.seattleclouds.widget.r: android.util.SparseArray b> = $r2;
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.widget.b, com.seattleclouds.widget.n)
+    {
+        com.seattleclouds.widget.r $r0;
+        com.seattleclouds.widget.b $r1;
+        com.seattleclouds.widget.n $r2;
+
+        $r0 := @this: com.seattleclouds.widget.r;
+
+        $r1 := @parameter0: com.seattleclouds.widget.b;
+
+        $r2 := @parameter1: com.seattleclouds.widget.n;
+
+        specialinvoke $r0.<com.seattleclouds.widget.r: void <init>(com.seattleclouds.widget.b)>($r1);
+
+        return;
+    }
+
+    public java.lang.Object a(android.view.View, int)
+    {
+        com.seattleclouds.widget.r $r0;
+        int $i0, $i1, $i2, $i3, $i4, $i5;
+        android.widget.LinearLayout $r1;
+        android.view.View $r2, $r5;
+        com.seattleclouds.widget.b $r3;
+        android.content.Context $r4;
+        boolean $z0;
+        android.widget.LinearLayout$LayoutParams $r6;
+        android.view.LayoutInflater $r7;
+        android.widget.RelativeLayout $r8;
+        android.util.SparseArray $r9;
+        android.widget.TextView $r10;
+        android.view.ViewGroup$LayoutParams $r11;
+        android.widget.RelativeLayout$LayoutParams $r12;
+        java.util.List $r13;
+        java.lang.Object $r14;
+        com.seattleclouds.ah $r15;
+        java.lang.String $r16, $r17;
+        java.lang.StringBuilder $r18;
+        android.graphics.Typeface $r19;
+        float $f0;
+        com.seattleclouds.widget.p $r20;
+        android.support.v4.view.ViewPager $r21;
+
+        $r0 := @this: com.seattleclouds.widget.r;
+
+        $r2 := @parameter0: android.view.View;
+
+        $i0 := @parameter1: int;
+
+        $r1 = new android.widget.LinearLayout;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.widget.b: android.content.Context f(com.seattleclouds.widget.b)>($r3);
+
+        specialinvoke $r1.<android.widget.LinearLayout: void <init>(android.content.Context)>($r4);
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void setOrientation(int)>(0);
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i1 = staticinvoke <com.seattleclouds.widget.b: int b(com.seattleclouds.widget.b,int)>($r3, $i0);
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $z0 = staticinvoke <com.seattleclouds.widget.b: boolean g(com.seattleclouds.widget.b)>($r3);
+
+        if $z0 != 0 goto label1;
+
+        $r5 = new android.view.View;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.widget.b: android.content.Context f(com.seattleclouds.widget.b)>($r3);
+
+        specialinvoke $r5.<android.view.View: void <init>(android.content.Context)>($r4);
+
+        virtualinvoke $r5.<android.view.View: void setBackgroundColor(int)>(0);
+
+        $r6 = new android.widget.LinearLayout$LayoutParams;
+
+        specialinvoke $r6.<android.widget.LinearLayout$LayoutParams: void <init>(int,int,float)>(-1, -1, 1.0F);
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void addView(android.view.View,android.view.ViewGroup$LayoutParams)>($r5, $r6);
+
+     label1:
+        $i2 = 0;
+
+     label2:
+        if $i2 >= $i1 goto label7;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.widget.b: android.content.Context f(com.seattleclouds.widget.b)>($r3);
+
+        $r7 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r4);
+
+        $i3 = <com.seattleclouds.j: int view_sc_tab_indicator>;
+
+        $r5 = virtualinvoke $r7.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i3, $r1, 0);
+
+        $r8 = (android.widget.RelativeLayout) $r5;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i3 = staticinvoke <com.seattleclouds.widget.b: int h(com.seattleclouds.widget.b)>($r3);
+
+        virtualinvoke $r8.<android.widget.RelativeLayout: void setId(int)>($i3);
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $z0 = staticinvoke <com.seattleclouds.widget.b: boolean g(com.seattleclouds.widget.b)>($r3);
+
+        if $z0 != 0 goto label3;
+
+        $r6 = new android.widget.LinearLayout$LayoutParams;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.widget.b: android.content.Context f(com.seattleclouds.widget.b)>($r3);
+
+        $i3 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r4, 85.0F);
+
+        specialinvoke $r6.<android.widget.LinearLayout$LayoutParams: void <init>(int,int,float)>($i3, -1, 0.0F);
+
+        virtualinvoke $r8.<android.widget.RelativeLayout: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r6);
+
+     label3:
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i3 = staticinvoke <com.seattleclouds.widget.b: int a(com.seattleclouds.widget.b,int,int)>($r3, $i0, $i2);
+
+        $r9 = $r0.<com.seattleclouds.widget.r: android.util.SparseArray b>;
+
+        virtualinvoke $r9.<android.util.SparseArray: void put(int,java.lang.Object)>($i3, $r8);
+
+        $i4 = <com.seattleclouds.h: int tab_title>;
+
+        $r5 = virtualinvoke $r8.<android.widget.RelativeLayout: android.view.View findViewById(int)>($i4);
+
+        $r10 = (android.widget.TextView) $r5;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i4 = staticinvoke <com.seattleclouds.widget.b: int e(com.seattleclouds.widget.b)>($r3);
+
+        if $i4 <= 1 goto label4;
+
+        $r11 = virtualinvoke $r10.<android.widget.TextView: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r12 = (android.widget.RelativeLayout$LayoutParams) $r11;
+
+        $i4 = $r12.<android.widget.RelativeLayout$LayoutParams: int bottomMargin>;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.widget.b: android.content.Context f(com.seattleclouds.widget.b)>($r3);
+
+        $i5 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r4, 10.0F);
+
+        $i4 = $i4 + $i5;
+
+        $r12.<android.widget.RelativeLayout$LayoutParams: int bottomMargin> = $i4;
+
+        virtualinvoke $r10.<android.widget.TextView: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r12);
+
+     label4:
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r13 = staticinvoke <com.seattleclouds.widget.b: java.util.List i(com.seattleclouds.widget.b)>($r3);
+
+        $r14 = interfaceinvoke $r13.<java.util.List: java.lang.Object get(int)>($i3);
+
+        $r15 = (com.seattleclouds.ah) $r14;
+
+        $r16 = virtualinvoke $r15.<com.seattleclouds.ah: java.lang.String a()>();
+
+        $r17 = $r16;
+
+        if $r16 != null goto label5;
+
+        $r18 = new java.lang.StringBuilder;
+
+        specialinvoke $r18.<java.lang.StringBuilder: void <init>()>();
+
+        $r18 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("tab ");
+
+        $i4 = $i3 + 1;
+
+        $r18 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i4);
+
+        $r17 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label5:
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i4 = staticinvoke <com.seattleclouds.widget.b: int j(com.seattleclouds.widget.b)>($r3);
+
+        $i4 = $i4 & 2;
+
+        if $i4 == 0 goto label6;
+
+        $r18 = new java.lang.StringBuilder;
+
+        specialinvoke $r18.<java.lang.StringBuilder: void <init>()>();
+
+        $r18 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r18 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\u00a0");
+
+        $r17 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label6:
+        virtualinvoke $r10.<android.widget.TextView: void setText(java.lang.CharSequence)>($r17);
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r19 = staticinvoke <com.seattleclouds.widget.b: android.graphics.Typeface k(com.seattleclouds.widget.b)>($r3);
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i4 = staticinvoke <com.seattleclouds.widget.b: int j(com.seattleclouds.widget.b)>($r3);
+
+        virtualinvoke $r10.<android.widget.TextView: void setTypeface(android.graphics.Typeface,int)>($r19, $i4);
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $f0 = staticinvoke <com.seattleclouds.widget.b: float l(com.seattleclouds.widget.b)>($r3);
+
+        virtualinvoke $r10.<android.widget.TextView: void setTextSize(float)>($f0);
+
+        virtualinvoke $r0.<com.seattleclouds.widget.r: void a(int)>($i3);
+
+        $r20 = new com.seattleclouds.widget.p;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        specialinvoke $r20.<com.seattleclouds.widget.p: void <init>(com.seattleclouds.widget.b,int,int)>($r3, $i0, $i2);
+
+        virtualinvoke $r8.<android.widget.RelativeLayout: void setOnClickListener(android.view.View$OnClickListener)>($r20);
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void addView(android.view.View)>($r8);
+
+        $i2 = $i2 + 1;
+
+        goto label2;
+
+     label7:
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $z0 = staticinvoke <com.seattleclouds.widget.b: boolean g(com.seattleclouds.widget.b)>($r3);
+
+        if $z0 != 0 goto label8;
+
+        $r5 = new android.view.View;
+
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.widget.b: android.content.Context f(com.seattleclouds.widget.b)>($r3);
+
+        specialinvoke $r5.<android.view.View: void <init>(android.content.Context)>($r4);
+
+        virtualinvoke $r5.<android.view.View: void setBackgroundColor(int)>(0);
+
+        $r6 = new android.widget.LinearLayout$LayoutParams;
+
+        specialinvoke $r6.<android.widget.LinearLayout$LayoutParams: void <init>(int,int,float)>(-1, -1, 1.0F);
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void addView(android.view.View,android.view.ViewGroup$LayoutParams)>($r5, $r6);
+
+     label8:
+        $r3 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i0 = staticinvoke <com.seattleclouds.widget.b: int h(com.seattleclouds.widget.b)>($r3);
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void setId(int)>($i0);
+
+        $r21 = (android.support.v4.view.ViewPager) $r2;
+
+        virtualinvoke $r21.<android.support.v4.view.ViewPager: void addView(android.view.View)>($r1);
+
+        return $r1;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.widget.r $r0;
+        int $i0, $i1;
+        android.util.SparseArray $r1;
+        java.lang.Object $r2;
+        android.view.View $r3, $r7;
+        com.seattleclouds.widget.b $r4;
+        java.util.List $r5;
+        com.seattleclouds.ah $r6;
+        android.widget.ImageView $r8;
+        android.widget.TextView $r9;
+        java.lang.String $r10;
+        android.graphics.drawable.BitmapDrawable $r11, $r12;
+        java.lang.Integer $r13, $r14;
+
+        $r0 := @this: com.seattleclouds.widget.r;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.widget.r: android.util.SparseArray b>;
+
+        $r2 = virtualinvoke $r1.<android.util.SparseArray: java.lang.Object get(int)>($i0);
+
+        $r3 = (android.view.View) $r2;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $r5 = staticinvoke <com.seattleclouds.widget.b: java.util.List i(com.seattleclouds.widget.b)>($r4);
+
+        $r2 = interfaceinvoke $r5.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r6 = (com.seattleclouds.ah) $r2;
+
+        if $r6 == null goto label8;
+
+        $i1 = <com.seattleclouds.h: int tab_icon>;
+
+        $r7 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r8 = (android.widget.ImageView) $r7;
+
+        $i1 = <com.seattleclouds.h: int tab_title>;
+
+        $r7 = virtualinvoke $r3.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r9 = (android.widget.TextView) $r7;
+
+        $r4 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i1 = staticinvoke <com.seattleclouds.widget.b: int a(com.seattleclouds.widget.b)>($r4);
+
+        if $i1 != $i0 goto label6;
+
+        $r10 = virtualinvoke $r6.<com.seattleclouds.ah: java.lang.String i()>();
+
+        $r11 = staticinvoke <com.seattleclouds.App: android.graphics.drawable.BitmapDrawable k(java.lang.String)>($r10);
+
+        $r12 = $r11;
+
+        if $r11 != null goto label2;
+
+        $r10 = virtualinvoke $r6.<com.seattleclouds.ah: java.lang.String h()>();
+
+        $r12 = staticinvoke <com.seattleclouds.App: android.graphics.drawable.BitmapDrawable k(java.lang.String)>($r10);
+
+     label2:
+        virtualinvoke $r3.<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>($r12);
+
+        if $r12 != null goto label4;
+
+        $r13 = virtualinvoke $r6.<com.seattleclouds.ah: java.lang.Integer g()>();
+
+        $r14 = $r13;
+
+        if $r13 != null goto label3;
+
+        $i0 = virtualinvoke $r6.<com.seattleclouds.ah: int f()>();
+
+        $r14 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label3:
+        $i0 = virtualinvoke $r14.<java.lang.Integer: int intValue()>();
+
+        virtualinvoke $r3.<android.view.View: void setBackgroundColor(int)>($i0);
+
+     label4:
+        $i0 = virtualinvoke $r6.<com.seattleclouds.ah: int e()>();
+
+        virtualinvoke $r9.<android.widget.TextView: void setTextColor(int)>($i0);
+
+        $r10 = virtualinvoke $r6.<com.seattleclouds.ah: java.lang.String c()>();
+
+        $r11 = staticinvoke <com.seattleclouds.App: android.graphics.drawable.BitmapDrawable k(java.lang.String)>($r10);
+
+        $r12 = $r11;
+
+        if $r11 != null goto label5;
+
+        $r10 = virtualinvoke $r6.<com.seattleclouds.ah: java.lang.String b()>();
+
+        $r12 = staticinvoke <com.seattleclouds.App: android.graphics.drawable.BitmapDrawable k(java.lang.String)>($r10);
+
+     label5:
+        virtualinvoke $r8.<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>($r12);
+
+        return;
+
+     label6:
+        $r10 = virtualinvoke $r6.<com.seattleclouds.ah: java.lang.String h()>();
+
+        $r11 = staticinvoke <com.seattleclouds.App: android.graphics.drawable.BitmapDrawable k(java.lang.String)>($r10);
+
+        virtualinvoke $r3.<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>($r11);
+
+        if $r11 != null goto label7;
+
+        $i0 = virtualinvoke $r6.<com.seattleclouds.ah: int f()>();
+
+        virtualinvoke $r3.<android.view.View: void setBackgroundColor(int)>($i0);
+
+     label7:
+        $i0 = virtualinvoke $r6.<com.seattleclouds.ah: int d()>();
+
+        virtualinvoke $r9.<android.widget.TextView: void setTextColor(int)>($i0);
+
+        $r10 = virtualinvoke $r6.<com.seattleclouds.ah: java.lang.String b()>();
+
+        $r11 = staticinvoke <com.seattleclouds.App: android.graphics.drawable.BitmapDrawable k(java.lang.String)>($r10);
+
+        virtualinvoke $r8.<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>($r11);
+
+     label8:
+        return;
+    }
+
+    public void a(android.view.View, int, java.lang.Object)
+    {
+        com.seattleclouds.widget.r $r0;
+        int $i0, $i1, $i2, $i3;
+        android.util.SparseArray $r1;
+        android.view.View $r2;
+        java.lang.Object $r3;
+        android.support.v4.view.ViewPager $r4;
+        android.widget.LinearLayout $r5;
+        com.seattleclouds.widget.b $r6;
+
+        $r0 := @this: com.seattleclouds.widget.r;
+
+        $r2 := @parameter0: android.view.View;
+
+        $i0 := @parameter1: int;
+
+        $r3 := @parameter2: java.lang.Object;
+
+        $r4 = (android.support.v4.view.ViewPager) $r2;
+
+        $r5 = (android.widget.LinearLayout) $r3;
+
+        virtualinvoke $r4.<android.support.v4.view.ViewPager: void removeView(android.view.View)>($r5);
+
+        $r6 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i1 = staticinvoke <com.seattleclouds.widget.b: int b(com.seattleclouds.widget.b,int)>($r6, $i0);
+
+        $i2 = 0;
+
+     label1:
+        if $i2 >= $i1 goto label2;
+
+        $r6 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i3 = staticinvoke <com.seattleclouds.widget.b: int a(com.seattleclouds.widget.b,int,int)>($r6, $i0, $i2);
+
+        $r1 = $r0.<com.seattleclouds.widget.r: android.util.SparseArray b>;
+
+        virtualinvoke $r1.<android.util.SparseArray: void remove(int)>($i3);
+
+        $i2 = $i2 + 1;
+
+        goto label1;
+
+     label2:
+        return;
+    }
+
+    public boolean a(android.view.View, java.lang.Object)
+    {
+        com.seattleclouds.widget.r $r0;
+        android.view.View $r1;
+        java.lang.Object $r2;
+        android.widget.LinearLayout $r3;
+
+        $r0 := @this: com.seattleclouds.widget.r;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $r3 = (android.widget.LinearLayout) $r2;
+
+        if $r1 != $r3 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public int b()
+    {
+        com.seattleclouds.widget.r $r0;
+        int $i0;
+        com.seattleclouds.widget.b $r1;
+
+        $r0 := @this: com.seattleclouds.widget.r;
+
+        $r1 = $r0.<com.seattleclouds.widget.r: com.seattleclouds.widget.b a>;
+
+        $i0 = staticinvoke <com.seattleclouds.widget.b: int e(com.seattleclouds.widget.b)>($r1);
+
+        return $i0;
+    }
+}

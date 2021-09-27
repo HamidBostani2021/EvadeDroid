@@ -1,0 +1,70 @@
+class com.seattleclouds.modules.feedback.ae extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.feedback.ad a;
+
+    void <init>(com.seattleclouds.modules.feedback.ad)
+    {
+        com.seattleclouds.modules.feedback.ae $r0;
+        com.seattleclouds.modules.feedback.ad $r1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ae;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.ad;
+
+        $r0.<com.seattleclouds.modules.feedback.ae: com.seattleclouds.modules.feedback.ad a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.feedback.ae $r0;
+        com.seattleclouds.modules.feedback.ad $r1;
+        com.seattleclouds.modules.feedback.c $r2;
+        java.lang.String $r3, $r5;
+        android.net.Uri $r4;
+        boolean $z0;
+        com.seattleclouds.modules.feedback.a $r6;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ae;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ae: com.seattleclouds.modules.feedback.ad a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.feedback.ad: com.seattleclouds.modules.feedback.c f>;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ae: com.seattleclouds.modules.feedback.ad a>;
+
+        $r3 = $r1.<com.seattleclouds.modules.feedback.ad: java.lang.String a>;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ae: com.seattleclouds.modules.feedback.ad a>;
+
+        $r4 = $r1.<com.seattleclouds.modules.feedback.ad: android.net.Uri d>;
+
+        $r5 = virtualinvoke $r4.<android.net.Uri: java.lang.String getPath()>();
+
+        $z0 = staticinvoke <com.seattleclouds.modules.feedback.c: boolean a(com.seattleclouds.modules.feedback.c,java.lang.String,java.lang.String)>($r2, $r3, $r5);
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ae: com.seattleclouds.modules.feedback.ad a>;
+
+        $z0 = $r1.<com.seattleclouds.modules.feedback.ad: boolean e>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ae: com.seattleclouds.modules.feedback.ad a>;
+
+        $r6 = $r1.<com.seattleclouds.modules.feedback.ad: com.seattleclouds.modules.feedback.a c>;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ae: com.seattleclouds.modules.feedback.ad a>;
+
+        $r4 = $r1.<com.seattleclouds.modules.feedback.ad: android.net.Uri d>;
+
+        $r6.<com.seattleclouds.modules.feedback.a: android.net.Uri m> = $r4;
+
+     label1:
+        return;
+    }
+}

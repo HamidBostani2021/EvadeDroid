@@ -1,0 +1,182 @@
+class com.seattleclouds.modules.b.k extends android.os.AsyncTask
+{
+    public int a;
+    final com.seattleclouds.modules.b.d b;
+    private com.seattleclouds.modules.b.a c;
+    private android.widget.TextView d;
+
+    private void <init>(com.seattleclouds.modules.b.d)
+    {
+        com.seattleclouds.modules.b.k $r0;
+        com.seattleclouds.modules.b.d $r1;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.b.d;
+
+        $r0.<com.seattleclouds.modules.b.k: com.seattleclouds.modules.b.d b> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.b.k: int a> = -1;
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.b.d, com.seattleclouds.modules.b.e)
+    {
+        com.seattleclouds.modules.b.k $r0;
+        com.seattleclouds.modules.b.d $r1;
+        com.seattleclouds.modules.b.e $r2;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.b.d;
+
+        $r2 := @parameter1: com.seattleclouds.modules.b.e;
+
+        specialinvoke $r0.<com.seattleclouds.modules.b.k: void <init>(com.seattleclouds.modules.b.d)>($r1);
+
+        return;
+    }
+
+    protected transient java.lang.String a(java.lang.String[])
+    {
+        com.seattleclouds.modules.b.k $r0;
+        java.lang.String[] $r1;
+        java.lang.String $r2;
+        com.seattleclouds.modules.b.d $r3;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $r3 = $r0.<com.seattleclouds.modules.b.k: com.seattleclouds.modules.b.d b>;
+
+        $r2 = $r1[0];
+
+        $r2 = staticinvoke <com.seattleclouds.modules.b.d: java.lang.String a(com.seattleclouds.modules.b.d,java.lang.String)>($r3, $r2);
+
+        return $r2;
+    }
+
+    public void a(android.widget.TextView)
+    {
+        com.seattleclouds.modules.b.k $r0;
+        android.widget.TextView $r1;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r1 := @parameter0: android.widget.TextView;
+
+        $r0.<com.seattleclouds.modules.b.k: android.widget.TextView d> = $r1;
+
+        return;
+    }
+
+    public void a(com.seattleclouds.modules.b.a)
+    {
+        com.seattleclouds.modules.b.k $r0;
+        com.seattleclouds.modules.b.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.b.a;
+
+        $r0.<com.seattleclouds.modules.b.k: com.seattleclouds.modules.b.a c> = $r1;
+
+        return;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.modules.b.k $r0;
+        java.lang.String $r1;
+        android.widget.TextView $r2;
+        java.lang.Object $r3;
+        int $i0, $i1;
+        java.lang.Integer $r4;
+        com.seattleclouds.modules.b.a $r5;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.modules.b.k: android.widget.TextView d>;
+
+        if $r2 == null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.b.k: android.widget.TextView d>;
+
+        $r3 = virtualinvoke $r2.<android.widget.TextView: java.lang.Object getTag()>();
+
+        if $r3 == null goto label2;
+
+        $i0 = $r0.<com.seattleclouds.modules.b.k: int a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.b.k: android.widget.TextView d>;
+
+        $r3 = virtualinvoke $r2.<android.widget.TextView: java.lang.Object getTag()>();
+
+        $r4 = (java.lang.Integer) $r3;
+
+        $i1 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        if $i0 != $i1 goto label2;
+
+        if $r1 != null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.b.k: android.widget.TextView d>;
+
+        virtualinvoke $r2.<android.widget.TextView: void setText(java.lang.CharSequence)>("No description.");
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.b.k: android.widget.TextView d>;
+
+        virtualinvoke $r2.<android.widget.TextView: void setText(java.lang.CharSequence)>($r1);
+
+        $r5 = $r0.<com.seattleclouds.modules.b.k: com.seattleclouds.modules.b.a c>;
+
+        $r5.<com.seattleclouds.modules.b.a: java.lang.String c> = $r1;
+
+     label2:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.b.k $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.b.k: java.lang.String a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.b.k $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.b.k;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.b.k: void a(java.lang.String)>($r2);
+
+        return;
+    }
+}

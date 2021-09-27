@@ -1,0 +1,187 @@
+public class com.gohonzonfree.MainActivity extends android.app.Activity
+{
+    android.widget.Button btn1;
+    android.widget.Button btn2;
+    android.widget.Button btn3;
+    android.widget.Button btn4;
+    android.widget.Button btn5;
+    android.widget.Button btn6;
+    android.widget.ImageButton left_button;
+    com.navdrawer.SimpleSideDrawer slide_me;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.gohonzonfree.MainActivity $r0;
+
+        $r0 := @this: com.gohonzonfree.MainActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        com.gohonzonfree.MainActivity $r0;
+        android.os.Bundle $r1;
+        com.navdrawer.SimpleSideDrawer $r2;
+        android.view.View $r3;
+        android.widget.Button $r4;
+        android.widget.ImageButton $r5;
+        com.gohonzonfree.MainActivity$1 $r6;
+        com.gohonzonfree.MainActivity$2 $r7;
+        com.gohonzonfree.MainActivity$3 $r8;
+        com.gohonzonfree.MainActivity$4 $r9;
+        com.gohonzonfree.MainActivity$5 $r10;
+        com.gohonzonfree.MainActivity$6 $r11;
+
+        $r0 := @this: com.gohonzonfree.MainActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.gohonzonfree.MainActivity: void setContentView(int)>(2130903041);
+
+        $r2 = new com.navdrawer.SimpleSideDrawer;
+
+        specialinvoke $r2.<com.navdrawer.SimpleSideDrawer: void <init>(android.app.Activity)>($r0);
+
+        $r0.<com.gohonzonfree.MainActivity: com.navdrawer.SimpleSideDrawer slide_me> = $r2;
+
+        $r2 = $r0.<com.gohonzonfree.MainActivity: com.navdrawer.SimpleSideDrawer slide_me>;
+
+        virtualinvoke $r2.<com.navdrawer.SimpleSideDrawer: android.view.View setLeftBehindContentView(int)>(2130903049);
+
+        $r3 = virtualinvoke $r0.<com.gohonzonfree.MainActivity: android.view.View findViewById(int)>(2131296266);
+
+        $r4 = (android.widget.Button) $r3;
+
+        $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn1> = $r4;
+
+        $r3 = virtualinvoke $r0.<com.gohonzonfree.MainActivity: android.view.View findViewById(int)>(2131296268);
+
+        $r4 = (android.widget.Button) $r3;
+
+        $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn3> = $r4;
+
+        $r3 = virtualinvoke $r0.<com.gohonzonfree.MainActivity: android.view.View findViewById(int)>(2131296269);
+
+        $r4 = (android.widget.Button) $r3;
+
+        $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn4> = $r4;
+
+        $r3 = virtualinvoke $r0.<com.gohonzonfree.MainActivity: android.view.View findViewById(int)>(2131296270);
+
+        $r4 = (android.widget.Button) $r3;
+
+        $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn5> = $r4;
+
+        $r3 = virtualinvoke $r0.<com.gohonzonfree.MainActivity: android.view.View findViewById(int)>(2131296267);
+
+        $r4 = (android.widget.Button) $r3;
+
+        $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn6> = $r4;
+
+        $r3 = virtualinvoke $r0.<com.gohonzonfree.MainActivity: android.view.View findViewById(int)>(2131296257);
+
+        $r5 = (android.widget.ImageButton) $r3;
+
+        $r0.<com.gohonzonfree.MainActivity: android.widget.ImageButton left_button> = $r5;
+
+        $r5 = $r0.<com.gohonzonfree.MainActivity: android.widget.ImageButton left_button>;
+
+        $r6 = new com.gohonzonfree.MainActivity$1;
+
+        specialinvoke $r6.<com.gohonzonfree.MainActivity$1: void <init>(com.gohonzonfree.MainActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r6);
+
+        $r4 = $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn1>;
+
+        $r7 = new com.gohonzonfree.MainActivity$2;
+
+        specialinvoke $r7.<com.gohonzonfree.MainActivity$2: void <init>(com.gohonzonfree.MainActivity)>($r0);
+
+        virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r7);
+
+        $r4 = $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn6>;
+
+        $r8 = new com.gohonzonfree.MainActivity$3;
+
+        specialinvoke $r8.<com.gohonzonfree.MainActivity$3: void <init>(com.gohonzonfree.MainActivity)>($r0);
+
+        virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r8);
+
+        $r4 = $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn3>;
+
+        $r9 = new com.gohonzonfree.MainActivity$4;
+
+        specialinvoke $r9.<com.gohonzonfree.MainActivity$4: void <init>(com.gohonzonfree.MainActivity)>($r0);
+
+        virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r9);
+
+        $r4 = $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn4>;
+
+        $r10 = new com.gohonzonfree.MainActivity$5;
+
+        specialinvoke $r10.<com.gohonzonfree.MainActivity$5: void <init>(com.gohonzonfree.MainActivity)>($r0);
+
+        virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r10);
+
+        $r4 = $r0.<com.gohonzonfree.MainActivity: android.widget.Button btn5>;
+
+        $r11 = new com.gohonzonfree.MainActivity$6;
+
+        specialinvoke $r11.<com.gohonzonfree.MainActivity$6: void <init>(com.gohonzonfree.MainActivity)>($r0);
+
+        virtualinvoke $r4.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r11);
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.gohonzonfree.MainActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.gohonzonfree.MainActivity;
+
+        $r0 = this.<com.gohonzonfree.MainActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.gohonzonfree.MainActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.gohonzonfree.MainActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.gohonzonfree.MainActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.gohonzonfree.MainActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.gohonzonfree.MainActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.gohonzonfree.MainActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

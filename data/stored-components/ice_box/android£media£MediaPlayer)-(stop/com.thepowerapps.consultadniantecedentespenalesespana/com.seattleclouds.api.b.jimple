@@ -1,0 +1,2343 @@
+public class com.seattleclouds.api.b extends java.lang.Object
+{
+    private static java.text.SimpleDateFormat a;
+    private static com.seattleclouds.api.b b;
+    private boolean c;
+    private android.content.Context d;
+    private java.lang.String e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private int h;
+    private java.lang.String i;
+    private java.lang.String j;
+    private java.lang.String k;
+    private com.seattleclouds.api.a l;
+
+    static void <clinit>()
+    {
+        java.util.TimeZone $r0;
+        java.text.SimpleDateFormat $r1;
+
+        $r1 = new java.text.SimpleDateFormat;
+
+        specialinvoke $r1.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'");
+
+        <com.seattleclouds.api.b: java.text.SimpleDateFormat a> = $r1;
+
+        $r1 = <com.seattleclouds.api.b: java.text.SimpleDateFormat a>;
+
+        $r0 = staticinvoke <java.util.TimeZone: java.util.TimeZone getTimeZone(java.lang.String)>("UTC");
+
+        virtualinvoke $r1.<java.text.SimpleDateFormat: void setTimeZone(java.util.TimeZone)>($r0);
+
+        return;
+    }
+
+    private void <init>()
+    {
+        com.seattleclouds.api.b $r0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.api.b: boolean c> = 0;
+
+        $r0.<com.seattleclouds.api.b: android.content.Context d> = null;
+
+        $r0.<com.seattleclouds.api.b: int h> = -1;
+
+        return;
+    }
+
+    private int a(org.json.JSONObject, java.lang.String, int)
+    {
+        com.seattleclouds.api.b $r0;
+        org.json.JSONObject $r1;
+        java.lang.String $r2;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 := @parameter2: int;
+
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>("accessLevel");
+
+        if $z0 == 0 goto label1;
+
+        $i0 = virtualinvoke $r1.<org.json.JSONObject: int getInt(java.lang.String)>("accessLevel");
+
+     label1:
+        return $i0;
+    }
+
+    public static com.seattleclouds.api.b a()
+    {
+        com.seattleclouds.api.b $r0;
+        boolean $z0;
+        java.lang.IllegalStateException $r1;
+
+        $r0 = <com.seattleclouds.api.b: com.seattleclouds.api.b b>;
+
+        if $r0 != null goto label2;
+
+        $r0 = new com.seattleclouds.api.b;
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void <init>()>();
+
+        <com.seattleclouds.api.b: com.seattleclouds.api.b b> = $r0;
+
+     label1:
+        $r0 = <com.seattleclouds.api.b: com.seattleclouds.api.b b>;
+
+        return $r0;
+
+     label2:
+        $r0 = <com.seattleclouds.api.b: com.seattleclouds.api.b b>;
+
+        $z0 = $r0.<com.seattleclouds.api.b: boolean c>;
+
+        if $z0 != 0 goto label1;
+
+        $r1 = new java.lang.IllegalStateException;
+
+        specialinvoke $r1.<java.lang.IllegalStateException: void <init>(java.lang.String)>("You must call SCApi.init(Context) exactly after first SCApi.getInstance() call: SCApi.getInstance().init(Context)");
+
+        throw $r1;
+    }
+
+    public static java.lang.String a(android.content.Context, java.lang.String, java.util.List)
+    {
+        android.content.Context $r0;
+        java.lang.String $r1, $r4;
+        java.util.List $r2;
+        java.util.HashMap $r3;
+        java.lang.StringBuilder $r5, $r8;
+        java.util.Iterator $r6;
+        boolean $z0;
+        java.lang.Object $r7;
+        int $i0;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.util.List;
+
+        $r3 = new java.util.HashMap;
+
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+        $r4 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r4);
+
+        $r4 = <com.seattleclouds.App: java.lang.String w>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("username", $r4);
+
+        $r4 = <com.seattleclouds.App: java.lang.String x>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appId", $r4);
+
+        $r4 = staticinvoke <com.seattleclouds.util.bs: java.lang.String a()>();
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("deviceId", $r4);
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("type", $r1);
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+        $r1 = <com.seattleclouds.App: java.lang.String s>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/gcm_set_topic_subscriptions.ashx?");
+
+        $r1 = staticinvoke <com.seattleclouds.util.a: java.lang.String a(java.util.Map)>($r3);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = interfaceinvoke $r2.<java.util.List: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r7 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+        $r4 = (java.lang.String) $r7;
+
+        $r8 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(44);
+
+        goto label1;
+
+     label2:
+        $i0 = virtualinvoke $r5.<java.lang.StringBuilder: int length()>();
+
+        if $i0 <= 0 goto label3;
+
+        $i0 = virtualinvoke $r5.<java.lang.StringBuilder: int length()>();
+
+        $i0 = $i0 + -1;
+
+        virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder deleteCharAt(int)>($i0);
+
+     label3:
+        $r4 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r1 = staticinvoke <com.seattleclouds.util.a: java.lang.String a(java.lang.String,java.lang.String)>($r1, $r4);
+
+        return $r1;
+    }
+
+    private java.lang.String a(java.lang.String, java.util.Map)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r4;
+        java.util.Map $r2;
+        java.lang.StringBuilder $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.util.Map;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.api.b: java.lang.String e>;
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = staticinvoke <com.seattleclouds.util.a: java.lang.String a(java.util.Map)>($r2);
+
+        $i0 = virtualinvoke $r4.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label1;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("?");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r1 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label1:
+        return $r1;
+    }
+
+    private java.lang.String a(org.json.JSONObject, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        org.json.JSONObject $r1;
+        java.lang.String $r2, $r3;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean has(java.lang.String)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>($r2);
+
+        return $r2;
+
+     label1:
+        return null;
+    }
+
+    public static java.util.Date a(java.lang.String)
+    {
+        java.lang.String $r0;
+        java.util.Date $r1;
+        java.text.SimpleDateFormat $r2;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r2 = <com.seattleclouds.api.b: java.text.SimpleDateFormat a>;
+
+        $r1 = virtualinvoke $r2.<java.text.SimpleDateFormat: java.util.Date parse(java.lang.String)>($r0);
+
+        return $r1;
+    }
+
+    private void a(java.net.HttpURLConnection)
+    {
+        com.seattleclouds.api.b $r0;
+        java.net.HttpURLConnection $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.net.HttpURLConnection;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("SCAuth authToken=");
+
+        $r3 = $r0.<com.seattleclouds.api.b: java.lang.String g>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r1.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Authorization", $r3);
+
+        return;
+    }
+
+    private void a(java.net.HttpURLConnection, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.net.HttpURLConnection $r1;
+        java.lang.String $r2;
+        java.io.OutputStream $r3;
+        java.io.OutputStreamWriter $r4;
+        java.io.BufferedOutputStream $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.net.HttpURLConnection;
+
+        $r2 := @parameter1: java.lang.String;
+
+     label1:
+        $r4 = new java.io.OutputStreamWriter;
+
+        $r5 = new java.io.BufferedOutputStream;
+
+        $r3 = virtualinvoke $r1.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>();
+
+        specialinvoke $r5.<java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>($r3);
+
+        specialinvoke $r4.<java.io.OutputStreamWriter: void <init>(java.io.OutputStream)>($r5);
+
+     label2:
+        virtualinvoke $r4.<java.io.OutputStreamWriter: void write(java.lang.String)>($r2);
+
+        virtualinvoke $r4.<java.io.OutputStreamWriter: void flush()>();
+
+     label3:
+        if $r4 == null goto label8;
+
+        virtualinvoke $r4.<java.io.OutputStreamWriter: void close()>();
+
+        return;
+
+     label4:
+        $r6 := @caughtexception;
+
+        $r4 = null;
+
+     label5:
+        if $r4 == null goto label6;
+
+        virtualinvoke $r4.<java.io.OutputStreamWriter: void close()>();
+
+     label6:
+        throw $r6;
+
+     label7:
+        $r6 := @caughtexception;
+
+        goto label5;
+
+     label8:
+        return;
+
+        catch java.lang.Throwable from label1 to label2 with label4;
+        catch java.lang.Throwable from label2 to label3 with label7;
+    }
+
+    private boolean a(int)
+    {
+        com.seattleclouds.api.b $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $i0 := @parameter0: int;
+
+        if $i0 < 200 goto label1;
+
+        if $i0 < 400 goto label2;
+
+     label1:
+        return 1;
+
+     label2:
+        return 0;
+    }
+
+    public static java.lang.String b(java.lang.String)
+    {
+        java.lang.String $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean equals(java.lang.Object)>("seattleclouds.com");
+
+        if $z0 != 0 goto label1;
+
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean equals(java.lang.Object)>("dev.seattleclouds.com");
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        return "https";
+
+     label2:
+        return "http";
+    }
+
+    private org.json.JSONObject b(com.seattleclouds.api.c)
+    {
+        com.seattleclouds.api.b $r0;
+        com.seattleclouds.api.c $r1;
+        java.lang.String $r2;
+        java.util.Map $r3;
+        java.net.URL $r4;
+        java.net.URLConnection $r5;
+        java.net.HttpURLConnection $r6;
+        int $i0;
+        boolean $z0;
+        java.io.InputStream $r7;
+        com.seattleclouds.api.HttpResponseException $r8;
+        java.lang.Throwable $r9;
+        org.json.JSONObject $r10;
+        java.lang.StringBuilder $r11;
+        com.seattleclouds.api.SCApiException $r12;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: com.seattleclouds.api.c;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.api.c: java.lang.String d()>();
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.api.c: java.util.Map a()>();
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String a(java.lang.String,java.util.Map)>($r2, $r3);
+
+        $r4 = new java.net.URL;
+
+        specialinvoke $r4.<java.net.URL: void <init>(java.lang.String)>($r2);
+
+        $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>();
+
+        $r6 = (java.net.HttpURLConnection) $r5;
+
+     label01:
+        $i0 = virtualinvoke $r1.<com.seattleclouds.api.c: int e()>();
+
+        virtualinvoke $r6.<java.net.HttpURLConnection: void setReadTimeout(int)>($i0);
+
+        $i0 = virtualinvoke $r1.<com.seattleclouds.api.c: int e()>();
+
+        virtualinvoke $r6.<java.net.HttpURLConnection: void setConnectTimeout(int)>($i0);
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void a(java.net.HttpURLConnection)>($r6);
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.api.c: java.lang.String c()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("POST");
+
+     label02:
+        if $z0 == 0 goto label04;
+
+     label03:
+        virtualinvoke $r6.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", "application/x-www-form-urlencoded");
+
+        virtualinvoke $r6.<java.net.HttpURLConnection: void setDoOutput(boolean)>(1);
+
+     label04:
+        virtualinvoke $r6.<java.net.HttpURLConnection: void setDoInput(boolean)>(1);
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.api.c: java.lang.String c()>();
+
+        virtualinvoke $r6.<java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>($r2);
+
+        virtualinvoke $r6.<java.net.HttpURLConnection: void connect()>();
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.api.c: java.lang.String c()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("POST");
+
+     label05:
+        if $z0 == 0 goto label07;
+
+     label06:
+        $r3 = virtualinvoke $r1.<com.seattleclouds.api.c: java.util.Map b()>();
+
+        $r2 = staticinvoke <com.seattleclouds.util.a: java.lang.String a(java.util.Map)>($r3);
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void a(java.net.HttpURLConnection,java.lang.String)>($r6, $r2);
+
+     label07:
+        $i0 = virtualinvoke $r6.<java.net.HttpURLConnection: int getResponseCode()>();
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.api.b: boolean a(int)>($i0);
+
+     label08:
+        if $z0 == 0 goto label17;
+
+     label09:
+        $r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getErrorStream()>();
+
+     label10:
+        if $r7 == null goto label19;
+
+     label11:
+        $r2 = staticinvoke <com.seattleclouds.util.bn: java.lang.String b(java.io.InputStream)>($r7);
+
+     label12:
+        if $r2 == null goto label15;
+
+     label13:
+        $i0 = virtualinvoke $r2.<java.lang.String: int length()>();
+
+     label14:
+        if $i0 != 0 goto label20;
+
+     label15:
+        $r8 = new com.seattleclouds.api.HttpResponseException;
+
+        $i0 = virtualinvoke $r6.<java.net.HttpURLConnection: int getResponseCode()>();
+
+        $r2 = virtualinvoke $r6.<java.net.HttpURLConnection: java.lang.String getResponseMessage()>();
+
+        specialinvoke $r8.<com.seattleclouds.api.HttpResponseException: void <init>(int,java.lang.String)>($i0, $r2);
+
+        throw $r8;
+
+     label16:
+        $r9 := @caughtexception;
+
+        virtualinvoke $r6.<java.net.HttpURLConnection: void disconnect()>();
+
+        throw $r9;
+
+     label17:
+        $r7 = virtualinvoke $r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>();
+
+     label18:
+        goto label10;
+
+     label19:
+        $r8 = new com.seattleclouds.api.HttpResponseException;
+
+        $i0 = virtualinvoke $r6.<java.net.HttpURLConnection: int getResponseCode()>();
+
+        $r2 = virtualinvoke $r6.<java.net.HttpURLConnection: java.lang.String getResponseMessage()>();
+
+        specialinvoke $r8.<com.seattleclouds.api.HttpResponseException: void <init>(int,java.lang.String)>($i0, $r2);
+
+        throw $r8;
+
+     label20:
+        $r10 = new org.json.JSONObject;
+
+        specialinvoke $r10.<org.json.JSONObject: void <init>(java.lang.String)>($r2);
+
+        $i0 = virtualinvoke $r6.<java.net.HttpURLConnection: int getResponseCode()>();
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.api.b: boolean a(int)>($i0);
+
+     label21:
+        if $z0 == 0 goto label23;
+
+     label22:
+        $r10 = virtualinvoke $r10.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>("error");
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>()>();
+
+        $i0 = virtualinvoke $r10.<org.json.JSONObject: int getInt(java.lang.String)>("code");
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" - ");
+
+        $r2 = virtualinvoke $r10.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("message");
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r12 = new com.seattleclouds.api.SCApiException;
+
+        specialinvoke $r12.<com.seattleclouds.api.SCApiException: void <init>(java.lang.String,org.json.JSONObject)>($r2, $r10);
+
+        throw $r12;
+
+     label23:
+        virtualinvoke $r6.<java.net.HttpURLConnection: void disconnect()>();
+
+        return $r10;
+
+        catch java.lang.Throwable from label01 to label02 with label16;
+        catch java.lang.Throwable from label03 to label05 with label16;
+        catch java.lang.Throwable from label06 to label08 with label16;
+        catch java.lang.Throwable from label09 to label10 with label16;
+        catch java.lang.Throwable from label11 to label12 with label16;
+        catch java.lang.Throwable from label13 to label14 with label16;
+        catch java.lang.Throwable from label15 to label16 with label16;
+        catch java.lang.Throwable from label17 to label18 with label16;
+        catch java.lang.Throwable from label19 to label21 with label16;
+        catch java.lang.Throwable from label22 to label23 with label16;
+    }
+
+    private void i(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1;
+        int $i0;
+        org.json.JSONObject $r2;
+        boolean $z0;
+        com.seattleclouds.api.a $r3;
+        org.json.JSONException $r4;
+        java.lang.StringBuilder $r5;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label17;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label01;
+
+        return;
+
+     label01:
+        $r2 = new org.json.JSONObject;
+
+     label02:
+        specialinvoke $r2.<org.json.JSONObject: void <init>(java.lang.String)>($r1);
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String a(org.json.JSONObject,java.lang.String,java.lang.String)>($r2, "authToken", null);
+
+     label03:
+        $r0.<com.seattleclouds.api.b: java.lang.String g> = $r1;
+
+     label04:
+        $i0 = specialinvoke $r0.<com.seattleclouds.api.b: int a(org.json.JSONObject,java.lang.String,int)>($r2, "accessLevel", -1);
+
+     label05:
+        $r0.<com.seattleclouds.api.b: int h> = $i0;
+
+     label06:
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String a(org.json.JSONObject,java.lang.String,java.lang.String)>($r2, "publisherAccountPublisherId", null);
+
+     label07:
+        $r0.<com.seattleclouds.api.b: java.lang.String i> = $r1;
+
+     label08:
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String a(org.json.JSONObject,java.lang.String,java.lang.String)>($r2, "authUsername", null);
+
+     label09:
+        $r0.<com.seattleclouds.api.b: java.lang.String j> = $r1;
+
+     label10:
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String a(org.json.JSONObject,java.lang.String,java.lang.String)>($r2, "authPassword", null);
+
+     label11:
+        $r0.<com.seattleclouds.api.b: java.lang.String k> = $r1;
+
+     label12:
+        $z0 = virtualinvoke $r2.<org.json.JSONObject: boolean has(java.lang.String)>("signedInAppUser");
+
+     label13:
+        if $z0 == 0 goto label17;
+
+     label14:
+        $r2 = virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>("signedInAppUser");
+
+        $r3 = staticinvoke <com.seattleclouds.api.a: com.seattleclouds.api.a a(org.json.JSONObject)>($r2);
+
+     label15:
+        $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l> = $r3;
+
+        return;
+
+     label16:
+        $r4 := @caughtexception;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error parsing JSON: ");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r4);
+
+        $r1 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("SCApi", $r1);
+
+     label17:
+        return;
+
+        catch org.json.JSONException from label02 to label03 with label16;
+        catch org.json.JSONException from label04 to label05 with label16;
+        catch org.json.JSONException from label06 to label07 with label16;
+        catch org.json.JSONException from label08 to label09 with label16;
+        catch org.json.JSONException from label10 to label11 with label16;
+        catch org.json.JSONException from label12 to label13 with label16;
+        catch org.json.JSONException from label14 to label15 with label16;
+    }
+
+    private java.lang.String j(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2;
+        java.lang.Throwable $r3;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r2 := @parameter0: java.lang.String;
+
+     label1:
+        $r1 = staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>($r2, "UTF-8");
+
+     label2:
+        return $r1;
+
+     label3:
+        $r3 := @caughtexception;
+
+        return $r2;
+
+        catch java.io.UnsupportedEncodingException from label1 to label2 with label3;
+    }
+
+    private void j()
+    {
+        com.seattleclouds.api.b $r0;
+        android.content.Context $r1;
+        android.content.SharedPreferences $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 = $r0.<com.seattleclouds.api.b: android.content.Context d>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("com.seattleclouds.api.state", 0);
+
+        $r3 = interfaceinvoke $r2.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("settings", "");
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void i(java.lang.String)>($r3);
+
+        return;
+    }
+
+    private void k()
+    {
+        com.seattleclouds.api.b $r0;
+        android.content.Context $r1;
+        android.content.SharedPreferences $r2;
+        android.content.SharedPreferences$Editor $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 = $r0.<com.seattleclouds.api.b: android.content.Context d>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("com.seattleclouds.api.state", 0);
+
+        $r3 = interfaceinvoke $r2.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r4 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String l()>();
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("settings", $r4);
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+    }
+
+    private java.lang.String l()
+    {
+        com.seattleclouds.api.b $r0;
+        org.json.JSONObject $r1, $r4;
+        java.lang.String $r2;
+        int $i0;
+        com.seattleclouds.api.a $r3;
+        org.json.JSONException $r5;
+        java.lang.StringBuilder $r6;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 = new org.json.JSONObject;
+
+        specialinvoke $r1.<org.json.JSONObject: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.api.b: java.lang.String g>;
+
+     label01:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("authToken", $r2);
+
+     label02:
+        $i0 = $r0.<com.seattleclouds.api.b: int h>;
+
+     label03:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>("accessLevel", $i0);
+
+     label04:
+        $r2 = $r0.<com.seattleclouds.api.b: java.lang.String i>;
+
+     label05:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("publisherAccountPublisherId", $r2);
+
+     label06:
+        $r2 = $r0.<com.seattleclouds.api.b: java.lang.String j>;
+
+     label07:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("authUsername", $r2);
+
+     label08:
+        $r2 = $r0.<com.seattleclouds.api.b: java.lang.String k>;
+
+     label09:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("authPassword", $r2);
+
+     label10:
+        $r3 = $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l>;
+
+        if $r3 == null goto label12;
+
+        $r3 = $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l>;
+
+     label11:
+        $r4 = virtualinvoke $r3.<com.seattleclouds.api.a: org.json.JSONObject c()>();
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("signedInAppUser", $r4);
+
+     label12:
+        $r2 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String toString()>();
+
+        return $r2;
+
+     label13:
+        $r5 := @caughtexception;
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error converting to JSON: ");
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r5);
+
+        $r2 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("SCApi", $r2);
+
+        goto label12;
+
+        catch org.json.JSONException from label01 to label02 with label13;
+        catch org.json.JSONException from label03 to label04 with label13;
+        catch org.json.JSONException from label05 to label06 with label13;
+        catch org.json.JSONException from label07 to label08 with label13;
+        catch org.json.JSONException from label09 to label10 with label13;
+        catch org.json.JSONException from label11 to label12 with label13;
+    }
+
+    private void m()
+    {
+        com.seattleclouds.api.b $r0;
+        boolean $z0;
+        java.lang.String $r1, $r2;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 = null;
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 == 0 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.api.b: java.lang.String j>;
+
+     label1:
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 == 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.api.b: java.lang.String k>;
+
+     label2:
+        virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(java.lang.String,java.lang.String)>($r2, $r1);
+
+        return;
+
+     label3:
+        $r2 = null;
+
+        goto label1;
+    }
+
+    private void n()
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 = $r0.<com.seattleclouds.api.b: java.lang.String g>;
+
+        if $r1 != null goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void m()>();
+
+     label1:
+        return;
+    }
+
+    public org.json.JSONObject a(android.content.Context, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        android.content.Context $r1;
+        java.lang.String $r2, $r4, $r6;
+        java.lang.StringBuilder $r3;
+        java.util.HashMap $r5;
+        com.seattleclouds.api.c $r7;
+        org.json.JSONObject $r8;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r4 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps/");
+
+        $r4 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/loyalty/deviceId");
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        $r6 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r6);
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("pageId", $r2);
+
+        $r2 = staticinvoke <com.seattleclouds.util.bs: java.lang.String a()>();
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("deviceId", $r2);
+
+        $r7 = new com.seattleclouds.api.c;
+
+        specialinvoke $r7.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", $r4, null, $r5);
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r7);
+
+        return $r8;
+    }
+
+    public org.json.JSONObject a(com.seattleclouds.api.c)
+    {
+        com.seattleclouds.api.b $r0;
+        com.seattleclouds.api.c $r1;
+        org.json.JSONObject $r2;
+        com.seattleclouds.api.SCApiException $r3;
+        int $i0;
+        org.json.JSONArray $r4;
+        java.lang.String $r5;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: com.seattleclouds.api.c;
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void n()>();
+
+     label1:
+        $r2 = specialinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject b(com.seattleclouds.api.c)>($r1);
+
+     label2:
+        return $r2;
+
+     label3:
+        $r3 := @caughtexception;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.api.SCApiException: org.json.JSONObject getDetails()>();
+
+        $i0 = virtualinvoke $r2.<org.json.JSONObject: int getInt(java.lang.String)>("code");
+
+        $r4 = virtualinvoke $r2.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("errors");
+
+        $r2 = virtualinvoke $r4.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>(0);
+
+        $r5 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("reason");
+
+        if $i0 != 401 goto label5;
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("invalidAuthToken");
+
+        if $z0 != 0 goto label4;
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("authTokenExpired");
+
+        if $z0 == 0 goto label5;
+
+     label4:
+        specialinvoke $r0.<com.seattleclouds.api.b: void m()>();
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject b(com.seattleclouds.api.c)>($r1);
+
+        return $r2;
+
+     label5:
+        throw $r3;
+
+        catch com.seattleclouds.api.SCApiException from label1 to label2 with label3;
+    }
+
+    public org.json.JSONObject a(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r4;
+        java.util.HashMap $r3;
+        com.seattleclouds.api.c $r5;
+        org.json.JSONObject $r6;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = new java.util.HashMap;
+
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+        $r4 = <com.seattleclouds.App: java.lang.String A>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appOwnerPublisherId", $r4);
+
+        $r4 = <com.seattleclouds.App: java.lang.String B>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appOwnerUsername", $r4);
+
+        $r4 = <com.seattleclouds.App: java.lang.String C>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appId", $r4);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.api.b: java.lang.String b()>();
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("apiKey", $r4);
+
+        $r4 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r4);
+
+        if $r1 == null goto label1;
+
+        if $r2 == null goto label1;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("username", $r1);
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("password", $r2);
+
+     label1:
+        $r5 = new com.seattleclouds.api.c;
+
+        specialinvoke $r5.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", "auth/tokens", null, $r3);
+
+        $r6 = specialinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject b(com.seattleclouds.api.c)>($r5);
+
+        $r1 = virtualinvoke $r6.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("authToken");
+
+        $r0.<com.seattleclouds.api.b: java.lang.String g> = $r1;
+
+        $i0 = virtualinvoke $r6.<org.json.JSONObject: int getInt(java.lang.String)>("accessLevel");
+
+        $r0.<com.seattleclouds.api.b: int h> = $i0;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String a(org.json.JSONObject,java.lang.String,java.lang.String)>($r6, "publisherAccountPublisherId", null);
+
+        $r0.<com.seattleclouds.api.b: java.lang.String i> = $r1;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String a(org.json.JSONObject,java.lang.String,java.lang.String)>($r6, "username", null);
+
+        $r0.<com.seattleclouds.api.b: java.lang.String j> = $r1;
+
+        $r0.<com.seattleclouds.api.b: java.lang.String k> = $r2;
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void k()>();
+
+        return $r6;
+    }
+
+    public org.json.JSONObject a(java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3, $r5;
+        java.lang.StringBuilder $r4;
+        java.util.HashMap $r6;
+        com.seattleclouds.api.c $r7;
+        org.json.JSONObject $r8;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r5 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps/");
+
+        $r5 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/roleId/");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r6 = new java.util.HashMap;
+
+        specialinvoke $r6.<java.util.HashMap: void <init>()>();
+
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r5);
+
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("packageId", $r2);
+
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("email", $r3);
+
+        $r7 = new com.seattleclouds.api.c;
+
+        specialinvoke $r7.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r1, $r6, null);
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r7);
+
+        return $r8;
+    }
+
+    public org.json.JSONObject a(java.lang.String, java.lang.String, java.lang.String, int)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3;
+        int $i0;
+        java.lang.StringBuilder $r4;
+        java.util.HashMap $r5, $r6;
+        com.seattleclouds.api.c $r7;
+        org.json.JSONObject $r8;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $i0 := @parameter3: int;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String j(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps");
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appId", $r2);
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("templateId", $r3);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("platform", $r2);
+
+        $r6 = new java.util.HashMap;
+
+        specialinvoke $r6.<java.util.HashMap: void <init>()>();
+
+        $r2 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r2);
+
+        $r7 = new com.seattleclouds.api.c;
+
+        specialinvoke $r7.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", $r1, $r6, $r5);
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r7);
+
+        return $r8;
+    }
+
+    public org.json.JSONObject a(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r6;
+        java.util.HashMap $r5;
+        com.seattleclouds.api.c $r7;
+        org.json.JSONObject $r8;
+        com.seattleclouds.api.a $r9;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l> = null;
+
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        $r6 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r6);
+
+        $r6 = <com.seattleclouds.App: java.lang.String w>;
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appOwnerUsername", $r6);
+
+        $r6 = <com.seattleclouds.App: java.lang.String x>;
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appId", $r6);
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("provider", $r1);
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("providerAccountId", $r2);
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("providerUserAuthToken", $r3);
+
+        interfaceinvoke $r5.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("displayName", $r4);
+
+        $r7 = new com.seattleclouds.api.c;
+
+        specialinvoke $r7.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", "appUsers/signIn", null, $r5);
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r7);
+
+        $r9 = new com.seattleclouds.api.a;
+
+        specialinvoke $r9.<com.seattleclouds.api.a: void <init>()>();
+
+        $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l> = $r9;
+
+        $r9 = $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l>;
+
+        $r3 = virtualinvoke $r8.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("userId");
+
+        virtualinvoke $r9.<com.seattleclouds.api.a: void a(java.lang.String)>($r3);
+
+        $r9 = $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l>;
+
+        virtualinvoke $r9.<com.seattleclouds.api.a: void b(java.lang.String)>($r4);
+
+        $r9 = $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l>;
+
+        virtualinvoke $r9.<com.seattleclouds.api.a: void c(java.lang.String)>($r1);
+
+        $r9 = $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l>;
+
+        virtualinvoke $r9.<com.seattleclouds.api.a: void d(java.lang.String)>($r2);
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void k()>();
+
+        return $r8;
+    }
+
+    public org.json.JSONObject a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5, $r6, $r7;
+        java.lang.StringBuilder $r8;
+        java.util.HashMap $r9;
+        com.seattleclouds.api.c $r10;
+        org.json.JSONObject $r11;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("orders/");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r9 = new java.util.HashMap;
+
+        specialinvoke $r9.<java.util.HashMap: void <init>()>();
+
+        interfaceinvoke $r9.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("templateId", $r1);
+
+        interfaceinvoke $r9.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("platform", $r2);
+
+        interfaceinvoke $r9.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("description", $r3);
+
+        interfaceinvoke $r9.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("abcId", $r4);
+
+        interfaceinvoke $r9.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("subscriptionId", $r5);
+
+        interfaceinvoke $r9.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("image", $r6);
+
+        $r10 = new com.seattleclouds.api.c;
+
+        specialinvoke $r10.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", $r7, null, $r9);
+
+        $r11 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r10);
+
+        return $r11;
+    }
+
+    public org.json.JSONObject a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r14, $r15;
+        java.lang.StringBuilder $r16;
+        java.util.HashMap $r17;
+        com.seattleclouds.api.c $r18;
+        org.json.JSONObject $r19;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 := @parameter8: java.lang.String;
+
+        $r10 := @parameter9: java.lang.String;
+
+        $r11 := @parameter10: java.lang.String;
+
+        $r12 := @parameter11: java.lang.String;
+
+        $r13 := @parameter12: java.lang.String;
+
+        $r14 := @parameter13: java.lang.String;
+
+        $r15 := @parameter14: java.lang.String;
+
+        $r16 = new java.lang.StringBuilder;
+
+        specialinvoke $r16.<java.lang.StringBuilder: void <init>()>();
+
+        $r16 = virtualinvoke $r16.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("subscribe/");
+
+        $r16 = virtualinvoke $r16.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r16.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r17 = new java.util.HashMap;
+
+        specialinvoke $r17.<java.util.HashMap: void <init>()>();
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("plan_name", $r2);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_number", $r3);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_expiration_month", $r4);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_expiration_year", $r5);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_code", $r6);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_email", $r7);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_first_name", $r8);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_last_name", $r9);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_address", $r10);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_city", $r11);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_state", $r12);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_country", $r13);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_zip", $r14);
+
+        interfaceinvoke $r17.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("cc_phone", $r15);
+
+        $r18 = new com.seattleclouds.api.c;
+
+        specialinvoke $r18.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", $r1, null, $r17);
+
+        $r19 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r18);
+
+        return $r19;
+    }
+
+    public org.json.JSONObject a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, char[], java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r6, $r7, $r8;
+        char[] $r5;
+        com.seattleclouds.api.c $r9;
+        org.json.JSONObject $r10;
+        org.json.JSONException $r11;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: char[];
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 = new com.seattleclouds.api.c;
+
+        specialinvoke $r9.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", "appAuth/registerUser", null, null);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("publisherId", $r1);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("appOwner", $r2);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("appId", $r3);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("email", $r4);
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(char[])>($r5);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("psawsord", $r1);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("deviceId", $r6);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("lang", $r7);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("version", $r8);
+
+        $r10 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r9);
+
+        if $r10 != null goto label1;
+
+        $r11 = new org.json.JSONException;
+
+        specialinvoke $r11.<org.json.JSONException: void <init>(java.lang.String)>("registerAppUser returns null");
+
+        throw $r11;
+
+     label1:
+        return $r10;
+    }
+
+    public void a(android.content.Context)
+    {
+        com.seattleclouds.api.b $r0;
+        android.content.Context $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r1 = virtualinvoke $r1.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        $r0.<com.seattleclouds.api.b: android.content.Context d> = $r1;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = <com.seattleclouds.App: java.lang.String q>;
+
+        $r3 = staticinvoke <com.seattleclouds.api.b: java.lang.String b(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("://");
+
+        $r3 = <com.seattleclouds.App: java.lang.String q>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/api/v1/");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.api.b: java.lang.String e> = $r3;
+
+        $r0.<com.seattleclouds.api.b: java.lang.String g> = null;
+
+        $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l> = null;
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void j()>();
+
+        $r0.<com.seattleclouds.api.b: boolean c> = 1;
+
+        return;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        r1 = $r0.<com.seattleclouds.api.b: java.lang.String f>;
+
+        return r1;
+    }
+
+    public org.json.JSONObject b(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r5;
+        java.lang.StringBuilder $r3;
+        java.util.HashMap $r4;
+        com.seattleclouds.api.c $r6;
+        org.json.JSONObject $r7;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("messenger/conversations/");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages");
+
+        $r1 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = new java.util.HashMap;
+
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r5);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("i", $r2);
+
+        $r6 = new com.seattleclouds.api.c;
+
+        specialinvoke $r6.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r1, $r4, null);
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r6);
+
+        return $r7;
+    }
+
+    public org.json.JSONObject b(java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3;
+        java.lang.StringBuilder $r4;
+        com.seattleclouds.api.c $r5;
+        org.json.JSONObject $r6;
+        org.json.JSONException $r7;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps/");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/orderIndiaPayKey");
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = new com.seattleclouds.api.c;
+
+        specialinvoke $r5.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", $r1, null, null);
+
+        virtualinvoke $r5.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("pageId", $r3);
+
+        $r1 = <com.seattleclouds.App: java.lang.String v>;
+
+        virtualinvoke $r5.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("publisherId", $r1);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r5);
+
+        if $r6 != null goto label1;
+
+        $r7 = new org.json.JSONException;
+
+        specialinvoke $r7.<org.json.JSONException: void <init>(java.lang.String)>("orderIndiaPayKey returns null");
+
+        throw $r7;
+
+     label1:
+        return $r6;
+    }
+
+    public org.json.JSONObject b(java.lang.String, java.lang.String, java.lang.String, java.lang.String, char[], java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r6, $r7, $r8;
+        char[] $r5;
+        com.seattleclouds.api.c $r9;
+        org.json.JSONObject $r10;
+        org.json.JSONException $r11;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: char[];
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 = new com.seattleclouds.api.c;
+
+        specialinvoke $r9.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", "appAuth/authenticateUser", null, null);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("publisherId", $r1);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("appOwner", $r2);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("appId", $r3);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("email", $r4);
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(char[])>($r5);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("psawsord", $r1);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("deviceId", $r6);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("lang", $r7);
+
+        virtualinvoke $r9.<com.seattleclouds.api.c: void a(java.lang.String,java.lang.String)>("version", $r8);
+
+        $r10 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r9);
+
+        if $r10 != null goto label1;
+
+        $r11 = new org.json.JSONException;
+
+        specialinvoke $r11.<org.json.JSONException: void <init>(java.lang.String)>("authenticateAppUser returns null");
+
+        throw $r11;
+
+     label1:
+        return $r10;
+    }
+
+    public com.seattleclouds.api.a c()
+    {
+        com.seattleclouds.api.b $r0;
+        com.seattleclouds.api.a r1;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        r1 = $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l>;
+
+        return r1;
+    }
+
+    public org.json.JSONObject c(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2, $r6;
+        java.util.HashMap $r3;
+        java.lang.StringBuilder $r4;
+        com.seattleclouds.api.a $r5;
+        com.seattleclouds.api.c $r7;
+        org.json.JSONObject $r8;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("messenger/conversations/");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages");
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = new java.util.HashMap;
+
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a c()>();
+
+        if $r5 == null goto label2;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a c()>();
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.api.a: java.lang.String a()>();
+
+     label1:
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("userId", $r6);
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("text", $r2);
+
+        $r7 = new com.seattleclouds.api.c;
+
+        specialinvoke $r7.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", $r1, null, $r3);
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r7);
+
+        return $r8;
+
+     label2:
+        $r6 = null;
+
+        goto label1;
+    }
+
+    public void c(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.api.b: java.lang.String f> = $r1;
+
+        return;
+    }
+
+    public org.json.JSONObject d(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r3, $r5;
+        int $i0, $i1;
+        java.lang.StringBuilder $r2;
+        java.util.HashMap $r4;
+        com.seattleclouds.api.c $r6;
+        org.json.JSONObject $r7;
+        java.lang.Throwable $r8;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 = -1;
+
+        $r2 = new java.lang.StringBuilder;
+
+     label1:
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+     label2:
+        $r3 = <com.seattleclouds.App: java.lang.String q>;
+
+     label3:
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i1 = staticinvoke <com.seattleclouds.util.a: int c(java.lang.String)>($r3);
+
+     label4:
+        $i0 = $i1;
+
+     label5:
+        $i1 = $r0.<com.seattleclouds.api.b: int h>;
+
+        if $i1 != 40 goto label8;
+
+        $r3 = $r0.<com.seattleclouds.api.b: java.lang.String k>;
+
+     label6:
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String j(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps");
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = new java.util.HashMap;
+
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r5);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("accessCode", $r3);
+
+        $r6 = new com.seattleclouds.api.c;
+
+        specialinvoke $r6.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r1, $r4, null);
+
+        if $i0 != 200 goto label7;
+
+        virtualinvoke $r6.<com.seattleclouds.api.c: void a(int)>(180000);
+
+     label7:
+        $r7 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r6);
+
+        return $r7;
+
+     label8:
+        $r3 = "";
+
+        goto label6;
+
+     label9:
+        $r8 := @caughtexception;
+
+        goto label5;
+
+        catch java.io.IOException from label1 to label2 with label9;
+        catch java.io.IOException from label3 to label4 with label9;
+    }
+
+    public org.json.JSONObject d(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r2;
+        java.lang.StringBuilder $r3;
+        java.util.HashMap $r4;
+        com.seattleclouds.api.c $r5;
+        org.json.JSONObject $r6;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String j(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps/");
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.api.b: java.lang.String j(java.lang.String)>($r2);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = new java.util.HashMap;
+
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+        $r2 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r2);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("fields", "resourcesSize");
+
+        $r5 = new com.seattleclouds.api.c;
+
+        specialinvoke $r5.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r1, $r4, null);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r5);
+
+        return $r6;
+    }
+
+    public boolean d()
+    {
+        com.seattleclouds.api.b $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $i0 = $r0.<com.seattleclouds.api.b: int h>;
+
+        if $i0 != 40 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public org.json.JSONObject e(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r4;
+        java.util.HashMap $r2;
+        org.json.JSONObject $r3;
+        com.seattleclouds.api.c $r5;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new java.util.HashMap;
+
+        specialinvoke $r2.<java.util.HashMap: void <init>()>();
+
+        $r4 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r2.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r4);
+
+        interfaceinvoke $r2.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("username", $r1);
+
+        $r5 = new com.seattleclouds.api.c;
+
+        specialinvoke $r5.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", "templates", $r2, null);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r5);
+
+        return $r3;
+    }
+
+    public boolean e()
+    {
+        com.seattleclouds.api.b $r0;
+        boolean $z0;
+        int $i0;
+        java.lang.String $r1, $r2;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $i0 = $r0.<com.seattleclouds.api.b: int h>;
+
+        if $i0 < 0 goto label1;
+
+        $i0 = $r0.<com.seattleclouds.api.b: int h>;
+
+        if $i0 > 10 goto label1;
+
+        return 1;
+
+     label1:
+        $i0 = $r0.<com.seattleclouds.api.b: int h>;
+
+        if $i0 != 20 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.api.b: java.lang.String i>;
+
+        $r2 = <com.seattleclouds.App: java.lang.String v>;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>($r2);
+
+        if $z0 != 0 goto label3;
+
+     label2:
+        return 0;
+
+     label3:
+        return 1;
+    }
+
+    public org.json.JSONObject f(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r4;
+        java.lang.StringBuilder $r2;
+        java.util.HashMap $r3;
+        com.seattleclouds.api.c $r5;
+        org.json.JSONObject $r6;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("templates/");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/files");
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = new java.util.HashMap;
+
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+        $r4 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r4);
+
+        $r5 = new com.seattleclouds.api.c;
+
+        specialinvoke $r5.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r1, $r3, null);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r5);
+
+        return $r6;
+    }
+
+    public void f()
+    {
+        com.seattleclouds.api.b $r0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r0.<com.seattleclouds.api.b: java.lang.String g> = null;
+
+        $r0.<com.seattleclouds.api.b: int h> = -1;
+
+        $r0.<com.seattleclouds.api.b: java.lang.String i> = null;
+
+        $r0.<com.seattleclouds.api.b: java.lang.String j> = null;
+
+        $r0.<com.seattleclouds.api.b: java.lang.String k> = null;
+
+        $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l> = null;
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void k()>();
+
+        return;
+    }
+
+    public org.json.JSONObject g(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1;
+        java.lang.StringBuilder $r2;
+        com.seattleclouds.api.c $r3;
+        org.json.JSONObject $r4;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("accountinfo/");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = new com.seattleclouds.api.c;
+
+        specialinvoke $r3.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r1, null, null);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r3);
+
+        return $r4;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.api.b $r0;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r0.<com.seattleclouds.api.b: com.seattleclouds.api.a l> = null;
+
+        specialinvoke $r0.<com.seattleclouds.api.b: void k()>();
+
+        return;
+    }
+
+    public org.json.JSONObject h()
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2, $r4;
+        java.util.HashMap $r3;
+        com.seattleclouds.api.c $r5;
+        org.json.JSONObject $r6;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r2 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps/");
+
+        $r2 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messenger/conversations");
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = new java.util.HashMap;
+
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+        $r4 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r4);
+
+        $r5 = new com.seattleclouds.api.c;
+
+        specialinvoke $r5.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r2, $r3, null);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r5);
+
+        return $r6;
+    }
+
+    public org.json.JSONObject h(java.lang.String)
+    {
+        com.seattleclouds.api.b $r0;
+        java.lang.String $r1, $r3, $r5;
+        java.lang.StringBuilder $r2;
+        java.util.HashMap $r4;
+        com.seattleclouds.api.c $r6;
+        org.json.JSONObject $r7;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("users/");
+
+        $r3 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/apps/");
+
+        $r3 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/listTransactions/eSignature");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = new java.util.HashMap;
+
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r5);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("email", $r1);
+
+        $r6 = new com.seattleclouds.api.c;
+
+        specialinvoke $r6.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", $r3, $r4, null);
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r6);
+
+        return $r7;
+    }
+
+    public org.json.JSONObject i()
+    {
+        com.seattleclouds.api.b $r0;
+        java.util.HashMap $r1;
+        org.json.JSONObject $r2;
+        java.lang.String $r3;
+        com.seattleclouds.api.c $r4;
+
+        $r0 := @this: com.seattleclouds.api.b;
+
+        $r1 = new java.util.HashMap;
+
+        specialinvoke $r1.<java.util.HashMap: void <init>()>();
+
+        $r3 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r1.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r3);
+
+        $r4 = new com.seattleclouds.api.c;
+
+        specialinvoke $r4.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("GET", "templates/localizations", $r1, null);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r4);
+
+        return $r2;
+    }
+}

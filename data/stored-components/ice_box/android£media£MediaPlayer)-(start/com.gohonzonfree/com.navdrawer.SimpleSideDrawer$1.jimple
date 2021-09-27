@@ -1,0 +1,249 @@
+class com.navdrawer.SimpleSideDrawer$1 extends com.navdrawer.SimpleSideDrawer$DragAction
+{
+    final com.navdrawer.SimpleSideDrawer this$0;
+
+    void <init>(com.navdrawer.SimpleSideDrawer)
+    {
+        com.navdrawer.SimpleSideDrawer$1 $r0;
+        com.navdrawer.SimpleSideDrawer $r1;
+
+        $r0 := @this: com.navdrawer.SimpleSideDrawer$1;
+
+        $r1 := @parameter0: com.navdrawer.SimpleSideDrawer;
+
+        $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0> = $r1;
+
+        specialinvoke $r0.<com.navdrawer.SimpleSideDrawer$DragAction: void <init>(com.navdrawer.SimpleSideDrawer,com.navdrawer.SimpleSideDrawer$DragAction)>($r1, null);
+
+        return;
+    }
+
+    public boolean onTouchEvent(android.view.MotionEvent)
+    {
+        com.navdrawer.SimpleSideDrawer$1 $r0;
+        android.view.MotionEvent $r1;
+        int $i0, $i1, $i2;
+        float $f0, $f1, $f2;
+        boolean $z0, $z1;
+        com.navdrawer.SimpleSideDrawer $r2;
+        com.navdrawer.SimpleSideDrawer$DragAction $r3, $r6;
+        android.view.ViewGroup $r4;
+        android.widget.Scroller $r5;
+        byte $b3;
+
+        $r0 := @this: com.navdrawer.SimpleSideDrawer$1;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $z0 = 1;
+
+        $i0 = virtualinvoke $r1.<android.view.MotionEvent: int getAction()>();
+
+        $i0 = $i0 & 255;
+
+        lookupswitch($i0)
+        {
+            case 0: goto label02;
+            case 1: goto label05;
+            case 2: goto label08;
+            default: goto label01;
+        };
+
+     label01:
+        return 0;
+
+     label02:
+        $f1 = virtualinvoke $r1.<android.view.MotionEvent: float getX()>();
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: void access$1(com.navdrawer.SimpleSideDrawer$DragAction,float)>($r3, $f1);
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r4 = staticinvoke <com.navdrawer.SimpleSideDrawer: android.view.ViewGroup access$1(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $i0 = virtualinvoke $r4.<android.view.ViewGroup: int getScrollX()>();
+
+        if $i0 == 0 goto label04;
+
+     label03:
+        staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: void access$2(com.navdrawer.SimpleSideDrawer$DragAction,boolean)>($r3, $z0);
+
+        return 0;
+
+     label04:
+        $z0 = 0;
+
+        goto label03;
+
+     label05:
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $z0 = staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: boolean access$3(com.navdrawer.SimpleSideDrawer$DragAction)>($r3);
+
+        if $z0 == 0 goto label13;
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r4 = staticinvoke <com.navdrawer.SimpleSideDrawer: android.view.ViewGroup access$1(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $i0 = virtualinvoke $r4.<android.view.ViewGroup: int getScrollX()>();
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $z0 = staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: boolean access$4(com.navdrawer.SimpleSideDrawer$DragAction)>($r3);
+
+        if $z0 == 0 goto label07;
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $i1 = staticinvoke <com.navdrawer.SimpleSideDrawer: int access$2(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $i1 = $i1 + $i0;
+
+        $i1 = neg $i1;
+
+     label06:
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r5 = staticinvoke <com.navdrawer.SimpleSideDrawer: android.widget.Scroller access$3(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $i2 = staticinvoke <com.navdrawer.SimpleSideDrawer: int access$4(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        virtualinvoke $r5.<android.widget.Scroller: void startScroll(int,int,int,int,int)>($i0, 0, $i1, 0, $i2);
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        virtualinvoke $r2.<com.navdrawer.SimpleSideDrawer: void invalidate()>();
+
+        return 0;
+
+     label07:
+        $i1 = neg $i0;
+
+        goto label06;
+
+     label08:
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $z1 = staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: boolean access$3(com.navdrawer.SimpleSideDrawer$DragAction)>($r3);
+
+        if $z1 == 0 goto label13;
+
+        $f0 = virtualinvoke $r1.<android.view.MotionEvent: float getX()>();
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $f1 = staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: float access$5(com.navdrawer.SimpleSideDrawer$DragAction)>($r3);
+
+        $f1 = $f0 - $f1;
+
+        $f1 = neg $f1;
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r4 = staticinvoke <com.navdrawer.SimpleSideDrawer: android.view.ViewGroup access$1(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $i0 = virtualinvoke $r4.<android.view.ViewGroup: int getScrollX()>();
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r6 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $f2 = staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: float access$5(com.navdrawer.SimpleSideDrawer$DragAction)>($r6);
+
+        $b3 = $f2 cmpg $f0;
+
+        if $b3 >= 0 goto label10;
+
+     label09:
+        staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: void access$6(com.navdrawer.SimpleSideDrawer$DragAction,boolean)>($r3, $z0);
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r3 = staticinvoke <com.navdrawer.SimpleSideDrawer: com.navdrawer.SimpleSideDrawer$DragAction access$0(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        staticinvoke <com.navdrawer.SimpleSideDrawer$DragAction: void access$1(com.navdrawer.SimpleSideDrawer$DragAction,float)>($r3, $f0);
+
+        $f0 = (float) $i0;
+
+        $f0 = $f0 + $f1;
+
+        $b3 = 0.0F cmpg $f0;
+
+        if $b3 >= 0 goto label11;
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r4 = staticinvoke <com.navdrawer.SimpleSideDrawer: android.view.ViewGroup access$1(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        virtualinvoke $r4.<android.view.ViewGroup: void scrollTo(int,int)>(0, 0);
+
+        return 0;
+
+     label10:
+        $z0 = 0;
+
+        goto label09;
+
+     label11:
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $i0 = staticinvoke <com.navdrawer.SimpleSideDrawer: int access$2(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $i0 = neg $i0;
+
+        $f2 = (float) $i0;
+
+        $b3 = $f0 cmpg $f2;
+
+        if $b3 >= 0 goto label12;
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r4 = staticinvoke <com.navdrawer.SimpleSideDrawer: android.view.ViewGroup access$1(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $i0 = staticinvoke <com.navdrawer.SimpleSideDrawer: int access$2(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $i0 = neg $i0;
+
+        virtualinvoke $r4.<android.view.ViewGroup: void scrollTo(int,int)>($i0, 0);
+
+        return 0;
+
+     label12:
+        $r2 = $r0.<com.navdrawer.SimpleSideDrawer$1: com.navdrawer.SimpleSideDrawer this$0>;
+
+        $r4 = staticinvoke <com.navdrawer.SimpleSideDrawer: android.view.ViewGroup access$1(com.navdrawer.SimpleSideDrawer)>($r2);
+
+        $i0 = (int) $f1;
+
+        virtualinvoke $r4.<android.view.ViewGroup: void scrollBy(int,int)>($i0, 0);
+
+     label13:
+        return 0;
+    }
+}

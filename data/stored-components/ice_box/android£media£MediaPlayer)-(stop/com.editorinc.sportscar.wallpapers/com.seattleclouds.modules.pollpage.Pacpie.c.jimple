@@ -1,0 +1,19 @@
+public class com.seattleclouds.modules.pollpage.Pacpie.c extends java.lang.Object
+{
+    public float a;
+    public int b;
+    public java.lang.String c;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.pollpage.Pacpie.c $r0;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.Pacpie.c;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.pollpage.Pacpie.c: int b> = -1;
+
+        return;
+    }
+}

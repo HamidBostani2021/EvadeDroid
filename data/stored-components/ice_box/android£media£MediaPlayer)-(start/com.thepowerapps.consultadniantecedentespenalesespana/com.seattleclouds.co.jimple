@@ -1,0 +1,37 @@
+class com.seattleclouds.co extends java.lang.Object implements com.seattleclouds.util.bi
+{
+    final com.seattleclouds.AppStarterActivity a;
+
+    void <init>(com.seattleclouds.AppStarterActivity)
+    {
+        com.seattleclouds.co $r0;
+        com.seattleclouds.AppStarterActivity $r1;
+
+        $r0 := @this: com.seattleclouds.co;
+
+        $r1 := @parameter0: com.seattleclouds.AppStarterActivity;
+
+        $r0.<com.seattleclouds.co: com.seattleclouds.AppStarterActivity a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(java.lang.Object)
+    {
+        com.seattleclouds.co $r0;
+        java.lang.Object $r1;
+        com.seattleclouds.AppStarterActivity $r2;
+
+        $r0 := @this: com.seattleclouds.co;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = $r0.<com.seattleclouds.co: com.seattleclouds.AppStarterActivity a>;
+
+        staticinvoke <com.seattleclouds.AppStarterActivity: void l(com.seattleclouds.AppStarterActivity)>($r2);
+
+        return;
+    }
+}

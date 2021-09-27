@@ -1,0 +1,328 @@
+public class com.seattleclouds.ads.e extends java.lang.Object
+{
+    private java.lang.Object a;
+
+    public void <init>()
+    {
+        com.seattleclouds.ads.e $r0;
+        java.lang.Class[] $r1;
+        java.lang.reflect.Method $r2;
+        java.lang.Object[] $r3;
+        java.lang.Object $r4;
+
+        $r0 := @this: com.seattleclouds.ads.e;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = newarray (java.lang.Class)[0];
+
+        $r2 = staticinvoke <com.seattleclouds.App: java.lang.reflect.Method a(java.lang.String,java.lang.String,java.lang.Class[])>("com.seattleclouds.ads.AdManager", "getInstance", $r1);
+
+        if $r2 == null goto label1;
+
+        $r3 = newarray (java.lang.Object)[0];
+
+        $r4 = staticinvoke <com.seattleclouds.App: java.lang.Object a(java.lang.reflect.Method,java.lang.Object,java.lang.Object[])>($r2, null, $r3);
+
+        $r0.<com.seattleclouds.ads.e: java.lang.Object a> = $r4;
+
+     label1:
+        return;
+    }
+
+    public static void a(android.app.Activity)
+    {
+        android.app.Activity $r0;
+        java.lang.reflect.Method $r1;
+        boolean $z0;
+        java.lang.Class[] $r2;
+        java.lang.Object[] $r3;
+
+        $r0 := @parameter0: android.app.Activity;
+
+        $z0 = $r0 instanceof com.seattleclouds.ab;
+
+        if $z0 != 0 goto label1;
+
+        $z0 = $r0 instanceof com.seattleclouds.SCPageFragmentActivity;
+
+        if $z0 != 0 goto label1;
+
+        $z0 = $r0 instanceof com.seattleclouds.modules.search.SearchActivity;
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        $r2 = newarray (java.lang.Class)[1];
+
+        $r2[0] = class "Landroid/app/Activity;";
+
+        $r1 = staticinvoke <com.seattleclouds.App: java.lang.reflect.Method a(java.lang.String,java.lang.String,java.lang.Class[])>("com.seattleclouds.ads.pollfish.PollfishManager", "show", $r2);
+
+        $r3 = newarray (java.lang.Object)[1];
+
+        $r3[0] = $r0;
+
+        staticinvoke <com.seattleclouds.App: java.lang.Object a(java.lang.reflect.Method,java.lang.Object,java.lang.Object[])>($r1, null, $r3);
+
+     label2:
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.ads.e $r0;
+        java.lang.reflect.Method $r1;
+        java.lang.Object $r2;
+        java.lang.Class[] $r3;
+        java.lang.Object[] $r4;
+        java.lang.Throwable $r5, $r6;
+        java.lang.IllegalAccessException r7;
+        java.lang.reflect.InvocationTargetException r8;
+
+        $r0 := @this: com.seattleclouds.ads.e;
+
+        $r2 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        if $r2 == null goto label6;
+
+        $r3 = newarray (java.lang.Class)[0];
+
+        $r1 = staticinvoke <com.seattleclouds.App: java.lang.reflect.Method a(java.lang.String,java.lang.String,java.lang.Class[])>("com.seattleclouds.ads.AdManager", "resume", $r3);
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        $r4 = newarray (java.lang.Object)[0];
+
+     label2:
+        virtualinvoke $r1.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r2, $r4);
+
+     label3:
+        return;
+
+     label4:
+        $r5 := @caughtexception;
+
+        r7 = (java.lang.IllegalAccessException) $r5;
+
+        virtualinvoke r7.<java.lang.IllegalAccessException: void printStackTrace()>();
+
+        return;
+
+     label5:
+        $r6 := @caughtexception;
+
+        r8 = (java.lang.reflect.InvocationTargetException) $r6;
+
+        virtualinvoke r8.<java.lang.reflect.InvocationTargetException: void printStackTrace()>();
+
+     label6:
+        return;
+
+        catch java.lang.IllegalAccessException from label2 to label3 with label4;
+        catch java.lang.reflect.InvocationTargetException from label2 to label3 with label5;
+    }
+
+    public void a(android.app.Activity, android.widget.LinearLayout, com.seattleclouds.t)
+    {
+        com.seattleclouds.ads.e $r0;
+        android.app.Activity $r1;
+        android.widget.LinearLayout $r2;
+        com.seattleclouds.t $r3;
+        java.lang.reflect.Method $r4;
+        java.lang.Object $r5;
+        java.lang.Class[] $r6;
+        java.lang.Object[] $r7;
+        java.lang.Throwable $r8, $r9;
+        java.lang.IllegalAccessException r10;
+        java.lang.reflect.InvocationTargetException r11;
+
+        $r0 := @this: com.seattleclouds.ads.e;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.widget.LinearLayout;
+
+        $r3 := @parameter2: com.seattleclouds.t;
+
+        $r5 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        if $r5 == null goto label6;
+
+        $r6 = newarray (java.lang.Class)[3];
+
+        $r6[0] = class "Landroid/app/Activity;";
+
+        $r6[1] = class "Landroid/widget/LinearLayout;";
+
+        $r6[2] = class "Lcom/seattleclouds/t;";
+
+        $r4 = staticinvoke <com.seattleclouds.App: java.lang.reflect.Method a(java.lang.String,java.lang.String,java.lang.Class[])>("com.seattleclouds.ads.AdManager", "showAds", $r6);
+
+        if $r4 != null goto label1;
+
+        return;
+
+     label1:
+        $r5 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        $r7 = newarray (java.lang.Object)[3];
+
+        $r7[0] = $r1;
+
+        $r7[1] = $r2;
+
+        $r7[2] = $r3;
+
+     label2:
+        virtualinvoke $r4.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r5, $r7);
+
+     label3:
+        return;
+
+     label4:
+        $r8 := @caughtexception;
+
+        r10 = (java.lang.IllegalAccessException) $r8;
+
+        virtualinvoke r10.<java.lang.IllegalAccessException: void printStackTrace()>();
+
+        return;
+
+     label5:
+        $r9 := @caughtexception;
+
+        r11 = (java.lang.reflect.InvocationTargetException) $r9;
+
+        virtualinvoke r11.<java.lang.reflect.InvocationTargetException: void printStackTrace()>();
+
+     label6:
+        return;
+
+        catch java.lang.IllegalAccessException from label2 to label3 with label4;
+        catch java.lang.reflect.InvocationTargetException from label2 to label3 with label5;
+    }
+
+    public void b()
+    {
+        com.seattleclouds.ads.e $r0;
+        java.lang.reflect.Method $r1;
+        java.lang.Object $r2;
+        java.lang.Class[] $r3;
+        java.lang.Object[] $r4;
+        java.lang.Throwable $r5, $r6;
+        java.lang.IllegalAccessException r7;
+        java.lang.reflect.InvocationTargetException r8;
+
+        $r0 := @this: com.seattleclouds.ads.e;
+
+        $r2 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        if $r2 == null goto label6;
+
+        $r3 = newarray (java.lang.Class)[0];
+
+        $r1 = staticinvoke <com.seattleclouds.App: java.lang.reflect.Method a(java.lang.String,java.lang.String,java.lang.Class[])>("com.seattleclouds.ads.AdManager", "pause", $r3);
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        $r4 = newarray (java.lang.Object)[0];
+
+     label2:
+        virtualinvoke $r1.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r2, $r4);
+
+     label3:
+        return;
+
+     label4:
+        $r5 := @caughtexception;
+
+        r7 = (java.lang.IllegalAccessException) $r5;
+
+        virtualinvoke r7.<java.lang.IllegalAccessException: void printStackTrace()>();
+
+        return;
+
+     label5:
+        $r6 := @caughtexception;
+
+        r8 = (java.lang.reflect.InvocationTargetException) $r6;
+
+        virtualinvoke r8.<java.lang.reflect.InvocationTargetException: void printStackTrace()>();
+
+     label6:
+        return;
+
+        catch java.lang.IllegalAccessException from label2 to label3 with label4;
+        catch java.lang.reflect.InvocationTargetException from label2 to label3 with label5;
+    }
+
+    public void c()
+    {
+        com.seattleclouds.ads.e $r0;
+        java.lang.reflect.Method $r1;
+        java.lang.Object $r2;
+        java.lang.Class[] $r3;
+        java.lang.Object[] $r4;
+        java.lang.Throwable $r5, $r6;
+        java.lang.IllegalAccessException r7;
+        java.lang.reflect.InvocationTargetException r8;
+
+        $r0 := @this: com.seattleclouds.ads.e;
+
+        $r2 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        if $r2 == null goto label6;
+
+        $r3 = newarray (java.lang.Class)[0];
+
+        $r1 = staticinvoke <com.seattleclouds.App: java.lang.reflect.Method a(java.lang.String,java.lang.String,java.lang.Class[])>("com.seattleclouds.ads.AdManager", "destroy", $r3);
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.ads.e: java.lang.Object a>;
+
+        $r4 = newarray (java.lang.Object)[0];
+
+     label2:
+        virtualinvoke $r1.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r2, $r4);
+
+     label3:
+        return;
+
+     label4:
+        $r5 := @caughtexception;
+
+        r7 = (java.lang.IllegalAccessException) $r5;
+
+        virtualinvoke r7.<java.lang.IllegalAccessException: void printStackTrace()>();
+
+        return;
+
+     label5:
+        $r6 := @caughtexception;
+
+        r8 = (java.lang.reflect.InvocationTargetException) $r6;
+
+        virtualinvoke r8.<java.lang.reflect.InvocationTargetException: void printStackTrace()>();
+
+     label6:
+        return;
+
+        catch java.lang.IllegalAccessException from label2 to label3 with label4;
+        catch java.lang.reflect.InvocationTargetException from label2 to label3 with label5;
+    }
+}

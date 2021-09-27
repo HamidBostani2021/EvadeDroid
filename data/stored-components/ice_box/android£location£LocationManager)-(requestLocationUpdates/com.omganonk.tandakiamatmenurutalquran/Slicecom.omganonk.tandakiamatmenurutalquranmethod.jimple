@@ -1,0 +1,16 @@
+public class Slicecom.omganonk.tandakiamatmenurutalquranmethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.omganonk.tandakiamatmenurutalquranmethod this;
+        com.seattleclouds.modules.savephoto.SavePhotoActivity $r0;
+        com.seattleclouds.location.j $r1;
+
+        this := @this: Slicecom.omganonk.tandakiamatmenurutalquranmethod;
+
+        $r1 = $r0.<com.seattleclouds.modules.savephoto.SavePhotoActivity: com.seattleclouds.location.j F>;
+
+        return;
+    }
+}

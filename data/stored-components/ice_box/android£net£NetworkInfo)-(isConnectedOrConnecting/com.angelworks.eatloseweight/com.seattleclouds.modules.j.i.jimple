@@ -1,0 +1,89 @@
+class com.seattleclouds.modules.j.i extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.j.c a;
+
+    void <init>(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.i $r0;
+        com.seattleclouds.modules.j.c $r1;
+
+        $r0 := @this: com.seattleclouds.modules.j.i;
+
+        $r1 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.j.i $r0;
+        com.seattleclouds.modules.j.c $r1, $r4;
+        android.media.MediaPlayer $r2;
+        boolean $z0;
+        java.lang.Boolean $r3;
+        int $i0;
+        android.widget.SeekBar $r5;
+
+        $r0 := @this: com.seattleclouds.modules.j.i;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.j.c: android.media.MediaPlayer a(com.seattleclouds.modules.j.c)>($r1);
+
+        if $r2 == null goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.j.c: android.media.MediaPlayer a(com.seattleclouds.modules.j.c)>($r1);
+
+        $z0 = virtualinvoke $r2.<android.media.MediaPlayer: boolean isPlaying()>();
+
+        if $z0 == 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.j.c: java.lang.Boolean j(com.seattleclouds.modules.j.c)>($r1);
+
+        $z0 = virtualinvoke $r3.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r4 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.j.c: android.media.MediaPlayer a(com.seattleclouds.modules.j.c)>($r4);
+
+        $i0 = virtualinvoke $r2.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+        staticinvoke <com.seattleclouds.modules.j.c: int a(com.seattleclouds.modules.j.c,int)>($r1, $i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.j.c: android.widget.SeekBar h(com.seattleclouds.modules.j.c)>($r1);
+
+        $r1 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.j.c: int b(com.seattleclouds.modules.j.c)>($r1);
+
+        virtualinvoke $r5.<android.widget.SeekBar: void setProgress(int)>($i0);
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r4 = $r0.<com.seattleclouds.modules.j.i: com.seattleclouds.modules.j.c a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.j.c: android.media.MediaPlayer a(com.seattleclouds.modules.j.c)>($r4);
+
+        $i0 = virtualinvoke $r2.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+        virtualinvoke $r1.<com.seattleclouds.modules.j.c: void a(int)>($i0);
+
+     label2:
+        return;
+    }
+}

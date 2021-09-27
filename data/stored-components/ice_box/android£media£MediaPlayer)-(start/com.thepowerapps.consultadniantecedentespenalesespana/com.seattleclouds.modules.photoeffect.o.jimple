@@ -1,0 +1,126 @@
+class com.seattleclouds.modules.photoeffect.o extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.modules.photoeffect.j a;
+
+    void <init>(com.seattleclouds.modules.photoeffect.j)
+    {
+        com.seattleclouds.modules.photoeffect.o $r0;
+        com.seattleclouds.modules.photoeffect.j $r1;
+
+        $r0 := @this: com.seattleclouds.modules.photoeffect.o;
+
+        $r1 := @parameter0: com.seattleclouds.modules.photoeffect.j;
+
+        $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.photoeffect.o $r0;
+        android.content.DialogInterface $r1;
+        int $i0, $i1;
+        com.seattleclouds.modules.photoeffect.j $r2, $r6;
+        boolean $z0;
+        java.io.File $r3;
+        android.content.Intent $r4;
+        android.net.Uri $r5;
+        java.lang.Throwable $r7;
+        android.support.v4.app.ac $r8;
+
+        $r0 := @this: com.seattleclouds.modules.photoeffect.o;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        if $i0 != 0 goto label01;
+
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+        staticinvoke <com.seattleclouds.modules.photoeffect.j: void j(com.seattleclouds.modules.photoeffect.j)>($r2);
+
+        return;
+
+     label01:
+        if $i0 != 1 goto label11;
+
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.photoeffect.j: boolean b(com.seattleclouds.modules.photoeffect.j,int)>($r2, 31);
+
+        if $z0 != 0 goto label11;
+
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.photoeffect.g: java.io.File c()>();
+
+        staticinvoke <com.seattleclouds.modules.photoeffect.j: java.io.File a(com.seattleclouds.modules.photoeffect.j,java.io.File)>($r2, $r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.photoeffect.j: java.io.File k(com.seattleclouds.modules.photoeffect.j)>($r2);
+
+        if $r3 == null goto label11;
+
+        $r4 = new android.content.Intent;
+
+     label02:
+        specialinvoke $r4.<android.content.Intent: void <init>(java.lang.String)>("android.media.action.IMAGE_CAPTURE");
+
+     label03:
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+     label04:
+        $r3 = staticinvoke <com.seattleclouds.modules.photoeffect.j: java.io.File k(com.seattleclouds.modules.photoeffect.j)>($r2);
+
+        $r5 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>($r3);
+
+        virtualinvoke $r4.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("output", $r5);
+
+     label05:
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+        $r6 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+     label06:
+        $r3 = staticinvoke <com.seattleclouds.modules.photoeffect.j: java.io.File k(com.seattleclouds.modules.photoeffect.j)>($r6);
+
+        $r5 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>($r3);
+
+        staticinvoke <com.seattleclouds.modules.photoeffect.j: android.net.Uri a(com.seattleclouds.modules.photoeffect.j,android.net.Uri)>($r2, $r5);
+
+     label07:
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+     label08:
+        virtualinvoke $r2.<com.seattleclouds.modules.photoeffect.j: void startActivityForResult(android.content.Intent,int)>($r4, 2400);
+
+     label09:
+        return;
+
+     label10:
+        $r7 := @caughtexception;
+
+        $r2 = $r0.<com.seattleclouds.modules.photoeffect.o: com.seattleclouds.modules.photoeffect.j a>;
+
+        $r8 = virtualinvoke $r2.<com.seattleclouds.modules.photoeffect.j: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int warning>;
+
+        $i1 = <com.seattleclouds.l: int feature_cant_take_photos>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r8, $i0, $i1);
+
+     label11:
+        return;
+
+        catch android.content.ActivityNotFoundException from label02 to label03 with label10;
+        catch android.content.ActivityNotFoundException from label04 to label05 with label10;
+        catch android.content.ActivityNotFoundException from label06 to label07 with label10;
+        catch android.content.ActivityNotFoundException from label08 to label09 with label10;
+    }
+}

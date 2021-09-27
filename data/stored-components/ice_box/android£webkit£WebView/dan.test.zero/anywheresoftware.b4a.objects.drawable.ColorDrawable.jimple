@@ -1,0 +1,183 @@
+public class anywheresoftware.b4a.objects.drawable.ColorDrawable extends anywheresoftware.b4a.AbsObjectWrapper
+{
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.objects.drawable.ColorDrawable $r0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.ColorDrawable;
+
+        specialinvoke $r0.<anywheresoftware.b4a.AbsObjectWrapper: void <init>()>();
+
+        return;
+    }
+
+    public static android.graphics.drawable.Drawable build(java.lang.Object, java.util.HashMap, boolean, java.lang.Object)
+    {
+        java.util.HashMap $r0;
+        boolean $z0;
+        java.lang.Object $r1, $r3;
+        anywheresoftware.b4a.objects.drawable.ColorDrawable $r2;
+        int $i0, $i1, $i2, $i3;
+        java.lang.Integer $r4, $r8;
+        android.view.View $r5;
+        android.graphics.drawable.Drawable $r6;
+        android.graphics.drawable.ColorDrawable $r7;
+        float $f0, $f1;
+
+        $r3 := @parameter0: java.lang.Object;
+
+        $r0 := @parameter1: java.util.HashMap;
+
+        $z0 := @parameter2: boolean;
+
+        $r1 := @parameter3: java.lang.Object;
+
+        $r1 = virtualinvoke $r0.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("alpha");
+
+        $r4 = (java.lang.Integer) $r1;
+
+        $i0 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        $r1 = virtualinvoke $r0.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("color");
+
+        $r4 = (java.lang.Integer) $r1;
+
+        $i1 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        if $i1 != -984833 goto label1;
+
+        if $z0 == 0 goto label3;
+
+        $r5 = (android.view.View) $r3;
+
+        $r3 = staticinvoke <anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getDefault(android.view.View,java.lang.String,java.lang.Object)>($r5, "background", null);
+
+        $r6 = (android.graphics.drawable.Drawable) $r3;
+
+        if $r6 != null goto label1;
+
+        $r7 = new android.graphics.drawable.ColorDrawable;
+
+        specialinvoke $r7.<android.graphics.drawable.ColorDrawable: void <init>(int)>(0);
+
+        return $r7;
+
+     label1:
+        $i0 = $i0 << 24;
+
+        $i1 = $i1 << 8;
+
+        $i1 = $i1 >>> 8;
+
+        $i0 = $i0 | $i1;
+
+        $r3 = virtualinvoke $r0.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("cornerRadius");
+
+        $r4 = (java.lang.Integer) $r3;
+
+        if $r4 != null goto label2;
+
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(0);
+
+     label2:
+        $r2 = new anywheresoftware.b4a.objects.drawable.ColorDrawable;
+
+        specialinvoke $r2.<anywheresoftware.b4a.objects.drawable.ColorDrawable: void <init>()>();
+
+        $r8 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(-16777216);
+
+        $r3 = staticinvoke <anywheresoftware.b4a.BA: java.lang.Object gm(java.util.Map,java.lang.Object,java.lang.Object)>($r0, "borderColor", $r8);
+
+        $r8 = (java.lang.Integer) $r3;
+
+        $i1 = virtualinvoke $r8.<java.lang.Integer: int intValue()>();
+
+        $r8 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(0);
+
+        $r3 = staticinvoke <anywheresoftware.b4a.BA: java.lang.Object gm(java.util.Map,java.lang.Object,java.lang.Object)>($r0, "borderWidth", $r8);
+
+        $r8 = (java.lang.Integer) $r3;
+
+        $i2 = virtualinvoke $r8.<java.lang.Integer: int intValue()>();
+
+        $f0 = staticinvoke <anywheresoftware.b4a.BALayout: float getDeviceScale()>();
+
+        $i3 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        $f1 = (float) $i3;
+
+        $f0 = $f0 * $f1;
+
+        $i3 = (int) $f0;
+
+        $f0 = staticinvoke <anywheresoftware.b4a.BALayout: float getDeviceScale()>();
+
+        $f1 = (float) $i2;
+
+        $f0 = $f0 * $f1;
+
+        $i2 = (int) $f0;
+
+        virtualinvoke $r2.<anywheresoftware.b4a.objects.drawable.ColorDrawable: void Initialize2(int,int,int,int)>($i0, $i3, $i2, $i1);
+
+        $r3 = virtualinvoke $r2.<anywheresoftware.b4a.objects.drawable.ColorDrawable: java.lang.Object getObject()>();
+
+        $r6 = (android.graphics.drawable.Drawable) $r3;
+
+        return $r6;
+
+     label3:
+        return null;
+    }
+
+    public void Initialize(int, int)
+    {
+        anywheresoftware.b4a.objects.drawable.ColorDrawable $r0;
+        int $i0, $i1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.ColorDrawable;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.ColorDrawable: void Initialize2(int,int,int,int)>($i0, $i1, 0, 0);
+
+        return;
+    }
+
+    public void Initialize2(int, int, int, int)
+    {
+        anywheresoftware.b4a.objects.drawable.ColorDrawable $r0;
+        int $i0, $i1, $i2, $i3;
+        anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners $r1;
+        float $f0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.drawable.ColorDrawable;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        $r1 = new anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners;
+
+        specialinvoke $r1.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: void <init>()>();
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: void setColor(int)>($i0);
+
+        $f0 = (float) $i1;
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: void setCornerRadius(float)>($f0);
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: void setStroke(int,int)>(0, 0);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.drawable.ColorDrawable: void setObject(java.lang.Object)>($r1);
+
+        return;
+    }
+}

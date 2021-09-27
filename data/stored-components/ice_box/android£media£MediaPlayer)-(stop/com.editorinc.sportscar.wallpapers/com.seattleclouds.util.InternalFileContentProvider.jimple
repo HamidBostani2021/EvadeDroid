@@ -1,0 +1,340 @@
+public class com.seattleclouds.util.InternalFileContentProvider extends android.content.ContentProvider
+{
+    private android.content.res.AssetFileDescriptor a;
+    public android.content.Intent ipcIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        specialinvoke $r0.<android.content.ContentProvider: void <init>()>();
+
+        return;
+    }
+
+    public int delete(android.net.Uri, java.lang.String, java.lang.String[])
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+        android.net.Uri $r1;
+        java.lang.String $r2;
+        java.lang.String[] $r3;
+        java.lang.UnsupportedOperationException $r4;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String[];
+
+        $r4 = new java.lang.UnsupportedOperationException;
+
+        specialinvoke $r4.<java.lang.UnsupportedOperationException: void <init>(java.lang.String)>("Not supported by this provider");
+
+        throw $r4;
+    }
+
+    public java.lang.String getType(android.net.Uri)
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+        android.net.Uri $r1;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        return "vnd.android.cursor.item/asset";
+    }
+
+    public android.net.Uri insert(android.net.Uri, android.content.ContentValues)
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+        android.net.Uri $r1;
+        android.content.ContentValues $r2;
+        java.lang.UnsupportedOperationException $r3;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: android.content.ContentValues;
+
+        $r3 = new java.lang.UnsupportedOperationException;
+
+        specialinvoke $r3.<java.lang.UnsupportedOperationException: void <init>(java.lang.String)>("Not supported by this provider");
+
+        throw $r3;
+    }
+
+    public boolean onCreate()
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        return 1;
+    }
+
+    public android.content.res.AssetFileDescriptor openAssetFile(android.net.Uri, java.lang.String)
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+        android.net.Uri $r1;
+        java.lang.String $r2;
+        android.content.res.AssetFileDescriptor $r3;
+        boolean $z0;
+        java.lang.StringBuilder $r4;
+        java.net.URI $r5;
+        java.io.File $r6;
+        android.os.ParcelFileDescriptor $r7;
+        java.lang.Throwable $r8, $r12;
+        com.android.vending.expansion.zipfile.b $r9;
+        android.content.Context $r10;
+        android.content.res.AssetManager $r11;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a>;
+
+        if $r3 == null goto label02;
+
+        $r3 = $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a>;
+
+     label01:
+        virtualinvoke $r3.<android.content.res.AssetFileDescriptor: void close()>();
+
+     label02:
+        $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a> = null;
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 != 0 goto label03;
+
+        $z0 = <com.seattleclouds.App: boolean E>;
+
+        if $z0 == 0 goto label06;
+
+     label03:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("providing access to internal file: ");
+
+        $r2 = virtualinvoke $r1.<android.net.Uri: java.lang.String getPath()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("InternalFileContentProvider", $r2);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("file://");
+
+        $r2 = virtualinvoke $r1.<android.net.Uri: java.lang.String getPath()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = staticinvoke <java.net.URI: java.net.URI create(java.lang.String)>($r2);
+
+        $r3 = new android.content.res.AssetFileDescriptor;
+
+        $r6 = new java.io.File;
+
+        specialinvoke $r6.<java.io.File: void <init>(java.net.URI)>($r5);
+
+        $r7 = staticinvoke <android.os.ParcelFileDescriptor: android.os.ParcelFileDescriptor open(java.io.File,int)>($r6, 268435456);
+
+        specialinvoke $r3.<android.content.res.AssetFileDescriptor: void <init>(android.os.ParcelFileDescriptor,long,long)>($r7, 0L, -1L);
+
+        $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a> = $r3;
+
+     label04:
+        $r3 = $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a>;
+
+        return $r3;
+
+     label05:
+        $r8 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("InternalFileContentProvider", "openAssetFile: error closing file descriptor: ", $r8);
+
+        goto label02;
+
+     label06:
+        $z0 = <com.seattleclouds.App: boolean J>;
+
+        if $z0 == 0 goto label07;
+
+        $r9 = <com.seattleclouds.App: com.android.vending.expansion.zipfile.b U>;
+
+        $r2 = virtualinvoke $r1.<android.net.Uri: java.lang.String getPath()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String substring(int)>(1);
+
+        $r3 = virtualinvoke $r9.<com.android.vending.expansion.zipfile.b: android.content.res.AssetFileDescriptor a(java.lang.String)>($r2);
+
+        $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a>;
+
+        if $r3 != null goto label04;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("openAssetFile: File not found in expansion file: ");
+
+        $r2 = virtualinvoke $r1.<android.net.Uri: java.lang.String getPath()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String substring(int)>(1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("InternalFileContentProvider", $r2);
+
+        goto label04;
+
+     label07:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("providing access to asset file: ");
+
+        $r2 = virtualinvoke $r1.<android.net.Uri: java.lang.String getPath()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("InternalFileContentProvider", $r2);
+
+     label08:
+        $r10 = virtualinvoke $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.Context getContext()>();
+
+        $r11 = virtualinvoke $r10.<android.content.Context: android.content.res.AssetManager getAssets()>();
+
+        $r2 = virtualinvoke $r1.<android.net.Uri: java.lang.String getPath()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String substring(int)>(1);
+
+        $r3 = virtualinvoke $r11.<android.content.res.AssetManager: android.content.res.AssetFileDescriptor openFd(java.lang.String)>($r2);
+
+     label09:
+        $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor a> = $r3;
+
+        goto label04;
+
+     label10:
+        $r12 := @caughtexception;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("openAssetFile: error getting file from asset: ");
+
+        $r2 = virtualinvoke $r1.<android.net.Uri: java.lang.String getPath()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("InternalFileContentProvider", $r2, $r12);
+
+        goto label04;
+
+        catch java.io.IOException from label01 to label02 with label05;
+        catch java.io.IOException from label08 to label09 with label10;
+    }
+
+    public android.os.ParcelFileDescriptor openFile(android.net.Uri, java.lang.String)
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+        android.net.Uri $r1;
+        java.lang.String $r2;
+        android.content.res.AssetFileDescriptor $r3;
+        android.os.ParcelFileDescriptor $r4;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.util.InternalFileContentProvider: android.content.res.AssetFileDescriptor openAssetFile(android.net.Uri,java.lang.String)>($r1, $r2);
+
+        if $r3 == null goto label1;
+
+        $r4 = virtualinvoke $r3.<android.content.res.AssetFileDescriptor: android.os.ParcelFileDescriptor getParcelFileDescriptor()>();
+
+        return $r4;
+
+     label1:
+        return null;
+    }
+
+    public android.database.Cursor query(android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String)
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+        android.net.Uri $r1;
+        java.lang.String[] $r2, $r4;
+        java.lang.String $r3, $r5;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: java.lang.String[];
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String[];
+
+        $r5 := @parameter4: java.lang.String;
+
+        return null;
+    }
+
+    public int update(android.net.Uri, android.content.ContentValues, java.lang.String, java.lang.String[])
+    {
+        com.seattleclouds.util.InternalFileContentProvider $r0;
+        android.net.Uri $r1;
+        android.content.ContentValues $r2;
+        java.lang.String $r3;
+        java.lang.String[] $r4;
+        java.lang.UnsupportedOperationException $r5;
+
+        $r0 := @this: com.seattleclouds.util.InternalFileContentProvider;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: android.content.ContentValues;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String[];
+
+        $r5 = new java.lang.UnsupportedOperationException;
+
+        specialinvoke $r5.<java.lang.UnsupportedOperationException: void <init>(java.lang.String)>("Not supported by this provider");
+
+        throw $r5;
+    }
+}

@@ -1,0 +1,298 @@
+public class com.seattleclouds.modules.feedback.b extends com.seattleclouds.modules.feedback.a
+{
+    private android.widget.ImageButton t;
+    private java.lang.String u;
+    private java.lang.String v;
+
+    public void <init>(android.content.Context, com.seattleclouds.modules.feedback.Field, int)
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        android.content.Context $r1;
+        com.seattleclouds.modules.feedback.Field $r2;
+        int $i0;
+        android.view.View $r3;
+        android.widget.ImageButton $r4;
+        com.seattleclouds.modules.feedback.u $r5;
+        android.widget.Button $r6;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: com.seattleclouds.modules.feedback.Field;
+
+        $i0 := @parameter2: int;
+
+        specialinvoke $r0.<com.seattleclouds.modules.feedback.a: void <init>(android.content.Context,com.seattleclouds.modules.feedback.Field,int)>($r1, $r2, 15);
+
+        $i0 = <com.seattleclouds.h: int playImageButton>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.feedback.b: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.ImageButton) $r3;
+
+        $r0.<com.seattleclouds.modules.feedback.b: android.widget.ImageButton t> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.modules.feedback.b: android.widget.ImageButton t>;
+
+        virtualinvoke $r4.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        $r4 = $r0.<com.seattleclouds.modules.feedback.b: android.widget.ImageButton t>;
+
+        $r5 = new com.seattleclouds.modules.feedback.u;
+
+        specialinvoke $r5.<com.seattleclouds.modules.feedback.u: void <init>(com.seattleclouds.modules.feedback.b)>($r0);
+
+        virtualinvoke $r4.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r5);
+
+        $r6 = $r0.<com.seattleclouds.modules.feedback.b: android.widget.Button d>;
+
+        $i0 = <com.seattleclouds.l: int feedback_btn_record>;
+
+        virtualinvoke $r6.<android.widget.Button: void setText(int)>($i0);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.feedback.b)
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.feedback.b;
+
+        specialinvoke $r0.<com.seattleclouds.modules.feedback.b: void b()>();
+
+        return;
+    }
+
+    private void b()
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        java.io.File $r1;
+        java.lang.String $r2;
+        boolean $z0;
+        android.content.Intent $r3;
+        android.net.Uri $r4;
+        android.content.Context $r5;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        $r1 = new java.io.File;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.b: java.lang.String v>;
+
+        specialinvoke $r1.<java.io.File: void <init>(java.lang.String)>($r2);
+
+        $z0 = virtualinvoke $r1.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label1;
+
+        $r3 = new android.content.Intent;
+
+        specialinvoke $r3.<android.content.Intent: void <init>()>();
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent setAction(java.lang.String)>("android.intent.action.VIEW");
+
+        $r4 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>($r1);
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent setDataAndType(android.net.Uri,java.lang.String)>($r4, "audio/*");
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.feedback.b: android.content.Context getContext()>();
+
+        virtualinvoke $r5.<android.content.Context: void startActivity(android.content.Intent)>($r3);
+
+     label1:
+        return;
+    }
+
+    public boolean a()
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        com.seattleclouds.modules.feedback.Field $r1;
+        java.lang.String $r2;
+        boolean $z0;
+        java.io.File $r3;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.b: com.seattleclouds.modules.feedback.Field l>;
+
+        $r2 = $r1.<com.seattleclouds.modules.feedback.Field: java.lang.String d>;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("yes");
+
+        if $z0 == 0 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.b: java.lang.String v>;
+
+        if $r2 == null goto label1;
+
+        $r3 = new java.io.File;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.b: java.lang.String v>;
+
+        specialinvoke $r3.<java.io.File: void <init>(java.lang.String)>($r2);
+
+        $z0 = virtualinvoke $r3.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+
+     label2:
+        return 1;
+    }
+
+    public java.lang.String getRecordName()
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        r1 = $r0.<com.seattleclouds.modules.feedback.b: java.lang.String u>;
+
+        return r1;
+    }
+
+    public java.lang.String getRecordPath()
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        r1 = $r0.<com.seattleclouds.modules.feedback.b: java.lang.String v>;
+
+        return r1;
+    }
+
+    protected void onRestoreInstanceState(android.os.Parcelable)
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        java.lang.String $r1;
+        android.os.Parcelable $r2;
+        boolean $z0;
+        com.seattleclouds.modules.feedback.PickerView$PickerSavedState $r3;
+        int $i0;
+        com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState $r4;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        $r2 := @parameter0: android.os.Parcelable;
+
+        $z0 = $r2 instanceof com.seattleclouds.modules.feedback.PickerView$PickerSavedState;
+
+        if $z0 != 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.feedback.a: void onRestoreInstanceState(android.os.Parcelable)>($r2);
+
+        return;
+
+     label1:
+        $r3 = (com.seattleclouds.modules.feedback.PickerView$PickerSavedState) $r2;
+
+        $i0 = $r3.<com.seattleclouds.modules.feedback.PickerView$PickerSavedState: int c>;
+
+        $r0.<com.seattleclouds.modules.feedback.b: int k> = $i0;
+
+        $r4 = (com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState) $r3;
+
+        $r1 = $r4.<com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState: java.lang.String a>;
+
+        $r0.<com.seattleclouds.modules.feedback.b: java.lang.String u> = $r1;
+
+        $r1 = $r4.<com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState: java.lang.String b>;
+
+        $r0.<com.seattleclouds.modules.feedback.b: java.lang.String v> = $r1;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.modules.feedback.PickerView$PickerSavedState: android.os.Parcelable getSuperState()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.feedback.a: void onRestoreInstanceState(android.os.Parcelable)>($r2);
+
+        return;
+    }
+
+    protected android.os.Parcelable onSaveInstanceState()
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState $r1;
+        android.os.Parcelable $r2;
+        int $i0;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.modules.feedback.a: android.os.Parcelable onSaveInstanceState()>();
+
+        $r1 = new com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState;
+
+        specialinvoke $r1.<com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState: void <init>(android.os.Parcelable)>($r2);
+
+        $i0 = $r0.<com.seattleclouds.modules.feedback.b: int k>;
+
+        $r1.<com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState: int c> = $i0;
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.b: java.lang.String u>;
+
+        $r1.<com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState: java.lang.String a> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.b: java.lang.String v>;
+
+        $r1.<com.seattleclouds.modules.feedback.VoiceRecordPickerView$VoicePickerSavedState: java.lang.String b> = $r3;
+
+        return $r1;
+    }
+
+    public void setRecordName(java.lang.String)
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        java.lang.String $r1;
+        android.widget.TextView $r2;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.feedback.b: java.lang.String u> = $r1;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.b: android.widget.TextView a>;
+
+        virtualinvoke $r2.<android.widget.TextView: void setText(java.lang.CharSequence)>($r1);
+
+        return;
+    }
+
+    public void setRecordPath(java.lang.String)
+    {
+        com.seattleclouds.modules.feedback.b $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        java.io.File $r2;
+        android.widget.ImageButton $r3;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.feedback.b: java.lang.String v> = $r1;
+
+        $r2 = new java.io.File;
+
+        specialinvoke $r2.<java.io.File: void <init>(java.lang.String)>($r1);
+
+        $z0 = virtualinvoke $r2.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.b: android.widget.ImageButton t>;
+
+        virtualinvoke $r3.<android.widget.ImageButton: void setEnabled(boolean)>(1);
+
+     label1:
+        return;
+    }
+}

@@ -1,0 +1,39 @@
+class com.seattleclouds.f.w extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.f.j a;
+
+    void <init>(com.seattleclouds.f.j)
+    {
+        com.seattleclouds.f.w $r0;
+        com.seattleclouds.f.j $r1;
+
+        $r0 := @this: com.seattleclouds.f.w;
+
+        $r1 := @parameter0: com.seattleclouds.f.j;
+
+        $r0.<com.seattleclouds.f.w: com.seattleclouds.f.j a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.f.w $r0;
+        com.seattleclouds.f.j $r1, $r3;
+        android.view.View $r2;
+
+        $r0 := @this: com.seattleclouds.f.w;
+
+        $r1 = $r0.<com.seattleclouds.f.w: com.seattleclouds.f.j a>;
+
+        $r3 = $r0.<com.seattleclouds.f.w: com.seattleclouds.f.j a>;
+
+        $r2 = staticinvoke <com.seattleclouds.f.j: android.view.View d(com.seattleclouds.f.j)>($r3);
+
+        staticinvoke <com.seattleclouds.f.j: void a(com.seattleclouds.f.j,android.view.View,int)>($r1, $r2, 350);
+
+        return;
+    }
+}

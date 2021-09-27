@@ -1,0 +1,414 @@
+public class com.seattleclouds.modules.podcast.b.a extends android.os.AsyncTask
+{
+    private final java.lang.ref.WeakReference a;
+    private com.seattleclouds.modules.podcast.b.c b;
+
+    public void <init>(android.content.Context)
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        android.content.Context $r1;
+        java.lang.ref.WeakReference $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r2 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r2.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.modules.podcast.b.a: java.lang.ref.WeakReference a> = $r2;
+
+        return;
+    }
+
+    private android.content.Context b()
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        java.lang.Object $r1;
+        java.lang.ref.WeakReference $r2;
+        android.content.Context $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.b.a: java.lang.ref.WeakReference a>;
+
+        $r1 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r3 = (android.content.Context) $r1;
+
+        return $r3;
+    }
+
+    public com.seattleclouds.modules.podcast.b.c a()
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        com.seattleclouds.modules.podcast.b.c r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.b.a: com.seattleclouds.modules.podcast.b.c b>;
+
+        return r1;
+    }
+
+    protected transient java.util.ArrayList a(com.seattleclouds.modules.podcast.PodcastInfo[])
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        com.seattleclouds.modules.podcast.PodcastInfo[] $r1;
+        java.util.ArrayList $r2, $r4;
+        int $i0, $i1, $i2;
+        com.seattleclouds.modules.podcast.PodcastInfo $r3;
+        boolean $z0;
+        java.lang.Object $r5;
+        com.seattleclouds.modules.podcast.PodcastCategory $r6;
+        java.util.Iterator $r7;
+        com.seattleclouds.modules.podcast.PodcastItem $r8;
+        com.seattleclouds.modules.podcast.PodcastListItem $r9;
+        java.lang.String $r10;
+        java.util.Date $r11;
+        android.content.Context $r12;
+        com.seattleclouds.modules.podcast.b.b $r13;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.PodcastInfo[];
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $i0 = lengthof $r1;
+
+        $i1 = 0;
+
+     label01:
+        if $i1 >= $i0 goto label14;
+
+        $r3 = $r1[$i1];
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.a: boolean isCancelled()>();
+
+        if $z0 == 0 goto label02;
+
+        return null;
+
+     label02:
+        $r4 = $r3.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.ArrayList categories>;
+
+        $i2 = virtualinvoke $r4.<java.util.ArrayList: int size()>();
+
+        if $i2 != 1 goto label05;
+
+        $r4 = $r3.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.ArrayList categories>;
+
+        $r5 = virtualinvoke $r4.<java.util.ArrayList: java.lang.Object get(int)>(0);
+
+        $r6 = (com.seattleclouds.modules.podcast.PodcastCategory) $r5;
+
+        $r4 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.ArrayList items>;
+
+        $r7 = virtualinvoke $r4.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label03:
+        $z0 = interfaceinvoke $r7.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label13;
+
+        $r5 = interfaceinvoke $r7.<java.util.Iterator: java.lang.Object next()>();
+
+        $r8 = (com.seattleclouds.modules.podcast.PodcastItem) $r5;
+
+        virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: void updateMediaUri()>();
+
+        $r9 = new com.seattleclouds.modules.podcast.PodcastListItem;
+
+        specialinvoke $r9.<com.seattleclouds.modules.podcast.PodcastListItem: void <init>()>();
+
+        $r10 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String title>;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String e> = $r10;
+
+        $r10 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String author>;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String f> = $r10;
+
+        $r11 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+        if $r11 == null goto label04;
+
+        $r12 = specialinvoke $r0.<com.seattleclouds.modules.podcast.b.a: android.content.Context b()>();
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getFormattedDate(android.content.Context)>($r12);
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String h> = $r10;
+
+     label04:
+        $r10 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getAnyImageUrl()>();
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String i> = $r10;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a> = $r8;
+
+        $z0 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: boolean isDownloaded()>();
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: boolean c> = $z0;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r9);
+
+        goto label03;
+
+     label05:
+        $r4 = $r3.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.ArrayList categories>;
+
+        $i2 = virtualinvoke $r4.<java.util.ArrayList: int size()>();
+
+        if $i2 <= 1 goto label13;
+
+        $r4 = $r3.<com.seattleclouds.modules.podcast.PodcastInfo: java.util.ArrayList categories>;
+
+        $r7 = virtualinvoke $r4.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label06:
+        $z0 = interfaceinvoke $r7.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label13;
+
+        $r5 = interfaceinvoke $r7.<java.util.Iterator: java.lang.Object next()>();
+
+        $r6 = (com.seattleclouds.modules.podcast.PodcastCategory) $r5;
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.a: boolean isCancelled()>();
+
+        if $z0 == 0 goto label07;
+
+        return null;
+
+     label07:
+        $r4 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.ArrayList items>;
+
+        $i2 = virtualinvoke $r4.<java.util.ArrayList: int size()>();
+
+        if $i2 == 1 goto label08;
+
+        $r4 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.ArrayList items>;
+
+        $i2 = virtualinvoke $r4.<java.util.ArrayList: int size()>();
+
+        if $i2 <= 0 goto label10;
+
+        $r4 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.ArrayList items>;
+
+        $r5 = virtualinvoke $r4.<java.util.ArrayList: java.lang.Object get(int)>(0);
+
+        $r8 = (com.seattleclouds.modules.podcast.PodcastItem) $r5;
+
+        $r10 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String category>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean c(java.lang.String)>($r10);
+
+        if $z0 == 0 goto label10;
+
+     label08:
+        $r4 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: java.util.ArrayList items>;
+
+        $r5 = virtualinvoke $r4.<java.util.ArrayList: java.lang.Object get(int)>(0);
+
+        $r8 = (com.seattleclouds.modules.podcast.PodcastItem) $r5;
+
+        virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: void updateMediaUri()>();
+
+        $r9 = new com.seattleclouds.modules.podcast.PodcastListItem;
+
+        specialinvoke $r9.<com.seattleclouds.modules.podcast.PodcastListItem: void <init>()>();
+
+        $r10 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String title>;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String e> = $r10;
+
+        $r10 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String author>;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String f> = $r10;
+
+        $r11 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+        if $r11 == null goto label09;
+
+        $r12 = specialinvoke $r0.<com.seattleclouds.modules.podcast.b.a: android.content.Context b()>();
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getFormattedDate(android.content.Context)>($r12);
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String h> = $r10;
+
+     label09:
+        $r10 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getAnyImageUrl()>();
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String i> = $r10;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastItem a> = $r8;
+
+        $z0 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: boolean isDownloaded()>();
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: boolean c> = $z0;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r9);
+
+        goto label06;
+
+     label10:
+        $r9 = new com.seattleclouds.modules.podcast.PodcastListItem;
+
+        specialinvoke $r9.<com.seattleclouds.modules.podcast.PodcastListItem: void <init>()>();
+
+        $r10 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: java.lang.String title>;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String e> = $r10;
+
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        if $r8 == null goto label12;
+
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        $r10 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String author>;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String f> = $r10;
+
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: void updateMediaUri()>();
+
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        $r11 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+        if $r11 == null goto label11;
+
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        $r10 = $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String title>;
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String g> = $r10;
+
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        $r12 = specialinvoke $r0.<com.seattleclouds.modules.podcast.b.a: android.content.Context b()>();
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getFormattedDate(android.content.Context)>($r12);
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String h> = $r10;
+
+     label11:
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getAnyImageUrl()>();
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: java.lang.String i> = $r10;
+
+        $r8 = $r6.<com.seattleclouds.modules.podcast.PodcastCategory: com.seattleclouds.modules.podcast.PodcastItem lastPodcastItem>;
+
+        $z0 = virtualinvoke $r8.<com.seattleclouds.modules.podcast.PodcastItem: boolean isDownloaded()>();
+
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: boolean c> = $z0;
+
+     label12:
+        $r9.<com.seattleclouds.modules.podcast.PodcastListItem: com.seattleclouds.modules.podcast.PodcastCategory b> = $r6;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r9);
+
+        goto label06;
+
+     label13:
+        $i1 = $i1 + 1;
+
+        goto label01;
+
+     label14:
+        $r13 = new com.seattleclouds.modules.podcast.b.b;
+
+        specialinvoke $r13.<com.seattleclouds.modules.podcast.b.b: void <init>(com.seattleclouds.modules.podcast.b.a)>($r0);
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r2, $r13);
+
+        return $r2;
+    }
+
+    public void a(com.seattleclouds.modules.podcast.b.c)
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        com.seattleclouds.modules.podcast.b.c $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.b.c;
+
+        $r0.<com.seattleclouds.modules.podcast.b.a: com.seattleclouds.modules.podcast.b.c b> = $r1;
+
+        return;
+    }
+
+    protected void a(java.util.ArrayList)
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        java.util.ArrayList $r1;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.b.c $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        $r1 := @parameter0: java.util.ArrayList;
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.a: boolean isCancelled()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.a: com.seattleclouds.modules.podcast.b.c a()>();
+
+        if $r2 == null goto label2;
+
+        interfaceinvoke $r2.<com.seattleclouds.modules.podcast.b.c: void a(java.util.ArrayList)>($r1);
+
+     label2:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        java.util.ArrayList $r1;
+        java.lang.Object[] $r2;
+        com.seattleclouds.modules.podcast.PodcastInfo[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (com.seattleclouds.modules.podcast.PodcastInfo[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.a: java.util.ArrayList a(com.seattleclouds.modules.podcast.PodcastInfo[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.podcast.b.a $r0;
+        java.lang.Object $r1;
+        java.util.ArrayList $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.a;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.util.ArrayList) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.a: void a(java.util.ArrayList)>($r2);
+
+        return;
+    }
+}

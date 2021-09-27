@@ -1,0 +1,53 @@
+class com.seattleclouds.b.k extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final com.seattleclouds.b.h b;
+
+    void <init>(com.seattleclouds.b.h, java.lang.String)
+    {
+        com.seattleclouds.b.k $r0;
+        com.seattleclouds.b.h $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.b.k;
+
+        $r1 := @parameter0: com.seattleclouds.b.h;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.b.k: com.seattleclouds.b.h b> = $r1;
+
+        $r0.<com.seattleclouds.b.k: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.b.k $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+        com.seattleclouds.b.h $r3;
+
+        $r0 := @this: com.seattleclouds.b.k;
+
+        $r3 = $r0.<com.seattleclouds.b.k: com.seattleclouds.b.h b>;
+
+        $r2 = staticinvoke <com.seattleclouds.b.h: android.app.Activity a(com.seattleclouds.b.h)>($r3);
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.b.k: com.seattleclouds.b.h b>;
+
+        $r1 = $r0.<com.seattleclouds.b.k: java.lang.String a>;
+
+        virtualinvoke $r3.<com.seattleclouds.b.h: void c(java.lang.String)>($r1);
+
+        return;
+    }
+}

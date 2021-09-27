@@ -1,0 +1,159 @@
+class com.seattleclouds.modules.goaltracker.h extends java.lang.Object implements android.widget.SeekBar$OnSeekBarChangeListener
+{
+    final android.app.Activity a;
+    final com.seattleclouds.modules.goaltracker.f b;
+
+    void <init>(com.seattleclouds.modules.goaltracker.f, android.app.Activity)
+    {
+        com.seattleclouds.modules.goaltracker.h $r0;
+        com.seattleclouds.modules.goaltracker.f $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.h;
+
+        $r1 := @parameter0: com.seattleclouds.modules.goaltracker.f;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        $r0.<com.seattleclouds.modules.goaltracker.h: com.seattleclouds.modules.goaltracker.f b> = $r1;
+
+        $r0.<com.seattleclouds.modules.goaltracker.h: android.app.Activity a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onProgressChanged(android.widget.SeekBar, int, boolean)
+    {
+        com.seattleclouds.modules.goaltracker.h $r0;
+        android.widget.SeekBar $r1;
+        int $i0, $i1;
+        boolean $z0;
+        com.seattleclouds.modules.goaltracker.f $r2;
+        java.lang.StringBuilder $r3;
+        android.app.Activity $r4, $r9;
+        java.lang.String $r5, $r10;
+        java.lang.Object[] $r6;
+        java.lang.Integer $r7;
+        android.widget.TextView $r8;
+        java.util.HashMap $r11;
+        java.lang.Object $r12;
+        com.seattleclouds.modules.goaltracker.i $r13;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.h;
+
+        $r1 := @parameter0: android.widget.SeekBar;
+
+        $i0 := @parameter1: int;
+
+        $z0 := @parameter2: boolean;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.h: com.seattleclouds.modules.goaltracker.f b>;
+
+        staticinvoke <com.seattleclouds.modules.goaltracker.f: int a(com.seattleclouds.modules.goaltracker.f,int)>($r2, $i0);
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.h: android.app.Activity a>;
+
+        $i1 = <com.seattleclouds.l: int goal_tracker_goal_details_fragment_goal_curret_progress_message>;
+
+        $r5 = virtualinvoke $r4.<android.app.Activity: java.lang.String getString(int)>($i1);
+
+        $r6 = newarray (java.lang.Object)[1];
+
+        $r7 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r6[0] = $r7;
+
+        $r5 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r5, $r6);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("%");
+
+        $r5 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.h: com.seattleclouds.modules.goaltracker.f b>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.goaltracker.f: android.widget.TextView d(com.seattleclouds.modules.goaltracker.f)>($r2);
+
+        virtualinvoke $r8.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.h: com.seattleclouds.modules.goaltracker.f b>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.goaltracker.f: int a(com.seattleclouds.modules.goaltracker.f)>($r2);
+
+        virtualinvoke $r1.<android.widget.SeekBar: void setProgress(int)>($i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.h: com.seattleclouds.modules.goaltracker.f b>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.goaltracker.f: int a(com.seattleclouds.modules.goaltracker.f)>($r2);
+
+        if $i0 != 100 goto label1;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.h: android.app.Activity a>;
+
+        $r9 = $r0.<com.seattleclouds.modules.goaltracker.h: android.app.Activity a>;
+
+        $i0 = <com.seattleclouds.l: int info>;
+
+        $r5 = virtualinvoke $r9.<android.app.Activity: java.lang.String getString(int)>($i0);
+
+        $r9 = $r0.<com.seattleclouds.modules.goaltracker.h: android.app.Activity a>;
+
+        $i0 = <com.seattleclouds.l: int goal_tracker_goal_details_fragment_goal_congratulation_with_name>;
+
+        $r10 = virtualinvoke $r9.<android.app.Activity: java.lang.String getString(int)>($i0);
+
+        $r6 = newarray (java.lang.Object)[1];
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.h: com.seattleclouds.modules.goaltracker.f b>;
+
+        $r11 = staticinvoke <com.seattleclouds.modules.goaltracker.f: java.util.HashMap b(com.seattleclouds.modules.goaltracker.f)>($r2);
+
+        $r12 = virtualinvoke $r11.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("title");
+
+        $r6[0] = $r12;
+
+        $r10 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r10, $r6);
+
+        $r13 = new com.seattleclouds.modules.goaltracker.i;
+
+        specialinvoke $r13.<com.seattleclouds.modules.goaltracker.i: void <init>(com.seattleclouds.modules.goaltracker.h)>($r0);
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,java.lang.String,java.lang.String,android.content.DialogInterface$OnClickListener)>($r4, $r5, $r10, $r13);
+
+     label1:
+        return;
+    }
+
+    public void onStartTrackingTouch(android.widget.SeekBar)
+    {
+        com.seattleclouds.modules.goaltracker.h $r0;
+        android.widget.SeekBar $r1;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.h;
+
+        $r1 := @parameter0: android.widget.SeekBar;
+
+        return;
+    }
+
+    public void onStopTrackingTouch(android.widget.SeekBar)
+    {
+        com.seattleclouds.modules.goaltracker.h $r0;
+        android.widget.SeekBar $r1;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.h;
+
+        $r1 := @parameter0: android.widget.SeekBar;
+
+        return;
+    }
+}

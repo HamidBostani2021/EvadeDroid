@@ -1,0 +1,184 @@
+class com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener extends java.lang.Object implements android.widget.CompoundButton$OnCheckedChangeListener
+{
+    final com.flashlightnew.byzm.net.SettingsActivity this$0;
+
+    void <init>(com.flashlightnew.byzm.net.SettingsActivity)
+    {
+        com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener $r0;
+        com.flashlightnew.byzm.net.SettingsActivity $r1;
+
+        $r0 := @this: com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener;
+
+        $r1 := @parameter0: com.flashlightnew.byzm.net.SettingsActivity;
+
+        $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onCheckedChanged(android.widget.CompoundButton, boolean)
+    {
+        com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener $r0;
+        android.widget.CompoundButton $r1;
+        boolean $z0;
+        android.content.Intent $r2;
+        com.flashlightnew.byzm.net.SettingsActivity $r3;
+        android.content.SharedPreferences $r4;
+        android.content.SharedPreferences$Editor $r5;
+        int $i0;
+        android.widget.TextView $r6;
+        android.widget.RelativeLayout $r7;
+
+        $r0 := @this: com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener;
+
+        $r1 := @parameter0: android.widget.CompoundButton;
+
+        $z0 := @parameter1: boolean;
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r4 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.content.SharedPreferences preferences>;
+
+        $r5 = interfaceinvoke $r4.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $i0 = virtualinvoke $r1.<android.widget.CompoundButton: int getId()>();
+
+        if $i0 != 2131296274 goto label3;
+
+        if $z0 == 0 goto label2;
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.TextView textView_11>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(int)>(2131099656);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("ledon", 1);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+     label1:
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>()>();
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $z0 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: boolean sound>;
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean)>("sound", $z0);
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $z0 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: boolean skin_dark>;
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean)>("skin_dark", $z0);
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        virtualinvoke $r3.<com.flashlightnew.byzm.net.SettingsActivity: void setResult(int,android.content.Intent)>(1, $r2);
+
+        return;
+
+     label2:
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.TextView textView_11>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(int)>(2131099657);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("ledon", 0);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        goto label1;
+
+     label3:
+        $i0 = virtualinvoke $r1.<android.widget.CompoundButton: int getId()>();
+
+        if $i0 != 2131296280 goto label6;
+
+        if $z0 == 0 goto label5;
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.TextView textView_22>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(int)>(2131099656);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("sound", 1);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+     label4:
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r3.<com.flashlightnew.byzm.net.SettingsActivity: boolean sound> = $z0;
+
+        goto label1;
+
+     label5:
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.TextView textView_22>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(int)>(2131099657);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("sound", 0);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        goto label4;
+
+     label6:
+        $i0 = virtualinvoke $r1.<android.widget.CompoundButton: int getId()>();
+
+        if $i0 != 2131296286 goto label1;
+
+        if $z0 == 0 goto label8;
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r7 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.RelativeLayout settings>;
+
+        virtualinvoke $r7.<android.widget.RelativeLayout: void setBackgroundResource(int)>(2130837518);
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.TextView textView_33>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(int)>(2131099656);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("skin_dark", 1);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+     label7:
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r3.<com.flashlightnew.byzm.net.SettingsActivity: boolean skin_dark> = $z0;
+
+        goto label1;
+
+     label8:
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r7 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.RelativeLayout settings>;
+
+        virtualinvoke $r7.<android.widget.RelativeLayout: void setBackgroundResource(int)>(2130837519);
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.SettingsActivity$CheckBoxListener: com.flashlightnew.byzm.net.SettingsActivity this$0>;
+
+        $r6 = $r3.<com.flashlightnew.byzm.net.SettingsActivity: android.widget.TextView textView_33>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(int)>(2131099657);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("skin_dark", 0);
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        goto label7;
+    }
+}

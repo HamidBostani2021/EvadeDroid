@@ -1,0 +1,121 @@
+public abstract class com.google.zxing.client.result.m extends java.lang.Object
+{
+    private final com.google.zxing.client.result.ParsedResultType a;
+
+    protected void <init>(com.google.zxing.client.result.ParsedResultType)
+    {
+        com.google.zxing.client.result.m $r0;
+        com.google.zxing.client.result.ParsedResultType $r1;
+
+        $r0 := @this: com.google.zxing.client.result.m;
+
+        $r1 := @parameter0: com.google.zxing.client.result.ParsedResultType;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.google.zxing.client.result.m: com.google.zxing.client.result.ParsedResultType a> = $r1;
+
+        return;
+    }
+
+    public static void a(java.lang.String, java.lang.StringBuilder)
+    {
+        java.lang.String $r0;
+        java.lang.StringBuilder $r1;
+        int $i0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 := @parameter1: java.lang.StringBuilder;
+
+        if $r0 == null goto label2;
+
+        $i0 = virtualinvoke $r0.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label2;
+
+        $i0 = virtualinvoke $r1.<java.lang.StringBuilder: int length()>();
+
+        if $i0 <= 0 goto label1;
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(10);
+
+     label1:
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r0);
+
+     label2:
+        return;
+    }
+
+    public static void a(java.lang.String[], java.lang.StringBuilder)
+    {
+        java.lang.String[] $r0;
+        java.lang.StringBuilder $r1;
+        int $i0, $i1, $i2;
+        java.lang.String $r2;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $r1 := @parameter1: java.lang.StringBuilder;
+
+        if $r0 == null goto label4;
+
+        $i0 = lengthof $r0;
+
+        $i1 = 0;
+
+     label1:
+        if $i1 >= $i0 goto label4;
+
+        $r2 = $r0[$i1];
+
+        if $r2 == null goto label3;
+
+        $i2 = virtualinvoke $r2.<java.lang.String: int length()>();
+
+        if $i2 <= 0 goto label3;
+
+        $i2 = virtualinvoke $r1.<java.lang.StringBuilder: int length()>();
+
+        if $i2 <= 0 goto label2;
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(10);
+
+     label2:
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+     label3:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label4:
+        return;
+    }
+
+    public abstract java.lang.String o();
+
+    public com.google.zxing.client.result.ParsedResultType p()
+    {
+        com.google.zxing.client.result.m $r0;
+        com.google.zxing.client.result.ParsedResultType r1;
+
+        $r0 := @this: com.google.zxing.client.result.m;
+
+        r1 = $r0.<com.google.zxing.client.result.m: com.google.zxing.client.result.ParsedResultType a>;
+
+        return r1;
+    }
+
+    public java.lang.String toString()
+    {
+        com.google.zxing.client.result.m $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.google.zxing.client.result.m;
+
+        $r1 = virtualinvoke $r0.<com.google.zxing.client.result.m: java.lang.String o()>();
+
+        return $r1;
+    }
+}

@@ -1,0 +1,318 @@
+class net.sourceforge.zbar.android.g extends java.lang.Object implements android.hardware.Camera$PreviewCallback
+{
+    final net.sourceforge.zbar.android.ZBarScanner a;
+
+    void <init>(net.sourceforge.zbar.android.ZBarScanner)
+    {
+        net.sourceforge.zbar.android.g $r0;
+        net.sourceforge.zbar.android.ZBarScanner $r1;
+
+        $r0 := @this: net.sourceforge.zbar.android.g;
+
+        $r1 := @parameter0: net.sourceforge.zbar.android.ZBarScanner;
+
+        $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onPreviewFrame(byte[], android.hardware.Camera)
+    {
+        net.sourceforge.zbar.android.g $r0;
+        byte[] $r1;
+        android.hardware.Camera $r2;
+        android.hardware.Camera$Parameters $r3;
+        android.hardware.Camera$Size $r4;
+        net.sourceforge.zbar.Image $r5;
+        int $i0, $i1, $i2, $i3, $i4, $i5;
+        net.sourceforge.zbar.android.ZBarScanner $r6;
+        net.sourceforge.zbar.ImageScanner $r7;
+        net.sourceforge.zbar.SymbolSet $r8;
+        java.util.Iterator $r9;
+        boolean $z0, $z1;
+        java.lang.Object $r10;
+        net.sourceforge.zbar.Symbol $r11;
+        com.google.zxing.client.a.f $r12;
+        java.lang.String $r13;
+        com.google.zxing.client.a.h $r14;
+        android.widget.TextView $r15;
+        android.content.Intent $r16;
+        java.lang.StringBuilder $r17;
+        int[] $r18;
+        com.seattleclouds.util.aa $r19;
+        android.graphics.Bitmap $r20;
+        android.widget.Button $r21;
+        android.os.Bundle $r22, $r23;
+        com.seattleclouds.FragmentInfo $r24;
+        java.lang.Class $r25;
+        java.lang.Exception $r26;
+
+        $r0 := @this: net.sourceforge.zbar.android.g;
+
+        $r1 := @parameter0: byte[];
+
+        $r2 := @parameter1: android.hardware.Camera;
+
+        $r3 = virtualinvoke $r2.<android.hardware.Camera: android.hardware.Camera$Parameters getParameters()>();
+
+        $r4 = virtualinvoke $r3.<android.hardware.Camera$Parameters: android.hardware.Camera$Size getPreviewSize()>();
+
+        $r5 = new net.sourceforge.zbar.Image;
+
+        $i0 = $r4.<android.hardware.Camera$Size: int width>;
+
+        $i1 = $r4.<android.hardware.Camera$Size: int height>;
+
+        specialinvoke $r5.<net.sourceforge.zbar.Image: void <init>(int,int,java.lang.String)>($i0, $i1, "Y800");
+
+        virtualinvoke $r5.<net.sourceforge.zbar.Image: void setData(byte[])>($r1);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r7 = $r6.<net.sourceforge.zbar.android.ZBarScanner: net.sourceforge.zbar.ImageScanner p>;
+
+        $i0 = virtualinvoke $r7.<net.sourceforge.zbar.ImageScanner: int scanImage(net.sourceforge.zbar.Image)>($r5);
+
+        if $i0 == 0 goto label10;
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r7 = $r6.<net.sourceforge.zbar.android.ZBarScanner: net.sourceforge.zbar.ImageScanner p>;
+
+        $r8 = virtualinvoke $r7.<net.sourceforge.zbar.ImageScanner: net.sourceforge.zbar.SymbolSet b()>();
+
+        $r9 = virtualinvoke $r8.<net.sourceforge.zbar.SymbolSet: java.util.Iterator iterator()>();
+
+     label01:
+        $z0 = interfaceinvoke $r9.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label10;
+
+        $r10 = interfaceinvoke $r9.<java.util.Iterator: java.lang.Object next()>();
+
+        $r11 = (net.sourceforge.zbar.Symbol) $r10;
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z0 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean e(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        if $z0 == 0 goto label02;
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z0 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean f(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        if $z0 != 0 goto label05;
+
+     label02:
+        $z0 = 0;
+
+        $i0 = virtualinvoke $r11.<net.sourceforge.zbar.Symbol: int b()>();
+
+        if $i0 != 64 goto label03;
+
+        $z0 = 1;
+
+     label03:
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z1 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean f(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        if $z1 == 0 goto label04;
+
+        if $z0 != 0 goto label01;
+
+     label04:
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z1 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean e(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        if $z1 == 0 goto label05;
+
+        if $z0 == 0 goto label01;
+
+     label05:
+        $r12 = new com.google.zxing.client.a.f;
+
+        $r13 = virtualinvoke $r11.<net.sourceforge.zbar.Symbol: java.lang.String getData()>();
+
+        specialinvoke $r12.<com.google.zxing.client.a.f: void <init>(java.lang.String)>($r13);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r14 = staticinvoke <com.google.zxing.client.a.i: com.google.zxing.client.a.h a(android.app.Activity,com.google.zxing.client.a.f)>($r6, $r12);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r15 = $r6.<net.sourceforge.zbar.android.ZBarScanner: android.widget.TextView m>;
+
+        $i0 = virtualinvoke $r14.<com.google.zxing.client.a.h: int c()>();
+
+        virtualinvoke $r15.<android.widget.TextView: void setText(int)>($i0);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean a(net.sourceforge.zbar.android.ZBarScanner,boolean)>($r6, 1);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r16 = new android.content.Intent;
+
+        specialinvoke $r16.<android.content.Intent: void <init>()>();
+
+        staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.content.Intent a(net.sourceforge.zbar.android.ZBarScanner,android.content.Intent)>($r6, $r16);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r16 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.content.Intent c(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        $r13 = virtualinvoke $r11.<net.sourceforge.zbar.Symbol: java.lang.String getData()>();
+
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("SCAN_RESULT", $r13);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r16 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.content.Intent c(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        $r17 = new java.lang.StringBuilder;
+
+        specialinvoke $r17.<java.lang.StringBuilder: void <init>()>();
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $i0 = virtualinvoke $r11.<net.sourceforge.zbar.Symbol: int b()>();
+
+        $r17 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r13 = virtualinvoke $r17.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r16.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("SCAN_RESULT_FORMAT", $r13);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z0 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean d(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        if $z0 == 0 goto label06;
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean b(net.sourceforge.zbar.android.ZBarScanner,boolean)>($r6, 0);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r2 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera b(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        virtualinvoke $r2.<android.hardware.Camera: void setPreviewCallback(android.hardware.Camera$PreviewCallback)>(null);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r2 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera b(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        virtualinvoke $r2.<android.hardware.Camera: void stopPreview()>();
+
+     label06:
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z0 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean g(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        if $z0 == 0 goto label08;
+
+        $r18 = virtualinvoke $r11.<net.sourceforge.zbar.Symbol: int[] c()>();
+
+        $r19 = new com.seattleclouds.util.aa;
+
+     label07:
+        $i0 = $r4.<android.hardware.Camera$Size: int width>;
+
+        $i1 = $r4.<android.hardware.Camera$Size: int height>;
+
+        $i2 = $r18[0];
+
+        $i3 = $r18[1];
+
+        $i4 = $r18[2];
+
+        $i5 = $r18[3];
+
+        specialinvoke $r19.<com.seattleclouds.util.aa: void <init>(byte[],int,int,int,int,int,int,boolean)>($r1, $i0, $i1, $i2, $i3, $i4, $i5, 0);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r20 = virtualinvoke $r19.<com.seattleclouds.util.aa: android.graphics.Bitmap c()>();
+
+        staticinvoke <net.sourceforge.zbar.android.ZBarScanner: void a(net.sourceforge.zbar.android.ZBarScanner,android.graphics.Bitmap)>($r6, $r20);
+
+     label08:
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r21 = $r6.<net.sourceforge.zbar.android.ZBarScanner: android.widget.Button o>;
+
+        virtualinvoke $r21.<android.widget.Button: void setEnabled(boolean)>(1);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r21 = $r6.<net.sourceforge.zbar.android.ZBarScanner: android.widget.Button n>;
+
+        virtualinvoke $r21.<android.widget.Button: void setEnabled(boolean)>(1);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z0 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean h(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        if $z0 == 0 goto label01;
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        staticinvoke <net.sourceforge.zbar.android.ZBarScanner: void i(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        $r22 = new android.os.Bundle;
+
+        specialinvoke $r22.<android.os.Bundle: void <init>()>();
+
+        $r13 = virtualinvoke $r11.<net.sourceforge.zbar.Symbol: java.lang.String getData()>();
+
+        virtualinvoke $r22.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("RAW_DATA", $r13);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r16 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.content.Intent c(net.sourceforge.zbar.android.ZBarScanner)>($r6);
+
+        $r23 = virtualinvoke $r16.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $r13 = virtualinvoke $r23.<android.os.Bundle: java.lang.String getString(java.lang.String)>("BARCODE_CROP");
+
+        virtualinvoke $r22.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("CROP_PATH", $r13);
+
+        $r24 = new com.seattleclouds.FragmentInfo;
+
+        $r25 = class "Lcom/seattleclouds/modules/b/b;";
+
+        $r13 = virtualinvoke $r25.<java.lang.Class: java.lang.String getName()>();
+
+        specialinvoke $r24.<com.seattleclouds.FragmentInfo: void <init>(java.lang.String,android.os.Bundle)>($r13, $r22);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r16 = staticinvoke <com.seattleclouds.App: android.content.Intent a(com.seattleclouds.FragmentInfo,android.content.Context)>($r24, $r6);
+
+        $r6 = $r0.<net.sourceforge.zbar.android.g: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        virtualinvoke $r6.<net.sourceforge.zbar.android.ZBarScanner: void startActivityForResult(android.content.Intent,int)>($r16, 1000);
+
+        goto label01;
+
+     label09:
+        $r26 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ZBarCodeScanner", "Crop Exception", $r26);
+
+        goto label08;
+
+     label10:
+        return;
+
+        catch java.lang.Exception from label07 to label08 with label09;
+    }
+}

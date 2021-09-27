@@ -1,0 +1,881 @@
+public class com.seattleclouds.modules.calendar.q extends android.database.sqlite.SQLiteOpenHelper
+{
+
+    public void <init>(android.content.Context, java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        java.lang.StringBuilder $r3;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<android.database.sqlite.SQLiteOpenHelper: void <init>(android.content.Context,java.lang.String,android.database.sqlite.SQLiteDatabase$CursorFactory,int)>($r1, $r2, null, 2);
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Using calendar database: ");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("DatabaseHelper", $r2);
+
+        return;
+    }
+
+    private android.content.ContentValues b(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, java.lang.String, java.lang.String, boolean, java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r7, $r8, $r9;
+        java.util.Date $r5, $r6;
+        boolean $z0, $z1;
+        android.content.ContentValues $r10;
+        long $l0;
+        java.lang.Long $r11;
+        byte $b1;
+        java.lang.Integer $r12;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.util.Date;
+
+        $r6 := @parameter5: java.util.Date;
+
+        $z0 := @parameter6: boolean;
+
+        $r7 := @parameter7: java.lang.String;
+
+        $r8 := @parameter8: java.lang.String;
+
+        $z1 := @parameter9: boolean;
+
+        $r9 := @parameter10: java.lang.String;
+
+        $r10 = new android.content.ContentValues;
+
+        specialinvoke $r10.<android.content.ContentValues: void <init>()>();
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("recurring_event_id", $r1);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("title", $r2);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("category", $r3);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("location", $r4);
+
+        $l0 = virtualinvoke $r5.<java.util.Date: long getTime()>();
+
+        $r11 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l0);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.Long)>("start_date", $r11);
+
+        $l0 = virtualinvoke $r6.<java.util.Date: long getTime()>();
+
+        $r11 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l0);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.Long)>("end_date", $r11);
+
+        if $z0 == 0 goto label3;
+
+        $b1 = 1;
+
+     label1:
+        $r12 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($b1);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.Integer)>("is_all_day", $r12);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("case_number", $r7);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("reference", $r8);
+
+        goto label4;
+
+     label2:
+        $r12 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($b1);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.Integer)>("is_synced_event", $r12);
+
+        virtualinvoke $r10.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("description", "");
+
+        return $r10;
+
+     label3:
+        $b1 = 0;
+
+        goto label1;
+
+     label4:
+        $b1 = 0;
+
+        goto label2;
+    }
+
+    public int a(long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        long $l0;
+        java.lang.String $r1, $r2, $r3, $r4, $r7, $r8;
+        java.util.Date $r5, $r6;
+        boolean $z0;
+        int $i1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $l0 := @parameter0: long;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r3 := @parameter3: java.lang.String;
+
+        $r4 := @parameter4: java.lang.String;
+
+        $r5 := @parameter5: java.util.Date;
+
+        $r6 := @parameter6: java.util.Date;
+
+        $z0 := @parameter7: boolean;
+
+        $r7 := @parameter8: java.lang.String;
+
+        $r8 := @parameter9: java.lang.String;
+
+        $i1 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: int a(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Date,java.util.Date,boolean,java.lang.String,java.lang.String,boolean,java.lang.String)>($l0, $r1, $r2, $r3, $r4, $r5, $r6, $z0, $r7, $r8, 0, "");
+
+        return $i1;
+    }
+
+    public int a(long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, java.lang.String, java.lang.String, boolean, java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        long $l0;
+        java.lang.String $r1, $r2, $r3, $r4, $r7, $r8, $r9;
+        java.util.Date $r5, $r6;
+        boolean $z0, $z1;
+        android.content.ContentValues $r10;
+        android.database.sqlite.SQLiteDatabase $r11;
+        java.lang.StringBuilder $r12;
+        int $i1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $l0 := @parameter0: long;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r3 := @parameter3: java.lang.String;
+
+        $r4 := @parameter4: java.lang.String;
+
+        $r5 := @parameter5: java.util.Date;
+
+        $r6 := @parameter6: java.util.Date;
+
+        $z0 := @parameter7: boolean;
+
+        $r7 := @parameter8: java.lang.String;
+
+        $r8 := @parameter9: java.lang.String;
+
+        $z1 := @parameter10: boolean;
+
+        $r9 := @parameter11: java.lang.String;
+
+        $r10 = specialinvoke $r0.<com.seattleclouds.modules.calendar.q: android.content.ContentValues b(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Date,java.util.Date,boolean,java.lang.String,java.lang.String,boolean,java.lang.String)>($r1, $r2, $r3, $r4, $r5, $r6, $z0, $r7, $r8, 0, "");
+
+        $r11 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_id=");
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r1 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i1 = virtualinvoke $r11.<android.database.sqlite.SQLiteDatabase: int update(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[])>("events", $r10, $r1, null);
+
+        return $i1;
+    }
+
+    public long a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r7, $r8;
+        java.util.Date $r5, $r6;
+        boolean $z0;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.util.Date;
+
+        $r6 := @parameter5: java.util.Date;
+
+        $z0 := @parameter6: boolean;
+
+        $r7 := @parameter7: java.lang.String;
+
+        $r8 := @parameter8: java.lang.String;
+
+        $l0 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: long a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Date,java.util.Date,boolean,java.lang.String,java.lang.String,boolean,java.lang.String)>($r1, $r2, $r3, $r4, $r5, $r6, $z0, $r7, $r8, 0, "");
+
+        return $l0;
+    }
+
+    public long a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, java.lang.String, java.lang.String, boolean, java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r7, $r8, $r9;
+        java.util.Date $r5, $r6;
+        boolean $z0, $z1;
+        android.content.ContentValues $r10;
+        android.database.sqlite.SQLiteDatabase $r11;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.util.Date;
+
+        $r6 := @parameter5: java.util.Date;
+
+        $z0 := @parameter6: boolean;
+
+        $r7 := @parameter7: java.lang.String;
+
+        $r8 := @parameter8: java.lang.String;
+
+        $z1 := @parameter9: boolean;
+
+        $r9 := @parameter10: java.lang.String;
+
+        $r10 = specialinvoke $r0.<com.seattleclouds.modules.calendar.q: android.content.ContentValues b(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Date,java.util.Date,boolean,java.lang.String,java.lang.String,boolean,java.lang.String)>($r1, $r2, $r3, $r4, $r5, $r6, $z0, $r7, $r8, 0, "");
+
+        $r11 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $l0 = virtualinvoke $r11.<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)>("events", null, $r10);
+
+        return $l0;
+    }
+
+    public android.database.Cursor a(long)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        long $l0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        java.lang.String[] $r2;
+        java.lang.StringBuilder $r3;
+        java.lang.String $r4;
+        android.database.Cursor $r5;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $l0 := @parameter0: long;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getReadableDatabase()>();
+
+        $r2 = newarray (java.lang.String)[12];
+
+        $r2[0] = "_id";
+
+        $r2[1] = "recurring_event_id";
+
+        $r2[2] = "title";
+
+        $r2[3] = "category";
+
+        $r2[4] = "location";
+
+        $r2[5] = "start_date";
+
+        $r2[6] = "end_date";
+
+        $r2[7] = "is_all_day";
+
+        $r2[8] = "case_number";
+
+        $r2[9] = "reference";
+
+        $r2[10] = "is_synced_event";
+
+        $r2[11] = "description";
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_id = ");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>("events", $r2, $r4, null, null, null, null);
+
+        if $r5 == null goto label1;
+
+        interfaceinvoke $r5.<android.database.Cursor: boolean moveToFirst()>();
+
+     label1:
+        return $r5;
+    }
+
+    public android.database.Cursor a(java.util.Date)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        java.util.Date $r1, $r4;
+        java.lang.String[] $r2, $r6;
+        java.util.Calendar $r3;
+        android.database.sqlite.SQLiteDatabase $r5;
+        long $l0;
+        java.lang.String $r7;
+        android.database.Cursor $r8;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: java.util.Date;
+
+        $r3 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar b(java.util.Date)>($r1);
+
+        $r4 = virtualinvoke $r3.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r3 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar c(java.util.Date)>($r1);
+
+        $r1 = virtualinvoke $r3.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getReadableDatabase()>();
+
+        $r6 = newarray (java.lang.String)[11];
+
+        $r6[0] = "_id";
+
+        $r6[1] = "recurring_event_id";
+
+        $r6[2] = "title";
+
+        $r6[3] = "category";
+
+        $r6[4] = "location";
+
+        $r6[5] = "case_number";
+
+        $r6[6] = "reference";
+
+        $r6[7] = "start_date";
+
+        $r6[8] = "end_date";
+
+        $r6[9] = "is_all_day";
+
+        $r6[10] = "is_synced_event";
+
+        $r2 = newarray (java.lang.String)[2];
+
+        $l0 = virtualinvoke $r4.<java.util.Date: long getTime()>();
+
+        $r7 = staticinvoke <java.lang.Long: java.lang.String toString(long)>($l0);
+
+        $r2[0] = $r7;
+
+        $l0 = virtualinvoke $r1.<java.util.Date: long getTime()>();
+
+        $r7 = staticinvoke <java.lang.Long: java.lang.String toString(long)>($l0);
+
+        $r2[1] = $r7;
+
+        $r8 = virtualinvoke $r5.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>("events", $r6, "end_date >= ? AND start_date <= ?", $r2, null, null, "is_all_day DESC, start_date , end_date");
+
+        return $r8;
+    }
+
+    public com.seattleclouds.modules.calendar.g a(android.database.Cursor)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        android.database.Cursor $r1;
+        com.seattleclouds.modules.calendar.g $r2;
+        boolean $z0, $z1;
+        int $i0;
+        long $l1;
+        java.lang.String $r3;
+        java.util.Date $r4;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: android.database.Cursor;
+
+        $z0 = 1;
+
+        $r2 = new com.seattleclouds.modules.calendar.g;
+
+        specialinvoke $r2.<com.seattleclouds.modules.calendar.g: void <init>()>();
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("_id");
+
+        $l1 = interfaceinvoke $r1.<android.database.Cursor: long getLong(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void a(long)>($l1);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("recurring_event_id");
+
+        $r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void a(java.lang.String)>($r3);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("title");
+
+        $r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void b(java.lang.String)>($r3);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("category");
+
+        $r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void c(java.lang.String)>($r3);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("location");
+
+        $r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void d(java.lang.String)>($r3);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("case_number");
+
+        $r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void e(java.lang.String)>($r3);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("reference");
+
+        $r3 = interfaceinvoke $r1.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void f(java.lang.String)>($r3);
+
+        $r4 = new java.util.Date;
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("start_date");
+
+        $l1 = interfaceinvoke $r1.<android.database.Cursor: long getLong(int)>($i0);
+
+        specialinvoke $r4.<java.util.Date: void <init>(long)>($l1);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void a(java.util.Date)>($r4);
+
+        $r4 = new java.util.Date;
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("end_date");
+
+        $l1 = interfaceinvoke $r1.<android.database.Cursor: long getLong(int)>($i0);
+
+        specialinvoke $r4.<java.util.Date: void <init>(long)>($l1);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void b(java.util.Date)>($r4);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("is_all_day");
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getInt(int)>($i0);
+
+        if $i0 != 1 goto label3;
+
+        $z1 = 1;
+
+     label1:
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void a(boolean)>($z1);
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getColumnIndex(java.lang.String)>("is_synced_event");
+
+        $i0 = interfaceinvoke $r1.<android.database.Cursor: int getInt(int)>($i0);
+
+        if $i0 != 1 goto label4;
+
+     label2:
+        virtualinvoke $r2.<com.seattleclouds.modules.calendar.g: void b(boolean)>($z0);
+
+        return $r2;
+
+     label3:
+        $z1 = 0;
+
+        goto label1;
+
+     label4:
+        $z0 = 0;
+
+        goto label2;
+    }
+
+    public java.util.Set a(java.util.Date, java.util.Date)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        java.util.Date $r1, $r2;
+        java.util.HashSet $r3;
+        java.util.Calendar $r4, $r5, $r12;
+        android.database.sqlite.SQLiteDatabase $r6;
+        java.lang.String[] $r7;
+        java.lang.StringBuilder $r8;
+        long $l0;
+        java.lang.String $r9;
+        android.database.Cursor $r10;
+        int $i1, $i2, $i3;
+        boolean $z0;
+        java.lang.Object $r11;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: java.util.Date;
+
+        $r2 := @parameter1: java.util.Date;
+
+        $r3 = new java.util.HashSet;
+
+        specialinvoke $r3.<java.util.HashSet: void <init>()>();
+
+        $r4 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar b(java.util.Date)>($r1);
+
+        $r5 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar c(java.util.Date)>($r2);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getReadableDatabase()>();
+
+        $r7 = newarray (java.lang.String)[2];
+
+        $r7[0] = "start_date";
+
+        $r7[1] = "end_date";
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("end_date >= ");
+
+        $l0 = virtualinvoke $r4.<java.util.Calendar: long getTimeInMillis()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" AND ");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("start_date");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" <= ");
+
+        $l0 = virtualinvoke $r5.<java.util.Calendar: long getTimeInMillis()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r10 = virtualinvoke $r6.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>("events", $r7, $r9, null, null, null, null);
+
+        if $r10 == null goto label5;
+
+        $i1 = interfaceinvoke $r10.<android.database.Cursor: int getColumnIndex(java.lang.String)>("start_date");
+
+        $i2 = interfaceinvoke $r10.<android.database.Cursor: int getColumnIndex(java.lang.String)>("end_date");
+
+        interfaceinvoke $r10.<android.database.Cursor: boolean moveToFirst()>();
+
+     label1:
+        $z0 = interfaceinvoke $r10.<android.database.Cursor: boolean isAfterLast()>();
+
+        if $z0 != 0 goto label4;
+
+        $r1 = new java.util.Date;
+
+        $l0 = interfaceinvoke $r10.<android.database.Cursor: long getLong(int)>($i1);
+
+        specialinvoke $r1.<java.util.Date: void <init>(long)>($l0);
+
+        $l0 = interfaceinvoke $r10.<android.database.Cursor: long getLong(int)>($i2);
+
+        $r4 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar a(long)>($l0);
+
+        $r5 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar b(java.util.Date)>($r1);
+
+     label2:
+        $i3 = virtualinvoke $r5.<java.util.Calendar: int compareTo(java.util.Calendar)>($r4);
+
+        if $i3 > 0 goto label3;
+
+        $r11 = virtualinvoke $r5.<java.util.Calendar: java.lang.Object clone()>();
+
+        $r12 = (java.util.Calendar) $r11;
+
+        interfaceinvoke $r3.<java.util.Set: boolean add(java.lang.Object)>($r12);
+
+        virtualinvoke $r5.<java.util.Calendar: void add(int,int)>(6, 1);
+
+        goto label2;
+
+     label3:
+        interfaceinvoke $r10.<android.database.Cursor: boolean moveToNext()>();
+
+        goto label1;
+
+     label4:
+        interfaceinvoke $r10.<android.database.Cursor: void close()>();
+
+     label5:
+        return $r3;
+    }
+
+    public boolean a()
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $i0 = virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: int delete(java.lang.String,java.lang.String,java.lang.String[])>("events", "is_synced_event=\'1\'", null);
+
+        if $i0 <= 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public boolean a(java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        java.lang.String $r1;
+        android.database.sqlite.SQLiteDatabase $r2;
+        java.lang.StringBuilder $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("recurring_event_id=\'");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\'");
+
+        $r1 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i0 = virtualinvoke $r2.<android.database.sqlite.SQLiteDatabase: int delete(java.lang.String,java.lang.String,java.lang.String[])>("events", $r1, null);
+
+        if $i0 <= 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public android.database.Cursor b(java.util.Date, java.util.Date)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        java.util.Date $r1, $r2;
+        java.lang.String[] $r3, $r6;
+        java.util.Calendar $r4;
+        android.database.sqlite.SQLiteDatabase $r5;
+        long $l0;
+        java.lang.String $r7;
+        android.database.Cursor $r8;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: java.util.Date;
+
+        $r2 := @parameter1: java.util.Date;
+
+        $r4 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar b(java.util.Date)>($r1);
+
+        $r1 = virtualinvoke $r4.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r4 = staticinvoke <com.seattleclouds.util.bo: java.util.Calendar c(java.util.Date)>($r2);
+
+        $r2 = virtualinvoke $r4.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getReadableDatabase()>();
+
+        $r6 = newarray (java.lang.String)[11];
+
+        $r6[0] = "_id";
+
+        $r6[1] = "recurring_event_id";
+
+        $r6[2] = "title";
+
+        $r6[3] = "category";
+
+        $r6[4] = "location";
+
+        $r6[5] = "case_number";
+
+        $r6[6] = "reference";
+
+        $r6[7] = "start_date";
+
+        $r6[8] = "end_date";
+
+        $r6[9] = "is_all_day";
+
+        $r6[10] = "is_synced_event";
+
+        $r3 = newarray (java.lang.String)[2];
+
+        $l0 = virtualinvoke $r1.<java.util.Date: long getTime()>();
+
+        $r7 = staticinvoke <java.lang.Long: java.lang.String toString(long)>($l0);
+
+        $r3[0] = $r7;
+
+        $l0 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        $r7 = staticinvoke <java.lang.Long: java.lang.String toString(long)>($l0);
+
+        $r3[1] = $r7;
+
+        $r8 = virtualinvoke $r5.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>("events", $r6, "end_date >= ? AND start_date <= ?", $r3, null, null, "start_date");
+
+        return $r8;
+    }
+
+    public boolean b(long)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        long $l0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+        int $i1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $l0 := @parameter0: long;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.calendar.q: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_id=");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i1 = virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: int delete(java.lang.String,java.lang.String,java.lang.String[])>("events", $r3, null);
+
+        if $i1 <= 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public void onCreate(android.database.sqlite.SQLiteDatabase)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: android.database.sqlite.SQLiteDatabase;
+
+        virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>("CREATE TABLE events (_id INTEGER PRIMARY KEY AUTOINCREMENT,recurring_event_id TEXT,title TEXT,category TEXT NOT NULL,location TEXT,start_date INTEGER NOT NULL,end_date INTEGER NOT NULL,is_all_day INTEGER NOT NULL DEFAULT 0,case_number TEXT,reference TEXT,is_synced_event INTEGER NOT NULL DEFAULT 0,description TEXT DEFAULT \'\',extra TEXT)");
+
+        return;
+    }
+
+    public void onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
+    {
+        com.seattleclouds.modules.calendar.q $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        int $i0, $i1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.q;
+
+        $r1 := @parameter0: android.database.sqlite.SQLiteDatabase;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("onUpgrade() from ");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" to ");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i1);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("DatabaseHelper", $r3);
+
+        lookupswitch($i0)
+        {
+            case 1: goto label2;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>("ALTER TABLE events ADD is_synced_event INTEGER NOT NULL DEFAULT 0");
+
+        virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>("ALTER TABLE events ADD description TEXT DEFAULT \'\'");
+
+        return;
+    }
+}

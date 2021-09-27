@@ -1,0 +1,29 @@
+interface  com.seattleclouds.media.a.c extends java.lang.Object
+{
+
+    public abstract int a();
+
+    public abstract void a(long);
+
+    public abstract void a(android.os.Bundle);
+
+    public abstract void a(android.support.v4.media.session.MediaSessionCompat$QueueItem);
+
+    public abstract void a(boolean);
+
+    public abstract boolean b();
+
+    public abstract boolean c();
+
+    public abstract long d();
+
+    public abstract void e();
+
+    public abstract void f();
+
+    public abstract void g();
+
+    public abstract void h();
+
+    public abstract android.os.Bundle i();
+}

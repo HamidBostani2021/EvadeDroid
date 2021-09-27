@@ -1,0 +1,337 @@
+public final class com.revmob.a.a extends java.lang.Object
+{
+    private static int a;
+    private static int b;
+
+    public void <init>()
+    {
+        com.revmob.a.a $r0;
+
+        $r0 := @this: com.revmob.a.a;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static int a()
+    {
+        int i0;
+
+        i0 = <com.revmob.a.a: int a>;
+
+        return i0;
+    }
+
+    public static int a(android.content.Context, int)
+    {
+        android.content.Context $r0;
+        int $i0;
+        android.content.res.Resources $r1;
+        android.util.DisplayMetrics $r2;
+        float $f0, $f1;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $i0 := @parameter1: int;
+
+        $r1 = virtualinvoke $r0.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        $f0 = $r2.<android.util.DisplayMetrics: float density>;
+
+        $f1 = (float) $i0;
+
+        $f0 = $f0 * $f1;
+
+        $f0 = $f0 + 0.5F;
+
+        $i0 = (int) $f0;
+
+        return $i0;
+    }
+
+    public static com.revmob.a.b a(android.content.Context)
+    {
+        android.content.Context $r0;
+        android.os.Looper $r1, $r2;
+        java.lang.IllegalStateException $r3;
+        android.content.pm.PackageManager $r4;
+        com.revmob.a.c $r5;
+        android.content.Intent $r6;
+        boolean $z0;
+        com.revmob.a.d $r7;
+        android.os.IBinder $r8;
+        com.revmob.a.b $r9;
+        java.lang.String $r10;
+        java.lang.Exception $r11, $r13;
+        com.revmob.internal.w $r12;
+        java.lang.Throwable $r14;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 = staticinvoke <android.os.Looper: android.os.Looper myLooper()>();
+
+        $r2 = staticinvoke <android.os.Looper: android.os.Looper getMainLooper()>();
+
+        if $r1 != $r2 goto label01;
+
+        $r3 = new java.lang.IllegalStateException;
+
+        specialinvoke $r3.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Cannot be called from the main thread");
+
+        throw $r3;
+
+     label01:
+        $r4 = virtualinvoke $r0.<android.content.Context: android.content.pm.PackageManager getPackageManager()>();
+
+        virtualinvoke $r4.<android.content.pm.PackageManager: android.content.pm.PackageInfo getPackageInfo(java.lang.String,int)>("com.android.vending", 0);
+
+     label02:
+        $r5 = new com.revmob.a.c;
+
+        specialinvoke $r5.<com.revmob.a.c: void <init>(byte)>(0);
+
+        $r6 = new android.content.Intent;
+
+        specialinvoke $r6.<android.content.Intent: void <init>(java.lang.String)>("com.google.android.gms.ads.identifier.service.START");
+
+        virtualinvoke $r6.<android.content.Intent: android.content.Intent setPackage(java.lang.String)>("com.google.android.gms");
+
+        $z0 = virtualinvoke $r0.<android.content.Context: boolean bindService(android.content.Intent,android.content.ServiceConnection,int)>($r6, $r5, 1);
+
+        if $z0 == 0 goto label12;
+
+     label03:
+        $r7 = new com.revmob.a.d;
+
+     label04:
+        $r8 = virtualinvoke $r5.<com.revmob.a.c: android.os.IBinder a()>();
+
+        specialinvoke $r7.<com.revmob.a.d: void <init>(android.os.IBinder)>($r8);
+
+     label05:
+        $r9 = new com.revmob.a.b;
+
+     label06:
+        $r10 = virtualinvoke $r7.<com.revmob.a.d: java.lang.String a()>();
+
+        $z0 = virtualinvoke $r7.<com.revmob.a.d: boolean b()>();
+
+        specialinvoke $r9.<com.revmob.a.b: void <init>(java.lang.String,boolean)>($r10, $z0);
+
+     label07:
+        virtualinvoke $r0.<android.content.Context: void unbindService(android.content.ServiceConnection)>($r5);
+
+        return $r9;
+
+     label08:
+        $r11 := @caughtexception;
+
+        $r12 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r11, null, $r12, null, "getAdvertisingIdInfo1");
+
+        throw $r11;
+
+     label09:
+        $r13 := @caughtexception;
+
+     label10:
+        $r12 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r13, null, $r12, null, "getAdvertisingIdInfo2");
+
+        throw $r13;
+
+     label11:
+        $r14 := @caughtexception;
+
+        virtualinvoke $r0.<android.content.Context: void unbindService(android.content.ServiceConnection)>($r5);
+
+        throw $r14;
+
+     label12:
+        return null;
+
+        catch java.lang.Exception from label01 to label02 with label08;
+        catch java.lang.Exception from label04 to label05 with label09;
+        catch java.lang.Exception from label06 to label07 with label09;
+        catch java.lang.Throwable from label03 to label07 with label11;
+        catch java.lang.Throwable from label10 to label11 with label11;
+    }
+
+    public static java.lang.String a(java.lang.String)
+    {
+        java.lang.String $r0;
+        java.lang.StringBuilder $r1;
+        int $i0, $i2, $i4, $i5;
+        byte $b1, $b3;
+        java.security.MessageDigest $r2;
+        byte[] $r3;
+        char $c6;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r2 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA-1");
+
+        $r3 = virtualinvoke $r0.<java.lang.String: byte[] getBytes(java.lang.String)>("iso-8859-1");
+
+        $i0 = virtualinvoke $r0.<java.lang.String: int length()>();
+
+        virtualinvoke $r2.<java.security.MessageDigest: void update(byte[],int,int)>($r3, 0, $i0);
+
+        $r3 = virtualinvoke $r2.<java.security.MessageDigest: byte[] digest()>();
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $i0 = lengthof $r3;
+
+        $i2 = 0;
+
+     label1:
+        if $i2 >= $i0 goto label5;
+
+        $b1 = $r3[$i2];
+
+        $b3 = $b1 >>> 4;
+
+        $b3 = $b3 & 15;
+
+        $i4 = 0;
+
+     label2:
+        if $b3 < 0 goto label4;
+
+        if $b3 > 9 goto label4;
+
+        $i5 = $b3 + 48;
+
+        $c6 = (char) $i5;
+
+     label3:
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>($c6);
+
+        if $i4 <= 0 goto label6;
+
+        $i2 = $i2 + 1;
+
+        goto label1;
+
+     label4:
+        $i5 = $b3 + -10;
+
+        $i5 = $i5 + 97;
+
+        $c6 = (char) $i5;
+
+        goto label3;
+
+     label5:
+        $r0 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r0;
+
+     label6:
+        $i4 = $i4 + 1;
+
+        $b3 = $b1 & 15;
+
+        goto label2;
+    }
+
+    public static void a(android.app.Activity)
+    {
+        android.app.Activity $r0;
+        android.util.DisplayMetrics $r1;
+        android.view.WindowManager $r2;
+        android.view.Display $r3;
+        int $i0;
+        float $f0;
+
+        $r0 := @parameter0: android.app.Activity;
+
+        $r1 = new android.util.DisplayMetrics;
+
+        specialinvoke $r1.<android.util.DisplayMetrics: void <init>()>();
+
+        $r2 = virtualinvoke $r0.<android.app.Activity: android.view.WindowManager getWindowManager()>();
+
+        $r3 = interfaceinvoke $r2.<android.view.WindowManager: android.view.Display getDefaultDisplay()>();
+
+        virtualinvoke $r3.<android.view.Display: void getMetrics(android.util.DisplayMetrics)>($r1);
+
+        $i0 = $r1.<android.util.DisplayMetrics: int widthPixels>;
+
+        <com.revmob.a.a: int a> = $i0;
+
+        $i0 = $r1.<android.util.DisplayMetrics: int heightPixels>;
+
+        <com.revmob.a.a: int b> = $i0;
+
+        $f0 = $r1.<android.util.DisplayMetrics: float density>;
+
+        $i0 = $r1.<android.util.DisplayMetrics: int densityDpi>;
+
+        return;
+    }
+
+    public static boolean a(android.content.Context, java.lang.Class)
+    {
+        android.content.Context $r0;
+        java.lang.Class $r1;
+        android.content.pm.PackageManager $r2;
+        android.content.Intent $r3;
+        java.util.List $r4;
+        int $i0;
+        java.lang.Exception $r5;
+        com.revmob.internal.w $r6;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: java.lang.Class;
+
+     label1:
+        $r2 = virtualinvoke $r0.<android.content.Context: android.content.pm.PackageManager getPackageManager()>();
+
+     label2:
+        $r3 = new android.content.Intent;
+
+     label3:
+        specialinvoke $r3.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, $r1);
+
+        $r4 = virtualinvoke $r2.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>($r3, 65536);
+
+        $i0 = interfaceinvoke $r4.<java.util.List: int size()>();
+
+     label4:
+        if $i0 <= 0 goto label6;
+
+        return 1;
+
+     label5:
+        $r5 := @caughtexception;
+
+        $r6 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r5, null, $r6, null, "isIntentAvailable2");
+
+     label6:
+        return 0;
+
+        catch java.lang.Exception from label1 to label2 with label5;
+        catch java.lang.Exception from label3 to label4 with label5;
+    }
+
+    public static int b()
+    {
+        int i0;
+
+        i0 = <com.revmob.a.a: int b>;
+
+        return i0;
+    }
+}

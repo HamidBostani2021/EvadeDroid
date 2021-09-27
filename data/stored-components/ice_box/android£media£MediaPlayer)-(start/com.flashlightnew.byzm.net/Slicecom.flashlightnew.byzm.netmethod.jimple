@@ -1,0 +1,19 @@
+public class Slicecom.flashlightnew.byzm.netmethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.flashlightnew.byzm.netmethod this;
+        com.flashlightnew.byzm.net.MainActivity$ButtonListener $r4;
+
+        this := @this: Slicecom.flashlightnew.byzm.netmethod;
+
+        $r4 = new com.flashlightnew.byzm.net.MainActivity$ButtonListener;
+
+        $r4 = null;
+
+        virtualinvoke $r4.<com.flashlightnew.byzm.net.MainActivity$ButtonListener: void onClick(android.view.View)>(null);
+
+        return;
+    }
+}

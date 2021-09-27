@@ -1,0 +1,1 @@
+com.jb.gokeyboard.langpack.guide.GuideActivity

@@ -1,0 +1,129 @@
+class com.facebook.login.l extends java.lang.Object implements com.facebook.internal.bd
+{
+    final android.os.Bundle a;
+    final com.facebook.login.LoginClient$Request b;
+    final com.facebook.login.GetTokenLoginMethodHandler c;
+
+    void <init>(com.facebook.login.GetTokenLoginMethodHandler, android.os.Bundle, com.facebook.login.LoginClient$Request)
+    {
+        com.facebook.login.l $r0;
+        com.facebook.login.GetTokenLoginMethodHandler $r1;
+        android.os.Bundle $r2;
+        com.facebook.login.LoginClient$Request $r3;
+
+        $r0 := @this: com.facebook.login.l;
+
+        $r1 := @parameter0: com.facebook.login.GetTokenLoginMethodHandler;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        $r3 := @parameter2: com.facebook.login.LoginClient$Request;
+
+        $r0.<com.facebook.login.l: com.facebook.login.GetTokenLoginMethodHandler c> = $r1;
+
+        $r0.<com.facebook.login.l: android.os.Bundle a> = $r2;
+
+        $r0.<com.facebook.login.l: com.facebook.login.LoginClient$Request b> = $r3;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(com.facebook.FacebookException)
+    {
+        com.facebook.login.l $r0;
+        com.facebook.FacebookException $r1;
+        com.facebook.login.GetTokenLoginMethodHandler $r2;
+        com.facebook.login.LoginClient $r3, $r4;
+        com.facebook.login.LoginClient$Request $r5;
+        java.lang.String $r6;
+        com.facebook.login.LoginClient$Result $r7;
+
+        $r0 := @this: com.facebook.login.l;
+
+        $r1 := @parameter0: com.facebook.FacebookException;
+
+        $r2 = $r0.<com.facebook.login.l: com.facebook.login.GetTokenLoginMethodHandler c>;
+
+        $r3 = $r2.<com.facebook.login.GetTokenLoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r2 = $r0.<com.facebook.login.l: com.facebook.login.GetTokenLoginMethodHandler c>;
+
+        $r4 = $r2.<com.facebook.login.GetTokenLoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r5 = virtualinvoke $r4.<com.facebook.login.LoginClient: com.facebook.login.LoginClient$Request c()>();
+
+        $r6 = virtualinvoke $r1.<com.facebook.FacebookException: java.lang.String getMessage()>();
+
+        $r7 = staticinvoke <com.facebook.login.LoginClient$Result: com.facebook.login.LoginClient$Result a(com.facebook.login.LoginClient$Request,java.lang.String,java.lang.String)>($r5, "Caught exception", $r6);
+
+        virtualinvoke $r3.<com.facebook.login.LoginClient: void b(com.facebook.login.LoginClient$Result)>($r7);
+
+        return;
+    }
+
+    public void a(org.json.JSONObject)
+    {
+        com.facebook.login.l $r0;
+        org.json.JSONObject $r1;
+        java.lang.String $r2;
+        android.os.Bundle $r3;
+        com.facebook.login.GetTokenLoginMethodHandler $r4;
+        com.facebook.login.LoginClient$Request $r5;
+        org.json.JSONException $r6;
+        com.facebook.login.LoginClient $r7, $r8;
+        com.facebook.login.LoginClient$Result $r9;
+
+        $r0 := @this: com.facebook.login.l;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+     label1:
+        $r2 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+     label2:
+        $r3 = $r0.<com.facebook.login.l: android.os.Bundle a>;
+
+     label3:
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("com.facebook.platform.extra.USER_ID", $r2);
+
+     label4:
+        $r4 = $r0.<com.facebook.login.l: com.facebook.login.GetTokenLoginMethodHandler c>;
+
+        $r5 = $r0.<com.facebook.login.l: com.facebook.login.LoginClient$Request b>;
+
+        $r3 = $r0.<com.facebook.login.l: android.os.Bundle a>;
+
+     label5:
+        virtualinvoke $r4.<com.facebook.login.GetTokenLoginMethodHandler: void b(com.facebook.login.LoginClient$Request,android.os.Bundle)>($r5, $r3);
+
+     label6:
+        return;
+
+     label7:
+        $r6 := @caughtexception;
+
+        $r4 = $r0.<com.facebook.login.l: com.facebook.login.GetTokenLoginMethodHandler c>;
+
+        $r7 = $r4.<com.facebook.login.GetTokenLoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r4 = $r0.<com.facebook.login.l: com.facebook.login.GetTokenLoginMethodHandler c>;
+
+        $r8 = $r4.<com.facebook.login.GetTokenLoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r5 = virtualinvoke $r8.<com.facebook.login.LoginClient: com.facebook.login.LoginClient$Request c()>();
+
+        $r2 = virtualinvoke $r6.<org.json.JSONException: java.lang.String getMessage()>();
+
+        $r9 = staticinvoke <com.facebook.login.LoginClient$Result: com.facebook.login.LoginClient$Result a(com.facebook.login.LoginClient$Request,java.lang.String,java.lang.String)>($r5, "Caught exception", $r2);
+
+        virtualinvoke $r7.<com.facebook.login.LoginClient: void b(com.facebook.login.LoginClient$Result)>($r9);
+
+        return;
+
+        catch org.json.JSONException from label1 to label2 with label7;
+        catch org.json.JSONException from label3 to label4 with label7;
+        catch org.json.JSONException from label5 to label6 with label7;
+    }
+}

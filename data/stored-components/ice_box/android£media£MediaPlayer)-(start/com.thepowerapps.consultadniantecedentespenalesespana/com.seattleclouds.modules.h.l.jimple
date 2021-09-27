@@ -1,0 +1,100 @@
+class com.seattleclouds.modules.h.l extends java.lang.Object implements android.widget.AdapterView$OnItemSelectedListener
+{
+    final com.seattleclouds.modules.h.h a;
+    final com.seattleclouds.modules.h.j b;
+
+    void <init>(com.seattleclouds.modules.h.j, com.seattleclouds.modules.h.h)
+    {
+        com.seattleclouds.modules.h.l $r0;
+        com.seattleclouds.modules.h.j $r1;
+        com.seattleclouds.modules.h.h $r2;
+
+        $r0 := @this: com.seattleclouds.modules.h.l;
+
+        $r1 := @parameter0: com.seattleclouds.modules.h.j;
+
+        $r2 := @parameter1: com.seattleclouds.modules.h.h;
+
+        $r0.<com.seattleclouds.modules.h.l: com.seattleclouds.modules.h.j b> = $r1;
+
+        $r0.<com.seattleclouds.modules.h.l: com.seattleclouds.modules.h.h a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onItemSelected(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.h.l $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        com.seattleclouds.modules.h.h $r3;
+        java.lang.String[] $r4;
+        java.lang.String $r5;
+        com.seattleclouds.modules.h.j $r6;
+        com.seattleclouds.modules.h.a $r7;
+        android.widget.TextView $r8;
+        java.lang.StringBuilder $r9;
+
+        $r0 := @this: com.seattleclouds.modules.h.l;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = $r0.<com.seattleclouds.modules.h.l: com.seattleclouds.modules.h.h a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.h.a: java.lang.String[] ac()>();
+
+        $r5 = $r4[$i0];
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r5);
+
+        $r3.<com.seattleclouds.modules.h.h: int a> = $i0;
+
+        $r6 = $r0.<com.seattleclouds.modules.h.l: com.seattleclouds.modules.h.j b>;
+
+        $r7 = $r6.<com.seattleclouds.modules.h.j: com.seattleclouds.modules.h.a a>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.h.a: android.widget.TextView b(com.seattleclouds.modules.h.a)>($r7);
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r6 = $r0.<com.seattleclouds.modules.h.l: com.seattleclouds.modules.h.j b>;
+
+        $r7 = $r6.<com.seattleclouds.modules.h.j: com.seattleclouds.modules.h.a a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.h.a: int a(com.seattleclouds.modules.h.a,java.lang.String)>($r7, "player1Property");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r8.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+        return;
+    }
+
+    public void onNothingSelected(android.widget.AdapterView)
+    {
+        com.seattleclouds.modules.h.l $r0;
+        android.widget.AdapterView $r1;
+
+        $r0 := @this: com.seattleclouds.modules.h.l;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        return;
+    }
+}

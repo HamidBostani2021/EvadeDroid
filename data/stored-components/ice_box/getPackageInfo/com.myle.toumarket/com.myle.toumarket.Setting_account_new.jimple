@@ -1,0 +1,341 @@
+public class com.myle.toumarket.Setting_account_new extends android.app.Activity implements android.view.View$OnClickListener
+{
+    android.widget.EditText adresse_ip;
+    android.widget.Button button;
+    android.widget.Button button2;
+    android.content.Context context;
+    android.widget.TextView message_erreur;
+    com.myle.toumarket.MyApplication myApplication;
+    android.widget.EditText seller_msisdn;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+
+        $r0 := @this: com.myle.toumarket.Setting_account_new;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    static void access$0(com.myle.toumarket.Setting_account_new, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+        java.lang.String $r1, $r2;
+
+        $r0 := @parameter0: com.myle.toumarket.Setting_account_new;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.lang.String;
+
+        specialinvoke $r0.<com.myle.toumarket.Setting_account_new: void savePreferences(java.lang.String,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+
+    private void loadSavedPreferences()
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+        android.content.SharedPreferences $r1;
+        android.widget.EditText $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.myle.toumarket.Setting_account_new;
+
+        $r1 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("TOUMARKET_PREF", 0);
+
+        $r2 = $r0.<com.myle.toumarket.Setting_account_new: android.widget.EditText seller_msisdn>;
+
+        $r3 = interfaceinvoke $r1.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("seller_msisdn", "");
+
+        virtualinvoke $r2.<android.widget.EditText: void setText(java.lang.CharSequence)>($r3);
+
+        $r2 = $r0.<com.myle.toumarket.Setting_account_new: android.widget.EditText adresse_ip>;
+
+        $r3 = interfaceinvoke $r1.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("adresse_ip", "192.168.100.100");
+
+        virtualinvoke $r2.<android.widget.EditText: void setText(java.lang.CharSequence)>($r3);
+
+        return;
+    }
+
+    private void savePreferences(java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+        java.lang.String $r1, $r2;
+        android.content.SharedPreferences $r3;
+        android.content.SharedPreferences$Editor $r4;
+
+        $r0 := @this: com.myle.toumarket.Setting_account_new;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("TOUMARKET_PREF", 0);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r1, $r2);
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+    }
+
+    public void demander_lesdroits()
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+        android.app.ProgressDialog $r1;
+        java.lang.Thread $r2;
+        com.myle.toumarket.Setting_account_new$3 $r3;
+
+        $r0 := @this: com.myle.toumarket.Setting_account_new;
+
+        $r1 = staticinvoke <android.app.ProgressDialog: android.app.ProgressDialog show(android.content.Context,java.lang.CharSequence,java.lang.CharSequence,boolean)>($r0, "CONNECTION STATUS  ...", "Loading ...", 1);
+
+        virtualinvoke $r1.<android.app.ProgressDialog: void setCancelable(boolean)>(0);
+
+        $r2 = new java.lang.Thread;
+
+        $r3 = new com.myle.toumarket.Setting_account_new$3;
+
+        specialinvoke $r3.<com.myle.toumarket.Setting_account_new$3: void <init>(com.myle.toumarket.Setting_account_new,android.app.ProgressDialog)>($r0, $r1);
+
+        specialinvoke $r2.<java.lang.Thread: void <init>(java.lang.Runnable)>($r3);
+
+        virtualinvoke $r2.<java.lang.Thread: void start()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+        android.view.View $r1;
+        android.app.AlertDialog$Builder $r2;
+        int $i0;
+        com.myle.toumarket.Setting_account_new$1 $r3;
+        com.myle.toumarket.Setting_account_new$2 $r4;
+
+        $r0 := @this: com.myle.toumarket.Setting_account_new;
+
+        $r1 := @parameter0: android.view.View;
+
+        $i0 = virtualinvoke $r1.<android.view.View: int getId()>();
+
+        lookupswitch($i0)
+        {
+            case 2131296327: goto label2;
+            case 2131296328: goto label3;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $r2 = new android.app.AlertDialog$Builder;
+
+        specialinvoke $r2.<android.app.AlertDialog$Builder: void <init>(android.content.Context)>($r0);
+
+        virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setTitle(java.lang.CharSequence)>("MISE A JOUR CFG...");
+
+        virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setMessage(java.lang.CharSequence)>("Voulez Vous Mettre \u00e0 Jour Ces Param\u00e8tres ?");
+
+        virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setIcon(int)>(2130837557);
+
+        $r3 = new com.myle.toumarket.Setting_account_new$1;
+
+        specialinvoke $r3.<com.myle.toumarket.Setting_account_new$1: void <init>(com.myle.toumarket.Setting_account_new)>($r0);
+
+        virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("YES", $r3);
+
+        $r4 = new com.myle.toumarket.Setting_account_new$2;
+
+        specialinvoke $r4.<com.myle.toumarket.Setting_account_new$2: void <init>(com.myle.toumarket.Setting_account_new)>($r0);
+
+        virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setNegativeButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("NO", $r4);
+
+        virtualinvoke $r2.<android.app.AlertDialog$Builder: android.app.AlertDialog show()>();
+
+        return;
+
+     label3:
+        specialinvoke $r0.<com.myle.toumarket.Setting_account_new: void savePreferences(java.lang.String,java.lang.String)>("seller_msisdn", "");
+
+        specialinvoke $r0.<com.myle.toumarket.Setting_account_new: void savePreferences(java.lang.String,java.lang.String)>("adresse_ip", "192.168.100.100");
+
+        virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: void finish()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+        android.os.Bundle $r1;
+        android.content.Context $r2;
+        com.myle.toumarket.MyApplication $r3;
+        android.view.View $r4;
+        android.widget.EditText $r5;
+        android.widget.Button $r6;
+        android.widget.TextView $r7;
+
+        $r0 := @this: com.myle.toumarket.Setting_account_new;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: void setContentView(int)>(2130903066);
+
+        $r0.<com.myle.toumarket.Setting_account_new: android.content.Context context> = $r0;
+
+        $r2 = $r0.<com.myle.toumarket.Setting_account_new: android.content.Context context>;
+
+        $r2 = virtualinvoke $r2.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        $r3 = (com.myle.toumarket.MyApplication) $r2;
+
+        $r0.<com.myle.toumarket.Setting_account_new: com.myle.toumarket.MyApplication myApplication> = $r3;
+
+        $r4 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.view.View findViewById(int)>(2131296324);
+
+        $r5 = (android.widget.EditText) $r4;
+
+        $r0.<com.myle.toumarket.Setting_account_new: android.widget.EditText seller_msisdn> = $r5;
+
+        $r4 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.view.View findViewById(int)>(2131296326);
+
+        $r5 = (android.widget.EditText) $r4;
+
+        $r0.<com.myle.toumarket.Setting_account_new: android.widget.EditText adresse_ip> = $r5;
+
+        $r4 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.view.View findViewById(int)>(2131296327);
+
+        $r6 = (android.widget.Button) $r4;
+
+        $r0.<com.myle.toumarket.Setting_account_new: android.widget.Button button> = $r6;
+
+        $r4 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.view.View findViewById(int)>(2131296328);
+
+        $r6 = (android.widget.Button) $r4;
+
+        $r0.<com.myle.toumarket.Setting_account_new: android.widget.Button button2> = $r6;
+
+        $r4 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.view.View findViewById(int)>(2131296329);
+
+        $r7 = (android.widget.TextView) $r4;
+
+        $r0.<com.myle.toumarket.Setting_account_new: android.widget.TextView message_erreur> = $r7;
+
+        $r6 = $r0.<com.myle.toumarket.Setting_account_new: android.widget.Button button>;
+
+        virtualinvoke $r6.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r0);
+
+        $r6 = $r0.<com.myle.toumarket.Setting_account_new: android.widget.Button button2>;
+
+        virtualinvoke $r6.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r0);
+
+        specialinvoke $r0.<com.myle.toumarket.Setting_account_new: void loadSavedPreferences()>();
+
+        return;
+    }
+
+    public boolean verif_addresse_ip()
+    {
+        com.myle.toumarket.Setting_account_new $r0;
+        android.widget.EditText $r1;
+        android.text.Editable $r2;
+        java.lang.String $r3;
+        boolean $z0;
+        android.content.Context $r4;
+        android.widget.Toast $r5;
+
+        $r0 := @this: com.myle.toumarket.Setting_account_new;
+
+        $r1 = $r0.<com.myle.toumarket.Setting_account_new: android.widget.EditText adresse_ip>;
+
+        $r2 = virtualinvoke $r1.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r3 = interfaceinvoke $r2.<android.text.Editable: java.lang.String toString()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String trim()>();
+
+        if $r3 == null goto label1;
+
+        $r1 = $r0.<com.myle.toumarket.Setting_account_new: android.widget.EditText adresse_ip>;
+
+        $r2 = virtualinvoke $r1.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r3 = interfaceinvoke $r2.<android.text.Editable: java.lang.String toString()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String toString()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String trim()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        $r4 = virtualinvoke $r0.<com.myle.toumarket.Setting_account_new: android.content.Context getApplicationContext()>();
+
+        $r5 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r4, "Veuillez remplir l\'Addresse du Serveur  !!!", 1);
+
+        virtualinvoke $r5.<android.widget.Toast: void show()>();
+
+        return 0;
+
+     label2:
+        return 1;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.myle.toumarket.Setting_account_new this;
+        android.content.Intent $r0;
+
+        this := @this: com.myle.toumarket.Setting_account_new;
+
+        $r0 = this.<com.myle.toumarket.Setting_account_new: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.myle.toumarket.Setting_account_new this;
+        android.content.Intent parameter0;
+
+        this := @this: com.myle.toumarket.Setting_account_new;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.myle.toumarket.Setting_account_new: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.myle.toumarket.Setting_account_new this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.myle.toumarket.Setting_account_new;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.myle.toumarket.Setting_account_new: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

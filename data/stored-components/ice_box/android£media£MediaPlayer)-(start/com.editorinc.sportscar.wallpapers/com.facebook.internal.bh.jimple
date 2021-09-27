@@ -1,0 +1,1062 @@
+public class com.facebook.internal.bh extends android.app.Dialog
+{
+    private java.lang.String a;
+    private java.lang.String b;
+    private com.facebook.internal.bo c;
+    private android.webkit.WebView d;
+    private android.app.ProgressDialog e;
+    private android.widget.ImageView f;
+    private android.widget.FrameLayout g;
+    private com.facebook.internal.bp h;
+    private boolean i;
+    private boolean j;
+    private boolean k;
+
+    public void <init>(android.content.Context, java.lang.String)
+    {
+        com.facebook.internal.bh $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        int $i0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 = staticinvoke <com.facebook.s: int m()>();
+
+        specialinvoke $r0.<com.facebook.internal.bh: void <init>(android.content.Context,java.lang.String,int)>($r1, $r2, $i0);
+
+        return;
+    }
+
+    public void <init>(android.content.Context, java.lang.String, int)
+    {
+        com.facebook.internal.bh $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        int $i0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 := @parameter2: int;
+
+        if $i0 != 0 goto label1;
+
+        $i0 = staticinvoke <com.facebook.s: int m()>();
+
+     label1:
+        specialinvoke $r0.<android.app.Dialog: void <init>(android.content.Context,int)>($r1, $i0);
+
+        $r0.<com.facebook.internal.bh: java.lang.String b> = "fbconnect://success";
+
+        $r0.<com.facebook.internal.bh: boolean i> = 0;
+
+        $r0.<com.facebook.internal.bh: boolean j> = 0;
+
+        $r0.<com.facebook.internal.bh: boolean k> = 0;
+
+        $r0.<com.facebook.internal.bh: java.lang.String a> = $r2;
+
+        return;
+    }
+
+    public void <init>(android.content.Context, java.lang.String, android.os.Bundle, int, com.facebook.internal.bo)
+    {
+        com.facebook.internal.bh $r0;
+        android.content.Context $r1;
+        java.lang.String $r2, $r7, $r10;
+        com.facebook.internal.bo $r3;
+        android.os.Bundle $r4;
+        int $i0;
+        java.util.Locale $r5;
+        java.lang.Object[] $r6;
+        boolean $z0;
+        com.facebook.internal.bp $r8;
+        java.lang.StringBuilder $r9;
+        android.net.Uri $r11;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r4 := @parameter2: android.os.Bundle;
+
+        $i0 := @parameter3: int;
+
+        $r3 := @parameter4: com.facebook.internal.bo;
+
+        if $i0 != 0 goto label1;
+
+        $i0 = staticinvoke <com.facebook.s: int m()>();
+
+     label1:
+        specialinvoke $r0.<android.app.Dialog: void <init>(android.content.Context,int)>($r1, $i0);
+
+        $r0.<com.facebook.internal.bh: java.lang.String b> = "fbconnect://success";
+
+        $r0.<com.facebook.internal.bh: boolean i> = 0;
+
+        $r0.<com.facebook.internal.bh: boolean j> = 0;
+
+        $r0.<com.facebook.internal.bh: boolean k> = 0;
+
+        if $r4 != null goto label2;
+
+        $r4 = new android.os.Bundle;
+
+        specialinvoke $r4.<android.os.Bundle: void <init>()>();
+
+     label2:
+        virtualinvoke $r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("redirect_uri", "fbconnect://success");
+
+        virtualinvoke $r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("display", "touch");
+
+        $r5 = <java.util.Locale: java.util.Locale ROOT>;
+
+        $r6 = newarray (java.lang.Object)[1];
+
+        $r7 = staticinvoke <com.facebook.s: java.lang.String h()>();
+
+        $r6[0] = $r7;
+
+        $r7 = staticinvoke <java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>($r5, "android-%s", $r6);
+
+        virtualinvoke $r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("sdk", $r7);
+
+        $r0.<com.facebook.internal.bh: com.facebook.internal.bo c> = $r3;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("share");
+
+        if $z0 == 0 goto label3;
+
+        $z0 = virtualinvoke $r4.<android.os.Bundle: boolean containsKey(java.lang.String)>("media");
+
+        if $z0 == 0 goto label3;
+
+        $r8 = new com.facebook.internal.bp;
+
+        specialinvoke $r8.<com.facebook.internal.bp: void <init>(com.facebook.internal.bh,java.lang.String,android.os.Bundle)>($r0, $r2, $r4);
+
+        $r0.<com.facebook.internal.bh: com.facebook.internal.bp h> = $r8;
+
+        return;
+
+     label3:
+        $r7 = staticinvoke <com.facebook.internal.aw: java.lang.String a()>();
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = staticinvoke <com.facebook.s: java.lang.String g()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("dialog/");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r11 = staticinvoke <com.facebook.internal.ax: android.net.Uri a(java.lang.String,java.lang.String,android.os.Bundle)>($r7, $r2, $r4);
+
+        $r2 = virtualinvoke $r11.<android.net.Uri: java.lang.String toString()>();
+
+        $r0.<com.facebook.internal.bh: java.lang.String a> = $r2;
+
+        return;
+    }
+
+    private int a(int, float, int, int)
+    {
+        com.facebook.internal.bh $r0;
+        int $i0, $i1, $i2, $i3;
+        float $f0, $f1;
+        double $d0, $d1;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $i0 := @parameter0: int;
+
+        $f0 := @parameter1: float;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $d0 = 0.5;
+
+        $f1 = (float) $i0;
+
+        $f0 = $f1 / $f0;
+
+        $i3 = (int) $f0;
+
+        if $i3 > $i1 goto label2;
+
+        $d0 = 1.0;
+
+     label1:
+        $d1 = (double) $i0;
+
+        $d0 = $d0 * $d1;
+
+        $i0 = (int) $d0;
+
+        return $i0;
+
+     label2:
+        if $i3 >= $i2 goto label1;
+
+        $i3 = $i2 - $i3;
+
+        $d0 = (double) $i3;
+
+        $i1 = $i2 - $i1;
+
+        $d1 = (double) $i1;
+
+        $d0 = $d0 / $d1;
+
+        $d0 = $d0 * 0.5;
+
+        $d0 = 0.5 + $d0;
+
+        goto label1;
+    }
+
+    static java.lang.String a(com.facebook.internal.bh)
+    {
+        com.facebook.internal.bh $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        r1 = $r0.<com.facebook.internal.bh: java.lang.String b>;
+
+        return r1;
+    }
+
+    static java.lang.String a(com.facebook.internal.bh, java.lang.String)
+    {
+        com.facebook.internal.bh $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.facebook.internal.bh: java.lang.String a> = $r1;
+
+        return $r1;
+    }
+
+    private void a(int)
+    {
+        com.facebook.internal.bh $r0;
+        int $i0;
+        android.widget.LinearLayout $r1;
+        android.content.Context $r2;
+        com.facebook.internal.bk $r3;
+        android.webkit.WebView $r4;
+        com.facebook.internal.bn $r5;
+        android.webkit.WebSettings $r6;
+        java.lang.String $r7;
+        android.widget.FrameLayout$LayoutParams $r8;
+        com.facebook.internal.bl $r9;
+        android.widget.FrameLayout $r10;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $i0 := @parameter0: int;
+
+        $r1 = new android.widget.LinearLayout;
+
+        $r2 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        specialinvoke $r1.<android.widget.LinearLayout: void <init>(android.content.Context)>($r2);
+
+        $r3 = new com.facebook.internal.bk;
+
+        $r2 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        $r2 = virtualinvoke $r2.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        specialinvoke $r3.<com.facebook.internal.bk: void <init>(com.facebook.internal.bh,android.content.Context)>($r0, $r2);
+
+        $r0.<com.facebook.internal.bh: android.webkit.WebView d> = $r3;
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        virtualinvoke $r4.<android.webkit.WebView: void setVerticalScrollBarEnabled(boolean)>(0);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        virtualinvoke $r4.<android.webkit.WebView: void setHorizontalScrollBarEnabled(boolean)>(0);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        $r5 = new com.facebook.internal.bn;
+
+        specialinvoke $r5.<com.facebook.internal.bn: void <init>(com.facebook.internal.bh,com.facebook.internal.bi)>($r0, null);
+
+        virtualinvoke $r4.<android.webkit.WebView: void setWebViewClient(android.webkit.WebViewClient)>($r5);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        $r6 = virtualinvoke $r4.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r6.<android.webkit.WebSettings: void setJavaScriptEnabled(boolean)>(1);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        $r7 = $r0.<com.facebook.internal.bh: java.lang.String a>;
+
+        virtualinvoke $r4.<android.webkit.WebView: void loadUrl(java.lang.String)>($r7);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        $r8 = new android.widget.FrameLayout$LayoutParams;
+
+        specialinvoke $r8.<android.widget.FrameLayout$LayoutParams: void <init>(int,int)>(-1, -1);
+
+        virtualinvoke $r4.<android.webkit.WebView: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r8);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        virtualinvoke $r4.<android.webkit.WebView: void setVisibility(int)>(4);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        $r6 = virtualinvoke $r4.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r6.<android.webkit.WebSettings: void setSavePassword(boolean)>(0);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        $r6 = virtualinvoke $r4.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r6.<android.webkit.WebSettings: void setSaveFormData(boolean)>(0);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        virtualinvoke $r4.<android.webkit.WebView: void setFocusable(boolean)>(1);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        virtualinvoke $r4.<android.webkit.WebView: void setFocusableInTouchMode(boolean)>(1);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        $r9 = new com.facebook.internal.bl;
+
+        specialinvoke $r9.<com.facebook.internal.bl: void <init>(com.facebook.internal.bh)>($r0);
+
+        virtualinvoke $r4.<android.webkit.WebView: void setOnTouchListener(android.view.View$OnTouchListener)>($r9);
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void setPadding(int,int,int,int)>($i0, $i0, $i0, $i0);
+
+        $r4 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void addView(android.view.View)>($r4);
+
+        virtualinvoke $r1.<android.widget.LinearLayout: void setBackgroundColor(int)>(-872415232);
+
+        $r10 = $r0.<com.facebook.internal.bh: android.widget.FrameLayout g>;
+
+        virtualinvoke $r10.<android.widget.FrameLayout: void addView(android.view.View)>($r1);
+
+        return;
+    }
+
+    static void a(com.facebook.internal.bh, int)
+    {
+        com.facebook.internal.bh $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.facebook.internal.bh: void a(int)>($i0);
+
+        return;
+    }
+
+    static boolean a(com.facebook.internal.bh, boolean)
+    {
+        com.facebook.internal.bh $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.facebook.internal.bh: boolean k> = $z0;
+
+        return $z0;
+    }
+
+    static boolean b(com.facebook.internal.bh)
+    {
+        com.facebook.internal.bh $r0;
+        boolean z0;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        z0 = $r0.<com.facebook.internal.bh: boolean j>;
+
+        return z0;
+    }
+
+    static android.app.ProgressDialog c(com.facebook.internal.bh)
+    {
+        com.facebook.internal.bh $r0;
+        android.app.ProgressDialog r1;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        r1 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        return r1;
+    }
+
+    static android.widget.FrameLayout d(com.facebook.internal.bh)
+    {
+        com.facebook.internal.bh $r0;
+        android.widget.FrameLayout r1;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        r1 = $r0.<com.facebook.internal.bh: android.widget.FrameLayout g>;
+
+        return r1;
+    }
+
+    static android.webkit.WebView e(com.facebook.internal.bh)
+    {
+        com.facebook.internal.bh $r0;
+        android.webkit.WebView r1;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        r1 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        return r1;
+    }
+
+    private void e()
+    {
+        com.facebook.internal.bh $r0;
+        android.widget.ImageView $r1;
+        android.content.Context $r2;
+        com.facebook.internal.bj $r3;
+        android.content.res.Resources $r4;
+        int $i0;
+        android.graphics.drawable.Drawable $r5;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 = new android.widget.ImageView;
+
+        $r2 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        specialinvoke $r1.<android.widget.ImageView: void <init>(android.content.Context)>($r2);
+
+        $r0.<com.facebook.internal.bh: android.widget.ImageView f> = $r1;
+
+        $r1 = $r0.<com.facebook.internal.bh: android.widget.ImageView f>;
+
+        $r3 = new com.facebook.internal.bj;
+
+        specialinvoke $r3.<com.facebook.internal.bj: void <init>(com.facebook.internal.bh)>($r0);
+
+        virtualinvoke $r1.<android.widget.ImageView: void setOnClickListener(android.view.View$OnClickListener)>($r3);
+
+        $r2 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        $r4 = virtualinvoke $r2.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $i0 = <com.facebook.ax: int com_facebook_close>;
+
+        $r5 = virtualinvoke $r4.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>($i0);
+
+        $r1 = $r0.<com.facebook.internal.bh: android.widget.ImageView f>;
+
+        virtualinvoke $r1.<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>($r5);
+
+        $r1 = $r0.<com.facebook.internal.bh: android.widget.ImageView f>;
+
+        virtualinvoke $r1.<android.widget.ImageView: void setVisibility(int)>(4);
+
+        return;
+    }
+
+    static android.widget.ImageView f(com.facebook.internal.bh)
+    {
+        com.facebook.internal.bh $r0;
+        android.widget.ImageView r1;
+
+        $r0 := @parameter0: com.facebook.internal.bh;
+
+        r1 = $r0.<com.facebook.internal.bh: android.widget.ImageView f>;
+
+        return r1;
+    }
+
+    protected android.os.Bundle a(java.lang.String)
+    {
+        com.facebook.internal.bh $r0;
+        java.lang.String $r1;
+        android.net.Uri $r2;
+        android.os.Bundle $r3, $r4;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r2.<android.net.Uri: java.lang.String getQuery()>();
+
+        $r3 = staticinvoke <com.facebook.internal.ax: android.os.Bundle b(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r2.<android.net.Uri: java.lang.String getFragment()>();
+
+        $r4 = staticinvoke <com.facebook.internal.ax: android.os.Bundle b(java.lang.String)>($r1);
+
+        virtualinvoke $r3.<android.os.Bundle: void putAll(android.os.Bundle)>($r4);
+
+        return $r3;
+    }
+
+    protected void a(android.os.Bundle)
+    {
+        com.facebook.internal.bh $r0;
+        android.os.Bundle $r1;
+        com.facebook.internal.bo $r2;
+        boolean $z0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = $r0.<com.facebook.internal.bh: com.facebook.internal.bo c>;
+
+        if $r2 == null goto label1;
+
+        $z0 = $r0.<com.facebook.internal.bh: boolean i>;
+
+        if $z0 != 0 goto label1;
+
+        $r0.<com.facebook.internal.bh: boolean i> = 1;
+
+        $r2 = $r0.<com.facebook.internal.bh: com.facebook.internal.bo c>;
+
+        interfaceinvoke $r2.<com.facebook.internal.bo: void a(android.os.Bundle,com.facebook.FacebookException)>($r1, null);
+
+        virtualinvoke $r0.<com.facebook.internal.bh: void dismiss()>();
+
+     label1:
+        return;
+    }
+
+    public void a(com.facebook.internal.bo)
+    {
+        com.facebook.internal.bh $r0;
+        com.facebook.internal.bo $r1;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: com.facebook.internal.bo;
+
+        $r0.<com.facebook.internal.bh: com.facebook.internal.bo c> = $r1;
+
+        return;
+    }
+
+    protected void a(java.lang.Throwable)
+    {
+        com.facebook.internal.bh $r0;
+        java.lang.Throwable $r1;
+        com.facebook.internal.bo $r2;
+        boolean $z0;
+        com.facebook.FacebookException $r3;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: java.lang.Throwable;
+
+        $r2 = $r0.<com.facebook.internal.bh: com.facebook.internal.bo c>;
+
+        if $r2 == null goto label3;
+
+        $z0 = $r0.<com.facebook.internal.bh: boolean i>;
+
+        if $z0 != 0 goto label3;
+
+        $r0.<com.facebook.internal.bh: boolean i> = 1;
+
+        $z0 = $r1 instanceof com.facebook.FacebookException;
+
+        if $z0 == 0 goto label2;
+
+        $r3 = (com.facebook.FacebookException) $r1;
+
+     label1:
+        $r2 = $r0.<com.facebook.internal.bh: com.facebook.internal.bo c>;
+
+        interfaceinvoke $r2.<com.facebook.internal.bo: void a(android.os.Bundle,com.facebook.FacebookException)>(null, $r3);
+
+        virtualinvoke $r0.<com.facebook.internal.bh: void dismiss()>();
+
+        return;
+
+     label2:
+        $r3 = new com.facebook.FacebookException;
+
+        specialinvoke $r3.<com.facebook.FacebookException: void <init>(java.lang.Throwable)>($r1);
+
+        goto label1;
+
+     label3:
+        return;
+    }
+
+    protected boolean a()
+    {
+        com.facebook.internal.bh $r0;
+        boolean z0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        z0 = $r0.<com.facebook.internal.bh: boolean i>;
+
+        return z0;
+    }
+
+    protected void b(java.lang.String)
+    {
+        com.facebook.internal.bh $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.facebook.internal.bh: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    protected boolean b()
+    {
+        com.facebook.internal.bh $r0;
+        boolean z0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        z0 = $r0.<com.facebook.internal.bh: boolean k>;
+
+        return z0;
+    }
+
+    protected android.webkit.WebView c()
+    {
+        com.facebook.internal.bh $r0;
+        android.webkit.WebView r1;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        r1 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        return r1;
+    }
+
+    public void cancel()
+    {
+        com.facebook.internal.bh $r0;
+        com.facebook.internal.bo $r1;
+        boolean $z0;
+        com.facebook.FacebookOperationCanceledException $r2;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 = $r0.<com.facebook.internal.bh: com.facebook.internal.bo c>;
+
+        if $r1 == null goto label1;
+
+        $z0 = $r0.<com.facebook.internal.bh: boolean i>;
+
+        if $z0 != 0 goto label1;
+
+        $r2 = new com.facebook.FacebookOperationCanceledException;
+
+        specialinvoke $r2.<com.facebook.FacebookOperationCanceledException: void <init>()>();
+
+        virtualinvoke $r0.<com.facebook.internal.bh: void a(java.lang.Throwable)>($r2);
+
+     label1:
+        return;
+    }
+
+    public void d()
+    {
+        com.facebook.internal.bh $r0;
+        android.content.Context $r1;
+        java.lang.Object $r2;
+        android.view.WindowManager $r3;
+        android.view.Display $r4;
+        android.util.DisplayMetrics $r5;
+        int $i0, $i1, $i2;
+        float $f0;
+        android.view.Window $r6;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        $r2 = virtualinvoke $r1.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("window");
+
+        $r3 = (android.view.WindowManager) $r2;
+
+        $r4 = interfaceinvoke $r3.<android.view.WindowManager: android.view.Display getDefaultDisplay()>();
+
+        $r5 = new android.util.DisplayMetrics;
+
+        specialinvoke $r5.<android.util.DisplayMetrics: void <init>()>();
+
+        virtualinvoke $r4.<android.view.Display: void getMetrics(android.util.DisplayMetrics)>($r5);
+
+        $i0 = $r5.<android.util.DisplayMetrics: int widthPixels>;
+
+        $i1 = $r5.<android.util.DisplayMetrics: int heightPixels>;
+
+        if $i0 >= $i1 goto label3;
+
+        $i1 = $r5.<android.util.DisplayMetrics: int widthPixels>;
+
+     label1:
+        $i0 = $r5.<android.util.DisplayMetrics: int widthPixels>;
+
+        $i2 = $r5.<android.util.DisplayMetrics: int heightPixels>;
+
+        if $i0 >= $i2 goto label4;
+
+        $i0 = $r5.<android.util.DisplayMetrics: int heightPixels>;
+
+     label2:
+        $f0 = $r5.<android.util.DisplayMetrics: float density>;
+
+        $i1 = specialinvoke $r0.<com.facebook.internal.bh: int a(int,float,int,int)>($i1, $f0, 480, 800);
+
+        $i2 = $r5.<android.util.DisplayMetrics: int widthPixels>;
+
+        $i1 = staticinvoke <java.lang.Math: int min(int,int)>($i1, $i2);
+
+        $f0 = $r5.<android.util.DisplayMetrics: float density>;
+
+        $i0 = specialinvoke $r0.<com.facebook.internal.bh: int a(int,float,int,int)>($i0, $f0, 800, 1280);
+
+        $i2 = $r5.<android.util.DisplayMetrics: int heightPixels>;
+
+        $i0 = staticinvoke <java.lang.Math: int min(int,int)>($i0, $i2);
+
+        $r6 = virtualinvoke $r0.<com.facebook.internal.bh: android.view.Window getWindow()>();
+
+        virtualinvoke $r6.<android.view.Window: void setLayout(int,int)>($i1, $i0);
+
+        return;
+
+     label3:
+        $i1 = $r5.<android.util.DisplayMetrics: int heightPixels>;
+
+        goto label1;
+
+     label4:
+        $i0 = $r5.<android.util.DisplayMetrics: int widthPixels>;
+
+        goto label2;
+    }
+
+    public void dismiss()
+    {
+        com.facebook.internal.bh $r0;
+        boolean $z0;
+        android.webkit.WebView $r1;
+        android.app.ProgressDialog $r2;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.facebook.internal.bh: android.webkit.WebView d>;
+
+        virtualinvoke $r1.<android.webkit.WebView: void stopLoading()>();
+
+     label1:
+        $z0 = $r0.<com.facebook.internal.bh: boolean j>;
+
+        if $z0 != 0 goto label2;
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        if $r2 == null goto label2;
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        $z0 = virtualinvoke $r2.<android.app.ProgressDialog: boolean isShowing()>();
+
+        if $z0 == 0 goto label2;
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void dismiss()>();
+
+     label2:
+        specialinvoke $r0.<android.app.Dialog: void dismiss()>();
+
+        return;
+    }
+
+    public void onAttachedToWindow()
+    {
+        com.facebook.internal.bh $r0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r0.<com.facebook.internal.bh: boolean j> = 0;
+
+        specialinvoke $r0.<android.app.Dialog: void onAttachedToWindow()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.facebook.internal.bh $r0;
+        android.os.Bundle $r1;
+        android.app.ProgressDialog $r2;
+        android.content.Context $r3;
+        int $i0;
+        java.lang.String $r4;
+        com.facebook.internal.bi $r5;
+        android.widget.FrameLayout $r6;
+        android.view.Window $r7;
+        android.widget.ImageView $r8;
+        android.graphics.drawable.Drawable $r9;
+        android.view.ViewGroup$LayoutParams $r10;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Dialog: void onCreate(android.os.Bundle)>($r1);
+
+        $r2 = new android.app.ProgressDialog;
+
+        $r3 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        specialinvoke $r2.<android.app.ProgressDialog: void <init>(android.content.Context)>($r3);
+
+        $r0.<com.facebook.internal.bh: android.app.ProgressDialog e> = $r2;
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        virtualinvoke $r2.<android.app.ProgressDialog: boolean requestWindowFeature(int)>(1);
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        $r3 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        $i0 = <com.facebook.ba: int com_facebook_loading>;
+
+        $r4 = virtualinvoke $r3.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void setMessage(java.lang.CharSequence)>($r4);
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void setCanceledOnTouchOutside(boolean)>(0);
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        $r5 = new com.facebook.internal.bi;
+
+        specialinvoke $r5.<com.facebook.internal.bi: void <init>(com.facebook.internal.bh)>($r0);
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void setOnCancelListener(android.content.DialogInterface$OnCancelListener)>($r5);
+
+        virtualinvoke $r0.<com.facebook.internal.bh: boolean requestWindowFeature(int)>(1);
+
+        $r6 = new android.widget.FrameLayout;
+
+        $r3 = virtualinvoke $r0.<com.facebook.internal.bh: android.content.Context getContext()>();
+
+        specialinvoke $r6.<android.widget.FrameLayout: void <init>(android.content.Context)>($r3);
+
+        $r0.<com.facebook.internal.bh: android.widget.FrameLayout g> = $r6;
+
+        virtualinvoke $r0.<com.facebook.internal.bh: void d()>();
+
+        $r7 = virtualinvoke $r0.<com.facebook.internal.bh: android.view.Window getWindow()>();
+
+        virtualinvoke $r7.<android.view.Window: void setGravity(int)>(17);
+
+        $r7 = virtualinvoke $r0.<com.facebook.internal.bh: android.view.Window getWindow()>();
+
+        virtualinvoke $r7.<android.view.Window: void setSoftInputMode(int)>(16);
+
+        specialinvoke $r0.<com.facebook.internal.bh: void e()>();
+
+        $r4 = $r0.<com.facebook.internal.bh: java.lang.String a>;
+
+        if $r4 == null goto label1;
+
+        $r8 = $r0.<com.facebook.internal.bh: android.widget.ImageView f>;
+
+        $r9 = virtualinvoke $r8.<android.widget.ImageView: android.graphics.drawable.Drawable getDrawable()>();
+
+        $i0 = virtualinvoke $r9.<android.graphics.drawable.Drawable: int getIntrinsicWidth()>();
+
+        $i0 = $i0 / 2;
+
+        $i0 = $i0 + 1;
+
+        specialinvoke $r0.<com.facebook.internal.bh: void a(int)>($i0);
+
+     label1:
+        $r6 = $r0.<com.facebook.internal.bh: android.widget.FrameLayout g>;
+
+        $r8 = $r0.<com.facebook.internal.bh: android.widget.ImageView f>;
+
+        $r10 = new android.view.ViewGroup$LayoutParams;
+
+        specialinvoke $r10.<android.view.ViewGroup$LayoutParams: void <init>(int,int)>(-2, -2);
+
+        virtualinvoke $r6.<android.widget.FrameLayout: void addView(android.view.View,android.view.ViewGroup$LayoutParams)>($r8, $r10);
+
+        $r6 = $r0.<com.facebook.internal.bh: android.widget.FrameLayout g>;
+
+        virtualinvoke $r0.<com.facebook.internal.bh: void setContentView(android.view.View)>($r6);
+
+        return;
+    }
+
+    public void onDetachedFromWindow()
+    {
+        com.facebook.internal.bh $r0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r0.<com.facebook.internal.bh: boolean j> = 1;
+
+        specialinvoke $r0.<android.app.Dialog: void onDetachedFromWindow()>();
+
+        return;
+    }
+
+    public boolean onKeyDown(int, android.view.KeyEvent)
+    {
+        com.facebook.internal.bh $r0;
+        int $i0;
+        android.view.KeyEvent $r1;
+        boolean $z0;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.view.KeyEvent;
+
+        if $i0 != 4 goto label1;
+
+        virtualinvoke $r0.<com.facebook.internal.bh: void cancel()>();
+
+     label1:
+        $z0 = specialinvoke $r0.<android.app.Dialog: boolean onKeyDown(int,android.view.KeyEvent)>($i0, $r1);
+
+        return $z0;
+    }
+
+    protected void onStart()
+    {
+        com.facebook.internal.bh $r0;
+        android.os.AsyncTask$Status $r1, $r3;
+        com.facebook.internal.bp $r2;
+        java.lang.Void[] $r4;
+        android.app.ProgressDialog $r5;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        specialinvoke $r0.<android.app.Dialog: void onStart()>();
+
+        $r2 = $r0.<com.facebook.internal.bh: com.facebook.internal.bp h>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.facebook.internal.bh: com.facebook.internal.bp h>;
+
+        $r1 = virtualinvoke $r2.<com.facebook.internal.bp: android.os.AsyncTask$Status getStatus()>();
+
+        $r3 = <android.os.AsyncTask$Status: android.os.AsyncTask$Status PENDING>;
+
+        if $r1 != $r3 goto label1;
+
+        $r2 = $r0.<com.facebook.internal.bh: com.facebook.internal.bp h>;
+
+        $r4 = newarray (java.lang.Void)[0];
+
+        virtualinvoke $r2.<com.facebook.internal.bp: android.os.AsyncTask execute(java.lang.Object[])>($r4);
+
+        $r5 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        virtualinvoke $r5.<android.app.ProgressDialog: void show()>();
+
+        return;
+
+     label1:
+        virtualinvoke $r0.<com.facebook.internal.bh: void d()>();
+
+        return;
+    }
+
+    protected void onStop()
+    {
+        com.facebook.internal.bh $r0;
+        com.facebook.internal.bp $r1;
+        android.app.ProgressDialog $r2;
+
+        $r0 := @this: com.facebook.internal.bh;
+
+        $r1 = $r0.<com.facebook.internal.bh: com.facebook.internal.bp h>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.facebook.internal.bh: com.facebook.internal.bp h>;
+
+        virtualinvoke $r1.<com.facebook.internal.bp: boolean cancel(boolean)>(1);
+
+        $r2 = $r0.<com.facebook.internal.bh: android.app.ProgressDialog e>;
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void dismiss()>();
+
+     label1:
+        specialinvoke $r0.<android.app.Dialog: void onStop()>();
+
+        return;
+    }
+}

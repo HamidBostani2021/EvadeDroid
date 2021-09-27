@@ -1,0 +1,55 @@
+class com.seattleclouds.modules.locationlock.g extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.locationlock.f a;
+
+    void <init>(com.seattleclouds.modules.locationlock.f)
+    {
+        com.seattleclouds.modules.locationlock.g $r0;
+        com.seattleclouds.modules.locationlock.f $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.g;
+
+        $r1 := @parameter0: com.seattleclouds.modules.locationlock.f;
+
+        $r0.<com.seattleclouds.modules.locationlock.g: com.seattleclouds.modules.locationlock.f a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.locationlock.g $r0;
+        android.support.v4.app.ac $r1;
+        com.seattleclouds.modules.locationlock.f $r2;
+        com.seattleclouds.modules.locationlock.c $r3;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.g;
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.g: com.seattleclouds.modules.locationlock.f a>;
+
+        $r3 = $r2.<com.seattleclouds.modules.locationlock.f: com.seattleclouds.modules.locationlock.c a>;
+
+        $r1 = virtualinvoke $r3.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.g: com.seattleclouds.modules.locationlock.f a>;
+
+        $r3 = $r2.<com.seattleclouds.modules.locationlock.f: com.seattleclouds.modules.locationlock.c a>;
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: void a(com.seattleclouds.modules.locationlock.c,java.lang.String)>($r3, "Timed Out");
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.g: com.seattleclouds.modules.locationlock.f a>;
+
+        $r3 = $r2.<com.seattleclouds.modules.locationlock.f: com.seattleclouds.modules.locationlock.c a>;
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: java.util.concurrent.ScheduledFuture a(com.seattleclouds.modules.locationlock.c,java.util.concurrent.ScheduledFuture)>($r3, null);
+
+        return;
+    }
+}

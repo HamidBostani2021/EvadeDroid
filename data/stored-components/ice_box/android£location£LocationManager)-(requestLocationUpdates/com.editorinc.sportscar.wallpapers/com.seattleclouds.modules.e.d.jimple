@@ -1,0 +1,43 @@
+class com.seattleclouds.modules.e.d extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final com.seattleclouds.modules.e.a b;
+
+    void <init>(com.seattleclouds.modules.e.a, java.lang.String)
+    {
+        com.seattleclouds.modules.e.d $r0;
+        com.seattleclouds.modules.e.a $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.e.d;
+
+        $r1 := @parameter0: com.seattleclouds.modules.e.a;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.e.d: com.seattleclouds.modules.e.a b> = $r1;
+
+        $r0.<com.seattleclouds.modules.e.d: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.e.d $r0;
+        com.seattleclouds.modules.e.a $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.e.d;
+
+        $r1 = $r0.<com.seattleclouds.modules.e.d: com.seattleclouds.modules.e.a b>;
+
+        $r2 = $r0.<com.seattleclouds.modules.e.d: java.lang.String a>;
+
+        staticinvoke <com.seattleclouds.modules.e.a: void a(com.seattleclouds.modules.e.a,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+}

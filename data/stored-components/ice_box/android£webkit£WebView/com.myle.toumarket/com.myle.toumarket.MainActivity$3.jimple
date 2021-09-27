@@ -1,0 +1,74 @@
+class com.myle.toumarket.MainActivity$3 extends java.lang.Object implements android.webkit.DownloadListener
+{
+    final com.myle.toumarket.MainActivity this$0;
+    private final android.app.Activity val$activity;
+
+    void <init>(com.myle.toumarket.MainActivity, android.app.Activity)
+    {
+        com.myle.toumarket.MainActivity$3 $r0;
+        com.myle.toumarket.MainActivity $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.myle.toumarket.MainActivity$3;
+
+        $r1 := @parameter0: com.myle.toumarket.MainActivity;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        $r0.<com.myle.toumarket.MainActivity$3: com.myle.toumarket.MainActivity this$0> = $r1;
+
+        $r0.<com.myle.toumarket.MainActivity$3: android.app.Activity val$activity> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onDownloadStart(java.lang.String, java.lang.String, java.lang.String, java.lang.String, long)
+    {
+        com.myle.toumarket.MainActivity$3 $r0;
+        java.lang.String $r1, $r2, $r3, $r4;
+        long $l0;
+        com.myle.toumarket.MainActivity$DownloadFile $r5;
+        android.widget.Toast $r6;
+        android.app.Activity $r7;
+        com.myle.toumarket.MainActivity $r8;
+        java.lang.String[] $r9;
+
+        $r0 := @this: com.myle.toumarket.MainActivity$3;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $l0 := @parameter4: long;
+
+        $r7 = $r0.<com.myle.toumarket.MainActivity$3: android.app.Activity val$activity>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r7, "T\u00e9l\u00e9chargement encours !!!", 1);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        $r5 = new com.myle.toumarket.MainActivity$DownloadFile;
+
+        $r8 = $r0.<com.myle.toumarket.MainActivity$3: com.myle.toumarket.MainActivity this$0>;
+
+        specialinvoke $r5.<com.myle.toumarket.MainActivity$DownloadFile: void <init>(com.myle.toumarket.MainActivity,com.myle.toumarket.MainActivity$DownloadFile)>($r8, null);
+
+        $r9 = newarray (java.lang.String)[3];
+
+        $r9[0] = $r1;
+
+        $r9[1] = $r2;
+
+        $r9[2] = $r3;
+
+        virtualinvoke $r5.<com.myle.toumarket.MainActivity$DownloadFile: android.os.AsyncTask execute(java.lang.Object[])>($r9);
+
+        return;
+    }
+}

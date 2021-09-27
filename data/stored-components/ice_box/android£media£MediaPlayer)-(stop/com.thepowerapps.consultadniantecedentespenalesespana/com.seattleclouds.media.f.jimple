@@ -1,0 +1,100 @@
+class com.seattleclouds.media.f extends java.lang.Object implements com.seattleclouds.media.c
+{
+    final android.support.v7.a.ay a;
+    final com.seattleclouds.media.d b;
+
+    void <init>(com.seattleclouds.media.d, android.support.v7.a.ay)
+    {
+        com.seattleclouds.media.f $r0;
+        com.seattleclouds.media.d $r1;
+        android.support.v7.a.ay $r2;
+
+        $r0 := @this: com.seattleclouds.media.f;
+
+        $r1 := @parameter0: com.seattleclouds.media.d;
+
+        $r2 := @parameter1: android.support.v7.a.ay;
+
+        $r0.<com.seattleclouds.media.f: com.seattleclouds.media.d b> = $r1;
+
+        $r0.<com.seattleclouds.media.f: android.support.v7.a.ay a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(java.lang.String, android.graphics.Bitmap)
+    {
+        com.seattleclouds.media.f $r0;
+        java.lang.String $r1, $r7;
+        android.graphics.Bitmap $r2;
+        com.seattleclouds.media.d $r3;
+        android.support.v4.media.MediaMetadataCompat $r4;
+        android.support.v4.media.MediaDescriptionCompat $r5;
+        android.net.Uri $r6;
+        boolean $z0;
+        android.support.v7.a.ay $r8;
+        android.support.v4.app.dg $r9;
+        android.app.Notification $r10;
+
+        $r0 := @this: com.seattleclouds.media.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: android.graphics.Bitmap;
+
+        $r3 = $r0.<com.seattleclouds.media.f: com.seattleclouds.media.d b>;
+
+        $r4 = staticinvoke <com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat e(com.seattleclouds.media.d)>($r3);
+
+        if $r4 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.media.f: com.seattleclouds.media.d b>;
+
+        $r4 = staticinvoke <com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat e(com.seattleclouds.media.d)>($r3);
+
+        $r5 = virtualinvoke $r4.<android.support.v4.media.MediaMetadataCompat: android.support.v4.media.MediaDescriptionCompat a()>();
+
+        $r6 = virtualinvoke $r5.<android.support.v4.media.MediaDescriptionCompat: android.net.Uri e()>();
+
+        if $r6 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.media.f: com.seattleclouds.media.d b>;
+
+        $r4 = staticinvoke <com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat e(com.seattleclouds.media.d)>($r3);
+
+        $r5 = virtualinvoke $r4.<android.support.v4.media.MediaMetadataCompat: android.support.v4.media.MediaDescriptionCompat a()>();
+
+        $r6 = virtualinvoke $r5.<android.support.v4.media.MediaDescriptionCompat: android.net.Uri e()>();
+
+        $r7 = virtualinvoke $r6.<android.net.Uri: java.lang.String toString()>();
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label1;
+
+        $r8 = $r0.<com.seattleclouds.media.f: android.support.v7.a.ay a>;
+
+        virtualinvoke $r8.<android.support.v7.a.ay: android.support.v4.app.ce a(android.graphics.Bitmap)>($r2);
+
+        $r3 = $r0.<com.seattleclouds.media.f: com.seattleclouds.media.d b>;
+
+        $r9 = staticinvoke <com.seattleclouds.media.d: android.support.v4.app.dg c(com.seattleclouds.media.d)>($r3);
+
+        if $r9 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.media.f: com.seattleclouds.media.d b>;
+
+        $r9 = staticinvoke <com.seattleclouds.media.d: android.support.v4.app.dg c(com.seattleclouds.media.d)>($r3);
+
+        $r8 = $r0.<com.seattleclouds.media.f: android.support.v7.a.ay a>;
+
+        $r10 = virtualinvoke $r8.<android.support.v7.a.ay: android.app.Notification a()>();
+
+        virtualinvoke $r9.<android.support.v4.app.dg: void a(int,android.app.Notification)>(41209, $r10);
+
+     label1:
+        return;
+    }
+}

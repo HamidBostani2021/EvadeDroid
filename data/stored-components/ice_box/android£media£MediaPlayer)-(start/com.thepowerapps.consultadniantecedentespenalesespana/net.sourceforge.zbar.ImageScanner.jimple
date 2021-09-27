@@ -1,0 +1,110 @@
+public class net.sourceforge.zbar.ImageScanner extends java.lang.Object
+{
+    private long peer;
+
+    static void <clinit>()
+    {
+        staticinvoke <java.lang.System: void loadLibrary(java.lang.String)>("zbarjni");
+
+        staticinvoke <net.sourceforge.zbar.ImageScanner: void init()>();
+
+        return;
+    }
+
+    public void <init>()
+    {
+        net.sourceforge.zbar.ImageScanner $r0;
+        long $l0;
+
+        $r0 := @this: net.sourceforge.zbar.ImageScanner;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $l0 = specialinvoke $r0.<net.sourceforge.zbar.ImageScanner: long create()>();
+
+        $r0.<net.sourceforge.zbar.ImageScanner: long peer> = $l0;
+
+        return;
+    }
+
+    private native long create();
+
+    private native void destroy(long);
+
+    private native long getResults(long);
+
+    private static native void init();
+
+    public void a()
+    {
+        net.sourceforge.zbar.ImageScanner $r0;
+        long $l0;
+        byte $b1;
+        java.lang.Throwable $r1;
+
+        $r0 := @this: net.sourceforge.zbar.ImageScanner;
+
+        entermonitor $r0;
+
+     label1:
+        $l0 = $r0.<net.sourceforge.zbar.ImageScanner: long peer>;
+
+        $b1 = $l0 cmp 0L;
+
+        if $b1 == 0 goto label2;
+
+        $l0 = $r0.<net.sourceforge.zbar.ImageScanner: long peer>;
+
+        specialinvoke $r0.<net.sourceforge.zbar.ImageScanner: void destroy(long)>($l0);
+
+        $r0.<net.sourceforge.zbar.ImageScanner: long peer> = 0L;
+
+     label2:
+        exitmonitor $r0;
+
+        return;
+
+     label3:
+        $r1 := @caughtexception;
+
+        exitmonitor $r0;
+
+        throw $r1;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+
+    public net.sourceforge.zbar.SymbolSet b()
+    {
+        net.sourceforge.zbar.ImageScanner $r0;
+        net.sourceforge.zbar.SymbolSet $r1;
+        long $l0;
+
+        $r0 := @this: net.sourceforge.zbar.ImageScanner;
+
+        $r1 = new net.sourceforge.zbar.SymbolSet;
+
+        $l0 = $r0.<net.sourceforge.zbar.ImageScanner: long peer>;
+
+        $l0 = specialinvoke $r0.<net.sourceforge.zbar.ImageScanner: long getResults(long)>($l0);
+
+        specialinvoke $r1.<net.sourceforge.zbar.SymbolSet: void <init>(long)>($l0);
+
+        return $r1;
+    }
+
+    protected void finalize()
+    {
+        net.sourceforge.zbar.ImageScanner $r0;
+
+        $r0 := @this: net.sourceforge.zbar.ImageScanner;
+
+        virtualinvoke $r0.<net.sourceforge.zbar.ImageScanner: void a()>();
+
+        return;
+    }
+
+    public native int scanImage(net.sourceforge.zbar.Image);
+
+    public native void setConfig(int, int, int);
+}

@@ -1,0 +1,45 @@
+class com.concretepage.SplashActivity$1 extends java.lang.Object implements java.lang.Runnable
+{
+    final com.concretepage.SplashActivity this$0;
+
+    void <init>(com.concretepage.SplashActivity)
+    {
+        com.concretepage.SplashActivity$1 $r0;
+        com.concretepage.SplashActivity $r1;
+
+        $r0 := @this: com.concretepage.SplashActivity$1;
+
+        $r1 := @parameter0: com.concretepage.SplashActivity;
+
+        $r0.<com.concretepage.SplashActivity$1: com.concretepage.SplashActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.concretepage.SplashActivity$1 $r0;
+        android.content.Intent $r1;
+        com.concretepage.SplashActivity $r2;
+
+        $r0 := @this: com.concretepage.SplashActivity$1;
+
+        $r1 = new android.content.Intent;
+
+        $r2 = $r0.<com.concretepage.SplashActivity$1: com.concretepage.SplashActivity this$0>;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r2, class "Lcom/concretepage/MainActivity;");
+
+        $r2 = $r0.<com.concretepage.SplashActivity$1: com.concretepage.SplashActivity this$0>;
+
+        virtualinvoke $r2.<com.concretepage.SplashActivity: void startActivity(android.content.Intent)>($r1);
+
+        $r2 = $r0.<com.concretepage.SplashActivity$1: com.concretepage.SplashActivity this$0>;
+
+        virtualinvoke $r2.<com.concretepage.SplashActivity: void finish()>();
+
+        return;
+    }
+}

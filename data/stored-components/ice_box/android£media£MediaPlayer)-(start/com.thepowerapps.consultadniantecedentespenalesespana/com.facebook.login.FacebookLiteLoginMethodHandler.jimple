@@ -1,0 +1,128 @@
+class com.facebook.login.FacebookLiteLoginMethodHandler extends com.facebook.login.NativeAppLoginMethodHandler
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+
+    static void <clinit>()
+    {
+        com.facebook.login.i $r0;
+
+        $r0 = new com.facebook.login.i;
+
+        specialinvoke $r0.<com.facebook.login.i: void <init>()>();
+
+        <com.facebook.login.FacebookLiteLoginMethodHandler: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    void <init>(android.os.Parcel)
+    {
+        com.facebook.login.FacebookLiteLoginMethodHandler $r0;
+        android.os.Parcel $r1;
+
+        $r0 := @this: com.facebook.login.FacebookLiteLoginMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<com.facebook.login.NativeAppLoginMethodHandler: void <init>(android.os.Parcel)>($r1);
+
+        return;
+    }
+
+    void <init>(com.facebook.login.LoginClient)
+    {
+        com.facebook.login.FacebookLiteLoginMethodHandler $r0;
+        com.facebook.login.LoginClient $r1;
+
+        $r0 := @this: com.facebook.login.FacebookLiteLoginMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient;
+
+        specialinvoke $r0.<com.facebook.login.NativeAppLoginMethodHandler: void <init>(com.facebook.login.LoginClient)>($r1);
+
+        return;
+    }
+
+    java.lang.String a()
+    {
+        com.facebook.login.FacebookLiteLoginMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.FacebookLiteLoginMethodHandler;
+
+        return "fb_lite_login";
+    }
+
+    boolean a(com.facebook.login.LoginClient$Request)
+    {
+        com.facebook.login.FacebookLiteLoginMethodHandler $r0;
+        com.facebook.login.LoginClient$Request $r1;
+        java.lang.String $r2, $r5, $r8;
+        com.facebook.login.LoginClient $r3;
+        android.support.v4.app.ac $r4;
+        java.util.Set $r6;
+        boolean $z0, $z1;
+        com.facebook.login.DefaultAudience $r7;
+        android.content.Intent $r9;
+        int $i0;
+
+        $r0 := @this: com.facebook.login.FacebookLiteLoginMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient$Request;
+
+        $r2 = staticinvoke <com.facebook.login.LoginClient: java.lang.String m()>();
+
+        $r3 = $r0.<com.facebook.login.FacebookLiteLoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r4 = virtualinvoke $r3.<com.facebook.login.LoginClient: android.support.v4.app.ac b()>();
+
+        $r5 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: java.lang.String d()>();
+
+        $r6 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: java.util.Set a()>();
+
+        $z0 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: boolean f()>();
+
+        $z1 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: boolean h()>();
+
+        $r7 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: com.facebook.login.DefaultAudience c()>();
+
+        $r8 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: java.lang.String e()>();
+
+        $r8 = virtualinvoke $r0.<com.facebook.login.FacebookLiteLoginMethodHandler: java.lang.String a(java.lang.String)>($r8);
+
+        $r9 = staticinvoke <com.facebook.internal.al: android.content.Intent a(android.content.Context,java.lang.String,java.util.Collection,java.lang.String,boolean,boolean,com.facebook.login.DefaultAudience,java.lang.String)>($r4, $r5, $r6, $r2, $z0, $z1, $r7, $r8);
+
+        virtualinvoke $r0.<com.facebook.login.FacebookLiteLoginMethodHandler: void a(java.lang.String,java.lang.Object)>("e2e", $r2);
+
+        $i0 = staticinvoke <com.facebook.login.LoginClient: int d()>();
+
+        $z0 = virtualinvoke $r0.<com.facebook.login.FacebookLiteLoginMethodHandler: boolean a(android.content.Intent,int)>($r9, $i0);
+
+        return $z0;
+    }
+
+    public int describeContents()
+    {
+        com.facebook.login.FacebookLiteLoginMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.FacebookLiteLoginMethodHandler;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.login.FacebookLiteLoginMethodHandler $r0;
+        android.os.Parcel $r1;
+        int $i0;
+
+        $r0 := @this: com.facebook.login.FacebookLiteLoginMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.facebook.login.NativeAppLoginMethodHandler: void writeToParcel(android.os.Parcel,int)>($r1, $i0);
+
+        return;
+    }
+}

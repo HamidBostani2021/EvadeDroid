@@ -1,0 +1,99 @@
+public class com.concretepage.SplashActivity extends android.app.Activity
+{
+    int SPLASH_DISPLAY_LENGHT;
+    java.lang.String saveLogin;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.concretepage.SplashActivity $r0;
+
+        $r0 := @this: com.concretepage.SplashActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r0.<com.concretepage.SplashActivity: int SPLASH_DISPLAY_LENGHT> = 4000;
+
+        $r0.<com.concretepage.SplashActivity: java.lang.String saveLogin> = "";
+
+        return;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        com.concretepage.SplashActivity $r0;
+        android.os.Bundle $r1;
+        com.concretepage.SplashActivity$1 $r2;
+        android.os.Handler $r3;
+        int $i0;
+        long $l1;
+
+        $r0 := @this: com.concretepage.SplashActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.concretepage.SplashActivity: void setContentView(int)>(2130903041);
+
+        $r3 = new android.os.Handler;
+
+        specialinvoke $r3.<android.os.Handler: void <init>()>();
+
+        $r2 = new com.concretepage.SplashActivity$1;
+
+        specialinvoke $r2.<com.concretepage.SplashActivity$1: void <init>(com.concretepage.SplashActivity)>($r0);
+
+        $i0 = $r0.<com.concretepage.SplashActivity: int SPLASH_DISPLAY_LENGHT>;
+
+        $l1 = (long) $i0;
+
+        virtualinvoke $r3.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r2, $l1);
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.concretepage.SplashActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.concretepage.SplashActivity;
+
+        $r0 = this.<com.concretepage.SplashActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.concretepage.SplashActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.concretepage.SplashActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.concretepage.SplashActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.concretepage.SplashActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.concretepage.SplashActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.concretepage.SplashActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

@@ -1,0 +1,221 @@
+public class com.seattleclouds.modules.esignature.a.a extends android.support.v7.widget.eb
+{
+    private java.util.List a;
+    private android.app.Activity b;
+
+    public void <init>(java.util.List, android.app.Activity)
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        java.util.List $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.a.a;
+
+        $r1 := @parameter0: java.util.List;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        specialinvoke $r0.<android.support.v7.widget.eb: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.esignature.a.a: java.util.List a> = $r1;
+
+        $r0.<com.seattleclouds.modules.esignature.a.a: android.app.Activity b> = $r2;
+
+        return;
+    }
+
+    static java.util.List a(com.seattleclouds.modules.esignature.a.a)
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.esignature.a.a;
+
+        r1 = $r0.<com.seattleclouds.modules.esignature.a.a: java.util.List a>;
+
+        return r1;
+    }
+
+    static android.app.Activity b(com.seattleclouds.modules.esignature.a.a)
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        android.app.Activity r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.esignature.a.a;
+
+        r1 = $r0.<com.seattleclouds.modules.esignature.a.a: android.app.Activity b>;
+
+        return r1;
+    }
+
+    public int a()
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        int $i0;
+        java.util.List $r1;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.a.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.esignature.a.a: java.util.List a>;
+
+        $i0 = interfaceinvoke $r1.<java.util.List: int size()>();
+
+        return $i0;
+    }
+
+    public android.support.v7.widget.fb a(android.view.ViewGroup, int)
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        android.view.ViewGroup $r1;
+        int $i0;
+        com.seattleclouds.modules.esignature.a.c $r2;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.a.a;
+
+        $r1 := @parameter0: android.view.ViewGroup;
+
+        $i0 := @parameter1: int;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.esignature.a.a: com.seattleclouds.modules.esignature.a.c c(android.view.ViewGroup,int)>($r1, $i0);
+
+        return $r2;
+    }
+
+    public void a(android.support.v7.widget.fb, int)
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        int $i0;
+        android.support.v7.widget.fb $r1;
+        com.seattleclouds.modules.esignature.a.c $r2;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.a.a;
+
+        $r1 := @parameter0: android.support.v7.widget.fb;
+
+        $i0 := @parameter1: int;
+
+        $r2 = (com.seattleclouds.modules.esignature.a.c) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.esignature.a.a: void a(com.seattleclouds.modules.esignature.a.c,int)>($r2, $i0);
+
+        return;
+    }
+
+    public void a(com.seattleclouds.modules.esignature.a.c, int)
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        com.seattleclouds.modules.esignature.a.c $r1;
+        int $i0, $i1, $i2;
+        java.lang.Object[] $r2;
+        android.widget.TextView $r3;
+        java.util.List $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.modules.esignature.utility.Transaction $r6;
+        java.lang.String $r7, $r9;
+        android.app.Activity $r8;
+        java.util.Date $r10;
+        android.support.v7.widget.CardView $r11;
+        com.seattleclouds.modules.esignature.a.b $r12;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.a.a;
+
+        $r1 := @parameter0: com.seattleclouds.modules.esignature.a.c;
+
+        $i0 := @parameter1: int;
+
+        $i1 = virtualinvoke $r1.<com.seattleclouds.modules.esignature.a.c: int e()>();
+
+        $r3 = staticinvoke <com.seattleclouds.modules.esignature.a.c: android.widget.TextView a(com.seattleclouds.modules.esignature.a.c)>($r1);
+
+        $r4 = $r0.<com.seattleclouds.modules.esignature.a.a: java.util.List a>;
+
+        $r5 = interfaceinvoke $r4.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r6 = (com.seattleclouds.modules.esignature.utility.Transaction) $r5;
+
+        $r7 = virtualinvoke $r6.<com.seattleclouds.modules.esignature.utility.Transaction: java.lang.String a()>();
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        $r8 = $r0.<com.seattleclouds.modules.esignature.a.a: android.app.Activity b>;
+
+        $i2 = <com.seattleclouds.l: int esignature_documents>;
+
+        $r7 = virtualinvoke $r8.<android.app.Activity: java.lang.String getString(int)>($i2);
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $r4 = $r0.<com.seattleclouds.modules.esignature.a.a: java.util.List a>;
+
+        $r5 = interfaceinvoke $r4.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r6 = (com.seattleclouds.modules.esignature.utility.Transaction) $r5;
+
+        $i2 = virtualinvoke $r6.<com.seattleclouds.modules.esignature.utility.Transaction: int e()>();
+
+        $r9 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($i2);
+
+        $r2[0] = $r9;
+
+        $r7 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r7, $r2);
+
+        $r3 = staticinvoke <com.seattleclouds.modules.esignature.a.c: android.widget.TextView b(com.seattleclouds.modules.esignature.a.c)>($r1);
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        $r3 = staticinvoke <com.seattleclouds.modules.esignature.a.c: android.widget.TextView c(com.seattleclouds.modules.esignature.a.c)>($r1);
+
+        $r4 = $r0.<com.seattleclouds.modules.esignature.a.a: java.util.List a>;
+
+        $r5 = interfaceinvoke $r4.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r6 = (com.seattleclouds.modules.esignature.utility.Transaction) $r5;
+
+        $r10 = virtualinvoke $r6.<com.seattleclouds.modules.esignature.utility.Transaction: java.util.Date d()>();
+
+        $r7 = staticinvoke <com.seattleclouds.modules.esignature.utility.b: java.lang.String a(java.util.Date)>($r10);
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        $r11 = staticinvoke <com.seattleclouds.modules.esignature.a.c: android.support.v7.widget.CardView d(com.seattleclouds.modules.esignature.a.c)>($r1);
+
+        $r12 = new com.seattleclouds.modules.esignature.a.b;
+
+        specialinvoke $r12.<com.seattleclouds.modules.esignature.a.b: void <init>(com.seattleclouds.modules.esignature.a.a,int)>($r0, $i1);
+
+        virtualinvoke $r11.<android.support.v7.widget.CardView: void setOnClickListener(android.view.View$OnClickListener)>($r12);
+
+        return;
+    }
+
+    public com.seattleclouds.modules.esignature.a.c c(android.view.ViewGroup, int)
+    {
+        com.seattleclouds.modules.esignature.a.a $r0;
+        android.view.ViewGroup $r1;
+        int $i0;
+        android.content.Context $r2;
+        android.view.LayoutInflater $r3;
+        android.view.View $r4;
+        com.seattleclouds.modules.esignature.a.c $r5;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.a.a;
+
+        $r1 := @parameter0: android.view.ViewGroup;
+
+        $i0 := @parameter1: int;
+
+        $r2 = virtualinvoke $r1.<android.view.ViewGroup: android.content.Context getContext()>();
+
+        $r3 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r2);
+
+        $i0 = <com.seattleclouds.j: int fragment_esignature_list_item>;
+
+        $r4 = virtualinvoke $r3.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r1, 0);
+
+        $r5 = new com.seattleclouds.modules.esignature.a.c;
+
+        specialinvoke $r5.<com.seattleclouds.modules.esignature.a.c: void <init>(android.view.View)>($r4);
+
+        return $r5;
+    }
+}

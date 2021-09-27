@@ -1,0 +1,5 @@
+interface  com.facebook.ae extends java.lang.Object
+{
+
+    public abstract void a(java.lang.String, java.lang.String);
+}

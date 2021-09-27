@@ -1,0 +1,46 @@
+public class anywheresoftware.b4a.keywords.constants.Gravity extends java.lang.Object
+{
+    public static final int BOTTOM;
+    public static final int CENTER;
+    public static final int CENTER_HORIZONTAL;
+    public static final int CENTER_VERTICAL;
+    public static final int FILL;
+    public static final int LEFT;
+    public static final int NO_GRAVITY;
+    public static final int RIGHT;
+    public static final int TOP;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.keywords.constants.Gravity $r0;
+
+        $r0 := @this: anywheresoftware.b4a.keywords.constants.Gravity;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <anywheresoftware.b4a.keywords.constants.Gravity: int TOP> = 48;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int RIGHT> = 5;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int NO_GRAVITY> = 0;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int LEFT> = 3;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int FILL> = 119;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int CENTER_VERTICAL> = 16;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int CENTER_HORIZONTAL> = 1;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int CENTER> = 17;
+
+        <anywheresoftware.b4a.keywords.constants.Gravity: int BOTTOM> = 80;
+
+        return;
+    }
+}

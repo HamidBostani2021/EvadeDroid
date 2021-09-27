@@ -1,0 +1,203 @@
+public final class com.facebook.share.model.ShareLinkContent extends com.facebook.share.model.ShareContent
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    private final java.lang.String a;
+    private final java.lang.String b;
+    private final android.net.Uri c;
+    private final java.lang.String d;
+
+    static void <clinit>()
+    {
+        com.facebook.share.model.d $r0;
+
+        $r0 = new com.facebook.share.model.d;
+
+        specialinvoke $r0.<com.facebook.share.model.d: void <init>()>();
+
+        <com.facebook.share.model.ShareLinkContent: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    void <init>(android.os.Parcel)
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        android.os.Parcel $r1;
+        java.lang.String $r2;
+        java.lang.Class $r3;
+        java.lang.ClassLoader $r4;
+        android.os.Parcelable $r5;
+        android.net.Uri $r6;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<com.facebook.share.model.ShareContent: void <init>(android.os.Parcel)>($r1);
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String a> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String b> = $r2;
+
+        $r3 = class "Landroid/net/Uri;";
+
+        $r4 = virtualinvoke $r3.<java.lang.Class: java.lang.ClassLoader getClassLoader()>();
+
+        $r5 = virtualinvoke $r1.<android.os.Parcel: android.os.Parcelable readParcelable(java.lang.ClassLoader)>($r4);
+
+        $r6 = (android.net.Uri) $r5;
+
+        $r0.<com.facebook.share.model.ShareLinkContent: android.net.Uri c> = $r6;
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String d> = $r2;
+
+        return;
+    }
+
+    private void <init>(com.facebook.share.model.e)
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        com.facebook.share.model.e $r1;
+        java.lang.String $r2;
+        android.net.Uri $r3;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        $r1 := @parameter0: com.facebook.share.model.e;
+
+        specialinvoke $r0.<com.facebook.share.model.ShareContent: void <init>(com.facebook.share.model.a)>($r1);
+
+        $r2 = staticinvoke <com.facebook.share.model.e: java.lang.String a(com.facebook.share.model.e)>($r1);
+
+        $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String a> = $r2;
+
+        $r2 = staticinvoke <com.facebook.share.model.e: java.lang.String b(com.facebook.share.model.e)>($r1);
+
+        $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String b> = $r2;
+
+        $r3 = staticinvoke <com.facebook.share.model.e: android.net.Uri c(com.facebook.share.model.e)>($r1);
+
+        $r0.<com.facebook.share.model.ShareLinkContent: android.net.Uri c> = $r3;
+
+        $r2 = staticinvoke <com.facebook.share.model.e: java.lang.String d(com.facebook.share.model.e)>($r1);
+
+        $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String d> = $r2;
+
+        return;
+    }
+
+    void <init>(com.facebook.share.model.e, com.facebook.share.model.d)
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        com.facebook.share.model.e $r1;
+        com.facebook.share.model.d $r2;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        $r1 := @parameter0: com.facebook.share.model.e;
+
+        $r2 := @parameter1: com.facebook.share.model.d;
+
+        specialinvoke $r0.<com.facebook.share.model.ShareLinkContent: void <init>(com.facebook.share.model.e)>($r1);
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        r1 = $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String a>;
+
+        return r1;
+    }
+
+    public java.lang.String b()
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        r1 = $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String b>;
+
+        return r1;
+    }
+
+    public android.net.Uri c()
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        android.net.Uri r1;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        r1 = $r0.<com.facebook.share.model.ShareLinkContent: android.net.Uri c>;
+
+        return r1;
+    }
+
+    public java.lang.String d()
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        r1 = $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String d>;
+
+        return r1;
+    }
+
+    public int describeContents()
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.share.model.ShareLinkContent $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        java.lang.String $r2;
+        android.net.Uri $r3;
+
+        $r0 := @this: com.facebook.share.model.ShareLinkContent;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.facebook.share.model.ShareContent: void writeToParcel(android.os.Parcel,int)>($r1, $i0);
+
+        $r2 = $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String a>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r2 = $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String b>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        $r3 = $r0.<com.facebook.share.model.ShareLinkContent: android.net.Uri c>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeParcelable(android.os.Parcelable,int)>($r3, 0);
+
+        $r2 = $r0.<com.facebook.share.model.ShareLinkContent: java.lang.String d>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        return;
+    }
+}

@@ -1,0 +1,2005 @@
+public class com.seattleclouds.modules.w.a extends com.seattleclouds.r
+{
+    private android.view.View a;
+    private int ai;
+    private int aj;
+    private int ak;
+    private int al;
+    private int am;
+    private int an;
+    private int ao;
+    private int ap;
+    private long aq;
+    private java.util.Timer ar;
+    private java.util.Timer as;
+    private java.util.ArrayList at;
+    private boolean au;
+    private java.lang.String av;
+    private android.content.SharedPreferences aw;
+    private final kankan.wheel.widget.d ax;
+    private kankan.wheel.widget.WheelView b;
+    private kankan.wheel.widget.WheelView c;
+    private kankan.wheel.widget.WheelView d;
+    private android.widget.ImageButton e;
+    private android.widget.TextView f;
+    private android.media.SoundPool g;
+    private java.util.HashSet h;
+    private int i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        java.util.HashSet $r1;
+        com.seattleclouds.modules.w.h $r2;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        $r1 = new java.util.HashSet;
+
+        specialinvoke $r1.<java.util.HashSet: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.HashSet h> = $r1;
+
+        $r0.<com.seattleclouds.modules.w.a: int i> = -1;
+
+        $r0.<com.seattleclouds.modules.w.a: int ai> = -1;
+
+        $r0.<com.seattleclouds.modules.w.a: int aj> = -1;
+
+        $r0.<com.seattleclouds.modules.w.a: int ak> = -1;
+
+        $r0.<com.seattleclouds.modules.w.a: int al> = -1;
+
+        $r0.<com.seattleclouds.modules.w.a: int an> = 0;
+
+        $r0.<com.seattleclouds.modules.w.a: int ao> = 0;
+
+        $r0.<com.seattleclouds.modules.w.a: int ap> = 0;
+
+        $r0.<com.seattleclouds.modules.w.a: long aq> = 0L;
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.Timer ar> = null;
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.Timer as> = null;
+
+        $r0.<com.seattleclouds.modules.w.a: java.lang.String av> = null;
+
+        $r2 = new com.seattleclouds.modules.w.h;
+
+        specialinvoke $r2.<com.seattleclouds.modules.w.h: void <init>(com.seattleclouds.modules.w.a)>($r0);
+
+        $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.d ax> = $r2;
+
+        return;
+    }
+
+    private static int a(android.media.SoundPool, java.lang.String)
+    {
+        android.media.SoundPool $r0;
+        java.lang.String $r1;
+        android.content.res.AssetFileDescriptor $r2;
+        java.io.FileDescriptor $r3;
+        long $l0, $l1;
+        int $i2;
+        java.lang.Throwable $r4;
+        java.io.IOException r5;
+
+        $r0 := @parameter0: android.media.SoundPool;
+
+        $r1 := @parameter1: java.lang.String;
+
+        if $r1 != null goto label1;
+
+        return -1;
+
+     label1:
+        $r2 = staticinvoke <com.seattleclouds.App: android.content.res.AssetFileDescriptor f(java.lang.String)>($r1);
+
+        if $r2 == null goto label5;
+
+        $r3 = virtualinvoke $r2.<android.content.res.AssetFileDescriptor: java.io.FileDescriptor getFileDescriptor()>();
+
+        $l0 = virtualinvoke $r2.<android.content.res.AssetFileDescriptor: long getStartOffset()>();
+
+        $l1 = virtualinvoke $r2.<android.content.res.AssetFileDescriptor: long getLength()>();
+
+        $i2 = virtualinvoke $r0.<android.media.SoundPool: int load(java.io.FileDescriptor,long,long,int)>($r3, $l0, $l1, 1);
+
+     label2:
+        virtualinvoke $r2.<android.content.res.AssetFileDescriptor: void close()>();
+
+     label3:
+        return $i2;
+
+     label4:
+        $r4 := @caughtexception;
+
+        r5 = (java.io.IOException) $r4;
+
+        $r1 = virtualinvoke r5.<java.io.IOException: java.lang.String getMessage()>();
+
+        staticinvoke <com.seattleclouds.modules.w.a: void c(java.lang.String)>($r1);
+
+        return $i2;
+
+     label5:
+        return -1;
+
+        catch java.io.IOException from label2 to label3 with label4;
+    }
+
+    static int a(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        i0 = $r0.<com.seattleclouds.modules.w.a: int i>;
+
+        return i0;
+    }
+
+    private java.lang.String a(long)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        long $l0, $l1;
+        android.content.res.Resources $r1;
+        float $f0;
+        byte $b2;
+        int $i3, $i4;
+        java.lang.Object[] $r2;
+        java.lang.Integer $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $l0 := @parameter0: long;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.w.a: android.content.res.Resources o()>();
+
+        $l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $l0 = $l0 - $l1;
+
+        $l0 = $l0 / 1000L;
+
+        $f0 = (float) $l0;
+
+        $f0 = $f0 / 3.15576E7F;
+
+        $b2 = $f0 cmpl 1.0F;
+
+        if $b2 <= 0 goto label1;
+
+        $i3 = <com.seattleclouds.l: int slotmachine_available_in_years>;
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $i4 = (int) $f0;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i4);
+
+        $r2[0] = $r3;
+
+        $r4 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i3, $r2);
+
+        return $r4;
+
+     label1:
+        $f0 = (float) $l0;
+
+        $f0 = $f0 / 2678400.0F;
+
+        $b2 = $f0 cmpl 1.0F;
+
+        if $b2 <= 0 goto label2;
+
+        $i3 = <com.seattleclouds.l: int slotmachine_available_in_months>;
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $i4 = (int) $f0;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i4);
+
+        $r2[0] = $r3;
+
+        $r4 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i3, $r2);
+
+        return $r4;
+
+     label2:
+        $f0 = (float) $l0;
+
+        $f0 = $f0 / 604800.0F;
+
+        $b2 = $f0 cmpl 1.0F;
+
+        if $b2 <= 0 goto label3;
+
+        $i3 = <com.seattleclouds.l: int slotmachine_available_in_weeks>;
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $i4 = (int) $f0;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i4);
+
+        $r2[0] = $r3;
+
+        $r4 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i3, $r2);
+
+        return $r4;
+
+     label3:
+        $f0 = (float) $l0;
+
+        $f0 = $f0 / 86400.0F;
+
+        $b2 = $f0 cmpl 1.0F;
+
+        if $b2 <= 0 goto label4;
+
+        $i3 = <com.seattleclouds.l: int slotmachine_available_in_days>;
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $i4 = (int) $f0;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i4);
+
+        $r2[0] = $r3;
+
+        $r4 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i3, $r2);
+
+        return $r4;
+
+     label4:
+        $f0 = (float) $l0;
+
+        $f0 = $f0 / 3600.0F;
+
+        $b2 = $f0 cmpl 1.0F;
+
+        if $b2 <= 0 goto label5;
+
+        $i3 = <com.seattleclouds.l: int slotmachine_available_in_hours>;
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $i4 = (int) $f0;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i4);
+
+        $r2[0] = $r3;
+
+        $r4 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i3, $r2);
+
+        return $r4;
+
+     label5:
+        $f0 = (float) $l0;
+
+        $f0 = $f0 / 60.0F;
+
+        $b2 = $f0 cmpl 1.0F;
+
+        if $b2 <= 0 goto label6;
+
+        $i3 = <com.seattleclouds.l: int slotmachine_available_in_minutes>;
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $i4 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i4);
+
+        $r2[0] = $r3;
+
+        $r4 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i3, $r2);
+
+        return $r4;
+
+     label6:
+        $i3 = <com.seattleclouds.l: int slotmachine_available_in_seconds>;
+
+        $r2 = newarray (java.lang.Object)[1];
+
+        $i4 = (int) $l0;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i4);
+
+        $r2[0] = $r3;
+
+        $r4 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int,java.lang.Object[])>($i3, $r2);
+
+        return $r4;
+    }
+
+    private static java.util.ArrayList a(android.os.Bundle, java.lang.String)
+    {
+        android.os.Bundle $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        java.io.Serializable $r2;
+        java.util.ArrayList $r3;
+
+        $r0 := @parameter0: android.os.Bundle;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 = virtualinvoke $r0.<android.os.Bundle: java.io.Serializable getSerializable(java.lang.String)>($r1);
+
+        if $r2 == null goto label1;
+
+        $z0 = $r2 instanceof java.util.ArrayList;
+
+        if $z0 == 0 goto label1;
+
+        $r3 = (java.util.ArrayList) $r2;
+
+        return $r3;
+
+     label1:
+        return null;
+    }
+
+    private void a(int)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        com.seattleclouds.modules.w.e $r1;
+        long $l1;
+        java.util.Timer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter0: int;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ag()>();
+
+        $r2 = new java.util.Timer;
+
+        specialinvoke $r2.<java.util.Timer: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.Timer as> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.w.a: java.util.Timer as>;
+
+        $r1 = new com.seattleclouds.modules.w.e;
+
+        specialinvoke $r1.<com.seattleclouds.modules.w.e: void <init>(com.seattleclouds.modules.w.a)>($r0);
+
+        $l1 = (long) $i0;
+
+        virtualinvoke $r2.<java.util.Timer: void schedule(java.util.TimerTask,long)>($r1, $l1);
+
+        return;
+    }
+
+    private void a(int, boolean)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter0: int;
+
+        $z0 := @parameter1: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int,boolean,boolean)>($i0, $z0, 0);
+
+        return;
+    }
+
+    private void a(int, boolean, boolean)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        boolean $z0, $z1;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter0: int;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 := @parameter2: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int,boolean,boolean,float)>($i0, $z0, $z1, 1.0F);
+
+        return;
+    }
+
+    private void a(int, boolean, boolean, float)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        boolean $z0, $z1;
+        float $f0;
+        android.media.SoundPool $r1;
+        byte $b1;
+        java.util.HashSet $r2;
+        java.lang.Integer $r3;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter0: int;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 := @parameter2: boolean;
+
+        $f0 := @parameter3: float;
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ak()>();
+
+     label1:
+        if $i0 > 0 goto label2;
+
+        return;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g>;
+
+        if $z1 == 0 goto label4;
+
+        $b1 = -1;
+
+     label3:
+        $i0 = virtualinvoke $r1.<android.media.SoundPool: int play(int,float,float,int,int,float)>($i0, 1.0F, 1.0F, 0, $b1, $f0);
+
+        if $i0 <= 0 goto label5;
+
+        $r2 = $r0.<com.seattleclouds.modules.w.a: java.util.HashSet h>;
+
+        $r3 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r2.<java.util.HashSet: boolean add(java.lang.Object)>($r3);
+
+        return;
+
+     label4:
+        $b1 = 0;
+
+        goto label3;
+
+     label5:
+        return;
+    }
+
+    private void a(android.widget.ImageButton, float)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        android.widget.ImageButton $r1;
+        float $f0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 := @parameter0: android.widget.ImageButton;
+
+        $f0 := @parameter1: float;
+
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i0 < 11 goto label1;
+
+        virtualinvoke $r1.<android.widget.ImageButton: void setAlpha(float)>($f0);
+
+        return;
+
+     label1:
+        $f0 = 255.0F * $f0;
+
+        $i0 = (int) $f0;
+
+        virtualinvoke $r1.<android.widget.ImageButton: void setAlpha(int)>($i0);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.w.a, int, boolean)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter1: int;
+
+        $z0 := @parameter2: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int,boolean)>($i0, $z0);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.w.a, int, boolean, boolean, float)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        boolean $z0, $z1;
+        float $f0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter1: int;
+
+        $z0 := @parameter2: boolean;
+
+        $z1 := @parameter3: boolean;
+
+        $f0 := @parameter4: float;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int,boolean,boolean,float)>($i0, $z0, $z1, $f0);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.w.a, kankan.wheel.widget.WheelView, int)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        kankan.wheel.widget.WheelView $r1;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        $r1 := @parameter1: kankan.wheel.widget.WheelView;
+
+        $i0 := @parameter2: int;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(kankan.wheel.widget.WheelView,int)>($r1, $i0);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.w.a, boolean)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        $z0 := @parameter1: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void i(boolean)>($z0);
+
+        return;
+    }
+
+    private void a(java.util.Date)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        java.util.Date $r1;
+        com.seattleclouds.modules.w.c $r2;
+        java.util.Timer $r3;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 := @parameter0: java.util.Date;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void af()>();
+
+        $r3 = new java.util.Timer;
+
+        specialinvoke $r3.<java.util.Timer: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.Timer ar> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.w.a: java.util.Timer ar>;
+
+        $r2 = new com.seattleclouds.modules.w.c;
+
+        specialinvoke $r2.<com.seattleclouds.modules.w.c: void <init>(com.seattleclouds.modules.w.a)>($r0);
+
+        virtualinvoke $r3.<java.util.Timer: void schedule(java.util.TimerTask,java.util.Date)>($r2, $r1);
+
+        return;
+    }
+
+    private void a(kankan.wheel.widget.WheelView, int)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        kankan.wheel.widget.WheelView $r1;
+        int $i0, $i1, $i2;
+        double $d0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 := @parameter0: kankan.wheel.widget.WheelView;
+
+        $i0 := @parameter1: int;
+
+        $i1 = $r0.<com.seattleclouds.modules.w.a: int am>;
+
+        $i1 = $i1 * -350;
+
+        $d0 = staticinvoke <java.lang.Math: double random()>();
+
+        $d0 = $d0 * 50.0;
+
+        $i2 = (int) $d0;
+
+        $i1 = $i1 + $i2;
+
+        $i2 = $r0.<com.seattleclouds.modules.w.a: int am>;
+
+        $i0 = $i2 + $i0;
+
+        $i0 = $i0 * 1000;
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void b(int,int)>($i1, $i0);
+
+        return;
+    }
+
+    private void a(kankan.wheel.widget.WheelView, java.util.ArrayList)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        kankan.wheel.widget.WheelView $r1;
+        java.util.ArrayList $r2;
+        com.seattleclouds.modules.w.i $r3;
+        android.support.v4.app.ac $r4;
+        double $d0;
+        int $i0;
+        kankan.wheel.widget.d $r5;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 := @parameter0: kankan.wheel.widget.WheelView;
+
+        $r2 := @parameter1: java.util.ArrayList;
+
+        $r3 = new com.seattleclouds.modules.w.i;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.w.a: android.support.v4.app.ac n()>();
+
+        specialinvoke $r3.<com.seattleclouds.modules.w.i: void <init>(com.seattleclouds.modules.w.a,android.content.Context,java.util.ArrayList)>($r0, $r4, $r2);
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void setViewAdapter(kankan.wheel.widget.a.b)>($r3);
+
+        $d0 = staticinvoke <java.lang.Math: double random()>();
+
+        $d0 = $d0 * 10.0;
+
+        $i0 = (int) $d0;
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void setCurrentItem(int)>($i0);
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void setCyclic(boolean)>(1);
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void setEnabled(boolean)>(0);
+
+        $r5 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.d ax>;
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void a(kankan.wheel.widget.d)>($r5);
+
+        return;
+    }
+
+    private void a(boolean)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(boolean,java.util.Date)>($z0, null);
+
+        return;
+    }
+
+    private void a(boolean, java.util.Date)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        boolean $z0;
+        java.util.Date $r1;
+        byte $b0, $b3;
+        long $l1, $l2;
+        android.widget.TextView $r2;
+        java.lang.String $r3;
+        android.widget.ImageButton $r4;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 := @parameter1: java.util.Date;
+
+        $b0 = 0;
+
+        if $r1 == null goto label6;
+
+        $l1 = virtualinvoke $r1.<java.util.Date: long getTime()>();
+
+        $l2 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $l1 = $l1 - $l2;
+
+        $b3 = $l1 cmp 120000L;
+
+        if $b3 >= 0 goto label5;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int)>(1000);
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.w.a: android.widget.TextView f>;
+
+        $l1 = virtualinvoke $r1.<java.util.Date: long getTime()>();
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.modules.w.a: java.lang.String a(long)>($l1);
+
+        virtualinvoke $r2.<android.widget.TextView: void setText(java.lang.CharSequence)>($r3);
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.w.a: android.widget.TextView f>;
+
+        if $z0 == 0 goto label7;
+
+        $b3 = 8;
+
+     label3:
+        virtualinvoke $r2.<android.widget.TextView: void setVisibility(int)>($b3);
+
+        $r4 = $r0.<com.seattleclouds.modules.w.a: android.widget.ImageButton e>;
+
+        if $z0 == 0 goto label8;
+
+     label4:
+        virtualinvoke $r4.<android.widget.ImageButton: void setVisibility(int)>($b0);
+
+        return;
+
+     label5:
+        $b3 = $l1 cmp 7200000L;
+
+        if $b3 >= 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int)>(60000);
+
+        goto label1;
+
+     label6:
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ag()>();
+
+        goto label2;
+
+     label7:
+        $b3 = 0;
+
+        goto label3;
+
+     label8:
+        $b0 = 8;
+
+        goto label4;
+    }
+
+    private void ab()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        android.os.Bundle $r1, $r2;
+        java.util.ArrayList $r3, $r4, $r5, $r10, r28;
+        java.lang.String $r6, $r7, $r12, $r13, $r14, $r15;
+        java.lang.String[] $r8, $r9;
+        int $i0, $i1, $i2, $i3, $i4;
+        com.seattleclouds.modules.w.j $r11, r29;
+        android.media.SoundPool $r16, r30;
+        long $l5, $l6;
+        java.lang.Throwable $r17, $r26, $r27;
+        java.lang.StringBuilder $r18, r31;
+        android.support.v4.app.ac $r19;
+        android.content.SharedPreferences $r20;
+        android.view.View $r21;
+        kankan.wheel.widget.WheelView $r22;
+        android.widget.TextView $r23;
+        android.widget.ImageButton $r24;
+        android.graphics.Bitmap $r25;
+        com.seattleclouds.modules.w.b r32;
+        java.lang.NumberFormatException r33;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.w.a: android.os.Bundle j()>();
+
+        if $r1 != null goto label01;
+
+        return;
+
+     label01:
+        $r2 = virtualinvoke $r1.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("ARG_CONFIG");
+
+        if $r2 == null goto label31;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.w.a: java.util.ArrayList a(android.os.Bundle,java.lang.String)>($r2, "component1");
+
+        $r4 = staticinvoke <com.seattleclouds.modules.w.a: java.util.ArrayList a(android.os.Bundle,java.lang.String)>($r2, "component2");
+
+        $r5 = staticinvoke <com.seattleclouds.modules.w.a: java.util.ArrayList a(android.os.Bundle,java.lang.String)>($r2, "component3");
+
+        if $r3 == null goto label31;
+
+        if $r4 == null goto label31;
+
+        if $r5 == null goto label31;
+
+        $r6 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("actionofwinposition");
+
+        $r7 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("winpositionofcomponents");
+
+        if $r6 == null goto label31;
+
+        if $r7 == null goto label31;
+
+        $r8 = virtualinvoke $r6.<java.lang.String: java.lang.String[] split(java.lang.String,int)>(";", -1);
+
+        $r9 = virtualinvoke $r7.<java.lang.String: java.lang.String[] split(java.lang.String,int)>(";", -1);
+
+        $i0 = lengthof $r8;
+
+        $i1 = lengthof $r9;
+
+        $i1 = $i1 / 3;
+
+        if $i0 > $i1 goto label31;
+
+        r28 = new java.util.ArrayList;
+
+        specialinvoke r28.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.ArrayList at> = r28;
+
+        $i2 = 0;
+
+        $i0 = 0;
+
+     label02:
+        $i1 = lengthof $r8;
+
+        if $i0 >= $i1 goto label15;
+
+        $r6 = $r8[$i0];
+
+        $i1 = $i2 + 1;
+
+        $r7 = $r9[$i2];
+
+     label03:
+        $i2 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r7);
+
+     label04:
+        $i3 = $i1 + 1;
+
+        $r7 = $r9[$i1];
+
+     label05:
+        $i4 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r7);
+
+     label06:
+        $i1 = $i3 + 1;
+
+        $r7 = $r9[$i3];
+
+     label07:
+        $i3 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r7);
+
+     label08:
+        r29 = new com.seattleclouds.modules.w.j;
+
+        $r11 = r29;
+
+     label09:
+        specialinvoke r29.<com.seattleclouds.modules.w.j: void <init>(com.seattleclouds.modules.w.a,int,int,int,java.lang.String)>($r0, $i2, $i4, $i3, $r6);
+
+     label10:
+        $r10 = $r0.<com.seattleclouds.modules.w.a: java.util.ArrayList at>;
+
+     label11:
+        virtualinvoke $r10.<java.util.ArrayList: boolean add(java.lang.Object)>($r11);
+
+     label12:
+        $i2 = $i1;
+
+     label13:
+        $i0 = $i0 + 1;
+
+        goto label02;
+
+     label14:
+        r33 = (java.lang.NumberFormatException) $r17;
+
+        $r6 = virtualinvoke r33.<java.lang.NumberFormatException: java.lang.String getMessage()>();
+
+        staticinvoke <com.seattleclouds.modules.w.a: void c(java.lang.String)>($r6);
+
+        goto label13;
+
+     label15:
+        $r6 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("buttonimage");
+
+        $r7 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("soundbutton");
+
+        $r12 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("soundcomponentrotation");
+
+        $r13 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("soundcomponentstop");
+
+        $r14 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("soundwin");
+
+        $r15 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("soundloser");
+
+        r30 = new android.media.SoundPool;
+
+        specialinvoke r30.<android.media.SoundPool: void <init>(int,int,int)>(2, 3, 0);
+
+        $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g> = r30;
+
+        $r16 = $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.w.a: int a(android.media.SoundPool,java.lang.String)>($r16, $r7);
+
+        $r0.<com.seattleclouds.modules.w.a: int i> = $i0;
+
+        $r16 = $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.w.a: int a(android.media.SoundPool,java.lang.String)>($r16, $r12);
+
+        $r0.<com.seattleclouds.modules.w.a: int ai> = $i0;
+
+        $r16 = $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.w.a: int a(android.media.SoundPool,java.lang.String)>($r16, $r13);
+
+        $r0.<com.seattleclouds.modules.w.a: int aj> = $i0;
+
+        $r16 = $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.w.a: int a(android.media.SoundPool,java.lang.String)>($r16, $r14);
+
+        $r0.<com.seattleclouds.modules.w.a: int ak> = $i0;
+
+        $r16 = $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.w.a: int a(android.media.SoundPool,java.lang.String)>($r16, $r15);
+
+        $r0.<com.seattleclouds.modules.w.a: int al> = $i0;
+
+        $i0 = virtualinvoke $r2.<android.os.Bundle: int getInt(java.lang.String,int)>("timerotationofslots", 3);
+
+        $r0.<com.seattleclouds.modules.w.a: int am> = $i0;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ao>;
+
+        $i0 = virtualinvoke $r2.<android.os.Bundle: int getInt(java.lang.String,int)>("spinLimit", $i0);
+
+        $r0.<com.seattleclouds.modules.w.a: int ao> = $i0;
+
+        $r7 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("spinLimitExpiration");
+
+        if $r7 == null goto label26;
+
+        $r8 = virtualinvoke $r7.<java.lang.String: java.lang.String[] split(java.lang.String,int)>(":", -1);
+
+        $i0 = lengthof $r8;
+
+        $i0 = $i0 + -1;
+
+        $i0 = staticinvoke <java.lang.Math: int min(int,int)>($i0, 4);
+
+     label16:
+        if $i0 < 0 goto label26;
+
+        $r7 = $r8[$i0];
+
+     label17:
+        $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r7);
+
+     label18:
+        lookupswitch($i0)
+        {
+            case 0: goto label20;
+            case 1: goto label22;
+            case 2: goto label23;
+            case 3: goto label24;
+            case 4: goto label25;
+            default: goto label19;
+        };
+
+     label19:
+        $i0 = $i0 + -1;
+
+        goto label16;
+
+     label20:
+        $l5 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $l6 = (long) $i1;
+
+        $l6 = $l6 * 2592000000L;
+
+        $l5 = $l5 + $l6;
+
+        $r0.<com.seattleclouds.modules.w.a: long aq> = $l5;
+
+        goto label19;
+
+     label21:
+        $r17 := @caughtexception;
+
+        r31 = new java.lang.StringBuilder;
+
+        specialinvoke r31.<java.lang.StringBuilder: void <init>()>();
+
+        $r18 = virtualinvoke r31.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Slotmachine: ");
+
+        r33 = (java.lang.NumberFormatException) $r17;
+
+        $r7 = virtualinvoke r33.<java.lang.NumberFormatException: java.lang.String getMessage()>();
+
+        $r18 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.modules.w.a: void c(java.lang.String)>($r7);
+
+        goto label19;
+
+     label22:
+        $l5 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $l6 = (long) $i1;
+
+        $l6 = $l6 * 604800000L;
+
+        $l5 = $l5 + $l6;
+
+        $r0.<com.seattleclouds.modules.w.a: long aq> = $l5;
+
+        goto label19;
+
+     label23:
+        $l5 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $l6 = (long) $i1;
+
+        $l6 = $l6 * 86400000L;
+
+        $l5 = $l5 + $l6;
+
+        $r0.<com.seattleclouds.modules.w.a: long aq> = $l5;
+
+        goto label19;
+
+     label24:
+        $l5 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $l6 = (long) $i1;
+
+        $l6 = $l6 * 3600000L;
+
+        $l5 = $l5 + $l6;
+
+        $r0.<com.seattleclouds.modules.w.a: long aq> = $l5;
+
+        goto label19;
+
+     label25:
+        $l5 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $l6 = (long) $i1;
+
+        $l6 = $l6 * 60000L;
+
+        $l5 = $l5 + $l6;
+
+        $r0.<com.seattleclouds.modules.w.a: long aq> = $l5;
+
+        goto label19;
+
+     label26:
+        $r7 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_ID");
+
+        $r0.<com.seattleclouds.modules.w.a: java.lang.String av> = $r7;
+
+        $r19 = virtualinvoke $r0.<com.seattleclouds.modules.w.a: android.support.v4.app.ac n()>();
+
+        $r20 = virtualinvoke $r19.<android.support.v4.app.ac: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("SLOTMACHINE_INFO_PREF_NAME", 0);
+
+        $r0.<com.seattleclouds.modules.w.a: android.content.SharedPreferences aw> = $r20;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int am>;
+
+        if $i0 > 0 goto label27;
+
+        $r0.<com.seattleclouds.modules.w.a: int am> = 3;
+
+     label27:
+        $r21 = $r0.<com.seattleclouds.modules.w.a: android.view.View a>;
+
+        $i0 = <com.seattleclouds.h: int slot_machine_wheel1>;
+
+        $r21 = virtualinvoke $r21.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r22 = (kankan.wheel.widget.WheelView) $r21;
+
+        $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView b> = $r22;
+
+        $r21 = $r0.<com.seattleclouds.modules.w.a: android.view.View a>;
+
+        $i0 = <com.seattleclouds.h: int slot_machine_wheel2>;
+
+        $r21 = virtualinvoke $r21.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r22 = (kankan.wheel.widget.WheelView) $r21;
+
+        $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView c> = $r22;
+
+        $r21 = $r0.<com.seattleclouds.modules.w.a: android.view.View a>;
+
+        $i0 = <com.seattleclouds.h: int slot_machine_wheel3>;
+
+        $r21 = virtualinvoke $r21.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r22 = (kankan.wheel.widget.WheelView) $r21;
+
+        $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView d> = $r22;
+
+        $r22 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView b>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(kankan.wheel.widget.WheelView,java.util.ArrayList)>($r22, $r3);
+
+        $r22 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView c>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(kankan.wheel.widget.WheelView,java.util.ArrayList)>($r22, $r4);
+
+        $r22 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView d>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(kankan.wheel.widget.WheelView,java.util.ArrayList)>($r22, $r5);
+
+        $r21 = $r0.<com.seattleclouds.modules.w.a: android.view.View a>;
+
+        $i0 = <com.seattleclouds.h: int status_text_view>;
+
+        $r21 = virtualinvoke $r21.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r23 = (android.widget.TextView) $r21;
+
+        $r0.<com.seattleclouds.modules.w.a: android.widget.TextView f> = $r23;
+
+        $r21 = $r0.<com.seattleclouds.modules.w.a: android.view.View a>;
+
+        $i0 = <com.seattleclouds.h: int spin_image_button>;
+
+        $r21 = virtualinvoke $r21.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r24 = (android.widget.ImageButton) $r21;
+
+        $r0.<com.seattleclouds.modules.w.a: android.widget.ImageButton e> = $r24;
+
+        $r24 = $r0.<com.seattleclouds.modules.w.a: android.widget.ImageButton e>;
+
+        r32 = new com.seattleclouds.modules.w.b;
+
+        specialinvoke r32.<com.seattleclouds.modules.w.b: void <init>(com.seattleclouds.modules.w.a)>($r0);
+
+        virtualinvoke $r24.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>(r32);
+
+        if $r6 == null goto label28;
+
+        $r25 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap a(java.lang.String,int)>($r6, 2000);
+
+        if $r25 == null goto label28;
+
+        $r24 = $r0.<com.seattleclouds.modules.w.a: android.widget.ImageButton e>;
+
+        virtualinvoke $r24.<android.widget.ImageButton: void setImageBitmap(android.graphics.Bitmap)>($r25);
+
+        $r24 = $r0.<com.seattleclouds.modules.w.a: android.widget.ImageButton e>;
+
+        virtualinvoke $r24.<android.widget.ImageButton: void setBackgroundColor(int)>(0);
+
+     label28:
+        $r1 = virtualinvoke $r1.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        $r21 = $r0.<com.seattleclouds.modules.w.a: android.view.View a>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r21, $r1);
+
+        $r23 = $r0.<com.seattleclouds.modules.w.a: android.widget.TextView f>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r23, $r1);
+
+        $r0.<com.seattleclouds.modules.w.a: boolean au> = 0;
+
+        return;
+
+     label29:
+        $r26 := @caughtexception;
+
+        $r17 = $r26;
+
+        $i2 = $i1;
+
+        goto label14;
+
+     label30:
+        $r27 := @caughtexception;
+
+        $i2 = $i3;
+
+        $r17 = $r27;
+
+        goto label14;
+
+     label31:
+        return;
+
+        catch java.lang.NumberFormatException from label03 to label04 with label29;
+        catch java.lang.NumberFormatException from label05 to label06 with label30;
+        catch java.lang.NumberFormatException from label07 to label08 with label29;
+        catch java.lang.NumberFormatException from label09 to label10 with label29;
+        catch java.lang.NumberFormatException from label11 to label12 with label29;
+        catch java.lang.NumberFormatException from label17 to label18 with label21;
+    }
+
+    private void ac()
+    {
+        com.seattleclouds.modules.w.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void af()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ag()>();
+
+        return;
+    }
+
+    private void ad()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0, $i1;
+        android.content.SharedPreferences $r1;
+        android.content.SharedPreferences$Editor $r2;
+        java.lang.StringBuilder $r3;
+        java.lang.String $r4;
+        long $l2;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ao>;
+
+        if $i0 <= 0 goto label2;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        if $i0 <= 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.content.SharedPreferences aw>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ao>;
+
+        $i1 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        if $i0 != $i1 goto label1;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.w.a: java.lang.String av>;
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("startSpinMilliseconds");
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $l2 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>($r4, $l2);
+
+     label1:
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        $i0 = $i0 + -1;
+
+        $r0.<com.seattleclouds.modules.w.a: int ap> = $i0;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.w.a: java.lang.String av>;
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("spinRemaining");
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>($r4, $i0);
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+     label2:
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ae()>();
+
+        return;
+    }
+
+    private void ae()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        boolean $z0;
+        int $i0;
+        android.content.SharedPreferences $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+        long $l1, $l2, $l3, $l4;
+        byte $b5;
+        android.content.SharedPreferences$Editor $r4;
+        java.util.Date $r5;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $z0 = 1;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ao>;
+
+        if $i0 <= 0 goto label8;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.content.SharedPreferences aw>;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.w.a: java.lang.String av>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("startSpinMilliseconds");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $l1 = interfaceinvoke $r1.<android.content.SharedPreferences: long getLong(java.lang.String,long)>($r3, 0L);
+
+        $l2 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $l3 = $l2 - $l1;
+
+        $l4 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $b5 = $l3 cmp $l4;
+
+        if $b5 < 0 goto label3;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ao>;
+
+        $r0.<com.seattleclouds.modules.w.a: int ap> = $i0;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.content.SharedPreferences aw>;
+
+        $r4 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.w.a: java.lang.String av>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("spinRemaining");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>($r3, $i0);
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.w.a: java.lang.String av>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("startSpinMilliseconds");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor remove(java.lang.String)>($r3);
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        if $i0 <= 0 goto label2;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(boolean)>($z0);
+
+        return;
+
+     label2:
+        $z0 = 0;
+
+        goto label1;
+
+     label3:
+        $l3 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $l3 = $l3 + $l1;
+
+        $l2 = $l3 - $l2;
+
+        $r5 = new java.util.Date;
+
+        $l3 = $r0.<com.seattleclouds.modules.w.a: long aq>;
+
+        $l1 = $l1 + $l3;
+
+        $l1 = $l1 + 1000L;
+
+        specialinvoke $r5.<java.util.Date: void <init>(long)>($l1);
+
+        $b5 = $l2 cmp 3600000L;
+
+        if $b5 >= 0 goto label4;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(java.util.Date)>($r5);
+
+     label4:
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.content.SharedPreferences aw>;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.w.a: java.lang.String av>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("spinRemaining");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i0 = interfaceinvoke $r1.<android.content.SharedPreferences: int getInt(java.lang.String,int)>($r3, -1);
+
+        $r0.<com.seattleclouds.modules.w.a: int ap> = $i0;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        if $i0 != -1 goto label5;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ao>;
+
+        $r0.<com.seattleclouds.modules.w.a: int ap> = $i0;
+
+     label5:
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ap>;
+
+        if $i0 <= 0 goto label7;
+
+     label6:
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(boolean,java.util.Date)>($z0, $r5);
+
+        return;
+
+     label7:
+        $z0 = 0;
+
+        goto label6;
+
+     label8:
+        return;
+    }
+
+    private void af()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        java.util.Timer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: java.util.Timer ar>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: java.util.Timer ar>;
+
+        virtualinvoke $r1.<java.util.Timer: void cancel()>();
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.Timer ar> = null;
+
+     label1:
+        return;
+    }
+
+    private void ag()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        java.util.Timer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: java.util.Timer as>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: java.util.Timer as>;
+
+        virtualinvoke $r1.<java.util.Timer: void cancel()>();
+
+        $r0.<com.seattleclouds.modules.w.a: java.util.Timer as> = null;
+
+     label1:
+        return;
+    }
+
+    private void ah()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        android.os.Handler $r1;
+        com.seattleclouds.modules.w.g $r2;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 = new android.os.Handler;
+
+        specialinvoke $r1.<android.os.Handler: void <init>()>();
+
+        $r2 = new com.seattleclouds.modules.w.g;
+
+        specialinvoke $r2.<com.seattleclouds.modules.w.g: void <init>(com.seattleclouds.modules.w.a)>($r0);
+
+        virtualinvoke $r1.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r2, 500L);
+
+        return;
+    }
+
+    private void ai()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        com.seattleclouds.modules.w.j $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.modules.w.a: com.seattleclouds.modules.w.j aj()>();
+
+        if $r1 == null goto label1;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int ak>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int,boolean)>($i0, 0);
+
+        $r2 = $r1.<com.seattleclouds.modules.w.j: java.lang.String d>;
+
+        staticinvoke <com.seattleclouds.App: void a(java.lang.String,android.support.v4.app.Fragment)>($r2, $r0);
+
+        return;
+
+     label1:
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int al>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(int,boolean)>($i0, 0);
+
+        return;
+    }
+
+    private com.seattleclouds.modules.w.j aj()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        kankan.wheel.widget.WheelView $r1;
+        int $i0, $i1, $i2, $i3;
+        java.util.ArrayList $r2;
+        java.util.Iterator $r3;
+        boolean $z0;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.w.j $r5;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView b>;
+
+        $i0 = virtualinvoke $r1.<kankan.wheel.widget.WheelView: int getCurrentItem()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView c>;
+
+        $i1 = virtualinvoke $r1.<kankan.wheel.widget.WheelView: int getCurrentItem()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView d>;
+
+        $i2 = virtualinvoke $r1.<kankan.wheel.widget.WheelView: int getCurrentItem()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.w.a: java.util.ArrayList at>;
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r3.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r4 = interfaceinvoke $r3.<java.util.Iterator: java.lang.Object next()>();
+
+        $r5 = (com.seattleclouds.modules.w.j) $r4;
+
+        $i3 = $r5.<com.seattleclouds.modules.w.j: int a>;
+
+        if $i3 != $i0 goto label1;
+
+        $i3 = $r5.<com.seattleclouds.modules.w.j: int b>;
+
+        if $i3 != $i1 goto label1;
+
+        $i3 = $r5.<com.seattleclouds.modules.w.j: int c>;
+
+        if $i3 != $i2 goto label1;
+
+        return $r5;
+
+     label2:
+        return null;
+    }
+
+    private void ak()
+    {
+        com.seattleclouds.modules.w.a $r0;
+        java.util.HashSet $r1;
+        java.util.Iterator $r2;
+        boolean $z0;
+        java.lang.Object $r3;
+        java.lang.Integer $r4;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: java.util.HashSet h>;
+
+        $r2 = virtualinvoke $r1.<java.util.HashSet: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r2.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r3 = interfaceinvoke $r2.<java.util.Iterator: java.lang.Object next()>();
+
+        $r4 = (java.lang.Integer) $r3;
+
+        $i0 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void d(int)>($i0);
+
+        goto label1;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.w.a: java.util.HashSet h>;
+
+        virtualinvoke $r1.<java.util.HashSet: void clear()>();
+
+        return;
+    }
+
+    static void b(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ah()>();
+
+        return;
+    }
+
+    static void c(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ae()>();
+
+        return;
+    }
+
+    private static void c(java.lang.String)
+    {
+        java.lang.String $r0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("SlotMachine", $r0);
+
+        return;
+    }
+
+    private void d(int)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0;
+        android.media.SoundPool $r1;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $i0 := @parameter0: int;
+
+        if $i0 <= 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.media.SoundPool g>;
+
+        virtualinvoke $r1.<android.media.SoundPool: void stop(int)>($i0);
+
+     label1:
+        return;
+    }
+
+    static boolean d(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        boolean z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        z0 = $r0.<com.seattleclouds.modules.w.a: boolean au>;
+
+        return z0;
+    }
+
+    static kankan.wheel.widget.WheelView e(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        kankan.wheel.widget.WheelView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        r1 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView b>;
+
+        return r1;
+    }
+
+    static kankan.wheel.widget.WheelView f(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        kankan.wheel.widget.WheelView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        r1 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView c>;
+
+        return r1;
+    }
+
+    static kankan.wheel.widget.WheelView g(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        kankan.wheel.widget.WheelView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        r1 = $r0.<com.seattleclouds.modules.w.a: kankan.wheel.widget.WheelView d>;
+
+        return r1;
+    }
+
+    static int h(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0, $i1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int an>;
+
+        $i1 = $i0 + 1;
+
+        $r0.<com.seattleclouds.modules.w.a: int an> = $i1;
+
+        return $i0;
+    }
+
+    static int i(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        i0 = $r0.<com.seattleclouds.modules.w.a: int ai>;
+
+        return i0;
+    }
+
+    private void i(boolean)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        boolean $z0;
+        android.widget.ImageButton $r1;
+        float $f0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.widget.ImageButton e>;
+
+        virtualinvoke $r1.<android.widget.ImageButton: void setEnabled(boolean)>($z0);
+
+        $r1 = $r0.<com.seattleclouds.modules.w.a: android.widget.ImageButton e>;
+
+        if $z0 == 0 goto label2;
+
+        $f0 = 1.0F;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void a(android.widget.ImageButton,float)>($r1, $f0);
+
+        return;
+
+     label2:
+        $f0 = 0.6F;
+
+        goto label1;
+    }
+
+    static int j(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int $i0, $i1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        $i0 = $r0.<com.seattleclouds.modules.w.a: int an>;
+
+        $i1 = $i0 + -1;
+
+        $r0.<com.seattleclouds.modules.w.a: int an> = $i1;
+
+        return $i0;
+    }
+
+    static int k(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        i0 = $r0.<com.seattleclouds.modules.w.a: int aj>;
+
+        return i0;
+    }
+
+    static int l(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        i0 = $r0.<com.seattleclouds.modules.w.a: int an>;
+
+        return i0;
+    }
+
+    static void m(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ai()>();
+
+        return;
+    }
+
+    static void n(com.seattleclouds.modules.w.a)
+    {
+        com.seattleclouds.modules.w.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.w.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ad()>();
+
+        return;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.modules.w.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ac()>();
+
+        specialinvoke $r0.<com.seattleclouds.r: void E()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        android.view.View $r4;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int fragment_slotmachine>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r0.<com.seattleclouds.modules.w.a: android.view.View a> = $r4;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ab()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.w.a: android.view.View a>;
+
+        return $r4;
+    }
+
+    public void b(boolean)
+    {
+        com.seattleclouds.modules.w.a $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.r: void b(boolean)>($z0);
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ae()>();
+
+     label1:
+        return;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.modules.w.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.w.a;
+
+        $r0.<com.seattleclouds.modules.w.a: boolean au> = 1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ac()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.w.a: void ak()>();
+
+        specialinvoke $r0.<com.seattleclouds.r: void g()>();
+
+        return;
+    }
+}

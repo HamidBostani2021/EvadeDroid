@@ -1,0 +1,144 @@
+class com.seattleclouds.x extends java.lang.Object implements com.google.android.vending.licensing.n
+{
+    final com.seattleclouds.AppStarterActivity a;
+
+    private void <init>(com.seattleclouds.AppStarterActivity)
+    {
+        com.seattleclouds.x $r0;
+        com.seattleclouds.AppStarterActivity $r1;
+
+        $r0 := @this: com.seattleclouds.x;
+
+        $r1 := @parameter0: com.seattleclouds.AppStarterActivity;
+
+        $r0.<com.seattleclouds.x: com.seattleclouds.AppStarterActivity a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.AppStarterActivity, com.seattleclouds.cf)
+    {
+        com.seattleclouds.x $r0;
+        com.seattleclouds.AppStarterActivity $r1;
+        com.seattleclouds.cf $r2;
+
+        $r0 := @this: com.seattleclouds.x;
+
+        $r1 := @parameter0: com.seattleclouds.AppStarterActivity;
+
+        $r2 := @parameter1: com.seattleclouds.cf;
+
+        specialinvoke $r0.<com.seattleclouds.x: void <init>(com.seattleclouds.AppStarterActivity)>($r1);
+
+        return;
+    }
+
+    private void a(boolean)
+    {
+        com.seattleclouds.x $r0;
+        boolean $z0;
+        com.seattleclouds.y $r1;
+        com.seattleclouds.AppStarterActivity $r2;
+        android.os.Handler $r3;
+
+        $r0 := @this: com.seattleclouds.x;
+
+        $z0 := @parameter0: boolean;
+
+        $r2 = $r0.<com.seattleclouds.x: com.seattleclouds.AppStarterActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.AppStarterActivity: android.os.Handler m(com.seattleclouds.AppStarterActivity)>($r2);
+
+        if $r3 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.x: com.seattleclouds.AppStarterActivity a>;
+
+        $r3 = staticinvoke <com.seattleclouds.AppStarterActivity: android.os.Handler m(com.seattleclouds.AppStarterActivity)>($r2);
+
+        $r1 = new com.seattleclouds.y;
+
+        specialinvoke $r1.<com.seattleclouds.y: void <init>(com.seattleclouds.x,boolean)>($r0, $z0);
+
+        virtualinvoke $r3.<android.os.Handler: boolean post(java.lang.Runnable)>($r1);
+
+     label1:
+        return;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.x $r0;
+        int $i0;
+        boolean $z0;
+        com.seattleclouds.AppStarterActivity $r1;
+
+        $r0 := @this: com.seattleclouds.x;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.x: com.seattleclouds.AppStarterActivity a>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.AppStarterActivity: boolean isFinishing()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.x: void a(boolean)>(1);
+
+        return;
+    }
+
+    public void b(int)
+    {
+        com.seattleclouds.x $r0;
+        int $i0;
+        boolean $z0;
+        com.seattleclouds.AppStarterActivity $r1;
+
+        $r0 := @this: com.seattleclouds.x;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.x: com.seattleclouds.AppStarterActivity a>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.AppStarterActivity: boolean isFinishing()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.x: void a(boolean)>(0);
+
+        return;
+    }
+
+    public void c(int)
+    {
+        com.seattleclouds.x $r0;
+        int $i0;
+        boolean $z0;
+        com.seattleclouds.AppStarterActivity $r1;
+
+        $r0 := @this: com.seattleclouds.x;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.x: com.seattleclouds.AppStarterActivity a>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.AppStarterActivity: boolean isFinishing()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.x: void a(boolean)>(0);
+
+        return;
+    }
+}

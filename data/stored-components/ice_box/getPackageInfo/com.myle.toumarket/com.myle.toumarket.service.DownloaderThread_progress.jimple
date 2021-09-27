@@ -1,0 +1,379 @@
+public class com.myle.toumarket.service.DownloaderThread_progress extends java.lang.Thread
+{
+    private static final int DOWNLOAD_BUFFER_SIZE;
+    private java.lang.String downloadUrl;
+    private com.myle.toumarket.apk_install parentActivity;
+
+    public void <init>(com.myle.toumarket.apk_install, java.lang.String)
+    {
+        com.myle.toumarket.service.DownloaderThread_progress $r0;
+        com.myle.toumarket.apk_install $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.myle.toumarket.service.DownloaderThread_progress;
+
+        $r1 := @parameter0: com.myle.toumarket.apk_install;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Thread: void <init>()>();
+
+        $r0.<com.myle.toumarket.service.DownloaderThread_progress: java.lang.String downloadUrl> = "";
+
+        if $r2 == null goto label1;
+
+        $r0.<com.myle.toumarket.service.DownloaderThread_progress: java.lang.String downloadUrl> = $r2;
+
+     label1:
+        $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity> = $r1;
+
+        return;
+    }
+
+    public void run()
+    {
+        com.myle.toumarket.service.DownloaderThread_progress $r0;
+        byte[] $r1;
+        int $i0, $i1;
+        java.io.FileOutputStream $r2;
+        java.io.BufferedInputStream $r3;
+        java.io.File $r4, $r14;
+        java.io.BufferedOutputStream $r5;
+        java.net.URL $r6;
+        com.myle.toumarket.apk_install $r7;
+        android.os.Handler $r8;
+        java.lang.String $r9;
+        android.os.Message $r10;
+        java.net.URLConnection $r11;
+        boolean $z0;
+        java.io.InputStream $r12;
+        java.lang.StringBuilder $r13;
+        java.lang.Throwable $r15, $r16;
+        java.lang.Exception $r17;
+
+        $r0 := @this: com.myle.toumarket.service.DownloaderThread_progress;
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        $r9 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: java.lang.String downloadUrl>;
+
+        $r10 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int,int,int,java.lang.Object)>($r8, 1004, 0, 0, $r9);
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        virtualinvoke $r8.<android.os.Handler: boolean sendMessage(android.os.Message)>($r10);
+
+        $r6 = new java.net.URL;
+
+     label01:
+        $r9 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: java.lang.String downloadUrl>;
+
+     label02:
+        specialinvoke $r6.<java.net.URL: void <init>(java.lang.String)>($r9);
+
+        $r11 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>();
+
+        virtualinvoke $r11.<java.net.URLConnection: void setUseCaches(boolean)>(0);
+
+        $i0 = virtualinvoke $r11.<java.net.URLConnection: int getContentLength()>();
+
+        $r9 = virtualinvoke $r6.<java.net.URL: java.lang.String toString()>();
+
+        $i1 = virtualinvoke $r9.<java.lang.String: int lastIndexOf(int)>(47);
+
+     label03:
+        $r9 = "file.bin";
+
+        if $i1 < 0 goto label07;
+
+     label04:
+        $r9 = virtualinvoke $r6.<java.net.URL: java.lang.String toString()>();
+
+     label05:
+        $i1 = $i1 + 1;
+
+     label06:
+        $r9 = virtualinvoke $r9.<java.lang.String: java.lang.String substring(int)>($i1);
+
+     label07:
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+     label08:
+        if $z0 == 0 goto label09;
+
+        $r9 = "file.bin";
+
+     label09:
+        $i0 = $i0 / 1024;
+
+     label10:
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+     label11:
+        $r10 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int,int,int,java.lang.Object)>($r8, 1000, $i0, 0, $r9);
+
+     label12:
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+     label13:
+        virtualinvoke $r8.<android.os.Handler: boolean sendMessage(android.os.Message)>($r10);
+
+     label14:
+        $r3 = new java.io.BufferedInputStream;
+
+     label15:
+        $r12 = virtualinvoke $r11.<java.net.URLConnection: java.io.InputStream getInputStream()>();
+
+        specialinvoke $r3.<java.io.BufferedInputStream: void <init>(java.io.InputStream)>($r12);
+
+     label16:
+        $r4 = new java.io.File;
+
+        $r13 = new java.lang.StringBuilder;
+
+     label17:
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r14 = staticinvoke <android.os.Environment: java.io.File getExternalStorageDirectory()>();
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r14);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/TOUMARKET/Update/");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r9);
+
+     label18:
+        $r2 = new java.io.FileOutputStream;
+
+     label19:
+        specialinvoke $r2.<java.io.FileOutputStream: void <init>(java.io.File)>($r4);
+
+     label20:
+        $r5 = new java.io.BufferedOutputStream;
+
+     label21:
+        specialinvoke $r5.<java.io.BufferedOutputStream: void <init>(java.io.OutputStream,int)>($r2, 4096);
+
+     label22:
+        $r1 = newarray (byte)[4096];
+
+     label23:
+        $i0 = 0;
+
+     label24:
+        $z0 = virtualinvoke $r0.<com.myle.toumarket.service.DownloaderThread_progress: boolean isInterrupted()>();
+
+     label25:
+        if $z0 != 0 goto label29;
+
+     label26:
+        $i1 = lengthof $r1;
+
+     label27:
+        $i1 = virtualinvoke $r3.<java.io.BufferedInputStream: int read(byte[],int,int)>($r1, 0, $i1);
+
+     label28:
+        if $i1 >= 0 goto label33;
+
+     label29:
+        virtualinvoke $r5.<java.io.BufferedOutputStream: void close()>();
+
+        virtualinvoke $r2.<java.io.FileOutputStream: void close()>();
+
+        virtualinvoke $r3.<java.io.BufferedInputStream: void close()>();
+
+        $z0 = virtualinvoke $r0.<com.myle.toumarket.service.DownloaderThread_progress: boolean isInterrupted()>();
+
+     label30:
+        if $z0 == 0 goto label41;
+
+     label31:
+        virtualinvoke $r4.<java.io.File: boolean delete()>();
+
+     label32:
+        return;
+
+     label33:
+        virtualinvoke $r5.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r1, 0, $i1);
+
+     label34:
+        $i0 = $i0 + $i1;
+
+        $i1 = $i0 / 1024;
+
+     label35:
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+     label36:
+        $r10 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int,int,int)>($r8, 1002, $i1, 0);
+
+     label37:
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+     label38:
+        virtualinvoke $r8.<android.os.Handler: boolean sendMessage(android.os.Message)>($r10);
+
+     label39:
+        goto label24;
+
+     label40:
+        $r15 := @caughtexception;
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r9 = virtualinvoke $r7.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361819);
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        $r10 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int,int,int,java.lang.Object)>($r8, 1005, 0, 0, $r9);
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        virtualinvoke $r8.<android.os.Handler: boolean sendMessage(android.os.Message)>($r10);
+
+        return;
+
+     label41:
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+     label42:
+        $r10 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int)>($r8, 1001);
+
+     label43:
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+     label44:
+        virtualinvoke $r8.<android.os.Handler: boolean sendMessage(android.os.Message)>($r10);
+
+     label45:
+        return;
+
+     label46:
+        $r16 := @caughtexception;
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r9 = virtualinvoke $r7.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361820);
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        $r10 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int,int,int,java.lang.Object)>($r8, 1005, 0, 0, $r9);
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        virtualinvoke $r8.<android.os.Handler: boolean sendMessage(android.os.Message)>($r10);
+
+        return;
+
+     label47:
+        $r17 := @caughtexception;
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r9 = virtualinvoke $r7.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361821);
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        $r10 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int,int,int,java.lang.Object)>($r8, 1005, 0, 0, $r9);
+
+        $r7 = $r0.<com.myle.toumarket.service.DownloaderThread_progress: com.myle.toumarket.apk_install parentActivity>;
+
+        $r8 = $r7.<com.myle.toumarket.apk_install: android.os.Handler activityHandler>;
+
+        virtualinvoke $r8.<android.os.Handler: boolean sendMessage(android.os.Message)>($r10);
+
+        return;
+
+        catch java.net.MalformedURLException from label02 to label03 with label40;
+        catch java.net.MalformedURLException from label04 to label05 with label40;
+        catch java.net.MalformedURLException from label06 to label07 with label40;
+        catch java.net.MalformedURLException from label07 to label08 with label40;
+        catch java.net.MalformedURLException from label11 to label12 with label40;
+        catch java.net.MalformedURLException from label13 to label14 with label40;
+        catch java.net.MalformedURLException from label15 to label16 with label40;
+        catch java.net.MalformedURLException from label17 to label18 with label40;
+        catch java.net.MalformedURLException from label19 to label20 with label40;
+        catch java.net.MalformedURLException from label21 to label22 with label40;
+        catch java.net.MalformedURLException from label24 to label25 with label40;
+        catch java.net.MalformedURLException from label27 to label28 with label40;
+        catch java.net.MalformedURLException from label29 to label30 with label40;
+        catch java.net.MalformedURLException from label31 to label32 with label40;
+        catch java.net.MalformedURLException from label33 to label34 with label40;
+        catch java.net.MalformedURLException from label36 to label37 with label40;
+        catch java.net.MalformedURLException from label38 to label39 with label40;
+        catch java.io.FileNotFoundException from label02 to label03 with label46;
+        catch java.io.FileNotFoundException from label04 to label05 with label46;
+        catch java.io.FileNotFoundException from label06 to label07 with label46;
+        catch java.io.FileNotFoundException from label07 to label08 with label46;
+        catch java.io.FileNotFoundException from label11 to label12 with label46;
+        catch java.io.FileNotFoundException from label13 to label14 with label46;
+        catch java.io.FileNotFoundException from label15 to label16 with label46;
+        catch java.io.FileNotFoundException from label17 to label18 with label46;
+        catch java.io.FileNotFoundException from label19 to label20 with label46;
+        catch java.io.FileNotFoundException from label21 to label22 with label46;
+        catch java.io.FileNotFoundException from label24 to label25 with label46;
+        catch java.io.FileNotFoundException from label27 to label28 with label46;
+        catch java.io.FileNotFoundException from label29 to label30 with label46;
+        catch java.io.FileNotFoundException from label31 to label32 with label46;
+        catch java.io.FileNotFoundException from label33 to label34 with label46;
+        catch java.io.FileNotFoundException from label36 to label37 with label46;
+        catch java.io.FileNotFoundException from label38 to label39 with label46;
+        catch java.lang.Exception from label01 to label03 with label47;
+        catch java.lang.Exception from label04 to label05 with label47;
+        catch java.lang.Exception from label06 to label07 with label47;
+        catch java.lang.Exception from label07 to label08 with label47;
+        catch java.lang.Exception from label10 to label14 with label47;
+        catch java.lang.Exception from label15 to label16 with label47;
+        catch java.lang.Exception from label17 to label18 with label47;
+        catch java.lang.Exception from label19 to label20 with label47;
+        catch java.lang.Exception from label21 to label23 with label47;
+        catch java.lang.Exception from label24 to label25 with label47;
+        catch java.lang.Exception from label26 to label28 with label47;
+        catch java.lang.Exception from label29 to label30 with label47;
+        catch java.lang.Exception from label31 to label32 with label47;
+        catch java.lang.Exception from label33 to label34 with label47;
+        catch java.lang.Exception from label35 to label39 with label47;
+        catch java.net.MalformedURLException from label42 to label43 with label40;
+        catch java.net.MalformedURLException from label44 to label45 with label40;
+        catch java.io.FileNotFoundException from label42 to label43 with label46;
+        catch java.io.FileNotFoundException from label44 to label45 with label46;
+        catch java.lang.Exception from label41 to label45 with label47;
+    }
+
+    public static void <clinit>()
+    {
+        <com.myle.toumarket.service.DownloaderThread_progress: int DOWNLOAD_BUFFER_SIZE> = 4096;
+
+        return;
+    }
+}

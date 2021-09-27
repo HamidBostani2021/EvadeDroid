@@ -1,0 +1,58 @@
+class com.seattleclouds.previewer.y extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final com.seattleclouds.previewer.r b;
+
+    void <init>(com.seattleclouds.previewer.r, java.lang.String)
+    {
+        com.seattleclouds.previewer.y $r0;
+        com.seattleclouds.previewer.r $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.y;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.r;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.previewer.y: com.seattleclouds.previewer.r b> = $r1;
+
+        $r0.<com.seattleclouds.previewer.y: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.previewer.y $r0;
+        java.lang.String $r1;
+        com.seattleclouds.previewer.r $r2;
+        android.support.v4.app.ac $r3;
+        android.widget.Toast $r4;
+
+        $r0 := @this: com.seattleclouds.previewer.y;
+
+        $r2 = $r0.<com.seattleclouds.previewer.y: com.seattleclouds.previewer.r b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.previewer.y: com.seattleclouds.previewer.r b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.previewer.r: android.support.v4.app.ac n()>();
+
+        $r1 = $r0.<com.seattleclouds.previewer.y: java.lang.String a>;
+
+        $r4 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r3, $r1, 1);
+
+        virtualinvoke $r4.<android.widget.Toast: void show()>();
+
+        return;
+    }
+}

@@ -1,0 +1,118 @@
+class com.concretepage.MainActivity$WebViewClientDemo extends android.webkit.WebViewClient
+{
+    final com.concretepage.MainActivity this$0;
+
+    private void <init>(com.concretepage.MainActivity)
+    {
+        com.concretepage.MainActivity$WebViewClientDemo $r0;
+        com.concretepage.MainActivity $r1;
+
+        $r0 := @this: com.concretepage.MainActivity$WebViewClientDemo;
+
+        $r1 := @parameter0: com.concretepage.MainActivity;
+
+        $r0.<com.concretepage.MainActivity$WebViewClientDemo: com.concretepage.MainActivity this$0> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.concretepage.MainActivity, com.concretepage.MainActivity$WebViewClientDemo)
+    {
+        com.concretepage.MainActivity$WebViewClientDemo $r0, $r2;
+        com.concretepage.MainActivity $r1;
+
+        $r0 := @this: com.concretepage.MainActivity$WebViewClientDemo;
+
+        $r1 := @parameter0: com.concretepage.MainActivity;
+
+        $r2 := @parameter1: com.concretepage.MainActivity$WebViewClientDemo;
+
+        specialinvoke $r0.<com.concretepage.MainActivity$WebViewClientDemo: void <init>(com.concretepage.MainActivity)>($r1);
+
+        return;
+    }
+
+    public void onPageFinished(android.webkit.WebView, java.lang.String)
+    {
+        com.concretepage.MainActivity$WebViewClientDemo $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        com.concretepage.MainActivity $r3;
+        android.widget.ProgressBar $r4;
+
+        $r0 := @this: com.concretepage.MainActivity$WebViewClientDemo;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onPageFinished(android.webkit.WebView,java.lang.String)>($r1, $r2);
+
+        $r3 = $r0.<com.concretepage.MainActivity$WebViewClientDemo: com.concretepage.MainActivity this$0>;
+
+        $r4 = staticinvoke <com.concretepage.MainActivity: android.widget.ProgressBar access$0(com.concretepage.MainActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.ProgressBar: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.concretepage.MainActivity$WebViewClientDemo: com.concretepage.MainActivity this$0>;
+
+        $r4 = staticinvoke <com.concretepage.MainActivity: android.widget.ProgressBar access$0(com.concretepage.MainActivity)>($r3);
+
+        virtualinvoke $r4.<android.widget.ProgressBar: void setProgress(int)>(100);
+
+        return;
+    }
+
+    public void onPageStarted(android.webkit.WebView, java.lang.String, android.graphics.Bitmap)
+    {
+        com.concretepage.MainActivity$WebViewClientDemo $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        android.graphics.Bitmap $r3;
+        com.concretepage.MainActivity $r4;
+        android.widget.ProgressBar $r5;
+
+        $r0 := @this: com.concretepage.MainActivity$WebViewClientDemo;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.graphics.Bitmap;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap)>($r1, $r2, $r3);
+
+        $r4 = $r0.<com.concretepage.MainActivity$WebViewClientDemo: com.concretepage.MainActivity this$0>;
+
+        $r5 = staticinvoke <com.concretepage.MainActivity: android.widget.ProgressBar access$0(com.concretepage.MainActivity)>($r4);
+
+        virtualinvoke $r5.<android.widget.ProgressBar: void setVisibility(int)>(0);
+
+        $r4 = $r0.<com.concretepage.MainActivity$WebViewClientDemo: com.concretepage.MainActivity this$0>;
+
+        $r5 = staticinvoke <com.concretepage.MainActivity: android.widget.ProgressBar access$0(com.concretepage.MainActivity)>($r4);
+
+        virtualinvoke $r5.<android.widget.ProgressBar: void setProgress(int)>(0);
+
+        return;
+    }
+
+    public boolean shouldOverrideUrlLoading(android.webkit.WebView, java.lang.String)
+    {
+        com.concretepage.MainActivity$WebViewClientDemo $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.concretepage.MainActivity$WebViewClientDemo;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        virtualinvoke $r1.<android.webkit.WebView: void loadUrl(java.lang.String)>($r2);
+
+        return 1;
+    }
+}

@@ -1,0 +1,1645 @@
+public class com.seattleclouds.modules.podcast.player.PodcastPlayerService extends android.app.Service implements android.media.MediaPlayer$OnBufferingUpdateListener, android.media.MediaPlayer$OnCompletionListener, android.media.MediaPlayer$OnErrorListener, android.media.MediaPlayer$OnInfoListener, android.media.MediaPlayer$OnPreparedListener, android.media.MediaPlayer$OnSeekCompleteListener, com.seattleclouds.modules.podcast.player.c
+{
+    private static final int a;
+    private final android.os.IBinder b;
+    private android.media.MediaPlayer c;
+    private android.support.v4.content.q d;
+    private android.app.NotificationManager e;
+    private com.seattleclouds.modules.podcast.player.b f;
+    private android.net.wifi.WifiManager$WifiLock g;
+    private com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h;
+    private com.seattleclouds.modules.podcast.player.PodcastPlayerService$State i;
+    private boolean j;
+    private android.net.Uri k;
+    private java.lang.String l;
+    private java.lang.String m;
+    private android.graphics.Bitmap n;
+    private boolean o;
+    private boolean p;
+    private int q;
+    private int r;
+    private int s;
+    private com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t;
+    private android.app.Notification u;
+    private android.content.Intent v;
+    public android.content.Intent ipcIntent;
+    public android.os.IBinder ipcBinder_0;
+
+    static void <clinit>()
+    {
+        int $i0;
+
+        $i0 = <com.seattleclouds.h: int podcast_player_notification_id>;
+
+        <com.seattleclouds.modules.podcast.player.PodcastPlayerService: int a> = $i0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.w $r1;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus $r2;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        specialinvoke $r0.<android.app.Service: void <init>()>();
+
+        $r1 = new com.seattleclouds.modules.podcast.player.w;
+
+        specialinvoke $r1.<com.seattleclouds.modules.podcast.player.w: void <init>(com.seattleclouds.modules.podcast.player.PodcastPlayerService)>($r0);
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.os.IBinder b> = $r1;
+
+        $r2 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus NoFocusNoDuck>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h> = $r2;
+
+        $r3 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State None>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State i> = $r3;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int q> = 0;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int r> = 0;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int s> = 0;
+
+        return;
+    }
+
+    private void a(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r1, $r3;
+        int $i0;
+        android.app.Notification $r2;
+        android.app.NotificationManager $r4;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State;
+
+        $r3 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Stopped>;
+
+        if $r1 != $r3 goto label1;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.NotificationManager e>;
+
+        $i0 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService: int a>;
+
+        virtualinvoke $r4.<android.app.NotificationManager: void cancel(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.Notification u> = null;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t> = null;
+
+        return;
+
+     label1:
+        $r2 = specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.Notification b(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)>($r1);
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.Notification u> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.Notification u>;
+
+        if $r2 == null goto label2;
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl: void a(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)>($r1);
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void o()>();
+
+     label2:
+        return;
+    }
+
+    private android.app.Notification b(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r1, $r2;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl $r3;
+        java.lang.String $r4;
+        int $i0;
+        android.graphics.Bitmap $r5;
+        android.content.Context $r6;
+        android.content.Intent $r7;
+        android.app.PendingIntent $r8;
+        android.support.v4.app.ce $r9;
+        android.app.Notification $r10;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State;
+
+        $r2 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Playing>;
+
+        if $r1 == $r2 goto label1;
+
+        $r2 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Paused>;
+
+        if $r1 == $r2 goto label1;
+
+        return null;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        if $r3 != null goto label2;
+
+        $r3 = new com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String getPackageName()>();
+
+        $i0 = <com.seattleclouds.j: int podcast_player_remote_control>;
+
+        specialinvoke $r3.<com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl: void <init>(com.seattleclouds.modules.podcast.player.PodcastPlayerService,java.lang.String,int)>($r0, $r4, $i0);
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String l>;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl: void a(java.lang.String)>($r4);
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.graphics.Bitmap n>;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl: void a(android.graphics.Bitmap)>($r5);
+
+     label2:
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Context getApplicationContext()>();
+
+        $r7 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Intent v>;
+
+        $r8 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getActivity(android.content.Context,int,android.content.Intent,int)>($r6, 0, $r7, 134217728);
+
+        $r9 = new android.support.v4.app.ce;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Context getApplicationContext()>();
+
+        specialinvoke $r9.<android.support.v4.app.ce: void <init>(android.content.Context)>($r6);
+
+        $r9 = virtualinvoke $r9.<android.support.v4.app.ce: android.support.v4.app.ce c(boolean)>(1);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String l>;
+
+        $r9 = virtualinvoke $r9.<android.support.v4.app.ce: android.support.v4.app.ce a(java.lang.CharSequence)>($r4);
+
+        $r9 = virtualinvoke $r9.<android.support.v4.app.ce: android.support.v4.app.ce a(android.app.PendingIntent)>($r8);
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        $r9 = virtualinvoke $r9.<android.support.v4.app.ce: android.support.v4.app.ce a(android.widget.RemoteViews)>($r3);
+
+        $r2 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Playing>;
+
+        if $r1 != $r2 goto label3;
+
+        $i0 = <com.seattleclouds.g: int ic_media_podcast_notif_play_alpha>;
+
+        virtualinvoke $r9.<android.support.v4.app.ce: android.support.v4.app.ce a(int)>($i0);
+
+        $r10 = virtualinvoke $r9.<android.support.v4.app.ce: android.app.Notification a()>();
+
+        return $r10;
+
+     label3:
+        $r2 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Paused>;
+
+        if $r1 != $r2 goto label4;
+
+        $i0 = <com.seattleclouds.g: int ic_media_podcast_notif_pause_alpha>;
+
+        virtualinvoke $r9.<android.support.v4.app.ce: android.support.v4.app.ce a(int)>($i0);
+
+        $r10 = virtualinvoke $r9.<android.support.v4.app.ce: android.app.Notification a()>();
+
+        return $r10;
+
+     label4:
+        return null;
+    }
+
+    private void k()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        android.content.Context $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = new android.media.MediaPlayer;
+
+        specialinvoke $r1.<android.media.MediaPlayer: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c> = $r1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Context getApplicationContext()>();
+
+        $i0 = virtualinvoke $r2.<android.content.Context: int checkCallingOrSelfPermission(java.lang.String)>("android.permission.WAKE_LOCK");
+
+        if $i0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Context getApplicationContext()>();
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setWakeMode(android.content.Context,int)>($r2, 1);
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnPreparedListener(android.media.MediaPlayer$OnPreparedListener)>($r0);
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnSeekCompleteListener(android.media.MediaPlayer$OnSeekCompleteListener)>($r0);
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnCompletionListener(android.media.MediaPlayer$OnCompletionListener)>($r0);
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnBufferingUpdateListener(android.media.MediaPlayer$OnBufferingUpdateListener)>($r0);
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnInfoListener(android.media.MediaPlayer$OnInfoListener)>($r0);
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setOnErrorListener(android.media.MediaPlayer$OnErrorListener)>($r0);
+
+        return;
+    }
+
+    private void l()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus $r1, $r2;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.player.b $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h>;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus Focused>;
+
+        if $r2 == $r1 goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.b f>;
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.modules.podcast.player.b: boolean a()>();
+
+        if $z0 == 0 goto label1;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus Focused>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h> = $r1;
+
+     label1:
+        return;
+    }
+
+    private void m()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus $r1, $r2;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.player.b $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h>;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus Focused>;
+
+        if $r2 != $r1 goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.b f>;
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.modules.podcast.player.b: boolean b()>();
+
+        if $z0 == 0 goto label1;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus NoFocusNoDuck>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h> = $r1;
+
+     label1:
+        return;
+    }
+
+    private void n()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus $r1, $r2;
+        android.media.MediaPlayer $r3;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r4, $r5;
+        boolean $z0;
+        int $i0;
+        android.support.v4.content.q $r6;
+        android.content.Intent $r7;
+        java.lang.String $r8;
+        java.lang.Throwable $r9;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h>;
+
+        $r2 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus NoFocusNoDuck>;
+
+        if $r1 != $r2 goto label03;
+
+     label01:
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(boolean)>(0);
+
+     label02:
+        return;
+
+     label03:
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h>;
+
+        $r2 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus NoFocusCanDuck>;
+
+        if $r1 != $r2 goto label17;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label04:
+        virtualinvoke $r3.<android.media.MediaPlayer: void setVolume(float,float)>(0.1F, 0.1F);
+
+     label05:
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State i>;
+
+        $r5 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Playing>;
+
+        if $r4 != $r5 goto label20;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label06:
+        $z0 = virtualinvoke $r3.<android.media.MediaPlayer: boolean isPlaying()>();
+
+     label07:
+        if $z0 != 0 goto label20;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int r>;
+
+        if $i0 <= 0 goto label09;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int r>;
+
+     label08:
+        virtualinvoke $r3.<android.media.MediaPlayer: void seekTo(int)>($i0);
+
+     label09:
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label10:
+        virtualinvoke $r3.<android.media.MediaPlayer: void start()>();
+
+     label11:
+        $r6 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r7 = new android.content.Intent;
+
+     label12:
+        $r8 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String b(android.content.Context)>($r0);
+
+        specialinvoke $r7.<android.content.Intent: void <init>(java.lang.String)>($r8);
+
+        virtualinvoke $r6.<android.support.v4.content.q: boolean a(android.content.Intent)>($r7);
+
+     label13:
+        $r4 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Playing>;
+
+     label14:
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)>($r4);
+
+     label15:
+        return;
+
+     label16:
+        $r9 := @caughtexception;
+
+        return;
+
+     label17:
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label18:
+        virtualinvoke $r3.<android.media.MediaPlayer: void setVolume(float,float)>(1.0F, 1.0F);
+
+     label19:
+        goto label05;
+
+     label20:
+        return;
+
+        catch java.lang.IllegalStateException from label01 to label02 with label16;
+        catch java.lang.IllegalStateException from label04 to label05 with label16;
+        catch java.lang.IllegalStateException from label06 to label07 with label16;
+        catch java.lang.IllegalStateException from label08 to label09 with label16;
+        catch java.lang.IllegalStateException from label10 to label11 with label16;
+        catch java.lang.IllegalStateException from label12 to label13 with label16;
+        catch java.lang.IllegalStateException from label14 to label15 with label16;
+        catch java.lang.IllegalStateException from label18 to label19 with label16;
+    }
+
+    private void o()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        int $i0;
+        android.app.Notification $r1;
+        android.app.NotificationManager $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.Notification u>;
+
+        if $r1 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.NotificationManager e>;
+
+        $i0 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService: int a>;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.Notification u>;
+
+        virtualinvoke $r2.<android.app.NotificationManager: void notify(int,android.app.Notification)>($i0, $r1);
+
+     label1:
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        boolean $z0;
+        android.media.MediaPlayer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        $z0 = virtualinvoke $r1.<android.media.MediaPlayer: boolean isPlaying()>();
+
+        if $z0 == 0 goto label1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(boolean)>(1);
+
+        return;
+
+     label1:
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void b()>();
+
+        return;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        int $i0;
+        boolean $z0;
+        android.media.MediaPlayer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $i0 := @parameter0: int;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void seekTo(int)>($i0);
+
+     label1:
+        return;
+    }
+
+    public void a(android.content.Intent)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.content.Intent $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Intent v> = $r1;
+
+        return;
+    }
+
+    public void a(android.graphics.Bitmap)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.graphics.Bitmap $r1;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.graphics.Bitmap n> = $r1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl: void a(android.graphics.Bitmap)>($r1);
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void o()>();
+
+     label1:
+        return;
+    }
+
+    public void a(android.net.Uri, boolean)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.net.Uri $r1, $r2;
+        boolean $z0, $z1, $z2;
+        android.media.MediaPlayer $r3;
+        java.lang.String $r4;
+        android.content.Context $r5;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r6;
+        android.net.wifi.WifiManager$WifiLock $r7;
+        android.support.v4.content.q $r8;
+        android.content.Intent $r9;
+        java.lang.Throwable $r10, $r11;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 = 1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.Uri k>;
+
+        if $r2 == null goto label19;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.Uri k>;
+
+        $z2 = virtualinvoke $r2.<android.net.Uri: boolean equals(java.lang.Object)>($r1);
+
+        if $z2 == 0 goto label19;
+
+        $z2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z2 == 0 goto label01;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        $z2 = virtualinvoke $r3.<android.media.MediaPlayer: boolean isPlaying()>();
+
+        if $z2 == 0 goto label01;
+
+        return;
+
+     label01:
+        if $z0 == 0 goto label03;
+
+        $z2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z2 == 0 goto label02;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void b()>();
+
+        return;
+
+     label02:
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean o> = 1;
+
+     label03:
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p> = 0;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void c()>();
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.Uri k> = $r1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.Uri k>;
+
+        if $r2 == null goto label27;
+
+        $r4 = virtualinvoke $r1.<android.net.Uri: java.lang.String toString()>();
+
+        $z2 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("http:");
+
+        if $z2 != 0 goto label04;
+
+        $r4 = virtualinvoke $r1.<android.net.Uri: java.lang.String toString()>();
+
+        $z2 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("https:");
+
+        if $z2 == 0 goto label20;
+
+     label04:
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean j> = $z1;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r3.<android.media.MediaPlayer: void reset()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void onBufferingUpdate(android.media.MediaPlayer,int)>($r3, 0);
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label05:
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Context getApplicationContext()>();
+
+     label06:
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.Uri k>;
+
+     label07:
+        virtualinvoke $r3.<android.media.MediaPlayer: void setDataSource(android.content.Context,android.net.Uri)>($r5, $r1);
+
+     label08:
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean o> = $z0;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label09:
+        virtualinvoke $r3.<android.media.MediaPlayer: void prepareAsync()>();
+
+     label10:
+        $r6 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Preparing>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State i> = $r6;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean j>;
+
+        if $z0 == 0 goto label21;
+
+        $r7 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.wifi.WifiManager$WifiLock g>;
+
+     label11:
+        $z0 = virtualinvoke $r7.<android.net.wifi.WifiManager$WifiLock: boolean isHeld()>();
+
+     label12:
+        if $z0 != 0 goto label21;
+
+        $r7 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.wifi.WifiManager$WifiLock g>;
+
+     label13:
+        virtualinvoke $r7.<android.net.wifi.WifiManager$WifiLock: void acquire()>();
+
+     label14:
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void l()>();
+
+     label15:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r9 = new android.content.Intent;
+
+     label16:
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String i(android.content.Context)>($r0);
+
+        specialinvoke $r9.<android.content.Intent: void <init>(java.lang.String)>($r4);
+
+        virtualinvoke $r8.<android.support.v4.content.q: boolean a(android.content.Intent)>($r9);
+
+     label17:
+        return;
+
+     label18:
+        $r10 := @caughtexception;
+
+        return;
+
+     label19:
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int r> = 0;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int s> = 0;
+
+        goto label03;
+
+     label20:
+        $z1 = 0;
+
+        goto label04;
+
+     label21:
+        $r7 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.wifi.WifiManager$WifiLock g>;
+
+     label22:
+        $z0 = virtualinvoke $r7.<android.net.wifi.WifiManager$WifiLock: boolean isHeld()>();
+
+     label23:
+        if $z0 == 0 goto label14;
+
+        $r7 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.wifi.WifiManager$WifiLock g>;
+
+     label24:
+        virtualinvoke $r7.<android.net.wifi.WifiManager$WifiLock: void release()>();
+
+     label25:
+        goto label14;
+
+     label26:
+        $r11 := @caughtexception;
+
+        goto label14;
+
+     label27:
+        return;
+
+        catch java.io.IOException from label05 to label06 with label18;
+        catch java.io.IOException from label07 to label08 with label18;
+        catch java.io.IOException from label09 to label10 with label18;
+        catch java.lang.SecurityException from label11 to label12 with label26;
+        catch java.lang.SecurityException from label13 to label14 with label26;
+        catch java.io.IOException from label11 to label12 with label18;
+        catch java.io.IOException from label13 to label14 with label18;
+        catch java.io.IOException from label14 to label15 with label18;
+        catch java.io.IOException from label16 to label17 with label18;
+        catch java.lang.SecurityException from label22 to label23 with label26;
+        catch java.lang.SecurityException from label24 to label25 with label26;
+        catch java.io.IOException from label22 to label23 with label18;
+        catch java.io.IOException from label24 to label25 with label18;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        java.lang.String $r1;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String l> = $r1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl t>;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String l>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.podcast.player.PodcastPlayerService$RemotePlayerControl: void a(java.lang.String)>($r1);
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void o()>();
+
+     label1:
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        boolean $z0;
+        android.content.Intent $r1;
+        java.lang.String $r2;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r3;
+        android.media.MediaPlayer $r4;
+        android.support.v4.content.q $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $z0 := @parameter0: boolean;
+
+        if $z0 == 0 goto label1;
+
+        $r3 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Paused>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State i> = $r3;
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label2:
+        virtualinvoke $r4.<android.media.MediaPlayer: void pause()>();
+
+     label3:
+        $r5 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r1 = new android.content.Intent;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String c(android.content.Context)>($r0);
+
+        specialinvoke $r1.<android.content.Intent: void <init>(java.lang.String)>($r2);
+
+        virtualinvoke $r5.<android.support.v4.content.q: boolean a(android.content.Intent)>($r1);
+
+        $r3 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Paused>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)>($r3);
+
+        return;
+
+     label4:
+        $r6 := @caughtexception;
+
+        goto label3;
+
+        catch java.lang.IllegalStateException from label2 to label3 with label4;
+    }
+
+    public void b()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Playing>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State i> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void l()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void n()>();
+
+        return;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String m> = $r1;
+
+        return;
+    }
+
+    public void b(boolean)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $z0 := @parameter0: boolean;
+
+        if $z0 == 0 goto label2;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus NoFocusCanDuck>;
+
+     label1:
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void n()>();
+
+        return;
+
+     label2:
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus NoFocusNoDuck>;
+
+        goto label1;
+    }
+
+    public void c()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r1;
+        boolean $z0;
+        android.media.MediaPlayer $r2;
+        int $i0;
+        android.net.wifi.WifiManager$WifiLock $r3;
+        android.support.v4.content.q $r4;
+        android.content.Intent $r5;
+        java.lang.String $r6;
+        java.lang.Throwable $r7, $r8;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Stopped>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State i> = $r1;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z0 == 0 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label1:
+        $i0 = virtualinvoke $r2.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+     label2:
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int r> = $i0;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label4:
+        virtualinvoke $r2.<android.media.MediaPlayer: void stop()>();
+
+     label5:
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean j>;
+
+        if $z0 == 0 goto label7;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.wifi.WifiManager$WifiLock g>;
+
+        $z0 = virtualinvoke $r3.<android.net.wifi.WifiManager$WifiLock: boolean isHeld()>();
+
+        if $z0 != 0 goto label7;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.wifi.WifiManager$WifiLock g>;
+
+     label6:
+        virtualinvoke $r3.<android.net.wifi.WifiManager$WifiLock: void acquire()>();
+
+     label7:
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void m()>();
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int q> = 0;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p> = 0;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r5 = new android.content.Intent;
+
+        $r6 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String d(android.content.Context)>($r0);
+
+        specialinvoke $r5.<android.content.Intent: void <init>(java.lang.String)>($r6);
+
+        virtualinvoke $r4.<android.support.v4.content.q: boolean a(android.content.Intent)>($r5);
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Stopped>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)>($r1);
+
+        return;
+
+     label8:
+        $r7 := @caughtexception;
+
+        goto label7;
+
+     label9:
+        $r8 := @caughtexception;
+
+        goto label5;
+
+        catch java.lang.IllegalStateException from label1 to label2 with label9;
+        catch java.lang.IllegalStateException from label4 to label5 with label9;
+        catch java.lang.SecurityException from label6 to label7 with label8;
+    }
+
+    public void d()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        int $i0;
+        boolean $z0;
+        java.lang.Throwable $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z0 == 0 goto label5;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int i()>();
+
+        $i0 = $i0 + -30000;
+
+        if $i0 >= 0 goto label1;
+
+        $i0 = 0;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label2:
+        virtualinvoke $r1.<android.media.MediaPlayer: void seekTo(int)>($i0);
+
+     label3:
+        return;
+
+     label4:
+        $r2 := @caughtexception;
+
+     label5:
+        return;
+
+        catch java.lang.IllegalStateException from label2 to label3 with label4;
+    }
+
+    public void e()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        boolean $z0;
+        int $i0, $i1;
+        android.media.MediaPlayer $r1;
+        java.lang.Throwable $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z0 == 0 goto label5;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int i()>();
+
+        $i0 = $i0 + 30000;
+
+        $i1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int h()>();
+
+        if $i0 <= $i1 goto label1;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int h()>();
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label2:
+        virtualinvoke $r1.<android.media.MediaPlayer: void seekTo(int)>($i0);
+
+     label3:
+        return;
+
+     label4:
+        $r2 := @caughtexception;
+
+     label5:
+        return;
+
+        catch java.lang.IllegalStateException from label2 to label3 with label4;
+    }
+
+    public void f()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus Focused>;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.PodcastPlayerService$AudioFocus h> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void n()>();
+
+        return;
+    }
+
+    public boolean g()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        boolean $z0;
+        android.media.MediaPlayer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        $z0 = virtualinvoke $r1.<android.media.MediaPlayer: boolean isPlaying()>();
+
+        return $z0;
+    }
+
+    public int h()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        int $i0;
+        boolean $z0;
+        android.media.MediaPlayer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getDuration()>();
+
+        return $i0;
+
+     label1:
+        $i0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int s>;
+
+        return $i0;
+    }
+
+    public int i()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        int $i0;
+        boolean $z0;
+        android.media.MediaPlayer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+        return $i0;
+
+     label1:
+        $i0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int r>;
+
+        return $i0;
+    }
+
+    public int j()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        i0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int q>;
+
+        return i0;
+    }
+
+    public android.os.IBinder onBind(android.content.Intent)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.os.IBinder ipcBinder_0> = parameter0;
+
+        this.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.os.IBinder ipcBinder_0> = parameter0;
+
+        this.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.os.IBinder ipcBinder_0> = parameter0;
+
+        return parameter0;
+    }
+
+    public void onBufferingUpdate(android.media.MediaPlayer, int)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        int $i0, $i1;
+        java.lang.String $r2;
+        android.content.Intent $r3;
+        android.support.v4.content.q $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $i0 := @parameter1: int;
+
+        $i1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int q>;
+
+        if $i1 == 0 goto label1;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int q> = 0;
+
+        $r3 = new android.content.Intent;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String n(android.content.Context)>($r0);
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String)>($r2);
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("EXTRA_AUDIO_BUFFER_PERCENT", 0);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        virtualinvoke $r4.<android.support.v4.content.q: boolean a(android.content.Intent)>($r3);
+
+     label1:
+        return;
+    }
+
+    public void onCompletion(android.media.MediaPlayer)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        android.content.Intent $r2;
+        java.lang.String $r3;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService$State $r4;
+        android.support.v4.content.q $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $r4 = <com.seattleclouds.modules.podcast.player.PodcastPlayerService$State: com.seattleclouds.modules.podcast.player.PodcastPlayerService$State Stopped>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(com.seattleclouds.modules.podcast.player.PodcastPlayerService$State)>($r4);
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r2 = new android.content.Intent;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String o(android.content.Context)>($r0);
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>($r3);
+
+        virtualinvoke $r5.<android.support.v4.content.q: boolean a(android.content.Intent)>($r2);
+
+        return;
+    }
+
+    public void onCreate()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.support.v4.content.q $r1;
+        java.lang.Object $r2;
+        android.app.NotificationManager $r3;
+        com.seattleclouds.modules.podcast.player.b $r4;
+        android.content.Context $r5;
+        android.net.wifi.WifiManager $r6;
+        android.net.wifi.WifiManager$WifiLock $r7;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        specialinvoke $r0.<android.app.Service: void onCreate()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void k()>();
+
+        $r1 = staticinvoke <android.support.v4.content.q: android.support.v4.content.q a(android.content.Context)>($r0);
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d> = $r1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.Object getSystemService(java.lang.String)>("notification");
+
+        $r3 = (android.app.NotificationManager) $r2;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.app.NotificationManager e> = $r3;
+
+        $r4 = new com.seattleclouds.modules.podcast.player.b;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.content.Context getApplicationContext()>();
+
+        specialinvoke $r4.<com.seattleclouds.modules.podcast.player.b: void <init>(android.content.Context,com.seattleclouds.modules.podcast.player.c)>($r5, $r0);
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: com.seattleclouds.modules.podcast.player.b f> = $r4;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.Object getSystemService(java.lang.String)>("wifi");
+
+        $r6 = (android.net.wifi.WifiManager) $r2;
+
+        $r7 = virtualinvoke $r6.<android.net.wifi.WifiManager: android.net.wifi.WifiManager$WifiLock createWifiLock(int,java.lang.String)>(1, "podcast_wifi_lock");
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.net.wifi.WifiManager$WifiLock g> = $r7;
+
+        return;
+    }
+
+    public void onDestroy()
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        java.lang.Throwable $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+     label1:
+        virtualinvoke $r1.<android.media.MediaPlayer: void stop()>();
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.media.MediaPlayer c>;
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void release()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void m()>();
+
+        specialinvoke $r0.<android.app.Service: void onDestroy()>();
+
+        return;
+
+     label3:
+        $r2 := @caughtexception;
+
+        goto label2;
+
+        catch java.lang.IllegalStateException from label1 to label2 with label3;
+    }
+
+    public boolean onError(android.media.MediaPlayer, int, int)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        int $i0, $i1;
+        android.content.Intent $r2;
+        java.lang.String $r3;
+        android.support.v4.content.q $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p> = 0;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void m()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r2 = new android.content.Intent;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String h(android.content.Context)>($r0);
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>($r3);
+
+        virtualinvoke $r4.<android.support.v4.content.q: boolean a(android.content.Intent)>($r2);
+
+        return 1;
+    }
+
+    public boolean onInfo(android.media.MediaPlayer, int, int)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        int $i0, $i1;
+        boolean $z0;
+        android.support.v4.content.q $r2;
+        android.content.Intent $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $z0 = 1;
+
+        lookupswitch($i0)
+        {
+            case 701: goto label3;
+            case 702: goto label4;
+            case 801: goto label2;
+            default: goto label1;
+        };
+
+     label1:
+        $z0 = 0;
+
+     label2:
+        return $z0;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String l(android.content.Context)>($r0);
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String)>($r4);
+
+        virtualinvoke $r2.<android.support.v4.content.q: boolean a(android.content.Intent)>($r3);
+
+        return 1;
+
+     label4:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String m(android.content.Context)>($r0);
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String)>($r4);
+
+        virtualinvoke $r2.<android.support.v4.content.q: boolean a(android.content.Intent)>($r3);
+
+        return 1;
+    }
+
+    public void onPrepared(android.media.MediaPlayer)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        int $i0;
+        android.content.Intent $r2;
+        java.lang.String $r3;
+        android.support.v4.content.q $r4;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean p> = 1;
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getDuration()>();
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: int s> = $i0;
+
+        $r2 = new android.content.Intent;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String j(android.content.Context)>($r0);
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>($r3);
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getDuration()>();
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("EXTRA_AUDIO_DURATION", $i0);
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("EXTRA_AUDIO_POSITION", $i0);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        virtualinvoke $r4.<android.support.v4.content.q: boolean a(android.content.Intent)>($r2);
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean o>;
+
+        if $z0 == 0 goto label1;
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: boolean o> = 0;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void b()>();
+
+     label1:
+        return;
+    }
+
+    public void onSeekComplete(android.media.MediaPlayer)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.media.MediaPlayer $r1;
+        android.content.Intent $r2;
+        java.lang.String $r3;
+        int $i0;
+        android.support.v4.content.q $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $r2 = new android.content.Intent;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String k(android.content.Context)>($r0);
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>($r3);
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getDuration()>();
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("EXTRA_AUDIO_DURATION", $i0);
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("EXTRA_AUDIO_POSITION", $i0);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: android.support.v4.content.q d>;
+
+        virtualinvoke $r4.<android.support.v4.content.q: boolean a(android.content.Intent)>($r2);
+
+        return;
+    }
+
+    public int onStartCommand(android.content.Intent, int, int)
+    {
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r0;
+        android.content.Intent $r1;
+        int $i0, $i1;
+        java.lang.String $r2, $r3;
+        boolean $z0;
+        android.os.Parcelable $r4;
+        android.net.Uri $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = virtualinvoke $r1.<android.content.Intent: java.lang.String getAction()>();
+
+        if $r2 != null goto label1;
+
+        return 2;
+
+     label1:
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String a(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label2;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a()>();
+
+        return 2;
+
+     label2:
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String b(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label3;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void b()>();
+
+        return 2;
+
+     label3:
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String c(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label4;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(boolean)>(1);
+
+        return 2;
+
+     label4:
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String d(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label5;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void c()>();
+
+        return 2;
+
+     label5:
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String e(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label6;
+
+        $r2 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("EXTRA_DEFAULT_TITLE");
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String l> = $r2;
+
+        $r2 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("EXTRA_DEFAULT_ARTIST");
+
+        $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: java.lang.String m> = $r2;
+
+        $r4 = virtualinvoke $r1.<android.content.Intent: android.os.Parcelable getParcelableExtra(java.lang.String)>("EXTRA_URI");
+
+        $r5 = (android.net.Uri) $r4;
+
+        $z0 = virtualinvoke $r1.<android.content.Intent: boolean getBooleanExtra(java.lang.String,boolean)>("EXTRA_AUTO_PLAY", 0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void a(android.net.Uri,boolean)>($r5, $z0);
+
+        return 2;
+
+     label6:
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String g(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label7;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void e()>();
+
+        return 2;
+
+     label7:
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.player.a: java.lang.String f(android.content.Context)>($r0);
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label8;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.player.PodcastPlayerService: void d()>();
+
+     label8:
+        return 2;
+    }
+}

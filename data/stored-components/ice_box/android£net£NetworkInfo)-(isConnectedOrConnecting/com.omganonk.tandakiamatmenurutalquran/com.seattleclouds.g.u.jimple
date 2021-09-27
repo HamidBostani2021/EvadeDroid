@@ -1,0 +1,37 @@
+class com.seattleclouds.g.u extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.g.j a;
+
+    void <init>(com.seattleclouds.g.j)
+    {
+        com.seattleclouds.g.u $r0;
+        com.seattleclouds.g.j $r1;
+
+        $r0 := @this: com.seattleclouds.g.u;
+
+        $r1 := @parameter0: com.seattleclouds.g.j;
+
+        $r0.<com.seattleclouds.g.u: com.seattleclouds.g.j a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.g.u $r0;
+        android.view.View $r1;
+        com.seattleclouds.g.j $r2;
+
+        $r0 := @this: com.seattleclouds.g.u;
+
+        $r2 = $r0.<com.seattleclouds.g.u: com.seattleclouds.g.j a>;
+
+        $r1 = staticinvoke <com.seattleclouds.g.j: android.view.View d(com.seattleclouds.g.j)>($r2);
+
+        virtualinvoke $r1.<android.view.View: void setVisibility(int)>(4);
+
+        return;
+    }
+}

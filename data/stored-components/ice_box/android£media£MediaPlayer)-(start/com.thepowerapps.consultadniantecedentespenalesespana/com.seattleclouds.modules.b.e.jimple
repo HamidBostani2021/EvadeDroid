@@ -1,0 +1,46 @@
+class com.seattleclouds.modules.b.e extends java.lang.Object implements android.widget.AdapterView$OnItemLongClickListener
+{
+    final com.seattleclouds.modules.b.d a;
+
+    void <init>(com.seattleclouds.modules.b.d)
+    {
+        com.seattleclouds.modules.b.e $r0;
+        com.seattleclouds.modules.b.d $r1;
+
+        $r0 := @this: com.seattleclouds.modules.b.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.b.d;
+
+        $r0.<com.seattleclouds.modules.b.e: com.seattleclouds.modules.b.d a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public boolean onItemLongClick(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.b.e $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        com.seattleclouds.modules.b.d $r3;
+
+        $r0 := @this: com.seattleclouds.modules.b.e;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = $r0.<com.seattleclouds.modules.b.e: com.seattleclouds.modules.b.d a>;
+
+        staticinvoke <com.seattleclouds.modules.b.d: void a(com.seattleclouds.modules.b.d,int)>($r3, $i0);
+
+        return 1;
+    }
+}

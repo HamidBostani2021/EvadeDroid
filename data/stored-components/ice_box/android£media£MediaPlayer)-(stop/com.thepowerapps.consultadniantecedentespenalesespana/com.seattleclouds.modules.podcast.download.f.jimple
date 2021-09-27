@@ -1,0 +1,32 @@
+public class com.seattleclouds.modules.podcast.download.f extends android.os.Binder
+{
+    final com.seattleclouds.modules.podcast.download.PodcastDownloadService a;
+
+    public void <init>(com.seattleclouds.modules.podcast.download.PodcastDownloadService)
+    {
+        com.seattleclouds.modules.podcast.download.f $r0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.f;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.PodcastDownloadService;
+
+        $r0.<com.seattleclouds.modules.podcast.download.f: com.seattleclouds.modules.podcast.download.PodcastDownloadService a> = $r1;
+
+        specialinvoke $r0.<android.os.Binder: void <init>()>();
+
+        return;
+    }
+
+    public com.seattleclouds.modules.podcast.download.PodcastDownloadService a()
+    {
+        com.seattleclouds.modules.podcast.download.f $r0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.f;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.f: com.seattleclouds.modules.podcast.download.PodcastDownloadService a>;
+
+        return r1;
+    }
+}

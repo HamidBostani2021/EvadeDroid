@@ -1,0 +1,109 @@
+class com.seattleclouds.modules.c.f extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.modules.c.a a;
+
+    void <init>(com.seattleclouds.modules.c.a)
+    {
+        com.seattleclouds.modules.c.f $r0;
+        com.seattleclouds.modules.c.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.c.f;
+
+        $r1 := @parameter0: com.seattleclouds.modules.c.a;
+
+        $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.modules.c.f $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.c.a $r2;
+        android.widget.EditText $r3;
+        android.widget.TextView $r4;
+
+        $r0 := @this: com.seattleclouds.modules.c.f;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        staticinvoke <com.seattleclouds.modules.c.a: boolean a(com.seattleclouds.modules.c.a,boolean)>($r2, 0);
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText b(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void setText(java.lang.CharSequence)>("");
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText b(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void clearFocus()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText g(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void setText(java.lang.CharSequence)>("");
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText g(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void clearFocus()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText d(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void setText(java.lang.CharSequence)>("");
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText d(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void clearFocus()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText c(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void setText(java.lang.CharSequence)>("");
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText c(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void clearFocus()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText e(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void setText(java.lang.CharSequence)>("");
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.EditText e(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.EditText: void clearFocus()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.c.a: android.widget.TextView h(com.seattleclouds.modules.c.a)>($r2);
+
+        virtualinvoke $r4.<android.widget.TextView: void setText(java.lang.CharSequence)>("0.0");
+
+        $r2 = $r0.<com.seattleclouds.modules.c.f: com.seattleclouds.modules.c.a a>;
+
+        staticinvoke <com.seattleclouds.modules.c.a: java.lang.String a(com.seattleclouds.modules.c.a,java.lang.String)>($r2, null);
+
+        return;
+    }
+}

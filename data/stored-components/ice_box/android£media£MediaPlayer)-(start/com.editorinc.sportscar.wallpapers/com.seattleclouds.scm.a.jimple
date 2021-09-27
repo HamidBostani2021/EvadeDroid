@@ -1,0 +1,286 @@
+class com.seattleclouds.scm.a extends android.os.AsyncTask
+{
+    private final android.content.BroadcastReceiver$PendingResult a;
+    private final android.content.Context b;
+
+    void <init>(android.content.Context, android.content.BroadcastReceiver$PendingResult)
+    {
+        com.seattleclouds.scm.a $r0;
+        android.content.Context $r1;
+        android.content.BroadcastReceiver$PendingResult $r2;
+
+        $r0 := @this: com.seattleclouds.scm.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.BroadcastReceiver$PendingResult;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.scm.a: android.content.BroadcastReceiver$PendingResult a> = $r2;
+
+        $r0.<com.seattleclouds.scm.a: android.content.Context b> = $r1;
+
+        return;
+    }
+
+    protected transient org.json.JSONObject a(java.lang.Void[])
+    {
+        com.seattleclouds.scm.a $r0;
+        java.lang.Void[] $r1;
+        java.lang.StringBuilder $r2, r9;
+        java.lang.String $r3, $r5;
+        boolean $z0;
+        long $l0;
+        java.util.HashMap $r4, r10;
+        android.content.Context $r6;
+        java.util.Date $r7, r11;
+        java.lang.Throwable $r8;
+        org.json.JSONObject r12;
+        java.lang.Exception r13;
+
+        $r0 := @this: com.seattleclouds.scm.a;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+        $r3 = <com.seattleclouds.App: java.lang.String s>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: void a(java.lang.String)>($r3);
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+        $r3 = <com.seattleclouds.App: java.lang.String s>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.a: boolean d(java.lang.String)>($r3);
+
+        if $z0 == 0 goto label20;
+
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: void a(java.lang.String)>("HTTPUtil.isUrlAccessible = true");
+
+        $l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: long a(long)>($l0);
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/scm_message.ashx");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        r10 = new java.util.HashMap;
+
+        $r4 = r10;
+
+     label01:
+        specialinvoke r10.<java.util.HashMap: void <init>()>();
+
+     label02:
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+     label03:
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r5);
+
+     label04:
+        $r5 = <com.seattleclouds.App: java.lang.String w>;
+
+     label05:
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("username", $r5);
+
+     label06:
+        $r5 = <com.seattleclouds.App: java.lang.String x>;
+
+     label07:
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("appId", $r5);
+
+        $r5 = staticinvoke <com.seattleclouds.util.bs: java.lang.String a()>();
+
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("deviceId", $r5);
+
+     label08:
+        $r6 = $r0.<com.seattleclouds.scm.a: android.content.Context b>;
+
+     label09:
+        $r7 = staticinvoke <com.seattleclouds.scm.PushManagerReceiver: java.util.Date c(android.content.Context)>($r6);
+
+        $l0 = virtualinvoke $r7.<java.util.Date: long getTime()>();
+
+        $r5 = staticinvoke <java.lang.String: java.lang.String valueOf(long)>($l0);
+
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("lastMessageId", $r5);
+
+        $r3 = staticinvoke <com.seattleclouds.util.a: java.lang.String b(java.lang.String,java.util.Map)>($r3, $r4);
+
+     label10:
+        r9 = new java.lang.StringBuilder;
+
+        $r2 = r9;
+
+     label11:
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("request: ");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r5 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: void a(java.lang.String)>($r5);
+
+     label12:
+        $r6 = $r0.<com.seattleclouds.scm.a: android.content.Context b>;
+
+        r11 = new java.util.Date;
+
+        $r7 = r11;
+
+     label13:
+        $l0 = staticinvoke <com.seattleclouds.scm.PushManagerReceiver: long a()>();
+
+        specialinvoke r11.<java.util.Date: void <init>(long)>($l0);
+
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: void a(android.content.Context,java.util.Date)>($r6, $r7);
+
+     label14:
+        r12 = new org.json.JSONObject;
+
+     label15:
+        specialinvoke r12.<org.json.JSONObject: void <init>(java.lang.String)>($r3);
+
+     label16:
+        return r12;
+
+     label17:
+        $r8 := @caughtexception;
+
+     label18:
+        r13 = (java.lang.Exception) $r8;
+
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: void a(java.lang.String,java.lang.Exception)>("request: ", r13);
+
+     label19:
+        return null;
+
+     label20:
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: void a(java.lang.String)>("HTTPUtil.isUrlAccessible = false");
+
+        goto label19;
+
+     label21:
+        $r8 := @caughtexception;
+
+        goto label18;
+
+        catch java.io.IOException from label01 to label02 with label21;
+        catch java.io.IOException from label03 to label04 with label21;
+        catch java.io.IOException from label05 to label06 with label21;
+        catch java.io.IOException from label07 to label08 with label21;
+        catch java.io.IOException from label09 to label10 with label21;
+        catch java.io.IOException from label11 to label12 with label21;
+        catch java.io.IOException from label13 to label14 with label21;
+        catch java.io.IOException from label15 to label16 with label21;
+        catch org.json.JSONException from label01 to label02 with label17;
+        catch org.json.JSONException from label03 to label04 with label17;
+        catch org.json.JSONException from label05 to label06 with label17;
+        catch org.json.JSONException from label07 to label08 with label17;
+        catch org.json.JSONException from label09 to label10 with label17;
+        catch org.json.JSONException from label11 to label12 with label17;
+        catch org.json.JSONException from label13 to label14 with label17;
+        catch org.json.JSONException from label15 to label16 with label17;
+    }
+
+    protected void a(org.json.JSONObject)
+    {
+        com.seattleclouds.scm.a $r0;
+        org.json.JSONObject $r1;
+        android.content.Context $r2;
+        android.os.Bundle $r3;
+        android.content.BroadcastReceiver$PendingResult $r4;
+
+        $r0 := @this: com.seattleclouds.scm.a;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        if $r1 == null goto label1;
+
+        $r3 = staticinvoke <com.seattleclouds.scm.PushManagerReceiver: android.os.Bundle a(org.json.JSONObject)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.scm.a: android.content.Context b>;
+
+        staticinvoke <com.seattleclouds.util.r: void a(android.content.Context,android.os.Bundle)>($r2, $r3);
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.scm.a: android.content.Context b>;
+
+        staticinvoke <com.seattleclouds.scm.PushManagerReceiver: void d(android.content.Context)>($r2);
+
+        $r4 = $r0.<com.seattleclouds.scm.a: android.content.BroadcastReceiver$PendingResult a>;
+
+        if $r4 == null goto label2;
+
+        $r4 = $r0.<com.seattleclouds.scm.a: android.content.BroadcastReceiver$PendingResult a>;
+
+        virtualinvoke $r4.<android.content.BroadcastReceiver$PendingResult: void finish()>();
+
+     label2:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.scm.a $r0;
+        org.json.JSONObject $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.scm.a;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.scm.a: org.json.JSONObject a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.scm.a $r0;
+        java.lang.Object $r1;
+        org.json.JSONObject $r2;
+
+        $r0 := @this: com.seattleclouds.scm.a;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (org.json.JSONObject) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.scm.a: void a(org.json.JSONObject)>($r2);
+
+        return;
+    }
+}

@@ -1,0 +1,83 @@
+class com.seattleclouds.modules.f.b extends android.database.sqlite.SQLiteOpenHelper
+{
+    final com.seattleclouds.modules.f.a a;
+
+    public void <init>(com.seattleclouds.modules.f.a, android.content.Context)
+    {
+        com.seattleclouds.modules.f.b $r0;
+        com.seattleclouds.modules.f.a $r1;
+        android.content.Context $r2;
+
+        $r0 := @this: com.seattleclouds.modules.f.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.f.a;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r0.<com.seattleclouds.modules.f.b: com.seattleclouds.modules.f.a a> = $r1;
+
+        specialinvoke $r0.<android.database.sqlite.SQLiteOpenHelper: void <init>(android.content.Context,java.lang.String,android.database.sqlite.SQLiteDatabase$CursorFactory,int)>($r2, "favorites.db", null, 1);
+
+        return;
+    }
+
+    public void onCreate(android.database.sqlite.SQLiteDatabase)
+    {
+        com.seattleclouds.modules.f.b $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+
+        $r0 := @this: com.seattleclouds.modules.f.b;
+
+        $r1 := @parameter0: android.database.sqlite.SQLiteDatabase;
+
+        virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>("create table favorites( _id integer primary key autoincrement, type text not null, itemID text not null, md5ID text not null, rssURL text not null, title text not null, pictureURL text not null, link text not null);");
+
+        return;
+    }
+
+    public void onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
+    {
+        com.seattleclouds.modules.f.b $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        int $i0, $i1;
+        java.lang.Class $r2;
+        java.lang.String $r3, $r5;
+        java.lang.StringBuilder $r4;
+
+        $r0 := @this: com.seattleclouds.modules.f.b;
+
+        $r1 := @parameter0: android.database.sqlite.SQLiteDatabase;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = class "Landroid/database/sqlite/SQLiteOpenHelper;";
+
+        $r3 = virtualinvoke $r2.<java.lang.Class: java.lang.String getName()>();
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Upgrading database from version ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" to ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", which will destroy all old data");
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r3, $r5);
+
+        virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>("DROP TABLE IF EXISTSfavorites");
+
+        virtualinvoke $r0.<com.seattleclouds.modules.f.b: void onCreate(android.database.sqlite.SQLiteDatabase)>($r1);
+
+        return;
+    }
+}

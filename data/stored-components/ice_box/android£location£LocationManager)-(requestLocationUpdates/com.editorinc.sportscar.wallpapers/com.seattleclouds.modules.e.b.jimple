@@ -1,0 +1,57 @@
+class com.seattleclouds.modules.e.b extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final org.json.JSONObject b;
+    final com.seattleclouds.modules.e.a c;
+
+    void <init>(com.seattleclouds.modules.e.a, java.lang.String, org.json.JSONObject)
+    {
+        com.seattleclouds.modules.e.b $r0;
+        com.seattleclouds.modules.e.a $r1;
+        java.lang.String $r2;
+        org.json.JSONObject $r3;
+
+        $r0 := @this: com.seattleclouds.modules.e.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.e.a;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: org.json.JSONObject;
+
+        $r0.<com.seattleclouds.modules.e.b: com.seattleclouds.modules.e.a c> = $r1;
+
+        $r0.<com.seattleclouds.modules.e.b: java.lang.String a> = $r2;
+
+        $r0.<com.seattleclouds.modules.e.b: org.json.JSONObject b> = $r3;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.e.b $r0;
+        java.lang.String $r1;
+        org.json.JSONObject $r2;
+        com.seattleclouds.modules.e.a $r3;
+        android.support.v4.app.ac $r4;
+
+        $r0 := @this: com.seattleclouds.modules.e.b;
+
+        $r1 = $r0.<com.seattleclouds.modules.e.b: java.lang.String a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.e.b: org.json.JSONObject b>;
+
+        $r3 = $r0.<com.seattleclouds.modules.e.b: com.seattleclouds.modules.e.a c>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.e.a: android.support.v4.app.ac n()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.e.b: com.seattleclouds.modules.e.a c>;
+
+        staticinvoke <com.seattleclouds.mbfx.a: void a(java.lang.String,org.json.JSONObject,android.app.Activity,com.seattleclouds.mbfx.b)>($r1, $r2, $r4, $r3);
+
+        return;
+    }
+}

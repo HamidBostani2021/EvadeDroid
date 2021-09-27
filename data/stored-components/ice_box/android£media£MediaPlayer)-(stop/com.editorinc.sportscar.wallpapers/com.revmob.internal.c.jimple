@@ -1,0 +1,342 @@
+public final class com.revmob.internal.c extends android.os.AsyncTask
+{
+    private java.lang.String a;
+    private java.io.File b;
+    private boolean c;
+    private java.net.URL d;
+    private android.app.Activity e;
+    private java.lang.String f;
+    private com.revmob.internal.b g;
+
+    public void <init>(android.app.Activity, java.lang.String, java.lang.String, com.revmob.internal.b)
+    {
+        com.revmob.internal.c $r0;
+        android.app.Activity $r1;
+        java.lang.String $r2, $r3, $r5;
+        com.revmob.internal.b $r4;
+        java.lang.Throwable $r6, $r8, $r9;
+        com.revmob.internal.w $r7;
+        com.revmob.a.a r10;
+        java.net.URL r11;
+        java.security.NoSuchAlgorithmException r12;
+        java.io.UnsupportedEncodingException r13;
+        java.net.MalformedURLException r14;
+
+        $r0 := @this: com.revmob.internal.c;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: com.revmob.internal.b;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.revmob.internal.c: android.app.Activity e> = $r1;
+
+        $r0.<com.revmob.internal.c: com.revmob.internal.b g> = $r4;
+
+        r10 = new com.revmob.a.a;
+
+        specialinvoke r10.<com.revmob.a.a: void <init>()>();
+
+     label1:
+        $r5 = staticinvoke <com.revmob.a.a: java.lang.String a(java.lang.String)>($r2);
+
+     label2:
+        $r0.<com.revmob.internal.c: java.lang.String f> = $r5;
+
+     label3:
+        r11 = new java.net.URL;
+
+     label4:
+        specialinvoke r11.<java.net.URL: void <init>(java.lang.String)>($r2);
+
+     label5:
+        $r0.<com.revmob.internal.c: java.net.URL d> = r11;
+
+        return;
+
+     label6:
+        $r6 := @caughtexception;
+
+        $r7 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r6, null, $r7, null, "doInBackground1");
+
+        $r0.<com.revmob.internal.c: java.lang.String f> = $r3;
+
+        r12 = (java.security.NoSuchAlgorithmException) $r6;
+
+        virtualinvoke r12.<java.security.NoSuchAlgorithmException: void printStackTrace()>();
+
+        goto label3;
+
+     label7:
+        $r8 := @caughtexception;
+
+        $r7 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r8, null, $r7, null, "doInBackground2");
+
+        $r0.<com.revmob.internal.c: java.lang.String f> = $r3;
+
+        r13 = (java.io.UnsupportedEncodingException) $r8;
+
+        virtualinvoke r13.<java.io.UnsupportedEncodingException: void printStackTrace()>();
+
+        goto label3;
+
+     label8:
+        $r9 := @caughtexception;
+
+        $r7 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r9, null, $r7, null, "doInBackground3");
+
+        r14 = (java.net.MalformedURLException) $r9;
+
+        virtualinvoke r14.<java.net.MalformedURLException: void printStackTrace()>();
+
+        return;
+
+        catch java.security.NoSuchAlgorithmException from label1 to label2 with label6;
+        catch java.io.UnsupportedEncodingException from label1 to label2 with label7;
+        catch java.net.MalformedURLException from label4 to label5 with label8;
+    }
+
+    private transient java.lang.String c()
+    {
+        com.revmob.internal.c $r0;
+        android.app.Activity $r1;
+        android.content.Context $r2;
+        java.io.File $r3, r15;
+        java.lang.String $r4, $r5;
+        boolean $z0;
+        java.net.URL $r6;
+        java.net.URLConnection $r7;
+        java.io.InputStream $r8;
+        java.io.BufferedInputStream $r9, r16;
+        org.apache.http.util.ByteArrayBuffer $r10, r17;
+        int $i0;
+        byte $b1;
+        java.lang.Throwable $r11;
+        com.revmob.internal.w $r12;
+        java.io.FileOutputStream $r13, r18;
+        byte[] $r14;
+        java.io.IOException r19;
+
+        $r0 := @this: com.revmob.internal.c;
+
+        $r1 = $r0.<com.revmob.internal.c: android.app.Activity e>;
+
+     label01:
+        $r2 = virtualinvoke $r1.<android.app.Activity: android.content.Context getApplicationContext()>();
+
+        $r3 = virtualinvoke $r2.<android.content.Context: java.io.File getFilesDir()>();
+
+        $r4 = virtualinvoke $r3.<java.io.File: java.lang.String getPath()>();
+
+     label02:
+        $r0.<com.revmob.internal.c: java.lang.String a> = $r4;
+
+        r15 = new java.io.File;
+
+        $r4 = $r0.<com.revmob.internal.c: java.lang.String a>;
+
+        $r5 = $r0.<com.revmob.internal.c: java.lang.String f>;
+
+     label03:
+        specialinvoke r15.<java.io.File: void <init>(java.lang.String,java.lang.String)>($r4, $r5);
+
+     label04:
+        $r0.<com.revmob.internal.c: java.io.File b> = r15;
+
+        $r3 = $r0.<com.revmob.internal.c: java.io.File b>;
+
+     label05:
+        $r4 = virtualinvoke $r3.<java.io.File: java.lang.String getAbsolutePath()>();
+
+     label06:
+        $r0.<com.revmob.internal.c: java.lang.String a> = $r4;
+
+        $r3 = $r0.<com.revmob.internal.c: java.io.File b>;
+
+     label07:
+        $z0 = virtualinvoke $r3.<java.io.File: boolean exists()>();
+
+     label08:
+        if $z0 != 0 goto label25;
+
+     label09:
+        staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+     label10:
+        $r6 = $r0.<com.revmob.internal.c: java.net.URL d>;
+
+     label11:
+        $r7 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>();
+
+        $r8 = virtualinvoke $r7.<java.net.URLConnection: java.io.InputStream getInputStream()>();
+
+     label12:
+        r16 = new java.io.BufferedInputStream;
+
+        $r9 = r16;
+
+     label13:
+        specialinvoke r16.<java.io.BufferedInputStream: void <init>(java.io.InputStream)>($r8);
+
+     label14:
+        r17 = new org.apache.http.util.ByteArrayBuffer;
+
+        $r10 = r17;
+
+     label15:
+        specialinvoke r17.<org.apache.http.util.ByteArrayBuffer: void <init>(int)>(50);
+
+     label16:
+        $i0 = virtualinvoke $r9.<java.io.BufferedInputStream: int read()>();
+
+     label17:
+        if $i0 == -1 goto label21;
+
+        $b1 = (byte) $i0;
+
+     label18:
+        virtualinvoke $r10.<org.apache.http.util.ByteArrayBuffer: void append(int)>($b1);
+
+     label19:
+        goto label16;
+
+     label20:
+        $r11 := @caughtexception;
+
+        $r12 = <com.revmob.internal.w: com.revmob.internal.w c>;
+
+        staticinvoke <com.revmob.internal.v: void a(java.lang.Throwable,java.lang.String,java.lang.Enum,java.lang.String,java.lang.String)>($r11, null, $r12, null, "doInBackground");
+
+        $r0.<com.revmob.internal.c: boolean c> = 0;
+
+        r19 = (java.io.IOException) $r11;
+
+        virtualinvoke r19.<java.io.IOException: void printStackTrace()>();
+
+        return null;
+
+     label21:
+        r18 = new java.io.FileOutputStream;
+
+        $r13 = r18;
+
+        $r3 = $r0.<com.revmob.internal.c: java.io.File b>;
+
+     label22:
+        specialinvoke r18.<java.io.FileOutputStream: void <init>(java.io.File)>($r3);
+
+        $r14 = virtualinvoke $r10.<org.apache.http.util.ByteArrayBuffer: byte[] toByteArray()>();
+
+        virtualinvoke $r13.<java.io.FileOutputStream: void write(byte[])>($r14);
+
+        virtualinvoke $r13.<java.io.FileOutputStream: void close()>();
+
+     label23:
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i0 < 9 goto label25;
+
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i0 >= 15 goto label25;
+
+        $r3 = $r0.<com.revmob.internal.c: java.io.File b>;
+
+     label24:
+        virtualinvoke $r3.<java.io.File: boolean setReadable(boolean,boolean)>(1, 0);
+
+     label25:
+        $r0.<com.revmob.internal.c: boolean c> = 1;
+
+        return null;
+
+        catch java.io.IOException from label01 to label02 with label20;
+        catch java.io.IOException from label03 to label04 with label20;
+        catch java.io.IOException from label05 to label06 with label20;
+        catch java.io.IOException from label07 to label08 with label20;
+        catch java.io.IOException from label09 to label10 with label20;
+        catch java.io.IOException from label11 to label12 with label20;
+        catch java.io.IOException from label13 to label14 with label20;
+        catch java.io.IOException from label15 to label17 with label20;
+        catch java.io.IOException from label18 to label19 with label20;
+        catch java.io.IOException from label22 to label23 with label20;
+        catch java.io.IOException from label24 to label25 with label20;
+    }
+
+    public final java.io.File a()
+    {
+        com.revmob.internal.c $r0;
+        java.io.File r1;
+
+        $r0 := @this: com.revmob.internal.c;
+
+        r1 = $r0.<com.revmob.internal.c: java.io.File b>;
+
+        return r1;
+    }
+
+    public final boolean b()
+    {
+        com.revmob.internal.c $r0;
+        boolean z0;
+
+        $r0 := @this: com.revmob.internal.c;
+
+        z0 = $r0.<com.revmob.internal.c: boolean c>;
+
+        return z0;
+    }
+
+    protected final java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.revmob.internal.c $r0;
+        java.lang.Object[] $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.revmob.internal.c;
+
+        $r1 := @parameter0: java.lang.Object[];
+
+        specialinvoke $r0.<com.revmob.internal.c: java.lang.String c()>();
+
+        return null;
+    }
+
+    protected final void onPostExecute(java.lang.Object)
+    {
+        com.revmob.internal.c $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+        com.revmob.internal.b $r3;
+
+        $r0 := @this: com.revmob.internal.c;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r2);
+
+        $r3 = $r0.<com.revmob.internal.c: com.revmob.internal.b g>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.revmob.internal.c: com.revmob.internal.b g>;
+
+        interfaceinvoke $r3.<com.revmob.internal.b: void a()>();
+
+     label1:
+        return;
+    }
+}

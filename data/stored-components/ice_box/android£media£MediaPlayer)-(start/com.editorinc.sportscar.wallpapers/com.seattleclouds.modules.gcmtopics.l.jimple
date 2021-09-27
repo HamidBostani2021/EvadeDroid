@@ -1,0 +1,337 @@
+class com.seattleclouds.modules.gcmtopics.l extends android.os.AsyncTask
+{
+    final com.seattleclouds.modules.gcmtopics.f a;
+
+    private void <init>(com.seattleclouds.modules.gcmtopics.f)
+    {
+        com.seattleclouds.modules.gcmtopics.l $r0;
+        com.seattleclouds.modules.gcmtopics.f $r1;
+
+        $r0 := @this: com.seattleclouds.modules.gcmtopics.l;
+
+        $r1 := @parameter0: com.seattleclouds.modules.gcmtopics.f;
+
+        $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.gcmtopics.f, com.seattleclouds.modules.gcmtopics.g)
+    {
+        com.seattleclouds.modules.gcmtopics.l $r0;
+        com.seattleclouds.modules.gcmtopics.f $r1;
+        com.seattleclouds.modules.gcmtopics.g $r2;
+
+        $r0 := @this: com.seattleclouds.modules.gcmtopics.l;
+
+        $r1 := @parameter0: com.seattleclouds.modules.gcmtopics.f;
+
+        $r2 := @parameter1: com.seattleclouds.modules.gcmtopics.g;
+
+        specialinvoke $r0.<com.seattleclouds.modules.gcmtopics.l: void <init>(com.seattleclouds.modules.gcmtopics.f)>($r1);
+
+        return;
+    }
+
+    protected transient java.lang.String a(java.lang.Void[])
+    {
+        com.seattleclouds.modules.gcmtopics.l $r0;
+        java.lang.Void[] $r1;
+        boolean $z0;
+        com.seattleclouds.modules.gcmtopics.f $r2;
+        android.support.v4.app.ac $r3;
+        java.util.ArrayList $r4, $r5;
+        java.util.Iterator $r6;
+        java.lang.Object $r7;
+        com.seattleclouds.modules.gcmtopics.GCMTopic $r8;
+        java.lang.String $r9, $r12;
+        int $i0;
+        java.lang.StringBuilder $r10, r13;
+        java.lang.Throwable $r11;
+        java.io.IOException r14;
+
+        $r0 := @this: com.seattleclouds.modules.gcmtopics.l;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.gcmtopics.f: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label01;
+
+        return null;
+
+     label01:
+        $r5 = new java.util.ArrayList;
+
+        $r4 = $r5;
+
+        specialinvoke $r5.<java.util.ArrayList: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.gcmtopics.f: java.util.ArrayList d(com.seattleclouds.modules.gcmtopics.f)>($r2);
+
+        $r6 = virtualinvoke $r5.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label02:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label03;
+
+        $r7 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+        $r8 = (com.seattleclouds.modules.gcmtopics.GCMTopic) $r7;
+
+        $z0 = $r8.<com.seattleclouds.modules.gcmtopics.GCMTopic: boolean d>;
+
+        if $z0 == 0 goto label02;
+
+        $r9 = $r8.<com.seattleclouds.modules.gcmtopics.GCMTopic: java.lang.String a>;
+
+        interfaceinvoke $r4.<java.util.List: boolean add(java.lang.Object)>($r9);
+
+        goto label02;
+
+     label03:
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+     label04:
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.gcmtopics.f: android.support.v4.app.ac n()>();
+
+     label05:
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+     label06:
+        $r9 = staticinvoke <com.seattleclouds.modules.gcmtopics.f: java.lang.String p(com.seattleclouds.modules.gcmtopics.f)>($r2);
+
+        $r9 = staticinvoke <com.seattleclouds.api.b: java.lang.String a(android.content.Context,java.lang.String,java.util.List)>($r3, $r9, $r4);
+
+     label07:
+        if $r9 == null goto label08;
+
+        $i0 = virtualinvoke $r9.<java.lang.String: int length()>();
+
+        if $i0 >= 2 goto label10;
+
+     label08:
+        r13 = new java.lang.StringBuilder;
+
+        specialinvoke r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Unparsable response received from server: ");
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("GCMTopicsFragment", $r9);
+
+        return "Internal Server Error";
+
+     label09:
+        $r11 := @caughtexception;
+
+        r13 = new java.lang.StringBuilder;
+
+        specialinvoke r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("IO Error: ");
+
+        r14 = (java.io.IOException) $r11;
+
+        $r9 = virtualinvoke r14.<java.io.IOException: java.lang.String toString()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("GCMTopicsFragment", $r9);
+
+        r13 = new java.lang.StringBuilder;
+
+        specialinvoke r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("IOException: ");
+
+        r14 = (java.io.IOException) $r11;
+
+        $r9 = virtualinvoke r14.<java.io.IOException: java.lang.String toString()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r9;
+
+     label10:
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean startsWith(java.lang.String)>("ERROR:");
+
+        if $z0 == 0 goto label11;
+
+        $r9 = virtualinvoke $r9.<java.lang.String: java.lang.String substring(int)>(6);
+
+        r13 = new java.lang.StringBuilder;
+
+        specialinvoke r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error received from server: ");
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r12 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("GCMTopicsFragment", $r12);
+
+        return $r9;
+
+     label11:
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean startsWith(java.lang.String)>("OK");
+
+        if $z0 != 0 goto label12;
+
+        r13 = new java.lang.StringBuilder;
+
+        specialinvoke r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Unknown error received from server: ");
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r12 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("GCMTopicsFragment", $r12);
+
+        return $r9;
+
+     label12:
+        return null;
+
+        catch java.io.IOException from label04 to label05 with label09;
+        catch java.io.IOException from label06 to label07 with label09;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.modules.gcmtopics.l $r0;
+        java.lang.String $r1;
+        com.seattleclouds.modules.gcmtopics.f $r2;
+        android.support.v4.app.ac $r3;
+        int $i0, $i1;
+        android.widget.Toast $r4;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.gcmtopics.l;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        staticinvoke <com.seattleclouds.modules.gcmtopics.f: void a(com.seattleclouds.modules.gcmtopics.f,boolean)>($r2, 0);
+
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.gcmtopics.f: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label1;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("GCMTopicsFragment", "activity is null");
+
+        return;
+
+     label1:
+        if $r1 != null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.gcmtopics.f: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int gcm_topics_saved>;
+
+        $r4 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r3, $i0, 0);
+
+        virtualinvoke $r4.<android.widget.Toast: void show()>();
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean startsWith(java.lang.String)>("IOException");
+
+        if $z0 == 0 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        staticinvoke <com.seattleclouds.modules.gcmtopics.f: void r(com.seattleclouds.modules.gcmtopics.f)>($r2);
+
+        return;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.gcmtopics.f: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int error>;
+
+        $i1 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r3, $i0, $i1);
+
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.gcmtopics.l $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.gcmtopics.l;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.gcmtopics.l: java.lang.String a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.gcmtopics.l $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.gcmtopics.l;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.gcmtopics.l: void a(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.modules.gcmtopics.l $r0;
+        com.seattleclouds.modules.gcmtopics.f $r1;
+
+        $r0 := @this: com.seattleclouds.modules.gcmtopics.l;
+
+        $r1 = $r0.<com.seattleclouds.modules.gcmtopics.l: com.seattleclouds.modules.gcmtopics.f a>;
+
+        staticinvoke <com.seattleclouds.modules.gcmtopics.f: void a(com.seattleclouds.modules.gcmtopics.f,boolean)>($r1, 1);
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPreExecute()>();
+
+        return;
+    }
+}

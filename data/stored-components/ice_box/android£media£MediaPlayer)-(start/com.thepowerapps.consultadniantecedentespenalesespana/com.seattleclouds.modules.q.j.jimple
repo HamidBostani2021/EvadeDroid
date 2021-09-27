@@ -1,0 +1,68 @@
+class com.seattleclouds.modules.q.j extends java.lang.Object implements android.widget.SimpleAdapter$ViewBinder
+{
+    final com.seattleclouds.modules.q.f a;
+
+    private void <init>(com.seattleclouds.modules.q.f)
+    {
+        com.seattleclouds.modules.q.j $r0;
+        com.seattleclouds.modules.q.f $r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.j;
+
+        $r1 := @parameter0: com.seattleclouds.modules.q.f;
+
+        $r0.<com.seattleclouds.modules.q.j: com.seattleclouds.modules.q.f a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.q.f, com.seattleclouds.modules.q.g)
+    {
+        com.seattleclouds.modules.q.j $r0;
+        com.seattleclouds.modules.q.f $r1;
+        com.seattleclouds.modules.q.g $r2;
+
+        $r0 := @this: com.seattleclouds.modules.q.j;
+
+        $r1 := @parameter0: com.seattleclouds.modules.q.f;
+
+        $r2 := @parameter1: com.seattleclouds.modules.q.g;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.j: void <init>(com.seattleclouds.modules.q.f)>($r1);
+
+        return;
+    }
+
+    public boolean setViewValue(android.view.View, java.lang.Object, java.lang.String)
+    {
+        com.seattleclouds.modules.q.j $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+        android.os.Bundle $r3;
+        android.view.View $r4;
+        android.widget.TextView $r5;
+        com.seattleclouds.modules.q.f $r6;
+
+        $r0 := @this: com.seattleclouds.modules.q.j;
+
+        $r4 := @parameter0: android.view.View;
+
+        $r1 := @parameter1: java.lang.Object;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r5 = (android.widget.TextView) $r4;
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>($r2);
+
+        $r6 = $r0.<com.seattleclouds.modules.q.j: com.seattleclouds.modules.q.f a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.q.f: android.os.Bundle a(com.seattleclouds.modules.q.f)>($r6);
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r5, $r3);
+
+        return 1;
+    }
+}

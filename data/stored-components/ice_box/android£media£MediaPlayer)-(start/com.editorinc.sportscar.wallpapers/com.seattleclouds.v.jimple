@@ -1,0 +1,68 @@
+class com.seattleclouds.v extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final java.lang.String a;
+    final com.seattleclouds.cx b;
+
+    void <init>(com.seattleclouds.cx, java.lang.String)
+    {
+        com.seattleclouds.v $r0;
+        com.seattleclouds.cx $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.v;
+
+        $r1 := @parameter0: com.seattleclouds.cx;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.v: com.seattleclouds.cx b> = $r1;
+
+        $r0.<com.seattleclouds.v: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.v $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        android.net.Uri $r2;
+        android.content.Intent $r3;
+        java.lang.String $r4;
+        com.seattleclouds.cx $r5;
+        com.seattleclouds.AppStarterActivity $r6;
+
+        $r0 := @this: com.seattleclouds.v;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = $r0.<com.seattleclouds.v: java.lang.String a>;
+
+        $r2 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r4);
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String,android.net.Uri)>("android.intent.action.VIEW", $r2);
+
+        $r5 = $r0.<com.seattleclouds.v: com.seattleclouds.cx b>;
+
+        $r6 = $r5.<com.seattleclouds.cx: com.seattleclouds.AppStarterActivity a>;
+
+        virtualinvoke $r6.<com.seattleclouds.AppStarterActivity: void startActivity(android.content.Intent)>($r3);
+
+        interfaceinvoke $r1.<android.content.DialogInterface: void dismiss()>();
+
+        $r5 = $r0.<com.seattleclouds.v: com.seattleclouds.cx b>;
+
+        $r6 = $r5.<com.seattleclouds.cx: com.seattleclouds.AppStarterActivity a>;
+
+        virtualinvoke $r6.<com.seattleclouds.AppStarterActivity: void finish()>();
+
+        return;
+    }
+}

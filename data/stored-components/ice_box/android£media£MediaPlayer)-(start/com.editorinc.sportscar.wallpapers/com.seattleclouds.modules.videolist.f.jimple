@@ -1,0 +1,320 @@
+public class com.seattleclouds.modules.videolist.f extends java.lang.Object
+{
+    android.content.Context a;
+    private com.seattleclouds.util.ae b;
+    private android.content.res.ColorStateList c;
+
+    public void <init>(android.content.Context, com.seattleclouds.util.ae, android.content.res.ColorStateList)
+    {
+        com.seattleclouds.modules.videolist.f $r0;
+        android.content.Context $r1;
+        com.seattleclouds.util.ae $r2;
+        android.content.res.ColorStateList $r3;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: com.seattleclouds.util.ae;
+
+        $r3 := @parameter2: android.content.res.ColorStateList;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.videolist.f: android.content.Context a> = $r1;
+
+        $r0.<com.seattleclouds.modules.videolist.f: com.seattleclouds.util.ae b> = $r2;
+
+        $r0.<com.seattleclouds.modules.videolist.f: android.content.res.ColorStateList c> = $r3;
+
+        return;
+    }
+
+    private void a(android.widget.ImageView, com.seattleclouds.modules.videolist.a)
+    {
+        com.seattleclouds.modules.videolist.f $r0;
+        android.widget.ImageView $r1;
+        com.seattleclouds.modules.videolist.a $r2;
+        java.lang.String $r3;
+        com.seattleclouds.util.ae $r4;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.f;
+
+        $r1 := @parameter0: android.widget.ImageView;
+
+        $r2 := @parameter1: com.seattleclouds.modules.videolist.a;
+
+        $r4 = $r0.<com.seattleclouds.modules.videolist.f: com.seattleclouds.util.ae b>;
+
+        if $r4 == null goto label1;
+
+        $r4 = $r0.<com.seattleclouds.modules.videolist.f: com.seattleclouds.util.ae b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.videolist.a: java.lang.String h()>();
+
+        virtualinvoke $r4.<com.seattleclouds.util.ae: void a(java.lang.Object,android.widget.ImageView)>($r3, $r1);
+
+     label1:
+        return;
+    }
+
+    private void b(android.widget.ImageView, com.seattleclouds.modules.videolist.a)
+    {
+        com.seattleclouds.modules.videolist.f $r0;
+        android.widget.ImageView $r1;
+        com.seattleclouds.modules.videolist.a $r2;
+        com.seattleclouds.modules.videolist.VideoFile$Status $r3, $r4;
+        int $i0;
+        android.content.res.ColorStateList $r5;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.f;
+
+        $r1 := @parameter0: android.widget.ImageView;
+
+        $r2 := @parameter1: com.seattleclouds.modules.videolist.a;
+
+        $r4 = virtualinvoke $r2.<com.seattleclouds.modules.videolist.a: com.seattleclouds.modules.videolist.VideoFile$Status c()>();
+
+        $r3 = <com.seattleclouds.modules.videolist.VideoFile$Status: com.seattleclouds.modules.videolist.VideoFile$Status ONLINE>;
+
+        if $r4 != $r3 goto label1;
+
+        $i0 = <com.seattleclouds.g: int ic_cloud_file_download_alpha>;
+
+        virtualinvoke $r1.<android.widget.ImageView: void setImageResource(int)>($i0);
+
+        $r5 = $r0.<com.seattleclouds.modules.videolist.f: android.content.res.ColorStateList c>;
+
+        staticinvoke <com.seattleclouds.e.b: void a(android.content.res.ColorStateList,android.widget.ImageView)>($r5, $r1);
+
+        return;
+
+     label1:
+        $i0 = <com.seattleclouds.g: int ic_cloud_done_alpha>;
+
+        virtualinvoke $r1.<android.widget.ImageView: void setImageResource(int)>($i0);
+
+        $r5 = $r0.<com.seattleclouds.modules.videolist.f: android.content.res.ColorStateList c>;
+
+        staticinvoke <com.seattleclouds.e.b: void a(android.content.res.ColorStateList,android.widget.ImageView)>($r5, $r1);
+
+        return;
+    }
+
+    public android.view.View a(android.view.View, com.seattleclouds.modules.videolist.a)
+    {
+        com.seattleclouds.modules.videolist.f $r0;
+        com.seattleclouds.modules.videolist.a $r1;
+        com.seattleclouds.modules.videolist.h $r2, r15;
+        java.lang.Object $r3, $r14;
+        java.lang.Class $r4;
+        boolean $z0;
+        android.content.Context $r5;
+        android.view.LayoutInflater $r6;
+        int $i0;
+        android.view.View $r7;
+        android.view.ViewGroup $r8;
+        android.widget.TextView $r9, $r10;
+        android.widget.ImageView $r11, $r12;
+        java.lang.String $r13;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.f;
+
+        $r3 := @parameter0: android.view.View;
+
+        $r1 := @parameter1: com.seattleclouds.modules.videolist.a;
+
+        if $r3 == null goto label1;
+
+        $r4 = class "Lcom/seattleclouds/modules/videolist/h;";
+
+        $z0 = virtualinvoke $r4.<java.lang.Class: boolean isInstance(java.lang.Object)>($r3);
+
+        if $z0 != 0 goto label3;
+
+     label1:
+        $r5 = $r0.<com.seattleclouds.modules.videolist.f: android.content.Context a>;
+
+        $r3 = virtualinvoke $r5.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("layout_inflater");
+
+        $r6 = (android.view.LayoutInflater) $r3;
+
+        $i0 = <com.seattleclouds.j: int videolist_online_local_file_view>;
+
+        $r7 = virtualinvoke $r6.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup)>($i0, null);
+
+        $r8 = (android.view.ViewGroup) $r7;
+
+        r15 = new com.seattleclouds.modules.videolist.h;
+
+        $r2 = r15;
+
+        $i0 = <com.seattleclouds.h: int file_name>;
+
+        $r7 = virtualinvoke $r8.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.TextView) $r7;
+
+        $i0 = <com.seattleclouds.h: int dropbox_file_info>;
+
+        $r7 = virtualinvoke $r8.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.TextView) $r7;
+
+        $i0 = <com.seattleclouds.h: int file_image>;
+
+        $r7 = virtualinvoke $r8.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r11 = (android.widget.ImageView) $r7;
+
+        $i0 = <com.seattleclouds.h: int dropbox_file_status_badge>;
+
+        $r7 = virtualinvoke $r8.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r12 = (android.widget.ImageView) $r7;
+
+        specialinvoke r15.<com.seattleclouds.modules.videolist.h: void <init>(android.widget.TextView,android.widget.TextView,android.widget.ImageView,android.widget.ImageView)>($r9, $r10, $r11, $r12);
+
+        virtualinvoke $r8.<android.view.ViewGroup: void setTag(java.lang.Object)>($r2);
+
+        $r3 = $r8;
+
+     label2:
+        $r9 = $r2.<com.seattleclouds.modules.videolist.h: android.widget.TextView a>;
+
+        $r13 = virtualinvoke $r1.<com.seattleclouds.modules.videolist.a: java.lang.String a()>();
+
+        virtualinvoke $r9.<android.widget.TextView: void setText(java.lang.CharSequence)>($r13);
+
+        $r9 = $r2.<com.seattleclouds.modules.videolist.h: android.widget.TextView b>;
+
+        $r13 = virtualinvoke $r1.<com.seattleclouds.modules.videolist.a: java.lang.String l()>();
+
+        virtualinvoke $r9.<android.widget.TextView: void setText(java.lang.CharSequence)>($r13);
+
+        $r11 = $r2.<com.seattleclouds.modules.videolist.h: android.widget.ImageView c>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.videolist.f: void a(android.widget.ImageView,com.seattleclouds.modules.videolist.a)>($r11, $r1);
+
+        $r11 = $r2.<com.seattleclouds.modules.videolist.h: android.widget.ImageView d>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.videolist.f: void b(android.widget.ImageView,com.seattleclouds.modules.videolist.a)>($r11, $r1);
+
+        $r7 = (android.view.View) $r3;
+
+        return $r7;
+
+     label3:
+        $r7 = (android.view.View) $r3;
+
+        $r14 = virtualinvoke $r7.<android.view.View: java.lang.Object getTag()>();
+
+        $r2 = (com.seattleclouds.modules.videolist.h) $r14;
+
+        goto label2;
+    }
+
+    public android.view.View b(android.view.View, com.seattleclouds.modules.videolist.a)
+    {
+        com.seattleclouds.modules.videolist.f $r0;
+        com.seattleclouds.modules.videolist.a $r1;
+        com.seattleclouds.modules.videolist.g $r2, r14;
+        java.lang.Object $r3, $r13;
+        java.lang.Class $r4;
+        boolean $z0;
+        android.content.Context $r5;
+        android.view.LayoutInflater $r6;
+        int $i0;
+        android.view.View $r7;
+        android.view.ViewGroup $r8;
+        android.widget.TextView $r9;
+        android.widget.ImageView $r10;
+        android.widget.ProgressBar $r11;
+        java.lang.String $r12;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.f;
+
+        $r3 := @parameter0: android.view.View;
+
+        $r1 := @parameter1: com.seattleclouds.modules.videolist.a;
+
+        if $r3 == null goto label1;
+
+        $r4 = class "Lcom/seattleclouds/modules/videolist/g;";
+
+        $z0 = virtualinvoke $r4.<java.lang.Class: boolean isInstance(java.lang.Object)>($r3);
+
+        if $z0 != 0 goto label3;
+
+     label1:
+        $r5 = $r0.<com.seattleclouds.modules.videolist.f: android.content.Context a>;
+
+        $r3 = virtualinvoke $r5.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("layout_inflater");
+
+        $r6 = (android.view.LayoutInflater) $r3;
+
+        $i0 = <com.seattleclouds.j: int videolist_downloading_file_view>;
+
+        $r7 = virtualinvoke $r6.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup)>($i0, null);
+
+        $r8 = (android.view.ViewGroup) $r7;
+
+        r14 = new com.seattleclouds.modules.videolist.g;
+
+        $r2 = r14;
+
+        $i0 = <com.seattleclouds.h: int file_name>;
+
+        $r7 = virtualinvoke $r8.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.TextView) $r7;
+
+        $i0 = <com.seattleclouds.h: int file_image>;
+
+        $r7 = virtualinvoke $r8.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.ImageView) $r7;
+
+        $i0 = <com.seattleclouds.h: int video_file_progressBar>;
+
+        $r7 = virtualinvoke $r8.<android.view.ViewGroup: android.view.View findViewById(int)>($i0);
+
+        $r11 = (android.widget.ProgressBar) $r7;
+
+        specialinvoke r14.<com.seattleclouds.modules.videolist.g: void <init>(android.widget.TextView,android.widget.ImageView,android.widget.ProgressBar)>($r9, $r10, $r11);
+
+        virtualinvoke $r8.<android.view.ViewGroup: void setTag(java.lang.Object)>($r2);
+
+        $r3 = $r8;
+
+     label2:
+        $r9 = $r2.<com.seattleclouds.modules.videolist.g: android.widget.TextView a>;
+
+        $r12 = virtualinvoke $r1.<com.seattleclouds.modules.videolist.a: java.lang.String a()>();
+
+        virtualinvoke $r9.<android.widget.TextView: void setText(java.lang.CharSequence)>($r12);
+
+        $r11 = $r2.<com.seattleclouds.modules.videolist.g: android.widget.ProgressBar c>;
+
+        $i0 = virtualinvoke $r1.<com.seattleclouds.modules.videolist.a: int e()>();
+
+        virtualinvoke $r11.<android.widget.ProgressBar: void setProgress(int)>($i0);
+
+        $r10 = $r2.<com.seattleclouds.modules.videolist.g: android.widget.ImageView b>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.videolist.f: void a(android.widget.ImageView,com.seattleclouds.modules.videolist.a)>($r10, $r1);
+
+        $r7 = (android.view.View) $r3;
+
+        return $r7;
+
+     label3:
+        $r7 = (android.view.View) $r3;
+
+        $r13 = virtualinvoke $r7.<android.view.View: java.lang.Object getTag()>();
+
+        $r2 = (com.seattleclouds.modules.videolist.g) $r13;
+
+        goto label2;
+    }
+}

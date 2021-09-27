@@ -1,0 +1,167 @@
+public class com.seattleclouds.previewer.appmart.order.c.s extends com.seattleclouds.r
+{
+    private android.support.v7.widget.RecyclerView a;
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.appmart.order.c.s $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.s;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.previewer.appmart.order.c.s $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.support.v7.widget.RecyclerView $r6;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.s;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int fragment_new_order_payment>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int recycler_view_payment>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.support.v7.widget.RecyclerView) $r5;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.support.v7.widget.RecyclerView a> = $r6;
+
+        return $r4;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.previewer.appmart.order.c.s $r0;
+        android.os.Bundle $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.s;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.previewer.appmart.order.c.s $r0;
+        boolean $z0;
+        android.support.v7.widget.RecyclerView $r1;
+        android.support.v7.widget.LinearLayoutManager $r2;
+        android.support.v4.app.ac $r3;
+        com.seattleclouds.previewer.appmart.order.a.d $r4;
+        android.content.Context $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.s;
+
+        $z0 := @parameter0: boolean;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.support.v7.widget.RecyclerView a>;
+
+        virtualinvoke $r1.<android.support.v7.widget.RecyclerView: void setHasFixedSize(boolean)>(1);
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.support.v7.widget.RecyclerView a>;
+
+        $r2 = new android.support.v7.widget.LinearLayoutManager;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.support.v4.app.ac n()>();
+
+        specialinvoke $r2.<android.support.v7.widget.LinearLayoutManager: void <init>(android.content.Context)>($r3);
+
+        virtualinvoke $r1.<android.support.v7.widget.RecyclerView: void setLayoutManager(android.support.v7.widget.el)>($r2);
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.support.v7.widget.RecyclerView a>;
+
+        $r4 = new com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.content.Context m()>();
+
+        specialinvoke $r4.<com.seattleclouds.previewer.appmart.order.a.d: void <init>(android.content.Context)>($r5);
+
+        virtualinvoke $r1.<android.support.v7.widget.RecyclerView: void setAdapter(android.support.v7.widget.eb)>($r4);
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.r: void a_(boolean)>($z0);
+
+        return;
+    }
+
+    public boolean ab()
+    {
+        com.seattleclouds.previewer.appmart.order.c.s $r0;
+        com.seattleclouds.previewer.appmart.order.b.a $r1;
+        com.seattleclouds.previewer.appmart.order.b.b $r2;
+        android.support.v4.app.ac $r3;
+        int $i0;
+        android.widget.Toast $r4;
+        java.lang.StringBuilder $r5;
+        java.lang.String $r6;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.s;
+
+        $r1 = staticinvoke <com.seattleclouds.previewer.appmart.order.b.a: com.seattleclouds.previewer.appmart.order.b.a a()>();
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.previewer.appmart.order.b.a: com.seattleclouds.previewer.appmart.order.b.b F()>();
+
+        if $r2 != null goto label1;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int new_order_payment_select_price>;
+
+        $r4 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r3, $i0, 0);
+
+        virtualinvoke $r4.<android.widget.Toast: void show()>();
+
+        return 1;
+
+     label1:
+        $r3 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.s: android.support.v4.app.ac n()>();
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $i0 = <com.seattleclouds.l: int new_order_payment_select>;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.s: java.lang.String a_(int)>($i0);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.previewer.appmart.order.b.a: com.seattleclouds.previewer.appmart.order.b.b F()>();
+
+        $r6 = virtualinvoke $r2.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String toString()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r3, $r6, 0);
+
+        virtualinvoke $r4.<android.widget.Toast: void show()>();
+
+        return 0;
+    }
+}

@@ -1,0 +1,259 @@
+public class com.seattleclouds.modules.p.a extends android.database.sqlite.SQLiteOpenHelper
+{
+
+    public void <init>(android.content.Context, java.lang.String)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        java.lang.StringBuilder $r3;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<android.database.sqlite.SQLiteOpenHelper: void <init>(android.content.Context,java.lang.String,android.database.sqlite.SQLiteDatabase$CursorFactory,int)>($r1, $r2, null, 1);
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Using notes database: ");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("DatabaseHelper", $r2);
+
+        return;
+    }
+
+    private android.content.ContentValues b(java.lang.String, java.util.Date)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        java.lang.String $r1;
+        java.util.Date $r2;
+        android.content.ContentValues $r3;
+        long $l0;
+        java.lang.Long $r4;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.util.Date;
+
+        $r3 = new android.content.ContentValues;
+
+        specialinvoke $r3.<android.content.ContentValues: void <init>()>();
+
+        virtualinvoke $r3.<android.content.ContentValues: void put(java.lang.String,java.lang.String)>("text", $r1);
+
+        $l0 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        $r4 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l0);
+
+        virtualinvoke $r3.<android.content.ContentValues: void put(java.lang.String,java.lang.Long)>("date", $r4);
+
+        return $r3;
+    }
+
+    public int a(long, java.lang.String, java.util.Date)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        long $l0;
+        java.lang.String $r1;
+        java.util.Date $r2;
+        android.content.ContentValues $r3;
+        android.database.sqlite.SQLiteDatabase $r4;
+        java.lang.StringBuilder $r5;
+        int $i1;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $l0 := @parameter0: long;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.util.Date;
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.modules.p.a: android.content.ContentValues b(java.lang.String,java.util.Date)>($r1, $r2);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.p.a: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_id=");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r1 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i1 = virtualinvoke $r4.<android.database.sqlite.SQLiteDatabase: int update(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[])>("notes", $r3, $r1, null);
+
+        return $i1;
+    }
+
+    public long a(java.lang.String, java.util.Date)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        java.lang.String $r1;
+        java.util.Date $r2;
+        android.content.ContentValues $r3;
+        android.database.sqlite.SQLiteDatabase $r4;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.util.Date;
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.modules.p.a: android.content.ContentValues b(java.lang.String,java.util.Date)>($r1, $r2);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.p.a: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $l0 = virtualinvoke $r4.<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)>("notes", null, $r3);
+
+        return $l0;
+    }
+
+    public android.database.Cursor a()
+    {
+        com.seattleclouds.modules.p.a $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        java.lang.String[] $r2;
+        android.database.Cursor $r3;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.p.a: android.database.sqlite.SQLiteDatabase getReadableDatabase()>();
+
+        $r2 = newarray (java.lang.String)[3];
+
+        $r2[0] = "_id";
+
+        $r2[1] = "text";
+
+        $r2[2] = "date";
+
+        $r3 = virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>("notes", $r2, null, null, null, null, "date DESC");
+
+        return $r3;
+    }
+
+    public android.database.Cursor a(long)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        long $l0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        java.lang.String[] $r2;
+        java.lang.StringBuilder $r3;
+        java.lang.String $r4;
+        android.database.Cursor $r5;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $l0 := @parameter0: long;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.p.a: android.database.sqlite.SQLiteDatabase getReadableDatabase()>();
+
+        $r2 = newarray (java.lang.String)[3];
+
+        $r2[0] = "_id";
+
+        $r2[1] = "text";
+
+        $r2[2] = "date";
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_id = ");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(java.lang.String,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,java.lang.String,java.lang.String)>("notes", $r2, $r4, null, null, null, null);
+
+        if $r5 == null goto label1;
+
+        interfaceinvoke $r5.<android.database.Cursor: boolean moveToFirst()>();
+
+     label1:
+        return $r5;
+    }
+
+    public boolean b(long)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        long $l0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+        int $i1;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $l0 := @parameter0: long;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.p.a: android.database.sqlite.SQLiteDatabase getWritableDatabase()>();
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_id=");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $i1 = virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: int delete(java.lang.String,java.lang.String,java.lang.String[])>("notes", $r3, null);
+
+        if $i1 <= 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public void onCreate(android.database.sqlite.SQLiteDatabase)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $r1 := @parameter0: android.database.sqlite.SQLiteDatabase;
+
+        virtualinvoke $r1.<android.database.sqlite.SQLiteDatabase: void execSQL(java.lang.String)>("CREATE TABLE notes (_id INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT,text TEXT NOT NULL,date INTEGER NOT NULL,extra TEXT)");
+
+        return;
+    }
+
+    public void onUpgrade(android.database.sqlite.SQLiteDatabase, int, int)
+    {
+        com.seattleclouds.modules.p.a $r0;
+        android.database.sqlite.SQLiteDatabase $r1;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.p.a;
+
+        $r1 := @parameter0: android.database.sqlite.SQLiteDatabase;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        return;
+    }
+}

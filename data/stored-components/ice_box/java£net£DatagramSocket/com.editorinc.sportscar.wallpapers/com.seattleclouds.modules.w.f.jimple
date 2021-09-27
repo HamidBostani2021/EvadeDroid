@@ -1,0 +1,37 @@
+class com.seattleclouds.modules.w.f extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.w.e a;
+
+    void <init>(com.seattleclouds.modules.w.e)
+    {
+        com.seattleclouds.modules.w.f $r0;
+        com.seattleclouds.modules.w.e $r1;
+
+        $r0 := @this: com.seattleclouds.modules.w.f;
+
+        $r1 := @parameter0: com.seattleclouds.modules.w.e;
+
+        $r0.<com.seattleclouds.modules.w.f: com.seattleclouds.modules.w.e a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.w.f $r0;
+        com.seattleclouds.modules.w.e $r1;
+        com.seattleclouds.modules.w.a $r2;
+
+        $r0 := @this: com.seattleclouds.modules.w.f;
+
+        $r1 = $r0.<com.seattleclouds.modules.w.f: com.seattleclouds.modules.w.e a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.w.e: com.seattleclouds.modules.w.a a>;
+
+        staticinvoke <com.seattleclouds.modules.w.a: void c(com.seattleclouds.modules.w.a)>($r2);
+
+        return;
+    }
+}

@@ -1,0 +1,9 @@
+public interface  com.seattleclouds.modules.podcast.a.c extends java.lang.Object
+{
+
+    public abstract void a();
+
+    public abstract void a(java.lang.String);
+
+    public abstract void a(java.util.ArrayList, boolean);
+}

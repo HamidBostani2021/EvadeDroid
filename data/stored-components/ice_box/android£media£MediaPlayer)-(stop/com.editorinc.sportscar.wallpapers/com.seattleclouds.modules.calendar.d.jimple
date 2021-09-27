@@ -1,0 +1,405 @@
+public class com.seattleclouds.modules.calendar.d extends android.support.v4.widget.o
+{
+    private android.view.LayoutInflater j;
+    private java.text.DateFormat k;
+    private com.seattleclouds.modules.calendar.p l;
+    private java.util.Date m;
+    private java.util.Map n;
+    private int o;
+
+    public void <init>(android.content.Context, java.util.Date, java.util.Map, int)
+    {
+        com.seattleclouds.modules.calendar.d $r0;
+        android.content.Context $r1;
+        java.util.Date $r2;
+        java.util.Map $r3;
+        int $i0;
+        android.view.LayoutInflater $r4;
+        java.text.DateFormat $r5;
+        com.seattleclouds.modules.calendar.p $r6;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.d;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.util.Date;
+
+        $r3 := @parameter2: java.util.Map;
+
+        $i0 := @parameter3: int;
+
+        specialinvoke $r0.<android.support.v4.widget.o: void <init>(android.content.Context,android.database.Cursor,int)>($r1, null, 0);
+
+        $r4 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r1);
+
+        $r0.<com.seattleclouds.modules.calendar.d: android.view.LayoutInflater j> = $r4;
+
+        $r5 = staticinvoke <android.text.format.DateFormat: java.text.DateFormat getTimeFormat(android.content.Context)>($r1);
+
+        $r0.<com.seattleclouds.modules.calendar.d: java.text.DateFormat k> = $r5;
+
+        $r6 = new com.seattleclouds.modules.calendar.p;
+
+        specialinvoke $r6.<com.seattleclouds.modules.calendar.p: void <init>(android.content.Context)>($r1);
+
+        $r0.<com.seattleclouds.modules.calendar.d: com.seattleclouds.modules.calendar.p l> = $r6;
+
+        $r0.<com.seattleclouds.modules.calendar.d: java.util.Date m> = $r2;
+
+        $r0.<com.seattleclouds.modules.calendar.d: java.util.Map n> = $r3;
+
+        $r0.<com.seattleclouds.modules.calendar.d: int o> = $i0;
+
+        return;
+    }
+
+    public android.view.View a(android.content.Context, android.database.Cursor, android.view.ViewGroup)
+    {
+        com.seattleclouds.modules.calendar.d $r0;
+        android.content.Context $r1;
+        android.database.Cursor $r2;
+        android.view.ViewGroup $r3;
+        android.view.LayoutInflater $r4;
+        int $i0;
+        android.view.View $r5, $r7;
+        com.seattleclouds.modules.calendar.f $r6;
+        android.widget.TextView $r8;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.d;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.database.Cursor;
+
+        $r3 := @parameter2: android.view.ViewGroup;
+
+        $r4 = $r0.<com.seattleclouds.modules.calendar.d: android.view.LayoutInflater j>;
+
+        $i0 = <com.seattleclouds.j: int calendar_event_list_item>;
+
+        $r5 = virtualinvoke $r4.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r3, 0);
+
+        $r6 = new com.seattleclouds.modules.calendar.f;
+
+        specialinvoke $r6.<com.seattleclouds.modules.calendar.f: void <init>(com.seattleclouds.modules.calendar.e)>(null);
+
+        $i0 = <com.seattleclouds.h: int title_text>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView a> = $r8;
+
+        $i0 = <com.seattleclouds.h: int detail_text>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView b> = $r8;
+
+        $i0 = <com.seattleclouds.h: int location_text>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView c> = $r8;
+
+        $i0 = <com.seattleclouds.h: int time_text>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView d> = $r8;
+
+        $i0 = <com.seattleclouds.h: int all_day_text>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView e> = $r8;
+
+        $i0 = <com.seattleclouds.h: int ends_text>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.TextView) $r7;
+
+        $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView f> = $r8;
+
+        $i0 = <com.seattleclouds.h: int categoryMarker>;
+
+        $r7 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6.<com.seattleclouds.modules.calendar.f: android.view.View g> = $r7;
+
+        virtualinvoke $r5.<android.view.View: void setTag(java.lang.Object)>($r6);
+
+        return $r5;
+    }
+
+    public void a(android.view.View, android.content.Context, android.database.Cursor)
+    {
+        com.seattleclouds.modules.calendar.d $r0;
+        android.view.View $r1;
+        android.content.Context $r2;
+        android.database.Cursor $r3;
+        com.seattleclouds.modules.calendar.p $r4;
+        int $i0;
+        java.lang.Object $r5;
+        com.seattleclouds.modules.calendar.f $r6;
+        java.lang.String $r7, $r12;
+        java.util.Map $r8;
+        java.lang.Integer $r9;
+        android.graphics.drawable.Drawable $r10;
+        android.widget.TextView $r11;
+        boolean $z0;
+        java.util.Date $r13, $r14, $r15;
+        long $l1;
+        java.text.DateFormat $r16;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.d;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r3 := @parameter2: android.database.Cursor;
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("_id");
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getInt(int)>($i0);
+
+        virtualinvoke $r1.<android.view.View: void setId(int)>($i0);
+
+        $r5 = virtualinvoke $r1.<android.view.View: java.lang.Object getTag()>();
+
+        $r6 = (com.seattleclouds.modules.calendar.f) $r5;
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("category");
+
+        $r7 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        $r8 = $r0.<com.seattleclouds.modules.calendar.d: java.util.Map n>;
+
+        $r5 = interfaceinvoke $r8.<java.util.Map: java.lang.Object get(java.lang.Object)>($r7);
+
+        $r9 = (java.lang.Integer) $r5;
+
+        if $r9 != null goto label01;
+
+        $i0 = $r0.<com.seattleclouds.modules.calendar.d: int o>;
+
+        $r9 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label01:
+        $r1 = $r6.<com.seattleclouds.modules.calendar.f: android.view.View g>;
+
+        $r4 = $r0.<com.seattleclouds.modules.calendar.d: com.seattleclouds.modules.calendar.p l>;
+
+        $i0 = virtualinvoke $r9.<java.lang.Integer: int intValue()>();
+
+        $r10 = virtualinvoke $r4.<com.seattleclouds.modules.calendar.p: android.graphics.drawable.Drawable a(int)>($i0);
+
+        staticinvoke <com.seattleclouds.util.bl: void a(android.view.View,android.graphics.drawable.Drawable)>($r1, $r10);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView a>;
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("title");
+
+        $r12 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r11.<android.widget.TextView: void setText(java.lang.CharSequence)>($r12);
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>("Court");
+
+        if $z0 == 0 goto label06;
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView b>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView b>;
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("case_number");
+
+        $r7 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r11.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+     label02:
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("location");
+
+        $r7 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        if $r7 == null goto label03;
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z0 == 0 goto label08;
+
+     label03:
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView c>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(8);
+
+     label04:
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView d>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(8);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView f>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(8);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView e>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(8);
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("is_all_day");
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getInt(int)>($i0);
+
+        if $i0 != 1 goto label09;
+
+        $z0 = 1;
+
+     label05:
+        if $z0 == 0 goto label10;
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView e>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        return;
+
+     label06:
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>("Detail");
+
+        if $z0 == 0 goto label07;
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView b>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView b>;
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("reference");
+
+        $r7 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r11.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        goto label02;
+
+     label07:
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView b>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(8);
+
+        goto label02;
+
+     label08:
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView c>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView c>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        goto label04;
+
+     label09:
+        $z0 = 0;
+
+        goto label05;
+
+     label10:
+        $r13 = new java.util.Date;
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("start_date");
+
+        $l1 = interfaceinvoke $r3.<android.database.Cursor: long getLong(int)>($i0);
+
+        specialinvoke $r13.<java.util.Date: void <init>(long)>($l1);
+
+        $r14 = new java.util.Date;
+
+        $i0 = interfaceinvoke $r3.<android.database.Cursor: int getColumnIndex(java.lang.String)>("end_date");
+
+        $l1 = interfaceinvoke $r3.<android.database.Cursor: long getLong(int)>($i0);
+
+        specialinvoke $r14.<java.util.Date: void <init>(long)>($l1);
+
+        $r15 = $r0.<com.seattleclouds.modules.calendar.d: java.util.Date m>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.bo: boolean a(java.util.Date,java.util.Date)>($r13, $r15);
+
+        if $z0 == 0 goto label11;
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView d>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView d>;
+
+        $r16 = $r0.<com.seattleclouds.modules.calendar.d: java.text.DateFormat k>;
+
+        $r7 = virtualinvoke $r16.<java.text.DateFormat: java.lang.String format(java.util.Date)>($r13);
+
+        virtualinvoke $r11.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        return;
+
+     label11:
+        $r13 = $r0.<com.seattleclouds.modules.calendar.d: java.util.Date m>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.bo: boolean a(java.util.Date,java.util.Date)>($r14, $r13);
+
+        if $z0 == 0 goto label12;
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView f>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView d>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView d>;
+
+        $r16 = $r0.<com.seattleclouds.modules.calendar.d: java.text.DateFormat k>;
+
+        $r7 = virtualinvoke $r16.<java.text.DateFormat: java.lang.String format(java.util.Date)>($r14);
+
+        virtualinvoke $r11.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        return;
+
+     label12:
+        $r11 = $r6.<com.seattleclouds.modules.calendar.f: android.widget.TextView e>;
+
+        virtualinvoke $r11.<android.widget.TextView: void setVisibility(int)>(0);
+
+        return;
+    }
+
+    public void a(java.util.Date)
+    {
+        com.seattleclouds.modules.calendar.d $r0;
+        java.util.Date $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.d;
+
+        $r1 := @parameter0: java.util.Date;
+
+        $r0.<com.seattleclouds.modules.calendar.d: java.util.Date m> = $r1;
+
+        return;
+    }
+}

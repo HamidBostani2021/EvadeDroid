@@ -1,0 +1,55 @@
+class nic.cabbage_ifc.Home$8 extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final nic.cabbage_ifc.Home this$0;
+
+    void <init>(nic.cabbage_ifc.Home)
+    {
+        nic.cabbage_ifc.Home$8 $r0;
+        nic.cabbage_ifc.Home $r1;
+
+        $r0 := @this: nic.cabbage_ifc.Home$8;
+
+        $r1 := @parameter0: nic.cabbage_ifc.Home;
+
+        $r0.<nic.cabbage_ifc.Home$8: nic.cabbage_ifc.Home this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        nic.cabbage_ifc.Home$8 $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        android.content.Intent $r2;
+        nic.cabbage_ifc.Home $r3;
+
+        $r0 := @this: nic.cabbage_ifc.Home$8;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.MAIN");
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent addCategory(java.lang.String)>("android.intent.category.HOME");
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setFlags(int)>(268435456);
+
+        $r3 = $r0.<nic.cabbage_ifc.Home$8: nic.cabbage_ifc.Home this$0>;
+
+        virtualinvoke $r3.<nic.cabbage_ifc.Home: void startActivity(android.content.Intent)>($r2);
+
+        $r3 = $r0.<nic.cabbage_ifc.Home$8: nic.cabbage_ifc.Home this$0>;
+
+        virtualinvoke $r3.<nic.cabbage_ifc.Home: void finish()>();
+
+        staticinvoke <java.lang.System: void exit(int)>(0);
+
+        return;
+    }
+}

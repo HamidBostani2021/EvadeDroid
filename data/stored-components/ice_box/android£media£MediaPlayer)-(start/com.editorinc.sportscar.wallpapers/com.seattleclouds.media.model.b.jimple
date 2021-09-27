@@ -1,0 +1,55 @@
+public class com.seattleclouds.media.model.b extends java.lang.Object
+{
+    private static com.seattleclouds.media.model.b a;
+    private com.seattleclouds.media.model.a b;
+
+    private void <init>()
+    {
+        com.seattleclouds.media.model.b $r0;
+        com.seattleclouds.media.model.a $r1;
+
+        $r0 := @this: com.seattleclouds.media.model.b;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new com.seattleclouds.media.model.a;
+
+        specialinvoke $r1.<com.seattleclouds.media.model.a: void <init>()>();
+
+        $r0.<com.seattleclouds.media.model.b: com.seattleclouds.media.model.a b> = $r1;
+
+        return;
+    }
+
+    public static com.seattleclouds.media.model.b a()
+    {
+        com.seattleclouds.media.model.b $r0;
+
+        $r0 = <com.seattleclouds.media.model.b: com.seattleclouds.media.model.b a>;
+
+        if $r0 != null goto label1;
+
+        $r0 = new com.seattleclouds.media.model.b;
+
+        specialinvoke $r0.<com.seattleclouds.media.model.b: void <init>()>();
+
+        <com.seattleclouds.media.model.b: com.seattleclouds.media.model.b a> = $r0;
+
+     label1:
+        $r0 = <com.seattleclouds.media.model.b: com.seattleclouds.media.model.b a>;
+
+        return $r0;
+    }
+
+    public com.seattleclouds.media.model.a b()
+    {
+        com.seattleclouds.media.model.b $r0;
+        com.seattleclouds.media.model.a r1;
+
+        $r0 := @this: com.seattleclouds.media.model.b;
+
+        r1 = $r0.<com.seattleclouds.media.model.b: com.seattleclouds.media.model.a b>;
+
+        return r1;
+    }
+}

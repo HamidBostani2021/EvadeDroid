@@ -1,0 +1,121 @@
+public class com.seattleclouds.modules.q.c extends java.lang.Object
+{
+    private java.lang.String a;
+    private int b;
+    private int c;
+    private java.util.ArrayList d;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.q.c $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.c: java.lang.String a> = "undefined";
+
+        $r0.<com.seattleclouds.modules.q.c: int b> = 0;
+
+        $r0.<com.seattleclouds.modules.q.c: int c> = 0;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.c: java.util.ArrayList d> = $r1;
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.modules.q.c $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        r1 = $r0.<com.seattleclouds.modules.q.c: java.lang.String a>;
+
+        return r1;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.modules.q.c $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.q.c: int b> = $i0;
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.q.c $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.q.c: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    public int b()
+    {
+        com.seattleclouds.modules.q.c $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        i0 = $r0.<com.seattleclouds.modules.q.c: int b>;
+
+        return i0;
+    }
+
+    public void b(int)
+    {
+        com.seattleclouds.modules.q.c $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.q.c: int c> = $i0;
+
+        return;
+    }
+
+    public int c()
+    {
+        com.seattleclouds.modules.q.c $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        i0 = $r0.<com.seattleclouds.modules.q.c: int c>;
+
+        return i0;
+    }
+
+    public java.util.ArrayList d()
+    {
+        com.seattleclouds.modules.q.c $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.c;
+
+        r1 = $r0.<com.seattleclouds.modules.q.c: java.util.ArrayList d>;
+
+        return r1;
+    }
+}

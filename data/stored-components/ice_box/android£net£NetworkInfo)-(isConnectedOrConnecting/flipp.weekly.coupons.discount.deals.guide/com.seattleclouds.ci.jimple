@@ -1,0 +1,46 @@
+class com.seattleclouds.ci extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.IllegalArgumentException a;
+    final com.seattleclouds.ch b;
+
+    void <init>(com.seattleclouds.ch, java.lang.IllegalArgumentException)
+    {
+        com.seattleclouds.ci $r0;
+        com.seattleclouds.ch $r1;
+        java.lang.IllegalArgumentException $r2;
+
+        $r0 := @this: com.seattleclouds.ci;
+
+        $r1 := @parameter0: com.seattleclouds.ch;
+
+        $r2 := @parameter1: java.lang.IllegalArgumentException;
+
+        $r0.<com.seattleclouds.ci: com.seattleclouds.ch b> = $r1;
+
+        $r0.<com.seattleclouds.ci: java.lang.IllegalArgumentException a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.ci $r0;
+        java.lang.IllegalArgumentException $r1;
+        com.seattleclouds.ch $r2;
+        com.seattleclouds.AppStarterActivity $r3;
+
+        $r0 := @this: com.seattleclouds.ci;
+
+        $r2 = $r0.<com.seattleclouds.ci: com.seattleclouds.ch b>;
+
+        $r3 = $r2.<com.seattleclouds.ch: com.seattleclouds.AppStarterActivity a>;
+
+        $r1 = $r0.<com.seattleclouds.ci: java.lang.IllegalArgumentException a>;
+
+        staticinvoke <com.seattleclouds.AppStarterActivity: void a(com.seattleclouds.AppStarterActivity,java.lang.IllegalArgumentException)>($r3, $r1);
+
+        return;
+    }
+}

@@ -1,0 +1,268 @@
+public class com.seattleclouds.previewer.PreviewerAboutActivity extends com.seattleclouds.bq
+{
+    private android.webkit.WebView m;
+    private java.lang.String n;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        specialinvoke $r0.<com.seattleclouds.bq: void <init>()>();
+
+        return;
+    }
+
+    static java.lang.String a(com.seattleclouds.previewer.PreviewerAboutActivity)
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        r1 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: java.lang.String n>;
+
+        return r1;
+    }
+
+    static java.lang.String a(com.seattleclouds.previewer.PreviewerAboutActivity, java.lang.String)
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: java.lang.String n> = $r1;
+
+        return $r1;
+    }
+
+    static android.webkit.WebView b(com.seattleclouds.previewer.PreviewerAboutActivity)
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity $r0;
+        android.webkit.WebView r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        r1 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m>;
+
+        return r1;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity $r0;
+        android.os.Bundle $r1;
+        int $i0, $i1;
+        android.content.pm.PackageManager $r2;
+        java.lang.String $r3, $r7;
+        android.content.pm.PackageInfo $r4;
+        java.lang.Object[] $r5;
+        java.lang.Integer $r6;
+        boolean $z0;
+        java.lang.StringBuilder $r8;
+        java.util.Locale $r9;
+        android.support.v7.a.a $r10;
+        android.view.View $r11;
+        android.webkit.WebView $r12;
+        android.webkit.WebSettings $r13;
+        java.lang.Thread $r14;
+        com.seattleclouds.previewer.a $r15;
+        java.lang.Throwable $r16;
+
+        $r0 := @this: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bq: void onCreate(android.os.Bundle)>($r1);
+
+        $i0 = <com.seattleclouds.j: int about>;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: void setContentView(int)>($i0);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.content.pm.PackageManager getPackageManager()>();
+
+        if $r2 == null goto label7;
+
+     label1:
+        $r3 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: java.lang.String getPackageName()>();
+
+        $r4 = virtualinvoke $r2.<android.content.pm.PackageManager: android.content.pm.PackageInfo getPackageInfo(java.lang.String,int)>($r3, 0);
+
+     label2:
+        $r3 = $r4.<android.content.pm.PackageInfo: java.lang.String versionName>;
+
+        $i0 = $r4.<android.content.pm.PackageInfo: int versionCode>;
+
+     label3:
+        $i1 = <com.seattleclouds.l: int previewer_about_version>;
+
+        $r5 = newarray (java.lang.Object)[2];
+
+        $r5[0] = $r3;
+
+        $r6 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r5[1] = $r6;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: java.lang.String getString(int,java.lang.Object[])>($i1, $r5);
+
+        $r7 = $r3;
+
+        $z0 = staticinvoke <com.seattleclouds.App: boolean a()>();
+
+        if $z0 == 0 goto label4;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" - ");
+
+        $r3 = staticinvoke <com.seattleclouds.App: java.lang.String b()>();
+
+        $r9 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r7 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label4:
+        $z0 = <com.seattleclouds.App: boolean b>;
+
+        if $z0 == 0 goto label5;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" - DEBUG");
+
+        $r7 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label5:
+        $r10 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.support.v7.a.a h()>();
+
+        virtualinvoke $r10.<android.support.v7.a.a: void b(java.lang.CharSequence)>($r7);
+
+        $i0 = <com.seattleclouds.h: int aboutWebView>;
+
+        $r11 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.view.View findViewById(int)>($i0);
+
+        $r12 = (android.webkit.WebView) $r11;
+
+        $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m> = $r12;
+
+        $r12 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m>;
+
+        virtualinvoke $r12.<android.webkit.WebView: void setHorizontalScrollBarEnabled(boolean)>(0);
+
+        $r12 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m>;
+
+        virtualinvoke $r12.<android.webkit.WebView: void setVerticalScrollbarOverlay(boolean)>(1);
+
+        $r12 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m>;
+
+        virtualinvoke $r12.<android.webkit.WebView: void setPadding(int,int,int,int)>(0, 0, 0, 0);
+
+        $r12 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m>;
+
+        $r13 = virtualinvoke $r12.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r13.<android.webkit.WebSettings: void setCacheMode(int)>(2);
+
+        $r12 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m>;
+
+        virtualinvoke $r12.<android.webkit.WebView: void clearCache(boolean)>(1);
+
+        $r12 = $r0.<com.seattleclouds.previewer.PreviewerAboutActivity: android.webkit.WebView m>;
+
+        $r13 = virtualinvoke $r12.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r13.<android.webkit.WebSettings: void setLoadWithOverviewMode(boolean)>(1);
+
+        $r14 = new java.lang.Thread;
+
+        $r15 = new com.seattleclouds.previewer.a;
+
+        specialinvoke $r15.<com.seattleclouds.previewer.a: void <init>(com.seattleclouds.previewer.PreviewerAboutActivity)>($r0);
+
+        specialinvoke $r14.<java.lang.Thread: void <init>(java.lang.Runnable)>($r15);
+
+        virtualinvoke $r14.<java.lang.Thread: void start()>();
+
+        return;
+
+     label6:
+        $r16 := @caughtexception;
+
+        $r3 = "1.0";
+
+        $i0 = 0;
+
+        goto label3;
+
+     label7:
+        $r3 = "1.0";
+
+        $i0 = 0;
+
+        goto label3;
+
+        catch android.content.pm.PackageManager$NameNotFoundException from label1 to label2 with label6;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        $r0 = this.<com.seattleclouds.previewer.PreviewerAboutActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.previewer.PreviewerAboutActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.previewer.PreviewerAboutActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.previewer.PreviewerAboutActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.previewer.PreviewerAboutActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

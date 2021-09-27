@@ -1,0 +1,41 @@
+public class com.revmob.b.f extends java.lang.Object
+{
+    public com.revmob.internal.d c;
+
+    public void <init>()
+    {
+        com.revmob.b.f $r0;
+
+        $r0 := @this: com.revmob.b.f;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.revmob.b.f: com.revmob.internal.d c> = null;
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.revmob.b.f $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.revmob.b.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        return;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.revmob.b.f $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.revmob.b.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        return;
+    }
+}

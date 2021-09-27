@@ -1,0 +1,77 @@
+public class com.seattleclouds.modules.q.l extends java.lang.Object
+{
+    private double a;
+    private double b;
+    private int c;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.q.l $r0;
+
+        $r0 := @this: com.seattleclouds.modules.q.l;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.l: double a> = 0.0;
+
+        $r0.<com.seattleclouds.modules.q.l: double b> = 0.0;
+
+        $r0.<com.seattleclouds.modules.q.l: int c> = 0;
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.q.l a(org.json.JSONObject)
+    {
+        org.json.JSONObject $r0;
+        com.seattleclouds.modules.q.l $r1;
+        double $d0;
+        int $i0;
+        org.json.JSONException $r2, $r3, $r4;
+
+        $r0 := @parameter0: org.json.JSONObject;
+
+        $r1 = new com.seattleclouds.modules.q.l;
+
+        specialinvoke $r1.<com.seattleclouds.modules.q.l: void <init>()>();
+
+     label1:
+        $d0 = virtualinvoke $r0.<org.json.JSONObject: double getDouble(java.lang.String)>("freeDelivery");
+
+     label2:
+        $r1.<com.seattleclouds.modules.q.l: double a> = $d0;
+
+     label3:
+        $d0 = virtualinvoke $r0.<org.json.JSONObject: double getDouble(java.lang.String)>("convenienceFee");
+
+     label4:
+        $r1.<com.seattleclouds.modules.q.l: double b> = $d0;
+
+     label5:
+        $i0 = virtualinvoke $r0.<org.json.JSONObject: int getInt(java.lang.String)>("leadTime");
+
+     label6:
+        $r1.<com.seattleclouds.modules.q.l: int c> = $i0;
+
+        return $r1;
+
+     label7:
+        $r2 := @caughtexception;
+
+        return $r1;
+
+     label8:
+        $r3 := @caughtexception;
+
+        goto label5;
+
+     label9:
+        $r4 := @caughtexception;
+
+        goto label3;
+
+        catch org.json.JSONException from label1 to label2 with label9;
+        catch org.json.JSONException from label3 to label4 with label8;
+        catch org.json.JSONException from label5 to label6 with label7;
+    }
+}

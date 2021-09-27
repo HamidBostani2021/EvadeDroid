@@ -1,0 +1,136 @@
+class com.seattleclouds.modules.t.ae extends android.os.AsyncTask
+{
+    final com.seattleclouds.modules.t.ab a;
+
+    private void <init>(com.seattleclouds.modules.t.ab)
+    {
+        com.seattleclouds.modules.t.ae $r0;
+        com.seattleclouds.modules.t.ab $r1;
+
+        $r0 := @this: com.seattleclouds.modules.t.ae;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.ab;
+
+        $r0.<com.seattleclouds.modules.t.ae: com.seattleclouds.modules.t.ab a> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.t.ab, com.seattleclouds.modules.t.ac)
+    {
+        com.seattleclouds.modules.t.ae $r0;
+        com.seattleclouds.modules.t.ab $r1;
+        com.seattleclouds.modules.t.ac $r2;
+
+        $r0 := @this: com.seattleclouds.modules.t.ae;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.ab;
+
+        $r2 := @parameter1: com.seattleclouds.modules.t.ac;
+
+        specialinvoke $r0.<com.seattleclouds.modules.t.ae: void <init>(com.seattleclouds.modules.t.ab)>($r1);
+
+        return;
+    }
+
+    protected transient android.graphics.Bitmap a(java.lang.Void[])
+    {
+        com.seattleclouds.modules.t.ae $r0;
+        java.lang.Void[] $r1;
+        boolean $z0;
+        com.seattleclouds.modules.t.ab $r2;
+        android.graphics.Bitmap $r3;
+
+        $r0 := @this: com.seattleclouds.modules.t.ae;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.t.ae: boolean isCancelled()>();
+
+        if $z0 == 0 goto label1;
+
+        return null;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.t.ae: com.seattleclouds.modules.t.ab a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.t.ab: android.graphics.Bitmap c(com.seattleclouds.modules.t.ab)>($r2);
+
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.t.ae: boolean isCancelled()>();
+
+        if $z0 == 0 goto label2;
+
+        if $r3 == null goto label3;
+
+        virtualinvoke $r3.<android.graphics.Bitmap: void recycle()>();
+
+        return null;
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.t.ae: com.seattleclouds.modules.t.ab a>;
+
+        staticinvoke <com.seattleclouds.modules.t.ab: void a(com.seattleclouds.modules.t.ab,android.graphics.Bitmap)>($r2, $r3);
+
+        return $r3;
+
+     label3:
+        return null;
+    }
+
+    protected void a(android.graphics.Bitmap)
+    {
+        com.seattleclouds.modules.t.ae $r0;
+        android.graphics.Bitmap $r1;
+        android.widget.ImageView $r2;
+        com.seattleclouds.modules.t.ab $r3;
+
+        $r0 := @this: com.seattleclouds.modules.t.ae;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r3 = $r0.<com.seattleclouds.modules.t.ae: com.seattleclouds.modules.t.ab a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.t.ab: android.widget.ImageView d(com.seattleclouds.modules.t.ab)>($r3);
+
+        virtualinvoke $r2.<android.widget.ImageView: void setImageBitmap(android.graphics.Bitmap)>($r1);
+
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.t.ae $r0;
+        android.graphics.Bitmap $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.t.ae;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.t.ae: android.graphics.Bitmap a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.t.ae $r0;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+
+        $r0 := @this: com.seattleclouds.modules.t.ae;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.t.ae: void a(android.graphics.Bitmap)>($r2);
+
+        return;
+    }
+}

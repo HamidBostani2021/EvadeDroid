@@ -1,0 +1,138 @@
+public class Slicecom.AutoCampingmethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicecom.AutoCampingmethod this;
+        com.AutoCamping.EditViewActivity $r0;
+        android.os.Bundle $r1;
+        com.AutoCamping.EditViewActivity$MyWebChromeClient $r2;
+        android.content.Intent $r3;
+        java.lang.String $r4;
+        android.view.View $r5;
+        android.webkit.WebView $r6, $r12;
+        android.webkit.WebSettings $r7;
+        android.webkit.WebSettings$PluginState $r8;
+        android.webkit.WebSettings$RenderPriority $r9;
+        com.AutoCamping.EditViewActivity$JavaScriptInterface $r10;
+        android.content.Context $r11;
+
+        this := @this: Slicecom.AutoCampingmethod;
+
+        $r11 = virtualinvoke this.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.AutoCamping.EditViewActivity: boolean requestWindowFeature(int)>(1);
+
+        virtualinvoke $r0.<com.AutoCamping.EditViewActivity: void setContentView(int)>(2130903040);
+
+        $r3 = virtualinvoke $r0.<com.AutoCamping.EditViewActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("URL");
+
+        $r5 = virtualinvoke $r0.<com.AutoCamping.EditViewActivity: android.view.View findViewById(int)>(2131099648);
+
+        $r6 = (android.webkit.WebView) $r5;
+
+        $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview> = $r6;
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setJavaScriptEnabled(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setJavaScriptCanOpenWindowsAutomatically(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setGeolocationEnabled(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setSupportZoom(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setBlockNetworkImage(boolean)>(0);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setLoadsImagesAutomatically(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setUseWideViewPort(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        $r8 = <android.webkit.WebSettings$PluginState: android.webkit.WebSettings$PluginState ON>;
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setPluginState(android.webkit.WebSettings$PluginState)>($r8);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void clearCache(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setCacheMode(int)>(2);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        $r9 = <android.webkit.WebSettings$RenderPriority: android.webkit.WebSettings$RenderPriority HIGH>;
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setRenderPriority(android.webkit.WebSettings$RenderPriority)>($r9);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r7 = virtualinvoke $r6.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r7.<android.webkit.WebSettings: void setSupportMultipleWindows(boolean)>(1);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void setHorizontalScrollBarEnabled(boolean)>(0);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        virtualinvoke $r6.<android.webkit.WebView: void setVerticalScrollBarEnabled(boolean)>(0);
+
+        $r6 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        $r10 = new com.AutoCamping.EditViewActivity$JavaScriptInterface;
+
+        $r11 = virtualinvoke $r0.<com.AutoCamping.EditViewActivity: android.content.Context getApplicationContext()>();
+
+        $r12 = $r0.<com.AutoCamping.EditViewActivity: android.webkit.WebView webview>;
+
+        specialinvoke $r10.<com.AutoCamping.EditViewActivity$JavaScriptInterface: void <init>(com.AutoCamping.EditViewActivity,android.content.Context,android.webkit.WebView,java.lang.String)>($r0, $r11, $r12, $r4);
+
+        virtualinvoke $r6.<android.webkit.WebView: void addJavascriptInterface(java.lang.Object,java.lang.String)>($r10, "margoScript");
+
+        $r2 = new com.AutoCamping.EditViewActivity$MyWebChromeClient;
+
+        return;
+    }
+}

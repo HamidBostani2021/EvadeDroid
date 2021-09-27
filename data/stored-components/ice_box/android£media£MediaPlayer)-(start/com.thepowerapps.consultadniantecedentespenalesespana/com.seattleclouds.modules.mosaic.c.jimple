@@ -1,0 +1,125 @@
+class com.seattleclouds.modules.mosaic.c extends java.lang.Object implements android.widget.AdapterView$OnItemClickListener
+{
+    final com.seattleclouds.modules.mosaic.b a;
+
+    void <init>(com.seattleclouds.modules.mosaic.b)
+    {
+        com.seattleclouds.modules.mosaic.c $r0;
+        com.seattleclouds.modules.mosaic.b $r1;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.c;
+
+        $r1 := @parameter0: com.seattleclouds.modules.mosaic.b;
+
+        $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onItemClick(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.mosaic.c $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        com.seattleclouds.modules.mosaic.b $r3;
+        boolean $z0;
+        android.content.Intent $r4;
+        java.util.ArrayList $r5;
+        java.lang.Object $r6;
+        com.seattleclouds.modules.mosaic.ImgMetadata $r7;
+        java.lang.String $r8;
+        android.support.v4.app.ac $r9;
+        android.os.Bundle $r10, $r11;
+        com.seattleclouds.FragmentInfo $r12;
+        java.lang.Class $r13;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.c;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.mosaic.b: boolean a(com.seattleclouds.modules.mosaic.b)>($r3);
+
+        if $z0 == 0 goto label1;
+
+        $r4 = new android.content.Intent;
+
+        specialinvoke $r4.<android.content.Intent: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.mosaic.b: java.util.ArrayList b(com.seattleclouds.modules.mosaic.b)>($r3);
+
+        $r6 = virtualinvoke $r5.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r7 = (com.seattleclouds.modules.mosaic.ImgMetadata) $r6;
+
+        $r8 = $r7.<com.seattleclouds.modules.mosaic.ImgMetadata: java.lang.String b>;
+
+        virtualinvoke $r4.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("imgName", $r8);
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        $r9 = virtualinvoke $r3.<com.seattleclouds.modules.mosaic.b: android.support.v4.app.ac n()>();
+
+        virtualinvoke $r9.<android.support.v4.app.ac: void setResult(int,android.content.Intent)>(-1, $r4);
+
+        staticinvoke <java.lang.System: void gc()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        staticinvoke <com.seattleclouds.App: boolean a(android.support.v4.app.Fragment)>($r3);
+
+        return;
+
+     label1:
+        $r10 = new android.os.Bundle;
+
+        specialinvoke $r10.<android.os.Bundle: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.mosaic.b: java.util.ArrayList b(com.seattleclouds.modules.mosaic.b)>($r3);
+
+        virtualinvoke $r10.<android.os.Bundle: void putParcelableArrayList(java.lang.String,java.util.ArrayList)>("mosaicimages", $r5);
+
+        virtualinvoke $r10.<android.os.Bundle: void putInt(java.lang.String,int)>("selectedIndex", $i0);
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        $r11 = staticinvoke <com.seattleclouds.modules.mosaic.b: android.os.Bundle c(com.seattleclouds.modules.mosaic.b)>($r3);
+
+        virtualinvoke $r10.<android.os.Bundle: void putBundle(java.lang.String,android.os.Bundle)>("PAGE_STYLE", $r11);
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.mosaic.b: boolean d(com.seattleclouds.modules.mosaic.b)>($r3);
+
+        virtualinvoke $r10.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("mosaicAutoCaptionsEnabled", $z0);
+
+        $r12 = new com.seattleclouds.FragmentInfo;
+
+        $r13 = class "Lcom/seattleclouds/modules/mosaic/k;";
+
+        $r8 = virtualinvoke $r13.<java.lang.Class: java.lang.String getName()>();
+
+        specialinvoke $r12.<com.seattleclouds.FragmentInfo: void <init>(java.lang.String,android.os.Bundle)>($r8, $r10);
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.c: com.seattleclouds.modules.mosaic.b a>;
+
+        staticinvoke <com.seattleclouds.App: void a(com.seattleclouds.FragmentInfo,android.support.v4.app.Fragment)>($r12, $r3);
+
+        return;
+    }
+}

@@ -1,0 +1,109 @@
+public class com.facebook.FacebookGraphResponseException extends com.facebook.FacebookException
+{
+    private final com.facebook.an graphResponse;
+
+    public void <init>(com.facebook.an, java.lang.String)
+    {
+        com.facebook.FacebookGraphResponseException $r0;
+        com.facebook.an $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.facebook.FacebookGraphResponseException;
+
+        $r1 := @parameter0: com.facebook.an;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.facebook.FacebookException: void <init>(java.lang.String)>($r2);
+
+        $r0.<com.facebook.FacebookGraphResponseException: com.facebook.an graphResponse> = $r1;
+
+        return;
+    }
+
+    public final com.facebook.an getGraphResponse()
+    {
+        com.facebook.FacebookGraphResponseException $r0;
+        com.facebook.an r1;
+
+        $r0 := @this: com.facebook.FacebookGraphResponseException;
+
+        r1 = $r0.<com.facebook.FacebookGraphResponseException: com.facebook.an graphResponse>;
+
+        return r1;
+    }
+
+    public final java.lang.String toString()
+    {
+        com.facebook.FacebookGraphResponseException $r0;
+        com.facebook.an $r1;
+        com.facebook.FacebookRequestError $r2;
+        java.lang.StringBuilder $r3, $r5;
+        java.lang.String $r4;
+        int $i0;
+
+        $r0 := @this: com.facebook.FacebookGraphResponseException;
+
+        $r1 = $r0.<com.facebook.FacebookGraphResponseException: com.facebook.an graphResponse>;
+
+        if $r1 == null goto label4;
+
+        $r1 = $r0.<com.facebook.FacebookGraphResponseException: com.facebook.an graphResponse>;
+
+        $r2 = virtualinvoke $r1.<com.facebook.an: com.facebook.FacebookRequestError a()>();
+
+     label1:
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("{FacebookGraphResponseException: ");
+
+        $r4 = virtualinvoke $r0.<com.facebook.FacebookGraphResponseException: java.lang.String getMessage()>();
+
+        if $r4 == null goto label2;
+
+        virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+     label2:
+        if $r2 == null goto label3;
+
+        $r5 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("httpResponseCode: ");
+
+        $i0 = virtualinvoke $r2.<com.facebook.FacebookRequestError: int b()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", facebookErrorCode: ");
+
+        $i0 = virtualinvoke $r2.<com.facebook.FacebookRequestError: int c()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", facebookErrorType: ");
+
+        $r4 = virtualinvoke $r2.<com.facebook.FacebookRequestError: java.lang.String e()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", message: ");
+
+        $r4 = virtualinvoke $r2.<com.facebook.FacebookRequestError: java.lang.String f()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("}");
+
+     label3:
+        $r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r4;
+
+     label4:
+        $r2 = null;
+
+        goto label1;
+    }
+}

@@ -1,0 +1,110 @@
+public class com.seattleclouds.previewer.appmart.order.a.i extends android.support.v7.widget.fb
+{
+    public android.widget.TextView l;
+    public android.widget.TextView m;
+    public android.widget.TextView n;
+    public android.widget.LinearLayout o;
+    public android.support.v7.widget.CardView p;
+    public android.widget.TextView q;
+    public android.widget.TextView r;
+    public android.support.v7.widget.AppCompatSeekBar s;
+    public android.widget.RelativeLayout t;
+    final com.seattleclouds.previewer.appmart.order.a.d u;
+
+    public void <init>(com.seattleclouds.previewer.appmart.order.a.d, android.view.View)
+    {
+        com.seattleclouds.previewer.appmart.order.a.i $r0;
+        com.seattleclouds.previewer.appmart.order.a.d $r1;
+        android.view.View $r2, $r3;
+        int $i0;
+        android.widget.TextView $r4;
+        android.widget.LinearLayout $r5;
+        android.support.v7.widget.CardView $r6;
+        android.support.v7.widget.AppCompatSeekBar $r7;
+        android.widget.RelativeLayout $r8;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.i;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r2 := @parameter1: android.view.View;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: com.seattleclouds.previewer.appmart.order.a.d u> = $r1;
+
+        specialinvoke $r0.<android.support.v7.widget.fb: void <init>(android.view.View)>($r2);
+
+        $i0 = <com.seattleclouds.h: int price_level_card_view_fragment_payment>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView l> = $r4;
+
+        $i0 = <com.seattleclouds.h: int price_card_view_fragment_payment>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView m> = $r4;
+
+        $i0 = <com.seattleclouds.h: int show_hide_info_price_level_fragment_payment>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.LinearLayout) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.LinearLayout o> = $r5;
+
+        $i0 = <com.seattleclouds.h: int plans_and_price_info>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView n> = $r4;
+
+        $i0 = <com.seattleclouds.h: int card_view_price_fragment_payment>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.support.v7.widget.CardView) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.support.v7.widget.CardView p> = $r6;
+
+        $i0 = <com.seattleclouds.h: int monthly_text_view>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView q> = $r4;
+
+        $i0 = <com.seattleclouds.h: int yearly_text_view>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView r> = $r4;
+
+        $i0 = <com.seattleclouds.h: int switch_monthly_yearly>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.v7.widget.AppCompatSeekBar) $r3;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.support.v7.widget.AppCompatSeekBar s> = $r7;
+
+        $i0 = <com.seattleclouds.h: int switch_monthly_yearly_layout>;
+
+        $r2 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.RelativeLayout) $r2;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.RelativeLayout t> = $r8;
+
+        return;
+    }
+}

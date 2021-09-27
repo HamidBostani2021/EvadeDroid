@@ -1,0 +1,48 @@
+class net.sourceforge.zbar.android.h extends java.lang.Object implements android.hardware.Camera$AutoFocusCallback
+{
+    final net.sourceforge.zbar.android.ZBarScanner a;
+
+    void <init>(net.sourceforge.zbar.android.ZBarScanner)
+    {
+        net.sourceforge.zbar.android.h $r0;
+        net.sourceforge.zbar.android.ZBarScanner $r1;
+
+        $r0 := @this: net.sourceforge.zbar.android.h;
+
+        $r1 := @parameter0: net.sourceforge.zbar.android.ZBarScanner;
+
+        $r0.<net.sourceforge.zbar.android.h: net.sourceforge.zbar.android.ZBarScanner a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onAutoFocus(boolean, android.hardware.Camera)
+    {
+        net.sourceforge.zbar.android.h $r0;
+        boolean $z0;
+        android.hardware.Camera $r1;
+        net.sourceforge.zbar.android.ZBarScanner $r2;
+        android.os.Handler $r3;
+        java.lang.Runnable $r4;
+
+        $r0 := @this: net.sourceforge.zbar.android.h;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 := @parameter1: android.hardware.Camera;
+
+        $r2 = $r0.<net.sourceforge.zbar.android.h: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r3 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.os.Handler k(net.sourceforge.zbar.android.ZBarScanner)>($r2);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.h: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r4 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: java.lang.Runnable j(net.sourceforge.zbar.android.ZBarScanner)>($r2);
+
+        virtualinvoke $r3.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r4, 1000L);
+
+        return;
+    }
+}

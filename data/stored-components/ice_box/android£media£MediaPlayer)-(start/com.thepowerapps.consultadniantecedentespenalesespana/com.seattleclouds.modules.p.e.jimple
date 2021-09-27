@@ -1,0 +1,711 @@
+public class com.seattleclouds.modules.p.e extends android.support.v4.app.Fragment
+{
+    private long a;
+    private android.os.Bundle ai;
+    private boolean aj;
+    private android.widget.TextView b;
+    private android.widget.TextView c;
+    private com.seattleclouds.widget.NotifyingEditText d;
+    private java.lang.String e;
+    private java.util.Date f;
+    private com.seattleclouds.modules.p.a g;
+    private boolean h;
+    private com.seattleclouds.modules.p.g i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        java.util.Date $r1;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        specialinvoke $r0.<android.support.v4.app.Fragment: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.p.e: long a> = -1L;
+
+        $r0.<com.seattleclouds.modules.p.e: java.lang.String e> = "";
+
+        $r1 = new java.util.Date;
+
+        specialinvoke $r1.<java.util.Date: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.p.e: java.util.Date f> = $r1;
+
+        $r0.<com.seattleclouds.modules.p.e: boolean h> = 0;
+
+        $r0.<com.seattleclouds.modules.p.e: boolean aj> = 0;
+
+        return;
+    }
+
+    private void Z()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        android.support.v4.app.ac $r1;
+        com.seattleclouds.widget.NotifyingEditText $r2;
+        java.lang.Object $r3;
+        android.view.inputmethod.InputMethodManager $r4;
+        android.os.IBinder $r5;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        if $r1 == null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        $r3 = virtualinvoke $r1.<android.support.v4.app.ac: java.lang.Object getSystemService(java.lang.String)>("input_method");
+
+        $r4 = (android.view.inputmethod.InputMethodManager) $r3;
+
+        $r2 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        $r5 = virtualinvoke $r2.<com.seattleclouds.widget.NotifyingEditText: android.os.IBinder getWindowToken()>();
+
+        virtualinvoke $r4.<android.view.inputmethod.InputMethodManager: boolean hideSoftInputFromWindow(android.os.IBinder,int)>($r5, 0);
+
+     label2:
+        return;
+    }
+
+    public static com.seattleclouds.modules.p.e a(long, java.lang.String, android.os.Bundle)
+    {
+        long $l0;
+        java.lang.String $r0;
+        android.os.Bundle $r1, $r3;
+        com.seattleclouds.modules.p.e $r2;
+
+        $l0 := @parameter0: long;
+
+        $r0 := @parameter1: java.lang.String;
+
+        $r1 := @parameter2: android.os.Bundle;
+
+        $r2 = new com.seattleclouds.modules.p.e;
+
+        specialinvoke $r2.<com.seattleclouds.modules.p.e: void <init>()>();
+
+        $r3 = new android.os.Bundle;
+
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r3.<android.os.Bundle: void putLong(java.lang.String,long)>("_id", $l0);
+
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("databaseName", $r0);
+
+        virtualinvoke $r3.<android.os.Bundle: void putBundle(java.lang.String,android.os.Bundle)>("PAGE_STYLE", $r1);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.p.e: void g(android.os.Bundle)>($r3);
+
+        return $r2;
+    }
+
+    static boolean a(com.seattleclouds.modules.p.e)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        boolean z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.p.e;
+
+        z0 = $r0.<com.seattleclouds.modules.p.e: boolean h>;
+
+        return z0;
+    }
+
+    private void aa()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        java.lang.String $r1, $r3;
+        android.os.Bundle $r2;
+        boolean $z0;
+        com.seattleclouds.modules.p.a $r4;
+        android.support.v4.app.ac $r5;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 = null;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.os.Bundle j()>();
+
+        if $r2 == null goto label1;
+
+        $r1 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("databaseName");
+
+     label1:
+        if $r1 == null goto label2;
+
+        $r3 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z0 == 0 goto label3;
+
+     label2:
+        $r1 = "notes.db";
+
+     label3:
+        $r4 = new com.seattleclouds.modules.p.a;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        specialinvoke $r4.<com.seattleclouds.modules.p.a: void <init>(android.content.Context,java.lang.String)>($r5, $r1);
+
+        $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.a g> = $r4;
+
+        return;
+    }
+
+    private void ab()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        java.util.Date $r1;
+        com.seattleclouds.widget.NotifyingEditText $r2;
+        android.text.Editable $r3;
+        java.lang.String $r4, $r5;
+        long $l0;
+        byte $b1;
+        int $i2;
+        boolean $z0;
+        com.seattleclouds.modules.p.a $r6;
+        com.seattleclouds.modules.p.g $r7;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r2 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.widget.NotifyingEditText: android.text.Editable getText()>();
+
+        $r4 = virtualinvoke $r3.<java.lang.Object: java.lang.String toString()>();
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        $b1 = $l0 cmp -1L;
+
+        if $b1 != 0 goto label1;
+
+        $i2 = virtualinvoke $r4.<java.lang.String: int length()>();
+
+        if $i2 == 0 goto label5;
+
+     label1:
+        $r5 = $r0.<com.seattleclouds.modules.p.e: java.lang.String e>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>($r5);
+
+        if $z0 != 0 goto label5;
+
+        $z0 = $r0.<com.seattleclouds.modules.p.e: boolean aj>;
+
+        if $z0 == 0 goto label2;
+
+        return;
+
+     label2:
+        $r1 = new java.util.Date;
+
+        specialinvoke $r1.<java.util.Date: void <init>()>();
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        $b1 = $l0 cmp -1L;
+
+        if $b1 != 0 goto label4;
+
+        $r6 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.a g>;
+
+        $l0 = virtualinvoke $r6.<com.seattleclouds.modules.p.a: long a(java.lang.String,java.util.Date)>($r4, $r1);
+
+        $r0.<com.seattleclouds.modules.p.e: long a> = $l0;
+
+     label3:
+        $r0.<com.seattleclouds.modules.p.e: java.lang.String e> = $r4;
+
+        $r0.<com.seattleclouds.modules.p.e: java.util.Date f> = $r1;
+
+        $r7 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.g i>;
+
+        if $r7 == null goto label5;
+
+        $z0 = $r0.<com.seattleclouds.modules.p.e: boolean h>;
+
+        if $z0 != 0 goto label5;
+
+        $r7 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.g i>;
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        interfaceinvoke $r7.<com.seattleclouds.modules.p.g: void a(com.seattleclouds.modules.p.e,long,java.lang.String,java.util.Date)>($r0, $l0, $r4, $r1);
+
+        return;
+
+     label4:
+        $r6 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.a g>;
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.p.a: int a(long,java.lang.String,java.util.Date)>($l0, $r4, $r1);
+
+        goto label3;
+
+     label5:
+        return;
+    }
+
+    static void b(com.seattleclouds.modules.p.e)
+    {
+        com.seattleclouds.modules.p.e $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.p.e;
+
+        specialinvoke $r0.<com.seattleclouds.modules.p.e: void ab()>();
+
+        return;
+    }
+
+    static com.seattleclouds.widget.NotifyingEditText c(com.seattleclouds.modules.p.e)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        com.seattleclouds.widget.NotifyingEditText r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.p.e;
+
+        r1 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        return r1;
+    }
+
+    private void c()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        com.seattleclouds.widget.NotifyingEditText $r1;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        virtualinvoke $r1.<com.seattleclouds.widget.NotifyingEditText: boolean requestFocus()>();
+
+        return;
+    }
+
+    public void D()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        specialinvoke $r0.<android.support.v4.app.Fragment: void D()>();
+
+        $z0 = $r0.<com.seattleclouds.modules.p.e: boolean h>;
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.p.e: void c()>();
+
+     label1:
+        return;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.modules.p.e $r0;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        specialinvoke $r0.<android.support.v4.app.Fragment: void E()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.p.e: void ab()>();
+
+        return;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        com.seattleclouds.modules.p.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.a g>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.a g>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.p.a: void close()>();
+
+     label1:
+        specialinvoke $r0.<android.support.v4.app.Fragment: void F()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.widget.TextView $r6;
+        com.seattleclouds.widget.NotifyingEditText $r7;
+        android.support.v4.app.ac $r8;
+        boolean $z0;
+        com.seattleclouds.p $r9;
+        com.seattleclouds.e.f $r10;
+        java.lang.StringBuilder $r11;
+        java.text.DateFormat $r12;
+        java.util.Date $r13;
+        java.lang.String $r14;
+        com.seattleclouds.modules.p.f $r15;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int note>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int date>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.p.e: android.widget.TextView b> = $r6;
+
+        $i0 = <com.seattleclouds.h: int relative_date>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.p.e: android.widget.TextView c> = $r6;
+
+        $i0 = <com.seattleclouds.h: int text>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (com.seattleclouds.widget.NotifyingEditText) $r5;
+
+        $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d> = $r7;
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        $z0 = $r8 instanceof com.seattleclouds.p;
+
+        if $z0 == 0 goto label1;
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        $r9 = (com.seattleclouds.p) $r8;
+
+        $r10 = virtualinvoke $r9.<com.seattleclouds.p: com.seattleclouds.e.f m()>();
+
+        $r7 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        staticinvoke <com.seattleclouds.e.b: void a(com.seattleclouds.e.f,android.widget.EditText)>($r10, $r7);
+
+     label1:
+        $r6 = $r0.<com.seattleclouds.modules.p.e: android.widget.TextView b>;
+
+        $r3 = $r0.<com.seattleclouds.modules.p.e: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r6, $r3);
+
+        $r6 = $r0.<com.seattleclouds.modules.p.e: android.widget.TextView c>;
+
+        $r3 = $r0.<com.seattleclouds.modules.p.e: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r6, $r3);
+
+        $r7 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        $r3 = $r0.<com.seattleclouds.modules.p.e: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r7, $r3);
+
+        $r6 = $r0.<com.seattleclouds.modules.p.e: android.widget.TextView b>;
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        $r12 = staticinvoke <android.text.format.DateFormat: java.text.DateFormat getMediumDateFormat(android.content.Context)>($r8);
+
+        $r13 = $r0.<com.seattleclouds.modules.p.e: java.util.Date f>;
+
+        $r14 = virtualinvoke $r12.<java.text.DateFormat: java.lang.String format(java.util.Date)>($r13);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r14);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        $r12 = staticinvoke <android.text.format.DateFormat: java.text.DateFormat getTimeFormat(android.content.Context)>($r8);
+
+        $r13 = $r0.<com.seattleclouds.modules.p.e: java.util.Date f>;
+
+        $r14 = virtualinvoke $r12.<java.text.DateFormat: java.lang.String format(java.util.Date)>($r13);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r14);
+
+        $r14 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r14);
+
+        $r6 = $r0.<com.seattleclouds.modules.p.e: android.widget.TextView c>;
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.support.v4.app.ac n()>();
+
+        $r13 = $r0.<com.seattleclouds.modules.p.e: java.util.Date f>;
+
+        $r14 = staticinvoke <com.seattleclouds.util.bo: java.lang.String b(android.content.Context,java.util.Date)>($r8, $r13);
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r14);
+
+        $r7 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        $r14 = $r0.<com.seattleclouds.modules.p.e: java.lang.String e>;
+
+        virtualinvoke $r7.<com.seattleclouds.widget.NotifyingEditText: void setText(java.lang.CharSequence)>($r14);
+
+        $r7 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        $r15 = new com.seattleclouds.modules.p.f;
+
+        specialinvoke $r15.<com.seattleclouds.modules.p.f: void <init>(com.seattleclouds.modules.p.e)>($r0);
+
+        virtualinvoke $r7.<com.seattleclouds.widget.NotifyingEditText: void setOnKeyPreImeListener(com.seattleclouds.widget.m)>($r15);
+
+        return $r4;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        com.seattleclouds.widget.NotifyingEditText $r1;
+        android.text.Editable $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.widget.NotifyingEditText: android.text.Editable getText()>();
+
+        $r3 = virtualinvoke $r2.<java.lang.Object: java.lang.String toString()>();
+
+        return $r3;
+
+     label1:
+        return null;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        android.os.Bundle $r1, $r2;
+        long $l0;
+        byte $b1;
+        boolean $z0;
+        com.seattleclouds.modules.p.a $r3;
+        android.database.Cursor $r4;
+        int $i2;
+        java.util.Date $r5;
+        java.lang.String $r6;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.support.v4.app.Fragment: void a(android.os.Bundle)>($r1);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.p.e: android.os.Bundle j()>();
+
+        if $r2 == null goto label2;
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        $l0 = virtualinvoke $r2.<android.os.Bundle: long getLong(java.lang.String,long)>("_id", $l0);
+
+        $r0.<com.seattleclouds.modules.p.e: long a> = $l0;
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        $b1 = $l0 cmp -1L;
+
+        if $b1 != 0 goto label5;
+
+        $z0 = 1;
+
+     label1:
+        $r0.<com.seattleclouds.modules.p.e: boolean h> = $z0;
+
+        $r2 = virtualinvoke $r2.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        $r0.<com.seattleclouds.modules.p.e: android.os.Bundle ai> = $r2;
+
+     label2:
+        if $r1 == null goto label3;
+
+        $l0 = virtualinvoke $r1.<android.os.Bundle: long getLong(java.lang.String)>("STATE_CURRENT_NOTE_ID");
+
+        $r0.<com.seattleclouds.modules.p.e: long a> = $l0;
+
+     label3:
+        specialinvoke $r0.<com.seattleclouds.modules.p.e: void aa()>();
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        $b1 = $l0 cmp -1L;
+
+        if $b1 == 0 goto label6;
+
+        $r3 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.a g>;
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.p.a: android.database.Cursor a(long)>($l0);
+
+        $i2 = interfaceinvoke $r4.<android.database.Cursor: int getCount()>();
+
+        if $i2 <= 0 goto label4;
+
+        $r5 = new java.util.Date;
+
+        $i2 = interfaceinvoke $r4.<android.database.Cursor: int getColumnIndex(java.lang.String)>("date");
+
+        $l0 = interfaceinvoke $r4.<android.database.Cursor: long getLong(int)>($i2);
+
+        specialinvoke $r5.<java.util.Date: void <init>(long)>($l0);
+
+        $r0.<com.seattleclouds.modules.p.e: java.util.Date f> = $r5;
+
+        $i2 = interfaceinvoke $r4.<android.database.Cursor: int getColumnIndex(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i2);
+
+        $r0.<com.seattleclouds.modules.p.e: java.lang.String e> = $r6;
+
+     label4:
+        interfaceinvoke $r4.<android.database.Cursor: void close()>();
+
+        return;
+
+     label5:
+        $z0 = 0;
+
+        goto label1;
+
+     label6:
+        return;
+    }
+
+    public void a(com.seattleclouds.modules.p.g)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        com.seattleclouds.modules.p.g $r1;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.p.g;
+
+        $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.modules.p.g i> = $r1;
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.p.e: boolean aj> = 1;
+
+        return;
+    }
+
+    public long b()
+    {
+        com.seattleclouds.modules.p.e $r0;
+        long l0;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        return l0;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        android.os.Bundle $r1;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $l0 = $r0.<com.seattleclouds.modules.p.e: long a>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("STATE_CURRENT_NOTE_ID", $l0);
+
+        specialinvoke $r0.<android.support.v4.app.Fragment: void e(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void g(boolean)
+    {
+        com.seattleclouds.modules.p.e $r0;
+        boolean $z0;
+        com.seattleclouds.widget.NotifyingEditText $r1;
+
+        $r0 := @this: com.seattleclouds.modules.p.e;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<android.support.v4.app.Fragment: void g(boolean)>($z0);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.p.e: com.seattleclouds.widget.NotifyingEditText d>;
+
+        if $r1 == null goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.p.e: void ab()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.p.e: void Z()>();
+
+     label1:
+        return;
+    }
+}

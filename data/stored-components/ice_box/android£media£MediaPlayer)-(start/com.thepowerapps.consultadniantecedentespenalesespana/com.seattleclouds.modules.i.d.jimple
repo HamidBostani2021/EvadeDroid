@@ -1,0 +1,136 @@
+class com.seattleclouds.modules.i.d extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final int a;
+    final com.seattleclouds.modules.i.a b;
+
+    void <init>(com.seattleclouds.modules.i.a, int)
+    {
+        com.seattleclouds.modules.i.d $r0;
+        com.seattleclouds.modules.i.a $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.i.d;
+
+        $r1 := @parameter0: com.seattleclouds.modules.i.a;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b> = $r1;
+
+        $r0.<com.seattleclouds.modules.i.d: int a> = $i0;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.i.d $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.modules.i.a $r2;
+        java.util.ArrayList $r3;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.i.o $r5;
+        java.io.File $r6;
+        java.lang.String $r7, $r8;
+        boolean $z0;
+        com.seattleclouds.modules.i.p $r9;
+        android.support.v4.app.ac $r10;
+        android.widget.Toast $r11;
+
+        $r0 := @this: com.seattleclouds.modules.i.d;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.i.a: java.util.ArrayList a(com.seattleclouds.modules.i.a)>($r2);
+
+        $i0 = $r0.<com.seattleclouds.modules.i.d: int a>;
+
+        $r4 = virtualinvoke $r3.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r5 = (com.seattleclouds.modules.i.o) $r4;
+
+        $r6 = new java.io.File;
+
+        $r7 = $r5.<com.seattleclouds.modules.i.o: java.lang.String b>;
+
+        specialinvoke $r6.<java.io.File: void <init>(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r6.<java.io.File: java.lang.String getAbsolutePath()>();
+
+        $r8 = staticinvoke <com.seattleclouds.App: java.lang.String j()>();
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean contains(java.lang.CharSequence)>($r8);
+
+        if $z0 != 0 goto label1;
+
+        $z0 = $r5.<com.seattleclouds.modules.i.o: boolean c>;
+
+        if $z0 == 0 goto label3;
+
+     label1:
+        $z0 = virtualinvoke $r6.<java.io.File: boolean delete()>();
+
+        if $z0 == 0 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.i.a: java.util.ArrayList a(com.seattleclouds.modules.i.a)>($r2);
+
+        $i0 = $r0.<com.seattleclouds.modules.i.d: int a>;
+
+        virtualinvoke $r3.<java.util.ArrayList: java.lang.Object remove(int)>($i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.i.a: com.seattleclouds.modules.i.p e(com.seattleclouds.modules.i.a)>($r2);
+
+        virtualinvoke $r9.<com.seattleclouds.modules.i.p: void notifyDataSetChanged()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        staticinvoke <com.seattleclouds.modules.i.a: void f(com.seattleclouds.modules.i.a)>($r2);
+
+        return;
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        $r10 = virtualinvoke $r2.<com.seattleclouds.modules.i.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int imagelist_error_deleting_photo>;
+
+        $r11 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r10, $i0, 0);
+
+        virtualinvoke $r11.<android.widget.Toast: void show()>();
+
+        return;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.i.a: java.util.ArrayList a(com.seattleclouds.modules.i.a)>($r2);
+
+        $i0 = $r0.<com.seattleclouds.modules.i.d: int a>;
+
+        virtualinvoke $r3.<java.util.ArrayList: java.lang.Object remove(int)>($i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.i.a: com.seattleclouds.modules.i.p e(com.seattleclouds.modules.i.a)>($r2);
+
+        virtualinvoke $r9.<com.seattleclouds.modules.i.p: void notifyDataSetChanged()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.i.d: com.seattleclouds.modules.i.a b>;
+
+        staticinvoke <com.seattleclouds.modules.i.a: void f(com.seattleclouds.modules.i.a)>($r2);
+
+        return;
+    }
+}

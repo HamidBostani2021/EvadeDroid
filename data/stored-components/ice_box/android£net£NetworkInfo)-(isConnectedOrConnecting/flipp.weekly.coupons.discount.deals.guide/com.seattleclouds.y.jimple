@@ -1,0 +1,46 @@
+class com.seattleclouds.y extends java.lang.Object implements java.lang.Runnable
+{
+    final boolean a;
+    final com.seattleclouds.x b;
+
+    void <init>(com.seattleclouds.x, boolean)
+    {
+        com.seattleclouds.y $r0;
+        com.seattleclouds.x $r1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.y;
+
+        $r1 := @parameter0: com.seattleclouds.x;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.seattleclouds.y: com.seattleclouds.x b> = $r1;
+
+        $r0.<com.seattleclouds.y: boolean a> = $z0;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.y $r0;
+        boolean $z0;
+        com.seattleclouds.x $r1;
+        com.seattleclouds.AppStarterActivity $r2;
+
+        $r0 := @this: com.seattleclouds.y;
+
+        $r1 = $r0.<com.seattleclouds.y: com.seattleclouds.x b>;
+
+        $r2 = $r1.<com.seattleclouds.x: com.seattleclouds.AppStarterActivity a>;
+
+        $z0 = $r0.<com.seattleclouds.y: boolean a>;
+
+        staticinvoke <com.seattleclouds.AppStarterActivity: void b(com.seattleclouds.AppStarterActivity,boolean)>($r2, $z0);
+
+        return;
+    }
+}

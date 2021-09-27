@@ -1,0 +1,76 @@
+final class com.facebook.login.af extends java.lang.Object implements android.os.Parcelable$Creator
+{
+
+    void <init>()
+    {
+        com.facebook.login.af $r0;
+
+        $r0 := @this: com.facebook.login.af;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public com.facebook.login.WebViewLoginMethodHandler a(android.os.Parcel)
+    {
+        com.facebook.login.af $r0;
+        android.os.Parcel $r1;
+        com.facebook.login.WebViewLoginMethodHandler $r2;
+
+        $r0 := @this: com.facebook.login.af;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $r2 = new com.facebook.login.WebViewLoginMethodHandler;
+
+        specialinvoke $r2.<com.facebook.login.WebViewLoginMethodHandler: void <init>(android.os.Parcel)>($r1);
+
+        return $r2;
+    }
+
+    public com.facebook.login.WebViewLoginMethodHandler[] a(int)
+    {
+        com.facebook.login.af $r0;
+        int $i0;
+        com.facebook.login.WebViewLoginMethodHandler[] $r1;
+
+        $r0 := @this: com.facebook.login.af;
+
+        $i0 := @parameter0: int;
+
+        $r1 = newarray (com.facebook.login.WebViewLoginMethodHandler)[$i0];
+
+        return $r1;
+    }
+
+    public java.lang.Object createFromParcel(android.os.Parcel)
+    {
+        com.facebook.login.af $r0;
+        android.os.Parcel $r1;
+        com.facebook.login.WebViewLoginMethodHandler $r2;
+
+        $r0 := @this: com.facebook.login.af;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $r2 = virtualinvoke $r0.<com.facebook.login.af: com.facebook.login.WebViewLoginMethodHandler a(android.os.Parcel)>($r1);
+
+        return $r2;
+    }
+
+    public java.lang.Object[] newArray(int)
+    {
+        com.facebook.login.af $r0;
+        int $i0;
+        com.facebook.login.WebViewLoginMethodHandler[] $r1;
+
+        $r0 := @this: com.facebook.login.af;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<com.facebook.login.af: com.facebook.login.WebViewLoginMethodHandler[] a(int)>($i0);
+
+        return $r1;
+    }
+}

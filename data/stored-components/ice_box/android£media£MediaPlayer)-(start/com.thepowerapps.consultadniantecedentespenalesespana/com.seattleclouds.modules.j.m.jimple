@@ -1,0 +1,43 @@
+class com.seattleclouds.modules.j.m extends java.lang.Object implements android.media.MediaPlayer$OnSeekCompleteListener
+{
+    final com.seattleclouds.modules.j.c a;
+
+    void <init>(com.seattleclouds.modules.j.c)
+    {
+        com.seattleclouds.modules.j.m $r0;
+        com.seattleclouds.modules.j.c $r1;
+
+        $r0 := @this: com.seattleclouds.modules.j.m;
+
+        $r1 := @parameter0: com.seattleclouds.modules.j.c;
+
+        $r0.<com.seattleclouds.modules.j.m: com.seattleclouds.modules.j.c a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onSeekComplete(android.media.MediaPlayer)
+    {
+        com.seattleclouds.modules.j.m $r0;
+        android.media.MediaPlayer $r1;
+        com.seattleclouds.modules.j.c $r2;
+        android.widget.SeekBar $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.j.m;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $r2 = $r0.<com.seattleclouds.modules.j.m: com.seattleclouds.modules.j.c a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.j.c: android.widget.SeekBar h(com.seattleclouds.modules.j.c)>($r2);
+
+        $i0 = virtualinvoke $r1.<android.media.MediaPlayer: int getCurrentPosition()>();
+
+        virtualinvoke $r3.<android.widget.SeekBar: void setProgress(int)>($i0);
+
+        return;
+    }
+}

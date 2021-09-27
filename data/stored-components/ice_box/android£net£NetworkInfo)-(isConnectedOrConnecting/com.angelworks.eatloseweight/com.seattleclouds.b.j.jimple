@@ -1,0 +1,69 @@
+class com.seattleclouds.b.j extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final org.json.JSONArray b;
+    final com.seattleclouds.b.h c;
+
+    void <init>(com.seattleclouds.b.h, java.lang.String, org.json.JSONArray)
+    {
+        com.seattleclouds.b.j $r0;
+        com.seattleclouds.b.h $r1;
+        java.lang.String $r2;
+        org.json.JSONArray $r3;
+
+        $r0 := @this: com.seattleclouds.b.j;
+
+        $r1 := @parameter0: com.seattleclouds.b.h;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: org.json.JSONArray;
+
+        $r0.<com.seattleclouds.b.j: com.seattleclouds.b.h c> = $r1;
+
+        $r0.<com.seattleclouds.b.j: java.lang.String a> = $r2;
+
+        $r0.<com.seattleclouds.b.j: org.json.JSONArray b> = $r3;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.b.j $r0;
+        java.lang.String $r1;
+        java.io.File $r2;
+        org.json.JSONArray $r3;
+        java.lang.Throwable $r4;
+
+        $r0 := @this: com.seattleclouds.b.j;
+
+        $r2 = new java.io.File;
+
+        $r1 = <com.seattleclouds.b.h: java.lang.String a>;
+
+     label1:
+        specialinvoke $r2.<java.io.File: void <init>(java.lang.String)>($r1);
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.b.j: org.json.JSONArray b>;
+
+     label3:
+        $r1 = virtualinvoke $r3.<org.json.JSONArray: java.lang.String toString()>();
+
+        staticinvoke <org.apache.commons.io.b: void a(java.io.File,java.lang.String,java.lang.String)>($r2, $r1, "UTF-8");
+
+     label4:
+        return;
+
+     label5:
+        $r4 := @caughtexception;
+
+        return;
+
+        catch java.io.IOException from label1 to label2 with label5;
+        catch java.io.IOException from label3 to label4 with label5;
+    }
+}

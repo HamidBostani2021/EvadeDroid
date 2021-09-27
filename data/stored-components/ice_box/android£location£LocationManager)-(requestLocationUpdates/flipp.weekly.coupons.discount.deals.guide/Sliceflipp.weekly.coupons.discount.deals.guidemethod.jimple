@@ -1,0 +1,16 @@
+public class Sliceflipp.weekly.coupons.discount.deals.guidemethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Sliceflipp.weekly.coupons.discount.deals.guidemethod this;
+        com.seattleclouds.modules.savephoto.SavePhotoActivity $r0;
+        com.seattleclouds.location.j $r2;
+
+        this := @this: Sliceflipp.weekly.coupons.discount.deals.guidemethod;
+
+        $r2 = new com.seattleclouds.location.j;
+
+        return;
+    }
+}

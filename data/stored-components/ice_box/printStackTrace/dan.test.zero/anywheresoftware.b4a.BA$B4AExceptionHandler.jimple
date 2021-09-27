@@ -1,0 +1,58 @@
+public class anywheresoftware.b4a.BA$B4AExceptionHandler extends java.lang.Object implements java.lang.Thread$UncaughtExceptionHandler
+{
+    public final java.lang.Thread$UncaughtExceptionHandler original;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.BA$B4AExceptionHandler $r0;
+        java.lang.Thread$UncaughtExceptionHandler $r1;
+
+        $r0 := @this: anywheresoftware.b4a.BA$B4AExceptionHandler;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = staticinvoke <java.lang.Thread: java.lang.Thread$UncaughtExceptionHandler getDefaultUncaughtExceptionHandler()>();
+
+        $r0.<anywheresoftware.b4a.BA$B4AExceptionHandler: java.lang.Thread$UncaughtExceptionHandler original> = $r1;
+
+        return;
+    }
+
+    public void uncaughtException(java.lang.Thread, java.lang.Throwable)
+    {
+        anywheresoftware.b4a.BA$B4AExceptionHandler $r0;
+        java.lang.Thread $r1;
+        java.lang.Throwable $r2, $r5;
+        anywheresoftware.b4a.BA$IBridgeLog $r3;
+        java.lang.Thread$UncaughtExceptionHandler $r4;
+
+        $r0 := @this: anywheresoftware.b4a.BA$B4AExceptionHandler;
+
+        $r1 := @parameter0: java.lang.Thread;
+
+        $r2 := @parameter1: java.lang.Throwable;
+
+        staticinvoke <anywheresoftware.b4a.BA: java.lang.String printException(java.lang.Throwable,boolean)>($r2, 1);
+
+        $r3 = <anywheresoftware.b4a.BA: anywheresoftware.b4a.BA$IBridgeLog bridgeLog>;
+
+        if $r3 == null goto label2;
+
+     label1:
+        staticinvoke <java.lang.Thread: void sleep(long)>(200L);
+
+     label2:
+        $r4 = $r0.<anywheresoftware.b4a.BA$B4AExceptionHandler: java.lang.Thread$UncaughtExceptionHandler original>;
+
+        interfaceinvoke $r4.<java.lang.Thread$UncaughtExceptionHandler: void uncaughtException(java.lang.Thread,java.lang.Throwable)>($r1, $r2);
+
+        return;
+
+     label3:
+        $r5 := @caughtexception;
+
+        goto label2;
+
+        catch java.lang.InterruptedException from label1 to label2 with label3;
+    }
+}

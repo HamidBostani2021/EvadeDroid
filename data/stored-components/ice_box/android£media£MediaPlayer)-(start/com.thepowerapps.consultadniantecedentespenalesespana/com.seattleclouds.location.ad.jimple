@@ -1,0 +1,137 @@
+class com.seattleclouds.location.ad extends java.lang.Object implements com.seattleclouds.util.bi
+{
+    final com.seattleclouds.location.w a;
+
+    void <init>(com.seattleclouds.location.w)
+    {
+        com.seattleclouds.location.ad $r0;
+        com.seattleclouds.location.w $r1;
+
+        $r0 := @this: com.seattleclouds.location.ad;
+
+        $r1 := @parameter0: com.seattleclouds.location.w;
+
+        $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(java.lang.Object)
+    {
+        com.seattleclouds.location.ad $r0;
+        java.lang.Object[] $r1;
+        java.lang.Object $r2;
+        android.location.Location $r3, $r6;
+        com.seattleclouds.location.w $r4, $r7;
+        android.support.v4.app.ac $r5;
+        int $i0, $i1;
+        boolean $z0;
+        android.support.v7.widget.SearchView $r8;
+        java.lang.CharSequence $r9;
+        java.lang.String $r10;
+        android.widget.Toast $r11;
+        com.google.android.gms.maps.model.LatLng $r12;
+        com.google.android.gms.maps.c $r13;
+        com.google.android.gms.maps.model.CameraPosition $r14;
+        float $f0;
+        byte $b2;
+        com.google.android.gms.maps.a $r15;
+
+        $r0 := @this: com.seattleclouds.location.ad;
+
+        $r2 := @parameter0: java.lang.Object;
+
+        $r3 = (android.location.Location) $r2;
+
+        if $r3 != null goto label1;
+
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.location.w: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int warning>;
+
+        $i1 = <com.seattleclouds.l: int location_detector_error_searching_location>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r5, $i0, $i1);
+
+        return;
+
+     label1:
+        $r6 = <com.seattleclouds.location.a: android.location.Location a>;
+
+        $z0 = virtualinvoke $r3.<java.lang.Object: boolean equals(java.lang.Object)>($r6);
+
+        if $z0 == 0 goto label2;
+
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.location.w: android.support.v4.app.ac n()>();
+
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $i0 = <com.seattleclouds.l: int location_detector_location_not_found>;
+
+        $r1 = newarray (java.lang.Object)[1];
+
+        $r7 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $r8 = staticinvoke <com.seattleclouds.location.w: android.support.v7.widget.SearchView f(com.seattleclouds.location.w)>($r7);
+
+        $r9 = virtualinvoke $r8.<android.support.v7.widget.SearchView: java.lang.CharSequence getQuery()>();
+
+        $r1[0] = $r9;
+
+        $r10 = virtualinvoke $r4.<com.seattleclouds.location.w: java.lang.String a(int,java.lang.Object[])>($i0, $r1);
+
+        $r11 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r5, $r10, 1);
+
+        virtualinvoke $r11.<android.widget.Toast: void show()>();
+
+        return;
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $r12 = staticinvoke <com.seattleclouds.location.w: com.google.android.gms.maps.model.LatLng a(com.seattleclouds.location.w,android.location.Location)>($r4, $r3);
+
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        virtualinvoke $r4.<com.seattleclouds.location.w: void a(com.google.android.gms.maps.model.LatLng)>($r12);
+
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $r13 = staticinvoke <com.seattleclouds.location.w: com.google.android.gms.maps.c a(com.seattleclouds.location.w)>($r4);
+
+        $r14 = virtualinvoke $r13.<com.google.android.gms.maps.c: com.google.android.gms.maps.model.CameraPosition a()>();
+
+        $f0 = $r14.<com.google.android.gms.maps.model.CameraPosition: float b>;
+
+        $b2 = $f0 cmpg 6.0F;
+
+        if $b2 >= 0 goto label3;
+
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $r13 = staticinvoke <com.seattleclouds.location.w: com.google.android.gms.maps.c a(com.seattleclouds.location.w)>($r4);
+
+        $r15 = staticinvoke <com.google.android.gms.maps.b: com.google.android.gms.maps.a a(com.google.android.gms.maps.model.LatLng,float)>($r12, 6.0F);
+
+        virtualinvoke $r13.<com.google.android.gms.maps.c: void b(com.google.android.gms.maps.a)>($r15);
+
+        return;
+
+     label3:
+        $r4 = $r0.<com.seattleclouds.location.ad: com.seattleclouds.location.w a>;
+
+        $r13 = staticinvoke <com.seattleclouds.location.w: com.google.android.gms.maps.c a(com.seattleclouds.location.w)>($r4);
+
+        $r15 = staticinvoke <com.google.android.gms.maps.b: com.google.android.gms.maps.a a(com.google.android.gms.maps.model.LatLng)>($r12);
+
+        virtualinvoke $r13.<com.google.android.gms.maps.c: void b(com.google.android.gms.maps.a)>($r15);
+
+        return;
+    }
+}

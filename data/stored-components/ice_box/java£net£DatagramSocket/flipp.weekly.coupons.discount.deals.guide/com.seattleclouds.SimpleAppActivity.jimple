@@ -1,0 +1,92 @@
+public class com.seattleclouds.SimpleAppActivity extends com.seattleclouds.z
+{
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.SimpleAppActivity $r0;
+
+        $r0 := @this: com.seattleclouds.SimpleAppActivity;
+
+        specialinvoke $r0.<com.seattleclouds.z: void <init>()>();
+
+        return;
+    }
+
+    protected void l()
+    {
+        com.seattleclouds.SimpleAppActivity $r0;
+        com.seattleclouds.FragmentInfo $r1;
+        android.support.v4.app.aj $r2;
+        android.support.v4.app.ax $r3;
+        java.lang.String $r4;
+        android.os.Bundle $r5;
+        android.support.v4.app.Fragment $r6;
+
+        $r0 := @this: com.seattleclouds.SimpleAppActivity;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.z: com.seattleclouds.FragmentInfo a(java.lang.String)>("index.html");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.SimpleAppActivity: android.support.v4.app.aj f()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.FragmentInfo: java.lang.String a()>();
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+        $r6 = staticinvoke <android.support.v4.app.Fragment: android.support.v4.app.Fragment a(android.content.Context,java.lang.String,android.os.Bundle)>($r0, $r4, $r5);
+
+        virtualinvoke $r3.<android.support.v4.app.ax: android.support.v4.app.ax a(int,android.support.v4.app.Fragment,java.lang.String)>(16908290, $r6, "rootFragment");
+
+        virtualinvoke $r3.<android.support.v4.app.ax: int b()>();
+
+        staticinvoke <com.seattleclouds.App: void c(android.content.Context,java.lang.String)>($r0, "index.html");
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.SimpleAppActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.SimpleAppActivity;
+
+        $r0 = this.<com.seattleclouds.SimpleAppActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.SimpleAppActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.SimpleAppActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.SimpleAppActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.SimpleAppActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.SimpleAppActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.SimpleAppActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

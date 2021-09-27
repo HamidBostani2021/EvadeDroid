@@ -1,0 +1,238 @@
+class com.seattleclouds.modules.pollpage.b extends android.webkit.WebViewClient
+{
+    final com.seattleclouds.modules.pollpage.a a;
+
+    void <init>(com.seattleclouds.modules.pollpage.a)
+    {
+        com.seattleclouds.modules.pollpage.b $r0;
+        com.seattleclouds.modules.pollpage.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.pollpage.a;
+
+        $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void <init>()>();
+
+        return;
+    }
+
+    public void onPageFinished(android.webkit.WebView, java.lang.String)
+    {
+        com.seattleclouds.modules.pollpage.b $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        com.seattleclouds.modules.pollpage.a $r3;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.b;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onPageFinished(android.webkit.WebView,java.lang.String)>($r1, $r2);
+
+        staticinvoke <com.seattleclouds.util.be: void a(android.webkit.WebView,java.lang.String)>($r1, "(function() {var checkboxes = document.querySelectorAll(\'.cbox\');for(var x=0; x<checkboxes.length; x++) {checkboxes[x].addEventListener(\'click\', refreshSavedCheckedAnswer);}function refreshSavedCheckedAnswer() {HTMLOUT.refreshSavedCheckedAnswer()}var container = document.querySelector(\'#votecontainer\');if (container) {var object = {answers: {},allowNextPageWithoutSubmit: container.getAttribute(\'allownextpagewithoutsubmit\') || \'false\',allowResultsPreview: container.getAttribute(\'allowresultspreview\') || \'true\'};var nextPage = container.getAttribute(\'data-nextpage\');if (nextPage) {object.nextPage = nextPage;}var answers = container.querySelectorAll(\'label\');if (answers) {for (var i = 0; i < answers.length; i++) {var answerLabel = answers[i];var nextAnswerPage = answerLabel.getAttribute(\'data-nextpage\');if (nextAnswerPage) {object.answers[answerLabel.innerHTML] = {nextPage: nextAnswerPage};}}}HTMLOUT.returnPollJson(JSON.stringify(object))}else{HTMLOUT.returnPollJson(\'{}\');}})()");
+
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+        staticinvoke <com.seattleclouds.modules.pollpage.a: void a(com.seattleclouds.modules.pollpage.a)>($r3);
+
+        return;
+    }
+
+    public boolean shouldOverrideUrlLoading(android.webkit.WebView, java.lang.String)
+    {
+        com.seattleclouds.modules.pollpage.b $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2, $r9;
+        com.seattleclouds.modules.pollpage.a $r3;
+        java.lang.Boolean $r4;
+        boolean $z0;
+        java.net.URI $r5, r11;
+        org.json.JSONObject $r6;
+        java.lang.Throwable $r7;
+        java.lang.StringBuilder $r8, r12;
+        org.json.JSONException $r10;
+        java.net.URISyntaxException r13;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.b;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.Boolean b(com.seattleclouds.modules.pollpage.a)>($r3);
+
+        $z0 = virtualinvoke $r4.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label01;
+
+        return 1;
+
+     label01:
+        r11 = new java.net.URI;
+
+        $r5 = r11;
+
+     label02:
+        specialinvoke r11.<java.net.URI: void <init>(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r5.<java.net.URI: java.lang.String getScheme()>();
+
+     label03:
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label04:
+        $r6 = staticinvoke <com.seattleclouds.modules.pollpage.a: org.json.JSONObject c(com.seattleclouds.modules.pollpage.a)>($r3);
+
+     label05:
+        if $r6 == null goto label27;
+
+        if $r2 == null goto label27;
+
+     label06:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("vote");
+
+     label07:
+        if $z0 == 0 goto label27;
+
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label08:
+        $r2 = virtualinvoke $r5.<java.net.URI: java.lang.String getSchemeSpecificPart()>();
+
+        staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String a(com.seattleclouds.modules.pollpage.a,java.lang.String)>($r3, $r2);
+
+     label09:
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label10:
+        $r6 = staticinvoke <com.seattleclouds.modules.pollpage.a: org.json.JSONObject c(com.seattleclouds.modules.pollpage.a)>($r3);
+
+        $r6 = virtualinvoke $r6.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>("answers");
+
+     label11:
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label12:
+        $r2 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String d(com.seattleclouds.modules.pollpage.a)>($r3);
+
+        $z0 = virtualinvoke $r6.<org.json.JSONObject: boolean has(java.lang.String)>($r2);
+
+     label13:
+        if $z0 == 0 goto label22;
+
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label14:
+        $r2 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String d(com.seattleclouds.modules.pollpage.a)>($r3);
+
+        $r6 = virtualinvoke $r6.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>($r2);
+
+     label15:
+        if $r6 == null goto label23;
+
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label16:
+        $r2 = virtualinvoke $r6.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("nextPage");
+
+        staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String b(com.seattleclouds.modules.pollpage.a,java.lang.String)>($r3, $r2);
+
+     label17:
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label18:
+        staticinvoke <com.seattleclouds.modules.pollpage.a: void e(com.seattleclouds.modules.pollpage.a)>($r3);
+
+     label19:
+        return 1;
+
+     label20:
+        $r7 := @caughtexception;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String ao()>();
+
+        r12 = new java.lang.StringBuilder;
+
+        specialinvoke r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR Unable create URI: ");
+
+        r13 = (java.net.URISyntaxException) $r7;
+
+        $r9 = virtualinvoke r13.<java.net.URISyntaxException: java.lang.String getMessage()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r9, $r7);
+
+     label21:
+        return 0;
+
+     label22:
+        $r6 = null;
+
+        goto label15;
+
+     label23:
+        $r3 = $r0.<com.seattleclouds.modules.pollpage.b: com.seattleclouds.modules.pollpage.a a>;
+
+     label24:
+        staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String b(com.seattleclouds.modules.pollpage.a,java.lang.String)>($r3, "");
+
+     label25:
+        goto label17;
+
+     label26:
+        $r10 := @caughtexception;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String ao()>();
+
+        r12 = new java.lang.StringBuilder;
+
+        specialinvoke r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR Unable read from JSON: ");
+
+        $r9 = virtualinvoke $r10.<org.json.JSONException: java.lang.String getMessage()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r9, $r10);
+
+        goto label21;
+
+     label27:
+        return 0;
+
+        catch java.net.URISyntaxException from label02 to label03 with label20;
+        catch java.net.URISyntaxException from label04 to label05 with label20;
+        catch java.net.URISyntaxException from label06 to label07 with label20;
+        catch java.net.URISyntaxException from label08 to label09 with label20;
+        catch java.net.URISyntaxException from label10 to label11 with label20;
+        catch java.net.URISyntaxException from label12 to label13 with label20;
+        catch java.net.URISyntaxException from label14 to label15 with label20;
+        catch java.net.URISyntaxException from label16 to label17 with label20;
+        catch java.net.URISyntaxException from label18 to label19 with label20;
+        catch org.json.JSONException from label02 to label03 with label26;
+        catch org.json.JSONException from label04 to label05 with label26;
+        catch org.json.JSONException from label06 to label07 with label26;
+        catch org.json.JSONException from label08 to label09 with label26;
+        catch org.json.JSONException from label10 to label11 with label26;
+        catch org.json.JSONException from label12 to label13 with label26;
+        catch org.json.JSONException from label14 to label15 with label26;
+        catch org.json.JSONException from label16 to label17 with label26;
+        catch org.json.JSONException from label18 to label19 with label26;
+        catch java.net.URISyntaxException from label24 to label25 with label20;
+        catch org.json.JSONException from label24 to label25 with label26;
+    }
+}

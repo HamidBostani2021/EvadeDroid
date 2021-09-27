@@ -1,0 +1,7 @@
+public interface  com.seattleclouds.util.al extends java.lang.Object
+{
+
+    public abstract void a(com.seattleclouds.util.ak);
+
+    public abstract void a(com.seattleclouds.util.am);
+}

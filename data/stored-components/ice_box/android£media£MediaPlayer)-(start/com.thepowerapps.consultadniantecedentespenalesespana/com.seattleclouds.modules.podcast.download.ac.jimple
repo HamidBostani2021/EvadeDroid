@@ -1,0 +1,71 @@
+class com.seattleclouds.modules.podcast.download.ac extends java.lang.Object implements android.content.ServiceConnection
+{
+    final com.seattleclouds.modules.podcast.download.t a;
+
+    void <init>(com.seattleclouds.modules.podcast.download.t)
+    {
+        com.seattleclouds.modules.podcast.download.ac $r0;
+        com.seattleclouds.modules.podcast.download.t $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.ac;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.t;
+
+        $r0.<com.seattleclouds.modules.podcast.download.ac: com.seattleclouds.modules.podcast.download.t a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onServiceConnected(android.content.ComponentName, android.os.IBinder)
+    {
+        com.seattleclouds.modules.podcast.download.ac $r0;
+        android.content.ComponentName $r1;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r2;
+        android.os.IBinder $r3;
+        com.seattleclouds.modules.podcast.download.t $r4;
+        com.seattleclouds.modules.podcast.download.f $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.ac;
+
+        $r1 := @parameter0: android.content.ComponentName;
+
+        $r3 := @parameter1: android.os.IBinder;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.ac: com.seattleclouds.modules.podcast.download.t a>;
+
+        $r5 = (com.seattleclouds.modules.podcast.download.f) $r3;
+
+        $r2 = virtualinvoke $r5.<com.seattleclouds.modules.podcast.download.f: com.seattleclouds.modules.podcast.download.PodcastDownloadService a()>();
+
+        staticinvoke <com.seattleclouds.modules.podcast.download.t: com.seattleclouds.modules.podcast.download.PodcastDownloadService a(com.seattleclouds.modules.podcast.download.t,com.seattleclouds.modules.podcast.download.PodcastDownloadService)>($r4, $r2);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.ac: com.seattleclouds.modules.podcast.download.t a>;
+
+        staticinvoke <com.seattleclouds.modules.podcast.download.t: void k(com.seattleclouds.modules.podcast.download.t)>($r4);
+
+        return;
+    }
+
+    public void onServiceDisconnected(android.content.ComponentName)
+    {
+        com.seattleclouds.modules.podcast.download.ac $r0;
+        android.content.ComponentName $r1;
+        com.seattleclouds.modules.podcast.download.t $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.ac;
+
+        $r1 := @parameter0: android.content.ComponentName;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.ac: com.seattleclouds.modules.podcast.download.t a>;
+
+        staticinvoke <com.seattleclouds.modules.podcast.download.t: com.seattleclouds.modules.podcast.download.PodcastDownloadService a(com.seattleclouds.modules.podcast.download.t,com.seattleclouds.modules.podcast.download.PodcastDownloadService)>($r2, null);
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.ac: com.seattleclouds.modules.podcast.download.t a>;
+
+        staticinvoke <com.seattleclouds.modules.podcast.download.t: void k(com.seattleclouds.modules.podcast.download.t)>($r2);
+
+        return;
+    }
+}

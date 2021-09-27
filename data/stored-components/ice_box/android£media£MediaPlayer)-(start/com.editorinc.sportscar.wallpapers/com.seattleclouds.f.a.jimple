@@ -1,0 +1,326 @@
+public class com.seattleclouds.f.a extends android.webkit.WebViewClient
+{
+    private static java.lang.String a;
+    private static boolean b;
+    private static boolean c;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.f.a: java.lang.String a> = "SCAuthWebViewClient";
+
+        <com.seattleclouds.f.a: boolean b> = 0;
+
+        <com.seattleclouds.f.a: boolean c> = 0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.f.a $r0;
+
+        $r0 := @this: com.seattleclouds.f.a;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void <init>()>();
+
+        return;
+    }
+
+    static boolean a(boolean)
+    {
+        boolean $z0;
+
+        $z0 := @parameter0: boolean;
+
+        <com.seattleclouds.f.a: boolean b> = 0;
+
+        return 0;
+    }
+
+    public void onReceivedHttpAuthRequest(android.webkit.WebView, android.webkit.HttpAuthHandler, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.f.a $r0;
+        android.webkit.WebView $r1;
+        android.webkit.HttpAuthHandler $r2;
+        java.lang.String $r3, $r4, $r7, $r9;
+        com.seattleclouds.c.b $r5;
+        android.support.v7.a.u $r6, $r26;
+        int $i0;
+        boolean $z0;
+        java.lang.StringBuilder $r8;
+        android.net.Uri $r10;
+        com.seattleclouds.ce $r11;
+        java.util.ArrayList $r12;
+        android.content.Context $r13;
+        com.seattleclouds.c.a $r14, $r15, $r16;
+        java.lang.Object $r17;
+        android.view.LayoutInflater $r18;
+        android.view.View $r19, $r20;
+        android.widget.TextView $r21;
+        android.content.res.Resources $r22;
+        java.lang.Object[] $r23;
+        android.widget.EditText $r24, $r25;
+        com.seattleclouds.f.i $r27;
+        com.seattleclouds.f.h $r28;
+        android.support.v7.a.t $r29;
+
+        $r0 := @this: com.seattleclouds.f.a;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: android.webkit.HttpAuthHandler;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $z0 = <com.seattleclouds.f.a: boolean c>;
+
+        if $z0 == 0 goto label1;
+
+        $r7 = <com.seattleclouds.f.a: java.lang.String a>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("onReceivedHttpAuthRequest for host ");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" with realm ");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r7, $r9);
+
+     label1:
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r7 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r10 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r7);
+
+        $r11 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r11.<com.seattleclouds.ce: boolean P()>();
+
+        if $z0 == 0 goto label2;
+
+        $r11 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r12 = virtualinvoke $r11.<com.seattleclouds.ce: java.util.ArrayList Q()>();
+
+        $z0 = virtualinvoke $r12.<java.util.ArrayList: boolean contains(java.lang.Object)>($r3);
+
+        if $z0 != 0 goto label4;
+
+     label2:
+        $z0 = <com.seattleclouds.f.a: boolean c>;
+
+        if $z0 == 0 goto label3;
+
+        $r7 = <com.seattleclouds.f.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r7, "Skip auth...");
+
+        $r7 = <com.seattleclouds.f.a: java.lang.String a>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("AuthAllowed: ");
+
+        $r11 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r11.<com.seattleclouds.ce: boolean P()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>($z0);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r7, $r9);
+
+        $r7 = <com.seattleclouds.f.a: java.lang.String a>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Allowed hosts: ");
+
+        $r11 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r12 = virtualinvoke $r11.<com.seattleclouds.ce: java.util.ArrayList Q()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r12);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r7, $r9);
+
+     label3:
+        specialinvoke $r0.<android.webkit.WebViewClient: void onReceivedHttpAuthRequest(android.webkit.WebView,android.webkit.HttpAuthHandler,java.lang.String,java.lang.String)>($r1, $r2, $r3, $r4);
+
+        return;
+
+     label4:
+        $r13 = virtualinvoke $r1.<android.webkit.WebView: android.content.Context getContext()>();
+
+        $r9 = virtualinvoke $r10.<android.net.Uri: java.lang.String getHost()>();
+
+        $r5 = new com.seattleclouds.c.b;
+
+        specialinvoke $r5.<com.seattleclouds.c.b: void <init>()>();
+
+        $r14 = virtualinvoke $r5.<com.seattleclouds.c.b: com.seattleclouds.c.a a(java.lang.String)>($r7);
+
+        $r15 = $r14;
+
+        $r16 = virtualinvoke $r5.<com.seattleclouds.c.b: com.seattleclouds.c.a b()>();
+
+        if $r14 != null goto label5;
+
+        $z0 = virtualinvoke $r16.<com.seattleclouds.c.a: boolean d()>();
+
+        if $z0 == 0 goto label5;
+
+        $r15 = $r16;
+
+     label5:
+        if $r15 != null goto label7;
+
+        $z0 = <com.seattleclouds.f.a: boolean b>;
+
+        if $z0 != 0 goto label6;
+
+        $r6 = new android.support.v7.a.u;
+
+        specialinvoke $r6.<android.support.v7.a.u: void <init>(android.content.Context)>($r13);
+
+        $r17 = virtualinvoke $r13.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("layout_inflater");
+
+        $r18 = (android.view.LayoutInflater) $r17;
+
+        $i0 = <com.seattleclouds.j: int dialog_webview_auth>;
+
+        $r19 = virtualinvoke $r18.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r1, 0);
+
+        $i0 = <com.seattleclouds.h: int web_login_dialog_hostname>;
+
+        $r20 = virtualinvoke $r19.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r21 = (android.widget.TextView) $r20;
+
+        $r22 = virtualinvoke $r13.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.l: int web_view_auth_dialog_host>;
+
+        $r7 = virtualinvoke $r22.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r23 = newarray (java.lang.Object)[1];
+
+        $r23[0] = $r9;
+
+        $r7 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r7, $r23);
+
+        virtualinvoke $r21.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        $i0 = <com.seattleclouds.h: int username>;
+
+        $r20 = virtualinvoke $r19.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r24 = (android.widget.EditText) $r20;
+
+        $i0 = <com.seattleclouds.h: int password>;
+
+        $r20 = virtualinvoke $r19.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r25 = (android.widget.EditText) $r20;
+
+        $r7 = virtualinvoke $r16.<com.seattleclouds.c.a: java.lang.String b()>();
+
+        virtualinvoke $r24.<android.widget.EditText: void setText(java.lang.CharSequence)>($r7);
+
+        $r26 = virtualinvoke $r6.<android.support.v7.a.u: android.support.v7.a.u b(android.view.View)>($r19);
+
+        $i0 = <com.seattleclouds.l: int web_view_auth_dialog_login>;
+
+        $r27 = new com.seattleclouds.f.i;
+
+        specialinvoke $r27.<com.seattleclouds.f.i: void <init>(com.seattleclouds.f.a,android.view.View,com.seattleclouds.c.b,java.lang.String,android.widget.EditText,android.widget.EditText,android.webkit.WebView)>($r0, $r19, $r5, $r9, $r24, $r25, $r1);
+
+        $r26 = virtualinvoke $r26.<android.support.v7.a.u: android.support.v7.a.u a(int,android.content.DialogInterface$OnClickListener)>($i0, $r27);
+
+        $i0 = <com.seattleclouds.l: int cancel>;
+
+        $r28 = new com.seattleclouds.f.h;
+
+        specialinvoke $r28.<com.seattleclouds.f.h: void <init>(com.seattleclouds.f.a)>($r0);
+
+        virtualinvoke $r26.<android.support.v7.a.u: android.support.v7.a.u b(int,android.content.DialogInterface$OnClickListener)>($i0, $r28);
+
+        $r29 = virtualinvoke $r6.<android.support.v7.a.u: android.support.v7.a.t b()>();
+
+        virtualinvoke $r29.<android.support.v7.a.t: void show()>();
+
+        <com.seattleclouds.f.a: boolean b> = 1;
+
+     label6:
+        specialinvoke $r0.<android.webkit.WebViewClient: void onReceivedHttpAuthRequest(android.webkit.WebView,android.webkit.HttpAuthHandler,java.lang.String,java.lang.String)>($r1, $r2, $r3, $r4);
+
+        return;
+
+     label7:
+        $r3 = virtualinvoke $r15.<com.seattleclouds.c.a: java.lang.String b()>();
+
+        $r4 = virtualinvoke $r15.<com.seattleclouds.c.a: java.lang.String a()>();
+
+        virtualinvoke $r2.<android.webkit.HttpAuthHandler: void proceed(java.lang.String,java.lang.String)>($r3, $r4);
+
+        $z0 = virtualinvoke $r2.<android.webkit.HttpAuthHandler: boolean useHttpAuthUsernamePassword()>();
+
+        if $z0 != 0 goto label9;
+
+        $z0 = <com.seattleclouds.f.a: boolean c>;
+
+        if $z0 == 0 goto label8;
+
+        $r3 = <com.seattleclouds.f.a: java.lang.String a>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("removeBasicAuthCredentialsForUrl username ");
+
+        $r4 = virtualinvoke $r15.<com.seattleclouds.c.a: java.lang.String b()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", password ");
+
+        $r4 = virtualinvoke $r15.<com.seattleclouds.c.a: java.lang.String a()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r4 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r3, $r4);
+
+     label8:
+        virtualinvoke $r5.<com.seattleclouds.c.b: boolean b(java.lang.String)>($r7);
+
+     label9:
+        return;
+    }
+}

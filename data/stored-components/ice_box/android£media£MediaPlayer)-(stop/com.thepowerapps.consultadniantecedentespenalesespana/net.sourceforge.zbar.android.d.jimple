@@ -1,0 +1,95 @@
+class net.sourceforge.zbar.android.d extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final net.sourceforge.zbar.android.ZBarScanner a;
+
+    void <init>(net.sourceforge.zbar.android.ZBarScanner)
+    {
+        net.sourceforge.zbar.android.d $r0;
+        net.sourceforge.zbar.android.ZBarScanner $r1;
+
+        $r0 := @this: net.sourceforge.zbar.android.d;
+
+        $r1 := @parameter0: net.sourceforge.zbar.android.ZBarScanner;
+
+        $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        net.sourceforge.zbar.android.d $r0;
+        android.view.View $r1;
+        net.sourceforge.zbar.android.ZBarScanner $r2;
+        boolean $z0;
+        android.widget.TextView $r3;
+        int $i0;
+        android.hardware.Camera $r4;
+        android.hardware.Camera$PreviewCallback $r5;
+        android.hardware.Camera$AutoFocusCallback $r6;
+        android.widget.Button $r7;
+
+        $r0 := @this: net.sourceforge.zbar.android.d;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $z0 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean a(net.sourceforge.zbar.android.ZBarScanner)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean a(net.sourceforge.zbar.android.ZBarScanner,boolean)>($r2, 0);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r3 = $r2.<net.sourceforge.zbar.android.ZBarScanner: android.widget.TextView m>;
+
+        $i0 = <com.seattleclouds.l: int barcode_scanner_scanning>;
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(int)>($i0);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r4 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera b(net.sourceforge.zbar.android.ZBarScanner)>($r2);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r5 = $r2.<net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera$PreviewCallback q>;
+
+        virtualinvoke $r4.<android.hardware.Camera: void setPreviewCallback(android.hardware.Camera$PreviewCallback)>($r5);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r4 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera b(net.sourceforge.zbar.android.ZBarScanner)>($r2);
+
+        virtualinvoke $r4.<android.hardware.Camera: void startPreview()>();
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        staticinvoke <net.sourceforge.zbar.android.ZBarScanner: boolean b(net.sourceforge.zbar.android.ZBarScanner,boolean)>($r2, 1);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r4 = staticinvoke <net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera b(net.sourceforge.zbar.android.ZBarScanner)>($r2);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r6 = $r2.<net.sourceforge.zbar.android.ZBarScanner: android.hardware.Camera$AutoFocusCallback r>;
+
+        virtualinvoke $r4.<android.hardware.Camera: void autoFocus(android.hardware.Camera$AutoFocusCallback)>($r6);
+
+        $r2 = $r0.<net.sourceforge.zbar.android.d: net.sourceforge.zbar.android.ZBarScanner a>;
+
+        $r7 = $r2.<net.sourceforge.zbar.android.ZBarScanner: android.widget.Button n>;
+
+        virtualinvoke $r7.<android.widget.Button: void setEnabled(boolean)>(0);
+
+     label1:
+        return;
+    }
+}

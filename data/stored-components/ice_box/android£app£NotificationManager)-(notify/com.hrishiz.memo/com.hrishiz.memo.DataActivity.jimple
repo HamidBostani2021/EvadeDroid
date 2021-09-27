@@ -1,0 +1,2344 @@
+public class com.hrishiz.memo.DataActivity extends android.app.Activity
+{
+    private java.util.ArrayList Fonttype;
+    private android.content.Intent Pas;
+    private java.util.ArrayList Textsize;
+    private java.util.Calendar Time;
+    private java.util.TimerTask Typ;
+    private java.util.Timer _timer;
+    private java.lang.String a;
+    private android.app.AlertDialog$Builder abo;
+    private android.widget.LinearLayout actbar;
+    private java.lang.String b;
+    private android.widget.Switch bolds;
+    private android.widget.LinearLayout cart;
+    private android.widget.LinearLayout cart3;
+    private android.widget.LinearLayout contents;
+    private android.widget.Button copy;
+    private android.widget.Button cut;
+    private android.widget.Button dark;
+    private android.content.SharedPreferences data;
+    private android.widget.TextView datetext;
+    private android.widget.EditText edittext1;
+    private android.widget.HorizontalScrollView hscroll1;
+    private android.content.Intent in;
+    private android.app.AlertDialog$Builder inf;
+    private android.widget.Button info;
+    private android.widget.Switch italics;
+    private android.widget.TextView lastup;
+    private android.widget.LinearLayout layout;
+    private android.widget.Button light;
+    private android.widget.LinearLayout linear10;
+    private android.widget.LinearLayout linear11;
+    private android.widget.LinearLayout linear12;
+    private android.widget.LinearLayout linear13;
+    private android.widget.LinearLayout linear3;
+    private android.widget.LinearLayout linear6;
+    private android.widget.LinearLayout linear7;
+    private android.widget.ImageView logo;
+    private android.widget.ImageView memo;
+    private android.widget.TextView memo2;
+    private android.app.AlertDialog$Builder mydialogcomp;
+    private android.content.SharedPreferences noty;
+    private double num2;
+    private android.content.SharedPreferences p;
+    private android.widget.ImageView paste;
+    private java.lang.String sav;
+    private android.widget.Button save;
+    private android.widget.ImageView sendtext;
+    private java.util.ArrayList spin2;
+    private java.util.ArrayList spin_data;
+    private android.widget.Spinner spinner1;
+    private android.widget.Button st;
+    private java.lang.String text2;
+    private android.widget.Spinner textsize;
+    private android.widget.Spinner texttype;
+    private android.widget.TextView timetext;
+    private android.widget.TextView title;
+    private android.content.SharedPreferences v;
+    private android.os.Vibrator vib;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.util.Calendar $r1;
+        java.util.ArrayList $r2;
+        java.util.Timer $r3;
+        android.content.Intent $r4;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.lang.String a> = "";
+
+        $r0.<com.hrishiz.memo.DataActivity: java.lang.String b> = "";
+
+        $r0.<com.hrishiz.memo.DataActivity: java.lang.String sav> = "";
+
+        $r0.<com.hrishiz.memo.DataActivity: double num2> = 0.0;
+
+        $r0.<com.hrishiz.memo.DataActivity: java.lang.String text2> = "";
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList spin_data> = $r2;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList spin2> = $r2;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize> = $r2;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Fonttype> = $r2;
+
+        $r3 = new java.util.Timer;
+
+        specialinvoke $r3.<java.util.Timer: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.Timer _timer> = $r3;
+
+        $r4 = new android.content.Intent;
+
+        specialinvoke $r4.<android.content.Intent: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: android.content.Intent in> = $r4;
+
+        $r1 = staticinvoke <java.util.Calendar: java.util.Calendar getInstance()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.Calendar Time> = $r1;
+
+        $r4 = new android.content.Intent;
+
+        specialinvoke $r4.<android.content.Intent: void <init>()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: android.content.Intent Pas> = $r4;
+
+        return;
+    }
+
+    private void _typing()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        return;
+    }
+
+    static android.widget.EditText access$0(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.EditText r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1>;
+
+        return r1;
+    }
+
+    static void access$1(com.hrishiz.memo.DataActivity, java.lang.String)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.hrishiz.memo.DataActivity: void showMessage(java.lang.String)>($r1);
+
+        return;
+    }
+
+    static java.util.ArrayList access$10(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Fonttype>;
+
+        return r1;
+    }
+
+    static android.widget.Spinner access$11(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.Spinner r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        return r1;
+    }
+
+    static android.content.Intent access$12(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.Intent r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.Intent in>;
+
+        return r1;
+    }
+
+    static android.widget.LinearLayout access$13(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.LinearLayout r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout cart3>;
+
+        return r1;
+    }
+
+    static android.widget.LinearLayout access$14(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.LinearLayout r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout layout>;
+
+        return r1;
+    }
+
+    static android.widget.LinearLayout access$15(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.LinearLayout r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear3>;
+
+        return r1;
+    }
+
+    static android.widget.TextView access$16(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView lastup>;
+
+        return r1;
+    }
+
+    static android.widget.TextView access$17(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView title>;
+
+        return r1;
+    }
+
+    static android.widget.Spinner access$18(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.Spinner r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner spinner1>;
+
+        return r1;
+    }
+
+    static android.app.AlertDialog$Builder access$19(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.app.AlertDialog$Builder r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder abo>;
+
+        return r1;
+    }
+
+    static android.content.SharedPreferences access$2(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.SharedPreferences r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences noty>;
+
+        return r1;
+    }
+
+    static void access$20(com.hrishiz.memo.DataActivity, java.lang.String)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.hrishiz.memo.DataActivity: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    static java.lang.String access$21(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: java.lang.String a>;
+
+        return r1;
+    }
+
+    static void access$22(com.hrishiz.memo.DataActivity, java.lang.String)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.hrishiz.memo.DataActivity: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    static java.lang.String access$23(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: java.lang.String b>;
+
+        return r1;
+    }
+
+    static android.widget.Switch access$24(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.Switch r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch bolds>;
+
+        return r1;
+    }
+
+    static android.widget.Switch access$25(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.Switch r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch italics>;
+
+        return r1;
+    }
+
+    static android.content.SharedPreferences access$26(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.SharedPreferences r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences v>;
+
+        return r1;
+    }
+
+    static android.os.Vibrator access$27(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.os.Vibrator r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.os.Vibrator vib>;
+
+        return r1;
+    }
+
+    static android.app.AlertDialog$Builder access$28(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.app.AlertDialog$Builder r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder inf>;
+
+        return r1;
+    }
+
+    static android.content.SharedPreferences access$3(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.SharedPreferences r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        return r1;
+    }
+
+    static android.widget.TextView access$4(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        return r1;
+    }
+
+    static java.util.Calendar access$5(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.util.Calendar r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: java.util.Calendar Time>;
+
+        return r1;
+    }
+
+    static android.widget.TextView access$6(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        return r1;
+    }
+
+    static void access$7(com.hrishiz.memo.DataActivity, java.util.Calendar)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.util.Calendar $r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        $r1 := @parameter1: java.util.Calendar;
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.Calendar Time> = $r1;
+
+        return;
+    }
+
+    static java.util.ArrayList access$8(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        return r1;
+    }
+
+    static android.widget.Spinner access$9(com.hrishiz.memo.DataActivity)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.Spinner r1;
+
+        $r0 := @parameter0: com.hrishiz.memo.DataActivity;
+
+        r1 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        return r1;
+    }
+
+    private float getDip(int)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        int $i0;
+        float $f0;
+        android.content.res.Resources $r1;
+        android.util.DisplayMetrics $r2;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $i0 := @parameter0: int;
+
+        $f0 = (float) $i0;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        $f0 = staticinvoke <android.util.TypedValue: float applyDimension(int,float,android.util.DisplayMetrics)>(1, $f0, $r2);
+
+        return $f0;
+    }
+
+    private int getDisplayHeightPixels()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.res.Resources $r1;
+        android.util.DisplayMetrics $r2;
+        int i0;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        i0 = $r2.<android.util.DisplayMetrics: int heightPixels>;
+
+        return i0;
+    }
+
+    private int getDisplayWidthPixels()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.res.Resources $r1;
+        android.util.DisplayMetrics $r2;
+        int i0;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.res.Resources getResources()>();
+
+        $r2 = virtualinvoke $r1.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        i0 = $r2.<android.util.DisplayMetrics: int widthPixels>;
+
+        return i0;
+    }
+
+    private int getRandom(int, int)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        int $i0, $i1;
+        java.util.Random $r1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 = new java.util.Random;
+
+        specialinvoke $r1.<java.util.Random: void <init>()>();
+
+        $i1 = $i1 - $i0;
+
+        $i1 = $i1 + 1;
+
+        $i1 = virtualinvoke $r1.<java.util.Random: int nextInt(int)>($i1);
+
+        $i0 = $i1 + $i0;
+
+        return $i0;
+    }
+
+    private void initialize()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        int $i0;
+        android.view.View $r1;
+        android.widget.LinearLayout $r2;
+        android.widget.ImageView $r3;
+        android.widget.TextView $r4;
+        android.widget.Spinner $r5;
+        android.widget.HorizontalScrollView $r6;
+        android.widget.Button $r7;
+        android.widget.Switch $r8;
+        android.widget.EditText $r9;
+        android.content.SharedPreferences $r10;
+        android.app.AlertDialog$Builder $r11;
+        java.lang.Object $r12;
+        android.os.Vibrator $r13;
+        com.hrishiz.memo.DataActivity$1 $r14;
+        com.hrishiz.memo.DataActivity$2 $r15;
+        com.hrishiz.memo.DataActivity$3 $r16;
+        com.hrishiz.memo.DataActivity$4 $r17;
+        com.hrishiz.memo.DataActivity$5 $r18;
+        com.hrishiz.memo.DataActivity$6 $r19;
+        com.hrishiz.memo.DataActivity$7 $r20;
+        com.hrishiz.memo.DataActivity$8 $r21;
+        com.hrishiz.memo.DataActivity$9 $r22;
+        com.hrishiz.memo.DataActivity$10 $r23;
+        com.hrishiz.memo.DataActivity$11 $r24;
+        com.hrishiz.memo.DataActivity$12 $r25;
+        com.hrishiz.memo.DataActivity$13 $r26;
+        com.hrishiz.memo.DataActivity$14 $r27;
+        com.hrishiz.memo.DataActivity$15 $r28;
+        com.hrishiz.memo.DataActivity$16 $r29;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $i0 = <com.hrishiz.memo.R$id: int cart>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout cart> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int cart3>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout cart3> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int layout>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout layout> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear3>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear3> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int actbar>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout actbar> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int logo>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.ImageView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.ImageView logo> = $r3;
+
+        $i0 = <com.hrishiz.memo.R$id: int memo2>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView memo2> = $r4;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear10>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear10> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear11>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear11> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear7>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear7> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int spinner1>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Spinner) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner spinner1> = $r5;
+
+        $i0 = <com.hrishiz.memo.R$id: int memo>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.ImageView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.ImageView memo> = $r3;
+
+        $i0 = <com.hrishiz.memo.R$id: int hscroll1>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.HorizontalScrollView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.HorizontalScrollView hscroll1> = $r6;
+
+        $i0 = <com.hrishiz.memo.R$id: int title>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView title> = $r4;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear12>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear12> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int contents>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout contents> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear13>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear13> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int copy>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Button copy> = $r7;
+
+        $i0 = <com.hrishiz.memo.R$id: int cut>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Button cut> = $r7;
+
+        $i0 = <com.hrishiz.memo.R$id: int sendtext>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.ImageView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.ImageView sendtext> = $r3;
+
+        $i0 = <com.hrishiz.memo.R$id: int paste>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.ImageView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.ImageView paste> = $r3;
+
+        $i0 = <com.hrishiz.memo.R$id: int bolds>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.Switch) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch bolds> = $r8;
+
+        $i0 = <com.hrishiz.memo.R$id: int italics>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.Switch) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch italics> = $r8;
+
+        $i0 = <com.hrishiz.memo.R$id: int light>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Button light> = $r7;
+
+        $i0 = <com.hrishiz.memo.R$id: int dark>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Button dark> = $r7;
+
+        $i0 = <com.hrishiz.memo.R$id: int textsize>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Spinner) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize> = $r5;
+
+        $i0 = <com.hrishiz.memo.R$id: int texttype>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Spinner) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype> = $r5;
+
+        $i0 = <com.hrishiz.memo.R$id: int st>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Button st> = $r7;
+
+        $i0 = <com.hrishiz.memo.R$id: int info>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Button info> = $r7;
+
+        $i0 = <com.hrishiz.memo.R$id: int edittext1>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.EditText) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1> = $r9;
+
+        $i0 = <com.hrishiz.memo.R$id: int save>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.Button save> = $r7;
+
+        $i0 = <com.hrishiz.memo.R$id: int linear6>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r2 = (android.widget.LinearLayout) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear6> = $r2;
+
+        $i0 = <com.hrishiz.memo.R$id: int lastup>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView lastup> = $r4;
+
+        $i0 = <com.hrishiz.memo.R$id: int timetext>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext> = $r4;
+
+        $i0 = <com.hrishiz.memo.R$id: int datetext>;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r1;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext> = $r4;
+
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("data", 0);
+
+        $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data> = $r10;
+
+        $r11 = new android.app.AlertDialog$Builder;
+
+        specialinvoke $r11.<android.app.AlertDialog$Builder: void <init>(android.content.Context)>($r0);
+
+        $r0.<com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder abo> = $r11;
+
+        $r11 = new android.app.AlertDialog$Builder;
+
+        specialinvoke $r11.<android.app.AlertDialog$Builder: void <init>(android.content.Context)>($r0);
+
+        $r0.<com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder mydialogcomp> = $r11;
+
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("noty", 0);
+
+        $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences noty> = $r10;
+
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("p", 0);
+
+        $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences p> = $r10;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: java.lang.Object getSystemService(java.lang.String)>("vibrator");
+
+        $r13 = (android.os.Vibrator) $r12;
+
+        $r0.<com.hrishiz.memo.DataActivity: android.os.Vibrator vib> = $r13;
+
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("v", 0);
+
+        $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences v> = $r10;
+
+        $r11 = new android.app.AlertDialog$Builder;
+
+        specialinvoke $r11.<android.app.AlertDialog$Builder: void <init>(android.content.Context)>($r0);
+
+        $r0.<com.hrishiz.memo.DataActivity: android.app.AlertDialog$Builder inf> = $r11;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Button copy>;
+
+        $r14 = new com.hrishiz.memo.DataActivity$1;
+
+        specialinvoke $r14.<com.hrishiz.memo.DataActivity$1: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Button save>;
+
+        $r15 = new com.hrishiz.memo.DataActivity$2;
+
+        specialinvoke $r15.<com.hrishiz.memo.DataActivity$2: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r15);
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Button cut>;
+
+        $r16 = new com.hrishiz.memo.DataActivity$3;
+
+        specialinvoke $r16.<com.hrishiz.memo.DataActivity$3: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r16);
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Button light>;
+
+        $r17 = new com.hrishiz.memo.DataActivity$4;
+
+        specialinvoke $r17.<com.hrishiz.memo.DataActivity$4: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r17);
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Button dark>;
+
+        $r18 = new com.hrishiz.memo.DataActivity$5;
+
+        specialinvoke $r18.<com.hrishiz.memo.DataActivity$5: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r18);
+
+        $r5 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner spinner1>;
+
+        $r19 = new com.hrishiz.memo.DataActivity$6;
+
+        specialinvoke $r19.<com.hrishiz.memo.DataActivity$6: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.Spinner: void setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener)>($r19);
+
+        $r5 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        $r20 = new com.hrishiz.memo.DataActivity$7;
+
+        specialinvoke $r20.<com.hrishiz.memo.DataActivity$7: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.Spinner: void setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener)>($r20);
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity: android.widget.ImageView sendtext>;
+
+        $r21 = new com.hrishiz.memo.DataActivity$8;
+
+        specialinvoke $r21.<com.hrishiz.memo.DataActivity$8: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r3.<android.widget.ImageView: void setOnClickListener(android.view.View$OnClickListener)>($r21);
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity: android.widget.ImageView paste>;
+
+        $r22 = new com.hrishiz.memo.DataActivity$9;
+
+        specialinvoke $r22.<com.hrishiz.memo.DataActivity$9: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r3.<android.widget.ImageView: void setOnClickListener(android.view.View$OnClickListener)>($r22);
+
+        $r5 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        $r23 = new com.hrishiz.memo.DataActivity$10;
+
+        specialinvoke $r23.<com.hrishiz.memo.DataActivity$10: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r5.<android.widget.Spinner: void setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener)>($r23);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch bolds>;
+
+        $r24 = new com.hrishiz.memo.DataActivity$11;
+
+        specialinvoke $r24.<com.hrishiz.memo.DataActivity$11: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r8.<android.widget.Switch: void setOnClickListener(android.view.View$OnClickListener)>($r24);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch bolds>;
+
+        $r25 = new com.hrishiz.memo.DataActivity$12;
+
+        specialinvoke $r25.<com.hrishiz.memo.DataActivity$12: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r8.<android.widget.Switch: void setOnCheckedChangeListener(android.widget.CompoundButton$OnCheckedChangeListener)>($r25);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch italics>;
+
+        $r26 = new com.hrishiz.memo.DataActivity$13;
+
+        specialinvoke $r26.<com.hrishiz.memo.DataActivity$13: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r8.<android.widget.Switch: void setOnClickListener(android.view.View$OnClickListener)>($r26);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch italics>;
+
+        $r27 = new com.hrishiz.memo.DataActivity$14;
+
+        specialinvoke $r27.<com.hrishiz.memo.DataActivity$14: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r8.<android.widget.Switch: void setOnCheckedChangeListener(android.widget.CompoundButton$OnCheckedChangeListener)>($r27);
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Button st>;
+
+        $r28 = new com.hrishiz.memo.DataActivity$15;
+
+        specialinvoke $r28.<com.hrishiz.memo.DataActivity$15: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r28);
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Button info>;
+
+        $r29 = new com.hrishiz.memo.DataActivity$16;
+
+        specialinvoke $r29.<com.hrishiz.memo.DataActivity$16: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r29);
+
+        return;
+    }
+
+    private void initializeLogic()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.Context $r1;
+        java.lang.Object $r2;
+        android.app.NotificationManager $r3;
+        android.content.SharedPreferences $r4;
+        android.content.SharedPreferences$Editor $r5;
+        android.widget.TextView $r6;
+        android.view.Window $r7;
+        android.widget.LinearLayout $r8;
+        java.util.ArrayList $r9;
+        android.widget.Spinner $r10;
+        android.widget.ArrayAdapter $r11;
+        android.content.Intent $r12;
+        java.lang.String $r13;
+        boolean $z0;
+        android.widget.EditText $r14;
+        android.graphics.Typeface $r15;
+        android.widget.Switch $r16;
+        com.hrishiz.memo.DataActivity$17 $r17;
+        java.util.Timer $r18;
+        java.util.TimerTask $r19;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        $r2 = virtualinvoke $r1.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("notification");
+
+        $r3 = (android.app.NotificationManager) $r2;
+
+        virtualinvoke $r3.<android.app.NotificationManager: void cancel(int)>(888);
+
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences noty>;
+
+        $r5 = interfaceinvoke $r4.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r5 = interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("screen", "2");
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView memo2>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setShadowLayer(float,float,float,int)>(3.0F, 1.0F, 1.0F, -16777216);
+
+        $r7 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.view.Window getWindow()>();
+
+        virtualinvoke $r7.<android.view.Window: void clearFlags(int)>(67108864);
+
+        virtualinvoke $r7.<android.view.Window: void addFlags(int)>(-2147483648);
+
+        virtualinvoke $r7.<android.view.Window: void setStatusBarColor(int)>(-14273992);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout actbar>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setElevation(float)>(10.0F);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout cart>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setElevation(float)>(15.0F);
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Fonttype>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("SansSerif");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Fonttype>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("Serif");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Fonttype>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("Monospace");
+
+        $r10 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        $r11 = new android.widget.ArrayAdapter;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getBaseContext()>();
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Fonttype>;
+
+        specialinvoke $r11.<android.widget.ArrayAdapter: void <init>(android.content.Context,int,java.util.List)>($r1, 17367049, $r9);
+
+        virtualinvoke $r10.<android.widget.Spinner: void setAdapter(android.widget.SpinnerAdapter)>($r11);
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList spin2>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("Select");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList spin2>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("Feedback");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList spin2>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("Rate us");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList spin2>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("About");
+
+        $r10 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner spinner1>;
+
+        $r11 = new android.widget.ArrayAdapter;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getBaseContext()>();
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList spin2>;
+
+        specialinvoke $r11.<android.widget.ArrayAdapter: void <init>(android.content.Context,int,java.util.List)>($r1, 17367049, $r9);
+
+        virtualinvoke $r10.<android.widget.Spinner: void setAdapter(android.widget.SpinnerAdapter)>($r11);
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("6");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("8");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("10");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("12");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("14");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("16");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("18");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("20");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("22");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("24");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("26");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("28");
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        virtualinvoke $r9.<java.util.ArrayList: boolean add(java.lang.Object)>("30");
+
+        $r10 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        $r11 = new android.widget.ArrayAdapter;
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getBaseContext()>();
+
+        $r9 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        specialinvoke $r11.<android.widget.ArrayAdapter: void <init>(android.content.Context,int,java.util.List)>($r1, 17367049, $r9);
+
+        virtualinvoke $r10.<android.widget.Spinner: void setAdapter(android.widget.SpinnerAdapter)>($r11);
+
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r13 = virtualinvoke $r12.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r13 = virtualinvoke $r13.<java.lang.String: java.lang.String concat(java.lang.String)>("t");
+
+        $r13 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r13, "");
+
+        $z0 = virtualinvoke $r13.<java.lang.String: boolean equals(java.lang.Object)>("l");
+
+        if $z0 == 0 goto label1;
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout cart3>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setBackgroundColor(int)>(-6381922);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout layout>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setBackgroundColor(int)>(-6381922);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear3>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setBackgroundColor(int)>(-6381922);
+
+        $r14 = $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1>;
+
+        virtualinvoke $r14.<android.widget.EditText: void setBackgroundColor(int)>(-4342339);
+
+        $r14 = $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1>;
+
+        virtualinvoke $r14.<android.widget.EditText: void setTextColor(int)>(-16777216);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView lastup>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>(-1118482);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>(-2039584);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>(-2039584);
+
+     label1:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r13 = virtualinvoke $r12.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r13 = virtualinvoke $r13.<java.lang.String: java.lang.String concat(java.lang.String)>("t");
+
+        $r13 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r13, "");
+
+        $z0 = virtualinvoke $r13.<java.lang.String: boolean equals(java.lang.Object)>("d");
+
+        if $z0 == 0 goto label2;
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout cart3>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setBackgroundColor(int)>(-13154481);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout layout>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setBackgroundColor(int)>(-13154481);
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.LinearLayout linear3>;
+
+        virtualinvoke $r8.<android.widget.LinearLayout: void setBackgroundColor(int)>(-13154481);
+
+        $r14 = $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1>;
+
+        virtualinvoke $r14.<android.widget.EditText: void setBackgroundColor(int)>(-11243910);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView title>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setBackgroundColor(int)>(-11243910);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView title>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>(-3155748);
+
+        $r14 = $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1>;
+
+        virtualinvoke $r14.<android.widget.EditText: void setTextColor(int)>(-1);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView lastup>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>(-5194043);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>(-7297874);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>(-7297874);
+
+     label2:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r13 = virtualinvoke $r12.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r13 = virtualinvoke $r13.<java.lang.String: java.lang.String concat(java.lang.String)>("time");
+
+        $r13 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r13, "");
+
+        $z0 = virtualinvoke $r13.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z0 == 0 goto label6;
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView lastup>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setVisibility(int)>(8);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setVisibility(int)>(8);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setVisibility(int)>(8);
+
+     label3:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r13 = virtualinvoke $r12.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r13 = virtualinvoke $r13.<java.lang.String: java.lang.String concat(java.lang.String)>("b");
+
+        $r13 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r13, "");
+
+        $z0 = virtualinvoke $r13.<java.lang.String: boolean equals(java.lang.Object)>("y");
+
+        if $z0 == 0 goto label7;
+
+        $r14 = $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1>;
+
+        $r15 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r14.<android.widget.EditText: void setTypeface(android.graphics.Typeface,int)>($r15, 1);
+
+        $r16 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch bolds>;
+
+        virtualinvoke $r16.<android.widget.Switch: void setChecked(boolean)>(1);
+
+     label4:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r13 = virtualinvoke $r12.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r13 = virtualinvoke $r13.<java.lang.String: java.lang.String concat(java.lang.String)>("i");
+
+        $r13 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r13, "");
+
+        $z0 = virtualinvoke $r13.<java.lang.String: boolean equals(java.lang.Object)>("y");
+
+        if $z0 == 0 goto label8;
+
+        $r16 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch italics>;
+
+        virtualinvoke $r16.<android.widget.Switch: void setChecked(boolean)>(1);
+
+     label5:
+        $r17 = new com.hrishiz.memo.DataActivity$17;
+
+        specialinvoke $r17.<com.hrishiz.memo.DataActivity$17: void <init>(com.hrishiz.memo.DataActivity)>($r0);
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.TimerTask Typ> = $r17;
+
+        $r18 = $r0.<com.hrishiz.memo.DataActivity: java.util.Timer _timer>;
+
+        $r19 = $r0.<com.hrishiz.memo.DataActivity: java.util.TimerTask Typ>;
+
+        virtualinvoke $r18.<java.util.Timer: void schedule(java.util.TimerTask,long)>($r19, 500L);
+
+        return;
+
+     label6:
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r13 = virtualinvoke $r12.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r13 = virtualinvoke $r13.<java.lang.String: java.lang.String concat(java.lang.String)>("time");
+
+        $r13 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r13, "");
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r13);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r12 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r13 = virtualinvoke $r12.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r13 = virtualinvoke $r13.<java.lang.String: java.lang.String concat(java.lang.String)>("date");
+
+        $r13 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r13, "");
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r13);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView lastup>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r6 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setVisibility(int)>(0);
+
+        goto label3;
+
+     label7:
+        $r16 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch bolds>;
+
+        virtualinvoke $r16.<android.widget.Switch: void setChecked(boolean)>(0);
+
+        goto label4;
+
+     label8:
+        $r16 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Switch italics>;
+
+        virtualinvoke $r16.<android.widget.Switch: void setChecked(boolean)>(0);
+
+        goto label5;
+    }
+
+    private void showMessage(java.lang.String)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        java.lang.String $r1;
+        android.content.Context $r2;
+        android.widget.Toast $r3;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        $r3 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r2, $r1, 0);
+
+        virtualinvoke $r3.<android.widget.Toast: void show()>();
+
+        return;
+    }
+
+    public java.util.ArrayList getCheckedItemPositionsToArray(android.widget.ListView)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.widget.ListView $r1;
+        java.util.ArrayList $r2;
+        double $d0;
+        android.util.SparseBooleanArray $r3;
+        int $i0, $i1;
+        boolean $z0;
+        java.lang.Double $r4;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $r1 := @parameter0: android.widget.ListView;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r3 = virtualinvoke $r1.<android.widget.ListView: android.util.SparseBooleanArray getCheckedItemPositions()>();
+
+        $i0 = 0;
+
+     label1:
+        $i1 = virtualinvoke $r3.<android.util.SparseBooleanArray: int size()>();
+
+        if $i0 < $i1 goto label2;
+
+        return $r2;
+
+     label2:
+        $z0 = virtualinvoke $r3.<android.util.SparseBooleanArray: boolean valueAt(int)>($i0);
+
+        if $z0 == 0 goto label3;
+
+        $i1 = virtualinvoke $r3.<android.util.SparseBooleanArray: int keyAt(int)>($i0);
+
+        $d0 = (double) $i1;
+
+        $r4 = staticinvoke <java.lang.Double: java.lang.Double valueOf(double)>($d0);
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4);
+
+     label3:
+        $i0 = $i0 + 1;
+
+        goto label1;
+    }
+
+    public void onBackPressed()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.SharedPreferences $r1;
+        android.content.SharedPreferences$Editor $r2;
+        android.content.Intent $r3;
+        java.lang.String $r4, $r7;
+        android.widget.TextView $r5;
+        java.lang.CharSequence $r6;
+        android.widget.EditText $r8;
+        android.text.Editable $r9;
+        android.content.Context $r10;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences noty>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("sph", "y");
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("pa", "");
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r3 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String concat(java.lang.String)>("time");
+
+        $r5 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        $r6 = virtualinvoke $r5.<android.widget.TextView: java.lang.CharSequence getText()>();
+
+        $r7 = interfaceinvoke $r6.<java.lang.CharSequence: java.lang.String toString()>();
+
+        $r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r7);
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r3 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String concat(java.lang.String)>("date");
+
+        $r5 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        $r6 = virtualinvoke $r5.<android.widget.TextView: java.lang.CharSequence getText()>();
+
+        $r7 = interfaceinvoke $r6.<java.lang.CharSequence: java.lang.String toString()>();
+
+        $r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r7);
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r3 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r4 = virtualinvoke $r3.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r8 = $r0.<com.hrishiz.memo.DataActivity: android.widget.EditText edittext1>;
+
+        $r9 = virtualinvoke $r8.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r7 = interfaceinvoke $r9.<android.text.Editable: java.lang.String toString()>();
+
+        $r2 = interfaceinvoke $r2.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r4, $r7);
+
+        interfaceinvoke $r2.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        specialinvoke $r0.<com.hrishiz.memo.DataActivity: void showMessage(java.lang.String)>("Saved");
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity: android.content.Intent in>;
+
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent setClass(android.content.Context,java.lang.Class)>($r10, class "Lcom/hrishiz/memo/MainActivity;");
+
+        $r3 = $r0.<com.hrishiz.memo.DataActivity: android.content.Intent in>;
+
+        virtualinvoke $r0.<com.hrishiz.memo.DataActivity: void startActivity(android.content.Intent)>($r3);
+
+        virtualinvoke $r0.<com.hrishiz.memo.DataActivity: void finish()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.os.Bundle $r1;
+        int $i0;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        $i0 = <com.hrishiz.memo.R$layout: int data>;
+
+        virtualinvoke $r0.<com.hrishiz.memo.DataActivity: void setContentView(int)>($i0);
+
+        specialinvoke $r0.<com.hrishiz.memo.DataActivity: void initialize()>();
+
+        specialinvoke $r0.<com.hrishiz.memo.DataActivity: void initializeLogic()>();
+
+        return;
+    }
+
+    public void onStart()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.Context $r1;
+        java.lang.Object $r2;
+        android.app.NotificationManager $r3;
+        android.content.SharedPreferences $r4;
+        android.content.Intent $r5;
+        java.lang.String $r6;
+        boolean $z0;
+        android.widget.Spinner $r7;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        specialinvoke $r0.<android.app.Activity: void onStart()>();
+
+        $r1 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        $r2 = virtualinvoke $r1.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("notification");
+
+        $r3 = (android.app.NotificationManager) $r2;
+
+        virtualinvoke $r3.<android.app.NotificationManager: void cancel(int)>(888);
+
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("6");
+
+        if $z0 == 0 goto label01;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(0);
+
+     label01:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("8");
+
+        if $z0 == 0 goto label02;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(1);
+
+     label02:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("10");
+
+        if $z0 == 0 goto label03;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(2);
+
+     label03:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("12");
+
+        if $z0 == 0 goto label04;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(3);
+
+     label04:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("14");
+
+        if $z0 == 0 goto label05;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(4);
+
+     label05:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("16");
+
+        if $z0 == 0 goto label06;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(5);
+
+     label06:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("18");
+
+        if $z0 == 0 goto label07;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(6);
+
+     label07:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("20");
+
+        if $z0 == 0 goto label08;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(7);
+
+     label08:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("22");
+
+        if $z0 == 0 goto label09;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(8);
+
+     label09:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("24");
+
+        if $z0 == 0 goto label10;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(9);
+
+     label10:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("26");
+
+        if $z0 == 0 goto label11;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(10);
+
+     label11:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("28");
+
+        if $z0 == 0 goto label12;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(11);
+
+     label12:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("30");
+
+        if $z0 == 0 goto label13;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(12);
+
+     label13:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("texttype");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("0");
+
+        if $z0 == 0 goto label14;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(0);
+
+     label14:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("texttype");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("1");
+
+        if $z0 == 0 goto label15;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(1);
+
+     label15:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("texttype");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("2");
+
+        if $z0 == 0 goto label16;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(2);
+
+     label16:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("texttype");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("3");
+
+        if $z0 == 0 goto label17;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(3);
+
+     label17:
+        $r4 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r5 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r6 = virtualinvoke $r5.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r6 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r6, "");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z0 == 0 goto label18;
+
+        $r7 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        virtualinvoke $r7.<android.widget.Spinner: void setSelection(int)>(3);
+
+     label18:
+        return;
+    }
+
+    public void onStop()
+    {
+        com.hrishiz.memo.DataActivity $r0;
+        android.content.SharedPreferences $r1;
+        java.lang.String $r2, $r18;
+        boolean $z0;
+        android.content.SharedPreferences$Editor $r3;
+        android.widget.RemoteViews $r4;
+        int $i0;
+        android.app.Notification$Builder $r5, $r12;
+        android.app.Notification $r6;
+        java.lang.Object $r7;
+        android.app.NotificationManager $r8;
+        android.content.Intent $r9;
+        android.content.Context $r10;
+        android.app.PendingIntent $r11;
+        android.widget.TextView $r13;
+        java.text.SimpleDateFormat $r14;
+        java.util.Calendar $r15;
+        java.util.Date $r16;
+        java.lang.CharSequence $r17;
+        java.util.ArrayList $r19;
+        android.widget.Spinner $r20;
+        long $l1;
+
+        $r0 := @this: com.hrishiz.memo.DataActivity;
+
+        specialinvoke $r0.<android.app.Activity: void onStop()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences noty>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("screen", "");
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("2");
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences noty>;
+
+        $r3 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("sph", "");
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences noty>;
+
+        $r2 = interfaceinvoke $r1.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("noty", "");
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("yes");
+
+        if $z0 == 0 goto label2;
+
+        $r4 = new android.widget.RemoteViews;
+
+        $r2 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: java.lang.String getPackageName()>();
+
+        $i0 = <com.hrishiz.memo.R$layout: int custom_push>;
+
+        specialinvoke $r4.<android.widget.RemoteViews: void <init>(java.lang.String,int)>($r2, $i0);
+
+        $r5 = new android.app.Notification$Builder;
+
+        specialinvoke $r5.<android.app.Notification$Builder: void <init>(android.content.Context)>($r0);
+
+        $i0 = <com.hrishiz.memo.R$drawable: int ic_adb_white>;
+
+        $r5 = virtualinvoke $r5.<android.app.Notification$Builder: android.app.Notification$Builder setSmallIcon(int)>($i0);
+
+        $r5 = virtualinvoke $r5.<android.app.Notification$Builder: android.app.Notification$Builder setContent(android.widget.RemoteViews)>($r4);
+
+        $r6 = virtualinvoke $r5.<android.app.Notification$Builder: android.app.Notification build()>();
+
+        $i0 = $r6.<android.app.Notification: int flags>;
+
+        $i0 = $i0 | 16;
+
+        $r6.<android.app.Notification: int flags> = $i0;
+
+        $r7 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: java.lang.Object getSystemService(java.lang.String)>("notification");
+
+        $r8 = (android.app.NotificationManager) $r7;
+
+        $r9 = new android.content.Intent;
+
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        specialinvoke $r9.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r10, class "Lcom/hrishiz/memo/MainActivity;");
+
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        $r11 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getActivity(android.content.Context,int,android.content.Intent,int)>($r10, 0, $r9, 268435456);
+
+        $r12 = virtualinvoke $r5.<android.app.Notification$Builder: android.app.Notification$Builder setContentIntent(android.app.PendingIntent)>($r11);
+
+        virtualinvoke $r12.<android.app.Notification$Builder: android.app.Notification$Builder setAutoCancel(boolean)>(1);
+
+        virtualinvoke $r5.<android.app.Notification$Builder: android.app.Notification$Builder setOngoing(boolean)>(1);
+
+        $r6 = virtualinvoke $r5.<android.app.Notification$Builder: android.app.Notification build()>();
+
+        virtualinvoke $r8.<android.app.NotificationManager: void notify(int,android.app.Notification)>(888, $r6);
+
+     label1:
+        $r13 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        $r14 = new java.text.SimpleDateFormat;
+
+        specialinvoke $r14.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("hh:mm");
+
+        $r15 = $r0.<com.hrishiz.memo.DataActivity: java.util.Calendar Time>;
+
+        $r16 = virtualinvoke $r15.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r2 = virtualinvoke $r14.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>($r16);
+
+        virtualinvoke $r13.<android.widget.TextView: void setText(java.lang.CharSequence)>($r2);
+
+        $r13 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        $r14 = new java.text.SimpleDateFormat;
+
+        specialinvoke $r14.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("dd:MM:yyyy");
+
+        $r15 = $r0.<com.hrishiz.memo.DataActivity: java.util.Calendar Time>;
+
+        $r16 = virtualinvoke $r15.<java.util.Calendar: java.util.Date getTime()>();
+
+        $r2 = virtualinvoke $r14.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>($r16);
+
+        virtualinvoke $r13.<android.widget.TextView: void setText(java.lang.CharSequence)>($r2);
+
+        $r15 = staticinvoke <java.util.Calendar: java.util.Calendar getInstance()>();
+
+        $r0.<com.hrishiz.memo.DataActivity: java.util.Calendar Time> = $r15;
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r3 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r9 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r2 = virtualinvoke $r9.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String concat(java.lang.String)>("time");
+
+        $r13 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView timetext>;
+
+        $r17 = virtualinvoke $r13.<android.widget.TextView: java.lang.CharSequence getText()>();
+
+        $r18 = interfaceinvoke $r17.<java.lang.CharSequence: java.lang.String toString()>();
+
+        $r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r18);
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r3 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r9 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r2 = virtualinvoke $r9.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String concat(java.lang.String)>("date");
+
+        $r13 = $r0.<com.hrishiz.memo.DataActivity: android.widget.TextView datetext>;
+
+        $r17 = virtualinvoke $r13.<android.widget.TextView: java.lang.CharSequence getText()>();
+
+        $r18 = interfaceinvoke $r17.<java.lang.CharSequence: java.lang.String toString()>();
+
+        $r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r18);
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r3 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r9 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r2 = virtualinvoke $r9.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String concat(java.lang.String)>("text");
+
+        $r19 = $r0.<com.hrishiz.memo.DataActivity: java.util.ArrayList Textsize>;
+
+        $r20 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner textsize>;
+
+        $i0 = virtualinvoke $r20.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        $r7 = virtualinvoke $r19.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r18 = (java.lang.String) $r7;
+
+        $r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r18);
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r1 = $r0.<com.hrishiz.memo.DataActivity: android.content.SharedPreferences data>;
+
+        $r3 = interfaceinvoke $r1.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r9 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Intent getIntent()>();
+
+        $r2 = virtualinvoke $r9.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("tit");
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String concat(java.lang.String)>("texttype");
+
+        $r20 = $r0.<com.hrishiz.memo.DataActivity: android.widget.Spinner texttype>;
+
+        $i0 = virtualinvoke $r20.<android.widget.Spinner: int getSelectedItemPosition()>();
+
+        $l1 = (long) $i0;
+
+        $r18 = staticinvoke <java.lang.String: java.lang.String valueOf(long)>($l1);
+
+        $r3 = interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r2, $r18);
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        specialinvoke $r0.<com.hrishiz.memo.DataActivity: void showMessage(java.lang.String)>("Saved");
+
+        virtualinvoke $r0.<com.hrishiz.memo.DataActivity: void finish()>();
+
+        return;
+
+     label2:
+        $r10 = virtualinvoke $r0.<com.hrishiz.memo.DataActivity: android.content.Context getApplicationContext()>();
+
+        $r7 = virtualinvoke $r10.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("notification");
+
+        $r8 = (android.app.NotificationManager) $r7;
+
+        virtualinvoke $r8.<android.app.NotificationManager: void cancel(int)>(888);
+
+        goto label1;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.hrishiz.memo.DataActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.hrishiz.memo.DataActivity;
+
+        $r0 = this.<com.hrishiz.memo.DataActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.hrishiz.memo.DataActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.hrishiz.memo.DataActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.hrishiz.memo.DataActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.hrishiz.memo.DataActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.hrishiz.memo.DataActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.hrishiz.memo.DataActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

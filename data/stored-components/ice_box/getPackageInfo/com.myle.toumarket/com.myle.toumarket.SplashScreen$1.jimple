@@ -1,0 +1,206 @@
+class com.myle.toumarket.SplashScreen$1 extends java.lang.Object implements java.lang.Runnable
+{
+    final com.myle.toumarket.SplashScreen this$0;
+
+    void <init>(com.myle.toumarket.SplashScreen)
+    {
+        com.myle.toumarket.SplashScreen$1 $r0;
+        com.myle.toumarket.SplashScreen $r1;
+
+        $r0 := @this: com.myle.toumarket.SplashScreen$1;
+
+        $r1 := @parameter0: com.myle.toumarket.SplashScreen;
+
+        $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.myle.toumarket.SplashScreen$1 $r0;
+        java.lang.String $r1, $r2;
+        java.lang.Throwable $r3;
+        int $i0, $i1;
+        com.myle.toumarket.SplashScreen $r4;
+        boolean $z0;
+        android.content.pm.PackageInfo $r5, $r7;
+        android.content.pm.PackageManager $r6;
+        java.lang.StringBuilder $r8, r14;
+        java.io.File $r9;
+        android.content.SharedPreferences $r10;
+        java.lang.String[] $r11;
+        android.content.Context $r12;
+        android.widget.Toast $r13;
+        android.content.Intent r15;
+        android.content.pm.PackageManager$NameNotFoundException r16;
+
+        $r0 := @this: com.myle.toumarket.SplashScreen$1;
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        $z0 = staticinvoke <com.myle.toumarket.SplashScreen: boolean access$0(com.myle.toumarket.SplashScreen)>($r4);
+
+        if $z0 == 0 goto label11;
+
+        $r5 = null;
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+     label01:
+        $r6 = virtualinvoke $r4.<com.myle.toumarket.SplashScreen: android.content.pm.PackageManager getPackageManager()>();
+
+     label02:
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+     label03:
+        $r1 = virtualinvoke $r4.<com.myle.toumarket.SplashScreen: java.lang.String getPackageName()>();
+
+        $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: android.content.pm.PackageInfo getPackageInfo(java.lang.String,int)>($r1, 0);
+
+     label04:
+        $r5 = $r7;
+
+     label05:
+        $i0 = $r5.<android.content.pm.PackageInfo: int versionCode>;
+
+        $r1 = $r5.<android.content.pm.PackageInfo: java.lang.String versionName>;
+
+        r14 = new java.lang.StringBuilder;
+
+        specialinvoke r14.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = staticinvoke <android.os.Environment: java.io.File getExternalStorageDirectory()>();
+
+        $r8 = virtualinvoke r14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/TOUMARKET/Cache");
+
+        virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        $r10 = virtualinvoke $r4.<com.myle.toumarket.SplashScreen: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("TOUMARKET_PREF", 0);
+
+        $r1 = interfaceinvoke $r10.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("adresse_ip", "192.168.100.100");
+
+        r14 = new java.lang.StringBuilder;
+
+        specialinvoke r14.<java.lang.StringBuilder: void <init>(java.lang.String)>("TOUMARKET_SUCCESS;0;1;http://");
+
+        $r8 = virtualinvoke r14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/toumarket/update/toumarket.apk");
+
+        $r1 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r1 = interfaceinvoke $r10.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("WriteRights", $r1);
+
+        $r11 = virtualinvoke $r1.<java.lang.String: java.lang.String[] split(java.lang.String)>(";");
+
+        $r1 = $r11[1];
+
+        $r2 = $r11[2];
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String trim()>();
+
+        $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r2);
+
+        $r2 = $r11[3];
+
+        $r2 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("1");
+
+        if $z0 == 0 goto label08;
+
+        r15 = new android.content.Intent;
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        specialinvoke r15.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/myle/toumarket/MainActivity;");
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        virtualinvoke $r4.<com.myle.toumarket.SplashScreen: void startActivity(android.content.Intent)>(r15);
+
+     label06:
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        virtualinvoke $r4.<com.myle.toumarket.SplashScreen: void finish()>();
+
+        return;
+
+     label07:
+        $r3 := @caughtexception;
+
+        r16 = (android.content.pm.PackageManager$NameNotFoundException) $r3;
+
+        virtualinvoke r16.<android.content.pm.PackageManager$NameNotFoundException: void printStackTrace()>();
+
+        goto label05;
+
+     label08:
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>("1");
+
+        if $z0 == 0 goto label09;
+
+        r15 = new android.content.Intent;
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        specialinvoke r15.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/myle/toumarket/apk_install;");
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        virtualinvoke $r4.<com.myle.toumarket.SplashScreen: void startActivity(android.content.Intent)>(r15);
+
+        goto label06;
+
+     label09:
+        if $i0 >= $i1 goto label10;
+
+        r15 = new android.content.Intent;
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        specialinvoke r15.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/myle/toumarket/apk_install;");
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        virtualinvoke $r4.<com.myle.toumarket.SplashScreen: void startActivity(android.content.Intent)>(r15);
+
+        goto label06;
+
+     label10:
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        $r12 = virtualinvoke $r4.<com.myle.toumarket.SplashScreen: android.content.Context getApplicationContext()>();
+
+        $r13 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r12, "1VOUS N\'ETES PAS AUTORISE A UTILISER TOUMARKET VEUILLEZ CONTACTER L\'ADMINISTRATEUR !!!!", 1);
+
+        virtualinvoke $r13.<android.widget.Toast: void show()>();
+
+        goto label06;
+
+     label11:
+        r15 = new android.content.Intent;
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        specialinvoke r15.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/myle/toumarket/Setting_account_new;");
+
+        $r4 = $r0.<com.myle.toumarket.SplashScreen$1: com.myle.toumarket.SplashScreen this$0>;
+
+        virtualinvoke $r4.<com.myle.toumarket.SplashScreen: void startActivity(android.content.Intent)>(r15);
+
+        goto label06;
+
+        catch android.content.pm.PackageManager$NameNotFoundException from label01 to label02 with label07;
+        catch android.content.pm.PackageManager$NameNotFoundException from label03 to label04 with label07;
+    }
+}

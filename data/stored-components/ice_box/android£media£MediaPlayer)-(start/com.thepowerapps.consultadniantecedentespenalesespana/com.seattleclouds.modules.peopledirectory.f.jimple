@@ -1,0 +1,74 @@
+class com.seattleclouds.modules.peopledirectory.f extends java.lang.Object implements android.view.View$OnFocusChangeListener
+{
+    final com.seattleclouds.modules.peopledirectory.b a;
+
+    void <init>(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.f $r0;
+        com.seattleclouds.modules.peopledirectory.b $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.f;
+
+        $r1 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.f: com.seattleclouds.modules.peopledirectory.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onFocusChange(android.view.View, boolean)
+    {
+        com.seattleclouds.modules.peopledirectory.f $r0;
+        android.view.View $r1;
+        boolean $z0;
+        com.seattleclouds.modules.peopledirectory.b $r2;
+        android.support.v7.widget.SearchView $r3;
+        java.lang.CharSequence $r4;
+        java.lang.String $r5;
+        int $i0;
+        android.widget.BaseAdapter $r6;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.f;
+
+        $r1 := @parameter0: android.view.View;
+
+        $z0 := @parameter1: boolean;
+
+        if $z0 != 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.f: com.seattleclouds.modules.peopledirectory.b a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView a(com.seattleclouds.modules.peopledirectory.b)>($r2);
+
+        $r4 = virtualinvoke $r3.<android.support.v7.widget.SearchView: java.lang.CharSequence getQuery()>();
+
+        $r5 = interfaceinvoke $r4.<java.lang.CharSequence: java.lang.String toString()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r5.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.f: com.seattleclouds.modules.peopledirectory.b a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView a(com.seattleclouds.modules.peopledirectory.b)>($r2);
+
+        virtualinvoke $r3.<android.support.v7.widget.SearchView: void setIconified(boolean)>(1);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.f: com.seattleclouds.modules.peopledirectory.b a>;
+
+        staticinvoke <com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList a(com.seattleclouds.modules.peopledirectory.b,java.util.ArrayList)>($r2, null);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.f: com.seattleclouds.modules.peopledirectory.b a>;
+
+        $r6 = staticinvoke <com.seattleclouds.modules.peopledirectory.b: android.widget.BaseAdapter c(com.seattleclouds.modules.peopledirectory.b)>($r2);
+
+        virtualinvoke $r6.<android.widget.BaseAdapter: void notifyDataSetChanged()>();
+
+     label1:
+        return;
+    }
+}

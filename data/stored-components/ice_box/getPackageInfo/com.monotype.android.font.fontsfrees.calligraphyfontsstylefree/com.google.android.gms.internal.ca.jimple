@@ -1,0 +1,90 @@
+public final class com.google.android.gms.internal.ca extends java.lang.Object
+{
+
+    public static com.google.android.gms.internal.ct a(android.content.Context, com.google.android.gms.internal.cd, com.google.android.gms.internal.ca$a)
+    {
+        android.content.Context $r0;
+        com.google.android.gms.internal.cd $r1;
+        com.google.android.gms.internal.ca$a $r2;
+        com.google.android.gms.internal.db $r3;
+        boolean $z0;
+        com.google.android.gms.internal.ct $r4;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: com.google.android.gms.internal.cd;
+
+        $r2 := @parameter2: com.google.android.gms.internal.ca$a;
+
+        $r3 = $r1.<com.google.android.gms.internal.cd: com.google.android.gms.internal.db kN>;
+
+        $z0 = $r3.<com.google.android.gms.internal.db: boolean pX>;
+
+        if $z0 == 0 goto label1;
+
+        $r4 = staticinvoke <com.google.android.gms.internal.ca: com.google.android.gms.internal.ct b(android.content.Context,com.google.android.gms.internal.cd,com.google.android.gms.internal.ca$a)>($r0, $r1, $r2);
+
+        return $r4;
+
+     label1:
+        $r4 = staticinvoke <com.google.android.gms.internal.ca: com.google.android.gms.internal.ct c(android.content.Context,com.google.android.gms.internal.cd,com.google.android.gms.internal.ca$a)>($r0, $r1, $r2);
+
+        return $r4;
+    }
+
+    private static com.google.android.gms.internal.ct b(android.content.Context, com.google.android.gms.internal.cd, com.google.android.gms.internal.ca$a)
+    {
+        android.content.Context $r0;
+        com.google.android.gms.internal.cd $r1;
+        com.google.android.gms.internal.ca$a $r2;
+        com.google.android.gms.internal.cb$a $r3;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: com.google.android.gms.internal.cd;
+
+        $r2 := @parameter2: com.google.android.gms.internal.ca$a;
+
+        staticinvoke <com.google.android.gms.internal.da: void s(java.lang.String)>("Fetching ad response from local ad request service.");
+
+        $r3 = new com.google.android.gms.internal.cb$a;
+
+        specialinvoke $r3.<com.google.android.gms.internal.cb$a: void <init>(android.content.Context,com.google.android.gms.internal.cd,com.google.android.gms.internal.ca$a)>($r0, $r1, $r2);
+
+        virtualinvoke $r3.<com.google.android.gms.internal.cb$a: void start()>();
+
+        return $r3;
+    }
+
+    private static com.google.android.gms.internal.ct c(android.content.Context, com.google.android.gms.internal.cd, com.google.android.gms.internal.ca$a)
+    {
+        android.content.Context $r0;
+        com.google.android.gms.internal.cd $r1;
+        com.google.android.gms.internal.ca$a $r2;
+        int $i0;
+        com.google.android.gms.internal.cb$b $r3;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: com.google.android.gms.internal.cd;
+
+        $r2 := @parameter2: com.google.android.gms.internal.ca$a;
+
+        staticinvoke <com.google.android.gms.internal.da: void s(java.lang.String)>("Fetching ad response from remote ad request service.");
+
+        $i0 = staticinvoke <com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>($r0);
+
+        if $i0 == 0 goto label1;
+
+        staticinvoke <com.google.android.gms.internal.da: void w(java.lang.String)>("Failed to connect to remote ad request service.");
+
+        return null;
+
+     label1:
+        $r3 = new com.google.android.gms.internal.cb$b;
+
+        specialinvoke $r3.<com.google.android.gms.internal.cb$b: void <init>(android.content.Context,com.google.android.gms.internal.cd,com.google.android.gms.internal.ca$a)>($r0, $r1, $r2);
+
+        return $r3;
+    }
+}

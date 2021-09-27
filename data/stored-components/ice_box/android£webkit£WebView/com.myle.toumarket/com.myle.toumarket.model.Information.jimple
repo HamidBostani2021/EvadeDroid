@@ -1,0 +1,2908 @@
+public class com.myle.toumarket.model.Information extends java.lang.Object implements java.io.Serializable
+{
+    private static final long serialVersionUID;
+    private java.lang.Double altitude;
+    private java.lang.String ci;
+    private java.lang.String cni_adresse;
+    private java.lang.String cni_adresse2;
+    private java.lang.String cni_date_contrat;
+    private java.lang.String cni_date_deliv;
+    private java.lang.String cni_date_deliv2;
+    private java.lang.String cni_date_expiration;
+    private java.lang.String cni_date_expiration2;
+    private java.lang.String cni_date_naiss;
+    private java.lang.String cni_date_naiss2;
+    private java.lang.String cni_immatriculation;
+    private java.lang.String cni_juridique;
+    private java.lang.String cni_lieu_deliv;
+    private java.lang.String cni_lieu_deliv2;
+    private java.lang.String cni_lieu_naiss;
+    private java.lang.String cni_lieu_naiss2;
+    private java.lang.String cni_mode_idt;
+    private java.lang.String cni_n;
+    private java.lang.String cni_n2;
+    private java.lang.String cni_nom;
+    private java.lang.String cni_nom2;
+    private java.lang.String cni_nom_mere;
+    private java.lang.String cni_nom_mere2;
+    private java.lang.String cni_nom_pere;
+    private java.lang.String cni_nom_pere2;
+    private java.lang.String cni_num_contribuable;
+    private java.lang.String cni_phone;
+    private java.lang.String cni_phone2;
+    private java.lang.String cni_poid;
+    private java.lang.String cni_poid2;
+    private java.lang.String cni_prenom;
+    private java.lang.String cni_prenom2;
+    private java.lang.String cni_profession;
+    private java.lang.String cni_profession2;
+    private java.lang.String cni_raison_sociale;
+    private java.lang.String cni_sexe;
+    private java.lang.String cni_sexe2;
+    private java.lang.String cni_taille;
+    private java.lang.String cni_taille2;
+    private java.lang.String cni_type_action;
+    private java.lang.String cni_type_piece;
+    private java.lang.String cni_type_piece2;
+    private java.lang.String commentaire;
+    private java.lang.String deceleration;
+    private int id;
+    private java.lang.String imei;
+    private java.lang.String imsi;
+    private java.lang.String lac;
+    private java.lang.Double latitute;
+    private java.lang.Double longitute;
+    private java.lang.String matricule;
+    private java.lang.String mcc;
+    private java.lang.String mnc;
+    private java.lang.String msisdn;
+    private java.lang.String networkOperatorName;
+    private java.lang.String nomPhoto;
+    private java.lang.String psc;
+    private java.lang.String rssi;
+    private java.lang.String seuilvitesse;
+    private java.lang.String simOperatorName;
+    private java.lang.String simSerialNumber;
+    private java.lang.String snapid_auth;
+    private float speedloc;
+    private long timeloc;
+    private java.lang.String urgenceFamille;
+
+    public void <init>()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = staticinvoke <java.lang.Double: java.lang.Double valueOf(double)>(0.0);
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute> = $r1;
+
+        $r1 = staticinvoke <java.lang.Double: java.lang.Double valueOf(double)>(0.0);
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute> = $r1;
+
+        $r1 = staticinvoke <java.lang.Double: java.lang.Double valueOf(double)>(0.0);
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double altitude> = $r1;
+
+        return;
+    }
+
+    public void <init>(int, java.lang.String, java.lang.Double, java.lang.Double, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        int $i0;
+        java.lang.String $r1, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r14;
+        java.lang.Double $r2, $r3;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.lang.Double;
+
+        $r3 := @parameter3: java.lang.Double;
+
+        $r4 := @parameter4: java.lang.String;
+
+        $r5 := @parameter5: java.lang.String;
+
+        $r6 := @parameter6: java.lang.String;
+
+        $r7 := @parameter7: java.lang.String;
+
+        $r8 := @parameter8: java.lang.String;
+
+        $r9 := @parameter9: java.lang.String;
+
+        $r10 := @parameter10: java.lang.String;
+
+        $r11 := @parameter11: java.lang.String;
+
+        $r12 := @parameter12: java.lang.String;
+
+        $r13 := @parameter13: java.lang.String;
+
+        $r14 := @parameter14: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.myle.toumarket.model.Information: int id> = $i0;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String nomPhoto> = $r1;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute> = $r2;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute> = $r3;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String commentaire> = $r4;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String lac> = $r5;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String ci> = $r6;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String rssi> = $r7;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String imei> = $r8;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String imsi> = $r9;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String mcc> = $r10;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String mnc> = $r11;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String simOperatorName> = $r12;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String simSerialNumber> = $r13;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String networkOperatorName> = $r14;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.Double, java.lang.Double, java.lang.Double, float, long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r14, $r15, $r16, $r17, $r18, $r19, $r20, $r21, $r22, $r23, $r24, $r25, $r26, $r27, $r28, $r29, $r30, $r31, $r32;
+        java.lang.Double $r2, $r3, $r4;
+        float $f0;
+        long $l0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.Double;
+
+        $r3 := @parameter2: java.lang.Double;
+
+        $r4 := @parameter3: java.lang.Double;
+
+        $f0 := @parameter4: float;
+
+        $l0 := @parameter5: long;
+
+        $r5 := @parameter6: java.lang.String;
+
+        $r6 := @parameter7: java.lang.String;
+
+        $r7 := @parameter8: java.lang.String;
+
+        $r8 := @parameter9: java.lang.String;
+
+        $r9 := @parameter10: java.lang.String;
+
+        $r10 := @parameter11: java.lang.String;
+
+        $r11 := @parameter12: java.lang.String;
+
+        $r12 := @parameter13: java.lang.String;
+
+        $r13 := @parameter14: java.lang.String;
+
+        $r14 := @parameter15: java.lang.String;
+
+        $r15 := @parameter16: java.lang.String;
+
+        $r16 := @parameter17: java.lang.String;
+
+        $r17 := @parameter18: java.lang.String;
+
+        $r18 := @parameter19: java.lang.String;
+
+        $r19 := @parameter20: java.lang.String;
+
+        $r20 := @parameter21: java.lang.String;
+
+        $r21 := @parameter22: java.lang.String;
+
+        $r22 := @parameter23: java.lang.String;
+
+        $r23 := @parameter24: java.lang.String;
+
+        $r24 := @parameter25: java.lang.String;
+
+        $r25 := @parameter26: java.lang.String;
+
+        $r26 := @parameter27: java.lang.String;
+
+        $r27 := @parameter28: java.lang.String;
+
+        $r28 := @parameter29: java.lang.String;
+
+        $r29 := @parameter30: java.lang.String;
+
+        $r30 := @parameter31: java.lang.String;
+
+        $r31 := @parameter32: java.lang.String;
+
+        $r32 := @parameter33: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String nomPhoto> = $r1;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute> = $r2;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute> = $r3;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double altitude> = $r4;
+
+        $r0.<com.myle.toumarket.model.Information: float speedloc> = $f0;
+
+        $r0.<com.myle.toumarket.model.Information: long timeloc> = $l0;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String commentaire> = $r5;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String lac> = $r6;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String ci> = $r7;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String rssi> = $r8;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String imei> = $r9;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String imsi> = $r10;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String mcc> = $r11;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String mnc> = $r12;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String simOperatorName> = $r13;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String simSerialNumber> = $r14;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String networkOperatorName> = $r15;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String matricule> = $r16;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String seuilvitesse> = $r17;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String deceleration> = $r18;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String urgenceFamille> = $r19;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n> = $r20;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv> = $r21;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone> = $r22;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom> = $r23;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom> = $r24;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss> = $r25;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere> = $r26;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere> = $r27;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession> = $r28;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse> = $r29;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille> = $r30;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe> = $r31;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid> = $r32;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 := @parameter8: java.lang.String;
+
+        $r10 := @parameter9: java.lang.String;
+
+        $r11 := @parameter10: java.lang.String;
+
+        $r12 := @parameter11: java.lang.String;
+
+        $r13 := @parameter12: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n> = $r1;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv> = $r2;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone> = $r3;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom> = $r4;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom> = $r5;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss> = $r6;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere> = $r7;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere> = $r8;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession> = $r9;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse> = $r10;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille> = $r11;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe> = $r12;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid> = $r13;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r14;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 := @parameter8: java.lang.String;
+
+        $r10 := @parameter9: java.lang.String;
+
+        $r11 := @parameter10: java.lang.String;
+
+        $r12 := @parameter11: java.lang.String;
+
+        $r13 := @parameter12: java.lang.String;
+
+        $r14 := @parameter13: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n> = $r1;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv> = $r2;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone> = $r3;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom> = $r4;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom> = $r5;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss> = $r6;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere> = $r7;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere> = $r8;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession> = $r9;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse> = $r10;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille> = $r11;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe> = $r12;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid> = $r13;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece> = $r14;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r14, $r15, $r16, $r17, $r18, $r19, $r20, $r21, $r22, $r23, $r24, $r25, $r26, $r27, $r28, $r29, $r30, $r31, $r32, $r33, $r34, $r35;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 := @parameter8: java.lang.String;
+
+        $r10 := @parameter9: java.lang.String;
+
+        $r11 := @parameter10: java.lang.String;
+
+        $r12 := @parameter11: java.lang.String;
+
+        $r13 := @parameter12: java.lang.String;
+
+        $r14 := @parameter13: java.lang.String;
+
+        $r15 := @parameter14: java.lang.String;
+
+        $r16 := @parameter15: java.lang.String;
+
+        $r17 := @parameter16: java.lang.String;
+
+        $r18 := @parameter17: java.lang.String;
+
+        $r19 := @parameter18: java.lang.String;
+
+        $r20 := @parameter19: java.lang.String;
+
+        $r21 := @parameter20: java.lang.String;
+
+        $r22 := @parameter21: java.lang.String;
+
+        $r23 := @parameter22: java.lang.String;
+
+        $r24 := @parameter23: java.lang.String;
+
+        $r25 := @parameter24: java.lang.String;
+
+        $r26 := @parameter25: java.lang.String;
+
+        $r27 := @parameter26: java.lang.String;
+
+        $r28 := @parameter27: java.lang.String;
+
+        $r29 := @parameter28: java.lang.String;
+
+        $r30 := @parameter29: java.lang.String;
+
+        $r31 := @parameter30: java.lang.String;
+
+        $r32 := @parameter31: java.lang.String;
+
+        $r33 := @parameter32: java.lang.String;
+
+        $r34 := @parameter33: java.lang.String;
+
+        $r35 := @parameter34: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n> = $r1;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv> = $r2;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone> = $r3;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom> = $r4;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom> = $r5;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss> = $r6;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere> = $r7;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere> = $r8;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession> = $r9;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse> = $r10;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille> = $r11;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe> = $r12;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid> = $r13;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece> = $r14;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration> = $r15;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_mode_idt> = $r16;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_raison_sociale> = $r17;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_num_contribuable> = $r18;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_immatriculation> = $r19;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_juridique> = $r20;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n2> = $r21;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv2> = $r22;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone2> = $r23;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom2> = $r24;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom2> = $r25;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss2> = $r26;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere2> = $r27;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere2> = $r28;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession2> = $r29;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse2> = $r30;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille2> = $r31;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe2> = $r32;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid2> = $r33;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece2> = $r34;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration2> = $r35;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r14, $r15, $r16, $r17, $r18, $r19, $r20, $r21, $r22, $r23, $r24, $r25, $r26, $r27, $r28, $r29, $r30, $r31, $r32, $r33, $r34, $r35, $r36, $r37, $r38, $r39, $r40;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 := @parameter8: java.lang.String;
+
+        $r10 := @parameter9: java.lang.String;
+
+        $r11 := @parameter10: java.lang.String;
+
+        $r12 := @parameter11: java.lang.String;
+
+        $r13 := @parameter12: java.lang.String;
+
+        $r14 := @parameter13: java.lang.String;
+
+        $r15 := @parameter14: java.lang.String;
+
+        $r16 := @parameter15: java.lang.String;
+
+        $r17 := @parameter16: java.lang.String;
+
+        $r18 := @parameter17: java.lang.String;
+
+        $r19 := @parameter18: java.lang.String;
+
+        $r20 := @parameter19: java.lang.String;
+
+        $r21 := @parameter20: java.lang.String;
+
+        $r22 := @parameter21: java.lang.String;
+
+        $r23 := @parameter22: java.lang.String;
+
+        $r24 := @parameter23: java.lang.String;
+
+        $r25 := @parameter24: java.lang.String;
+
+        $r26 := @parameter25: java.lang.String;
+
+        $r27 := @parameter26: java.lang.String;
+
+        $r28 := @parameter27: java.lang.String;
+
+        $r29 := @parameter28: java.lang.String;
+
+        $r30 := @parameter29: java.lang.String;
+
+        $r31 := @parameter30: java.lang.String;
+
+        $r32 := @parameter31: java.lang.String;
+
+        $r33 := @parameter32: java.lang.String;
+
+        $r34 := @parameter33: java.lang.String;
+
+        $r35 := @parameter34: java.lang.String;
+
+        $r36 := @parameter35: java.lang.String;
+
+        $r37 := @parameter36: java.lang.String;
+
+        $r38 := @parameter37: java.lang.String;
+
+        $r39 := @parameter38: java.lang.String;
+
+        $r40 := @parameter39: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n> = $r1;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv> = $r2;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone> = $r3;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom> = $r4;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom> = $r5;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss> = $r6;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere> = $r7;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere> = $r8;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession> = $r9;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse> = $r10;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille> = $r11;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe> = $r12;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid> = $r13;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece> = $r14;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration> = $r15;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_mode_idt> = $r16;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_raison_sociale> = $r17;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_num_contribuable> = $r18;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_immatriculation> = $r19;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_juridique> = $r20;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n2> = $r21;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv2> = $r22;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone2> = $r23;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom2> = $r24;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom2> = $r25;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss2> = $r26;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere2> = $r27;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere2> = $r28;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession2> = $r29;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse2> = $r30;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille2> = $r31;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe2> = $r32;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid2> = $r33;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece2> = $r34;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration2> = $r35;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_action> = $r36;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv> = $r37;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss> = $r38;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv2> = $r39;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss2> = $r40;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r14, $r15, $r16, $r17, $r18, $r19, $r20, $r21, $r22, $r23, $r24, $r25, $r26, $r27, $r28, $r29, $r30, $r31, $r32, $r33, $r34, $r35, $r36, $r37, $r38, $r39, $r40, $r41;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.lang.String;
+
+        $r7 := @parameter6: java.lang.String;
+
+        $r8 := @parameter7: java.lang.String;
+
+        $r9 := @parameter8: java.lang.String;
+
+        $r10 := @parameter9: java.lang.String;
+
+        $r11 := @parameter10: java.lang.String;
+
+        $r12 := @parameter11: java.lang.String;
+
+        $r13 := @parameter12: java.lang.String;
+
+        $r14 := @parameter13: java.lang.String;
+
+        $r15 := @parameter14: java.lang.String;
+
+        $r16 := @parameter15: java.lang.String;
+
+        $r17 := @parameter16: java.lang.String;
+
+        $r18 := @parameter17: java.lang.String;
+
+        $r19 := @parameter18: java.lang.String;
+
+        $r20 := @parameter19: java.lang.String;
+
+        $r21 := @parameter20: java.lang.String;
+
+        $r22 := @parameter21: java.lang.String;
+
+        $r23 := @parameter22: java.lang.String;
+
+        $r24 := @parameter23: java.lang.String;
+
+        $r25 := @parameter24: java.lang.String;
+
+        $r26 := @parameter25: java.lang.String;
+
+        $r27 := @parameter26: java.lang.String;
+
+        $r28 := @parameter27: java.lang.String;
+
+        $r29 := @parameter28: java.lang.String;
+
+        $r30 := @parameter29: java.lang.String;
+
+        $r31 := @parameter30: java.lang.String;
+
+        $r32 := @parameter31: java.lang.String;
+
+        $r33 := @parameter32: java.lang.String;
+
+        $r34 := @parameter33: java.lang.String;
+
+        $r35 := @parameter34: java.lang.String;
+
+        $r36 := @parameter35: java.lang.String;
+
+        $r37 := @parameter36: java.lang.String;
+
+        $r38 := @parameter37: java.lang.String;
+
+        $r39 := @parameter38: java.lang.String;
+
+        $r40 := @parameter39: java.lang.String;
+
+        $r41 := @parameter40: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n> = $r1;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv> = $r2;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone> = $r3;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom> = $r4;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom> = $r5;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss> = $r6;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere> = $r7;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere> = $r8;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession> = $r9;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse> = $r10;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille> = $r11;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe> = $r12;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid> = $r13;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece> = $r14;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration> = $r15;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_mode_idt> = $r16;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_raison_sociale> = $r17;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_num_contribuable> = $r18;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_immatriculation> = $r19;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_juridique> = $r20;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n2> = $r21;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv2> = $r22;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone2> = $r23;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom2> = $r24;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom2> = $r25;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss2> = $r26;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere2> = $r27;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere2> = $r28;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession2> = $r29;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse2> = $r30;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille2> = $r31;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe2> = $r32;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid2> = $r33;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece2> = $r34;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration2> = $r35;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_action> = $r36;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv> = $r37;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss> = $r38;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv2> = $r39;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss2> = $r40;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_contrat> = $r41;
+
+        return;
+    }
+
+    public static long getSerialversionuid()
+    {
+        return 1L;
+    }
+
+    public java.lang.Double getAltitude()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double altitude>;
+
+        return r1;
+    }
+
+    public java.lang.String getAuth()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String snapid_auth>;
+
+        return r1;
+    }
+
+    public java.lang.String getCi()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String ci>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_adresse()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_date_deliv()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_date_naiss()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_n()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_nom()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_nom_mere()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_nom_pere()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_phone()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_poid()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_prenom()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_profession()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_sexe()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_taille()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille>;
+
+        return r1;
+    }
+
+    public java.lang.String getCni_type_piece()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece>;
+
+        return r1;
+    }
+
+    public java.lang.String getCommentaire()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String commentaire>;
+
+        return r1;
+    }
+
+    public java.lang.String getDeceleration()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String deceleration>;
+
+        return r1;
+    }
+
+    public int getId()
+    {
+        com.myle.toumarket.model.Information $r0;
+        int i0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        i0 = $r0.<com.myle.toumarket.model.Information: int id>;
+
+        return i0;
+    }
+
+    public java.lang.String getImei()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String imei>;
+
+        return r1;
+    }
+
+    public java.lang.String getImsi()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String imsi>;
+
+        return r1;
+    }
+
+    public java.lang.String getLac()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String lac>;
+
+        return r1;
+    }
+
+    public java.lang.Double getLatitute()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute>;
+
+        return r1;
+    }
+
+    public java.lang.Double getLongitute()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute>;
+
+        return r1;
+    }
+
+    public java.lang.String getMatricule()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String matricule>;
+
+        return r1;
+    }
+
+    public java.lang.String getMcc()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String mcc>;
+
+        return r1;
+    }
+
+    public java.lang.String getMnc()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String mnc>;
+
+        return r1;
+    }
+
+    public java.lang.String getMsisdn()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String msisdn>;
+
+        return r1;
+    }
+
+    public java.lang.String getNetworkOperatorName()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String networkOperatorName>;
+
+        return r1;
+    }
+
+    public java.lang.String getNomPhoto()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String nomPhoto>;
+
+        return r1;
+    }
+
+    public java.lang.String getPsc()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String psc>;
+
+        return r1;
+    }
+
+    public java.lang.String getRssi()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String rssi>;
+
+        return r1;
+    }
+
+    public java.lang.String getSeuilvitesse()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String seuilvitesse>;
+
+        return r1;
+    }
+
+    public java.lang.String getSimOperatorName()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String simOperatorName>;
+
+        return r1;
+    }
+
+    public java.lang.String getSimSerialNumber()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String simSerialNumber>;
+
+        return r1;
+    }
+
+    public float getSpeedloc()
+    {
+        com.myle.toumarket.model.Information $r0;
+        float f0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        f0 = $r0.<com.myle.toumarket.model.Information: float speedloc>;
+
+        return f0;
+    }
+
+    public long getTimeloc()
+    {
+        com.myle.toumarket.model.Information $r0;
+        long l0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        l0 = $r0.<com.myle.toumarket.model.Information: long timeloc>;
+
+        return l0;
+    }
+
+    public java.lang.String getUrgenceFamille()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String urgenceFamille>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_adresse2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_date_contrat()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_contrat>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_date_deliv2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_date_expiration()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_date_expiration2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_date_naiss2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_immatriculation()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_immatriculation>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_juridique()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_juridique>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_lieu_deliv()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_lieu_deliv2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_lieu_naiss()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_lieu_naiss2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_mode_idt()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_mode_idt>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_n2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_nom2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_nom_mere2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_nom_pere2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_num_contribuable()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_num_contribuable>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_phone2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_poid2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_prenom2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_profession2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_raison_sociale()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_raison_sociale>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_sexe2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_taille2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille2>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_type_action()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_action>;
+
+        return r1;
+    }
+
+    public java.lang.String getcni_type_piece2()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        r1 = $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece2>;
+
+        return r1;
+    }
+
+    public void setAltitude(java.lang.Double)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.Double;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double altitude> = $r1;
+
+        return;
+    }
+
+    public void setAuth(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String snapid_auth> = $r1;
+
+        return;
+    }
+
+    public void setCi(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String ci> = $r1;
+
+        return;
+    }
+
+    public void setCni_adresse(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse> = $r1;
+
+        return;
+    }
+
+    public void setCni_date_deliv(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv> = $r1;
+
+        return;
+    }
+
+    public void setCni_date_naiss(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss> = $r1;
+
+        return;
+    }
+
+    public void setCni_n(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n> = $r1;
+
+        return;
+    }
+
+    public void setCni_nom(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom> = $r1;
+
+        return;
+    }
+
+    public void setCni_nom_mere(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere> = $r1;
+
+        return;
+    }
+
+    public void setCni_nom_pere(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere> = $r1;
+
+        return;
+    }
+
+    public void setCni_phone(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone> = $r1;
+
+        return;
+    }
+
+    public void setCni_poid(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid> = $r1;
+
+        return;
+    }
+
+    public void setCni_prenom(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom> = $r1;
+
+        return;
+    }
+
+    public void setCni_profession(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession> = $r1;
+
+        return;
+    }
+
+    public void setCni_sexe(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe> = $r1;
+
+        return;
+    }
+
+    public void setCni_taille(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille> = $r1;
+
+        return;
+    }
+
+    public void setCni_type_piece(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece> = $r1;
+
+        return;
+    }
+
+    public void setCommentaire(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String commentaire> = $r1;
+
+        return;
+    }
+
+    public void setDeceleration(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String deceleration> = $r1;
+
+        return;
+    }
+
+    public void setId(int)
+    {
+        com.myle.toumarket.model.Information $r0;
+        int $i0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.myle.toumarket.model.Information: int id> = $i0;
+
+        return;
+    }
+
+    public void setImei(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String imei> = $r1;
+
+        return;
+    }
+
+    public void setImsi(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String imsi> = $r1;
+
+        return;
+    }
+
+    public void setLac(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String lac> = $r1;
+
+        return;
+    }
+
+    public void setLatitute(java.lang.Double)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.Double;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute> = $r1;
+
+        return;
+    }
+
+    public void setLongitute(java.lang.Double)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.Double;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute> = $r1;
+
+        return;
+    }
+
+    public void setMatricule(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String matricule> = $r1;
+
+        return;
+    }
+
+    public void setMcc(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String mcc> = $r1;
+
+        return;
+    }
+
+    public void setMnc(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String mnc> = $r1;
+
+        return;
+    }
+
+    public void setMsisdn(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String msisdn> = $r1;
+
+        return;
+    }
+
+    public void setNetworkOperatorName(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String networkOperatorName> = $r1;
+
+        return;
+    }
+
+    public void setNomPhoto(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String nomPhoto> = $r1;
+
+        return;
+    }
+
+    public void setPsc(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String psc> = $r1;
+
+        return;
+    }
+
+    public void setRssi(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String rssi> = $r1;
+
+        return;
+    }
+
+    public void setSeuilvitesse(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String seuilvitesse> = $r1;
+
+        return;
+    }
+
+    public void setSimOperatorName(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String simOperatorName> = $r1;
+
+        return;
+    }
+
+    public void setSimSerialNumber(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String simSerialNumber> = $r1;
+
+        return;
+    }
+
+    public void setSpeedloc(float)
+    {
+        com.myle.toumarket.model.Information $r0;
+        float $f0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $f0 := @parameter0: float;
+
+        $r0.<com.myle.toumarket.model.Information: float speedloc> = $f0;
+
+        return;
+    }
+
+    public void setTimeloc(long)
+    {
+        com.myle.toumarket.model.Information $r0;
+        long $l0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $l0 := @parameter0: long;
+
+        $r0.<com.myle.toumarket.model.Information: long timeloc> = $l0;
+
+        return;
+    }
+
+    public void setUrgenceFamille(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String urgenceFamille> = $r1;
+
+        return;
+    }
+
+    public void setcni_adresse2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_adresse2> = $r1;
+
+        return;
+    }
+
+    public void setcni_date_contrat(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_contrat> = $r1;
+
+        return;
+    }
+
+    public void setcni_date_deliv2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_deliv2> = $r1;
+
+        return;
+    }
+
+    public void setcni_date_expiration(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration> = $r1;
+
+        return;
+    }
+
+    public void setcni_date_expiration2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_expiration2> = $r1;
+
+        return;
+    }
+
+    public void setcni_date_naiss2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_date_naiss2> = $r1;
+
+        return;
+    }
+
+    public void setcni_immatriculation(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_immatriculation> = $r1;
+
+        return;
+    }
+
+    public void setcni_juridique(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_juridique> = $r1;
+
+        return;
+    }
+
+    public void setcni_lieu_deliv(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv> = $r1;
+
+        return;
+    }
+
+    public void setcni_lieu_deliv2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_deliv2> = $r1;
+
+        return;
+    }
+
+    public void setcni_lieu_naiss(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss> = $r1;
+
+        return;
+    }
+
+    public void setcni_lieu_naiss2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_lieu_naiss2> = $r1;
+
+        return;
+    }
+
+    public void setcni_mode_idt(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_mode_idt> = $r1;
+
+        return;
+    }
+
+    public void setcni_n2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_n2> = $r1;
+
+        return;
+    }
+
+    public void setcni_nom2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom2> = $r1;
+
+        return;
+    }
+
+    public void setcni_nom_mere2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_mere2> = $r1;
+
+        return;
+    }
+
+    public void setcni_nom_pere2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_nom_pere2> = $r1;
+
+        return;
+    }
+
+    public void setcni_num_contribuable(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_num_contribuable> = $r1;
+
+        return;
+    }
+
+    public void setcni_phone2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_phone2> = $r1;
+
+        return;
+    }
+
+    public void setcni_poid2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_poid2> = $r1;
+
+        return;
+    }
+
+    public void setcni_prenom2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_prenom2> = $r1;
+
+        return;
+    }
+
+    public void setcni_profession2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_profession2> = $r1;
+
+        return;
+    }
+
+    public void setcni_raison_sociale(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_raison_sociale> = $r1;
+
+        return;
+    }
+
+    public void setcni_sexe2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_sexe2> = $r1;
+
+        return;
+    }
+
+    public void setcni_taille2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_taille2> = $r1;
+
+        return;
+    }
+
+    public void setcni_type_action(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_action> = $r1;
+
+        return;
+    }
+
+    public void setcni_type_piece2(java.lang.String)
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.String cni_type_piece2> = $r1;
+
+        return;
+    }
+
+    public java.lang.String toString()
+    {
+        com.myle.toumarket.model.Information $r0;
+        long $l0;
+        java.lang.StringBuilder $r1;
+        int $i1;
+        java.lang.String $r2;
+        java.lang.Double $r3;
+        float $f0;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>(java.lang.String)>("Information [id=");
+
+        $i1 = $r0.<com.myle.toumarket.model.Information: int id>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i1);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", nomPhoto=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String nomPhoto>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", longitute=");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r3);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", latitute=");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r3);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", altitude=");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.Double altitude>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r3);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", speedloc=");
+
+        $f0 = $r0.<com.myle.toumarket.model.Information: float speedloc>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", timeloc=");
+
+        $l0 = $r0.<com.myle.toumarket.model.Information: long timeloc>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", commentaire=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String commentaire>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", lac=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String lac>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", ci=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String ci>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", rssi=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String rssi>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", imei=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String imei>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", imsi=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String imsi>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", mcc=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String mcc>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", mnc=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String mnc>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", simOperatorName=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String simOperatorName>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", simSerialNumber=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String simSerialNumber>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", networkOperatorName=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String networkOperatorName>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", matricule=");
+
+        $r2 = $r0.<com.myle.toumarket.model.Information: java.lang.String matricule>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("]");
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+
+    public java.lang.String toString_not_split()
+    {
+        com.myle.toumarket.model.Information $r0;
+        java.lang.Double $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.myle.toumarket.model.Information;
+
+        $r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute>;
+
+        if $r1 != null goto label1;
+
+        $r1 = staticinvoke <java.lang.Double: java.lang.Double valueOf(double)>(0.0);
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute> = $r1;
+
+     label1:
+        $r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute>;
+
+        if $r1 != null goto label2;
+
+        $r1 = staticinvoke <java.lang.Double: java.lang.Double valueOf(double)>(0.0);
+
+        $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute> = $r1;
+
+     label2:
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double latitute>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double longitute>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r1 = $r0.<com.myle.toumarket.model.Information: java.lang.Double altitude>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.String lac>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.String ci>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.String rssi>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.String imei>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.String imsi>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.String mcc>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("|||");
+
+        $r3 = $r0.<com.myle.toumarket.model.Information: java.lang.String mnc>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r3;
+    }
+
+    public static void <clinit>()
+    {
+        <com.myle.toumarket.model.Information: long serialVersionUID> = 1L;
+
+        return;
+    }
+}

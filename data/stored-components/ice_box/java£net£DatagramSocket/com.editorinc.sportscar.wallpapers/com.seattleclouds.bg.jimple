@@ -1,0 +1,43 @@
+final class com.seattleclouds.bg extends java.lang.Object implements java.lang.Runnable
+{
+    final android.support.v7.a.a a;
+    final java.lang.CharSequence b;
+
+    void <init>(android.support.v7.a.a, java.lang.CharSequence)
+    {
+        com.seattleclouds.bg $r0;
+        android.support.v7.a.a $r1;
+        java.lang.CharSequence $r2;
+
+        $r0 := @this: com.seattleclouds.bg;
+
+        $r1 := @parameter0: android.support.v7.a.a;
+
+        $r2 := @parameter1: java.lang.CharSequence;
+
+        $r0.<com.seattleclouds.bg: android.support.v7.a.a a> = $r1;
+
+        $r0.<com.seattleclouds.bg: java.lang.CharSequence b> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.bg $r0;
+        android.support.v7.a.a $r1;
+        java.lang.CharSequence $r2;
+
+        $r0 := @this: com.seattleclouds.bg;
+
+        $r1 = $r0.<com.seattleclouds.bg: android.support.v7.a.a a>;
+
+        $r2 = $r0.<com.seattleclouds.bg: java.lang.CharSequence b>;
+
+        virtualinvoke $r1.<android.support.v7.a.a: void a(java.lang.CharSequence)>($r2);
+
+        return;
+    }
+}

@@ -1,0 +1,267 @@
+public class com.seattleclouds.f.d extends java.lang.Object implements android.webkit.DownloadListener
+{
+    final com.seattleclouds.f.j a;
+
+    protected void <init>(com.seattleclouds.f.j)
+    {
+        com.seattleclouds.f.d $r0;
+        com.seattleclouds.f.j $r1;
+
+        $r0 := @this: com.seattleclouds.f.d;
+
+        $r1 := @parameter0: com.seattleclouds.f.j;
+
+        $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onDownloadStart(java.lang.String, java.lang.String, java.lang.String, java.lang.String, long)
+    {
+        com.seattleclouds.f.d $r0;
+        java.lang.String $r1, $r2, $r3, $r4;
+        long $l0;
+        android.content.Intent $r5;
+        boolean $z0;
+        java.lang.StringBuilder $r6;
+        int $i1;
+        android.net.Uri $r7;
+        com.seattleclouds.f.j $r8;
+        com.seattleclouds.t $r9;
+        java.net.URI $r10;
+        java.lang.Throwable $r11, $r12;
+
+        $r0 := @this: com.seattleclouds.f.d;
+
+        $r3 := @parameter0: java.lang.String;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $l0 := @parameter4: long;
+
+        $r5 = new android.content.Intent;
+
+        specialinvoke $r5.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.VIEW");
+
+        virtualinvoke $r5.<android.content.Intent: android.content.Intent setFlags(int)>(268435456);
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean startsWith(java.lang.String)>("file:///android_asset/");
+
+        if $z0 == 0 goto label09;
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = <com.seattleclouds.App: java.lang.String j>;
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String substring(int)>(21);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label01:
+        if $r4 == null goto label02;
+
+        $r1 = virtualinvoke $r4.<java.lang.String: java.lang.String trim()>();
+
+        $i1 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i1 == 0 goto label02;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("application/octet-stream");
+
+        if $z0 == 0 goto label03;
+
+     label02:
+        $r1 = staticinvoke <java.net.HttpURLConnection: java.lang.String guessContentTypeFromName(java.lang.String)>($r3);
+
+        $r4 = $r1;
+
+        if $r1 != null goto label03;
+
+        $r4 = "application/octet-stream";
+
+     label03:
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("audio/");
+
+        if $z0 == 0 goto label11;
+
+        $r4 = "audio/*";
+
+     label04:
+        $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r3);
+
+        virtualinvoke $r5.<android.content.Intent: android.content.Intent setDataAndType(android.net.Uri,java.lang.String)>($r7, $r4);
+
+     label05:
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+     label06:
+        virtualinvoke $r8.<com.seattleclouds.f.j: void a(android.content.Intent)>($r5);
+
+     label07:
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        $r9 = staticinvoke <com.seattleclouds.f.j: com.seattleclouds.t f(com.seattleclouds.f.j)>($r8);
+
+        if $r9 == null goto label08;
+
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        $r9 = staticinvoke <com.seattleclouds.f.j: com.seattleclouds.t f(com.seattleclouds.f.j)>($r8);
+
+        $z0 = virtualinvoke $r9.<com.seattleclouds.t: boolean aL()>();
+
+        if $z0 != 0 goto label19;
+
+     label08:
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        staticinvoke <com.seattleclouds.App: boolean a(android.support.v4.app.Fragment)>($r8);
+
+        return;
+
+     label09:
+        $r1 = <com.seattleclouds.App: java.lang.String k>;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean startsWith(java.lang.String)>($r1);
+
+        if $z0 == 0 goto label10;
+
+        $r1 = <com.seattleclouds.App: java.lang.String k>;
+
+        $i1 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = <com.seattleclouds.App: java.lang.String j>;
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String substring(int)>($i1);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label01;
+
+     label10:
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean startsWith(java.lang.String)>("file:");
+
+        if $z0 == 0 goto label01;
+
+        $r10 = staticinvoke <java.net.URI: java.net.URI create(java.lang.String)>($r3);
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = <com.seattleclouds.App: java.lang.String j>;
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r10.<java.net.URI: java.lang.String getPath()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label01;
+
+     label11:
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean startsWith(java.lang.String)>("video/");
+
+        if $z0 == 0 goto label04;
+
+        $r4 = "video/*";
+
+        goto label04;
+
+     label12:
+        $r11 := @caughtexception;
+
+     label13:
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("onDownloadStart: Couldn\'t find activity to view url ");
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" of mimeType: ");
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r3 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("WebViewActivity.WebViewDownloadListener", $r3);
+
+     label14:
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        $r9 = staticinvoke <com.seattleclouds.f.j: com.seattleclouds.t f(com.seattleclouds.f.j)>($r8);
+
+        if $r9 == null goto label15;
+
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        $r9 = staticinvoke <com.seattleclouds.f.j: com.seattleclouds.t f(com.seattleclouds.f.j)>($r8);
+
+        $z0 = virtualinvoke $r9.<com.seattleclouds.t: boolean aL()>();
+
+        if $z0 != 0 goto label19;
+
+     label15:
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        staticinvoke <com.seattleclouds.App: boolean a(android.support.v4.app.Fragment)>($r8);
+
+        return;
+
+     label16:
+        $r12 := @caughtexception;
+
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        $r9 = staticinvoke <com.seattleclouds.f.j: com.seattleclouds.t f(com.seattleclouds.f.j)>($r8);
+
+        if $r9 == null goto label17;
+
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        $r9 = staticinvoke <com.seattleclouds.f.j: com.seattleclouds.t f(com.seattleclouds.f.j)>($r8);
+
+        $z0 = virtualinvoke $r9.<com.seattleclouds.t: boolean aL()>();
+
+        if $z0 != 0 goto label18;
+
+     label17:
+        $r8 = $r0.<com.seattleclouds.f.d: com.seattleclouds.f.j a>;
+
+        staticinvoke <com.seattleclouds.App: boolean a(android.support.v4.app.Fragment)>($r8);
+
+     label18:
+        throw $r12;
+
+     label19:
+        return;
+
+        catch android.content.ActivityNotFoundException from label06 to label07 with label12;
+        catch java.lang.Throwable from label05 to label07 with label16;
+        catch java.lang.Throwable from label13 to label14 with label16;
+    }
+}

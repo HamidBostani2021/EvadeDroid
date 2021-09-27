@@ -1,0 +1,59 @@
+class com.seattleclouds.modules.cameracover.o extends java.lang.Object implements android.hardware.Camera$AutoFocusCallback
+{
+    final com.seattleclouds.modules.cameracover.CoverCamera a;
+
+    void <init>(com.seattleclouds.modules.cameracover.CoverCamera)
+    {
+        com.seattleclouds.modules.cameracover.o $r0;
+        com.seattleclouds.modules.cameracover.CoverCamera $r1;
+
+        $r0 := @this: com.seattleclouds.modules.cameracover.o;
+
+        $r1 := @parameter0: com.seattleclouds.modules.cameracover.CoverCamera;
+
+        $r0.<com.seattleclouds.modules.cameracover.o: com.seattleclouds.modules.cameracover.CoverCamera a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onAutoFocus(boolean, android.hardware.Camera)
+    {
+        com.seattleclouds.modules.cameracover.o $r0;
+        boolean $z0;
+        android.hardware.Camera $r1;
+        android.widget.Button $r2;
+        com.seattleclouds.modules.cameracover.CoverCamera $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.cameracover.o;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 := @parameter1: android.hardware.Camera;
+
+        if $z0 == 0 goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.cameracover.o: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: void d(com.seattleclouds.modules.cameracover.CoverCamera)>($r3);
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.cameracover.o: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $i0 = <com.seattleclouds.l: int cameracover_focus_failed>;
+
+        staticinvoke <com.seattleclouds.util.ax: void a(android.content.Context,int)>($r3, $i0);
+
+        $r3 = $r0.<com.seattleclouds.modules.cameracover.o: com.seattleclouds.modules.cameracover.CoverCamera a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.cameracover.CoverCamera: android.widget.Button a(com.seattleclouds.modules.cameracover.CoverCamera)>($r3);
+
+        virtualinvoke $r2.<android.widget.Button: void setEnabled(boolean)>(1);
+
+        return;
+    }
+}

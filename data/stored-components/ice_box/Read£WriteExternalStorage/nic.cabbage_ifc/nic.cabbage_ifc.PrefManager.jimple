@@ -1,0 +1,89 @@
+public class nic.cabbage_ifc.PrefManager extends java.lang.Object
+{
+    private static final java.lang.String IS_FIRST_TIME_LAUNCH;
+    private static final java.lang.String PREF_NAME;
+    int PRIVATE_MODE;
+    android.content.Context _context;
+    android.content.SharedPreferences$Editor editor;
+    android.content.SharedPreferences pref;
+
+    public void <init>(android.content.Context)
+    {
+        nic.cabbage_ifc.PrefManager $r0;
+        android.content.Context $r1;
+        int $i0;
+        android.content.SharedPreferences $r2;
+        android.content.SharedPreferences$Editor $r3;
+
+        $r0 := @this: nic.cabbage_ifc.PrefManager;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<nic.cabbage_ifc.PrefManager: int PRIVATE_MODE> = 0;
+
+        $r0.<nic.cabbage_ifc.PrefManager: android.content.Context _context> = $r1;
+
+        $r1 = $r0.<nic.cabbage_ifc.PrefManager: android.content.Context _context>;
+
+        $i0 = $r0.<nic.cabbage_ifc.PrefManager: int PRIVATE_MODE>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("androidhive-welcome", $i0);
+
+        $r0.<nic.cabbage_ifc.PrefManager: android.content.SharedPreferences pref> = $r2;
+
+        $r2 = $r0.<nic.cabbage_ifc.PrefManager: android.content.SharedPreferences pref>;
+
+        $r3 = interfaceinvoke $r2.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r0.<nic.cabbage_ifc.PrefManager: android.content.SharedPreferences$Editor editor> = $r3;
+
+        return;
+    }
+
+    public boolean isFirstTimeLaunch()
+    {
+        nic.cabbage_ifc.PrefManager $r0;
+        boolean $z0;
+        android.content.SharedPreferences $r1;
+
+        $r0 := @this: nic.cabbage_ifc.PrefManager;
+
+        $r1 = $r0.<nic.cabbage_ifc.PrefManager: android.content.SharedPreferences pref>;
+
+        $z0 = interfaceinvoke $r1.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("IsFirstTimeLaunch", 1);
+
+        return $z0;
+    }
+
+    public void setFirstTimeLaunch(boolean)
+    {
+        nic.cabbage_ifc.PrefManager $r0;
+        boolean $z0;
+        android.content.SharedPreferences$Editor $r1;
+
+        $r0 := @this: nic.cabbage_ifc.PrefManager;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<nic.cabbage_ifc.PrefManager: android.content.SharedPreferences$Editor editor>;
+
+        interfaceinvoke $r1.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("IsFirstTimeLaunch", $z0);
+
+        $r1 = $r0.<nic.cabbage_ifc.PrefManager: android.content.SharedPreferences$Editor editor>;
+
+        interfaceinvoke $r1.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <nic.cabbage_ifc.PrefManager: java.lang.String PREF_NAME> = "androidhive-welcome";
+
+        <nic.cabbage_ifc.PrefManager: java.lang.String IS_FIRST_TIME_LAUNCH> = "IsFirstTimeLaunch";
+
+        return;
+    }
+}

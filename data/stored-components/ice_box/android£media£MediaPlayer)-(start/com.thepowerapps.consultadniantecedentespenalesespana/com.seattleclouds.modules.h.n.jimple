@@ -1,0 +1,42 @@
+class com.seattleclouds.modules.h.n extends java.lang.Object
+{
+    final android.widget.TextView a;
+    final android.widget.TextView b;
+    final android.widget.Spinner c;
+    final android.widget.Spinner d;
+    final com.seattleclouds.modules.h.a e;
+
+    void <init>(com.seattleclouds.modules.h.a, android.widget.TextView, android.widget.TextView, android.widget.Spinner, android.widget.Spinner)
+    {
+        com.seattleclouds.modules.h.n $r0;
+        com.seattleclouds.modules.h.a $r1;
+        android.widget.TextView $r2, $r3;
+        android.widget.Spinner $r4, $r5;
+
+        $r0 := @this: com.seattleclouds.modules.h.n;
+
+        $r1 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r2 := @parameter1: android.widget.TextView;
+
+        $r3 := @parameter2: android.widget.TextView;
+
+        $r4 := @parameter3: android.widget.Spinner;
+
+        $r5 := @parameter4: android.widget.Spinner;
+
+        $r0.<com.seattleclouds.modules.h.n: com.seattleclouds.modules.h.a e> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.h.n: android.widget.Spinner c> = $r4;
+
+        $r0.<com.seattleclouds.modules.h.n: android.widget.Spinner d> = $r5;
+
+        $r0.<com.seattleclouds.modules.h.n: android.widget.TextView a> = $r2;
+
+        $r0.<com.seattleclouds.modules.h.n: android.widget.TextView b> = $r3;
+
+        return;
+    }
+}

@@ -1,0 +1,5 @@
+public interface  com.facebook.ag extends java.lang.Object implements com.facebook.ad
+{
+
+    public abstract void a(long, long);
+}

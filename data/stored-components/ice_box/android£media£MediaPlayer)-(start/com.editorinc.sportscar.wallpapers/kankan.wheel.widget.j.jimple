@@ -1,0 +1,165 @@
+class kankan.wheel.widget.j extends java.lang.Object implements kankan.wheel.widget.i
+{
+    final kankan.wheel.widget.WheelView a;
+
+    void <init>(kankan.wheel.widget.WheelView)
+    {
+        kankan.wheel.widget.j $r0;
+        kankan.wheel.widget.WheelView $r1;
+
+        $r0 := @this: kankan.wheel.widget.j;
+
+        $r1 := @parameter0: kankan.wheel.widget.WheelView;
+
+        $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a()
+    {
+        kankan.wheel.widget.j $r0;
+        kankan.wheel.widget.WheelView $r1;
+
+        $r0 := @this: kankan.wheel.widget.j;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        staticinvoke <kankan.wheel.widget.WheelView: boolean a(kankan.wheel.widget.WheelView,boolean)>($r1, 1);
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void a()>();
+
+        return;
+    }
+
+    public void a(int)
+    {
+        kankan.wheel.widget.j $r0;
+        int $i0, $i1, $i2;
+        kankan.wheel.widget.WheelView $r1;
+        kankan.wheel.widget.f $r2;
+
+        $r0 := @this: kankan.wheel.widget.j;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        staticinvoke <kankan.wheel.widget.WheelView: void a(kankan.wheel.widget.WheelView,int)>($r1, $i0);
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $i0 = virtualinvoke $r1.<kankan.wheel.widget.WheelView: int getHeight()>();
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $i1 = staticinvoke <kankan.wheel.widget.WheelView: int a(kankan.wheel.widget.WheelView)>($r1);
+
+        if $i1 <= $i0 goto label1;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        staticinvoke <kankan.wheel.widget.WheelView: int b(kankan.wheel.widget.WheelView,int)>($r1, $i0);
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $r2 = staticinvoke <kankan.wheel.widget.WheelView: kankan.wheel.widget.f b(kankan.wheel.widget.WheelView)>($r1);
+
+        virtualinvoke $r2.<kankan.wheel.widget.f: void a()>();
+
+        return;
+
+     label1:
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $i2 = staticinvoke <kankan.wheel.widget.WheelView: int a(kankan.wheel.widget.WheelView)>($r1);
+
+        $i1 = neg $i0;
+
+        if $i2 >= $i1 goto label2;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $i0 = neg $i0;
+
+        staticinvoke <kankan.wheel.widget.WheelView: int b(kankan.wheel.widget.WheelView,int)>($r1, $i0);
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $r2 = staticinvoke <kankan.wheel.widget.WheelView: kankan.wheel.widget.f b(kankan.wheel.widget.WheelView)>($r1);
+
+        virtualinvoke $r2.<kankan.wheel.widget.f: void a()>();
+
+     label2:
+        return;
+    }
+
+    public void b()
+    {
+        kankan.wheel.widget.j $r0;
+        boolean $z0;
+        kankan.wheel.widget.WheelView $r1;
+
+        $r0 := @this: kankan.wheel.widget.j;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $z0 = staticinvoke <kankan.wheel.widget.WheelView: boolean c(kankan.wheel.widget.WheelView)>($r1);
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void b()>();
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        staticinvoke <kankan.wheel.widget.WheelView: boolean a(kankan.wheel.widget.WheelView,boolean)>($r1, 0);
+
+     label1:
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        staticinvoke <kankan.wheel.widget.WheelView: int b(kankan.wheel.widget.WheelView,int)>($r1, 0);
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        virtualinvoke $r1.<kankan.wheel.widget.WheelView: void invalidate()>();
+
+        return;
+    }
+
+    public void c()
+    {
+        kankan.wheel.widget.j $r0;
+        kankan.wheel.widget.WheelView $r1;
+        int $i0;
+        kankan.wheel.widget.f $r2;
+
+        $r0 := @this: kankan.wheel.widget.j;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $i0 = staticinvoke <kankan.wheel.widget.WheelView: int a(kankan.wheel.widget.WheelView)>($r1);
+
+        $i0 = staticinvoke <java.lang.Math: int abs(int)>($i0);
+
+        if $i0 <= 1 goto label1;
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $r2 = staticinvoke <kankan.wheel.widget.WheelView: kankan.wheel.widget.f b(kankan.wheel.widget.WheelView)>($r1);
+
+        $r1 = $r0.<kankan.wheel.widget.j: kankan.wheel.widget.WheelView a>;
+
+        $i0 = staticinvoke <kankan.wheel.widget.WheelView: int a(kankan.wheel.widget.WheelView)>($r1);
+
+        virtualinvoke $r2.<kankan.wheel.widget.f: void a(int,int)>($i0, 0);
+
+     label1:
+        return;
+    }
+}

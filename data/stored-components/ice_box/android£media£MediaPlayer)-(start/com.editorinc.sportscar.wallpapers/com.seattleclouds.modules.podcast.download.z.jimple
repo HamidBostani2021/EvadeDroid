@@ -1,0 +1,40 @@
+class com.seattleclouds.modules.podcast.download.z extends android.content.BroadcastReceiver
+{
+    final com.seattleclouds.modules.podcast.download.t a;
+
+    void <init>(com.seattleclouds.modules.podcast.download.t)
+    {
+        com.seattleclouds.modules.podcast.download.z $r0;
+        com.seattleclouds.modules.podcast.download.t $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.z;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.t;
+
+        $r0.<com.seattleclouds.modules.podcast.download.z: com.seattleclouds.modules.podcast.download.t a> = $r1;
+
+        specialinvoke $r0.<android.content.BroadcastReceiver: void <init>()>();
+
+        return;
+    }
+
+    public void onReceive(android.content.Context, android.content.Intent)
+    {
+        com.seattleclouds.modules.podcast.download.z $r0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+        com.seattleclouds.modules.podcast.download.t $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.z;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.z: com.seattleclouds.modules.podcast.download.t a>;
+
+        staticinvoke <com.seattleclouds.modules.podcast.download.t: void k(com.seattleclouds.modules.podcast.download.t)>($r3);
+
+        return;
+    }
+}

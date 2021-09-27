@@ -1,0 +1,351 @@
+public class com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity extends com.seattleclouds.p
+{
+    private java.lang.String m;
+    private java.lang.String n;
+    private java.lang.String o;
+    private android.os.Bundle p;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+
+        $r0 := @this: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        specialinvoke $r0.<com.seattleclouds.p: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String m> = "";
+
+        $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String n> = "";
+
+        $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String o> = "";
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        specialinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: void l()>();
+
+        return;
+    }
+
+    static java.lang.String b(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String o>;
+
+        return r1;
+    }
+
+    static java.lang.String c(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String m>;
+
+        return r1;
+    }
+
+    static java.lang.String d(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        r1 = $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String n>;
+
+        return r1;
+    }
+
+    static void e(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        specialinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: void o()>();
+
+        return;
+    }
+
+    private void l()
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+        int $i0;
+        java.lang.Object $r1;
+        android.net.ConnectivityManager $r2;
+        android.net.NetworkInfo $r3;
+        boolean $z0;
+        android.content.res.Resources $r4;
+        java.lang.String $r5, $r6;
+        com.seattleclouds.modules.rateandreview.d $r7;
+        java.lang.Void[] $r8;
+
+        $r0 := @this: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.Object getSystemService(java.lang.String)>("connectivity");
+
+        $r2 = (android.net.ConnectivityManager) $r1;
+
+        $r3 = virtualinvoke $r2.<android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>();
+
+        if $r3 == null goto label1;
+
+        $r3 = virtualinvoke $r2.<android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>();
+
+        $z0 = virtualinvoke $r3.<android.net.NetworkInfo: boolean isConnected()>();
+
+        if $z0 != 0 goto label2;
+
+     label1:
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.l: int error>;
+
+        $r5 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.l: int rateandreview_nointernetconnect>;
+
+        $r6 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,java.lang.String,java.lang.String)>($r0, $r5, $r6);
+
+        return;
+
+     label2:
+        $r7 = new com.seattleclouds.modules.rateandreview.d;
+
+        specialinvoke $r7.<com.seattleclouds.modules.rateandreview.d: void <init>(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity,com.seattleclouds.modules.rateandreview.a)>($r0, null);
+
+        $r8 = newarray (java.lang.Void)[0];
+
+        virtualinvoke $r7.<com.seattleclouds.modules.rateandreview.d: android.os.AsyncTask execute(java.lang.Object[])>($r8);
+
+        return;
+    }
+
+    private void o()
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+        android.content.Intent $r1;
+
+        $r0 := @this: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>()>();
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("result", "OK");
+
+        virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: void setResult(int,android.content.Intent)>(-1, $r1);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: void finish()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        android.content.Intent $r2;
+        java.lang.String $r3;
+        android.view.View $r4;
+        android.widget.LinearLayout $r5;
+        android.widget.Button $r6;
+        com.seattleclouds.modules.rateandreview.a $r7;
+        android.widget.RatingBar $r8;
+        com.seattleclouds.modules.rateandreview.b $r9;
+        android.widget.TextView $r10;
+        android.widget.EditText $r11;
+        com.seattleclouds.modules.rateandreview.c $r12;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.p: void onCreate(android.os.Bundle)>($r1);
+
+        $i0 = <com.seattleclouds.j: int new_rate_comment_activity>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: void setContentView(int)>($i0);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.content.Intent getIntent()>();
+
+        $r1 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r1 == null goto label1;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("pageid");
+
+        $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String m> = $r3;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("fbid");
+
+        $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String n> = $r3;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("fbname");
+
+        $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: java.lang.String o> = $r3;
+
+        $r1 = virtualinvoke $r1.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.os.Bundle p> = $r1;
+
+     label1:
+        $i0 = <com.seattleclouds.h: int new_rate_comment_activity_view>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.LinearLayout) $r4;
+
+        $r1 = $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.os.Bundle p>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r5, $r1);
+
+        $i0 = <com.seattleclouds.h: int new_rate_comment_btn_submit>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.Button) $r4;
+
+        $r7 = new com.seattleclouds.modules.rateandreview.a;
+
+        specialinvoke $r7.<com.seattleclouds.modules.rateandreview.a: void <init>(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity,android.widget.Button)>($r0, $r6);
+
+        virtualinvoke $r6.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r7);
+
+        $i0 = <com.seattleclouds.h: int new_rate_comment_ratingbar>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.RatingBar) $r4;
+
+        $r9 = new com.seattleclouds.modules.rateandreview.b;
+
+        specialinvoke $r9.<com.seattleclouds.modules.rateandreview.b: void <init>(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity)>($r0);
+
+        virtualinvoke $r8.<android.widget.RatingBar: void setOnRatingBarChangeListener(android.widget.RatingBar$OnRatingBarChangeListener)>($r9);
+
+        virtualinvoke $r8.<android.widget.RatingBar: void setRating(float)>(1.0F);
+
+        $i0 = <com.seattleclouds.h: int textView1>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.TextView) $r4;
+
+        $r1 = $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.os.Bundle p>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r10, $r1);
+
+        $i0 = <com.seattleclouds.h: int new_rate_comment_name_of_rate>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.TextView) $r4;
+
+        $r1 = $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.os.Bundle p>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r10, $r1);
+
+        $i0 = <com.seattleclouds.h: int textView3>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.TextView) $r4;
+
+        $r1 = $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.os.Bundle p>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r10, $r1);
+
+        $i0 = <com.seattleclouds.h: int new_rate_comment_editview>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.view.View findViewById(int)>($i0);
+
+        $r11 = (android.widget.EditText) $r4;
+
+        $r12 = new com.seattleclouds.modules.rateandreview.c;
+
+        specialinvoke $r12.<com.seattleclouds.modules.rateandreview.c: void <init>(com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity,android.widget.Button)>($r0, $r6);
+
+        virtualinvoke $r11.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r12);
+
+        $i0 = virtualinvoke $r11.<android.widget.EditText: int length()>();
+
+        if $i0 <= 0 goto label3;
+
+        $z0 = 1;
+
+     label2:
+        virtualinvoke $r6.<android.widget.Button: void setEnabled(boolean)>($z0);
+
+        return;
+
+     label3:
+        $z0 = 0;
+
+        goto label2;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        $r0 = this.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.modules.rateandreview.NewRateAndCommentActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

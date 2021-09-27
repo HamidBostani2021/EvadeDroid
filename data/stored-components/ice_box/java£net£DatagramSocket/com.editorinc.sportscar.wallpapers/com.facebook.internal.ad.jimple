@@ -1,0 +1,83 @@
+public class com.facebook.internal.ad extends java.lang.Object
+{
+    private android.support.v4.app.Fragment a;
+    private android.app.Fragment b;
+
+    public void <init>(android.support.v4.app.Fragment)
+    {
+        com.facebook.internal.ad $r0;
+        android.support.v4.app.Fragment $r1;
+
+        $r0 := @this: com.facebook.internal.ad;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        staticinvoke <com.facebook.internal.bg: void a(java.lang.Object,java.lang.String)>($r1, "fragment");
+
+        $r0.<com.facebook.internal.ad: android.support.v4.app.Fragment a> = $r1;
+
+        return;
+    }
+
+    public final android.app.Activity a()
+    {
+        com.facebook.internal.ad $r0;
+        android.support.v4.app.Fragment $r1;
+        android.support.v4.app.ac $r2;
+        android.app.Fragment $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.facebook.internal.ad;
+
+        $r1 = $r0.<com.facebook.internal.ad: android.support.v4.app.Fragment a>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.facebook.internal.ad: android.support.v4.app.Fragment a>;
+
+        $r2 = virtualinvoke $r1.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        return $r2;
+
+     label1:
+        $r3 = $r0.<com.facebook.internal.ad: android.app.Fragment b>;
+
+        $r4 = virtualinvoke $r3.<android.app.Fragment: android.app.Activity getActivity()>();
+
+        return $r4;
+    }
+
+    public void a(android.content.Intent, int)
+    {
+        com.facebook.internal.ad $r0;
+        android.content.Intent $r1;
+        int $i0;
+        android.support.v4.app.Fragment $r2;
+        android.app.Fragment $r3;
+
+        $r0 := @this: com.facebook.internal.ad;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.facebook.internal.ad: android.support.v4.app.Fragment a>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.facebook.internal.ad: android.support.v4.app.Fragment a>;
+
+        virtualinvoke $r2.<android.support.v4.app.Fragment: void startActivityForResult(android.content.Intent,int)>($r1, $i0);
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.facebook.internal.ad: android.app.Fragment b>;
+
+        virtualinvoke $r3.<android.app.Fragment: void startActivityForResult(android.content.Intent,int)>($r1, $i0);
+
+        return;
+    }
+}

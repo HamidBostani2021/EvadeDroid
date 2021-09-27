@@ -1,0 +1,389 @@
+class com.seattleclouds.bi extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.util.Map b;
+    private java.lang.String c;
+    private com.seattleclouds.bi d;
+    private java.util.List e;
+
+    public void <init>(java.lang.String, java.util.Map)
+    {
+        com.seattleclouds.bi $r0;
+        java.lang.String $r1;
+        java.util.Map $r2;
+
+        $r0 := @this: com.seattleclouds.bi;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.util.Map;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.bi: java.lang.String a> = $r1;
+
+        $r0.<com.seattleclouds.bi: java.util.Map b> = $r2;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, org.xml.sax.Attributes)
+    {
+        com.seattleclouds.bi $r0;
+        java.lang.String $r1;
+        org.xml.sax.Attributes $r2;
+        java.util.Map $r3;
+
+        $r0 := @this: com.seattleclouds.bi;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: org.xml.sax.Attributes;
+
+        $r3 = staticinvoke <com.seattleclouds.bi: java.util.Map a(org.xml.sax.Attributes)>($r2);
+
+        specialinvoke $r0.<com.seattleclouds.bi: void <init>(java.lang.String,java.util.Map)>($r1, $r3);
+
+        return;
+    }
+
+    private static java.util.Map a(org.xml.sax.Attributes)
+    {
+        org.xml.sax.Attributes $r0;
+        int $i0, $i1;
+        java.util.HashMap $r1;
+        java.lang.String $r2, $r3;
+
+        $r0 := @parameter0: org.xml.sax.Attributes;
+
+        if $r0 != null goto label1;
+
+        return null;
+
+     label1:
+        $i0 = interfaceinvoke $r0.<org.xml.sax.Attributes: int getLength()>();
+
+        if $i0 == 0 goto label3;
+
+        $r1 = new java.util.HashMap;
+
+        specialinvoke $r1.<java.util.HashMap: void <init>()>();
+
+        $i1 = 0;
+
+     label2:
+        if $i1 >= $i0 goto label4;
+
+        $r2 = interfaceinvoke $r0.<org.xml.sax.Attributes: java.lang.String getQName(int)>($i1);
+
+        $r3 = interfaceinvoke $r0.<org.xml.sax.Attributes: java.lang.String getValue(int)>($i1);
+
+        interfaceinvoke $r1.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>($r2, $r3);
+
+        $i1 = $i1 + 1;
+
+        goto label2;
+
+     label3:
+        return null;
+
+     label4:
+        return $r1;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.bi $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.bi;
+
+        r1 = $r0.<com.seattleclouds.bi: java.lang.String c>;
+
+        return r1;
+    }
+
+    public java.lang.String a(java.lang.String)
+    {
+        com.seattleclouds.bi $r0, $r5;
+        java.lang.String $r1, $r4;
+        java.util.Map $r2;
+        java.lang.Object $r3;
+        boolean $z0;
+        java.util.List $r6;
+        int $i0, $i1, $i2;
+        java.lang.StringBuilder $r7;
+
+        $r0 := @this: com.seattleclouds.bi;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.bi: java.util.Map b>;
+
+        if $r2 == null goto label01;
+
+        $r2 = $r0.<com.seattleclouds.bi: java.util.Map b>;
+
+        $r3 = interfaceinvoke $r2.<java.util.Map: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r4 = (java.lang.String) $r3;
+
+        if $r4 == null goto label01;
+
+        return $r4;
+
+     label01:
+        $r5 = $r0.<com.seattleclouds.bi: com.seattleclouds.bi d>;
+
+        if $r5 == null goto label02;
+
+        $r5 = $r0.<com.seattleclouds.bi: com.seattleclouds.bi d>;
+
+        $r4 = $r5.<com.seattleclouds.bi: java.lang.String a>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label02;
+
+        $r0 = $r0.<com.seattleclouds.bi: com.seattleclouds.bi d>;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.bi: java.lang.String a()>();
+
+        return $r1;
+
+     label02:
+        $r6 = $r0.<com.seattleclouds.bi: java.util.List e>;
+
+        if $r6 == null goto label08;
+
+        $r6 = $r0.<com.seattleclouds.bi: java.util.List e>;
+
+        $i0 = interfaceinvoke $r6.<java.util.List: int size()>();
+
+        $i1 = 0;
+
+        $r7 = null;
+
+     label03:
+        if $i1 >= $i0 goto label07;
+
+        $r6 = $r0.<com.seattleclouds.bi: java.util.List e>;
+
+        $r3 = interfaceinvoke $r6.<java.util.List: java.lang.Object get(int)>($i1);
+
+        $r5 = (com.seattleclouds.bi) $r3;
+
+        $r4 = $r5.<com.seattleclouds.bi: java.lang.String a>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label10;
+
+        $r4 = virtualinvoke $r5.<com.seattleclouds.bi: java.lang.String a()>();
+
+        if $r7 != null goto label09;
+
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+     label04:
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean b(java.lang.String)>($r4);
+
+        if $z0 != 0 goto label06;
+
+        $i2 = virtualinvoke $r7.<java.lang.StringBuilder: int length()>();
+
+        if $i2 <= 0 goto label05;
+
+        virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", ");
+
+     label05:
+        virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+     label06:
+        $i1 = $i1 + 1;
+
+        goto label03;
+
+     label07:
+        if $r7 == null goto label08;
+
+        $r1 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r1;
+
+     label08:
+        return null;
+
+     label09:
+        goto label04;
+
+     label10:
+        goto label06;
+    }
+
+    void a(com.seattleclouds.bi)
+    {
+        com.seattleclouds.bi $r0, $r1, $r2;
+        java.util.List $r3;
+        java.util.ArrayList $r4;
+
+        $r0 := @this: com.seattleclouds.bi;
+
+        $r1 := @parameter0: com.seattleclouds.bi;
+
+        $r2 = $r0.<com.seattleclouds.bi: com.seattleclouds.bi d>;
+
+        if $r2 != null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.bi: java.util.List e>;
+
+        if $r3 != null goto label1;
+
+        $r0.<com.seattleclouds.bi: com.seattleclouds.bi d> = $r1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.bi: com.seattleclouds.bi d>;
+
+        if $r2 == null goto label2;
+
+        $r4 = new java.util.ArrayList;
+
+        specialinvoke $r4.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.bi: java.util.List e> = $r4;
+
+        $r3 = $r0.<com.seattleclouds.bi: java.util.List e>;
+
+        $r2 = $r0.<com.seattleclouds.bi: com.seattleclouds.bi d>;
+
+        interfaceinvoke $r3.<java.util.List: boolean add(java.lang.Object)>($r2);
+
+        $r3 = $r0.<com.seattleclouds.bi: java.util.List e>;
+
+        interfaceinvoke $r3.<java.util.List: boolean add(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.bi: com.seattleclouds.bi d> = null;
+
+        return;
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.bi: java.util.List e>;
+
+        interfaceinvoke $r3.<java.util.List: boolean add(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.bi $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.bi;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.bi: java.lang.String c> = $r1;
+
+        return;
+    }
+
+    public java.lang.String toString()
+    {
+        com.seattleclouds.bi $r0;
+        java.lang.StringBuilder $r1, $r2;
+        java.lang.String $r3;
+        java.util.Map $r4;
+        java.util.Set $r5;
+        java.util.Iterator $r6;
+        boolean $z0;
+        java.lang.Object $r7;
+        java.util.Map$Entry $r8;
+
+        $r0 := @this: com.seattleclouds.bi;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(60);
+
+        $r3 = $r0.<com.seattleclouds.bi: java.lang.String a>;
+
+        virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = $r0.<com.seattleclouds.bi: java.util.Map b>;
+
+        if $r4 == null goto label2;
+
+        $r4 = $r0.<com.seattleclouds.bi: java.util.Map b>;
+
+        $r5 = interfaceinvoke $r4.<java.util.Map: java.util.Set entrySet()>();
+
+        $r6 = interfaceinvoke $r5.<java.util.Set: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r7 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+        $r8 = (java.util.Map$Entry) $r7;
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(32);
+
+        $r7 = interfaceinvoke $r8.<java.util.Map$Entry: java.lang.Object getKey()>();
+
+        $r3 = (java.lang.String) $r7;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("=\"");
+
+        $r7 = interfaceinvoke $r8.<java.util.Map$Entry: java.lang.Object getValue()>();
+
+        $r3 = (java.lang.String) $r7;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(34);
+
+        goto label1;
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.bi: java.lang.String c>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean b(java.lang.String)>($r3);
+
+        if $z0 == 0 goto label4;
+
+        virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" />");
+
+     label3:
+        $r3 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r3;
+
+     label4:
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(62);
+
+        $r3 = $r0.<com.seattleclouds.bi: java.lang.String c>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("</");
+
+        $r3 = $r0.<com.seattleclouds.bi: java.lang.String a>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(62);
+
+        goto label3;
+    }
+}

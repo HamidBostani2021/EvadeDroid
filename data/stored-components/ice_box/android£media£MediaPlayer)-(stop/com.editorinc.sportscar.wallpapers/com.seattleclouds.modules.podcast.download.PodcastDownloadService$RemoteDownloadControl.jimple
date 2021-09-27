@@ -1,0 +1,116 @@
+class com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl extends android.widget.RemoteViews
+{
+    final com.seattleclouds.modules.podcast.download.PodcastDownloadService a;
+    private int b;
+
+    public void <init>(com.seattleclouds.modules.podcast.download.PodcastDownloadService, java.lang.String, int)
+    {
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl $r0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r1;
+        java.lang.String $r2;
+        int $i0, $i1;
+        android.content.Intent $r3;
+        android.content.Context $r4;
+        android.app.PendingIntent $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.PodcastDownloadService;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 := @parameter2: int;
+
+        $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: com.seattleclouds.modules.podcast.download.PodcastDownloadService a> = $r1;
+
+        specialinvoke $r0.<android.widget.RemoteViews: void <init>(java.lang.String,int)>($r2, $i0);
+
+        $i0 = <com.seattleclouds.h: int imageView>;
+
+        $i1 = <com.seattleclouds.g: int icon>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: void setImageViewResource(int,int)>($i0, $i1);
+
+        $r3 = new android.content.Intent;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.download.PodcastDownloadService: java.lang.String d()>();
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String)>($r2);
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: android.content.Context getApplicationContext()>();
+
+        $r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getService(android.content.Context,int,android.content.Intent,int)>($r4, 100, $r3, 134217728);
+
+        $i0 = <com.seattleclouds.h: int cancelButton>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: void setOnClickPendingIntent(int,android.app.PendingIntent)>($i0, $r5);
+
+        return;
+    }
+
+    public int a()
+    {
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl;
+
+        i0 = $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: int b>;
+
+        return i0;
+    }
+
+    public void a(int, int)
+    {
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl $r0;
+        int $i0, $i1, $i2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: int b> = $i1;
+
+        $i2 = <com.seattleclouds.h: int progressBar>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: void setProgressBar(int,int,int,boolean)>($i2, $i0, $i1, 0);
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl $r0;
+        java.lang.String $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 = <com.seattleclouds.h: int textView>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: void setTextViewText(int,java.lang.CharSequence)>($i0, $r1);
+
+        return;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl $r0;
+        java.lang.String $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 = <com.seattleclouds.h: int detailTextView>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.PodcastDownloadService$RemoteDownloadControl: void setTextViewText(int,java.lang.CharSequence)>($i0, $r1);
+
+        return;
+    }
+}

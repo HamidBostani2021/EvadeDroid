@@ -1,0 +1,229 @@
+class com.facebook.login.WebViewLoginMethodHandler extends com.facebook.login.WebLoginMethodHandler
+{
+    public static final android.os.Parcelable$Creator CREATOR;
+    private com.facebook.internal.bh c;
+    private java.lang.String d;
+
+    static void <clinit>()
+    {
+        com.facebook.login.af $r0;
+
+        $r0 = new com.facebook.login.af;
+
+        specialinvoke $r0.<com.facebook.login.af: void <init>()>();
+
+        <com.facebook.login.WebViewLoginMethodHandler: android.os.Parcelable$Creator CREATOR> = $r0;
+
+        return;
+    }
+
+    void <init>(android.os.Parcel)
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+        android.os.Parcel $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<com.facebook.login.WebLoginMethodHandler: void <init>(android.os.Parcel)>($r1);
+
+        $r2 = virtualinvoke $r1.<android.os.Parcel: java.lang.String readString()>();
+
+        $r0.<com.facebook.login.WebViewLoginMethodHandler: java.lang.String d> = $r2;
+
+        return;
+    }
+
+    void <init>(com.facebook.login.LoginClient)
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+        com.facebook.login.LoginClient $r1;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient;
+
+        specialinvoke $r0.<com.facebook.login.WebLoginMethodHandler: void <init>(com.facebook.login.LoginClient)>($r1);
+
+        return;
+    }
+
+    java.lang.String a()
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        return "web_view";
+    }
+
+    boolean a(com.facebook.login.LoginClient$Request)
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+        com.facebook.login.LoginClient$Request $r1;
+        android.os.Bundle $r2;
+        com.facebook.login.ae $r3;
+        java.lang.String $r4;
+        com.facebook.login.LoginClient $r5;
+        android.support.v4.app.ac $r6;
+        com.facebook.login.ag $r7;
+        boolean $z0;
+        com.facebook.internal.bm $r8;
+        com.facebook.internal.bh $r9;
+        com.facebook.internal.w $r10;
+        android.support.v4.app.aj $r11;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient$Request;
+
+        $r2 = virtualinvoke $r0.<com.facebook.login.WebViewLoginMethodHandler: android.os.Bundle b(com.facebook.login.LoginClient$Request)>($r1);
+
+        $r3 = new com.facebook.login.ae;
+
+        specialinvoke $r3.<com.facebook.login.ae: void <init>(com.facebook.login.WebViewLoginMethodHandler,com.facebook.login.LoginClient$Request)>($r0, $r1);
+
+        $r4 = staticinvoke <com.facebook.login.LoginClient: java.lang.String m()>();
+
+        $r0.<com.facebook.login.WebViewLoginMethodHandler: java.lang.String d> = $r4;
+
+        $r4 = $r0.<com.facebook.login.WebViewLoginMethodHandler: java.lang.String d>;
+
+        virtualinvoke $r0.<com.facebook.login.WebViewLoginMethodHandler: void a(java.lang.String,java.lang.Object)>("e2e", $r4);
+
+        $r5 = $r0.<com.facebook.login.WebViewLoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r6 = virtualinvoke $r5.<com.facebook.login.LoginClient: android.support.v4.app.ac b()>();
+
+        $r7 = new com.facebook.login.ag;
+
+        $r4 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: java.lang.String d()>();
+
+        specialinvoke $r7.<com.facebook.login.ag: void <init>(android.content.Context,java.lang.String,android.os.Bundle)>($r6, $r4, $r2);
+
+        $r4 = $r0.<com.facebook.login.WebViewLoginMethodHandler: java.lang.String d>;
+
+        $r7 = virtualinvoke $r7.<com.facebook.login.ag: com.facebook.login.ag a(java.lang.String)>($r4);
+
+        $z0 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: boolean f()>();
+
+        $r7 = virtualinvoke $r7.<com.facebook.login.ag: com.facebook.login.ag a(boolean)>($z0);
+
+        $r8 = virtualinvoke $r7.<com.facebook.login.ag: com.facebook.internal.bm a(com.facebook.internal.bo)>($r3);
+
+        $r9 = virtualinvoke $r8.<com.facebook.internal.bm: com.facebook.internal.bh a()>();
+
+        $r0.<com.facebook.login.WebViewLoginMethodHandler: com.facebook.internal.bh c> = $r9;
+
+        $r10 = new com.facebook.internal.w;
+
+        specialinvoke $r10.<com.facebook.internal.w: void <init>()>();
+
+        virtualinvoke $r10.<com.facebook.internal.w: void d(boolean)>(1);
+
+        $r9 = $r0.<com.facebook.login.WebViewLoginMethodHandler: com.facebook.internal.bh c>;
+
+        virtualinvoke $r10.<com.facebook.internal.w: void a(android.app.Dialog)>($r9);
+
+        $r11 = virtualinvoke $r6.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        virtualinvoke $r10.<com.facebook.internal.w: void a(android.support.v4.app.aj,java.lang.String)>($r11, "FacebookDialogFragment");
+
+        return 1;
+    }
+
+    void b()
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+        com.facebook.internal.bh $r1;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        $r1 = $r0.<com.facebook.login.WebViewLoginMethodHandler: com.facebook.internal.bh c>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.facebook.login.WebViewLoginMethodHandler: com.facebook.internal.bh c>;
+
+        virtualinvoke $r1.<com.facebook.internal.bh: void cancel()>();
+
+        $r0.<com.facebook.login.WebViewLoginMethodHandler: com.facebook.internal.bh c> = null;
+
+     label1:
+        return;
+    }
+
+    void b(com.facebook.login.LoginClient$Request, android.os.Bundle, com.facebook.FacebookException)
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+        com.facebook.login.LoginClient$Request $r1;
+        android.os.Bundle $r2;
+        com.facebook.FacebookException $r3;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient$Request;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        $r3 := @parameter2: com.facebook.FacebookException;
+
+        specialinvoke $r0.<com.facebook.login.WebLoginMethodHandler: void a(com.facebook.login.LoginClient$Request,android.os.Bundle,com.facebook.FacebookException)>($r1, null, $r3);
+
+        return;
+    }
+
+    com.facebook.AccessTokenSource b_()
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+        com.facebook.AccessTokenSource r1;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        r1 = <com.facebook.AccessTokenSource: com.facebook.AccessTokenSource WEB_VIEW>;
+
+        return r1;
+    }
+
+    boolean d()
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        return 1;
+    }
+
+    public int describeContents()
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.login.WebViewLoginMethodHandler $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        java.lang.String $r2;
+
+        $r0 := @this: com.facebook.login.WebViewLoginMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.facebook.login.WebLoginMethodHandler: void writeToParcel(android.os.Parcel,int)>($r1, $i0);
+
+        $r2 = $r0.<com.facebook.login.WebViewLoginMethodHandler: java.lang.String d>;
+
+        virtualinvoke $r1.<android.os.Parcel: void writeString(java.lang.String)>($r2);
+
+        return;
+    }
+}

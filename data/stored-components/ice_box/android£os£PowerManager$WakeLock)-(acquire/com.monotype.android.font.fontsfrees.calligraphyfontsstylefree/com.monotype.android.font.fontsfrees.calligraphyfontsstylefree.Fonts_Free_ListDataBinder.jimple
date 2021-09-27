@@ -1,0 +1,188 @@
+public class com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder extends android.widget.BaseAdapter
+{
+    private java.lang.String[] fonts_free_cn;
+    private java.lang.String[] fonts_free_cnam;
+    com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder fonts_free_holder;
+    android.view.LayoutInflater fonts_free_inflater;
+    private android.content.Context mContext;
+
+    public void <init>(android.content.Context, java.lang.String[], java.lang.String[])
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder $r0;
+        android.content.Context $r1;
+        java.lang.String[] $r2, $r3;
+        java.lang.Object $r4;
+        android.view.LayoutInflater $r5;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String[];
+
+        $r3 := @parameter2: java.lang.String[];
+
+        specialinvoke $r0.<android.widget.BaseAdapter: void <init>()>();
+
+        $r4 = virtualinvoke $r1.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("layout_inflater");
+
+        $r5 = (android.view.LayoutInflater) $r4;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: android.view.LayoutInflater fonts_free_inflater> = $r5;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: java.lang.String[] fonts_free_cnam> = $r2;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: java.lang.String[] fonts_free_cn> = $r3;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: android.content.Context mContext> = $r1;
+
+        return;
+    }
+
+    public int getCount()
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder $r0;
+        java.lang.String[] $r1;
+        int $i0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder;
+
+        $r1 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: java.lang.String[] fonts_free_cnam>;
+
+        $i0 = lengthof $r1;
+
+        return $i0;
+    }
+
+    public java.lang.Object getItem(int)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder $r0;
+        int $i0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder;
+
+        $i0 := @parameter0: int;
+
+        return null;
+    }
+
+    public long getItemId(int)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder $r0;
+        int $i0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder;
+
+        $i0 := @parameter0: int;
+
+        return 0L;
+    }
+
+    public android.view.View getView(int, android.view.View, android.view.ViewGroup)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder $r0;
+        int $i0;
+        android.view.View $r1, $r3, $r6;
+        android.view.ViewGroup $r2;
+        android.view.LayoutInflater $r4;
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder $r5;
+        android.widget.TextView $r7;
+        android.content.Context $r8;
+        android.content.res.AssetManager $r9;
+        java.lang.StringBuilder $r10;
+        java.lang.String[] $r11;
+        java.lang.String $r12;
+        android.graphics.Typeface $r13;
+        java.lang.Object $r14;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.view.View;
+
+        $r2 := @parameter2: android.view.ViewGroup;
+
+        $r3 = $r1;
+
+        if $r1 != null goto label2;
+
+        $r4 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: android.view.LayoutInflater fonts_free_inflater>;
+
+        $r1 = virtualinvoke $r4.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup)>(2130903042, null);
+
+        $r3 = $r1;
+
+        $r5 = new com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder;
+
+        specialinvoke $r5.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder: void <init>()>();
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder fonts_free_holder> = $r5;
+
+        $r5 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder fonts_free_holder>;
+
+        $r6 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>(2131165215);
+
+        $r7 = (android.widget.TextView) $r6;
+
+        $r5.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder: android.widget.TextView tv> = $r7;
+
+        $r5 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder fonts_free_holder>;
+
+        virtualinvoke $r1.<android.view.View: void setTag(java.lang.Object)>($r5);
+
+     label1:
+        $r8 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: android.content.Context mContext>;
+
+        $r9 = virtualinvoke $r8.<android.content.Context: android.content.res.AssetManager getAssets()>();
+
+        $r10 = new java.lang.StringBuilder;
+
+        specialinvoke $r10.<java.lang.StringBuilder: void <init>(java.lang.String)>("fonts/");
+
+        $r11 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: java.lang.String[] fonts_free_cnam>;
+
+        $r12 = $r11[$i0];
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r12 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r13 = staticinvoke <android.graphics.Typeface: android.graphics.Typeface createFromAsset(android.content.res.AssetManager,java.lang.String)>($r9, $r12);
+
+        $r5 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder fonts_free_holder>;
+
+        $r7 = $r5.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder: android.widget.TextView tv>;
+
+        virtualinvoke $r7.<android.widget.TextView: void setTypeface(android.graphics.Typeface)>($r13);
+
+        $r5 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder fonts_free_holder>;
+
+        $r7 = $r5.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder: android.widget.TextView tv>;
+
+        $r10 = new java.lang.StringBuilder;
+
+        specialinvoke $r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r11 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: java.lang.String[] fonts_free_cn>;
+
+        $r12 = $r11[$i0];
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r12 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r7.<android.widget.TextView: void setText(java.lang.CharSequence)>($r12);
+
+        return $r3;
+
+     label2:
+        $r14 = virtualinvoke $r1.<android.view.View: java.lang.Object getTag()>();
+
+        $r5 = (com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder) $r14;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder fonts_free_holder> = $r5;
+
+        goto label1;
+    }
+}

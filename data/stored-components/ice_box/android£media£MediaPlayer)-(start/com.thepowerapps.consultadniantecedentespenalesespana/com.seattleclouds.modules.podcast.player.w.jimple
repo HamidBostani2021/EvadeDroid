@@ -1,0 +1,32 @@
+public class com.seattleclouds.modules.podcast.player.w extends android.os.Binder
+{
+    final com.seattleclouds.modules.podcast.player.PodcastPlayerService a;
+
+    public void <init>(com.seattleclouds.modules.podcast.player.PodcastPlayerService)
+    {
+        com.seattleclouds.modules.podcast.player.w $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.w;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.player.PodcastPlayerService;
+
+        $r0.<com.seattleclouds.modules.podcast.player.w: com.seattleclouds.modules.podcast.player.PodcastPlayerService a> = $r1;
+
+        specialinvoke $r0.<android.os.Binder: void <init>()>();
+
+        return;
+    }
+
+    com.seattleclouds.modules.podcast.player.PodcastPlayerService a()
+    {
+        com.seattleclouds.modules.podcast.player.w $r0;
+        com.seattleclouds.modules.podcast.player.PodcastPlayerService r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.player.w;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.player.w: com.seattleclouds.modules.podcast.player.PodcastPlayerService a>;
+
+        return r1;
+    }
+}

@@ -1,0 +1,483 @@
+public class com.flashlightnew.byzm.net.MainActivity extends android.app.Activity
+{
+    android.media.MediaPlayer alarmPlayer;
+    android.media.AudioManager audioManager;
+    android.hardware.Camera camera;
+    int currentVolume;
+    android.widget.ImageButton info;
+    int isopen;
+    android.widget.ImageView ledonoff;
+    android.widget.RelativeLayout main;
+    android.media.MediaPlayer mediaPlayer;
+    android.hardware.Camera$Parameters parameters;
+    android.content.SharedPreferences preferences;
+    android.widget.ImageButton settings;
+    boolean showTip;
+    boolean skin_dark;
+    boolean sound;
+    boolean switchon;
+    boolean switchon_2;
+    android.widget.ImageButton switchonoff;
+    java.lang.Thread thread;
+    java.util.Timer timer;
+    android.widget.TextView tip;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.flashlightnew.byzm.net.MainActivity $r0;
+
+        $r0 := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: int isopen> = 0;
+
+        return;
+    }
+
+    protected void onActivityResult(int, int, android.content.Intent)
+    {
+        com.flashlightnew.byzm.net.MainActivity $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        android.os.Bundle $r2;
+        boolean $z0;
+        android.widget.RelativeLayout $r3;
+        android.widget.ImageButton $r4;
+        android.content.res.Resources $r5;
+        android.graphics.drawable.Drawable $r6;
+
+        $r0 := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        if $i1 != 1 goto label1;
+
+        $r2 = virtualinvoke $r1.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $z0 = virtualinvoke $r2.<android.os.Bundle: boolean getBoolean(java.lang.String)>("sound");
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: boolean sound> = $z0;
+
+        $r2 = virtualinvoke $r1.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        $z0 = virtualinvoke $r2.<android.os.Bundle: boolean getBoolean(java.lang.String)>("skin_dark");
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: boolean skin_dark> = $z0;
+
+        $z0 = $r0.<com.flashlightnew.byzm.net.MainActivity: boolean skin_dark>;
+
+        if $z0 == 0 goto label2;
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.RelativeLayout main>;
+
+        virtualinvoke $r3.<android.widget.RelativeLayout: void setBackgroundResource(int)>(2130837518);
+
+        $r4 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton settings>;
+
+        $r5 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.res.Resources getResources()>();
+
+        $r6 = virtualinvoke $r5.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>(2130837515);
+
+        virtualinvoke $r4.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r6);
+
+        $r4 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton info>;
+
+        $r5 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.res.Resources getResources()>();
+
+        $r6 = virtualinvoke $r5.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>(2130837507);
+
+        virtualinvoke $r4.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r6);
+
+     label1:
+        specialinvoke $r0.<android.app.Activity: void onActivityResult(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+        return;
+
+     label2:
+        $r3 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.RelativeLayout main>;
+
+        virtualinvoke $r3.<android.widget.RelativeLayout: void setBackgroundResource(int)>(2130837519);
+
+        $r4 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton settings>;
+
+        $r5 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.res.Resources getResources()>();
+
+        $r6 = virtualinvoke $r5.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>(2130837517);
+
+        virtualinvoke $r4.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r6);
+
+        $r4 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton info>;
+
+        $r5 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.res.Resources getResources()>();
+
+        $r6 = virtualinvoke $r5.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>(2130837509);
+
+        virtualinvoke $r4.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r6);
+
+        goto label1;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.flashlightnew.byzm.net.MainActivity $r0;
+        android.os.Bundle $r1;
+        com.flashlightnew.byzm.net.MainActivity$ButtonListener $r2;
+        com.flashlightnew.byzm.net.MainActivity$LongListener $r3;
+        com.flashlightnew.byzm.net.MainActivity$TouchListener $r4;
+        android.media.MediaPlayer $r5;
+        android.view.View $r6;
+        android.widget.RelativeLayout $r7;
+        android.widget.ImageView $r8;
+        android.widget.ImageButton $r9;
+        android.widget.TextView $r10;
+        android.content.SharedPreferences $r11;
+        boolean $z0;
+        android.content.SharedPreferences$Editor $r12;
+        java.lang.Object $r13;
+        android.media.AudioManager $r14;
+        int $i0;
+        com.flashlightnew.byzm.net.MainActivity$LooperThread $r15;
+        android.hardware.Camera $r16;
+        android.hardware.Camera$Parameters $r17;
+        android.content.res.Resources $r18;
+        android.graphics.drawable.Drawable $r19;
+        java.lang.Exception $r20, $r21;
+
+        $r0 := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: void setContentView(int)>(2130903041);
+
+        $r5 = staticinvoke <android.media.MediaPlayer: android.media.MediaPlayer create(android.content.Context,int)>($r0, 2130968577);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.media.MediaPlayer mediaPlayer> = $r5;
+
+        $r6 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.view.View findViewById(int)>(2131296262);
+
+        $r7 = (android.widget.RelativeLayout) $r6;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.RelativeLayout main> = $r7;
+
+        $r6 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.view.View findViewById(int)>(2131296264);
+
+        $r8 = (android.widget.ImageView) $r6;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageView ledonoff> = $r8;
+
+        $r6 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.view.View findViewById(int)>(2131296265);
+
+        $r9 = (android.widget.ImageButton) $r6;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton switchonoff> = $r9;
+
+        $r6 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.view.View findViewById(int)>(2131296266);
+
+        $r9 = (android.widget.ImageButton) $r6;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton settings> = $r9;
+
+        $r6 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.view.View findViewById(int)>(2131296256);
+
+        $r9 = (android.widget.ImageButton) $r6;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton info> = $r9;
+
+        $r6 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.view.View findViewById(int)>(2131296267);
+
+        $r10 = (android.widget.TextView) $r6;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.TextView tip> = $r10;
+
+        $r2 = new com.flashlightnew.byzm.net.MainActivity$ButtonListener;
+
+        specialinvoke $r2.<com.flashlightnew.byzm.net.MainActivity$ButtonListener: void <init>(com.flashlightnew.byzm.net.MainActivity)>($r0);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton switchonoff>;
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r2);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton settings>;
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r2);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton info>;
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r2);
+
+        $r3 = new com.flashlightnew.byzm.net.MainActivity$LongListener;
+
+        specialinvoke $r3.<com.flashlightnew.byzm.net.MainActivity$LongListener: void <init>(com.flashlightnew.byzm.net.MainActivity)>($r0);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton switchonoff>;
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setOnLongClickListener(android.view.View$OnLongClickListener)>($r3);
+
+        $r4 = new com.flashlightnew.byzm.net.MainActivity$TouchListener;
+
+        specialinvoke $r4.<com.flashlightnew.byzm.net.MainActivity$TouchListener: void <init>(com.flashlightnew.byzm.net.MainActivity)>($r0);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton settings>;
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setOnTouchListener(android.view.View$OnTouchListener)>($r4);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton info>;
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setOnTouchListener(android.view.View$OnTouchListener)>($r4);
+
+        $r11 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("config", 0);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.SharedPreferences preferences> = $r11;
+
+        $r11 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.SharedPreferences preferences>;
+
+        $z0 = interfaceinvoke $r11.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("ledon", 0);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: boolean switchon> = $z0;
+
+        $z0 = $r0.<com.flashlightnew.byzm.net.MainActivity: boolean switchon>;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: boolean switchon_2> = $z0;
+
+        $r11 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.SharedPreferences preferences>;
+
+        $z0 = interfaceinvoke $r11.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("sound", 0);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: boolean sound> = $z0;
+
+        $r11 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.SharedPreferences preferences>;
+
+        $z0 = interfaceinvoke $r11.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("skin_dark", 0);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: boolean skin_dark> = $z0;
+
+        $r11 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.SharedPreferences preferences>;
+
+        $z0 = interfaceinvoke $r11.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("tips", 1);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: boolean showTip> = $z0;
+
+        $r11 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.SharedPreferences preferences>;
+
+        $r12 = interfaceinvoke $r11.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        interfaceinvoke $r12.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("tips", 0);
+
+        interfaceinvoke $r12.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r13 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: java.lang.Object getSystemService(java.lang.String)>("audio");
+
+        $r14 = (android.media.AudioManager) $r13;
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.media.AudioManager audioManager> = $r14;
+
+        $r14 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.media.AudioManager audioManager>;
+
+        $i0 = virtualinvoke $r14.<android.media.AudioManager: int getStreamVolume(int)>(3);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: int currentVolume> = $i0;
+
+        $r15 = new com.flashlightnew.byzm.net.MainActivity$LooperThread;
+
+        specialinvoke $r15.<com.flashlightnew.byzm.net.MainActivity$LooperThread: void <init>(com.flashlightnew.byzm.net.MainActivity)>($r0);
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: java.lang.Thread thread> = $r15;
+
+        $z0 = $r0.<com.flashlightnew.byzm.net.MainActivity: boolean switchon>;
+
+        if $z0 == 0 goto label4;
+
+     label1:
+        $r16 = staticinvoke <android.hardware.Camera: android.hardware.Camera open()>();
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera> = $r16;
+
+        $r16 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera>;
+
+        $r17 = virtualinvoke $r16.<android.hardware.Camera: android.hardware.Camera$Parameters getParameters()>();
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters> = $r17;
+
+        $r17 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters>;
+
+        virtualinvoke $r17.<android.hardware.Camera$Parameters: void setFlashMode(java.lang.String)>("torch");
+
+        $r16 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera camera>;
+
+        $r17 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.hardware.Camera$Parameters parameters>;
+
+        virtualinvoke $r16.<android.hardware.Camera: void setParameters(android.hardware.Camera$Parameters)>($r17);
+
+     label2:
+        $r8 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageView ledonoff>;
+
+        $r18 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.res.Resources getResources()>();
+
+        $r19 = virtualinvoke $r18.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>(2130837511);
+
+        virtualinvoke $r8.<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>($r19);
+
+        $z0 = $r0.<com.flashlightnew.byzm.net.MainActivity: boolean sound>;
+
+        if $z0 == 0 goto label4;
+
+     label3:
+        $r5 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.media.MediaPlayer mediaPlayer>;
+
+        virtualinvoke $r5.<android.media.MediaPlayer: void start()>();
+
+     label4:
+        $z0 = $r0.<com.flashlightnew.byzm.net.MainActivity: boolean skin_dark>;
+
+        if $z0 == 0 goto label5;
+
+        $r7 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.RelativeLayout main>;
+
+        virtualinvoke $r7.<android.widget.RelativeLayout: void setBackgroundResource(int)>(2130837518);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton settings>;
+
+        $r18 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.res.Resources getResources()>();
+
+        $r19 = virtualinvoke $r18.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>(2130837515);
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r19);
+
+        $r9 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.ImageButton info>;
+
+        $r18 = virtualinvoke $r0.<com.flashlightnew.byzm.net.MainActivity: android.content.res.Resources getResources()>();
+
+        $r19 = virtualinvoke $r18.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>(2130837507);
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r19);
+
+     label5:
+        $r10 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.widget.TextView tip>;
+
+        virtualinvoke $r10.<android.widget.TextView: void setText(int)>(2131099658);
+
+        return;
+
+     label6:
+        $r20 := @caughtexception;
+
+        goto label4;
+
+     label7:
+        $r21 := @caughtexception;
+
+        goto label2;
+
+        catch java.lang.Exception from label1 to label2 with label7;
+        catch java.lang.Exception from label3 to label4 with label6;
+    }
+
+    public boolean onKeyDown(int, android.view.KeyEvent)
+    {
+        com.flashlightnew.byzm.net.MainActivity $r0;
+        int $i0;
+        android.view.KeyEvent $r1;
+        android.media.AudioManager $r2;
+
+        $r0 := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.view.KeyEvent;
+
+        if $i0 != 4 goto label1;
+
+        $r2 = $r0.<com.flashlightnew.byzm.net.MainActivity: android.media.AudioManager audioManager>;
+
+        $i0 = $r0.<com.flashlightnew.byzm.net.MainActivity: int currentVolume>;
+
+        virtualinvoke $r2.<android.media.AudioManager: void setStreamVolume(int,int,int)>(3, $i0, 0);
+
+        staticinvoke <java.lang.System: void exit(int)>(0);
+
+     label1:
+        return 0;
+    }
+
+    public void open()
+    {
+        com.flashlightnew.byzm.net.MainActivity $r0;
+        com.flashlightnew.byzm.net.MainActivity$1 $r1;
+        java.util.Date $r2;
+        java.util.Timer $r3;
+
+        $r0 := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        $r3 = new java.util.Timer;
+
+        specialinvoke $r3.<java.util.Timer: void <init>()>();
+
+        $r0.<com.flashlightnew.byzm.net.MainActivity: java.util.Timer timer> = $r3;
+
+        $r1 = new com.flashlightnew.byzm.net.MainActivity$1;
+
+        specialinvoke $r1.<com.flashlightnew.byzm.net.MainActivity$1: void <init>(com.flashlightnew.byzm.net.MainActivity)>($r0);
+
+        $r3 = $r0.<com.flashlightnew.byzm.net.MainActivity: java.util.Timer timer>;
+
+        $r2 = new java.util.Date;
+
+        specialinvoke $r2.<java.util.Date: void <init>()>();
+
+        virtualinvoke $r3.<java.util.Timer: void schedule(java.util.TimerTask,java.util.Date,long)>($r1, $r2, 1L);
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.flashlightnew.byzm.net.MainActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        $r0 = this.<com.flashlightnew.byzm.net.MainActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.flashlightnew.byzm.net.MainActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.flashlightnew.byzm.net.MainActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.flashlightnew.byzm.net.MainActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.flashlightnew.byzm.net.MainActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.flashlightnew.byzm.net.MainActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

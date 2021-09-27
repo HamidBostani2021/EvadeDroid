@@ -1,0 +1,96 @@
+class com.seattleclouds.gcm.b extends android.webkit.WebViewClient
+{
+    final com.seattleclouds.gcm.AnnouncementFragment a;
+
+    void <init>(com.seattleclouds.gcm.AnnouncementFragment)
+    {
+        com.seattleclouds.gcm.b $r0;
+        com.seattleclouds.gcm.AnnouncementFragment $r1;
+
+        $r0 := @this: com.seattleclouds.gcm.b;
+
+        $r1 := @parameter0: com.seattleclouds.gcm.AnnouncementFragment;
+
+        $r0.<com.seattleclouds.gcm.b: com.seattleclouds.gcm.AnnouncementFragment a> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void <init>()>();
+
+        return;
+    }
+
+    public boolean shouldOverrideUrlLoading(android.webkit.WebView, java.lang.String)
+    {
+        com.seattleclouds.gcm.b $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2, $r6;
+        boolean $z0;
+        android.net.Uri $r3;
+        com.seattleclouds.gcm.AnnouncementFragment $r4;
+        android.support.v4.app.ac $r5;
+        int $i0;
+        java.lang.Object[] $r7;
+        android.content.Intent $r8;
+
+        $r0 := @this: com.seattleclouds.gcm.b;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("file://");
+
+        if $z0 == 0 goto label2;
+
+        $r3 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r3.<android.net.Uri: java.lang.String getLastPathSegment()>();
+
+        $z0 = staticinvoke <com.seattleclouds.App: boolean n(java.lang.String)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        $r4 = $r0.<com.seattleclouds.gcm.b: com.seattleclouds.gcm.AnnouncementFragment a>;
+
+        staticinvoke <com.seattleclouds.App: void a(java.lang.String,android.support.v4.app.Fragment)>($r2, $r4);
+
+        return 1;
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.gcm.b: com.seattleclouds.gcm.AnnouncementFragment a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.gcm.AnnouncementFragment: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int common_page_not_found>;
+
+        $r6 = virtualinvoke $r5.<android.support.v4.app.ac: java.lang.String getString(int)>($i0);
+
+        $r7 = newarray (java.lang.Object)[1];
+
+        $r7[0] = $r2;
+
+        $r2 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r6, $r7);
+
+        $r4 = $r0.<com.seattleclouds.gcm.b: com.seattleclouds.gcm.AnnouncementFragment a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.gcm.AnnouncementFragment: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,java.lang.String,java.lang.String)>($r5, null, $r2);
+
+        return 1;
+
+     label2:
+        $r8 = new android.content.Intent;
+
+        $r3 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r2);
+
+        specialinvoke $r8.<android.content.Intent: void <init>(java.lang.String,android.net.Uri)>("android.intent.action.VIEW", $r3);
+
+        $r4 = $r0.<com.seattleclouds.gcm.b: com.seattleclouds.gcm.AnnouncementFragment a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.gcm.AnnouncementFragment: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.util.l: boolean a(android.app.Activity,android.content.Intent)>($r5, $r8);
+
+        return 1;
+    }
+}

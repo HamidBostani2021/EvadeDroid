@@ -1,0 +1,5 @@
+public interface  anywheresoftware.b4a.IOnActivityResult extends java.lang.Object
+{
+
+    public abstract void ResultArrived(int, android.content.Intent);
+}

@@ -1,0 +1,372 @@
+class com.facebook.i extends java.lang.Object implements com.facebook.al
+{
+    final com.facebook.AccessToken a;
+    final com.facebook.b b;
+    final java.util.concurrent.atomic.AtomicBoolean c;
+    final com.facebook.j d;
+    final java.util.Set e;
+    final java.util.Set f;
+    final com.facebook.e g;
+
+    void <init>(com.facebook.e, com.facebook.AccessToken, com.facebook.b, java.util.concurrent.atomic.AtomicBoolean, com.facebook.j, java.util.Set, java.util.Set)
+    {
+        com.facebook.i $r0;
+        com.facebook.e $r1;
+        com.facebook.AccessToken $r2;
+        com.facebook.b $r3;
+        java.util.concurrent.atomic.AtomicBoolean $r4;
+        com.facebook.j $r5;
+        java.util.Set $r6, $r7;
+
+        $r0 := @this: com.facebook.i;
+
+        $r1 := @parameter0: com.facebook.e;
+
+        $r2 := @parameter1: com.facebook.AccessToken;
+
+        $r3 := @parameter2: com.facebook.b;
+
+        $r4 := @parameter3: java.util.concurrent.atomic.AtomicBoolean;
+
+        $r5 := @parameter4: com.facebook.j;
+
+        $r6 := @parameter5: java.util.Set;
+
+        $r7 := @parameter6: java.util.Set;
+
+        $r0.<com.facebook.i: com.facebook.e g> = $r1;
+
+        $r0.<com.facebook.i: com.facebook.AccessToken a> = $r2;
+
+        $r0.<com.facebook.i: com.facebook.b b> = $r3;
+
+        $r0.<com.facebook.i: java.util.concurrent.atomic.AtomicBoolean c> = $r4;
+
+        $r0.<com.facebook.i: com.facebook.j d> = $r5;
+
+        $r0.<com.facebook.i: java.util.Set e> = $r6;
+
+        $r0.<com.facebook.i: java.util.Set f> = $r7;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(com.facebook.ak)
+    {
+        com.facebook.i $r0;
+        com.facebook.ak $r1;
+        com.facebook.e $r2;
+        com.facebook.AccessToken $r3, $r10;
+        java.lang.String $r4, $r5, $r11;
+        com.facebook.b $r6;
+        com.facebook.FacebookException $r7;
+        java.util.concurrent.atomic.AtomicBoolean $r8;
+        boolean $z0;
+        com.facebook.j $r9;
+        int $i0;
+        java.util.Set $r12, $r13;
+        com.facebook.AccessTokenSource $r14;
+        java.util.Date $r15, $r16;
+        long $l1;
+        java.lang.Throwable $r17, $r18;
+
+        $r0 := @this: com.facebook.i;
+
+        $r1 := @parameter0: com.facebook.ak;
+
+     label01:
+        $r2 = staticinvoke <com.facebook.e: com.facebook.e a()>();
+
+        $r3 = virtualinvoke $r2.<com.facebook.e: com.facebook.AccessToken b()>();
+
+     label02:
+        if $r3 == null goto label05;
+
+     label03:
+        $r2 = staticinvoke <com.facebook.e: com.facebook.e a()>();
+
+        $r3 = virtualinvoke $r2.<com.facebook.e: com.facebook.AccessToken b()>();
+
+        $r4 = virtualinvoke $r3.<com.facebook.AccessToken: java.lang.String i()>();
+
+        $r3 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r5 = virtualinvoke $r3.<com.facebook.AccessToken: java.lang.String i()>();
+
+     label04:
+        if $r4 == $r5 goto label09;
+
+     label05:
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+     label06:
+        if $r6 == null goto label08;
+
+     label07:
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        $r7 = new com.facebook.FacebookException;
+
+        specialinvoke $r7.<com.facebook.FacebookException: void <init>(java.lang.String)>("No current access token to refresh");
+
+        interfaceinvoke $r6.<com.facebook.b: void a(com.facebook.FacebookException)>($r7);
+
+     label08:
+        $r2 = $r0.<com.facebook.i: com.facebook.e g>;
+
+        $r8 = staticinvoke <com.facebook.e: java.util.concurrent.atomic.AtomicBoolean a(com.facebook.e)>($r2);
+
+        virtualinvoke $r8.<java.util.concurrent.atomic.AtomicBoolean: void set(boolean)>(0);
+
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        if $r6 == null goto label48;
+
+        goto label48;
+
+     label09:
+        $r8 = $r0.<com.facebook.i: java.util.concurrent.atomic.AtomicBoolean c>;
+
+        $z0 = virtualinvoke $r8.<java.util.concurrent.atomic.AtomicBoolean: boolean get()>();
+
+     label10:
+        if $z0 != 0 goto label19;
+
+     label11:
+        $r9 = $r0.<com.facebook.i: com.facebook.j d>;
+
+        $r4 = $r9.<com.facebook.j: java.lang.String a>;
+
+     label12:
+        if $r4 != null goto label19;
+
+     label13:
+        $r9 = $r0.<com.facebook.i: com.facebook.j d>;
+
+        $i0 = $r9.<com.facebook.j: int b>;
+
+     label14:
+        if $i0 != 0 goto label19;
+
+     label15:
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+     label16:
+        if $r6 == null goto label18;
+
+     label17:
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        $r7 = new com.facebook.FacebookException;
+
+        specialinvoke $r7.<com.facebook.FacebookException: void <init>(java.lang.String)>("Failed to refresh access token");
+
+        interfaceinvoke $r6.<com.facebook.b: void a(com.facebook.FacebookException)>($r7);
+
+     label18:
+        $r2 = $r0.<com.facebook.i: com.facebook.e g>;
+
+        $r8 = staticinvoke <com.facebook.e: java.util.concurrent.atomic.AtomicBoolean a(com.facebook.e)>($r2);
+
+        virtualinvoke $r8.<java.util.concurrent.atomic.AtomicBoolean: void set(boolean)>(0);
+
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        if $r6 == null goto label48;
+
+        goto label48;
+
+     label19:
+        $r3 = new com.facebook.AccessToken;
+
+        $r9 = $r0.<com.facebook.i: com.facebook.j d>;
+
+        $r4 = $r9.<com.facebook.j: java.lang.String a>;
+
+     label20:
+        if $r4 == null goto label36;
+
+     label21:
+        $r9 = $r0.<com.facebook.i: com.facebook.j d>;
+
+        $r4 = $r9.<com.facebook.j: java.lang.String a>;
+
+     label22:
+        $r10 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r5 = virtualinvoke $r10.<com.facebook.AccessToken: java.lang.String h()>();
+
+        $r10 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r11 = virtualinvoke $r10.<com.facebook.AccessToken: java.lang.String i()>();
+
+        $r8 = $r0.<com.facebook.i: java.util.concurrent.atomic.AtomicBoolean c>;
+
+        $z0 = virtualinvoke $r8.<java.util.concurrent.atomic.AtomicBoolean: boolean get()>();
+
+     label23:
+        if $z0 == 0 goto label38;
+
+     label24:
+        $r12 = $r0.<com.facebook.i: java.util.Set e>;
+
+     label25:
+        $r8 = $r0.<com.facebook.i: java.util.concurrent.atomic.AtomicBoolean c>;
+
+        $z0 = virtualinvoke $r8.<java.util.concurrent.atomic.AtomicBoolean: boolean get()>();
+
+     label26:
+        if $z0 == 0 goto label40;
+
+     label27:
+        $r13 = $r0.<com.facebook.i: java.util.Set f>;
+
+     label28:
+        $r10 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r14 = virtualinvoke $r10.<com.facebook.AccessToken: com.facebook.AccessTokenSource f()>();
+
+        $r9 = $r0.<com.facebook.i: com.facebook.j d>;
+
+        $i0 = $r9.<com.facebook.j: int b>;
+
+     label29:
+        if $i0 == 0 goto label42;
+
+     label30:
+        $r15 = new java.util.Date;
+
+        $r9 = $r0.<com.facebook.i: com.facebook.j d>;
+
+        $i0 = $r9.<com.facebook.j: int b>;
+
+        $l1 = (long) $i0;
+
+     label31:
+        $l1 = $l1 * 1000L;
+
+     label32:
+        specialinvoke $r15.<java.util.Date: void <init>(long)>($l1);
+
+     label33:
+        $r16 = new java.util.Date;
+
+        specialinvoke $r16.<java.util.Date: void <init>()>();
+
+        specialinvoke $r3.<com.facebook.AccessToken: void <init>(java.lang.String,java.lang.String,java.lang.String,java.util.Collection,java.util.Collection,com.facebook.AccessTokenSource,java.util.Date,java.util.Date)>($r4, $r5, $r11, $r12, $r13, $r14, $r15, $r16);
+
+     label34:
+        $r2 = staticinvoke <com.facebook.e: com.facebook.e a()>();
+
+        virtualinvoke $r2.<com.facebook.e: void a(com.facebook.AccessToken)>($r3);
+
+     label35:
+        $r2 = $r0.<com.facebook.i: com.facebook.e g>;
+
+        $r8 = staticinvoke <com.facebook.e: java.util.concurrent.atomic.AtomicBoolean a(com.facebook.e)>($r2);
+
+        virtualinvoke $r8.<java.util.concurrent.atomic.AtomicBoolean: void set(boolean)>(0);
+
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        if $r6 == null goto label48;
+
+        if $r3 == null goto label48;
+
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        interfaceinvoke $r6.<com.facebook.b: void a(com.facebook.AccessToken)>($r3);
+
+        return;
+
+     label36:
+        $r10 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r4 = virtualinvoke $r10.<com.facebook.AccessToken: java.lang.String b()>();
+
+     label37:
+        goto label22;
+
+     label38:
+        $r10 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r12 = virtualinvoke $r10.<com.facebook.AccessToken: java.util.Set d()>();
+
+     label39:
+        goto label25;
+
+     label40:
+        $r10 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r13 = virtualinvoke $r10.<com.facebook.AccessToken: java.util.Set e()>();
+
+     label41:
+        goto label28;
+
+     label42:
+        $r10 = $r0.<com.facebook.i: com.facebook.AccessToken a>;
+
+        $r15 = virtualinvoke $r10.<com.facebook.AccessToken: java.util.Date c()>();
+
+     label43:
+        goto label33;
+
+     label44:
+        $r17 := @caughtexception;
+
+        $r3 = null;
+
+     label45:
+        $r2 = $r0.<com.facebook.i: com.facebook.e g>;
+
+        $r8 = staticinvoke <com.facebook.e: java.util.concurrent.atomic.AtomicBoolean a(com.facebook.e)>($r2);
+
+        virtualinvoke $r8.<java.util.concurrent.atomic.AtomicBoolean: void set(boolean)>(0);
+
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        if $r6 == null goto label46;
+
+        if $r3 == null goto label46;
+
+        $r6 = $r0.<com.facebook.i: com.facebook.b b>;
+
+        interfaceinvoke $r6.<com.facebook.b: void a(com.facebook.AccessToken)>($r3);
+
+     label46:
+        throw $r17;
+
+     label47:
+        $r18 := @caughtexception;
+
+        $r17 = $r18;
+
+        goto label45;
+
+     label48:
+        return;
+
+        catch java.lang.Throwable from label01 to label02 with label44;
+        catch java.lang.Throwable from label03 to label04 with label44;
+        catch java.lang.Throwable from label05 to label06 with label44;
+        catch java.lang.Throwable from label07 to label08 with label44;
+        catch java.lang.Throwable from label09 to label10 with label44;
+        catch java.lang.Throwable from label11 to label12 with label44;
+        catch java.lang.Throwable from label13 to label14 with label44;
+        catch java.lang.Throwable from label15 to label16 with label44;
+        catch java.lang.Throwable from label17 to label18 with label44;
+        catch java.lang.Throwable from label19 to label20 with label44;
+        catch java.lang.Throwable from label21 to label23 with label44;
+        catch java.lang.Throwable from label24 to label26 with label44;
+        catch java.lang.Throwable from label27 to label29 with label44;
+        catch java.lang.Throwable from label30 to label31 with label44;
+        catch java.lang.Throwable from label32 to label34 with label44;
+        catch java.lang.Throwable from label34 to label35 with label47;
+        catch java.lang.Throwable from label36 to label37 with label44;
+        catch java.lang.Throwable from label38 to label39 with label44;
+        catch java.lang.Throwable from label40 to label41 with label44;
+        catch java.lang.Throwable from label42 to label43 with label44;
+    }
+}

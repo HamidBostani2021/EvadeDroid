@@ -1,0 +1,39 @@
+class com.seattleclouds.modules.locationlock.a extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity a;
+
+    void <init>(com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity)
+    {
+        com.seattleclouds.modules.locationlock.a $r0;
+        com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.a;
+
+        $r1 := @parameter0: com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity;
+
+        $r0.<com.seattleclouds.modules.locationlock.a: com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.locationlock.a $r0;
+        com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity $r1;
+        com.seattleclouds.modules.locationlock.b $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.locationlock.a: com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity a>;
+
+        $r2 = new com.seattleclouds.modules.locationlock.b;
+
+        specialinvoke $r2.<com.seattleclouds.modules.locationlock.b: void <init>(com.seattleclouds.modules.locationlock.a)>($r0);
+
+        virtualinvoke $r1.<com.seattleclouds.modules.locationlock.AutoFinishPageFragmentActivity: void runOnUiThread(java.lang.Runnable)>($r2);
+
+        return;
+    }
+}

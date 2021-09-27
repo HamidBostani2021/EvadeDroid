@@ -1,0 +1,186 @@
+public class com.seattleclouds.modules.l.g extends com.seattleclouds.r
+{
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.l.g $r0;
+
+        $r0 := @this: com.seattleclouds.modules.l.g;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.l.g $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.widget.EditText $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13;
+        com.seattleclouds.ce $r14;
+        com.seattleclouds.modules.l.a $r15;
+        java.lang.String $r16;
+        boolean $z0;
+        android.graphics.Typeface $r17;
+        android.widget.Button $r18;
+        com.seattleclouds.modules.l.h $r19;
+
+        $r0 := @this: com.seattleclouds.modules.l.g;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: android.view.View a(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>($r1, $r2, $r3);
+
+        $i0 = <com.seattleclouds.j: int login_register_register_fragment>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r4, $r3);
+
+        $i0 = <com.seattleclouds.h: int login_register_register_first_name>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.EditText) $r5;
+
+        $i0 = <com.seattleclouds.h: int login_register_register_last_name>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.EditText) $r5;
+
+        $i0 = <com.seattleclouds.h: int login_register_register_email>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.EditText) $r5;
+
+        $i0 = <com.seattleclouds.h: int login_register_register_password>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.EditText) $r5;
+
+        $i0 = <com.seattleclouds.h: int login_register_register_confirm_password>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r5;
+
+        $i0 = <com.seattleclouds.h: int login_register_register_date_of_birth>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r11 = (android.widget.EditText) $r5;
+
+        $i0 = <com.seattleclouds.h: int login_register_register_phone_number>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r12 = (android.widget.EditText) $r5;
+
+        $i0 = <com.seattleclouds.h: int login_register_register_loyalty_id>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r13 = (android.widget.EditText) $r5;
+
+        $r14 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r15 = virtualinvoke $r14.<com.seattleclouds.ce: com.seattleclouds.modules.l.a J()>();
+
+        $r16 = virtualinvoke $r15.<com.seattleclouds.modules.l.a: java.lang.String a()>();
+
+        $z0 = virtualinvoke $r16.<java.lang.String: boolean equals(java.lang.Object)>("disabled");
+
+        if $z0 == 0 goto label1;
+
+        virtualinvoke $r6.<android.widget.EditText: void setVisibility(int)>(8);
+
+     label1:
+        $r16 = virtualinvoke $r15.<com.seattleclouds.modules.l.a: java.lang.String b()>();
+
+        $z0 = virtualinvoke $r16.<java.lang.String: boolean equals(java.lang.Object)>("disabled");
+
+        if $z0 == 0 goto label2;
+
+        virtualinvoke $r7.<android.widget.EditText: void setVisibility(int)>(8);
+
+     label2:
+        $r16 = virtualinvoke $r15.<com.seattleclouds.modules.l.a: java.lang.String c()>();
+
+        $z0 = virtualinvoke $r16.<java.lang.String: boolean equals(java.lang.Object)>("disabled");
+
+        if $z0 == 0 goto label3;
+
+        virtualinvoke $r11.<android.widget.EditText: void setVisibility(int)>(8);
+
+     label3:
+        $r16 = virtualinvoke $r15.<com.seattleclouds.modules.l.a: java.lang.String d()>();
+
+        $z0 = virtualinvoke $r16.<java.lang.String: boolean equals(java.lang.Object)>("disabled");
+
+        if $z0 == 0 goto label4;
+
+        virtualinvoke $r12.<android.widget.EditText: void setVisibility(int)>(8);
+
+     label4:
+        $r16 = virtualinvoke $r15.<com.seattleclouds.modules.l.a: java.lang.String e()>();
+
+        $z0 = virtualinvoke $r16.<java.lang.String: boolean equals(java.lang.Object)>("disabled");
+
+        if $z0 == 0 goto label5;
+
+        virtualinvoke $r13.<android.widget.EditText: void setVisibility(int)>(8);
+
+     label5:
+        $r17 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r9.<android.widget.EditText: void setTypeface(android.graphics.Typeface)>($r17);
+
+        $r17 = <android.graphics.Typeface: android.graphics.Typeface DEFAULT>;
+
+        virtualinvoke $r10.<android.widget.EditText: void setTypeface(android.graphics.Typeface)>($r17);
+
+        $i0 = <com.seattleclouds.h: int login_register_register_button>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r18 = (android.widget.Button) $r5;
+
+        $r19 = new com.seattleclouds.modules.l.h;
+
+        specialinvoke $r19.<com.seattleclouds.modules.l.h: void <init>(com.seattleclouds.modules.l.g,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,android.widget.EditText,com.seattleclouds.modules.l.a)>($r0, $r6, $r7, $r8, $r9, $r10, $r11, $r12, $r13, $r15);
+
+        virtualinvoke $r18.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r19);
+
+        return $r4;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.l.g $r0;
+        android.os.Bundle $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.l.g;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $i0 = <com.seattleclouds.l: int login_register_register_title>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.l.g: void b(int)>($i0);
+
+        return;
+    }
+}

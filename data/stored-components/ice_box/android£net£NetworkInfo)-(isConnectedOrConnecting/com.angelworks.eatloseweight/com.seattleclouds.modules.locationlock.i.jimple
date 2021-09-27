@@ -1,0 +1,365 @@
+class com.seattleclouds.modules.locationlock.i extends android.os.AsyncTask
+{
+    final com.seattleclouds.modules.locationlock.c a;
+
+    private void <init>(com.seattleclouds.modules.locationlock.c)
+    {
+        com.seattleclouds.modules.locationlock.i $r0;
+        com.seattleclouds.modules.locationlock.c $r1;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.i;
+
+        $r1 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.locationlock.c, com.seattleclouds.modules.locationlock.d)
+    {
+        com.seattleclouds.modules.locationlock.i $r0;
+        com.seattleclouds.modules.locationlock.c $r1;
+        com.seattleclouds.modules.locationlock.d $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.i;
+
+        $r1 := @parameter0: com.seattleclouds.modules.locationlock.c;
+
+        $r2 := @parameter1: com.seattleclouds.modules.locationlock.d;
+
+        specialinvoke $r0.<com.seattleclouds.modules.locationlock.i: void <init>(com.seattleclouds.modules.locationlock.c)>($r1);
+
+        return;
+    }
+
+    protected transient java.lang.String a(java.lang.Void[])
+    {
+        com.seattleclouds.modules.locationlock.i $r0;
+        java.lang.Void[] $r1;
+        com.seattleclouds.modules.locationlock.c $r2;
+        android.support.v4.app.ac $r3;
+        java.util.HashMap $r4;
+        java.lang.String $r5;
+        java.io.InputStream $r6;
+        org.json.JSONObject $r7, $r9;
+        org.json.JSONArray $r8;
+        int $i0, $i1;
+        com.seattleclouds.location.geofencing.k $r10;
+        boolean $z0;
+        org.json.JSONException $r11, $r15;
+        java.lang.StringBuilder $r12;
+        java.lang.Throwable $r13, $r14;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.i;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label01;
+
+        return null;
+
+     label01:
+        $r4 = new java.util.HashMap;
+
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+     label02:
+        $r5 = staticinvoke <com.seattleclouds.modules.locationlock.c: java.lang.String h(com.seattleclouds.modules.locationlock.c)>($r2);
+
+        $r6 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>($r5);
+
+        $r5 = staticinvoke <com.seattleclouds.util.bn: java.lang.String b(java.io.InputStream)>($r6);
+
+     label03:
+        $r7 = new org.json.JSONObject;
+
+     label04:
+        specialinvoke $r7.<org.json.JSONObject: void <init>(java.lang.String)>($r5);
+
+        $r8 = virtualinvoke $r7.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("items");
+
+     label05:
+        $i0 = 0;
+
+     label06:
+        $i1 = virtualinvoke $r8.<org.json.JSONArray: int length()>();
+
+     label07:
+        if $i0 >= $i1 goto label17;
+
+     label08:
+        $r9 = virtualinvoke $r8.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r10 = staticinvoke <com.seattleclouds.location.geofencing.k: com.seattleclouds.location.geofencing.k a(org.json.JSONObject)>($r9);
+
+     label09:
+        if $r10 == null goto label13;
+
+     label10:
+        $z0 = virtualinvoke $r10.<com.seattleclouds.location.geofencing.k: boolean k()>();
+
+     label11:
+        if $z0 == 0 goto label13;
+
+     label12:
+        $r5 = virtualinvoke $r10.<com.seattleclouds.location.geofencing.k: java.lang.String a()>();
+
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r5, $r10);
+
+     label13:
+        $i0 = $i0 + 1;
+
+        goto label06;
+
+     label14:
+        $r11 := @caughtexception;
+
+        $r12 = new java.lang.StringBuilder;
+
+     label15:
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error parsing geofence: ");
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>("LocationLockFragment.PrepareDataAsyncTask", $r5, $r11);
+
+     label16:
+        $r10 = null;
+
+        goto label09;
+
+     label17:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+     label18:
+        staticinvoke <com.seattleclouds.modules.locationlock.c: java.util.Map a(com.seattleclouds.modules.locationlock.c,java.util.Map)>($r2, $r4);
+
+     label19:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+     label20:
+        $z0 = virtualinvoke $r7.<org.json.JSONObject: boolean getBoolean(java.lang.String)>("lockOutsideRegion");
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: boolean a(com.seattleclouds.modules.locationlock.c,boolean)>($r2, $z0);
+
+     label21:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+     label22:
+        $i0 = virtualinvoke $r7.<org.json.JSONObject: int getInt(java.lang.String)>("lockDelay");
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: int a(com.seattleclouds.modules.locationlock.c,int)>($r2, $i0);
+
+     label23:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+     label24:
+        $r5 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("lockPageId");
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: java.lang.String b(com.seattleclouds.modules.locationlock.c,java.lang.String)>($r2, $r5);
+
+     label25:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+     label26:
+        $i0 = virtualinvoke $r7.<org.json.JSONObject: int getInt(java.lang.String)>("locatingTimeout");
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: int b(com.seattleclouds.modules.locationlock.c,int)>($r2, $i0);
+
+     label27:
+        $r2 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+     label28:
+        staticinvoke <com.seattleclouds.modules.locationlock.c: void i(com.seattleclouds.modules.locationlock.c)>($r2);
+
+     label29:
+        return "ok";
+
+     label30:
+        $r13 := @caughtexception;
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error loading config file: ");
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r13);
+
+        $r5 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("LocationLockFragment.PrepareDataAsyncTask", $r5);
+
+        return null;
+
+     label31:
+        $r14 := @caughtexception;
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error loading config file: ");
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r14);
+
+        $r5 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("LocationLockFragment.PrepareDataAsyncTask", $r5);
+
+        return null;
+
+     label32:
+        $r15 := @caughtexception;
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error parsing config file: ");
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r15);
+
+        $r5 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("LocationLockFragment.PrepareDataAsyncTask", $r5);
+
+        return null;
+
+        catch java.lang.IllegalArgumentException from label02 to label03 with label30;
+        catch java.lang.IllegalArgumentException from label04 to label05 with label30;
+        catch java.lang.IllegalArgumentException from label06 to label07 with label30;
+        catch java.io.IOException from label02 to label03 with label31;
+        catch java.io.IOException from label04 to label05 with label31;
+        catch java.io.IOException from label06 to label07 with label31;
+        catch org.json.JSONException from label02 to label03 with label32;
+        catch org.json.JSONException from label04 to label05 with label32;
+        catch org.json.JSONException from label06 to label07 with label32;
+        catch org.json.JSONException from label08 to label09 with label14;
+        catch java.lang.IllegalArgumentException from label08 to label09 with label30;
+        catch java.io.IOException from label08 to label09 with label31;
+        catch java.lang.IllegalArgumentException from label10 to label11 with label30;
+        catch java.lang.IllegalArgumentException from label12 to label13 with label30;
+        catch java.lang.IllegalArgumentException from label15 to label16 with label30;
+        catch java.lang.IllegalArgumentException from label18 to label19 with label30;
+        catch java.lang.IllegalArgumentException from label20 to label21 with label30;
+        catch java.lang.IllegalArgumentException from label22 to label23 with label30;
+        catch java.lang.IllegalArgumentException from label24 to label25 with label30;
+        catch java.lang.IllegalArgumentException from label26 to label27 with label30;
+        catch java.lang.IllegalArgumentException from label28 to label29 with label30;
+        catch java.io.IOException from label10 to label11 with label31;
+        catch java.io.IOException from label12 to label13 with label31;
+        catch java.io.IOException from label15 to label16 with label31;
+        catch java.io.IOException from label18 to label19 with label31;
+        catch java.io.IOException from label20 to label21 with label31;
+        catch java.io.IOException from label22 to label23 with label31;
+        catch java.io.IOException from label24 to label25 with label31;
+        catch java.io.IOException from label26 to label27 with label31;
+        catch java.io.IOException from label28 to label29 with label31;
+        catch org.json.JSONException from label10 to label11 with label32;
+        catch org.json.JSONException from label12 to label13 with label32;
+        catch org.json.JSONException from label15 to label16 with label32;
+        catch org.json.JSONException from label18 to label19 with label32;
+        catch org.json.JSONException from label20 to label21 with label32;
+        catch org.json.JSONException from label22 to label23 with label32;
+        catch org.json.JSONException from label24 to label25 with label32;
+        catch org.json.JSONException from label26 to label27 with label32;
+        catch org.json.JSONException from label28 to label29 with label32;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.modules.locationlock.i $r0;
+        java.lang.String $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.modules.locationlock.c $r3;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.i;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.modules.locationlock.c: android.support.v4.app.ac n()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        if $r1 != null goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: boolean a(com.seattleclouds.modules.locationlock.c,boolean)>($r3, 1);
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: int a(com.seattleclouds.modules.locationlock.c,int)>($r3, 10);
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: java.lang.String b(com.seattleclouds.modules.locationlock.c,java.lang.String)>($r3, null);
+
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: int b(com.seattleclouds.modules.locationlock.c,int)>($r3, 0);
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.modules.locationlock.i: com.seattleclouds.modules.locationlock.c a>;
+
+        staticinvoke <com.seattleclouds.modules.locationlock.c: void j(com.seattleclouds.modules.locationlock.c)>($r3);
+
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.locationlock.i $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.i;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.locationlock.i: java.lang.String a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.locationlock.i $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.locationlock.i;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.locationlock.i: void a(java.lang.String)>($r2);
+
+        return;
+    }
+}

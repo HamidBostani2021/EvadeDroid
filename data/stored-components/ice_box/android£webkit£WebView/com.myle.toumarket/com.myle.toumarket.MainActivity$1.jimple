@@ -1,0 +1,46 @@
+class com.myle.toumarket.MainActivity$1 extends android.webkit.WebChromeClient
+{
+    final com.myle.toumarket.MainActivity this$0;
+
+    void <init>(com.myle.toumarket.MainActivity)
+    {
+        com.myle.toumarket.MainActivity$1 $r0;
+        com.myle.toumarket.MainActivity $r1;
+
+        $r0 := @this: com.myle.toumarket.MainActivity$1;
+
+        $r1 := @parameter0: com.myle.toumarket.MainActivity;
+
+        $r0.<com.myle.toumarket.MainActivity$1: com.myle.toumarket.MainActivity this$0> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebChromeClient: void <init>()>();
+
+        return;
+    }
+
+    public void onProgressChanged(android.webkit.WebView, int)
+    {
+        com.myle.toumarket.MainActivity$1 $r0;
+        android.webkit.WebView $r1;
+        int $i0;
+        android.app.ProgressDialog $r2;
+        com.myle.toumarket.MainActivity $r3;
+
+        $r0 := @this: com.myle.toumarket.MainActivity$1;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $i0 := @parameter1: int;
+
+        if $i0 != 100 goto label1;
+
+        $r3 = $r0.<com.myle.toumarket.MainActivity$1: com.myle.toumarket.MainActivity this$0>;
+
+        $r2 = staticinvoke <com.myle.toumarket.MainActivity: android.app.ProgressDialog access$1(com.myle.toumarket.MainActivity)>($r3);
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void dismiss()>();
+
+     label1:
+        return;
+    }
+}

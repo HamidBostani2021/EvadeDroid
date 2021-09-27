@@ -1,0 +1,53 @@
+class com.seattleclouds.modules.o.i extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.o.h a;
+
+    void <init>(com.seattleclouds.modules.o.h)
+    {
+        com.seattleclouds.modules.o.i $r0;
+        com.seattleclouds.modules.o.h $r1;
+
+        $r0 := @this: com.seattleclouds.modules.o.i;
+
+        $r1 := @parameter0: com.seattleclouds.modules.o.h;
+
+        $r0.<com.seattleclouds.modules.o.i: com.seattleclouds.modules.o.h a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.o.i $r0;
+        com.seattleclouds.modules.o.h $r1;
+        com.seattleclouds.modules.o.a $r2;
+        android.support.v4.app.ac $r3;
+        int $i0;
+        java.lang.String $r4;
+        android.widget.Toast $r5;
+
+        $r0 := @this: com.seattleclouds.modules.o.i;
+
+        $r1 = $r0.<com.seattleclouds.modules.o.i: com.seattleclouds.modules.o.h a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.o.h: com.seattleclouds.modules.o.a c>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.o.a: android.support.v4.app.ac n()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.o.i: com.seattleclouds.modules.o.h a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.o.h: com.seattleclouds.modules.o.a c>;
+
+        $i0 = <com.seattleclouds.l: int nearbylocations_overquery_limit_error>;
+
+        $r4 = virtualinvoke $r2.<com.seattleclouds.modules.o.a: java.lang.String a_(int)>($i0);
+
+        $r5 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r3, $r4, 1);
+
+        virtualinvoke $r5.<android.widget.Toast: void show()>();
+
+        return;
+    }
+}

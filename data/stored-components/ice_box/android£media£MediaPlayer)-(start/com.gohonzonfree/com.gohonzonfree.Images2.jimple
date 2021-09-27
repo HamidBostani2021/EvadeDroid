@@ -1,0 +1,114 @@
+public class com.gohonzonfree.Images2 extends java.lang.Object
+{
+    private java.util.ArrayList imageId;
+    private java.util.Random randNo;
+
+    public void <init>()
+    {
+        com.gohonzonfree.Images2 $r0;
+        java.util.ArrayList $r1;
+        java.lang.Integer $r2;
+
+        $r0 := @this: com.gohonzonfree.Images2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId> = $r1;
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837547);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837550);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837552);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837555);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837556);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837557);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2130837558);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        return;
+    }
+
+    public int getImageId()
+    {
+        com.gohonzonfree.Images2 $r0;
+        java.util.Random $r1;
+        java.util.ArrayList $r2, $r3;
+        int $i0;
+        java.lang.Object $r4;
+        java.lang.Integer $r5;
+
+        $r0 := @this: com.gohonzonfree.Images2;
+
+        $r1 = new java.util.Random;
+
+        specialinvoke $r1.<java.util.Random: void <init>()>();
+
+        $r0.<com.gohonzonfree.Images2: java.util.Random randNo> = $r1;
+
+        $r2 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $r1 = $r0.<com.gohonzonfree.Images2: java.util.Random randNo>;
+
+        $r3 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        $i0 = virtualinvoke $r3.<java.util.ArrayList: int size()>();
+
+        $i0 = virtualinvoke $r1.<java.util.Random: int nextInt(int)>($i0);
+
+        $r4 = virtualinvoke $r2.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r5 = (java.lang.Integer) $r4;
+
+        $i0 = virtualinvoke $r5.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public java.util.ArrayList getImageItem()
+    {
+        com.gohonzonfree.Images2 $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @this: com.gohonzonfree.Images2;
+
+        r1 = $r0.<com.gohonzonfree.Images2: java.util.ArrayList imageId>;
+
+        return r1;
+    }
+}

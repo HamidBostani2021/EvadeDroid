@@ -1,0 +1,5 @@
+public interface  com.revmob.ads.c.b.g extends java.lang.Object
+{
+
+    public abstract void e();
+}

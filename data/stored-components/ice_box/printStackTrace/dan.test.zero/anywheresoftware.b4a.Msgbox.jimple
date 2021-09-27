@@ -1,0 +1,721 @@
+public class anywheresoftware.b4a.Msgbox extends java.lang.Object
+{
+    private static java.lang.Object closeMyLoop;
+    private static java.lang.reflect.Field flagsF;
+    public static boolean isDismissing;
+    private static final java.util.ArrayList listOfAsyncDialogs;
+    private static java.lang.reflect.Method nextM;
+    public static java.lang.ref.WeakReference pd;
+    private static java.lang.reflect.Method recycleUnchecked;
+    private static boolean stopCodeAfterDismiss;
+    private static boolean visible;
+    private static java.lang.ref.WeakReference visibleAD;
+    private static java.lang.reflect.Field whenF;
+
+    static void <clinit>()
+    {
+        java.lang.Exception $r0, $r7;
+        java.lang.Object $r1;
+        java.util.ArrayList $r2;
+        java.lang.Class $r3;
+        java.lang.reflect.Method $r4;
+        java.lang.reflect.Field $r5;
+        java.lang.Class[] $r6;
+
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 0;
+
+        $r1 = new java.lang.Object;
+
+        specialinvoke $r1.<java.lang.Object: void <init>()>();
+
+        <anywheresoftware.b4a.Msgbox: java.lang.Object closeMyLoop> = $r1;
+
+        <anywheresoftware.b4a.Msgbox: boolean stopCodeAfterDismiss> = 0;
+
+        <anywheresoftware.b4a.Msgbox: boolean isDismissing> = 0;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        <anywheresoftware.b4a.Msgbox: java.util.ArrayList listOfAsyncDialogs> = $r2;
+
+        $r3 = class "Landroid/os/MessageQueue;";
+
+     label01:
+        $r4 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>("next", null);
+
+     label02:
+        <anywheresoftware.b4a.Msgbox: java.lang.reflect.Method nextM> = $r4;
+
+        $r4 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Method nextM>;
+
+     label03:
+        virtualinvoke $r4.<java.lang.reflect.Method: void setAccessible(boolean)>(1);
+
+     label04:
+        $r3 = class "Landroid/os/Message;";
+
+     label05:
+        $r5 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Field getDeclaredField(java.lang.String)>("when");
+
+     label06:
+        <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field whenF> = $r5;
+
+        $r5 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field whenF>;
+
+     label07:
+        virtualinvoke $r5.<java.lang.reflect.Field: void setAccessible(boolean)>(1);
+
+     label08:
+        <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field flagsF> = null;
+
+        $r3 = class "Landroid/os/Message;";
+
+     label09:
+        $r5 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Field getDeclaredField(java.lang.String)>("flags");
+
+     label10:
+        <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field flagsF> = $r5;
+
+        $r5 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field flagsF>;
+
+     label11:
+        virtualinvoke $r5.<java.lang.reflect.Field: void setAccessible(boolean)>(1);
+
+     label12:
+        $r3 = class "Landroid/os/Message;";
+
+     label13:
+        $r6 = newarray (java.lang.Class)[0];
+
+        $r4 = virtualinvoke $r3.<java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>("recycleUnchecked", $r6);
+
+     label14:
+        <anywheresoftware.b4a.Msgbox: java.lang.reflect.Method recycleUnchecked> = $r4;
+
+        $r4 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Method recycleUnchecked>;
+
+     label15:
+        virtualinvoke $r4.<java.lang.reflect.Method: void setAccessible(boolean)>(1);
+
+     label16:
+        return;
+
+     label17:
+        $r0 := @caughtexception;
+
+        virtualinvoke $r0.<java.lang.Exception: void printStackTrace()>();
+
+        return;
+
+     label18:
+        $r7 := @caughtexception;
+
+        return;
+
+        catch java.lang.Exception from label01 to label02 with label17;
+        catch java.lang.Exception from label03 to label04 with label17;
+        catch java.lang.Exception from label05 to label06 with label17;
+        catch java.lang.Exception from label07 to label08 with label17;
+        catch java.lang.Exception from label09 to label10 with label18;
+        catch java.lang.Exception from label11 to label12 with label18;
+        catch java.lang.Exception from label13 to label14 with label18;
+        catch java.lang.Exception from label15 to label16 with label18;
+    }
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.Msgbox $r0;
+
+        $r0 := @this: anywheresoftware.b4a.Msgbox;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    static java.lang.ref.WeakReference access$0()
+    {
+        java.lang.ref.WeakReference r0;
+
+        r0 = <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD>;
+
+        return r0;
+    }
+
+    public static void debugWait(android.app.Dialog)
+    {
+        android.app.Dialog $r0;
+        boolean $z0;
+        java.io.PrintStream $r1;
+        anywheresoftware.b4a.B4AUncaughtException $r2;
+        java.lang.Throwable $r3;
+
+        $r0 := @parameter0: android.app.Dialog;
+
+        $z0 = <anywheresoftware.b4a.Msgbox: boolean visible>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("already visible");
+
+        return;
+
+     label1:
+        $z0 = <anywheresoftware.b4a.Msgbox: boolean isDismissing>;
+
+     label2:
+        if $z0 == 0 goto label3;
+
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 0;
+
+        return;
+
+     label3:
+        <anywheresoftware.b4a.Msgbox: boolean stopCodeAfterDismiss> = 0;
+
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 1;
+
+        staticinvoke <anywheresoftware.b4a.Msgbox: void waitForMessage(boolean)>(1);
+
+        $z0 = <anywheresoftware.b4a.Msgbox: boolean stopCodeAfterDismiss>;
+
+     label4:
+        if $z0 == 0 goto label7;
+
+     label5:
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("", "throwing b4a uncaught exception");
+
+        $r2 = new anywheresoftware.b4a.B4AUncaughtException;
+
+        specialinvoke $r2.<anywheresoftware.b4a.B4AUncaughtException: void <init>()>();
+
+        throw $r2;
+
+     label6:
+        $r3 := @caughtexception;
+
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 0;
+
+        throw $r3;
+
+     label7:
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 0;
+
+        return;
+
+        catch java.lang.Throwable from label1 to label2 with label6;
+        catch java.lang.Throwable from label3 to label4 with label6;
+        catch java.lang.Throwable from label5 to label6 with label6;
+    }
+
+    public static void dismiss(boolean)
+    {
+        boolean $z0, $z1;
+        java.lang.Class $r0;
+        java.lang.reflect.Method $r1;
+        java.lang.ref.WeakReference $r2;
+        java.lang.Object $r3;
+        android.app.AlertDialog $r4;
+        java.util.ArrayList $r5;
+        java.util.Iterator $r6;
+        java.lang.Exception $r7, $r9;
+        android.app.Dialog $r8;
+
+        $z0 := @parameter0: boolean;
+
+        staticinvoke <anywheresoftware.b4a.Msgbox: void dismissProgressDialog()>();
+
+        $z1 = <anywheresoftware.b4a.BA: boolean debugMode>;
+
+        if $z1 == 0 goto label02;
+
+     label01:
+        $r0 = staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>("anywheresoftware.b4a.debug.Debug");
+
+        $r1 = virtualinvoke $r0.<java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>("hideProgressDialogToAvoidLeak", null);
+
+        virtualinvoke $r1.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>(null, null);
+
+     label02:
+        <anywheresoftware.b4a.Msgbox: boolean isDismissing> = 1;
+
+        $z1 = <anywheresoftware.b4a.Msgbox: boolean visible>;
+
+        if $z1 == 0 goto label04;
+
+        $r2 = <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD>;
+
+        if $r2 == null goto label07;
+
+        $r2 = <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD>;
+
+        $r3 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r4 = (android.app.AlertDialog) $r3;
+
+        if $r4 == null goto label03;
+
+        virtualinvoke $r4.<android.app.AlertDialog: void dismiss()>();
+
+     label03:
+        <anywheresoftware.b4a.Msgbox: boolean stopCodeAfterDismiss> = 1;
+
+     label04:
+        $r5 = <anywheresoftware.b4a.Msgbox: java.util.ArrayList listOfAsyncDialogs>;
+
+        $r6 = virtualinvoke $r5.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label05:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 != 0 goto label08;
+
+        return;
+
+     label06:
+        $r7 := @caughtexception;
+
+        virtualinvoke $r7.<java.lang.Exception: void printStackTrace()>();
+
+        goto label02;
+
+     label07:
+        staticinvoke <anywheresoftware.b4a.Msgbox: void sendCloseMyLoopMessage()>();
+
+        goto label03;
+
+     label08:
+        $r3 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+        $r2 = (java.lang.ref.WeakReference) $r3;
+
+        $r3 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r8 = (android.app.Dialog) $r3;
+
+        if $r8 == null goto label05;
+
+        $z0 = virtualinvoke $r8.<android.app.Dialog: boolean isShowing()>();
+
+        if $z0 == 0 goto label05;
+
+     label09:
+        virtualinvoke $r8.<android.app.Dialog: void dismiss()>();
+
+     label10:
+        goto label05;
+
+     label11:
+        $r9 := @caughtexception;
+
+        virtualinvoke $r9.<java.lang.Exception: void printStackTrace()>();
+
+        goto label05;
+
+        catch java.lang.Exception from label01 to label02 with label06;
+        catch java.lang.Exception from label09 to label10 with label11;
+    }
+
+    public static void dismissProgressDialog()
+    {
+        java.lang.Exception $r0;
+        java.lang.Object $r1;
+        java.lang.ref.WeakReference $r2;
+        android.app.ProgressDialog $r3;
+
+        $r2 = <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference pd>;
+
+        if $r2 == null goto label4;
+
+        $r2 = <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference pd>;
+
+        $r1 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r3 = (android.app.ProgressDialog) $r1;
+
+        if $r3 == null goto label4;
+
+     label1:
+        virtualinvoke $r3.<android.app.ProgressDialog: void dismiss()>();
+
+     label2:
+        <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference pd> = null;
+
+        return;
+
+     label3:
+        $r0 := @caughtexception;
+
+        staticinvoke <anywheresoftware.b4a.BA: void LogInfo(java.lang.String)>("Error while dismissing ProgressDialog");
+
+        virtualinvoke $r0.<java.lang.Exception: void printStackTrace()>();
+
+        goto label2;
+
+     label4:
+        return;
+
+        catch java.lang.Exception from label1 to label2 with label3;
+    }
+
+    public static boolean isItReallyAMsgboxAndNotDebug()
+    {
+        java.lang.ref.WeakReference $r0;
+
+        $r0 = <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD>;
+
+        if $r0 == null goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public static void msgbox(android.app.AlertDialog, boolean)
+    {
+        android.app.AlertDialog $r0;
+        boolean $z0, $z1;
+        android.os.Message $r1;
+        android.os.Handler $r2;
+        java.lang.Object $r3;
+        java.lang.ref.WeakReference $r4;
+        anywheresoftware.b4a.B4AUncaughtException $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @parameter0: android.app.AlertDialog;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 = <anywheresoftware.b4a.Msgbox: boolean visible>;
+
+        if $z1 == 0 goto label1;
+
+        return;
+
+     label1:
+        $z1 = <anywheresoftware.b4a.Msgbox: boolean isDismissing>;
+
+     label2:
+        if $z1 == 0 goto label3;
+
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 0;
+
+        <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD> = null;
+
+        return;
+
+     label3:
+        <anywheresoftware.b4a.Msgbox: boolean stopCodeAfterDismiss> = 0;
+
+        $r1 = staticinvoke <android.os.Message: android.os.Message obtain()>();
+
+        $r2 = <anywheresoftware.b4a.BA: android.os.Handler handler>;
+
+        virtualinvoke $r1.<android.os.Message: void setTarget(android.os.Handler)>($r2);
+
+        $r3 = <anywheresoftware.b4a.Msgbox: java.lang.Object closeMyLoop>;
+
+        $r1.<android.os.Message: java.lang.Object obj> = $r3;
+
+        virtualinvoke $r0.<android.app.AlertDialog: void setDismissMessage(android.os.Message)>($r1);
+
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 1;
+
+        $r4 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r4.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r0);
+
+        <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD> = $r4;
+
+        virtualinvoke $r0.<android.app.AlertDialog: void show()>();
+
+        staticinvoke <anywheresoftware.b4a.Msgbox: void waitForMessage(boolean)>(0);
+
+        $z1 = <anywheresoftware.b4a.Msgbox: boolean stopCodeAfterDismiss>;
+
+     label4:
+        if $z1 == 0 goto label7;
+
+        if $z0 != 0 goto label7;
+
+     label5:
+        $r5 = new anywheresoftware.b4a.B4AUncaughtException;
+
+        specialinvoke $r5.<anywheresoftware.b4a.B4AUncaughtException: void <init>()>();
+
+        throw $r5;
+
+     label6:
+        $r6 := @caughtexception;
+
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 0;
+
+        <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD> = null;
+
+        throw $r6;
+
+     label7:
+        <anywheresoftware.b4a.Msgbox: boolean visible> = 0;
+
+        <anywheresoftware.b4a.Msgbox: java.lang.ref.WeakReference visibleAD> = null;
+
+        return;
+
+        catch java.lang.Throwable from label1 to label2 with label6;
+        catch java.lang.Throwable from label3 to label4 with label6;
+        catch java.lang.Throwable from label5 to label6 with label6;
+    }
+
+    public static boolean msgboxIsVisible()
+    {
+        boolean z0;
+
+        z0 = <anywheresoftware.b4a.Msgbox: boolean visible>;
+
+        return z0;
+    }
+
+    private static void recycle(android.os.Message) throws java.lang.IllegalArgumentException, java.lang.IllegalAccessException, java.lang.reflect.InvocationTargetException
+    {
+        android.os.Message $r0;
+        java.lang.reflect.Method $r1;
+        java.lang.Object[] $r2;
+
+        $r0 := @parameter0: android.os.Message;
+
+        $r1 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Method recycleUnchecked>;
+
+        if $r1 == null goto label1;
+
+        $r1 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Method recycleUnchecked>;
+
+        $r2 = newarray (java.lang.Object)[0];
+
+        virtualinvoke $r1.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r0, $r2);
+
+        return;
+
+     label1:
+        virtualinvoke $r0.<android.os.Message: void recycle()>();
+
+        return;
+    }
+
+    public static void sendCloseMyLoopMessage()
+    {
+        android.os.Message $r0;
+        android.os.Handler $r1;
+        java.lang.Object $r2;
+
+        $r0 = staticinvoke <android.os.Message: android.os.Message obtain()>();
+
+        $r1 = <anywheresoftware.b4a.BA: android.os.Handler handler>;
+
+        virtualinvoke $r0.<android.os.Message: void setTarget(android.os.Handler)>($r1);
+
+        $r2 = <anywheresoftware.b4a.Msgbox: java.lang.Object closeMyLoop>;
+
+        $r0.<android.os.Message: java.lang.Object obj> = $r2;
+
+        virtualinvoke $r0.<android.os.Message: void sendToTarget()>();
+
+        return;
+    }
+
+    private static void skipMessage(android.os.Message) throws java.lang.IllegalArgumentException, java.lang.IllegalAccessException
+    {
+        android.os.Message $r0;
+        java.lang.reflect.Field $r1;
+        java.lang.Integer $r2;
+        int $i0;
+        android.os.Handler $r3;
+
+        $r0 := @parameter0: android.os.Message;
+
+        $r1 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field whenF>;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(0);
+
+        virtualinvoke $r1.<java.lang.reflect.Field: void set(java.lang.Object,java.lang.Object)>($r0, $r2);
+
+        $r1 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field flagsF>;
+
+        if $r1 == null goto label1;
+
+        $r1 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field flagsF>;
+
+        $i0 = virtualinvoke $r1.<java.lang.reflect.Field: int getInt(java.lang.Object)>($r0);
+
+        $r1 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Field flagsF>;
+
+        $i0 = $i0 & -2;
+
+        virtualinvoke $r1.<java.lang.reflect.Field: void setInt(java.lang.Object,int)>($r0, $i0);
+
+     label1:
+        $r3 = virtualinvoke $r0.<android.os.Message: android.os.Handler getTarget()>();
+
+        virtualinvoke $r3.<android.os.Handler: boolean sendMessage(android.os.Message)>($r0);
+
+        return;
+    }
+
+    public static void trackAsyncDialog(android.app.Dialog)
+    {
+        android.app.Dialog $r0;
+        java.lang.ref.WeakReference $r1;
+        java.util.ArrayList $r2;
+        java.util.Iterator $r3;
+        boolean $z0;
+        java.lang.Object $r4;
+
+        $r0 := @parameter0: android.app.Dialog;
+
+        $r2 = <anywheresoftware.b4a.Msgbox: java.util.ArrayList listOfAsyncDialogs>;
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r3.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 != 0 goto label2;
+
+        $r2 = <anywheresoftware.b4a.Msgbox: java.util.ArrayList listOfAsyncDialogs>;
+
+        $r1 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r1.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r0);
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r1);
+
+        return;
+
+     label2:
+        $r4 = interfaceinvoke $r3.<java.util.Iterator: java.lang.Object next()>();
+
+        $r1 = (java.lang.ref.WeakReference) $r4;
+
+        $r4 = virtualinvoke $r1.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        if $r4 != null goto label1;
+
+        interfaceinvoke $r3.<java.util.Iterator: void remove()>();
+
+        goto label1;
+    }
+
+    private static void waitForMessage(boolean)
+    {
+        boolean $z0, $z1;
+        java.lang.Exception $r0;
+        android.os.MessageQueue $r1;
+        java.lang.reflect.Method $r2;
+        java.lang.Object $r3, $r5;
+        android.os.Message $r4;
+        java.lang.Runnable $r6;
+        int $i0;
+        android.os.Handler $r7;
+
+        $z0 := @parameter0: boolean;
+
+     label01:
+        $r1 = staticinvoke <android.os.Looper: android.os.MessageQueue myQueue()>();
+
+     label02:
+        $r2 = <anywheresoftware.b4a.Msgbox: java.lang.reflect.Method nextM>;
+
+     label03:
+        $r3 = virtualinvoke $r2.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r1, null);
+
+        $r4 = (android.os.Message) $r3;
+
+     label04:
+        if $r4 == null goto label02;
+
+     label05:
+        $r3 = $r4.<android.os.Message: java.lang.Object obj>;
+
+     label06:
+        $r5 = <anywheresoftware.b4a.Msgbox: java.lang.Object closeMyLoop>;
+
+        if $r3 != $r5 goto label09;
+
+     label07:
+        staticinvoke <anywheresoftware.b4a.Msgbox: void recycle(android.os.Message)>($r4);
+
+     label08:
+        return;
+
+     label09:
+        $r6 = virtualinvoke $r4.<android.os.Message: java.lang.Runnable getCallback()>();
+
+     label10:
+        if $r6 == null goto label16;
+
+     label11:
+        $r6 = virtualinvoke $r4.<android.os.Message: java.lang.Runnable getCallback()>();
+
+     label12:
+        $z1 = $r6 instanceof anywheresoftware.b4a.BA$B4ARunnable;
+
+        if $z1 == 0 goto label16;
+
+     label13:
+        staticinvoke <anywheresoftware.b4a.Msgbox: void skipMessage(android.os.Message)>($r4);
+
+     label14:
+        goto label02;
+
+     label15:
+        $r0 := @caughtexception;
+
+        virtualinvoke $r0.<java.lang.Exception: void printStackTrace()>();
+
+        return;
+
+     label16:
+        goto label17;
+
+     label17:
+        $r7 = virtualinvoke $r4.<android.os.Message: android.os.Handler getTarget()>();
+
+        virtualinvoke $r7.<android.os.Handler: void dispatchMessage(android.os.Message)>($r4);
+
+        staticinvoke <anywheresoftware.b4a.Msgbox: void recycle(android.os.Message)>($r4);
+
+     label18:
+        goto label02;
+
+        catch java.lang.Exception from label01 to label02 with label15;
+        catch java.lang.Exception from label03 to label04 with label15;
+        catch java.lang.Exception from label05 to label06 with label15;
+        catch java.lang.Exception from label07 to label08 with label15;
+        catch java.lang.Exception from label09 to label10 with label15;
+        catch java.lang.Exception from label11 to label12 with label15;
+        catch java.lang.Exception from label13 to label14 with label15;
+        catch java.lang.Exception from label17 to label17 with label15;
+        catch java.lang.Exception from label17 to label17 with label15;
+        catch java.lang.Exception from label17 to label17 with label15;
+        catch java.lang.Exception from label17 to label17 with label15;
+        catch java.lang.Exception from label17 to label17 with label15;
+        catch java.lang.Exception from label17 to label18 with label15;
+    }
+
+    public static void waitForMessage(boolean, boolean)
+    {
+        boolean $z0, $z1;
+
+        $z0 := @parameter0: boolean;
+
+        $z1 := @parameter1: boolean;
+
+        staticinvoke <anywheresoftware.b4a.Msgbox: void waitForMessage(boolean)>($z1);
+
+        return;
+    }
+}

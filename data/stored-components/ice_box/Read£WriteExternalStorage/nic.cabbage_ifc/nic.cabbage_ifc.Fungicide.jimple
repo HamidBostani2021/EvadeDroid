@@ -1,0 +1,1195 @@
+public class nic.cabbage_ifc.Fungicide extends android.app.Activity
+{
+    android.widget.Button b1;
+    android.widget.Button b2;
+    android.widget.EditText et1;
+    android.widget.EditText et2;
+    android.widget.EditText et3;
+    android.widget.Button q1;
+    android.widget.Button q2;
+    android.widget.TextView tt1;
+    android.widget.TextView tt2;
+    android.widget.TextView tv1;
+    android.widget.TextView tv10;
+    android.widget.TextView tv11;
+    android.widget.TextView tv12;
+    android.widget.TextView tv2;
+    android.widget.TextView tv3;
+    android.widget.TextView tv4;
+    android.widget.TextView tv5;
+    android.widget.TextView tv6;
+    android.widget.TextView tv7;
+    android.widget.TextView tv8;
+    android.widget.TextView tv9;
+    android.widget.TextView tvView;
+    java.lang.String x1;
+    java.lang.String x10;
+    java.lang.String x11;
+    java.lang.String x12;
+    java.lang.String x13;
+    java.lang.String x14;
+    java.lang.String x2;
+    java.lang.String x3;
+    java.lang.String x4;
+    java.lang.String x5;
+    java.lang.String x6;
+    java.lang.String x7;
+    java.lang.String x8;
+    java.lang.String x9;
+    java.lang.String y1;
+    java.lang.String y4;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        nic.cabbage_ifc.Fungicide $r0;
+
+        $r0 := @this: nic.cabbage_ifc.Fungicide;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        nic.cabbage_ifc.Fungicide $r0;
+        android.view.View $r1, $r10;
+        java.text.DecimalFormat $r2;
+        android.widget.Button $r3;
+        boolean $z0;
+        java.lang.String $r4;
+        android.widget.EditText $r5;
+        android.text.Editable $r6;
+        int $i0;
+        android.widget.Toast $r7;
+        java.lang.Object $r8;
+        android.view.inputmethod.InputMethodManager $r9;
+        android.os.IBinder $r11;
+        android.widget.TextView $r12;
+        java.lang.StringBuilder $r13;
+        float $f0, $f1;
+        double $d0;
+        byte $b1;
+        java.lang.Exception $r14, $r15, $r16, $r17, $r18;
+
+        $r0 := @this: nic.cabbage_ifc.Fungicide;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = new java.text.DecimalFormat;
+
+        specialinvoke $r2.<java.text.DecimalFormat: void <init>(java.lang.String)>("####.##");
+
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b1>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Object: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label09;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Root rot/Collar rot");
+
+        if $z0 == 0 goto label02;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("B-F:SLT:Trichoderma viride 1% WP");
+
+        if $z0 == 0 goto label02;
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $i0 = interfaceinvoke $r6.<android.text.Editable: int length()>();
+
+        if $i0 != 0 goto label18;
+
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "Please insert value ", 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+     label01:
+        $r8 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: java.lang.Object getSystemService(java.lang.String)>("input_method");
+
+        $r9 = (android.view.inputmethod.InputMethodManager) $r8;
+
+        $r10 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View getCurrentFocus()>();
+
+        $r11 = virtualinvoke $r10.<android.view.View: android.os.IBinder getWindowToken()>();
+
+        virtualinvoke $r9.<android.view.inputmethod.InputMethodManager: boolean hideSoftInputFromWindow(android.os.IBinder,int)>($r11, 0);
+
+     label02:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Root rot/Collar rot");
+
+        if $z0 == 0 goto label04;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("B-F:SA:Trichoderma viride 1% WP");
+
+        if $z0 == 0 goto label04;
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $i0 = interfaceinvoke $r6.<android.text.Editable: int length()>();
+
+        if $i0 != 0 goto label20;
+
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "Please insert value ", 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+     label03:
+        $r8 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: java.lang.Object getSystemService(java.lang.String)>("input_method");
+
+        $r9 = (android.view.inputmethod.InputMethodManager) $r8;
+
+        $r10 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View getCurrentFocus()>();
+
+        $r11 = virtualinvoke $r10.<android.view.View: android.os.IBinder getWindowToken()>();
+
+        virtualinvoke $r9.<android.view.inputmethod.InputMethodManager: boolean hideSoftInputFromWindow(android.os.IBinder,int)>($r11, 0);
+
+     label04:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Damping off");
+
+        if $z0 == 0 goto label06;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("C-F:Captan 75% WP");
+
+        if $z0 == 0 goto label06;
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $i0 = interfaceinvoke $r6.<android.text.Editable: int length()>();
+
+        if $i0 != 0 goto label21;
+
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "Please insert value ", 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+     label05:
+        $r8 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: java.lang.Object getSystemService(java.lang.String)>("input_method");
+
+        $r9 = (android.view.inputmethod.InputMethodManager) $r8;
+
+        $r10 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View getCurrentFocus()>();
+
+        $r11 = virtualinvoke $r10.<android.view.View: android.os.IBinder getWindowToken()>();
+
+        virtualinvoke $r9.<android.view.inputmethod.InputMethodManager: boolean hideSoftInputFromWindow(android.os.IBinder,int)>($r11, 0);
+
+     label06:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Damping off");
+
+        if $z0 == 0 goto label09;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("C-F:Captan 75% WS");
+
+        if $z0 == 0 goto label09;
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $i0 = interfaceinvoke $r6.<android.text.Editable: int length()>();
+
+        if $i0 == 0 goto label07;
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et3>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $i0 = interfaceinvoke $r6.<android.text.Editable: int length()>();
+
+        if $i0 != 0 goto label23;
+
+     label07:
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "Please insert value ", 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+     label08:
+        $r8 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: java.lang.Object getSystemService(java.lang.String)>("input_method");
+
+        $r9 = (android.view.inputmethod.InputMethodManager) $r8;
+
+        $r10 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View getCurrentFocus()>();
+
+        $r11 = virtualinvoke $r10.<android.view.View: android.os.IBinder getWindowToken()>();
+
+        virtualinvoke $r9.<android.view.inputmethod.InputMethodManager: boolean hideSoftInputFromWindow(android.os.IBinder,int)>($r11, 0);
+
+     label09:
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b2>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Object: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label11;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Damping off");
+
+        if $z0 == 0 goto label11;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("C-F:Captan 75% WP");
+
+        if $z0 == 0 goto label11;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv9>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt2>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        $r4 = virtualinvoke $r2.<java.text.DecimalFormat: java.lang.String format(double)>(2.5);
+
+        $r4 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r4);
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>(java.lang.String)>($r4);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" gram/litre of water (Note: Apply Captan 75% WP @ 2.5 kg in 1000 litres of water as Soil drench in nursery)");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+     label10:
+        $r8 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: java.lang.Object getSystemService(java.lang.String)>("input_method");
+
+        $r9 = (android.view.inputmethod.InputMethodManager) $r8;
+
+        $r10 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View getCurrentFocus()>();
+
+        $r11 = virtualinvoke $r10.<android.view.View: android.os.IBinder getWindowToken()>();
+
+        virtualinvoke $r9.<android.view.inputmethod.InputMethodManager: boolean hideSoftInputFromWindow(android.os.IBinder,int)>($r11, 0);
+
+     label11:
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button q1>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Object: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label15;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Root rot/Collar rot");
+
+        if $z0 == 0 goto label12;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("B-F:SLT:Trichoderma viride 1% WP");
+
+        if $z0 == 0 goto label12;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv3>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        virtualinvoke $r5.<android.widget.EditText: void setVisibility(int)>(0);
+
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b1>;
+
+        virtualinvoke $r3.<android.widget.Button: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("10 gram/litre of water");
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv3>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("Quantity of water proposed for seedling dip (litre)");
+
+     label12:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Root rot/Collar rot");
+
+        if $z0 == 0 goto label13;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("B-F:SA:Trichoderma viride 1% WP");
+
+        if $z0 == 0 goto label13;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv3>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        virtualinvoke $r5.<android.widget.EditText: void setVisibility(int)>(0);
+
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b1>;
+
+        virtualinvoke $r3.<android.widget.Button: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("2.5 (kg/ha)");
+
+     label13:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Damping off");
+
+        if $z0 == 0 goto label14;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("C-F:Captan 75% WP");
+
+        if $z0 == 0 goto label14;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv3>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        virtualinvoke $r5.<android.widget.EditText: void setVisibility(int)>(0);
+
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b1>;
+
+        virtualinvoke $r3.<android.widget.Button: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("2500(gram/ha)");
+
+     label14:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Damping off");
+
+        if $z0 == 0 goto label15;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("C-F:Captan 75% WS");
+
+        if $z0 == 0 goto label15;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv3>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv12>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et3>;
+
+        virtualinvoke $r5.<android.widget.EditText: void setVisibility(int)>(0);
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        virtualinvoke $r5.<android.widget.EditText: void setVisibility(int)>(0);
+
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b1>;
+
+        virtualinvoke $r3.<android.widget.Button: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("20-30(gram/kg seeds)");
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv3>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("Quantity of Seed(kg)");
+
+     label15:
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button q2>;
+
+        $z0 = virtualinvoke $r1.<java.lang.Object: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label31;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Root rot/Collar rot");
+
+        if $z0 == 0 goto label16;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("B-F:SA:Trichoderma viride 1% WP");
+
+        if $z0 == 0 goto label16;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv7>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv7>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("Mix 2.5 kg of Trichoderma viride 1.0% WP with 62.5 kg FYM and broadcast uniformly over a hectare of land and irrigate the field immediately");
+
+     label16:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Damping off");
+
+        if $z0 == 0 goto label17;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("C-F:Captan 75% WP");
+
+        if $z0 == 0 goto label17;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv5>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv6>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv7>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b2>;
+
+        virtualinvoke $r3.<android.widget.Button: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv6>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("1000");
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>("2500(gram/ha)");
+
+     label17:
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("Damping off");
+
+        if $z0 == 0 goto label31;
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>("C-F:Captan 75% WS");
+
+        if $z0 == 0 goto label31;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv7>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv7>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>(java.lang.String)>("Make slurry of required quantity of ");
+
+        $r4 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" with minimum volume of water & coat the seeds uniformly. Shade & dry following the seed treatment. ");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        return;
+
+     label18:
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r4 = interfaceinvoke $r6.<android.text.Editable: java.lang.String toString()>();
+
+        $f0 = staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>($r4);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv4>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $f1 = 10.0F * $f0;
+
+        $d0 = (double) $f1;
+
+        $b1 = $d0 cmpl 1000.0;
+
+        if $b1 < 0 goto label19;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>(java.lang.String)>("Mix ");
+
+        $f1 = 10.0F * $f0;
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f1);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" gram of Trichoderma viride 1% WP in ");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" litre of water and dip the cabbage seedling root for 30 minutes");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        goto label01;
+
+     label19:
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>(java.lang.String)>("Mix ");
+
+        $f1 = 10.0F * $f0;
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f1);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" gram of Trichoderma viride 1% WP in ");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" litre of water and dip the cabbage seedling root for 30 minutes");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        goto label01;
+
+     label20:
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r4 = interfaceinvoke $r6.<android.text.Editable: java.lang.String toString()>();
+
+        $f0 = staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>($r4);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv4>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $d0 = (double) $f0;
+
+        $d0 = 2.5 * $d0;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r2.<java.text.DecimalFormat: java.lang.String format(double)>($d0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("kg of Trichoderma viride 1% WP for the area of ");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ha");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        goto label03;
+
+     label21:
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r4 = interfaceinvoke $r6.<android.text.Editable: java.lang.String toString()>();
+
+        $f0 = staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>($r4);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv4>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $f1 = 2500.0F * $f0;
+
+        $d0 = (double) $f1;
+
+        $b1 = $d0 cmpl 1000.0;
+
+        if $b1 < 0 goto label22;
+
+        $d0 = $d0 / 1000.0;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r2.<java.text.DecimalFormat: java.lang.String format(double)>($d0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("kg of Captan 75% WP for the area of ");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ha");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        goto label05;
+
+     label22:
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r2.<java.text.DecimalFormat: java.lang.String format(double)>($d0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("gram of Captan 75% WP for the area of ");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ha");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        goto label05;
+
+     label23:
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r4 = interfaceinvoke $r6.<android.text.Editable: java.lang.String toString()>();
+
+        $f0 = staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>($r4);
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et3>;
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r4 = interfaceinvoke $r6.<android.text.Editable: java.lang.String toString()>();
+
+        $f1 = staticinvoke <java.lang.Float: float parseFloat(java.lang.String)>($r4);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv4>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $b1 = $f1 cmpg 30.0F;
+
+        if $b1 > 0 goto label25;
+
+        $b1 = $f1 cmpl 20.0F;
+
+        if $b1 < 0 goto label25;
+
+        $f1 = $f1 / 1.0F;
+
+        $f1 = $f1 * $f0;
+
+        $d0 = (double) $f1;
+
+        $b1 = $d0 cmpl 1000.0;
+
+        if $b1 < 0 goto label24;
+
+        $d0 = $d0 / 1000.0;
+
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r2.<java.text.DecimalFormat: java.lang.String format(double)>($d0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("kg of Captan 75% WS for the quantity of ");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" Kg seeds");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        goto label08;
+
+     label24:
+        $r12 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1>;
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r2.<java.text.DecimalFormat: java.lang.String format(double)>($d0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("gram of Captan 75% WS for the quantity of ");
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(float)>($f0);
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" Kg seeds");
+
+        $r4 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r4);
+
+        goto label08;
+
+     label25:
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "Please check the value that you inserted ", 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+        goto label08;
+
+     label26:
+        $r14 := @caughtexception;
+
+        goto label11;
+
+     label27:
+        $r15 := @caughtexception;
+
+        goto label09;
+
+     label28:
+        $r16 := @caughtexception;
+
+        goto label06;
+
+     label29:
+        $r17 := @caughtexception;
+
+        goto label04;
+
+     label30:
+        $r18 := @caughtexception;
+
+        goto label02;
+
+     label31:
+        return;
+
+        catch java.lang.Exception from label01 to label02 with label30;
+        catch java.lang.Exception from label03 to label04 with label29;
+        catch java.lang.Exception from label05 to label06 with label28;
+        catch java.lang.Exception from label08 to label09 with label27;
+        catch java.lang.Exception from label10 to label11 with label26;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        nic.cabbage_ifc.Fungicide $r0;
+        android.os.Bundle $r1;
+        android.view.View $r2;
+        android.widget.TextView $r3;
+        android.widget.EditText $r4;
+        android.widget.Button $r5;
+        android.content.Intent $r6;
+        java.lang.String $r7;
+        java.lang.StringBuilder $r8;
+        boolean $z0;
+        android.app.ActionBar $r9;
+
+        $r0 := @this: nic.cabbage_ifc.Fungicide;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: void setContentView(int)>(2130903043);
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296270);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tvView> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296278);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt1> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296286);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tt2> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296272);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv1> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296273);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv2> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296276);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv3> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296277);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv4> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296280);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv5> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296281);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv6> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296282);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv7> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296283);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv8> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296274);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv12> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296285);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv9> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296287);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv10> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296288);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tv11> = $r3;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296257);
+
+        $r4 = (android.widget.EditText) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et1> = $r4;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296259);
+
+        $r4 = (android.widget.EditText) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et2> = $r4;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296275);
+
+        $r4 = (android.widget.EditText) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.EditText et3> = $r4;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296260);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b1> = $r5;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296284);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button b2> = $r5;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296271);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button q1> = $r5;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.View findViewById(int)>(2131296279);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button q2> = $r5;
+
+        $r6 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.content.Intent getIntent()>();
+
+        $r7 = virtualinvoke $r6.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("insect");
+
+        $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1> = $r7;
+
+        $r7 = virtualinvoke $r6.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("chemical");
+
+        $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4> = $r7;
+
+        $r3 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.TextView tvView>;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>(java.lang.String)>("Selected Disease: ");
+
+        $r7 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("   & Fungicide:  ");
+
+        $r7 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r7);
+
+        $r7 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y1>;
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>("Root rot/Collar rot");
+
+        if $z0 == 0 goto label1;
+
+        $r7 = $r0.<nic.cabbage_ifc.Fungicide: java.lang.String y4>;
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>("B-F:SLT:Trichoderma viride 1% WP");
+
+        if $z0 == 0 goto label1;
+
+        $r5 = $r0.<nic.cabbage_ifc.Fungicide: android.widget.Button q2>;
+
+        virtualinvoke $r5.<android.widget.Button: void setVisibility(int)>(8);
+
+     label1:
+        $r9 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.app.ActionBar getActionBar()>();
+
+        virtualinvoke $r9.<android.app.ActionBar: void setDisplayHomeAsUpEnabled(boolean)>(1);
+
+        return;
+    }
+
+    public boolean onCreateOptionsMenu(android.view.Menu)
+    {
+        nic.cabbage_ifc.Fungicide $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+
+        $r0 := @this: nic.cabbage_ifc.Fungicide;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: android.view.MenuInflater getMenuInflater()>();
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>(2131230721, $r1);
+
+        return 1;
+    }
+
+    public boolean onOptionsItemSelected(android.view.MenuItem)
+    {
+        nic.cabbage_ifc.Fungicide $r0;
+        android.view.MenuItem $r1;
+        android.content.Intent $r2;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @this: nic.cabbage_ifc.Fungicide;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        lookupswitch($i0)
+        {
+            case 16908332: goto label2;
+            default: goto label1;
+        };
+
+     label1:
+        $z0 = specialinvoke $r0.<android.app.Activity: boolean onOptionsItemSelected(android.view.MenuItem)>($r1);
+
+        return $z0;
+
+     label2:
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lnic/cabbage_ifc/Home;");
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent addFlags(int)>(67108864);
+
+        virtualinvoke $r0.<nic.cabbage_ifc.Fungicide: void startActivity(android.content.Intent)>($r2);
+
+        return 1;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        nic.cabbage_ifc.Fungicide this;
+        android.content.Intent $r0;
+
+        this := @this: nic.cabbage_ifc.Fungicide;
+
+        $r0 = this.<nic.cabbage_ifc.Fungicide: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        nic.cabbage_ifc.Fungicide this;
+        android.content.Intent parameter0;
+
+        this := @this: nic.cabbage_ifc.Fungicide;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<nic.cabbage_ifc.Fungicide: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        nic.cabbage_ifc.Fungicide this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: nic.cabbage_ifc.Fungicide;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<nic.cabbage_ifc.Fungicide: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

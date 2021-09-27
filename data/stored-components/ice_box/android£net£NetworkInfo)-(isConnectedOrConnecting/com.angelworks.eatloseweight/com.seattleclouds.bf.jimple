@@ -1,0 +1,803 @@
+public class com.seattleclouds.bf extends java.lang.Object
+{
+    private static com.seattleclouds.bf a;
+
+    public void <init>()
+    {
+        com.seattleclouds.bf $r0;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static com.seattleclouds.ai a(android.support.v4.app.Fragment)
+    {
+        android.support.v4.app.Fragment $r0;
+        boolean $z0;
+        com.seattleclouds.ai $r1;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        if $r0 != null goto label1;
+
+        return null;
+
+     label1:
+        $r0 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.Fragment r()>();
+
+        if $r0 != null goto label2;
+
+        return null;
+
+     label2:
+        $z0 = $r0 instanceof com.seattleclouds.ai;
+
+        if $z0 == 0 goto label3;
+
+        $r1 = (com.seattleclouds.ai) $r0;
+
+        return $r1;
+
+     label3:
+        $r1 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.ai a(android.support.v4.app.Fragment)>($r0);
+
+        return $r1;
+    }
+
+    public static com.seattleclouds.bf a()
+    {
+        com.seattleclouds.bf $r0;
+
+        $r0 = <com.seattleclouds.bf: com.seattleclouds.bf a>;
+
+        if $r0 != null goto label1;
+
+        $r0 = new com.seattleclouds.bf;
+
+        specialinvoke $r0.<com.seattleclouds.bf: void <init>()>();
+
+        <com.seattleclouds.bf: com.seattleclouds.bf a> = $r0;
+
+     label1:
+        $r0 = <com.seattleclouds.bf: com.seattleclouds.bf a>;
+
+        return $r0;
+    }
+
+    private java.lang.CharSequence a(android.support.v4.app.Fragment, com.seattleclouds.t)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+        com.seattleclouds.t $r2;
+        boolean $z0;
+        com.seattleclouds.r $r3;
+        com.seattleclouds.bi $r4;
+        java.lang.String $r5;
+        java.lang.Object $r6;
+        com.seattleclouds.bh $r7;
+        java.lang.CharSequence $r8;
+        com.seattleclouds.ai $r9;
+        android.support.v4.app.ac $r10;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $r2 := @parameter1: com.seattleclouds.t;
+
+        $z0 = $r1 instanceof com.seattleclouds.r;
+
+        if $z0 == 0 goto label1;
+
+        $r3 = (com.seattleclouds.r) $r1;
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.r: boolean j_()>();
+
+        if $z0 == 0 goto label1;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.r: com.seattleclouds.bi h_()>();
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.bi: java.lang.String d()>();
+
+        $r6 = $r5;
+
+        $z0 = staticinvoke <android.text.TextUtils: boolean isEmpty(java.lang.CharSequence)>($r5);
+
+        if $z0 != 0 goto label2;
+
+        return $r5;
+
+     label1:
+        $r6 = null;
+
+     label2:
+        if $r2 == null goto label3;
+
+        $r5 = virtualinvoke $r2.<com.seattleclouds.t: java.lang.String d()>();
+
+        $r6 = $r5;
+
+        $z0 = staticinvoke <android.text.TextUtils: boolean isEmpty(java.lang.CharSequence)>($r5);
+
+        if $z0 == 0 goto label5;
+
+     label3:
+        $z0 = $r1 instanceof com.seattleclouds.bh;
+
+        if $z0 == 0 goto label4;
+
+        $r7 = (com.seattleclouds.bh) $r1;
+
+        $r8 = interfaceinvoke $r7.<com.seattleclouds.bh: java.lang.CharSequence c()>();
+
+        $r6 = $r8;
+
+        $z0 = staticinvoke <android.text.TextUtils: boolean isEmpty(java.lang.CharSequence)>($r8);
+
+        if $z0 == 0 goto label6;
+
+     label4:
+        $r9 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.ai a(android.support.v4.app.Fragment)>($r1);
+
+        if $r9 != null goto label7;
+
+        if $r1 == null goto label8;
+
+        $r10 = virtualinvoke $r1.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        if $r10 == null goto label9;
+
+        $r10 = virtualinvoke $r1.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $r8 = virtualinvoke $r10.<android.support.v4.app.ac: java.lang.CharSequence getTitle()>();
+
+        return $r8;
+
+     label5:
+        return $r5;
+
+     label6:
+        return $r8;
+
+     label7:
+        $r8 = (java.lang.CharSequence) $r6;
+
+        return $r8;
+
+     label8:
+        $r8 = (java.lang.CharSequence) $r6;
+
+        return $r8;
+
+     label9:
+        $r8 = (java.lang.CharSequence) $r6;
+
+        return $r8;
+    }
+
+    public static void a(android.support.v4.app.Fragment, com.seattleclouds.am)
+    {
+        android.support.v4.app.Fragment $r0;
+        com.seattleclouds.am $r1;
+        android.support.v4.app.ac $r2;
+        boolean $z0;
+        com.seattleclouds.p $r3;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        $r1 := @parameter1: com.seattleclouds.am;
+
+        $r2 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $z0 = $r2 instanceof com.seattleclouds.p;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $r3 = (com.seattleclouds.p) $r2;
+
+        virtualinvoke $r3.<com.seattleclouds.p: void a(com.seattleclouds.am)>($r1);
+
+     label1:
+        return;
+    }
+
+    public static void a(android.support.v4.app.Fragment, java.lang.CharSequence)
+    {
+        android.support.v4.app.Fragment $r0;
+        java.lang.CharSequence $r1;
+        com.seattleclouds.p $r2;
+        boolean $z0;
+        com.seattleclouds.ai $r3;
+        java.util.List $r4;
+        int $i0;
+        android.support.v7.a.a $r5;
+        android.os.Handler $r6;
+        com.seattleclouds.bg $r7;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        $r1 := @parameter1: java.lang.CharSequence;
+
+        $r2 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.p e(android.support.v4.app.Fragment)>($r0);
+
+        if $r2 == null goto label3;
+
+        $z0 = $r2 instanceof com.seattleclouds.ab;
+
+        if $z0 == 0 goto label2;
+
+        $r3 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.ai a(android.support.v4.app.Fragment)>($r0);
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r4 = virtualinvoke $r3.<com.seattleclouds.ai: java.util.List ab()>();
+
+        $i0 = interfaceinvoke $r4.<java.util.List: int size()>();
+
+        if $i0 != 1 goto label2;
+
+        $r1 = virtualinvoke $r2.<com.seattleclouds.p: java.lang.CharSequence getTitle()>();
+
+     label2:
+        $r5 = virtualinvoke $r2.<com.seattleclouds.p: android.support.v7.a.a h()>();
+
+        if $r5 == null goto label3;
+
+        $r6 = new android.os.Handler;
+
+        specialinvoke $r6.<android.os.Handler: void <init>()>();
+
+        $r7 = new com.seattleclouds.bg;
+
+        specialinvoke $r7.<com.seattleclouds.bg: void <init>(android.support.v7.a.a,java.lang.CharSequence)>($r5, $r1);
+
+        virtualinvoke $r6.<android.os.Handler: boolean post(java.lang.Runnable)>($r7);
+
+     label3:
+        return;
+    }
+
+    public static void a(android.support.v4.app.Fragment, boolean)
+    {
+        android.support.v4.app.Fragment $r0;
+        boolean $z0;
+        com.seattleclouds.p $r1;
+        android.support.v7.a.a $r2;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        $z0 := @parameter1: boolean;
+
+        $r1 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.p e(android.support.v4.app.Fragment)>($r0);
+
+        if $r1 == null goto label3;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.p: android.support.v7.a.a h()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        if $z0 == 0 goto label2;
+
+        virtualinvoke $r2.<android.support.v7.a.a: void c()>();
+
+        return;
+
+     label2:
+        virtualinvoke $r2.<android.support.v7.a.a: void d()>();
+
+     label3:
+        return;
+    }
+
+    public static android.support.v4.app.Fragment b(android.support.v4.app.Fragment)
+    {
+        android.support.v4.app.Fragment $r0;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        if $r0 != null goto label1;
+
+        return null;
+
+     label1:
+        $r0 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.Fragment r()>();
+
+        if $r0 == null goto label2;
+
+        $r0 = staticinvoke <com.seattleclouds.bf: android.support.v4.app.Fragment h(android.support.v4.app.Fragment)>($r0);
+
+        return $r0;
+
+     label2:
+        return null;
+    }
+
+    public static void b(android.support.v4.app.Fragment, com.seattleclouds.am)
+    {
+        android.support.v4.app.Fragment $r0;
+        com.seattleclouds.am $r1;
+        android.support.v4.app.ac $r2;
+        boolean $z0;
+        com.seattleclouds.p $r3;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        $r1 := @parameter1: com.seattleclouds.am;
+
+        $r2 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $z0 = $r2 instanceof com.seattleclouds.p;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $r3 = (com.seattleclouds.p) $r2;
+
+        virtualinvoke $r3.<com.seattleclouds.p: void b(com.seattleclouds.am)>($r1);
+
+     label1:
+        return;
+    }
+
+    public static void b(android.support.v4.app.Fragment, boolean)
+    {
+        android.support.v4.app.Fragment $r0;
+        boolean $z0, $z1;
+        android.support.v4.app.ac $r1;
+        com.seattleclouds.TabsAppActivity $r2;
+        com.seattleclouds.SCTabsAppActivity $r3;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        $z0 := @parameter1: boolean;
+
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $z1 = $r1 instanceof com.seattleclouds.TabsAppActivity;
+
+        if $z1 == 0 goto label2;
+
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $r2 = (com.seattleclouds.TabsAppActivity) $r1;
+
+        if $z0 == 0 goto label1;
+
+        virtualinvoke $r2.<com.seattleclouds.TabsAppActivity: void o()>();
+
+        return;
+
+     label1:
+        virtualinvoke $r2.<com.seattleclouds.TabsAppActivity: void p()>();
+
+        return;
+
+     label2:
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $z1 = $r1 instanceof com.seattleclouds.SCTabsAppActivity;
+
+        if $z1 == 0 goto label4;
+
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $r3 = (com.seattleclouds.SCTabsAppActivity) $r1;
+
+        if $z0 == 0 goto label3;
+
+        virtualinvoke $r3.<com.seattleclouds.SCTabsAppActivity: void o()>();
+
+        return;
+
+     label3:
+        virtualinvoke $r3.<com.seattleclouds.SCTabsAppActivity: void p()>();
+
+     label4:
+        return;
+    }
+
+    public static void c(android.support.v4.app.Fragment, boolean)
+    {
+        android.support.v4.app.Fragment $r0;
+        boolean $z0, $z1, $z2;
+        android.support.v4.app.ac $r1;
+        com.seattleclouds.TabsAppActivity $r2;
+        com.seattleclouds.t $r3;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 = 1;
+
+        if $z0 == 0 goto label3;
+
+        staticinvoke <com.seattleclouds.bf: void a(android.support.v4.app.Fragment,boolean)>($r0, 0);
+
+        staticinvoke <com.seattleclouds.bf: void b(android.support.v4.app.Fragment,boolean)>($r0, 0);
+
+     label1:
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $z2 = $r1 instanceof com.seattleclouds.TabsAppActivity;
+
+        if $z2 == 0 goto label8;
+
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $r2 = (com.seattleclouds.TabsAppActivity) $r1;
+
+        if $z0 != 0 goto label7;
+
+     label2:
+        virtualinvoke $r2.<com.seattleclouds.TabsAppActivity: void c(boolean)>($z1);
+
+        return;
+
+     label3:
+        $r3 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.t d(android.support.v4.app.Fragment)>($r0);
+
+        if $r3 == null goto label4;
+
+        $z2 = virtualinvoke $r3.<com.seattleclouds.t: boolean e()>();
+
+        if $z2 == 0 goto label6;
+
+     label4:
+        $z2 = 1;
+
+     label5:
+        staticinvoke <com.seattleclouds.bf: void a(android.support.v4.app.Fragment,boolean)>($r0, $z2);
+
+        staticinvoke <com.seattleclouds.bf: void b(android.support.v4.app.Fragment,boolean)>($r0, 1);
+
+        goto label1;
+
+     label6:
+        $z2 = 0;
+
+        goto label5;
+
+     label7:
+        $z1 = 0;
+
+        goto label2;
+
+     label8:
+        return;
+    }
+
+    public static boolean c(android.support.v4.app.Fragment)
+    {
+        android.support.v4.app.Fragment $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        if $r0 != null goto label1;
+
+        return 0;
+
+     label1:
+        $z0 = virtualinvoke $r0.<android.support.v4.app.Fragment: boolean x()>();
+
+        if $z0 != 0 goto label3;
+
+        $z0 = virtualinvoke $r0.<android.support.v4.app.Fragment: boolean A()>();
+
+        if $z0 == 0 goto label3;
+
+        $r0 = staticinvoke <com.seattleclouds.bf: android.support.v4.app.Fragment b(android.support.v4.app.Fragment)>($r0);
+
+        if $r0 == null goto label2;
+
+        $z0 = virtualinvoke $r0.<android.support.v4.app.Fragment: boolean x()>();
+
+        if $z0 != 0 goto label3;
+
+        $z0 = virtualinvoke $r0.<android.support.v4.app.Fragment: boolean A()>();
+
+        if $z0 == 0 goto label3;
+
+     label2:
+        return 1;
+
+     label3:
+        return 0;
+    }
+
+    public static com.seattleclouds.t d(android.support.v4.app.Fragment)
+    {
+        android.support.v4.app.Fragment $r0;
+        android.os.Bundle $r1;
+        java.lang.String $r2;
+        com.seattleclouds.ce $r3;
+        java.util.Map $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.t $r6;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        if $r0 != null goto label1;
+
+        return null;
+
+     label1:
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.os.Bundle j()>();
+
+        if $r1 == null goto label2;
+
+        $r2 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_ID");
+
+        if $r2 == null goto label2;
+
+        $r3 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.ce: java.util.Map w()>();
+
+        $r5 = interfaceinvoke $r4.<java.util.Map: java.lang.Object get(java.lang.Object)>($r2);
+
+        $r6 = (com.seattleclouds.t) $r5;
+
+        return $r6;
+
+     label2:
+        return null;
+    }
+
+    public static com.seattleclouds.p e(android.support.v4.app.Fragment)
+    {
+        android.support.v4.app.Fragment $r0;
+        boolean $z0;
+        android.support.v4.app.ac $r1;
+        com.seattleclouds.p $r2;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        if $r0 != null goto label1;
+
+        return null;
+
+     label1:
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.ac n()>();
+
+        $z0 = $r1 instanceof com.seattleclouds.p;
+
+        if $z0 == 0 goto label2;
+
+        $r2 = (com.seattleclouds.p) $r1;
+
+        return $r2;
+
+     label2:
+        return null;
+    }
+
+    private void e(android.support.v4.app.Fragment, boolean)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+        boolean $z0, $z1;
+        com.seattleclouds.bh $r2;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 = $r1 instanceof com.seattleclouds.bh;
+
+        if $z1 == 0 goto label1;
+
+        $r2 = (com.seattleclouds.bh) $r1;
+
+        $z1 = staticinvoke <com.seattleclouds.bf: boolean c(android.support.v4.app.Fragment)>($r1);
+
+        if $z1 == 0 goto label1;
+
+        interfaceinvoke $r2.<com.seattleclouds.bh: void b(boolean)>($z0);
+
+     label1:
+        return;
+    }
+
+    private static android.support.v4.app.Fragment h(android.support.v4.app.Fragment)
+    {
+        android.support.v4.app.Fragment $r0, $r1;
+
+        $r0 := @parameter0: android.support.v4.app.Fragment;
+
+        if $r0 != null goto label1;
+
+        return null;
+
+     label1:
+        $r1 = virtualinvoke $r0.<android.support.v4.app.Fragment: android.support.v4.app.Fragment r()>();
+
+        if $r1 == null goto label2;
+
+        $r0 = staticinvoke <com.seattleclouds.bf: android.support.v4.app.Fragment h(android.support.v4.app.Fragment)>($r1);
+
+     label2:
+        return $r0;
+    }
+
+    public void a(android.support.v4.app.Fragment, android.content.res.Configuration)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+        android.content.res.Configuration $r2;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $r2 := @parameter1: android.content.res.Configuration;
+
+        return;
+    }
+
+    public void a(android.support.v4.app.Fragment, android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+        android.view.Menu $r2;
+        android.view.MenuInflater $r3;
+        boolean $z0;
+        int $i0;
+        android.view.MenuItem $r4;
+        com.seattleclouds.ai $r5;
+        java.util.List $r6;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $r2 := @parameter1: android.view.Menu;
+
+        $r3 := @parameter2: android.view.MenuInflater;
+
+        $z0 = 1;
+
+        $i0 = <com.seattleclouds.h: int settings>;
+
+        $r4 = interfaceinvoke $r2.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        if $r4 != null goto label1;
+
+        return;
+
+     label1:
+        $r5 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.ai a(android.support.v4.app.Fragment)>($r1);
+
+        if $r5 == null goto label2;
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.ai: java.util.List ab()>();
+
+        $i0 = interfaceinvoke $r6.<java.util.List: int size()>();
+
+        if $i0 == 1 goto label2;
+
+        $z0 = 0;
+
+     label2:
+        interfaceinvoke $r4.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>($z0);
+
+        interfaceinvoke $r4.<android.view.MenuItem: android.view.MenuItem setEnabled(boolean)>($z0);
+
+        return;
+    }
+
+    public boolean a(android.support.v4.app.Fragment, android.content.Intent, int)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+        android.content.Intent $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $i0 := @parameter2: int;
+
+        $r1 = staticinvoke <com.seattleclouds.bf: android.support.v4.app.Fragment b(android.support.v4.app.Fragment)>($r1);
+
+        if $r1 == null goto label1;
+
+        virtualinvoke $r1.<android.support.v4.app.Fragment: void startActivityForResult(android.content.Intent,int)>($r2, $i0);
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public void d(android.support.v4.app.Fragment, boolean)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+        boolean $z0;
+        com.seattleclouds.t $r2;
+        java.lang.CharSequence $r3;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $z0 := @parameter1: boolean;
+
+        if $z0 == 0 goto label4;
+
+        $r2 = staticinvoke <com.seattleclouds.bf: com.seattleclouds.t d(android.support.v4.app.Fragment)>($r1);
+
+        if $r2 == null goto label1;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.t: boolean e()>();
+
+        if $z0 == 0 goto label3;
+
+     label1:
+        $z0 = 1;
+
+     label2:
+        staticinvoke <com.seattleclouds.bf: void a(android.support.v4.app.Fragment,boolean)>($r1, $z0);
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.bf: java.lang.CharSequence a(android.support.v4.app.Fragment,com.seattleclouds.t)>($r1, $r2);
+
+        staticinvoke <com.seattleclouds.bf: void a(android.support.v4.app.Fragment,java.lang.CharSequence)>($r1, $r3);
+
+        return;
+
+     label3:
+        $z0 = 0;
+
+        goto label2;
+
+     label4:
+        return;
+    }
+
+    public void f(android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        specialinvoke $r0.<com.seattleclouds.bf: void e(android.support.v4.app.Fragment,boolean)>($r1, 1);
+
+        return;
+    }
+
+    public void g(android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.bf $r0;
+        android.support.v4.app.Fragment $r1;
+
+        $r0 := @this: com.seattleclouds.bf;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        specialinvoke $r0.<com.seattleclouds.bf: void e(android.support.v4.app.Fragment,boolean)>($r1, 0);
+
+        return;
+    }
+}

@@ -1,0 +1,129 @@
+class com.seattleclouds.modules.m.f extends java.lang.Object implements com.seattleclouds.util.cd
+{
+    final com.seattleclouds.modules.m.a a;
+
+    void <init>(com.seattleclouds.modules.m.a)
+    {
+        com.seattleclouds.modules.m.f $r0;
+        com.seattleclouds.modules.m.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.m.f;
+
+        $r1 := @parameter0: com.seattleclouds.modules.m.a;
+
+        $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.modules.m.f $r0;
+
+        $r0 := @this: com.seattleclouds.modules.m.f;
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.m.f $r0;
+        java.lang.String $r1, $r3;
+        com.seattleclouds.modules.m.a $r2;
+        boolean $z0;
+        android.support.v4.app.ac $r4;
+        android.content.SharedPreferences $r5;
+        android.content.SharedPreferences$Editor $r6;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.m.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.m.a: java.lang.String h(com.seattleclouds.modules.m.a)>($r2);
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r3);
+
+        if $z0 == 0 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        staticinvoke <com.seattleclouds.modules.m.a: int i(com.seattleclouds.modules.m.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $r4 = virtualinvoke $r2.<com.seattleclouds.modules.m.a: android.support.v4.app.ac n()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v4.app.ac: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("Loyalty", 0);
+
+        $r6 = interfaceinvoke $r5.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $r1 = staticinvoke <com.seattleclouds.modules.m.a: java.lang.String a(com.seattleclouds.modules.m.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.m.a: int b(com.seattleclouds.modules.m.a)>($r2);
+
+        interfaceinvoke $r6.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>($r1, $i0);
+
+        interfaceinvoke $r6.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.m.a: void ac()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.m.a: int b(com.seattleclouds.modules.m.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $i1 = staticinvoke <com.seattleclouds.modules.m.a: int j(com.seattleclouds.modules.m.a)>($r2);
+
+        if $i0 < $i1 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $r4 = virtualinvoke $r2.<com.seattleclouds.modules.m.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int info>;
+
+        $i1 = <com.seattleclouds.l: int coupone_show_to_vendor>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r4, $i0, $i1);
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $r4 = virtualinvoke $r2.<com.seattleclouds.modules.m.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int info>;
+
+        $i1 = <com.seattleclouds.l: int loyalty_stamp_succ>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r4, $i0, $i1);
+
+        return;
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.m.f: com.seattleclouds.modules.m.a a>;
+
+        $r4 = virtualinvoke $r2.<com.seattleclouds.modules.m.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int info>;
+
+        $i1 = <com.seattleclouds.l: int loyalty_secretcode_wrong>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r4, $i0, $i1);
+
+        return;
+    }
+}

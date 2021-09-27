@@ -1,0 +1,1460 @@
+public class com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity extends com.seattleclouds.p
+{
+    private android.graphics.drawable.Drawable A;
+    private long B;
+    private boolean C;
+    private boolean D;
+    private boolean E;
+    private boolean m;
+    private boolean n;
+    private boolean o;
+    private boolean p;
+    private boolean q;
+    private java.lang.String r;
+    private java.lang.String s;
+    private java.lang.String t;
+    private android.widget.ImageButton u;
+    private android.widget.ImageButton v;
+    private android.widget.TextView w;
+    private android.media.MediaRecorder x;
+    private java.util.Timer y;
+    private android.graphics.drawable.Drawable z;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        specialinvoke $r0.<com.seattleclouds.p: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean m> = 0;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean n> = 0;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean o> = 0;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean p> = 0;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean q> = 0;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String r> = "";
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.TextView w> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable z> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable A> = null;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long B> = 0L;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean C> = 0;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean D> = 0;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean E> = 1;
+
+        return;
+    }
+
+    static long a(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity, long)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        long $l0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $l0 := @parameter1: long;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long B> = $l0;
+
+        return $l0;
+    }
+
+    static boolean a(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean n>;
+
+        return z0;
+    }
+
+    static void b(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void s()>();
+
+        return;
+    }
+
+    static void c(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void r()>();
+
+        return;
+    }
+
+    private void c(boolean)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+        android.content.Intent $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 := @parameter0: boolean;
+
+        if $z0 != 0 goto label2;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>()>();
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("filePath", $r3);
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("savePath", $r3);
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t>;
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("recordName", $r3);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void setResult(int,android.content.Intent)>(-1, $r1);
+
+     label1:
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean E> = $z0;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void finish()>();
+
+        return;
+
+     label2:
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void setResult(int)>(0);
+
+        goto label1;
+    }
+
+    static long d(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        long l0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        l0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long B>;
+
+        return l0;
+    }
+
+    private void o()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i0 < 9 goto label1;
+
+        $z0 = <com.seattleclouds.App: boolean I>;
+
+        if $z0 == 0 goto label1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void setRequestedOrientation(int)>(7);
+
+        return;
+
+     label1:
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void setRequestedOrientation(int)>(1);
+
+        return;
+    }
+
+    private void p()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+        android.content.pm.PackageManager $r1;
+        java.lang.String $r2;
+        int $i0;
+        android.widget.ImageButton $r3;
+        android.content.res.Resources $r4;
+        android.widget.Toast $r5;
+        android.graphics.drawable.Drawable $r6;
+        android.widget.TextView $r7;
+        java.lang.StringBuilder $r8;
+        android.media.MediaRecorder $r9;
+        java.lang.Exception $r10;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean w()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.pm.PackageManager getPackageManager()>();
+
+        $z0 = virtualinvoke $r1.<android.content.pm.PackageManager: boolean hasSystemFeature(java.lang.String)>("android.hardware.microphone");
+
+        if $z0 != 0 goto label2;
+
+        $r2 = <android.os.Build$VERSION: java.lang.String SDK>;
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r2);
+
+        if $i0 <= 7 goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        virtualinvoke $r3.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v>;
+
+        virtualinvoke $r3.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.l: int voicerecord_picker_no_michrophone_message>;
+
+        $r2 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r5 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, $r2, 1);
+
+        virtualinvoke $r5.<android.widget.Toast: void show()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean D> = 0;
+
+        return;
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        $r6 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable z>;
+
+        virtualinvoke $r3.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r6);
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        virtualinvoke $r3.<android.widget.ImageButton: void setEnabled(boolean)>(1);
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v>;
+
+        virtualinvoke $r3.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long B> = 0L;
+
+        $r7 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.TextView w>;
+
+        virtualinvoke $r7.<android.widget.TextView: void setText(java.lang.CharSequence)>("00:00:00");
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        if $r9 == null goto label3;
+
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void reset()>();
+
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void release()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x> = null;
+
+     label3:
+        $r9 = new android.media.MediaRecorder;
+
+        specialinvoke $r9.<android.media.MediaRecorder: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x> = $r9;
+
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void setAudioSource(int)>(1);
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean q>;
+
+        if $z0 == 0 goto label8;
+
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void setOutputFormat(int)>(2);
+
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void setAudioEncoder(int)>(3);
+
+     label4:
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void setOutputFile(java.lang.String)>($r2);
+
+     label5:
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void prepare()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean D> = 1;
+
+     label6:
+        return;
+
+     label7:
+        $r10 := @caughtexception;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean D> = 0;
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("SCVoiceRecordPicker", "Exception", $r10);
+
+        return;
+
+     label8:
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void setOutputFormat(int)>(1);
+
+        $r9 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r9.<android.media.MediaRecorder: void setAudioEncoder(int)>(1);
+
+        goto label4;
+
+        catch java.lang.Exception from label5 to label6 with label7;
+    }
+
+    private void q()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        java.io.File $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r1 = new java.io.File;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r1.<java.io.File: void <init>(java.lang.String)>($r3);
+
+        $z0 = virtualinvoke $r1.<java.io.File: boolean exists()>();
+
+        if $z0 == 0 goto label1;
+
+        virtualinvoke $r1.<java.io.File: boolean delete()>();
+
+     label1:
+        return;
+    }
+
+    private void r()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+        android.media.MediaRecorder $r1;
+        android.widget.ImageButton $r2;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean n>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r1.<android.media.MediaRecorder: void stop()>();
+
+     label1:
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean p> = 1;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean n> = 0;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void u()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v>;
+
+        virtualinvoke $r2.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        virtualinvoke $r2.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean C>;
+
+        if $z0 == 0 goto label2;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void c(boolean)>(0);
+
+     label2:
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean isFinishing()>();
+
+        if $z0 != 0 goto label3;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void invalidateOptionsMenu()>();
+
+     label3:
+        return;
+    }
+
+    private void s()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+        android.media.MediaRecorder $r1;
+        android.widget.ImageButton $r2;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean w()>();
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean n> = 1;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean p> = 0;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void t()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        if $r1 != null goto label2;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void p()>();
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r1.<android.media.MediaRecorder: void start()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v>;
+
+        virtualinvoke $r2.<android.widget.ImageButton: void setEnabled(boolean)>(1);
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        virtualinvoke $r2.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void invalidateOptionsMenu()>();
+
+        return;
+    }
+
+    private void t()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        com.seattleclouds.modules.voicerecord.x $r1;
+        java.util.Timer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y>;
+
+        if $r2 != null goto label1;
+
+        $r2 = new java.util.Timer;
+
+        specialinvoke $r2.<java.util.Timer: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y>;
+
+        $r1 = new com.seattleclouds.modules.voicerecord.x;
+
+        specialinvoke $r1.<com.seattleclouds.modules.voicerecord.x: void <init>(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)>($r0);
+
+        virtualinvoke $r2.<java.util.Timer: void schedule(java.util.TimerTask,long,long)>($r1, 500L, 500L);
+
+     label1:
+        return;
+    }
+
+    private void u()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        java.util.Timer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y>;
+
+        virtualinvoke $r1.<java.util.Timer: void cancel()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y>;
+
+        virtualinvoke $r1.<java.util.Timer: int purge()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.util.Timer y> = null;
+
+     label1:
+        return;
+    }
+
+    private void v()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+        android.content.Intent $r1;
+        java.lang.String[] $r2;
+        java.lang.String $r3;
+        java.io.File $r4;
+        java.lang.StringBuilder $r5;
+        android.net.Uri $r6;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean o>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        $r2 = newarray (java.lang.String)[1];
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String r>;
+
+        $r2[0] = $r3;
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>("android.intent.extra.EMAIL", $r2);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setType(java.lang.String)>("audio/x-wav");
+
+        $r4 = new java.io.File;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r3);
+
+        $r6 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>($r4);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("android.intent.extra.STREAM", $r6);
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Voice record from ");
+
+        $r3 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.SUBJECT", $r3);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void startActivity(android.content.Intent)>($r1);
+
+        return;
+
+     label1:
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,java.lang.String,java.lang.String)>($r0, "Info", "Can not send voice record from internal storage.");
+
+        return;
+    }
+
+    private boolean w()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+        int $i0;
+        int[] $r1;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a()>();
+
+        if $z0 == 0 goto label4;
+
+        $i0 = staticinvoke <android.support.v4.content.c: int a(android.content.Context,java.lang.String)>($r0, "android.permission.RECORD_AUDIO");
+
+        if $i0 != 0 goto label3;
+
+        $z0 = 1;
+
+     label1:
+        if $z0 != 0 goto label2;
+
+        $r1 = newarray (int)[2];
+
+        $i0 = <com.seattleclouds.l: int feedback_permission_microphone_rational>;
+
+        $r1[0] = $i0;
+
+        $i0 = <com.seattleclouds.l: int feedback_permission_microphone_required_toast>;
+
+        $r1[1] = $i0;
+
+        staticinvoke <com.seattleclouds.util.w: void a(android.support.v7.a.v,int,java.lang.String,int[])>($r0, 34, "android.permission.RECORD_AUDIO", $r1);
+
+     label2:
+        if $z0 != 0 goto label4;
+
+        return 1;
+
+     label3:
+        $z0 = 0;
+
+        goto label1;
+
+     label4:
+        return 0;
+    }
+
+    public java.lang.String a(long)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        long $l0, $l1;
+        java.lang.Object[] $r1;
+        java.lang.Integer $r2;
+        java.lang.String $r3, $r5, $r6;
+        java.lang.Long $r4;
+        java.lang.StringBuilder $r7;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $l0 := @parameter0: long;
+
+        $r1 = newarray (java.lang.Object)[1];
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(2);
+
+        $r1[0] = $r2;
+
+        $r3 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%%0%dd", $r1);
+
+        $l0 = $l0 / 1000L;
+
+        $r1 = newarray (java.lang.Object)[1];
+
+        $l1 = $l0 % 60L;
+
+        $r4 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l1);
+
+        $r1[0] = $r4;
+
+        $r5 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r3, $r1);
+
+        $r1 = newarray (java.lang.Object)[1];
+
+        $l1 = $l0 % 3600L;
+
+        $l1 = $l1 / 60L;
+
+        $r4 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l1);
+
+        $r1[0] = $r4;
+
+        $r6 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r3, $r1);
+
+        $r1 = newarray (java.lang.Object)[1];
+
+        $l0 = $l0 / 3600L;
+
+        $r4 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l0);
+
+        $r1[0] = $r4;
+
+        $r3 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r3, $r1);
+
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(":");
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(":");
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r5;
+    }
+
+    public void l()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        long $l0, $l1;
+        int $i2;
+        byte $b3;
+        android.widget.ImageButton $r1;
+        android.graphics.drawable.Drawable $r2, $r3;
+        android.widget.TextView $r4;
+        java.lang.String $r5;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $l0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long B>;
+
+        $l1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long B>;
+
+        $i2 = (int) $l1;
+
+        $l1 = (long) $i2;
+
+        $l0 = $l0 - $l1;
+
+        $b3 = $l0 cmp 0L;
+
+        if $b3 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        $r2 = virtualinvoke $r1.<android.widget.ImageButton: android.graphics.drawable.Drawable getDrawable()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable z>;
+
+        if $r2 != $r3 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable A>;
+
+        virtualinvoke $r1.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r2);
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.TextView w>;
+
+        $l0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: long B>;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String a(long)>($l0);
+
+        virtualinvoke $r4.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+        return;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable z>;
+
+        virtualinvoke $r1.<android.widget.ImageButton: void setImageDrawable(android.graphics.drawable.Drawable)>($r2);
+
+        goto label1;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        android.content.Intent $r2;
+        boolean $z0;
+        java.lang.String $r3;
+        java.lang.StringBuilder $r4;
+        java.io.File $r5;
+        java.text.SimpleDateFormat $r6;
+        java.util.Date $r7;
+        android.view.View $r8;
+        android.widget.TextView $r9;
+        android.widget.ImageButton $r10;
+        com.seattleclouds.modules.voicerecord.v $r11;
+        com.seattleclouds.modules.voicerecord.w $r12;
+        android.content.res.Resources $r13;
+        android.graphics.drawable.Drawable $r14;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.p: void onCreate(android.os.Bundle)>($r1);
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void o()>();
+
+        $i0 = <com.seattleclouds.j: int voicerecord_picker_view>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void setContentView(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void setResult(int)>(0);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.Intent getIntent()>();
+
+        $r1 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r1 == null goto label1;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("sendonly");
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean m> = $z0;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("emailToSend");
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String r> = $r3;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("recordName");
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t> = $r3;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("recordName");
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s> = $r3;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String,boolean)>("recordOnOpen", 0);
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean C> = $z0;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String,boolean)>("calledFromFeedbackFragment", 0);
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean q> = $z0;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        if $r3 == null goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label4;
+
+     label2:
+        $z0 = staticinvoke <com.seattleclouds.App: boolean k()>();
+
+        if $z0 == 0 goto label8;
+
+        $r3 = staticinvoke <com.seattleclouds.App: java.lang.String j()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s> = $r3;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean o> = 1;
+
+     label3:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/VoiceRecords");
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s> = $r3;
+
+        $r5 = new java.io.File;
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s>;
+
+        specialinvoke $r5.<java.io.File: void <init>(java.lang.String)>($r3);
+
+        $z0 = virtualinvoke $r5.<java.io.File: boolean exists()>();
+
+        if $z0 != 0 goto label4;
+
+        virtualinvoke $r5.<java.io.File: boolean mkdirs()>();
+
+     label4:
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t>;
+
+        if $r3 == null goto label5;
+
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t>;
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label6;
+
+     label5:
+        $r6 = new java.text.SimpleDateFormat;
+
+        specialinvoke $r6.<java.text.SimpleDateFormat: void <init>(java.lang.String)>("dd-MM-yyyy_HH-mm-ss");
+
+        $r7 = new java.util.Date;
+
+        specialinvoke $r7.<java.util.Date: void <init>()>();
+
+        $r3 = virtualinvoke $r6.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>($r7);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".wav");
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String t> = $r3;
+
+     label6:
+        $r3 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String r>;
+
+        if $r3 != null goto label7;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String r> = "";
+
+     label7:
+        $i0 = <com.seattleclouds.h: int vrl_time_label>;
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.TextView) $r8;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.TextView w> = $r9;
+
+        $i0 = <com.seattleclouds.h: int vrl_record_button>;
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.ImageButton) $r8;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton u>;
+
+        $r11 = new com.seattleclouds.modules.voicerecord.v;
+
+        specialinvoke $r11.<com.seattleclouds.modules.voicerecord.v: void <init>(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)>($r0);
+
+        virtualinvoke $r10.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r11);
+
+        $i0 = <com.seattleclouds.h: int vrl_stoprecord_button>;
+
+        $r8 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.ImageButton) $r8;
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v>;
+
+        $r12 = new com.seattleclouds.modules.voicerecord.w;
+
+        specialinvoke $r12.<com.seattleclouds.modules.voicerecord.w: void <init>(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)>($r0);
+
+        virtualinvoke $r10.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>($r12);
+
+        $r10 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.widget.ImageButton v>;
+
+        virtualinvoke $r10.<android.widget.ImageButton: void setEnabled(boolean)>(0);
+
+        $r13 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.g: int vr_record>;
+
+        $r14 = virtualinvoke $r13.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable z> = $r14;
+
+        $r13 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.g: int vr_record_stop>;
+
+        $r14 = virtualinvoke $r13.<android.content.res.Resources: android.graphics.drawable.Drawable getDrawable(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.graphics.drawable.Drawable A> = $r14;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void p()>();
+
+        return;
+
+     label8:
+        $r3 = staticinvoke <com.seattleclouds.App: java.lang.String l()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: java.lang.String s> = $r3;
+
+        goto label3;
+    }
+
+    public boolean onCreateOptionsMenu(android.view.Menu)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        int $i0;
+        boolean $z0;
+        android.view.MenuItem $r3;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.view.MenuInflater getMenuInflater()>();
+
+        $i0 = <com.seattleclouds.k: int voicerecord_picker_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean m>;
+
+        if $z0 == 0 goto label1;
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_use>;
+
+        $r3 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        $i0 = <com.seattleclouds.l: int send_voicerecord>;
+
+        interfaceinvoke $r3.<android.view.MenuItem: android.view.MenuItem setTitle(int)>($i0);
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.p: boolean onCreateOptionsMenu(android.view.Menu)>($r1);
+
+        return $z0;
+    }
+
+    protected void onDestroy()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean E>;
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void q()>();
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.p: void onDestroy()>();
+
+        return;
+    }
+
+    public boolean onOptionsItemSelected(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        boolean $z0;
+        android.media.MediaRecorder $r2;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int vrl_menu_use>;
+
+        if $i0 != $i1 goto label2;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean m>;
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void v()>();
+
+        return 1;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void c(boolean)>(0);
+
+        return 1;
+
+     label2:
+        $i1 = <com.seattleclouds.h: int vrl_menu_retake>;
+
+        if $i0 != $i1 goto label4;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        if $r2 == null goto label3;
+
+        $r2 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r2.<android.media.MediaRecorder: void reset()>();
+
+     label3:
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean p> = 0;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void p()>();
+
+        virtualinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void invalidateOptionsMenu()>();
+
+        return 1;
+
+     label4:
+        $i1 = <com.seattleclouds.h: int vrl_menu_cancel>;
+
+        if $i0 != $i1 goto label5;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void q()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void c(boolean)>(1);
+
+        return 1;
+
+     label5:
+        $z0 = specialinvoke $r0.<com.seattleclouds.p: boolean onOptionsItemSelected(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    protected void onPause()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+        android.media.MediaRecorder $r1;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean n>;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        if $r1 == null goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void r()>();
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.p: void onPause()>();
+
+        return;
+    }
+
+    public boolean onPrepareOptionsMenu(android.view.Menu)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        android.view.Menu $r1;
+        boolean $z0;
+        int $i0;
+        android.view.MenuItem $r2;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean n>;
+
+        if $z0 == 0 goto label3;
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_retake>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setEnabled(boolean)>(0);
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_retake>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(0);
+
+     label1:
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean p>;
+
+        if $z0 != 0 goto label4;
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_retake>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setEnabled(boolean)>(0);
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_retake>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(0);
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_use>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setEnabled(boolean)>(0);
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_use>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(0);
+
+     label2:
+        $z0 = specialinvoke $r0.<com.seattleclouds.p: boolean onPrepareOptionsMenu(android.view.Menu)>($r1);
+
+        return $z0;
+
+     label3:
+        $i0 = <com.seattleclouds.h: int vrl_menu_retake>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setEnabled(boolean)>(1);
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_retake>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(1);
+
+        goto label1;
+
+     label4:
+        $i0 = <com.seattleclouds.h: int vrl_menu_use>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setEnabled(boolean)>(1);
+
+        $i0 = <com.seattleclouds.h: int vrl_menu_use>;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(1);
+
+        goto label2;
+    }
+
+    public void onRequestPermissionsResult(int, java.lang.String[], int[])
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        int $i0;
+        java.lang.String[] $r1;
+        int[] $r2;
+        boolean $z0;
+        android.os.Handler $r3;
+        android.os.Looper $r4;
+        com.seattleclouds.modules.voicerecord.z $r5;
+        android.widget.Toast $r6;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.String[];
+
+        $r2 := @parameter2: int[];
+
+        lookupswitch($i0)
+        {
+            case 34: goto label2;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(java.lang.String[],int[],java.lang.String)>($r1, $r2, "android.permission.RECORD_AUDIO");
+
+        if $z0 != 0 goto label3;
+
+        $r3 = new android.os.Handler;
+
+        $r4 = staticinvoke <android.os.Looper: android.os.Looper myLooper()>();
+
+        specialinvoke $r3.<android.os.Handler: void <init>(android.os.Looper)>($r4);
+
+        $r5 = new com.seattleclouds.modules.voicerecord.z;
+
+        specialinvoke $r5.<com.seattleclouds.modules.voicerecord.z: void <init>(com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity)>($r0);
+
+        virtualinvoke $r3.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 400L);
+
+        return;
+
+     label3:
+        $i0 = <com.seattleclouds.l: int common_permission_granted>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r0, $i0, 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        return;
+    }
+
+    protected void onResume()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean C>;
+
+        if $z0 == 0 goto label1;
+
+        $z0 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: boolean D>;
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: void s()>();
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.p: void onResume()>();
+
+        return;
+    }
+
+    protected void onStop()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity $r0;
+        android.media.MediaRecorder $r1;
+
+        $r0 := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x>;
+
+        virtualinvoke $r1.<android.media.MediaRecorder: void release()>();
+
+        $r0.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.media.MediaRecorder x> = null;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.p: void onStop()>();
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        $r0 = this.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.modules.voicerecord.VoiceRecordPickerActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

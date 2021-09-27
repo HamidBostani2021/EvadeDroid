@@ -1,0 +1,46 @@
+class com.seattleclouds.modules.t.g extends java.lang.Object implements java.lang.Runnable
+{
+    final int a;
+    final com.seattleclouds.modules.t.ai b;
+
+    void <init>(com.seattleclouds.modules.t.ai, int)
+    {
+        com.seattleclouds.modules.t.g $r0;
+        com.seattleclouds.modules.t.ai $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.t.g;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.ai;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.t.g: com.seattleclouds.modules.t.ai b> = $r1;
+
+        $r0.<com.seattleclouds.modules.t.g: int a> = -1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.t.g $r0;
+        int $i0;
+        android.support.v4.view.ViewPager $r1;
+        com.seattleclouds.modules.t.ai $r2;
+
+        $r0 := @this: com.seattleclouds.modules.t.g;
+
+        $r2 = $r0.<com.seattleclouds.modules.t.g: com.seattleclouds.modules.t.ai b>;
+
+        $r1 = staticinvoke <com.seattleclouds.modules.t.ai: android.support.v4.view.ViewPager c(com.seattleclouds.modules.t.ai)>($r2);
+
+        $i0 = $r0.<com.seattleclouds.modules.t.g: int a>;
+
+        virtualinvoke $r1.<android.support.v4.view.ViewPager: void a(int,boolean)>($i0, 1);
+
+        return;
+    }
+}

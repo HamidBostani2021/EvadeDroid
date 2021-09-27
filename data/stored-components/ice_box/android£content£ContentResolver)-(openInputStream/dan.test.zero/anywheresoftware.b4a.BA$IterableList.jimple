@@ -1,0 +1,7 @@
+public interface  anywheresoftware.b4a.BA$IterableList extends java.lang.Object
+{
+
+    public abstract java.lang.Object Get(int);
+
+    public abstract int getSize();
+}

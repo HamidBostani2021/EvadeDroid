@@ -1,0 +1,271 @@
+public final class com.revmob.internal.k extends java.lang.Object
+{
+    public static java.lang.String a;
+    public static boolean b;
+    private static int c;
+    private static java.util.regex.Pattern d;
+    private static java.util.regex.Pattern e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private org.apache.http.impl.client.AbstractHttpClient h;
+    private org.apache.http.client.RedirectHandler i;
+
+    static void <clinit>()
+    {
+        java.util.regex.Pattern $r0;
+
+        <com.revmob.internal.k: int c> = 30;
+
+        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("details\\?id=[a-zA-Z0-9\\.]+");
+
+        <com.revmob.internal.k: java.util.regex.Pattern d> = $r0;
+
+        $r0 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>("android\\?p=[a-zA-Z0-9\\.]+");
+
+        <com.revmob.internal.k: java.util.regex.Pattern e> = $r0;
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String)
+    {
+        com.revmob.internal.k $r0;
+        java.lang.String $r1, $r2;
+        org.apache.http.impl.client.DefaultHttpClient r3;
+        com.revmob.internal.l r4;
+        org.apache.http.impl.client.AbstractHttpClient r5;
+        org.apache.http.client.RedirectHandler r6;
+
+        $r0 := @this: com.revmob.internal.k;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        r3 = new org.apache.http.impl.client.DefaultHttpClient;
+
+        specialinvoke r3.<org.apache.http.impl.client.DefaultHttpClient: void <init>()>();
+
+        r4 = new com.revmob.internal.l;
+
+        specialinvoke r4.<com.revmob.internal.l: void <init>()>();
+
+        r5 = (org.apache.http.impl.client.AbstractHttpClient) r3;
+
+        r6 = (org.apache.http.client.RedirectHandler) r4;
+
+        specialinvoke $r0.<com.revmob.internal.k: void <init>(java.lang.String,java.lang.String,org.apache.http.impl.client.AbstractHttpClient,org.apache.http.client.RedirectHandler)>($r1, $r2, r5, r6);
+
+        return;
+    }
+
+    private void <init>(java.lang.String, java.lang.String, org.apache.http.impl.client.AbstractHttpClient, org.apache.http.client.RedirectHandler)
+    {
+        com.revmob.internal.k $r0;
+        java.lang.String $r1, $r2;
+        org.apache.http.impl.client.AbstractHttpClient $r3;
+        org.apache.http.client.RedirectHandler $r4;
+
+        $r0 := @this: com.revmob.internal.k;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: org.apache.http.impl.client.AbstractHttpClient;
+
+        $r4 := @parameter3: org.apache.http.client.RedirectHandler;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.revmob.internal.k: java.lang.String f> = $r1;
+
+        $r0.<com.revmob.internal.k: java.lang.String g> = $r2;
+
+        $r0.<com.revmob.internal.k: org.apache.http.impl.client.AbstractHttpClient h> = $r3;
+
+        $r0.<com.revmob.internal.k: org.apache.http.client.RedirectHandler i> = $r4;
+
+        <com.revmob.internal.k: boolean b> = 0;
+
+        $r3 = $r0.<com.revmob.internal.k: org.apache.http.impl.client.AbstractHttpClient h>;
+
+        $r4 = $r0.<com.revmob.internal.k: org.apache.http.client.RedirectHandler i>;
+
+        virtualinvoke $r3.<org.apache.http.impl.client.AbstractHttpClient: void setRedirectHandler(org.apache.http.client.RedirectHandler)>($r4);
+
+        return;
+    }
+
+    public static boolean a(java.lang.String)
+    {
+        java.lang.String $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean startsWith(java.lang.String)>("market://");
+
+        return $z0;
+    }
+
+    public static boolean b(java.lang.String)
+    {
+        java.lang.String $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean startsWith(java.lang.String)>("amzn://");
+
+        return $z0;
+    }
+
+    public final java.lang.String c(java.lang.String)
+    {
+        com.revmob.internal.k $r0;
+        java.lang.String $r1, $r4;
+        boolean $z0;
+        com.revmob.internal.d $r2;
+        org.apache.http.impl.client.AbstractHttpClient $r3;
+        int $i0;
+        org.apache.http.client.RedirectHandler $r5;
+        com.revmob.internal.l $r6;
+        java.net.URI $r7;
+        java.util.regex.Pattern $r8;
+        java.util.regex.Matcher $r9, $r10;
+        java.lang.StringBuilder $r11;
+
+        $r0 := @this: com.revmob.internal.k;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label1;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean endsWith(java.lang.String)>("#click");
+
+        if $z0 != 0 goto label1;
+
+        return $r1;
+
+     label1:
+        $r1 = $r0.<com.revmob.internal.k: java.lang.String f>;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean startsWith(java.lang.String)>("market://");
+
+        if $z0 != 0 goto label2;
+
+        $r1 = $r0.<com.revmob.internal.k: java.lang.String f>;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean startsWith(java.lang.String)>("amzn://");
+
+        if $z0 == 0 goto label3;
+
+     label2:
+        $r1 = $r0.<com.revmob.internal.k: java.lang.String f>;
+
+        return $r1;
+
+     label3:
+        $r2 = new com.revmob.internal.d;
+
+        $r3 = $r0.<com.revmob.internal.k: org.apache.http.impl.client.AbstractHttpClient h>;
+
+        specialinvoke $r2.<com.revmob.internal.d: void <init>(org.apache.http.impl.client.AbstractHttpClient)>($r3);
+
+        $i0 = <com.revmob.internal.k: int c>;
+
+        virtualinvoke $r2.<com.revmob.internal.d: void a(int)>($i0);
+
+        $r4 = $r0.<com.revmob.internal.k: java.lang.String f>;
+
+        $r1 = $r0.<com.revmob.internal.k: java.lang.String g>;
+
+        virtualinvoke $r2.<com.revmob.internal.d: org.apache.http.HttpResponse a(java.lang.String,java.lang.String)>($r4, $r1);
+
+        $r1 = <com.revmob.internal.k: java.lang.String a>;
+
+        if $r1 == null goto label4;
+
+        $r1 = <com.revmob.internal.k: java.lang.String a>;
+
+        <com.revmob.internal.k: java.lang.String a> = null;
+
+        return $r1;
+
+     label4:
+        $z0 = <com.revmob.internal.k: boolean b>;
+
+        if $z0 == 0 goto label5;
+
+        <com.revmob.internal.k: boolean b> = 0;
+
+        return "alreadyOpeningBrowser";
+
+     label5:
+        $r5 = $r0.<com.revmob.internal.k: org.apache.http.client.RedirectHandler i>;
+
+        $r6 = (com.revmob.internal.l) $r5;
+
+        $r7 = virtualinvoke $r6.<com.revmob.internal.l: java.net.URI a()>();
+
+        if $r7 == null goto label7;
+
+        $r1 = virtualinvoke $r7.<java.net.URI: java.lang.String toString()>();
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean startsWith(java.lang.String)>("market://");
+
+        if $z0 != 0 goto label8;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean startsWith(java.lang.String)>("amzn://");
+
+        if $z0 != 0 goto label8;
+
+        $r8 = <com.revmob.internal.k: java.util.regex.Pattern d>;
+
+        $r9 = virtualinvoke $r8.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r1);
+
+        $r8 = <com.revmob.internal.k: java.util.regex.Pattern e>;
+
+        $r10 = virtualinvoke $r8.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r1);
+
+        $z0 = virtualinvoke $r9.<java.util.regex.Matcher: boolean find()>();
+
+        if $z0 == 0 goto label6;
+
+        $r1 = virtualinvoke $r9.<java.util.regex.Matcher: java.lang.String group()>();
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>(java.lang.String)>("market://");
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r1;
+
+     label6:
+        $z0 = virtualinvoke $r10.<java.util.regex.Matcher: boolean find()>();
+
+        if $z0 == 0 goto label8;
+
+        $r1 = virtualinvoke $r10.<java.util.regex.Matcher: java.lang.String group()>();
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>(java.lang.String)>("amzn://apps/");
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r1;
+
+     label7:
+        return null;
+
+     label8:
+        return $r1;
+    }
+}

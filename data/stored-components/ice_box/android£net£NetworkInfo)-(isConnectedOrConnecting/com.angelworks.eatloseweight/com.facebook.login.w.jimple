@@ -1,0 +1,481 @@
+class com.facebook.login.w extends java.lang.Object
+{
+    private final com.facebook.appevents.AppEventsLogger a;
+    private java.lang.String b;
+    private java.lang.String c;
+
+    void <init>(android.content.Context, java.lang.String)
+    {
+        com.facebook.login.w $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        com.facebook.appevents.AppEventsLogger $r3;
+        android.content.pm.PackageManager $r4;
+        android.content.pm.PackageInfo $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.facebook.login.w: java.lang.String b> = $r2;
+
+        $r3 = staticinvoke <com.facebook.appevents.AppEventsLogger: com.facebook.appevents.AppEventsLogger a(android.content.Context,java.lang.String)>($r1, $r2);
+
+        $r0.<com.facebook.login.w: com.facebook.appevents.AppEventsLogger a> = $r3;
+
+     label1:
+        $r4 = virtualinvoke $r1.<android.content.Context: android.content.pm.PackageManager getPackageManager()>();
+
+     label2:
+        if $r4 == null goto label6;
+
+     label3:
+        $r5 = virtualinvoke $r4.<android.content.pm.PackageManager: android.content.pm.PackageInfo getPackageInfo(java.lang.String,int)>("com.facebook.katana", 0);
+
+     label4:
+        if $r5 == null goto label6;
+
+        $r2 = $r5.<android.content.pm.PackageInfo: java.lang.String versionName>;
+
+        $r0.<com.facebook.login.w: java.lang.String c> = $r2;
+
+        return;
+
+     label5:
+        $r6 := @caughtexception;
+
+     label6:
+        return;
+
+        catch android.content.pm.PackageManager$NameNotFoundException from label1 to label2 with label5;
+        catch android.content.pm.PackageManager$NameNotFoundException from label3 to label4 with label5;
+    }
+
+    static android.os.Bundle a(java.lang.String)
+    {
+        java.lang.String $r0;
+        android.os.Bundle $r1;
+        long $l0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 = new android.os.Bundle;
+
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+
+        $l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        virtualinvoke $r1.<android.os.Bundle: void putLong(java.lang.String,long)>("1_timestamp_ms", $l0);
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("0_auth_logger_id", $r0);
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("3_method", "");
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("2_result", "");
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("5_error_message", "");
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("4_error_code", "");
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("6_extras", "");
+
+        return $r1;
+    }
+
+    public java.lang.String a()
+    {
+        com.facebook.login.w $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.login.w;
+
+        r1 = $r0.<com.facebook.login.w: java.lang.String b>;
+
+        return r1;
+    }
+
+    public void a(com.facebook.login.LoginClient$Request)
+    {
+        com.facebook.login.w $r0;
+        com.facebook.login.LoginClient$Request $r1;
+        java.lang.String $r2;
+        android.os.Bundle $r3;
+        org.json.JSONObject $r4;
+        com.facebook.login.LoginBehavior $r5;
+        int $i0;
+        java.util.Set $r6;
+        com.facebook.login.DefaultAudience $r7;
+        boolean $z0;
+        com.facebook.appevents.AppEventsLogger $r8;
+        org.json.JSONException $r9;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient$Request;
+
+        $r2 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: java.lang.String e()>();
+
+        $r3 = staticinvoke <com.facebook.login.w: android.os.Bundle a(java.lang.String)>($r2);
+
+        $r4 = new org.json.JSONObject;
+
+     label1:
+        specialinvoke $r4.<org.json.JSONObject: void <init>()>();
+
+        $r5 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: com.facebook.login.LoginBehavior b()>();
+
+        $r2 = virtualinvoke $r5.<com.facebook.login.LoginBehavior: java.lang.String toString()>();
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("login_behavior", $r2);
+
+        $i0 = staticinvoke <com.facebook.login.LoginClient: int d()>();
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>("request_code", $i0);
+
+        $r6 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: java.util.Set a()>();
+
+        $r2 = staticinvoke <android.text.TextUtils: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>(",", $r6);
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("permissions", $r2);
+
+        $r7 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: com.facebook.login.DefaultAudience c()>();
+
+        $r2 = virtualinvoke $r7.<com.facebook.login.DefaultAudience: java.lang.String toString()>();
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("default_audience", $r2);
+
+        $z0 = virtualinvoke $r1.<com.facebook.login.LoginClient$Request: boolean f()>();
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,boolean)>("isReauthorize", $z0);
+
+     label2:
+        $r2 = $r0.<com.facebook.login.w: java.lang.String c>;
+
+        if $r2 == null goto label4;
+
+        $r2 = $r0.<com.facebook.login.w: java.lang.String c>;
+
+     label3:
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("facebookVersion", $r2);
+
+     label4:
+        $r2 = virtualinvoke $r4.<org.json.JSONObject: java.lang.String toString()>();
+
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("6_extras", $r2);
+
+     label5:
+        $r8 = $r0.<com.facebook.login.w: com.facebook.appevents.AppEventsLogger a>;
+
+        virtualinvoke $r8.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>("fb_mobile_login_start", null, $r3);
+
+        return;
+
+     label6:
+        $r9 := @caughtexception;
+
+        goto label5;
+
+        catch org.json.JSONException from label1 to label2 with label6;
+        catch org.json.JSONException from label3 to label5 with label6;
+    }
+
+    public void a(java.lang.String, java.lang.String)
+    {
+        com.facebook.login.w $r0;
+        java.lang.String $r1, $r2;
+        android.os.Bundle $r3;
+        com.facebook.appevents.AppEventsLogger $r4;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = staticinvoke <com.facebook.login.w: android.os.Bundle a(java.lang.String)>($r1);
+
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("3_method", $r2);
+
+        $r4 = $r0.<com.facebook.login.w: com.facebook.appevents.AppEventsLogger a>;
+
+        virtualinvoke $r4.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>("fb_mobile_login_method_start", null, $r3);
+
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.facebook.login.w $r0;
+        java.lang.String $r1, $r2, $r3, $r6;
+        android.os.Bundle $r4;
+        com.facebook.login.LoginClient$Result$Code $r5;
+        com.facebook.appevents.AppEventsLogger $r7;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 = staticinvoke <com.facebook.login.w: android.os.Bundle a(java.lang.String)>("");
+
+        $r5 = <com.facebook.login.LoginClient$Result$Code: com.facebook.login.LoginClient$Result$Code ERROR>;
+
+        $r6 = virtualinvoke $r5.<com.facebook.login.LoginClient$Result$Code: java.lang.String getLoggingValue()>();
+
+        virtualinvoke $r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("2_result", $r6);
+
+        virtualinvoke $r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("5_error_message", "Unexpected call to logCompleteLogin with null pendingAuthorizationRequest.");
+
+        virtualinvoke $r4.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("3_method", $r3);
+
+        $r7 = $r0.<com.facebook.login.w: com.facebook.appevents.AppEventsLogger a>;
+
+        virtualinvoke $r7.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>($r1, null, $r4);
+
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Map)
+    {
+        com.facebook.login.w $r0;
+        java.lang.String $r1, $r2, $r3, $r4, $r5;
+        java.util.Map $r6;
+        android.os.Bundle $r7;
+        boolean $z0;
+        org.json.JSONObject $r8;
+        com.facebook.appevents.AppEventsLogger $r9;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 := @parameter4: java.lang.String;
+
+        $r6 := @parameter5: java.util.Map;
+
+        $r7 = staticinvoke <com.facebook.login.w: android.os.Bundle a(java.lang.String)>($r1);
+
+        if $r3 == null goto label1;
+
+        virtualinvoke $r7.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("2_result", $r3);
+
+     label1:
+        if $r4 == null goto label2;
+
+        virtualinvoke $r7.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("5_error_message", $r4);
+
+     label2:
+        if $r5 == null goto label3;
+
+        virtualinvoke $r7.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("4_error_code", $r5);
+
+     label3:
+        if $r6 == null goto label4;
+
+        $z0 = interfaceinvoke $r6.<java.util.Map: boolean isEmpty()>();
+
+        if $z0 != 0 goto label4;
+
+        $r8 = new org.json.JSONObject;
+
+        specialinvoke $r8.<org.json.JSONObject: void <init>(java.util.Map)>($r6);
+
+        $r1 = virtualinvoke $r8.<org.json.JSONObject: java.lang.String toString()>();
+
+        virtualinvoke $r7.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("6_extras", $r1);
+
+     label4:
+        virtualinvoke $r7.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("3_method", $r2);
+
+        $r9 = $r0.<com.facebook.login.w: com.facebook.appevents.AppEventsLogger a>;
+
+        virtualinvoke $r9.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>("fb_mobile_login_method_complete", null, $r7);
+
+        return;
+    }
+
+    public void a(java.lang.String, java.util.Map, com.facebook.login.LoginClient$Result$Code, java.util.Map, java.lang.Exception)
+    {
+        com.facebook.login.w $r0;
+        java.lang.String $r1;
+        java.util.Map $r2, $r4;
+        com.facebook.login.LoginClient$Result$Code $r3;
+        java.lang.Exception $r5;
+        android.os.Bundle $r6;
+        boolean $z0;
+        org.json.JSONObject $r7;
+        java.util.Set $r8;
+        java.util.Iterator $r9;
+        java.lang.Object $r10;
+        java.util.Map$Entry $r11;
+        org.json.JSONException $r12;
+        com.facebook.appevents.AppEventsLogger $r13;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.util.Map;
+
+        $r3 := @parameter2: com.facebook.login.LoginClient$Result$Code;
+
+        $r4 := @parameter3: java.util.Map;
+
+        $r5 := @parameter4: java.lang.Exception;
+
+        $r6 = staticinvoke <com.facebook.login.w: android.os.Bundle a(java.lang.String)>($r1);
+
+        if $r3 == null goto label01;
+
+        $r1 = virtualinvoke $r3.<com.facebook.login.LoginClient$Result$Code: java.lang.String getLoggingValue()>();
+
+        virtualinvoke $r6.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("2_result", $r1);
+
+     label01:
+        if $r5 == null goto label02;
+
+        $r1 = virtualinvoke $r5.<java.lang.Exception: java.lang.String getMessage()>();
+
+        if $r1 == null goto label02;
+
+        $r1 = virtualinvoke $r5.<java.lang.Exception: java.lang.String getMessage()>();
+
+        virtualinvoke $r6.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("5_error_message", $r1);
+
+     label02:
+        $z0 = interfaceinvoke $r2.<java.util.Map: boolean isEmpty()>();
+
+        if $z0 != 0 goto label18;
+
+        $r7 = new org.json.JSONObject;
+
+        specialinvoke $r7.<org.json.JSONObject: void <init>(java.util.Map)>($r2);
+
+     label03:
+        if $r4 == null goto label14;
+
+        if $r7 != null goto label17;
+
+        $r7 = new org.json.JSONObject;
+
+        specialinvoke $r7.<org.json.JSONObject: void <init>()>();
+
+     label04:
+        $r8 = interfaceinvoke $r4.<java.util.Map: java.util.Set entrySet()>();
+
+        $r9 = interfaceinvoke $r8.<java.util.Set: java.util.Iterator iterator()>();
+
+     label05:
+        $z0 = interfaceinvoke $r9.<java.util.Iterator: boolean hasNext()>();
+
+     label06:
+        if $z0 == 0 goto label16;
+
+     label07:
+        $r10 = interfaceinvoke $r9.<java.util.Iterator: java.lang.Object next()>();
+
+     label08:
+        $r11 = (java.util.Map$Entry) $r10;
+
+     label09:
+        $r10 = interfaceinvoke $r11.<java.util.Map$Entry: java.lang.Object getKey()>();
+
+     label10:
+        $r1 = (java.lang.String) $r10;
+
+     label11:
+        $r10 = interfaceinvoke $r11.<java.util.Map$Entry: java.lang.Object getValue()>();
+
+        virtualinvoke $r7.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>($r1, $r10);
+
+     label12:
+        goto label05;
+
+     label13:
+        $r12 := @caughtexception;
+
+     label14:
+        if $r7 == null goto label15;
+
+        $r1 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String toString()>();
+
+        virtualinvoke $r6.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("6_extras", $r1);
+
+     label15:
+        $r13 = $r0.<com.facebook.login.w: com.facebook.appevents.AppEventsLogger a>;
+
+        virtualinvoke $r13.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>("fb_mobile_login_complete", null, $r6);
+
+        return;
+
+     label16:
+        goto label14;
+
+     label17:
+        goto label04;
+
+     label18:
+        $r7 = null;
+
+        goto label03;
+
+        catch org.json.JSONException from label04 to label06 with label13;
+        catch org.json.JSONException from label07 to label08 with label13;
+        catch org.json.JSONException from label09 to label10 with label13;
+        catch org.json.JSONException from label11 to label12 with label13;
+    }
+
+    public void b(java.lang.String, java.lang.String)
+    {
+        com.facebook.login.w $r0;
+        java.lang.String $r1, $r2;
+        android.os.Bundle $r3;
+        com.facebook.appevents.AppEventsLogger $r4;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = staticinvoke <com.facebook.login.w: android.os.Bundle a(java.lang.String)>($r1);
+
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("3_method", $r2);
+
+        $r4 = $r0.<com.facebook.login.w: com.facebook.appevents.AppEventsLogger a>;
+
+        virtualinvoke $r4.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>("fb_mobile_login_method_not_tried", null, $r3);
+
+        return;
+    }
+
+    public void c(java.lang.String, java.lang.String)
+    {
+        com.facebook.login.w $r0;
+        java.lang.String $r1, $r2;
+
+        $r0 := @this: com.facebook.login.w;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        virtualinvoke $r0.<com.facebook.login.w: void a(java.lang.String,java.lang.String,java.lang.String)>("fb_mobile_login_complete", "Unexpected call to logCompleteLogin with null pendingAuthorizationRequest.", "");
+
+        return;
+    }
+}

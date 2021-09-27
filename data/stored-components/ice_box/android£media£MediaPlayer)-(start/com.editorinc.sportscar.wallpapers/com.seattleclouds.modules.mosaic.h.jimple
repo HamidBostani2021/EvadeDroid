@@ -1,0 +1,437 @@
+public class com.seattleclouds.modules.mosaic.h extends com.seattleclouds.r implements com.seattleclouds.modules.mosaic.g
+{
+    private android.widget.ImageView a;
+    private com.seattleclouds.modules.mosaic.ImgMetadata b;
+    private com.seattleclouds.modules.mosaic.f c;
+    private android.widget.ProgressBar d;
+    private boolean e;
+    private com.seattleclouds.modules.mosaic.j f;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    public static android.graphics.Bitmap a(android.graphics.drawable.Drawable)
+    {
+        android.graphics.drawable.Drawable $r0;
+        boolean $z0;
+        android.graphics.drawable.BitmapDrawable $r1;
+        android.graphics.Bitmap $r2;
+        int $i0, $i1;
+        android.graphics.Bitmap$Config $r3;
+        android.graphics.Canvas $r4;
+
+        $r0 := @parameter0: android.graphics.drawable.Drawable;
+
+        $z0 = $r0 instanceof android.graphics.drawable.BitmapDrawable;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = (android.graphics.drawable.BitmapDrawable) $r0;
+
+        $r2 = virtualinvoke $r1.<android.graphics.drawable.BitmapDrawable: android.graphics.Bitmap getBitmap()>();
+
+        return $r2;
+
+     label1:
+        $i0 = virtualinvoke $r0.<android.graphics.drawable.Drawable: int getIntrinsicWidth()>();
+
+        $i0 = staticinvoke <java.lang.Math: int max(int,int)>($i0, 1);
+
+        $i1 = virtualinvoke $r0.<android.graphics.drawable.Drawable: int getIntrinsicHeight()>();
+
+        $i1 = staticinvoke <java.lang.Math: int max(int,int)>($i1, 1);
+
+        $r3 = <android.graphics.Bitmap$Config: android.graphics.Bitmap$Config ARGB_8888>;
+
+        $r2 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i0, $i1, $r3);
+
+        $r4 = new android.graphics.Canvas;
+
+        specialinvoke $r4.<android.graphics.Canvas: void <init>(android.graphics.Bitmap)>($r2);
+
+        $i0 = virtualinvoke $r4.<android.graphics.Canvas: int getWidth()>();
+
+        $i1 = virtualinvoke $r4.<android.graphics.Canvas: int getHeight()>();
+
+        virtualinvoke $r0.<android.graphics.drawable.Drawable: void setBounds(int,int,int,int)>(0, 0, $i0, $i1);
+
+        virtualinvoke $r0.<android.graphics.drawable.Drawable: void draw(android.graphics.Canvas)>($r4);
+
+        return $r2;
+    }
+
+    static android.widget.ProgressBar a(com.seattleclouds.modules.mosaic.h)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        android.widget.ProgressBar r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.mosaic.h;
+
+        r1 = $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ProgressBar d>;
+
+        return r1;
+    }
+
+    private com.seattleclouds.modules.mosaic.f ae()
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        com.seattleclouds.modules.mosaic.f $r1;
+        com.google.android.bitmapfun.t $r2;
+        android.support.v4.app.ac $r3;
+        android.graphics.Point $r4;
+        int $i0, $i1;
+        android.support.v4.app.aj $r5;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c>;
+
+        if $r1 != null goto label1;
+
+        $r2 = new com.google.android.bitmapfun.t;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.mosaic.h: android.support.v4.app.ac n()>();
+
+        specialinvoke $r2.<com.google.android.bitmapfun.t: void <init>(android.content.Context,java.lang.String)>($r3, "mosaic");
+
+        $r2.<com.google.android.bitmapfun.t: boolean g> = 1;
+
+        virtualinvoke $r2.<com.google.android.bitmapfun.t: void a(float)>(0.05F);
+
+        $r2.<com.google.android.bitmapfun.t: boolean i> = 1;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.mosaic.h: android.support.v4.app.ac n()>();
+
+        $r4 = staticinvoke <com.seattleclouds.util.bt: android.graphics.Point a(android.content.Context)>($r3);
+
+        $i0 = $r4.<android.graphics.Point: int x>;
+
+        $i1 = $r4.<android.graphics.Point: int y>;
+
+        $i0 = staticinvoke <java.lang.Math: int max(int,int)>($i0, $i1);
+
+        $r1 = new com.seattleclouds.modules.mosaic.f;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.mosaic.h: android.support.v4.app.ac n()>();
+
+        specialinvoke $r1.<com.seattleclouds.modules.mosaic.f: void <init>(android.content.Context,int,boolean)>($r3, $i0, 0);
+
+        $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c> = $r1;
+
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.mosaic.h: android.support.v4.app.ac n()>();
+
+        $r5 = virtualinvoke $r3.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        virtualinvoke $r1.<com.seattleclouds.modules.mosaic.f: void a(android.support.v4.app.aj,com.google.android.bitmapfun.t)>($r5, $r2);
+
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.mosaic.f: void a(com.seattleclouds.modules.mosaic.g)>($r0);
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c>;
+
+        return $r1;
+    }
+
+    static boolean b(com.seattleclouds.modules.mosaic.h)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        boolean z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.mosaic.h;
+
+        z0 = $r0.<com.seattleclouds.modules.mosaic.h: boolean e>;
+
+        return z0;
+    }
+
+    static android.widget.ImageView c(com.seattleclouds.modules.mosaic.h)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        android.widget.ImageView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.mosaic.h;
+
+        r1 = $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ImageView a>;
+
+        return r1;
+    }
+
+    static com.seattleclouds.modules.mosaic.j d(com.seattleclouds.modules.mosaic.h)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        com.seattleclouds.modules.mosaic.j r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.mosaic.h;
+
+        r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.j f>;
+
+        return r1;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4;
+        android.widget.FrameLayout $r5;
+        android.widget.ProgressBar $r6;
+        android.widget.ImageView $r7;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int fragment_mosaic_image>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r5 = (android.widget.FrameLayout) $r4;
+
+        $i0 = <com.seattleclouds.h: int progressBar>;
+
+        $r4 = virtualinvoke $r5.<android.widget.FrameLayout: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.ProgressBar) $r4;
+
+        $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ProgressBar d> = $r6;
+
+        $i0 = <com.seattleclouds.h: int imageView>;
+
+        $r4 = virtualinvoke $r5.<android.widget.FrameLayout: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.ImageView) $r4;
+
+        $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ImageView a> = $r7;
+
+        return $r5;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        android.os.Bundle $r1;
+        android.os.Parcelable $r2;
+        com.seattleclouds.modules.mosaic.ImgMetadata $r3;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.mosaic.h: android.os.Bundle j()>();
+
+        if $r1 == null goto label1;
+
+        $r2 = virtualinvoke $r1.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("ARG_IMG_METADATA");
+
+        $r3 = (com.seattleclouds.modules.mosaic.ImgMetadata) $r2;
+
+        $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.ImgMetadata b> = $r3;
+
+     label1:
+        virtualinvoke $r0.<com.seattleclouds.modules.mosaic.h: void e(boolean)>(1);
+
+        return;
+    }
+
+    public void a(android.view.View, android.os.Bundle)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        android.view.View $r1;
+        android.os.Bundle $r2;
+        android.widget.ImageView $r3;
+        com.seattleclouds.modules.mosaic.f $r4;
+        com.seattleclouds.modules.mosaic.ImgMetadata $r5;
+        java.lang.String $r6;
+        android.widget.ProgressBar $r7;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.View,android.os.Bundle)>($r1, $r2);
+
+        $r5 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.ImgMetadata b>;
+
+        if $r5 == null goto label1;
+
+        $r5 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.ImgMetadata b>;
+
+        $r6 = $r5.<com.seattleclouds.modules.mosaic.ImgMetadata: java.lang.String b>;
+
+        if $r6 == null goto label1;
+
+        $r7 = $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ProgressBar d>;
+
+        virtualinvoke $r7.<android.widget.ProgressBar: void setVisibility(int)>(0);
+
+        $r4 = specialinvoke $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f ae()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.ImgMetadata b>;
+
+        $r6 = $r5.<com.seattleclouds.modules.mosaic.ImgMetadata: java.lang.String b>;
+
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ImageView a>;
+
+        virtualinvoke $r4.<com.seattleclouds.modules.mosaic.f: void a(java.lang.Object,android.widget.ImageView)>($r6, $r3);
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ImageView a>;
+
+        $i0 = <com.seattleclouds.g: int podcast_cover_placeholder>;
+
+        virtualinvoke $r3.<android.widget.ImageView: void setImageResource(int)>($i0);
+
+        return;
+    }
+
+    public void a(com.seattleclouds.modules.mosaic.j)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        com.seattleclouds.modules.mosaic.j $r1;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        $r1 := @parameter0: com.seattleclouds.modules.mosaic.j;
+
+        $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.j f> = $r1;
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        boolean $z0;
+        com.seattleclouds.modules.mosaic.i $r1;
+        android.support.v4.app.ac $r2;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.mosaic.h: boolean e> = $z0;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.mosaic.h: android.support.v4.app.ac n()>();
+
+        if $r2 == null goto label1;
+
+        $r1 = new com.seattleclouds.modules.mosaic.i;
+
+        specialinvoke $r1.<com.seattleclouds.modules.mosaic.i: void <init>(com.seattleclouds.modules.mosaic.h)>($r0);
+
+        virtualinvoke $r2.<android.app.Activity: void runOnUiThread(java.lang.Runnable)>($r1);
+
+     label1:
+        return;
+    }
+
+    public com.seattleclouds.modules.mosaic.ImgMetadata ab()
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        com.seattleclouds.modules.mosaic.ImgMetadata r1;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.ImgMetadata b>;
+
+        return r1;
+    }
+
+    public android.graphics.Bitmap ac()
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        boolean $z0;
+        android.widget.ImageView $r1;
+        android.graphics.drawable.Drawable $r2;
+        android.graphics.Bitmap $r3;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        $z0 = $r0.<com.seattleclouds.modules.mosaic.h: boolean e>;
+
+        if $z0 != 0 goto label1;
+
+        return null;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: android.widget.ImageView a>;
+
+        $r2 = virtualinvoke $r1.<android.widget.ImageView: android.graphics.drawable.Drawable getDrawable()>();
+
+        if $r2 == null goto label2;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.mosaic.h: android.graphics.Bitmap a(android.graphics.drawable.Drawable)>($r2);
+
+        return $r3;
+
+     label2:
+        return null;
+    }
+
+    public boolean ad()
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        z0 = $r0.<com.seattleclouds.modules.mosaic.h: boolean e>;
+
+        return z0;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.modules.mosaic.h $r0;
+        com.seattleclouds.modules.mosaic.f $r1;
+
+        $r0 := @this: com.seattleclouds.modules.mosaic.h;
+
+        specialinvoke $r0.<com.seattleclouds.r: void g()>();
+
+        $r0.<com.seattleclouds.modules.mosaic.h: boolean e> = 0;
+
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.mosaic.f: void b(boolean)>(1);
+
+        $r1 = $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.mosaic.f: void i()>();
+
+        $r0.<com.seattleclouds.modules.mosaic.h: com.seattleclouds.modules.mosaic.f c> = null;
+
+     label1:
+        return;
+    }
+}

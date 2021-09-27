@@ -1,0 +1,128 @@
+public class com.seattleclouds.SimpleAppActivity extends com.seattleclouds.z
+{
+    private boolean m;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.SimpleAppActivity $r0;
+
+        $r0 := @this: com.seattleclouds.SimpleAppActivity;
+
+        specialinvoke $r0.<com.seattleclouds.z: void <init>()>();
+
+        $r0.<com.seattleclouds.SimpleAppActivity: boolean m> = 0;
+
+        return;
+    }
+
+    protected void l()
+    {
+        com.seattleclouds.SimpleAppActivity $r0;
+        boolean $z0;
+        com.seattleclouds.FragmentInfo $r1;
+        android.support.v4.app.aj $r2;
+        android.support.v4.app.ax $r3;
+        java.lang.String $r4;
+        android.os.Bundle $r5;
+        android.support.v4.app.Fragment $r6;
+
+        $r0 := @this: com.seattleclouds.SimpleAppActivity;
+
+        $z0 = $r0.<com.seattleclouds.SimpleAppActivity: boolean m>;
+
+        if $z0 != 0 goto label1;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.z: com.seattleclouds.FragmentInfo a(java.lang.String)>("index.html");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.SimpleAppActivity: android.support.v4.app.aj f()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.FragmentInfo: java.lang.String a()>();
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+        $r6 = staticinvoke <android.support.v4.app.Fragment: android.support.v4.app.Fragment a(android.content.Context,java.lang.String,android.os.Bundle)>($r0, $r4, $r5);
+
+        virtualinvoke $r3.<android.support.v4.app.ax: android.support.v4.app.ax a(int,android.support.v4.app.Fragment,java.lang.String)>(16908290, $r6, "rootFragment");
+
+        virtualinvoke $r3.<android.support.v4.app.ax: int b()>();
+
+     label1:
+        staticinvoke <com.seattleclouds.App: void c(android.content.Context,java.lang.String)>($r0, "index.html");
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.SimpleAppActivity $r0;
+        android.os.Bundle $r1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.SimpleAppActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        if $r1 == null goto label2;
+
+        $z0 = 1;
+
+     label1:
+        $r0.<com.seattleclouds.SimpleAppActivity: boolean m> = $z0;
+
+        specialinvoke $r0.<com.seattleclouds.z: void onCreate(android.os.Bundle)>($r1);
+
+        return;
+
+     label2:
+        $z0 = 0;
+
+        goto label1;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.SimpleAppActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.SimpleAppActivity;
+
+        $r0 = this.<com.seattleclouds.SimpleAppActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.SimpleAppActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.SimpleAppActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.SimpleAppActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.SimpleAppActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.SimpleAppActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.SimpleAppActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

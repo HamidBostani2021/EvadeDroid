@@ -1,0 +1,78 @@
+class com.seattleclouds.modules.podcast.download.b extends java.lang.Object
+{
+    android.widget.TextView a;
+    android.widget.TextView b;
+    android.widget.TextView c;
+    android.widget.ImageView d;
+    android.widget.ImageButton e;
+    android.widget.ProgressBar f;
+
+    void <init>()
+    {
+        com.seattleclouds.modules.podcast.download.b $r0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.b;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public android.widget.ProgressBar a()
+    {
+        com.seattleclouds.modules.podcast.download.b $r0;
+        java.lang.Throwable $r1;
+        android.widget.ProgressBar r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.b;
+
+        entermonitor $r0;
+
+     label1:
+        r2 = $r0.<com.seattleclouds.modules.podcast.download.b: android.widget.ProgressBar f>;
+
+     label2:
+        exitmonitor $r0;
+
+        return r2;
+
+     label3:
+        $r1 := @caughtexception;
+
+        exitmonitor $r0;
+
+        throw $r1;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+
+    public void a(android.widget.ProgressBar)
+    {
+        com.seattleclouds.modules.podcast.download.b $r0;
+        android.widget.ProgressBar $r1;
+        java.lang.Throwable $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.b;
+
+        $r1 := @parameter0: android.widget.ProgressBar;
+
+        entermonitor $r0;
+
+     label1:
+        $r0.<com.seattleclouds.modules.podcast.download.b: android.widget.ProgressBar f> = $r1;
+
+     label2:
+        exitmonitor $r0;
+
+        return;
+
+     label3:
+        $r2 := @caughtexception;
+
+        exitmonitor $r0;
+
+        throw $r2;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+}

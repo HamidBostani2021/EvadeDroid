@@ -1,0 +1,45 @@
+class com.seattleclouds.modules.podcast.q extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.modules.podcast.p a;
+
+    void <init>(com.seattleclouds.modules.podcast.p)
+    {
+        com.seattleclouds.modules.podcast.q $r0;
+        com.seattleclouds.modules.podcast.p $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.q;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.p;
+
+        $r0.<com.seattleclouds.modules.podcast.q: com.seattleclouds.modules.podcast.p a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.modules.podcast.q $r0;
+        android.view.View $r1;
+        com.seattleclouds.modules.podcast.p $r2;
+        android.support.v4.app.ac $r3;
+        com.seattleclouds.modules.podcast.PodcastItem $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.q;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.q: com.seattleclouds.modules.podcast.p a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.podcast.p: android.support.v4.app.ac n()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.q: com.seattleclouds.modules.podcast.p a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.p: com.seattleclouds.modules.podcast.PodcastItem a(com.seattleclouds.modules.podcast.p)>($r2);
+
+        staticinvoke <com.seattleclouds.modules.podcast.x: void a(android.app.Activity,com.seattleclouds.modules.podcast.PodcastItem)>($r3, $r4);
+
+        return;
+    }
+}

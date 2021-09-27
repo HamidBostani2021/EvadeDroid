@@ -1,0 +1,186 @@
+class com.facebook.appevents.AccessTokenAppIdPair extends java.lang.Object implements java.io.Serializable
+{
+    private static final long serialVersionUID;
+    private final java.lang.String accessTokenString;
+    private final java.lang.String applicationId;
+
+    public void <init>(com.facebook.AccessToken)
+    {
+        com.facebook.appevents.AccessTokenAppIdPair $r0;
+        com.facebook.AccessToken $r1;
+        java.lang.String $r2, $r3;
+
+        $r0 := @this: com.facebook.appevents.AccessTokenAppIdPair;
+
+        $r1 := @parameter0: com.facebook.AccessToken;
+
+        $r2 = virtualinvoke $r1.<com.facebook.AccessToken: java.lang.String b()>();
+
+        $r3 = staticinvoke <com.facebook.s: java.lang.String j()>();
+
+        specialinvoke $r0.<com.facebook.appevents.AccessTokenAppIdPair: void <init>(java.lang.String,java.lang.String)>($r2, $r3);
+
+        return;
+    }
+
+    public void <init>(java.lang.String, java.lang.String)
+    {
+        com.facebook.appevents.AccessTokenAppIdPair $r0;
+        java.lang.String $r1, $r2;
+        boolean $z0;
+
+        $r0 := @this: com.facebook.appevents.AccessTokenAppIdPair;
+
+        $r2 := @parameter0: java.lang.String;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.String)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        $r2 = null;
+
+     label1:
+        $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String accessTokenString> = $r2;
+
+        $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String applicationId> = $r1;
+
+        return;
+    }
+
+    private java.lang.Object writeReplace()
+    {
+        com.facebook.appevents.AccessTokenAppIdPair $r0;
+        com.facebook.appevents.AccessTokenAppIdPair$SerializationProxyV1 $r1;
+        java.lang.String $r2, $r3;
+
+        $r0 := @this: com.facebook.appevents.AccessTokenAppIdPair;
+
+        $r1 = new com.facebook.appevents.AccessTokenAppIdPair$SerializationProxyV1;
+
+        $r2 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String accessTokenString>;
+
+        $r3 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String applicationId>;
+
+        specialinvoke $r1.<com.facebook.appevents.AccessTokenAppIdPair$SerializationProxyV1: void <init>(java.lang.String,java.lang.String,com.facebook.appevents.a)>($r2, $r3, null);
+
+        return $r1;
+    }
+
+    public boolean equals(java.lang.Object)
+    {
+        com.facebook.appevents.AccessTokenAppIdPair $r0, $r2;
+        java.lang.Object $r1;
+        boolean $z0;
+        java.lang.String $r3, $r4;
+
+        $r0 := @this: com.facebook.appevents.AccessTokenAppIdPair;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $z0 = $r1 instanceof com.facebook.appevents.AccessTokenAppIdPair;
+
+        if $z0 != 0 goto label1;
+
+        return 0;
+
+     label1:
+        $r2 = (com.facebook.appevents.AccessTokenAppIdPair) $r1;
+
+        $r3 = $r2.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String accessTokenString>;
+
+        $r4 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String accessTokenString>;
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.Object,java.lang.Object)>($r3, $r4);
+
+        if $z0 == 0 goto label2;
+
+        $r3 = $r2.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String applicationId>;
+
+        $r4 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String applicationId>;
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.Object,java.lang.Object)>($r3, $r4);
+
+        if $z0 == 0 goto label2;
+
+        return 1;
+
+     label2:
+        return 0;
+    }
+
+    public java.lang.String getAccessTokenString()
+    {
+        com.facebook.appevents.AccessTokenAppIdPair $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.appevents.AccessTokenAppIdPair;
+
+        r1 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String accessTokenString>;
+
+        return r1;
+    }
+
+    public java.lang.String getApplicationId()
+    {
+        com.facebook.appevents.AccessTokenAppIdPair $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.facebook.appevents.AccessTokenAppIdPair;
+
+        r1 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String applicationId>;
+
+        return r1;
+    }
+
+    public int hashCode()
+    {
+        com.facebook.appevents.AccessTokenAppIdPair $r0;
+        java.lang.String $r1;
+        int $i0, $i1;
+
+        $r0 := @this: com.facebook.appevents.AccessTokenAppIdPair;
+
+        $i0 = 0;
+
+        $r1 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String accessTokenString>;
+
+        if $r1 != null goto label3;
+
+        $i1 = 0;
+
+     label1:
+        $r1 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String applicationId>;
+
+        if $r1 != null goto label4;
+
+     label2:
+        $i0 = $i1 ^ $i0;
+
+        return $i0;
+
+     label3:
+        $r1 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String accessTokenString>;
+
+        $i1 = virtualinvoke $r1.<java.lang.String: int hashCode()>();
+
+        goto label1;
+
+     label4:
+        $r1 = $r0.<com.facebook.appevents.AccessTokenAppIdPair: java.lang.String applicationId>;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int hashCode()>();
+
+        goto label2;
+    }
+
+    public static void <clinit>()
+    {
+        <com.facebook.appevents.AccessTokenAppIdPair: long serialVersionUID> = 1L;
+
+        return;
+    }
+}

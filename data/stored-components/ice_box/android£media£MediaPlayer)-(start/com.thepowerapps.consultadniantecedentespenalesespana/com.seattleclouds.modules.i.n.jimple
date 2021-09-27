@@ -1,0 +1,154 @@
+class com.seattleclouds.modules.i.n extends android.os.AsyncTask
+{
+    public int a;
+    final com.seattleclouds.modules.i.a b;
+    private android.widget.ImageView c;
+
+    private void <init>(com.seattleclouds.modules.i.a)
+    {
+        com.seattleclouds.modules.i.n $r0;
+        com.seattleclouds.modules.i.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.i.n;
+
+        $r1 := @parameter0: com.seattleclouds.modules.i.a;
+
+        $r0.<com.seattleclouds.modules.i.n: com.seattleclouds.modules.i.a b> = $r1;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.i.n: int a> = -1;
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.i.a, com.seattleclouds.modules.i.b)
+    {
+        com.seattleclouds.modules.i.n $r0;
+        com.seattleclouds.modules.i.a $r1;
+        com.seattleclouds.modules.i.b $r2;
+
+        $r0 := @this: com.seattleclouds.modules.i.n;
+
+        $r1 := @parameter0: com.seattleclouds.modules.i.a;
+
+        $r2 := @parameter1: com.seattleclouds.modules.i.b;
+
+        specialinvoke $r0.<com.seattleclouds.modules.i.n: void <init>(com.seattleclouds.modules.i.a)>($r1);
+
+        return;
+    }
+
+    protected transient android.graphics.Bitmap a(java.lang.String[])
+    {
+        com.seattleclouds.modules.i.n $r0;
+        java.lang.String[] $r1;
+        android.graphics.Bitmap $r2;
+        com.seattleclouds.modules.i.a $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.seattleclouds.modules.i.n;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $r3 = $r0.<com.seattleclouds.modules.i.n: com.seattleclouds.modules.i.a b>;
+
+        $r4 = $r1[0];
+
+        $r2 = staticinvoke <com.seattleclouds.modules.i.a: android.graphics.Bitmap a(com.seattleclouds.modules.i.a,java.lang.String)>($r3, $r4);
+
+        return $r2;
+    }
+
+    protected void a(android.graphics.Bitmap)
+    {
+        com.seattleclouds.modules.i.n $r0;
+        android.graphics.Bitmap $r1;
+        int $i0, $i1;
+        android.widget.ImageView $r2;
+        java.lang.Object $r3;
+        java.lang.Integer $r4;
+
+        $r0 := @this: com.seattleclouds.modules.i.n;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r2 = $r0.<com.seattleclouds.modules.i.n: android.widget.ImageView c>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.i.n: android.widget.ImageView c>;
+
+        $r3 = virtualinvoke $r2.<android.widget.ImageView: java.lang.Object getTag()>();
+
+        if $r3 == null goto label1;
+
+        $i0 = $r0.<com.seattleclouds.modules.i.n: int a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.i.n: android.widget.ImageView c>;
+
+        $r3 = virtualinvoke $r2.<android.widget.ImageView: java.lang.Object getTag()>();
+
+        $r4 = (java.lang.Integer) $r3;
+
+        $i1 = virtualinvoke $r4.<java.lang.Integer: int intValue()>();
+
+        if $i0 != $i1 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.i.n: android.widget.ImageView c>;
+
+        virtualinvoke $r2.<android.widget.ImageView: void setImageBitmap(android.graphics.Bitmap)>($r1);
+
+     label1:
+        return;
+    }
+
+    public void a(android.widget.ImageView)
+    {
+        com.seattleclouds.modules.i.n $r0;
+        android.widget.ImageView $r1;
+
+        $r0 := @this: com.seattleclouds.modules.i.n;
+
+        $r1 := @parameter0: android.widget.ImageView;
+
+        $r0.<com.seattleclouds.modules.i.n: android.widget.ImageView c> = $r1;
+
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.i.n $r0;
+        android.graphics.Bitmap $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.i.n;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.i.n: android.graphics.Bitmap a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.i.n $r0;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+
+        $r0 := @this: com.seattleclouds.modules.i.n;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.i.n: void a(android.graphics.Bitmap)>($r2);
+
+        return;
+    }
+}

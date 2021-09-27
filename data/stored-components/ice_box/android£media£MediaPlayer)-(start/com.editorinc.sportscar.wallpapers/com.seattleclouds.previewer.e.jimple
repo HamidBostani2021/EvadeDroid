@@ -1,0 +1,438 @@
+class com.seattleclouds.previewer.e extends com.seattleclouds.api.d
+{
+    final com.seattleclouds.previewer.cl a;
+
+    public void <init>(com.seattleclouds.previewer.cl, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.previewer.e $r0;
+        com.seattleclouds.previewer.cl $r1;
+        android.support.v4.app.Fragment $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.e;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.cl;
+
+        $r2 := @parameter1: android.support.v4.app.Fragment;
+
+        $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void <init>(android.support.v4.app.Fragment)>($r2);
+
+        return;
+    }
+
+    private java.lang.String a(com.seattleclouds.api.SCApiException)
+    {
+        com.seattleclouds.previewer.e $r0;
+        com.seattleclouds.api.SCApiException $r1;
+        java.lang.String $r2, $r4, $r5;
+        org.json.JSONObject $r3;
+        int $i0;
+        boolean $z0;
+        com.seattleclouds.previewer.cl $r6;
+        org.json.JSONException $r7;
+        java.lang.StringBuilder $r8;
+
+        $r0 := @this: com.seattleclouds.previewer.e;
+
+        $r1 := @parameter0: com.seattleclouds.api.SCApiException;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.api.SCApiException: java.lang.String getMessage()>();
+
+     label01:
+        $r3 = virtualinvoke $r1.<com.seattleclouds.api.SCApiException: org.json.JSONObject getDetails()>();
+
+        $i0 = virtualinvoke $r3.<org.json.JSONObject: int getInt(java.lang.String)>("code");
+
+        $r4 = virtualinvoke $r3.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("message");
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.api.SCApiException: java.lang.String getErrorReason()>();
+
+     label02:
+        if $i0 != 400 goto label31;
+
+     label03:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("missingAppId");
+
+     label04:
+        if $z0 == 0 goto label07;
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_app_id_empty_error_message>;
+
+     label05:
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label06:
+        return $r2;
+
+     label07:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("invalidAppId");
+
+     label08:
+        if $z0 == 0 goto label11;
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_invalid_app_id_error_message>;
+
+     label09:
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label10:
+        return $r2;
+
+     label11:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("appIdAlreadyTaken");
+
+     label12:
+        if $z0 == 0 goto label15;
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_app_id_already_taken_error_message>;
+
+     label13:
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label14:
+        return $r2;
+
+     label15:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("missingTemplateId");
+
+     label16:
+        if $z0 == 0 goto label19;
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_missing_template_id_error_message>;
+
+     label17:
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label18:
+        return $r2;
+
+     label19:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("invalidTemplateId");
+
+     label20:
+        if $z0 == 0 goto label23;
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_invalid_templated_id_error_message>;
+
+     label21:
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label22:
+        return $r2;
+
+     label23:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("missingPlatform");
+
+     label24:
+        if $z0 == 0 goto label27;
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_missing_platform_error_message>;
+
+     label25:
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label26:
+        return $r2;
+
+     label27:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("invalidPlatform");
+
+     label28:
+        if $z0 == 0 goto label33;
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_invalid_platform_error_message>;
+
+     label29:
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label30:
+        return $r2;
+
+     label31:
+        return $r4;
+
+     label32:
+        $r7 := @caughtexception;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("JSON parsing exception: ");
+
+        $r2 = virtualinvoke $r7.<org.json.JSONException: java.lang.String toString()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("CreateAppFragment", $r2);
+
+        $r6 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        $r2 = virtualinvoke $r6.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+     label33:
+        return $r2;
+
+        catch org.json.JSONException from label01 to label02 with label32;
+        catch org.json.JSONException from label03 to label04 with label32;
+        catch org.json.JSONException from label05 to label06 with label32;
+        catch org.json.JSONException from label07 to label08 with label32;
+        catch org.json.JSONException from label09 to label10 with label32;
+        catch org.json.JSONException from label11 to label12 with label32;
+        catch org.json.JSONException from label13 to label14 with label32;
+        catch org.json.JSONException from label15 to label16 with label32;
+        catch org.json.JSONException from label17 to label18 with label32;
+        catch org.json.JSONException from label19 to label20 with label32;
+        catch org.json.JSONException from label21 to label22 with label32;
+        catch org.json.JSONException from label23 to label24 with label32;
+        catch org.json.JSONException from label25 to label26 with label32;
+        catch org.json.JSONException from label27 to label28 with label32;
+        catch org.json.JSONException from label29 to label30 with label32;
+    }
+
+    protected volatile java.lang.Object a(java.lang.Object[])
+    {
+        com.seattleclouds.previewer.e $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.e;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.previewer.e: java.lang.String a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected transient java.lang.String a(java.lang.Void[])
+    {
+        com.seattleclouds.previewer.e $r0;
+        java.lang.Void[] $r1;
+        com.seattleclouds.api.b $r2;
+        java.lang.String $r3, $r7, $r8, $r11;
+        com.seattleclouds.previewer.cl $r4;
+        android.widget.EditText $r5;
+        android.text.Editable $r6;
+        android.widget.Spinner $r9;
+        java.lang.Object $r10;
+        int $i0;
+        com.seattleclouds.api.SCApiException $r12;
+        java.lang.StringBuilder $r13;
+
+        $r0 := @this: com.seattleclouds.previewer.e;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+     label1:
+        $r2 = staticinvoke <com.seattleclouds.api.b: com.seattleclouds.api.b a()>();
+
+     label2:
+        $r3 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r4 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+     label3:
+        $r5 = staticinvoke <com.seattleclouds.previewer.cl: android.widget.EditText a(com.seattleclouds.previewer.cl)>($r4);
+
+        $r6 = virtualinvoke $r5.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r7 = virtualinvoke $r6.<java.lang.Object: java.lang.String toString()>();
+
+     label4:
+        $r4 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+     label5:
+        $r8 = staticinvoke <com.seattleclouds.previewer.cl: java.lang.String g(com.seattleclouds.previewer.cl)>($r4);
+
+     label6:
+        $r4 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+     label7:
+        $r9 = staticinvoke <com.seattleclouds.previewer.cl: android.widget.Spinner h(com.seattleclouds.previewer.cl)>($r4);
+
+        $r10 = virtualinvoke $r9.<android.widget.Spinner: java.lang.Object getSelectedItem()>();
+
+        $r11 = virtualinvoke $r10.<java.lang.Object: java.lang.String toString()>();
+
+        $i0 = staticinvoke <com.seattleclouds.previewer.bq: int a(java.lang.String)>($r11);
+
+        virtualinvoke $r2.<com.seattleclouds.api.b: org.json.JSONObject a(java.lang.String,java.lang.String,java.lang.String,int)>($r3, $r7, $r8, $i0);
+
+     label8:
+        return "ok";
+
+     label9:
+        $r12 := @caughtexception;
+
+        $r4 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.previewer.e: java.lang.String a(com.seattleclouds.api.SCApiException)>($r12);
+
+        staticinvoke <com.seattleclouds.previewer.cl: java.lang.String c(com.seattleclouds.previewer.cl,java.lang.String)>($r4, $r3);
+
+        $r13 = new java.lang.StringBuilder;
+
+        specialinvoke $r13.<java.lang.StringBuilder: void <init>()>();
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Api exception");
+
+        $r3 = virtualinvoke $r12.<com.seattleclouds.api.SCApiException: java.lang.String getMessage()>();
+
+        $r13 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r13.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("CreateAppFragment", $r3, $r12);
+
+        return null;
+
+        catch com.seattleclouds.api.SCApiException from label1 to label2 with label9;
+        catch com.seattleclouds.api.SCApiException from label3 to label4 with label9;
+        catch com.seattleclouds.api.SCApiException from label5 to label6 with label9;
+        catch com.seattleclouds.api.SCApiException from label7 to label8 with label9;
+    }
+
+    protected void c(java.lang.String)
+    {
+        com.seattleclouds.previewer.e $r0;
+        java.lang.String $r1;
+        int $i0;
+        com.seattleclouds.previewer.cl $r2, $r7;
+        java.lang.Boolean $r3;
+        android.support.v4.app.Fragment $r4;
+        android.view.View $r5;
+        android.widget.LinearLayout $r6;
+
+        $r0 := @this: com.seattleclouds.previewer.e;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $r3 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        staticinvoke <com.seattleclouds.previewer.cl: java.lang.Boolean a(com.seattleclouds.previewer.cl,java.lang.Boolean)>($r2, $r3);
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $r4 = virtualinvoke $r2.<com.seattleclouds.previewer.cl: android.support.v4.app.Fragment k()>();
+
+        $r2 = (com.seattleclouds.previewer.cl) $r4;
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r5 = virtualinvoke $r2.<com.seattleclouds.previewer.cl: android.view.View C()>();
+
+        if $r5 == null goto label3;
+
+        $r5 = virtualinvoke $r2.<com.seattleclouds.previewer.cl: android.view.View C()>();
+
+        $i0 = <com.seattleclouds.h: int previewer_create_app_loading_linear_layout>;
+
+        $r5 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.LinearLayout) $r5;
+
+        if $r6 == null goto label3;
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $r1 = staticinvoke <com.seattleclouds.previewer.cl: java.lang.String b(com.seattleclouds.previewer.cl)>($r2);
+
+        if $r1 != null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $r7 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_successufully_created_message>;
+
+        $r1 = virtualinvoke $r7.<com.seattleclouds.previewer.cl: java.lang.String a_(int)>($i0);
+
+        staticinvoke <com.seattleclouds.previewer.cl: java.lang.String c(com.seattleclouds.previewer.cl,java.lang.String)>($r2, $r1);
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        staticinvoke <com.seattleclouds.previewer.cl: void a(com.seattleclouds.previewer.cl,android.widget.LinearLayout)>($r2, $r6);
+
+     label3:
+        return;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.previewer.e $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.e;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.e: void c(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.previewer.e $r0;
+        java.lang.Boolean $r1;
+        com.seattleclouds.previewer.cl $r2, $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.e;
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $r3 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        virtualinvoke $r2.<com.seattleclouds.previewer.cl: void a(android.support.v4.app.Fragment,int)>($r3, 0);
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        staticinvoke <com.seattleclouds.previewer.cl: void f(com.seattleclouds.previewer.cl)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        staticinvoke <com.seattleclouds.previewer.cl: java.lang.String c(com.seattleclouds.previewer.cl,java.lang.String)>($r2, null);
+
+        $r2 = $r0.<com.seattleclouds.previewer.e: com.seattleclouds.previewer.cl a>;
+
+        $r1 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(1);
+
+        staticinvoke <com.seattleclouds.previewer.cl: java.lang.Boolean a(com.seattleclouds.previewer.cl,java.lang.Boolean)>($r2, $r1);
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void onPreExecute()>();
+
+        return;
+    }
+}

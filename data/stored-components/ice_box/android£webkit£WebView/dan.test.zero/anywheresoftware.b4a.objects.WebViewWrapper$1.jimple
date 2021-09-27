@@ -1,0 +1,198 @@
+class anywheresoftware.b4a.objects.WebViewWrapper$1 extends android.webkit.WebViewClient
+{
+    final anywheresoftware.b4a.objects.WebViewWrapper this$0;
+    private final anywheresoftware.b4a.BA val$ba;
+    private final java.lang.String val$eventName;
+
+    void <init>(anywheresoftware.b4a.objects.WebViewWrapper, anywheresoftware.b4a.BA, java.lang.String)
+    {
+        anywheresoftware.b4a.objects.WebViewWrapper$1 $r0;
+        anywheresoftware.b4a.objects.WebViewWrapper $r1;
+        anywheresoftware.b4a.BA $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.WebViewWrapper$1;
+
+        $r1 := @parameter0: anywheresoftware.b4a.objects.WebViewWrapper;
+
+        $r2 := @parameter1: anywheresoftware.b4a.BA;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.objects.WebViewWrapper this$0> = $r1;
+
+        $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.BA val$ba> = $r2;
+
+        $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: java.lang.String val$eventName> = $r3;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void <init>()>();
+
+        return;
+    }
+
+    public void onPageFinished(android.webkit.WebView, java.lang.String)
+    {
+        anywheresoftware.b4a.objects.WebViewWrapper$1 $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2, $r7;
+        anywheresoftware.b4a.BA $r3;
+        anywheresoftware.b4a.objects.WebViewWrapper $r4;
+        java.lang.Object $r5;
+        java.lang.StringBuilder $r6;
+        java.lang.Object[] $r8;
+
+        $r0 := @this: anywheresoftware.b4a.objects.WebViewWrapper$1;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.BA val$ba>;
+
+        $r4 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.objects.WebViewWrapper this$0>;
+
+        $r5 = virtualinvoke $r4.<anywheresoftware.b4a.objects.WebViewWrapper: java.lang.Object getObject()>();
+
+        $r6 = new java.lang.StringBuilder;
+
+        $r7 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: java.lang.String val$eventName>;
+
+        $r7 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r7);
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>(java.lang.String)>($r7);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_pagefinished");
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r8 = newarray (java.lang.Object)[1];
+
+        $r8[0] = $r2;
+
+        virtualinvoke $r3.<anywheresoftware.b4a.BA: java.lang.Object raiseEvent(java.lang.Object,java.lang.String,java.lang.Object[])>($r5, $r7, $r8);
+
+        return;
+    }
+
+    public void onReceivedHttpAuthRequest(android.webkit.WebView, android.webkit.HttpAuthHandler, java.lang.String, java.lang.String)
+    {
+        anywheresoftware.b4a.objects.WebViewWrapper$1 $r0;
+        android.webkit.WebView $r1;
+        android.webkit.HttpAuthHandler $r2;
+        java.lang.String $r3, $r4, $r9;
+        anywheresoftware.b4a.BA $r5;
+        anywheresoftware.b4a.objects.WebViewWrapper $r6;
+        java.lang.Object $r7;
+        java.lang.StringBuilder $r8;
+        java.lang.Object[] $r10;
+        java.lang.String[] $r11;
+
+        $r0 := @this: anywheresoftware.b4a.objects.WebViewWrapper$1;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: android.webkit.HttpAuthHandler;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: java.lang.String;
+
+        $r5 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.BA val$ba>;
+
+        $r6 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.objects.WebViewWrapper this$0>;
+
+        $r7 = virtualinvoke $r6.<anywheresoftware.b4a.objects.WebViewWrapper: java.lang.Object getObject()>();
+
+        $r8 = new java.lang.StringBuilder;
+
+        $r9 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: java.lang.String val$eventName>;
+
+        $r9 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r9);
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_userandpasswordrequired");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r10 = newarray (java.lang.Object)[2];
+
+        $r10[0] = $r3;
+
+        $r10[1] = $r4;
+
+        $r7 = virtualinvoke $r5.<anywheresoftware.b4a.BA: java.lang.Object raiseEvent(java.lang.Object,java.lang.String,java.lang.Object[])>($r7, $r9, $r10);
+
+        if $r7 != null goto label1;
+
+        virtualinvoke $r2.<android.webkit.HttpAuthHandler: void cancel()>();
+
+        return;
+
+     label1:
+        $r11 = (java.lang.String[]) $r7;
+
+        $r3 = $r11[0];
+
+        $r4 = $r11[1];
+
+        virtualinvoke $r2.<android.webkit.HttpAuthHandler: void proceed(java.lang.String,java.lang.String)>($r3, $r4);
+
+        return;
+    }
+
+    public boolean shouldOverrideUrlLoading(android.webkit.WebView, java.lang.String)
+    {
+        anywheresoftware.b4a.objects.WebViewWrapper$1 $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2, $r7;
+        anywheresoftware.b4a.BA $r3;
+        anywheresoftware.b4a.objects.WebViewWrapper $r4;
+        java.lang.Object $r5;
+        java.lang.StringBuilder $r6;
+        java.lang.Object[] $r8;
+        java.lang.Boolean $r9;
+        boolean $z0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.WebViewWrapper$1;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.BA val$ba>;
+
+        $r4 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: anywheresoftware.b4a.objects.WebViewWrapper this$0>;
+
+        $r5 = virtualinvoke $r4.<anywheresoftware.b4a.objects.WebViewWrapper: java.lang.Object getObject()>();
+
+        $r6 = new java.lang.StringBuilder;
+
+        $r7 = $r0.<anywheresoftware.b4a.objects.WebViewWrapper$1: java.lang.String val$eventName>;
+
+        $r7 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r7);
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>(java.lang.String)>($r7);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_overrideurl");
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r8 = newarray (java.lang.Object)[1];
+
+        $r8[0] = $r2;
+
+        $r5 = virtualinvoke $r3.<anywheresoftware.b4a.BA: java.lang.Object raiseEvent(java.lang.Object,java.lang.String,java.lang.Object[])>($r5, $r7, $r8);
+
+        $r9 = (java.lang.Boolean) $r5;
+
+        if $r9 == null goto label1;
+
+        $z0 = virtualinvoke $r9.<java.lang.Boolean: boolean booleanValue()>();
+
+        return $z0;
+
+     label1:
+        return 0;
+    }
+}

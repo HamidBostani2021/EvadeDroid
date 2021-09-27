@@ -1,0 +1,95 @@
+final enum class com.seattleclouds.media.model.MusicProvider$State extends java.lang.Enum
+{
+    public static final enum com.seattleclouds.media.model.MusicProvider$State INITIALIZED;
+    public static final enum com.seattleclouds.media.model.MusicProvider$State INITIALIZING;
+    public static final enum com.seattleclouds.media.model.MusicProvider$State NON_INITIALIZED;
+    private static final com.seattleclouds.media.model.MusicProvider$State[] a;
+
+    static void <clinit>()
+    {
+        com.seattleclouds.media.model.MusicProvider$State $r0;
+        com.seattleclouds.media.model.MusicProvider$State[] $r1;
+
+        $r0 = new com.seattleclouds.media.model.MusicProvider$State;
+
+        specialinvoke $r0.<com.seattleclouds.media.model.MusicProvider$State: void <init>(java.lang.String,int)>("NON_INITIALIZED", 0);
+
+        <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State NON_INITIALIZED> = $r0;
+
+        $r0 = new com.seattleclouds.media.model.MusicProvider$State;
+
+        specialinvoke $r0.<com.seattleclouds.media.model.MusicProvider$State: void <init>(java.lang.String,int)>("INITIALIZING", 1);
+
+        <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State INITIALIZING> = $r0;
+
+        $r0 = new com.seattleclouds.media.model.MusicProvider$State;
+
+        specialinvoke $r0.<com.seattleclouds.media.model.MusicProvider$State: void <init>(java.lang.String,int)>("INITIALIZED", 2);
+
+        <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State INITIALIZED> = $r0;
+
+        $r1 = newarray (com.seattleclouds.media.model.MusicProvider$State)[3];
+
+        $r0 = <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State NON_INITIALIZED>;
+
+        $r1[0] = $r0;
+
+        $r0 = <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State INITIALIZING>;
+
+        $r1[1] = $r0;
+
+        $r0 = <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State INITIALIZED>;
+
+        $r1[2] = $r0;
+
+        <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State[] a> = $r1;
+
+        return;
+    }
+
+    private void <init>(java.lang.String, int)
+    {
+        com.seattleclouds.media.model.MusicProvider$State $r0;
+        java.lang.String $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.media.model.MusicProvider$State;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<java.lang.Enum: void <init>(java.lang.String,int)>($r1, $i0);
+
+        return;
+    }
+
+    public static com.seattleclouds.media.model.MusicProvider$State valueOf(java.lang.String)
+    {
+        java.lang.String $r0;
+        java.lang.Enum $r1;
+        com.seattleclouds.media.model.MusicProvider$State $r2;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 = staticinvoke <java.lang.Enum: java.lang.Enum valueOf(java.lang.Class,java.lang.String)>(class "Lcom/seattleclouds/media/model/MusicProvider$State;", $r0);
+
+        $r2 = (com.seattleclouds.media.model.MusicProvider$State) $r1;
+
+        return $r2;
+    }
+
+    public static com.seattleclouds.media.model.MusicProvider$State[] values()
+    {
+        java.lang.Object $r0;
+        com.seattleclouds.media.model.MusicProvider$State[] $r1;
+
+        $r1 = <com.seattleclouds.media.model.MusicProvider$State: com.seattleclouds.media.model.MusicProvider$State[] a>;
+
+        $r0 = virtualinvoke $r1.<java.lang.Object: java.lang.Object clone()>();
+
+        $r1 = (com.seattleclouds.media.model.MusicProvider$State[]) $r0;
+
+        return $r1;
+    }
+}

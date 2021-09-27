@@ -1,0 +1,66 @@
+class com.seattleclouds.previewer.appmart.order.colorpicker.d extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.previewer.appmart.order.colorpicker.b a;
+
+    void <init>(com.seattleclouds.previewer.appmart.order.colorpicker.b)
+    {
+        com.seattleclouds.previewer.appmart.order.colorpicker.d $r0;
+        com.seattleclouds.previewer.appmart.order.colorpicker.b $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.colorpicker.d;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.appmart.order.colorpicker.b;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.colorpicker.d: com.seattleclouds.previewer.appmart.order.colorpicker.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.previewer.appmart.order.colorpicker.d $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        android.content.Intent $r2;
+        com.seattleclouds.previewer.appmart.order.colorpicker.b $r3;
+        com.seattleclouds.previewer.appmart.order.colorpicker.NewOrderColorPickerView $r4;
+        java.lang.String $r5;
+        android.support.v4.app.Fragment $r6;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.colorpicker.d;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.previewer.appmart.order.colorpicker.d: com.seattleclouds.previewer.appmart.order.colorpicker.b a>;
+
+        $r4 = staticinvoke <com.seattleclouds.previewer.appmart.order.colorpicker.b: com.seattleclouds.previewer.appmart.order.colorpicker.NewOrderColorPickerView b(com.seattleclouds.previewer.appmart.order.colorpicker.b)>($r3);
+
+        $i0 = virtualinvoke $r4.<com.seattleclouds.previewer.appmart.order.colorpicker.NewOrderColorPickerView: int getColor()>();
+
+        $r3 = $r0.<com.seattleclouds.previewer.appmart.order.colorpicker.d: com.seattleclouds.previewer.appmart.order.colorpicker.b a>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.appmart.order.colorpicker.b: java.lang.String a(com.seattleclouds.previewer.appmart.order.colorpicker.b,int)>($r3, $i0);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("TAG_SELECTED_COLOR", $r5);
+
+        $r3 = $r0.<com.seattleclouds.previewer.appmart.order.colorpicker.d: com.seattleclouds.previewer.appmart.order.colorpicker.b a>;
+
+        $r6 = virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.colorpicker.b: android.support.v4.app.Fragment k()>();
+
+        $r3 = $r0.<com.seattleclouds.previewer.appmart.order.colorpicker.d: com.seattleclouds.previewer.appmart.order.colorpicker.b a>;
+
+        $i0 = virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.colorpicker.b: int l()>();
+
+        virtualinvoke $r6.<android.support.v4.app.Fragment: void a(int,int,android.content.Intent)>($i0, -1, $r2);
+
+        return;
+    }
+}

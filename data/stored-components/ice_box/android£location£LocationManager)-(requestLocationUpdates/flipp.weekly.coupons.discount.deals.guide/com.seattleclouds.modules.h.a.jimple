@@ -1,0 +1,2280 @@
+public class com.seattleclouds.modules.h.a extends com.seattleclouds.r
+{
+    private static final java.lang.String a;
+    private static final java.lang.String[] b;
+    private java.lang.String ai;
+    private android.widget.TextView aj;
+    private android.widget.TextView ak;
+    private android.widget.TextView al;
+    private android.widget.TextView am;
+    private android.widget.TextView an;
+    private android.widget.TextView ao;
+    private android.widget.TextView ap;
+    private android.widget.TextView aq;
+    private android.widget.ListView ar;
+    private java.lang.String c;
+    private java.lang.String d;
+    private org.json.JSONObject e;
+    private java.util.ArrayList f;
+    private android.os.Bundle g;
+    private java.lang.String h;
+    private java.lang.String i;
+
+    static void <clinit>()
+    {
+        java.lang.String[] $r0;
+        java.lang.Class $r1;
+        java.lang.String $r2;
+        int $i0;
+        java.lang.StringBuilder $r3;
+
+        $r1 = class "Lcom/seattleclouds/modules/h/a;";
+
+        $r2 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.modules.h.a: java.lang.String a> = $r2;
+
+        $r0 = newarray (java.lang.String)[13];
+
+        <com.seattleclouds.modules.h.a: java.lang.String[] b> = $r0;
+
+        $i0 = 12;
+
+     label1:
+        if $i0 < 0 goto label2;
+
+        $r0 = <com.seattleclouds.modules.h.a: java.lang.String[] b>;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0[$i0] = $r2;
+
+        $i0 = $i0 + -1;
+
+        goto label1;
+
+     label2:
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    static int a(com.seattleclouds.modules.h.a, java.lang.String)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.lang.String $r1;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $i0 = specialinvoke $r0.<com.seattleclouds.modules.h.a: int c(java.lang.String)>($r1);
+
+        return $i0;
+    }
+
+    static java.util.ArrayList a(com.seattleclouds.modules.h.a, java.util.ArrayList)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter1: java.util.ArrayList;
+
+        $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f> = $r1;
+
+        return $r1;
+    }
+
+    static java.util.ArrayList a(com.seattleclouds.modules.h.a, org.json.JSONObject, org.json.JSONObject)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        org.json.JSONObject $r1, $r2;
+        java.util.ArrayList $r3;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter1: org.json.JSONObject;
+
+        $r2 := @parameter2: org.json.JSONObject;
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList a(org.json.JSONObject,org.json.JSONObject)>($r1, $r2);
+
+        return $r3;
+    }
+
+    private java.util.ArrayList a(org.json.JSONObject, org.json.JSONObject)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        org.json.JSONObject $r1, $r2;
+        java.util.ArrayList $r3;
+        java.lang.String $r4, $r8, $r9;
+        org.json.JSONArray $r5, $r6;
+        int $i0, $i1, $i2;
+        java.lang.StringBuilder $r7;
+        com.seattleclouds.modules.h.h $r10;
+        org.json.JSONException $r11, $r12, $r13, $r14, $r15, $r16, $r17, $r18, $r19, $r20;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 := @parameter1: org.json.JSONObject;
+
+        if $r1 != null goto label01;
+
+        return null;
+
+     label01:
+        $r4 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("emailProperty");
+
+     label02:
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String ai> = $r4;
+
+     label03:
+        if $r2 == null goto label35;
+
+     label04:
+        $r4 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("player1Property");
+
+     label05:
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String h> = $r4;
+
+     label06:
+        $r4 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("player2Property");
+
+     label07:
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String i> = $r4;
+
+     label08:
+        $r5 = virtualinvoke $r1.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("holes");
+
+     label09:
+        if $r2 == null goto label50;
+
+     label10:
+        $r6 = virtualinvoke $r2.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("holes");
+
+     label11:
+        $r3 = new java.util.ArrayList;
+
+     label12:
+        $i0 = virtualinvoke $r5.<org.json.JSONArray: int length()>();
+
+        specialinvoke $r3.<java.util.ArrayList: void <init>(int)>($i0);
+
+     label13:
+        $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f> = $r3;
+
+        $i0 = 0;
+
+     label14:
+        $i1 = virtualinvoke $r5.<org.json.JSONArray: int length()>();
+
+     label15:
+        if $i0 >= $i1 goto label43;
+
+        $r7 = new java.lang.StringBuilder;
+
+     label16:
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r4 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label17:
+        $r8 = "4/4";
+
+     label18:
+        $r1 = virtualinvoke $r5.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+     label19:
+        $r9 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("name");
+
+     label20:
+        $r4 = $r9;
+
+     label21:
+        $r9 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("par");
+
+     label22:
+        $r8 = $r9;
+
+     label23:
+        if $r6 == null goto label49;
+
+     label24:
+        $i1 = virtualinvoke $r6.<org.json.JSONArray: int length()>();
+
+     label25:
+        if $i0 >= $i1 goto label49;
+
+     label26:
+        $r1 = virtualinvoke $r6.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+     label27:
+        $i1 = virtualinvoke $r1.<org.json.JSONObject: int getInt(java.lang.String)>("player1Property");
+
+     label28:
+        $i2 = virtualinvoke $r1.<org.json.JSONObject: int getInt(java.lang.String)>("player2Property");
+
+     label29:
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        $r10 = new com.seattleclouds.modules.h.h;
+
+     label30:
+        specialinvoke $r10.<com.seattleclouds.modules.h.h: void <init>(com.seattleclouds.modules.h.a,java.lang.String,java.lang.String,int,int)>($r0, $r4, $r8, $i1, $i2);
+
+        virtualinvoke $r3.<java.util.ArrayList: boolean add(java.lang.Object)>($r10);
+
+     label31:
+        $i0 = $i0 + 1;
+
+        goto label14;
+
+     label32:
+        $r11 := @caughtexception;
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String ai> = "";
+
+        goto label03;
+
+     label33:
+        $r12 := @caughtexception;
+
+        $i0 = <com.seattleclouds.l: int golf_sc_player_name_1>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String h> = $r4;
+
+        goto label06;
+
+     label34:
+        $r13 := @caughtexception;
+
+        $i0 = <com.seattleclouds.l: int golf_sc_player_name_2>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String h> = $r4;
+
+        goto label08;
+
+     label35:
+        $r4 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("player1Property");
+
+     label36:
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String h> = $r4;
+
+     label37:
+        $r4 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("player2Property");
+
+     label38:
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String i> = $r4;
+
+        goto label08;
+
+     label39:
+        $r14 := @caughtexception;
+
+        $i0 = <com.seattleclouds.l: int golf_sc_player_name_2>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String h> = $r4;
+
+        goto label08;
+
+     label40:
+        $r15 := @caughtexception;
+
+        $i0 = <com.seattleclouds.l: int golf_sc_player_name_1>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String h> = $r4;
+
+        goto label37;
+
+     label41:
+        $r16 := @caughtexception;
+
+        $i1 = 0;
+
+        goto label28;
+
+     label42:
+        $r17 := @caughtexception;
+
+        $i2 = 0;
+
+        goto label29;
+
+     label43:
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        return $r3;
+
+     label44:
+        $r18 := @caughtexception;
+
+        $r4 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR");
+
+        $r8 = virtualinvoke $r18.<org.json.JSONException: java.lang.String getLocalizedMessage()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r4, $r8, $r18);
+
+        $r3 = new java.util.ArrayList;
+
+        specialinvoke $r3.<java.util.ArrayList: void <init>(int)>(18);
+
+        $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f> = $r3;
+
+        $i0 = 0;
+
+     label45:
+        if $i0 >= 18 goto label46;
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        $r10 = new com.seattleclouds.modules.h.h;
+
+        $r7 = new java.lang.StringBuilder;
+
+        specialinvoke $r7.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r4 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r10.<com.seattleclouds.modules.h.h: void <init>(com.seattleclouds.modules.h.a,java.lang.String,java.lang.String,int,int)>($r0, $r4, "4/4", 0, 0);
+
+        virtualinvoke $r3.<java.util.ArrayList: boolean add(java.lang.Object)>($r10);
+
+        $i0 = $i0 + 1;
+
+        goto label45;
+
+     label46:
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        return $r3;
+
+     label47:
+        $r19 := @caughtexception;
+
+        goto label23;
+
+     label48:
+        $r20 := @caughtexception;
+
+        goto label21;
+
+     label49:
+        $i2 = 0;
+
+        $i1 = 0;
+
+        goto label29;
+
+     label50:
+        $r6 = null;
+
+        goto label11;
+
+        catch org.json.JSONException from label01 to label02 with label32;
+        catch org.json.JSONException from label04 to label05 with label33;
+        catch org.json.JSONException from label06 to label07 with label34;
+        catch org.json.JSONException from label08 to label09 with label44;
+        catch org.json.JSONException from label10 to label11 with label44;
+        catch org.json.JSONException from label12 to label13 with label44;
+        catch org.json.JSONException from label14 to label15 with label44;
+        catch org.json.JSONException from label16 to label17 with label44;
+        catch org.json.JSONException from label18 to label19 with label44;
+        catch org.json.JSONException from label19 to label20 with label48;
+        catch org.json.JSONException from label21 to label22 with label47;
+        catch org.json.JSONException from label24 to label25 with label44;
+        catch org.json.JSONException from label26 to label27 with label44;
+        catch org.json.JSONException from label27 to label28 with label41;
+        catch org.json.JSONException from label28 to label29 with label42;
+        catch org.json.JSONException from label30 to label31 with label44;
+        catch org.json.JSONException from label35 to label36 with label40;
+        catch org.json.JSONException from label37 to label38 with label39;
+    }
+
+    static org.json.JSONObject a(com.seattleclouds.modules.h.a, org.json.JSONObject)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        org.json.JSONObject $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter1: org.json.JSONObject;
+
+        $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject e> = $r1;
+
+        return $r1;
+    }
+
+    private void a(android.widget.Spinner, java.lang.String)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.Spinner $r1;
+        java.lang.String $r2, $r5;
+        android.widget.SpinnerAdapter $r3;
+        int $i0, $i1;
+        java.lang.Object $r4;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter0: android.widget.Spinner;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = virtualinvoke $r1.<android.widget.Spinner: android.widget.SpinnerAdapter getAdapter()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $i0 = 0;
+
+     label2:
+        $i1 = interfaceinvoke $r3.<android.widget.SpinnerAdapter: int getCount()>();
+
+        if $i0 >= $i1 goto label4;
+
+        $r4 = interfaceinvoke $r3.<android.widget.SpinnerAdapter: java.lang.Object getItem(int)>($i0);
+
+        $r5 = (java.lang.String) $r4;
+
+        $i1 = virtualinvoke $r5.<java.lang.String: int compareTo(java.lang.String)>($r2);
+
+        if $i1 != 0 goto label3;
+
+        virtualinvoke $r1.<android.widget.Spinner: void setSelection(int)>($i0);
+
+        return;
+
+     label3:
+        $i0 = $i0 + 1;
+
+        goto label2;
+
+     label4:
+        virtualinvoke $r1.<android.widget.Spinner: void setSelection(int)>(0);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void an()>();
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.h.a, android.widget.Spinner, java.lang.String)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.Spinner $r1;
+        java.lang.String $r2;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter1: android.widget.Spinner;
+
+        $r2 := @parameter2: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void a(android.widget.Spinner,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+
+    static java.lang.String ab()
+    {
+        java.lang.String r0;
+
+        r0 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        return r0;
+    }
+
+    static java.lang.String[] ac()
+    {
+        java.lang.String[] r0;
+
+        r0 = <com.seattleclouds.modules.h.a: java.lang.String[] b>;
+
+        return r0;
+    }
+
+    private void ad()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.support.v4.app.ac $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3;
+        android.content.SharedPreferences $r4;
+        android.content.SharedPreferences$Editor $r5;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("GolfScoreCardPrefs");
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String c>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = virtualinvoke $r1.<android.support.v4.app.ac: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r3, 0);
+
+        $r5 = interfaceinvoke $r4.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String ap()>();
+
+        if $r3 == null goto label2;
+
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("GolfScoreCardPrefs", $r3);
+
+     label1:
+        interfaceinvoke $r5.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+
+     label2:
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int golf_sc_unable_to_save_state>;
+
+        staticinvoke <com.seattleclouds.util.ax: void a(android.content.Context,int)>($r1, $i0);
+
+        goto label1;
+    }
+
+    private void ae()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.ListView $r1;
+        com.seattleclouds.modules.h.j $r2;
+        java.lang.StringBuilder $r3;
+        android.support.v4.app.ac $r4;
+        java.io.File $r5;
+        java.lang.String $r6;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.ListView ar>;
+
+        $r2 = new com.seattleclouds.modules.h.j;
+
+        specialinvoke $r2.<com.seattleclouds.modules.h.j: void <init>(com.seattleclouds.modules.h.a,com.seattleclouds.modules.h.b)>($r0, null);
+
+        virtualinvoke $r1.<android.widget.ListView: void setAdapter(android.widget.ListAdapter)>($r2);
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v4.app.ac: java.io.File getExternalFilesDir(java.lang.String)>(null);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r5);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r6 = $r0.<com.seattleclouds.modules.h.a: java.lang.String c>;
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r6 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String d> = $r6;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void aj()>();
+
+        return;
+    }
+
+    private void af()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.lang.String[] $r1;
+        int $i0;
+        java.lang.String $r2;
+        int[] $r3;
+        android.support.v7.a.u $r4, $r6;
+        android.support.v4.app.ac $r5;
+        com.seattleclouds.modules.h.f $r7;
+        com.seattleclouds.modules.h.d $r8;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = newarray (java.lang.String)[3];
+
+        $i0 = <com.seattleclouds.l: int golf_sc_facebook_menu_title>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r1[0] = $r2;
+
+        $i0 = <com.seattleclouds.l: int golf_sc_twitter_menu_title>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r1[1] = $r2;
+
+        $i0 = <com.seattleclouds.l: int golf_sc_share_via_apps_title>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r1[2] = $r2;
+
+        $r3 = newarray (int)[3];
+
+        $i0 = <com.seattleclouds.g: int facebook_blue_icon_2013>;
+
+        $r3[0] = $i0;
+
+        $i0 = <com.seattleclouds.g: int twitter_bird_white_on_blue>;
+
+        $r3[1] = $i0;
+
+        $r3[2] = 17301586;
+
+        $r4 = new android.support.v7.a.u;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        specialinvoke $r4.<android.support.v7.a.u: void <init>(android.content.Context)>($r5);
+
+        $i0 = <com.seattleclouds.l: int golf_sc_pick_your_choice_title>;
+
+        $r6 = virtualinvoke $r4.<android.support.v7.a.u: android.support.v7.a.u a(int)>($i0);
+
+        $r7 = new com.seattleclouds.modules.h.f;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        specialinvoke $r7.<com.seattleclouds.modules.h.f: void <init>(com.seattleclouds.modules.h.a,android.content.Context,java.lang.String[],int[])>($r0, $r5, $r1, $r3);
+
+        $r8 = new com.seattleclouds.modules.h.d;
+
+        specialinvoke $r8.<com.seattleclouds.modules.h.d: void <init>(com.seattleclouds.modules.h.a,java.lang.String[])>($r0, $r1);
+
+        virtualinvoke $r6.<android.support.v7.a.u: android.support.v7.a.u a(android.widget.ListAdapter,android.content.DialogInterface$OnClickListener)>($r7, $r8);
+
+        virtualinvoke $r4.<android.support.v7.a.u: android.support.v7.a.t c()>();
+
+        return;
+    }
+
+    private void ag()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.content.Intent $r1;
+        android.support.v4.app.ac $r2;
+        java.lang.String $r3, $r6;
+        java.lang.StringBuilder $r4;
+        java.util.Date $r5;
+        long $l0;
+        android.net.Uri $r7;
+        android.content.pm.PackageManager $r8;
+        java.util.List $r9;
+        java.util.Iterator $r10;
+        boolean $z0;
+        java.lang.Object $r11;
+        android.content.pm.ResolveInfo $r12;
+        android.content.pm.ActivityInfo $r13;
+        android.content.ComponentName $r14;
+        android.content.pm.ApplicationInfo $r15;
+        android.content.Context $r16;
+        int $i1;
+        android.widget.Toast $r17;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.TITLE", "");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent addFlags(int)>(1);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setType(java.lang.String)>("image/*");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String d>;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = new java.util.Date;
+
+        specialinvoke $r5.<java.util.Date: void <init>()>();
+
+        $l0 = virtualinvoke $r5.<java.util.Date: long getTime()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".jpeg");
+
+        $r6 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = staticinvoke <com.seattleclouds.util.ar: java.lang.String a(android.app.Activity,java.lang.String,java.lang.String)>($r2, $r3, $r6);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("file://");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r3);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("android.intent.extra.STREAM", $r7);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r8 = virtualinvoke $r2.<android.support.v4.app.ac: android.content.pm.PackageManager getPackageManager()>();
+
+        $r9 = virtualinvoke $r8.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>($r1, 0);
+
+        $r10 = interfaceinvoke $r9.<java.util.List: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r10.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r11 = interfaceinvoke $r10.<java.util.Iterator: java.lang.Object next()>();
+
+        $r12 = (android.content.pm.ResolveInfo) $r11;
+
+        $r13 = $r12.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>;
+
+        $r3 = $r13.<android.content.pm.ActivityInfo: java.lang.String name>;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean contains(java.lang.CharSequence)>("facebook");
+
+        if $z0 == 0 goto label1;
+
+        $r13 = $r12.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>;
+
+        $r14 = new android.content.ComponentName;
+
+        $r15 = $r13.<android.content.pm.ActivityInfo: android.content.pm.ApplicationInfo applicationInfo>;
+
+        $r3 = $r15.<android.content.pm.ApplicationInfo: java.lang.String packageName>;
+
+        $r6 = $r13.<android.content.pm.ActivityInfo: java.lang.String name>;
+
+        specialinvoke $r14.<android.content.ComponentName: void <init>(java.lang.String,java.lang.String)>($r3, $r6);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setFlags(int)>(536870912);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setComponent(android.content.ComponentName)>($r14);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.h.a: void a(android.content.Intent)>($r1);
+
+        return;
+
+     label2:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r16 = virtualinvoke $r2.<android.support.v4.app.ac: android.content.Context getApplicationContext()>();
+
+        $i1 = <com.seattleclouds.l: int golf_sc_install_facebook_app_message>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i1);
+
+        $r17 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r16, $r3, 1);
+
+        virtualinvoke $r17.<android.widget.Toast: void show()>();
+
+        return;
+    }
+
+    private void ah()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.content.Intent $r1;
+        android.support.v4.app.ac $r2;
+        java.lang.String $r3, $r6;
+        java.lang.StringBuilder $r4;
+        java.util.Date $r5;
+        long $l0;
+        android.net.Uri $r7;
+        android.content.pm.PackageManager $r8;
+        java.util.List $r9;
+        java.util.Iterator $r10;
+        boolean $z0;
+        java.lang.Object $r11;
+        android.content.pm.ResolveInfo $r12;
+        android.content.pm.ActivityInfo $r13;
+        android.content.ComponentName $r14;
+        android.content.pm.ApplicationInfo $r15;
+        android.content.Context $r16;
+        int $i1;
+        android.widget.Toast $r17;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent addFlags(int)>(1);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.SUBJECT", "subject");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.TEXT", "");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setType(java.lang.String)>("image/*");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String d>;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = new java.util.Date;
+
+        specialinvoke $r5.<java.util.Date: void <init>()>();
+
+        $l0 = virtualinvoke $r5.<java.util.Date: long getTime()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".jpeg");
+
+        $r6 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = staticinvoke <com.seattleclouds.util.ar: java.lang.String a(android.app.Activity,java.lang.String,java.lang.String)>($r2, $r3, $r6);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("file://");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r3);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("android.intent.extra.STREAM", $r7);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r8 = virtualinvoke $r2.<android.support.v4.app.ac: android.content.pm.PackageManager getPackageManager()>();
+
+        $r9 = virtualinvoke $r8.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>($r1, 0);
+
+        $r10 = interfaceinvoke $r9.<java.util.List: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r10.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r11 = interfaceinvoke $r10.<java.util.Iterator: java.lang.Object next()>();
+
+        $r12 = (android.content.pm.ResolveInfo) $r11;
+
+        $r13 = $r12.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>;
+
+        $r3 = $r13.<android.content.pm.ActivityInfo: java.lang.String name>;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean contains(java.lang.CharSequence)>("com.twitter.android");
+
+        if $z0 == 0 goto label1;
+
+        $r13 = $r12.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>;
+
+        $r14 = new android.content.ComponentName;
+
+        $r15 = $r13.<android.content.pm.ActivityInfo: android.content.pm.ApplicationInfo applicationInfo>;
+
+        $r3 = $r15.<android.content.pm.ApplicationInfo: java.lang.String packageName>;
+
+        $r6 = $r13.<android.content.pm.ActivityInfo: java.lang.String name>;
+
+        specialinvoke $r14.<android.content.ComponentName: void <init>(java.lang.String,java.lang.String)>($r3, $r6);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent addCategory(java.lang.String)>("android.intent.category.LAUNCHER");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setFlags(int)>(536870912);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setComponent(android.content.ComponentName)>($r14);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.h.a: void a(android.content.Intent)>($r1);
+
+        return;
+
+     label2:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r16 = virtualinvoke $r2.<android.support.v4.app.ac: android.content.Context getApplicationContext()>();
+
+        $i1 = <com.seattleclouds.l: int golf_sc_install_twitter_app_message>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i1);
+
+        $r17 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r16, $r3, 1);
+
+        virtualinvoke $r17.<android.widget.Toast: void show()>();
+
+        return;
+    }
+
+    private void ai()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.content.Intent $r1;
+        java.lang.String[] $r2;
+        java.lang.String $r3, $r7;
+        android.support.v4.app.ac $r4;
+        java.lang.StringBuilder $r5;
+        java.util.Date $r6;
+        long $l0;
+        android.net.Uri $r8;
+        int $i1;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent addFlags(int)>(1);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setType(java.lang.String)>("text/plain");
+
+        $r2 = newarray (java.lang.String)[1];
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String ai>;
+
+        $r2[0] = $r3;
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>("android.intent.extra.EMAIL", $r2);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.SUBJECT", "");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.TEXT", "");
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String d>;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = new java.util.Date;
+
+        specialinvoke $r6.<java.util.Date: void <init>()>();
+
+        $l0 = virtualinvoke $r6.<java.util.Date: long getTime()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l0);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".jpeg");
+
+        $r7 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = staticinvoke <com.seattleclouds.util.ar: java.lang.String a(android.app.Activity,java.lang.String,java.lang.String)>($r4, $r3, $r7);
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("file://");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r8 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r3);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("android.intent.extra.STREAM", $r8);
+
+        $i1 = <com.seattleclouds.l: int golf_sc_share_scores_using>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i1);
+
+        $r1 = staticinvoke <android.content.Intent: android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)>($r1, $r3);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.h.a: void a(android.content.Intent)>($r1);
+
+        return;
+    }
+
+    private void aj()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.io.File $r1, $r4;
+        java.lang.String $r2;
+        boolean $z0;
+        java.lang.String[] $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = new java.io.File;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: java.lang.String d>;
+
+        specialinvoke $r1.<java.io.File: void <init>(java.lang.String)>($r2);
+
+        $z0 = virtualinvoke $r1.<java.io.File: boolean isDirectory()>();
+
+        if $z0 == 0 goto label2;
+
+        $r3 = virtualinvoke $r1.<java.io.File: java.lang.String[] list()>();
+
+        $i0 = 0;
+
+     label1:
+        $i1 = lengthof $r3;
+
+        if $i0 >= $i1 goto label2;
+
+        $r4 = new java.io.File;
+
+        $r2 = $r3[$i0];
+
+        specialinvoke $r4.<java.io.File: void <init>(java.io.File,java.lang.String)>($r1, $r2);
+
+        virtualinvoke $r4.<java.io.File: boolean delete()>();
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label2:
+        return;
+    }
+
+    private org.json.JSONObject ak()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.lang.StringBuilder $r1, r9;
+        java.lang.String $r2, $r5;
+        java.io.InputStream $r3;
+        java.lang.Throwable $r4, $r6;
+        org.json.JSONException $r7;
+        java.lang.Exception $r8;
+        org.json.JSONObject r10;
+        java.lang.IllegalArgumentException r11;
+        java.io.IOException r12;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: java.lang.String c>;
+
+        $r1 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".json");
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>($r2);
+
+     label1:
+        $r2 = staticinvoke <com.seattleclouds.util.bn: java.lang.String b(java.io.InputStream)>($r3);
+
+     label2:
+        r10 = new org.json.JSONObject;
+
+     label3:
+        specialinvoke r10.<org.json.JSONObject: void <init>(java.lang.String)>($r2);
+
+     label4:
+        return r10;
+
+     label5:
+        $r4 := @caughtexception;
+
+        $r2 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR:");
+
+        r11 = (java.lang.IllegalArgumentException) $r4;
+
+        $r5 = virtualinvoke r11.<java.lang.IllegalArgumentException: java.lang.String getLocalizedMessage()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r5, $r4);
+
+     label6:
+        return null;
+
+     label7:
+        $r6 := @caughtexception;
+
+        $r2 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR:");
+
+        r12 = (java.io.IOException) $r6;
+
+        $r5 = virtualinvoke r12.<java.io.IOException: java.lang.String getLocalizedMessage()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r5, $r6);
+
+        goto label6;
+
+     label8:
+        $r7 := @caughtexception;
+
+        $r2 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR:");
+
+        $r5 = virtualinvoke $r7.<org.json.JSONException: java.lang.String getLocalizedMessage()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r5, $r7);
+
+        goto label6;
+
+     label9:
+        $r8 := @caughtexception;
+
+        $r2 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        r9 = new java.lang.StringBuilder;
+
+        specialinvoke r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR:");
+
+        $r5 = virtualinvoke $r8.<java.lang.Exception: java.lang.String getLocalizedMessage()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r5, $r8);
+
+        goto label6;
+
+        catch java.lang.IllegalArgumentException from label1 to label2 with label5;
+        catch java.lang.IllegalArgumentException from label3 to label4 with label5;
+        catch java.io.IOException from label1 to label2 with label7;
+        catch java.io.IOException from label3 to label4 with label7;
+        catch org.json.JSONException from label1 to label2 with label8;
+        catch org.json.JSONException from label3 to label4 with label8;
+        catch java.lang.Exception from label1 to label2 with label9;
+        catch java.lang.Exception from label3 to label4 with label9;
+    }
+
+    private org.json.JSONObject al()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.support.v4.app.ac $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3, $r7;
+        android.content.SharedPreferences $r4;
+        org.json.JSONObject $r5;
+        org.json.JSONException $r6;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("GolfScoreCardPrefs");
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String c>;
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = virtualinvoke $r1.<android.support.v4.app.ac: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r3, 0);
+
+        $r3 = interfaceinvoke $r4.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("GolfScoreCardPrefs", null);
+
+        if $r3 != null goto label1;
+
+        return null;
+
+     label1:
+        $r5 = new org.json.JSONObject;
+
+     label2:
+        specialinvoke $r5.<org.json.JSONObject: void <init>(java.lang.String)>($r3);
+
+     label3:
+        return $r5;
+
+     label4:
+        $r6 := @caughtexception;
+
+        $r3 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR: ");
+
+        $r7 = virtualinvoke $r6.<org.json.JSONException: java.lang.String getLocalizedMessage()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r3, $r7, $r6);
+
+        $r5 = null;
+
+        goto label3;
+
+        catch org.json.JSONException from label2 to label3 with label4;
+    }
+
+    private void am()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.TextView $r1;
+        org.json.JSONObject $r2;
+        java.lang.String $r3, $r6;
+        java.lang.StringBuilder $r4;
+        org.json.JSONException $r5;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView aj>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject e>;
+
+     label01:
+        $r3 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("holeProperty");
+
+        virtualinvoke $r1.<android.widget.TextView: void setText(java.lang.CharSequence)>($r3);
+
+     label02:
+        $r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ak>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject e>;
+
+     label03:
+        $r3 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("parProperty");
+
+        virtualinvoke $r1.<android.widget.TextView: void setText(java.lang.CharSequence)>($r3);
+
+     label04:
+        $r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ap>;
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String h>;
+
+     label05:
+        virtualinvoke $r1.<android.widget.TextView: void setText(java.lang.CharSequence)>($r3);
+
+     label06:
+        $r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView aq>;
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String i>;
+
+     label07:
+        virtualinvoke $r1.<android.widget.TextView: void setText(java.lang.CharSequence)>($r3);
+
+     label08:
+        $r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView an>;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label09:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+     label10:
+        $r2 = $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject e>;
+
+     label11:
+        $r3 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("totalParProperty");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r1.<android.widget.TextView: void setText(java.lang.CharSequence)>($r3);
+
+     label12:
+        $r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ao>;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label13:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+     label14:
+        $r2 = $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject e>;
+
+     label15:
+        $r3 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("totalProperty");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r1.<android.widget.TextView: void setText(java.lang.CharSequence)>($r3);
+
+     label16:
+        return;
+
+     label17:
+        $r5 := @caughtexception;
+
+        $r3 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR:");
+
+        $r6 = virtualinvoke $r5.<org.json.JSONException: java.lang.String getLocalizedMessage()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r3, $r6, $r5);
+
+        return;
+
+        catch org.json.JSONException from label01 to label02 with label17;
+        catch org.json.JSONException from label03 to label04 with label17;
+        catch org.json.JSONException from label05 to label06 with label17;
+        catch org.json.JSONException from label07 to label08 with label17;
+        catch org.json.JSONException from label09 to label10 with label17;
+        catch org.json.JSONException from label11 to label12 with label17;
+        catch org.json.JSONException from label13 to label14 with label17;
+        catch org.json.JSONException from label15 to label16 with label17;
+    }
+
+    private void an()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.util.ArrayList $r1;
+        java.util.Iterator $r2;
+        boolean $z0;
+        java.lang.Object $r3;
+        com.seattleclouds.modules.h.h $r4;
+        android.widget.ListView $r5;
+        android.widget.ListAdapter $r6;
+        com.seattleclouds.modules.h.j $r7;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        $r2 = virtualinvoke $r1.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r2.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r3 = interfaceinvoke $r2.<java.util.Iterator: java.lang.Object next()>();
+
+        $r4 = (com.seattleclouds.modules.h.h) $r3;
+
+        $r4.<com.seattleclouds.modules.h.h: int a> = 0;
+
+        $r4.<com.seattleclouds.modules.h.h: int b> = 0;
+
+        goto label1;
+
+     label2:
+        $r5 = $r0.<com.seattleclouds.modules.h.a: android.widget.ListView ar>;
+
+        $r6 = virtualinvoke $r5.<android.widget.ListView: android.widget.ListAdapter getAdapter()>();
+
+        $r7 = (com.seattleclouds.modules.h.j) $r6;
+
+        virtualinvoke $r7.<com.seattleclouds.modules.h.j: void notifyDataSetChanged()>();
+
+        return;
+    }
+
+    private void ao()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.support.v4.app.ac $r1;
+        int $i0;
+        android.view.View $r2, $r3;
+        android.widget.EditText $r4, $r5;
+        java.lang.String $r6;
+        android.support.v7.a.u $r7;
+        com.seattleclouds.modules.h.e $r8;
+        android.support.v7.a.t $r9;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.j: int golf_scorecard_player_info_picker>;
+
+        $r2 = staticinvoke <android.view.View: android.view.View inflate(android.content.Context,int,android.view.ViewGroup)>($r1, $i0, null);
+
+        $i0 = <com.seattleclouds.h: int golf_sc_player1_name_edittxt>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.EditText) $r3;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_player2_name_edittxt>;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.EditText) $r3;
+
+        $r6 = $r0.<com.seattleclouds.modules.h.a: java.lang.String h>;
+
+        virtualinvoke $r4.<android.widget.EditText: void setText(java.lang.CharSequence)>($r6);
+
+        $r6 = $r0.<com.seattleclouds.modules.h.a: java.lang.String i>;
+
+        virtualinvoke $r5.<android.widget.EditText: void setText(java.lang.CharSequence)>($r6);
+
+        $r7 = new android.support.v7.a.u;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        specialinvoke $r7.<android.support.v7.a.u: void <init>(android.content.Context)>($r1);
+
+        $r7 = virtualinvoke $r7.<android.support.v7.a.u: android.support.v7.a.u b(android.view.View)>($r2);
+
+        $i0 = <com.seattleclouds.l: int apply>;
+
+        $r8 = new com.seattleclouds.modules.h.e;
+
+        specialinvoke $r8.<com.seattleclouds.modules.h.e: void <init>(com.seattleclouds.modules.h.a,android.widget.EditText,android.widget.EditText)>($r0, $r4, $r5);
+
+        $r7 = virtualinvoke $r7.<android.support.v7.a.u: android.support.v7.a.u a(int,android.content.DialogInterface$OnClickListener)>($i0, $r8);
+
+        $i0 = <com.seattleclouds.l: int cancel>;
+
+        $r7 = virtualinvoke $r7.<android.support.v7.a.u: android.support.v7.a.u b(int,android.content.DialogInterface$OnClickListener)>($i0, null);
+
+        $r9 = virtualinvoke $r7.<android.support.v7.a.u: android.support.v7.a.t b()>();
+
+        virtualinvoke $r9.<android.support.v7.a.t: void show()>();
+
+        return;
+    }
+
+    private java.lang.String ap()
+    {
+        com.seattleclouds.modules.h.a $r0;
+        org.json.JSONObject $r1, $r2;
+        java.lang.String $r3, $r11;
+        org.json.JSONArray $r4;
+        java.util.ArrayList $r5;
+        java.util.Iterator $r6;
+        boolean $z0;
+        java.lang.Object $r7;
+        com.seattleclouds.modules.h.h $r8;
+        int $i0;
+        org.json.JSONException $r9;
+        java.lang.StringBuilder $r10;
+        java.lang.Exception $r12, $r13;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r2 = new org.json.JSONObject;
+
+        specialinvoke $r2.<org.json.JSONObject: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String h>;
+
+     label01:
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("player1Property", $r3);
+
+     label02:
+        $r3 = $r0.<com.seattleclouds.modules.h.a: java.lang.String i>;
+
+     label03:
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("player2Property", $r3);
+
+     label04:
+        $r4 = new org.json.JSONArray;
+
+     label05:
+        specialinvoke $r4.<org.json.JSONArray: void <init>()>();
+
+     label06:
+        $r5 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        if $r5 == null goto label24;
+
+        $r5 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+     label07:
+        $r6 = virtualinvoke $r5.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label08:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+     label09:
+        if $z0 == 0 goto label24;
+
+     label10:
+        $r7 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+     label11:
+        $r8 = (com.seattleclouds.modules.h.h) $r7;
+
+        $r1 = new org.json.JSONObject;
+
+     label12:
+        specialinvoke $r1.<org.json.JSONObject: void <init>()>();
+
+     label13:
+        $i0 = $r8.<com.seattleclouds.modules.h.h: int a>;
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>("player1Property", $i0);
+
+     label14:
+        $i0 = $r8.<com.seattleclouds.modules.h.h: int b>;
+
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>("player2Property", $i0);
+
+     label15:
+        virtualinvoke $r4.<org.json.JSONArray: org.json.JSONArray put(java.lang.Object)>($r1);
+
+     label16:
+        goto label08;
+
+     label17:
+        $r9 := @caughtexception;
+
+        $r3 = <com.seattleclouds.modules.h.a: java.lang.String a>;
+
+        $r10 = new java.lang.StringBuilder;
+
+        specialinvoke $r10.<java.lang.StringBuilder: void <init>()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR: ");
+
+        $r11 = virtualinvoke $r9.<org.json.JSONException: java.lang.String getLocalizedMessage()>();
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r11 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r3, $r11, $r9);
+
+        return null;
+
+     label18:
+        $r12 := @caughtexception;
+
+     label19:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>("player1Property", 0);
+
+     label20:
+        goto label14;
+
+     label21:
+        $r13 := @caughtexception;
+
+     label22:
+        virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,int)>("player2Property", 0);
+
+     label23:
+        goto label15;
+
+     label24:
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("holes", $r4);
+
+        $r3 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String toString()>();
+
+     label25:
+        return $r3;
+
+        catch org.json.JSONException from label01 to label02 with label17;
+        catch org.json.JSONException from label03 to label04 with label17;
+        catch org.json.JSONException from label05 to label06 with label17;
+        catch org.json.JSONException from label07 to label09 with label17;
+        catch org.json.JSONException from label10 to label11 with label17;
+        catch org.json.JSONException from label12 to label13 with label17;
+        catch java.lang.Exception from label13 to label14 with label18;
+        catch java.lang.Exception from label14 to label15 with label21;
+        catch org.json.JSONException from label15 to label16 with label17;
+        catch org.json.JSONException from label19 to label20 with label17;
+        catch org.json.JSONException from label22 to label23 with label17;
+        catch org.json.JSONException from label24 to label25 with label17;
+    }
+
+    static android.widget.TextView b(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView al>;
+
+        return r1;
+    }
+
+    static java.lang.String b(com.seattleclouds.modules.h.a, java.lang.String)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String h> = $r1;
+
+        return $r1;
+    }
+
+    private void b(android.view.View)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.view.View $r1;
+        android.os.Bundle $r2;
+        android.widget.TextView $r3;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.os.Bundle j()>();
+
+        if $r2 == null goto label1;
+
+        $r2 = virtualinvoke $r2.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r1, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ap>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView aq>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView al>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView am>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView aj>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ak>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView an>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ao>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView al>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView am>;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.widget.TextView,android.os.Bundle)>($r3, $r2);
+
+     label1:
+        return;
+    }
+
+    private int c(java.lang.String)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.lang.String $r1;
+        java.util.ArrayList $r2;
+        java.util.Iterator $r3;
+        int $i0, $i1;
+        boolean $z0;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.h.h $r5;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 != "player1Property" goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+        $i0 = 0;
+
+     label1:
+        $z0 = interfaceinvoke $r3.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label5;
+
+        $r4 = interfaceinvoke $r3.<java.util.Iterator: java.lang.Object next()>();
+
+        $r5 = (com.seattleclouds.modules.h.h) $r4;
+
+        $i1 = $r5.<com.seattleclouds.modules.h.h: int a>;
+
+        $i0 = $i1 + $i0;
+
+        goto label1;
+
+     label2:
+        if $r1 != "player2Property" goto label4;
+
+        $r2 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+        $i0 = 0;
+
+     label3:
+        $z0 = interfaceinvoke $r3.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label5;
+
+        $r4 = interfaceinvoke $r3.<java.util.Iterator: java.lang.Object next()>();
+
+        $r5 = (com.seattleclouds.modules.h.h) $r4;
+
+        $i1 = $r5.<com.seattleclouds.modules.h.h: int b>;
+
+        $i0 = $i1 + $i0;
+
+        goto label3;
+
+     label4:
+        return 0;
+
+     label5:
+        return $i0;
+    }
+
+    static android.widget.TextView c(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView am>;
+
+        return r1;
+    }
+
+    static java.lang.String c(com.seattleclouds.modules.h.a, java.lang.String)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String i> = $r1;
+
+        return $r1;
+    }
+
+    static void d(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void ag()>();
+
+        return;
+    }
+
+    static void e(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void ah()>();
+
+        return;
+    }
+
+    static void f(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void ai()>();
+
+        return;
+    }
+
+    static android.widget.TextView g(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ap>;
+
+        return r1;
+    }
+
+    static android.widget.TextView h(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.widget.TextView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        r1 = $r0.<com.seattleclouds.modules.h.a: android.widget.TextView aq>;
+
+        return r1;
+    }
+
+    static java.util.ArrayList i(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        r1 = $r0.<com.seattleclouds.modules.h.a: java.util.ArrayList f>;
+
+        return r1;
+    }
+
+    static android.os.Bundle j(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.os.Bundle r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        r1 = $r0.<com.seattleclouds.modules.h.a: android.os.Bundle g>;
+
+        return r1;
+    }
+
+    static org.json.JSONObject k(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        org.json.JSONObject $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject ak()>();
+
+        return $r1;
+    }
+
+    static org.json.JSONObject l(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        org.json.JSONObject r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        r1 = $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject e>;
+
+        return r1;
+    }
+
+    static org.json.JSONObject m(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        org.json.JSONObject $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.modules.h.a: org.json.JSONObject al()>();
+
+        return $r1;
+    }
+
+    static void n(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void ae()>();
+
+        return;
+    }
+
+    static void o(com.seattleclouds.modules.h.a)
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void am()>();
+
+        return;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.modules.h.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void ad()>();
+
+        specialinvoke $r0.<com.seattleclouds.r: void E()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.widget.TextView $r6;
+        android.widget.ListView $r7;
+        java.lang.String $r8;
+        com.seattleclouds.modules.h.i $r9;
+        java.lang.Void[] $r10;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int fragment_golf_scorecard>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int golf_sc_player1_name_title_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ap> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_player2_name_title_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView aq> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_holes_title_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView aj> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_par_title_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ak> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_par_total_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView an> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_holes_total_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView ao> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_player1_total_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView al> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_player2_total_txtview>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.TextView am> = $r6;
+
+        $i0 = <com.seattleclouds.h: int golf_sc_scores_list>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.ListView) $r5;
+
+        $r0.<com.seattleclouds.modules.h.a: android.widget.ListView ar> = $r7;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.os.Bundle j()>();
+
+        if $r3 == null goto label1;
+
+        $r8 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_ID");
+
+        $r0.<com.seattleclouds.modules.h.a: java.lang.String c> = $r8;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void b(android.view.View)>($r4);
+
+        $r9 = new com.seattleclouds.modules.h.i;
+
+        specialinvoke $r9.<com.seattleclouds.modules.h.i: void <init>(com.seattleclouds.modules.h.a,com.seattleclouds.modules.h.b)>($r0, null);
+
+        $r10 = newarray (java.lang.Void)[0];
+
+        virtualinvoke $r9.<com.seattleclouds.modules.h.i: android.os.AsyncTask execute(java.lang.Object[])>($r10);
+
+        return $r4;
+    }
+
+    public void a(android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 := @parameter1: android.view.MenuInflater;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.Menu,android.view.MenuInflater)>($r1, $r2);
+
+        $i0 = <com.seattleclouds.k: int golf_scorecard_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        return;
+    }
+
+    public boolean a(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.h.a $r0;
+        android.view.MenuItem $r1;
+        com.seattleclouds.modules.h.b $r2;
+        com.seattleclouds.modules.h.c $r3;
+        int $i0, $i1;
+        android.support.v4.app.ac $r4;
+        java.lang.String $r5, $r6, $r7;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.h.a;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int golf_sc_edit_score_menubutton>;
+
+        if $i0 != $i1 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void ao()>();
+
+        return 1;
+
+     label1:
+        $i1 = <com.seattleclouds.h: int golf_sc_post_via_menubutton>;
+
+        if $i0 != $i1 goto label2;
+
+        specialinvoke $r0.<com.seattleclouds.modules.h.a: void af()>();
+
+        return 1;
+
+     label2:
+        $i1 = <com.seattleclouds.h: int golf_sc_reset_score_menubutton>;
+
+        if $i0 != $i1 goto label3;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int golf_sc_clear_scores_message>;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r2 = new com.seattleclouds.modules.h.b;
+
+        specialinvoke $r2.<com.seattleclouds.modules.h.b: void <init>(com.seattleclouds.modules.h.a)>($r0);
+
+        $i0 = <com.seattleclouds.l: int OK>;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        $r3 = new com.seattleclouds.modules.h.c;
+
+        specialinvoke $r3.<com.seattleclouds.modules.h.c: void <init>(com.seattleclouds.modules.h.a)>($r0);
+
+        $i0 = <com.seattleclouds.l: int cancel>;
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.modules.h.a: java.lang.String a_(int)>($i0);
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,java.lang.String,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String,android.content.DialogInterface$OnClickListener,java.lang.String)>($r4, null, $r5, $r2, $r6, null, null, $r3, $r7);
+
+        return 1;
+
+     label3:
+        $z0 = specialinvoke $r0.<com.seattleclouds.r: boolean a(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+}

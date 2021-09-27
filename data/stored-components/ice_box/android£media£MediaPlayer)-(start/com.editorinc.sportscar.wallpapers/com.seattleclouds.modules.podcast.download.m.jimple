@@ -1,0 +1,255 @@
+class com.seattleclouds.modules.podcast.download.m extends java.lang.Object implements android.support.v7.view.c
+{
+    final com.seattleclouds.modules.podcast.download.g a;
+
+    void <init>(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.m $r0;
+        com.seattleclouds.modules.podcast.download.g $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.m;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(android.support.v7.view.b)
+    {
+        com.seattleclouds.modules.podcast.download.m $r0;
+        android.support.v7.view.b $r1;
+        com.seattleclouds.modules.podcast.download.g $r2;
+        int $i0, $i1;
+        android.widget.BaseAdapter $r3;
+        android.widget.GridView $r4;
+        java.util.ArrayList $r5;
+        com.seattleclouds.modules.podcast.download.n $r6;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.m;
+
+        $r1 := @parameter0: android.support.v7.view.b;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        staticinvoke <com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b a(com.seattleclouds.modules.podcast.download.g,android.support.v7.view.b)>($r2, null);
+
+        $i0 = 0;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.podcast.download.g: android.widget.BaseAdapter k(com.seattleclouds.modules.podcast.download.g)>($r2);
+
+        $i1 = virtualinvoke $r3.<android.widget.BaseAdapter: int getCount()>();
+
+        if $i0 >= $i1 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.download.g: android.widget.GridView e(com.seattleclouds.modules.podcast.download.g)>($r2);
+
+        virtualinvoke $r4.<android.widget.GridView: void setItemChecked(int,boolean)>($i0, 0);
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.podcast.download.g: java.util.ArrayList h(com.seattleclouds.modules.podcast.download.g)>($r2);
+
+        virtualinvoke $r5.<java.util.ArrayList: void clear()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.download.g: android.widget.GridView e(com.seattleclouds.modules.podcast.download.g)>($r2);
+
+        $r6 = new com.seattleclouds.modules.podcast.download.n;
+
+        specialinvoke $r6.<com.seattleclouds.modules.podcast.download.n: void <init>(com.seattleclouds.modules.podcast.download.m)>($r0);
+
+        virtualinvoke $r4.<android.widget.GridView: boolean post(java.lang.Runnable)>($r6);
+
+        return;
+    }
+
+    public boolean a(android.support.v7.view.b, android.view.Menu)
+    {
+        com.seattleclouds.modules.podcast.download.m $r0;
+        android.support.v7.view.b $r1;
+        android.view.Menu $r2;
+        android.view.MenuInflater $r3;
+        int $i0;
+        com.seattleclouds.modules.podcast.download.g $r4;
+        android.widget.GridView $r5;
+        android.support.v4.app.ac $r6;
+        com.seattleclouds.p $r7;
+        com.seattleclouds.e.f $r8;
+        android.support.v7.a.v $r9;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.m;
+
+        $r1 := @parameter0: android.support.v7.view.b;
+
+        $r2 := @parameter1: android.view.Menu;
+
+        $r3 = virtualinvoke $r1.<android.support.v7.view.b: android.view.MenuInflater a()>();
+
+        $i0 = <com.seattleclouds.k: int podcast_downloaded_action_menu>;
+
+        virtualinvoke $r3.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r2);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.podcast.download.g: android.widget.GridView e(com.seattleclouds.modules.podcast.download.g)>($r4);
+
+        virtualinvoke $r5.<android.widget.GridView: void setChoiceMode(int)>(2);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r6 = virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r7 = (com.seattleclouds.p) $r6;
+
+        $r8 = virtualinvoke $r7.<com.seattleclouds.p: com.seattleclouds.e.f m()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r6 = virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r9 = (android.support.v7.a.v) $r6;
+
+        staticinvoke <com.seattleclouds.e.b: void a(com.seattleclouds.e.f,android.support.v7.a.v,android.view.Menu)>($r8, $r9, $r2);
+
+        return 1;
+    }
+
+    public boolean a(android.support.v7.view.b, android.view.MenuItem)
+    {
+        com.seattleclouds.modules.podcast.download.m $r0;
+        android.support.v7.view.b $r1;
+        android.view.MenuItem $r2;
+        int $i0, $i1;
+        com.seattleclouds.modules.podcast.download.g $r3;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r4;
+        java.util.ArrayList $r5;
+        java.lang.Object $r6;
+        com.seattleclouds.modules.podcast.PodcastItem $r7;
+        android.support.v4.app.ac $r8;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.m;
+
+        $r1 := @parameter0: android.support.v7.view.b;
+
+        $r2 := @parameter1: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r2.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int delete>;
+
+        if $i0 != $i1 goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.podcast.download.g: boolean i(com.seattleclouds.modules.podcast.download.g)>($r3);
+
+        if $z0 == 0 goto label1;
+
+        return 0;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.download.g: com.seattleclouds.modules.podcast.download.PodcastDownloadService j(com.seattleclouds.modules.podcast.download.g)>($r3);
+
+        if $r4 == null goto label3;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.download.g: com.seattleclouds.modules.podcast.download.PodcastDownloadService j(com.seattleclouds.modules.podcast.download.g)>($r3);
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.podcast.download.g: java.util.ArrayList h(com.seattleclouds.modules.podcast.download.g)>($r3);
+
+        virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.PodcastDownloadService: void b(java.util.List)>($r5);
+
+        virtualinvoke $r1.<android.support.v7.view.b: void c()>();
+
+        return 1;
+
+     label2:
+        $i1 = <com.seattleclouds.h: int share>;
+
+        if $i0 != $i1 goto label3;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r5 = staticinvoke <com.seattleclouds.modules.podcast.download.g: java.util.ArrayList h(com.seattleclouds.modules.podcast.download.g)>($r3);
+
+        $r6 = virtualinvoke $r5.<java.util.ArrayList: java.lang.Object get(int)>(0);
+
+        $r7 = (com.seattleclouds.modules.podcast.PodcastItem) $r6;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r8 = virtualinvoke $r3.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.modules.podcast.x: void b(android.app.Activity,com.seattleclouds.modules.podcast.PodcastItem)>($r8, $r7);
+
+        virtualinvoke $r1.<android.support.v7.view.b: void c()>();
+
+        return 1;
+
+     label3:
+        return 0;
+    }
+
+    public boolean b(android.support.v7.view.b, android.view.Menu)
+    {
+        com.seattleclouds.modules.podcast.download.m $r0;
+        android.support.v7.view.b $r1;
+        android.view.Menu $r2;
+        com.seattleclouds.modules.podcast.download.g $r3;
+        java.util.ArrayList $r4;
+        int $i0;
+        android.view.MenuItem $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.m;
+
+        $r1 := @parameter0: android.support.v7.view.b;
+
+        $r2 := @parameter1: android.view.Menu;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.m: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.download.g: java.util.ArrayList h(com.seattleclouds.modules.podcast.download.g)>($r3);
+
+        $i0 = virtualinvoke $r4.<java.util.ArrayList: int size()>();
+
+        if $i0 <= 1 goto label1;
+
+        $i0 = <com.seattleclouds.h: int share>;
+
+        $r5 = interfaceinvoke $r2.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r5.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(0);
+
+        return 1;
+
+     label1:
+        $i0 = <com.seattleclouds.h: int share>;
+
+        $r5 = interfaceinvoke $r2.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        interfaceinvoke $r5.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(1);
+
+        return 1;
+    }
+}

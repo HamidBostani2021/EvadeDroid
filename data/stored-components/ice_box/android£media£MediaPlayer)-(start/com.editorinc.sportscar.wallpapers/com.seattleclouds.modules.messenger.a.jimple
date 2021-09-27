@@ -1,0 +1,556 @@
+public class com.seattleclouds.modules.messenger.a extends com.seattleclouds.bd
+{
+    private android.widget.Button a;
+    private java.lang.String b;
+    private android.widget.Button c;
+    private android.view.View d;
+    private android.view.View e;
+    private int f;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        specialinvoke $r0.<com.seattleclouds.bd: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.messenger.a: java.lang.String b> = null;
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.messenger.a)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.messenger.a;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void ah()>();
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.messenger.a, int)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.messenger.a;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void c(int)>($i0);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.messenger.a, java.lang.String)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.messenger.a;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void c(java.lang.String)>($r1);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.messenger.a, boolean, boolean)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        boolean $z0, $z1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.messenger.a;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 := @parameter2: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void a(boolean,boolean)>(0, 1);
+
+        return;
+    }
+
+    private void a(boolean, boolean)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        boolean $z0, $z1;
+        android.view.View $r1, $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $z0 := @parameter0: boolean;
+
+        $z1 := @parameter1: boolean;
+
+        goto label3;
+
+     label1:
+        goto label4;
+
+     label2:
+        $i0 = $r0.<com.seattleclouds.modules.messenger.a: int f>;
+
+        staticinvoke <com.seattleclouds.util.bb: void a(android.view.View,android.view.View,int)>($r1, $r2, $i0);
+
+        return;
+
+     label3:
+        $r1 = $r0.<com.seattleclouds.modules.messenger.a: android.view.View d>;
+
+        goto label1;
+
+     label4:
+        $r2 = $r0.<com.seattleclouds.modules.messenger.a: android.view.View e>;
+
+        goto label2;
+    }
+
+    static boolean a(com.seattleclouds.modules.messenger.a, boolean)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.messenger.a;
+
+        $z0 := @parameter1: boolean;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.messenger.a: boolean h(boolean)>($z0);
+
+        return $z0;
+    }
+
+    private void ah()
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.messenger.a: java.lang.String b>;
+
+        if $r1 != null goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void ai()>();
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void aj()>();
+
+        return;
+    }
+
+    private void ai()
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        java.lang.String[] $r1;
+        android.content.Intent $r2;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $r1 = newarray (java.lang.String)[1];
+
+        $r1[0] = "com.google";
+
+        $r2 = staticinvoke <com.google.android.gms.common.a: android.content.Intent a(android.accounts.Account,java.util.ArrayList,java.lang.String[],boolean,java.lang.String,java.lang.String,java.lang.String[],android.os.Bundle)>(null, null, $r1, 0, null, null, null, null);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: void startActivityForResult(android.content.Intent,int)>($r2, 1002);
+
+        return;
+    }
+
+    private void aj()
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        com.seattleclouds.modules.messenger.f $r1;
+        java.lang.String $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $r1 = new com.seattleclouds.modules.messenger.f;
+
+        $r2 = $r0.<com.seattleclouds.modules.messenger.a: java.lang.String b>;
+
+        specialinvoke $r1.<com.seattleclouds.modules.messenger.f: void <init>(com.seattleclouds.modules.messenger.a,java.lang.String,java.lang.String,int)>($r0, $r2, "oauth2:https://www.googleapis.com/auth/userinfo.profile", 1003);
+
+        $r3 = newarray (java.lang.Void)[0];
+
+        virtualinvoke $r1.<com.seattleclouds.modules.messenger.f: android.os.AsyncTask execute(java.lang.Object[])>($r3);
+
+        return;
+    }
+
+    private void c(int)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        int $i0;
+        com.seattleclouds.modules.messenger.d $r1;
+        android.support.v4.app.ac $r2;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $i0 := @parameter0: int;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: android.support.v4.app.ac n()>();
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: android.support.v4.app.ac n()>();
+
+        $r1 = new com.seattleclouds.modules.messenger.d;
+
+        specialinvoke $r1.<com.seattleclouds.modules.messenger.d: void <init>(com.seattleclouds.modules.messenger.a,int)>($r0, $i0);
+
+        virtualinvoke $r2.<android.support.v4.app.ac: void runOnUiThread(java.lang.Runnable)>($r1);
+
+        return;
+    }
+
+    private void c(java.lang.String)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        java.lang.String $r1;
+        com.seattleclouds.modules.messenger.e $r2;
+        android.support.v4.app.ac $r3;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: android.support.v4.app.ac n()>();
+
+        $r2 = new com.seattleclouds.modules.messenger.e;
+
+        specialinvoke $r2.<com.seattleclouds.modules.messenger.e: void <init>(com.seattleclouds.modules.messenger.a,java.lang.String)>($r0, $r1);
+
+        virtualinvoke $r3.<android.support.v4.app.ac: void runOnUiThread(java.lang.Runnable)>($r2);
+
+        return;
+    }
+
+    private boolean h(boolean)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        boolean $z0, $z1;
+        android.support.v4.app.ac $r1;
+        int $i0;
+        android.app.Dialog $r2;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.google.android.gms.common.GooglePlayServicesUtil: int isGooglePlayServicesAvailable(android.content.Context)>($r1);
+
+        $z1 = staticinvoke <com.google.android.gms.common.GooglePlayServicesUtil: boolean isUserRecoverableError(int)>($i0);
+
+        if $z1 == 0 goto label1;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: android.support.v4.app.ac n()>();
+
+        $r2 = staticinvoke <com.google.android.gms.common.GooglePlayServicesUtil: android.app.Dialog getErrorDialog(int,android.app.Activity,int)>($i0, $r1, 1001);
+
+        virtualinvoke $r2.<android.app.Dialog: void show()>();
+
+        return 0;
+
+     label1:
+        return 1;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.content.res.Resources $r6;
+        android.widget.Button $r7;
+        com.seattleclouds.modules.messenger.b $r8;
+        com.seattleclouds.modules.messenger.c $r9;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int fragment_app_sign_in>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int content>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.messenger.a: android.view.View d> = $r5;
+
+        $i0 = <com.seattleclouds.h: int progress>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.messenger.a: android.view.View e> = $r5;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.messenger.a: android.content.res.Resources o()>();
+
+        $i0 = virtualinvoke $r6.<android.content.res.Resources: int getInteger(int)>(17694720);
+
+        $r0.<com.seattleclouds.modules.messenger.a: int f> = $i0;
+
+        $i0 = <com.seattleclouds.h: int sign_in_with_google>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r5;
+
+        $r0.<com.seattleclouds.modules.messenger.a: android.widget.Button a> = $r7;
+
+        $i0 = <com.seattleclouds.h: int sign_in_with_facebook>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r5;
+
+        $r0.<com.seattleclouds.modules.messenger.a: android.widget.Button c> = $r7;
+
+        $r7 = $r0.<com.seattleclouds.modules.messenger.a: android.widget.Button a>;
+
+        $r8 = new com.seattleclouds.modules.messenger.b;
+
+        specialinvoke $r8.<com.seattleclouds.modules.messenger.b: void <init>(com.seattleclouds.modules.messenger.a)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r8);
+
+        $r7 = $r0.<com.seattleclouds.modules.messenger.a: android.widget.Button c>;
+
+        $r9 = new com.seattleclouds.modules.messenger.c;
+
+        specialinvoke $r9.<com.seattleclouds.modules.messenger.c: void <init>(com.seattleclouds.modules.messenger.a)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r9);
+
+        return $r4;
+    }
+
+    public void a(int, int, android.content.Intent)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        android.os.Bundle $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        specialinvoke $r0.<com.seattleclouds.bd: void a(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+        lookupswitch($i0)
+        {
+            case 1001: goto label2;
+            case 1002: goto label4;
+            case 1003: goto label6;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        if $i1 != -1 goto label3;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void ah()>();
+
+        return;
+
+     label3:
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: boolean h(boolean)>(1);
+
+        return;
+
+     label4:
+        if $i1 != -1 goto label8;
+
+        if $r1 == null goto label8;
+
+        $r2 = virtualinvoke $r1.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r2 == null goto label8;
+
+        $r3 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("authAccount");
+
+        if $r3 == null goto label5;
+
+        $r0.<com.seattleclouds.modules.messenger.a: java.lang.String b> = $r3;
+
+     label5:
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void aj()>();
+
+        return;
+
+     label6:
+        if $i1 != -1 goto label7;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void aj()>();
+
+        return;
+
+     label7:
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.a: void a(boolean,boolean)>(0, 1);
+
+     label8:
+        return;
+    }
+
+    public void a(com.seattleclouds.util.ak)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        com.seattleclouds.util.ak $r1;
+        java.lang.StringBuilder $r2;
+        java.lang.String $r3, $r4, $r5, $r6, $r7;
+        int $i0;
+        com.seattleclouds.modules.messenger.g $r8;
+        java.lang.String[] $r9;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $r1 := @parameter0: com.seattleclouds.util.ak;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("onSuccess: ");
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.util.ak: java.lang.String toString()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("AppSignInFragment", $r3);
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.util.ak: java.lang.String b()>();
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.util.ak: java.lang.String c()>();
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.util.ak: java.lang.String a()>();
+
+        $r6 = "";
+
+        $r7 = virtualinvoke $r1.<com.seattleclouds.util.ak: java.lang.String f()>();
+
+        if $r7 == null goto label1;
+
+        $i0 = virtualinvoke $r7.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label1;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r6 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label1:
+        $i0 = virtualinvoke $r6.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label2;
+
+        if $r4 == null goto label2;
+
+        $i0 = virtualinvoke $r4.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label2;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r6 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label2:
+        $i0 = virtualinvoke $r6.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label3;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r6 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label3:
+        $r8 = new com.seattleclouds.modules.messenger.g;
+
+        specialinvoke $r8.<com.seattleclouds.modules.messenger.g: void <init>(com.seattleclouds.modules.messenger.a,android.support.v4.app.Fragment)>($r0, $r0);
+
+        $r9 = newarray (java.lang.String)[4];
+
+        $r9[0] = $r3;
+
+        $r9[1] = "facebook";
+
+        $r9[2] = $r5;
+
+        $r9[3] = $r6;
+
+        virtualinvoke $r8.<com.seattleclouds.modules.messenger.g: android.os.AsyncTask execute(java.lang.Object[])>($r9);
+
+        return;
+    }
+
+    public void a(com.seattleclouds.util.am)
+    {
+        com.seattleclouds.modules.messenger.a $r0;
+        com.seattleclouds.util.am $r1;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.a;
+
+        $r1 := @parameter0: com.seattleclouds.util.am;
+
+        specialinvoke $r0.<com.seattleclouds.bd: void a(com.seattleclouds.util.am)>($r1);
+
+        return;
+    }
+}

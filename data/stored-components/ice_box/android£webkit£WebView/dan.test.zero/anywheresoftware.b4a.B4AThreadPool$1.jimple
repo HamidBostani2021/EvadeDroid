@@ -1,0 +1,80 @@
+class anywheresoftware.b4a.B4AThreadPool$1 extends java.util.concurrent.ThreadPoolExecutor
+{
+    final anywheresoftware.b4a.B4AThreadPool this$0;
+
+    void <init>(anywheresoftware.b4a.B4AThreadPool, int, int, long, java.util.concurrent.TimeUnit, java.util.concurrent.BlockingQueue)
+    {
+        anywheresoftware.b4a.B4AThreadPool$1 $r0;
+        anywheresoftware.b4a.B4AThreadPool $r1;
+        int $i0, $i1;
+        long $l2;
+        java.util.concurrent.TimeUnit $r2;
+        java.util.concurrent.BlockingQueue $r3;
+
+        $r0 := @this: anywheresoftware.b4a.B4AThreadPool$1;
+
+        $r1 := @parameter0: anywheresoftware.b4a.B4AThreadPool;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $l2 := @parameter3: long;
+
+        $r2 := @parameter4: java.util.concurrent.TimeUnit;
+
+        $r3 := @parameter5: java.util.concurrent.BlockingQueue;
+
+        $r0.<anywheresoftware.b4a.B4AThreadPool$1: anywheresoftware.b4a.B4AThreadPool this$0> = $r1;
+
+        specialinvoke $r0.<java.util.concurrent.ThreadPoolExecutor: void <init>(int,int,long,java.util.concurrent.TimeUnit,java.util.concurrent.BlockingQueue)>($i0, $i1, $l2, $r2, $r3);
+
+        return;
+    }
+
+    protected void afterExecute(java.lang.Runnable, java.lang.Throwable)
+    {
+        anywheresoftware.b4a.B4AThreadPool$1 $r0;
+        java.lang.Runnable $r1;
+        java.lang.Throwable $r2;
+        int $i0;
+        anywheresoftware.b4a.B4AThreadPool $r3;
+        java.util.concurrent.ConcurrentLinkedQueue $r4;
+        java.lang.Object $r5;
+        anywheresoftware.b4a.B4AThreadPool$QueuedTask $r6;
+        android.os.Handler $r7;
+
+        $r0 := @this: anywheresoftware.b4a.B4AThreadPool$1;
+
+        $r1 := @parameter0: java.lang.Runnable;
+
+        $r2 := @parameter1: java.lang.Throwable;
+
+        $i0 = 0;
+
+     label1:
+        if $i0 < 1 goto label2;
+
+        return;
+
+     label2:
+        $r3 = $r0.<anywheresoftware.b4a.B4AThreadPool$1: anywheresoftware.b4a.B4AThreadPool this$0>;
+
+        $r4 = staticinvoke <anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ConcurrentLinkedQueue access$2(anywheresoftware.b4a.B4AThreadPool)>($r3);
+
+        $r5 = virtualinvoke $r4.<java.util.concurrent.ConcurrentLinkedQueue: java.lang.Object poll()>();
+
+        $r6 = (anywheresoftware.b4a.B4AThreadPool$QueuedTask) $r5;
+
+        if $r6 == null goto label3;
+
+        $r7 = <anywheresoftware.b4a.BA: android.os.Handler handler>;
+
+        virtualinvoke $r7.<android.os.Handler: boolean post(java.lang.Runnable)>($r6);
+
+     label3:
+        $i0 = $i0 + 1;
+
+        goto label1;
+    }
+}

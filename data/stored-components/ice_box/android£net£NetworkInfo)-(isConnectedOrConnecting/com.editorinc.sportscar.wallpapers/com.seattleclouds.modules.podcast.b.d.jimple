@@ -1,0 +1,677 @@
+public class com.seattleclouds.modules.podcast.b.d extends android.os.AsyncTask
+{
+    private android.graphics.Bitmap a;
+    private java.lang.ref.WeakReference b;
+    private int c;
+
+    public void <init>(int)
+    {
+        com.seattleclouds.modules.podcast.b.d $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.d;
+
+        $i0 := @parameter0: int;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.b.d: int c> = $i0;
+
+        return;
+    }
+
+    protected transient android.graphics.Bitmap a(java.lang.String[])
+    {
+        com.seattleclouds.modules.podcast.b.d $r0;
+        java.lang.String[] $r1;
+        java.io.File $r2;
+        boolean $z0, $z1;
+        java.lang.String $r3, $r4;
+        int $i0, $i1;
+        android.graphics.Bitmap $r5, $r19;
+        java.net.URL $r6;
+        java.net.URLConnection $r7;
+        java.net.HttpURLConnection $r8;
+        java.io.FileOutputStream $r9;
+        java.io.BufferedOutputStream $r10;
+        java.io.BufferedInputStream $r11;
+        java.io.InputStream $r12;
+        byte[] $r13;
+        java.lang.Throwable $r14, $r15, $r16, $r17, $r20, $r21, $r22, $r23, $r24, $r25, $r26, $r27, $r28, $r29, $r30, $r31, $r32;
+        java.lang.OutOfMemoryError $r18;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.d;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $z0 = 0;
+
+        $r3 = $r1[0];
+
+     label001:
+        $r4 = staticinvoke <com.seattleclouds.modules.podcast.x: java.lang.String c(java.lang.String)>($r3);
+
+     label002:
+        $r2 = new java.io.File;
+
+     label003:
+        specialinvoke $r2.<java.io.File: void <init>(java.lang.String)>($r4);
+
+        $z1 = virtualinvoke $r2.<java.io.File: boolean exists()>();
+
+     label004:
+        if $z1 == 0 goto label012;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.b.d: int c>;
+
+        if $i0 != -1 goto label008;
+
+     label005:
+        $r3 = virtualinvoke $r2.<java.io.File: java.lang.String getAbsolutePath()>();
+
+        $r5 = staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeFile(java.lang.String)>($r3);
+
+     label006:
+        $z0 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.d: boolean isCancelled()>();
+
+     label007:
+        if $z0 == 0 goto label079;
+
+        return null;
+
+     label008:
+        $r3 = virtualinvoke $r2.<java.io.File: java.lang.String getAbsolutePath()>();
+
+     label009:
+        $i0 = $r0.<com.seattleclouds.modules.podcast.b.d: int c>;
+
+     label010:
+        $r5 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap b(java.lang.String,int)>($r3, $i0);
+
+     label011:
+        goto label006;
+
+     label012:
+        virtualinvoke $r2.<java.io.File: boolean createNewFile()>();
+
+     label013:
+        $r6 = new java.net.URL;
+
+     label014:
+        specialinvoke $r6.<java.net.URL: void <init>(java.lang.String)>($r3);
+
+        $r7 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>();
+
+     label015:
+        $r8 = (java.net.HttpURLConnection) $r7;
+
+     label016:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void setConnectTimeout(int)>(10000);
+
+        virtualinvoke $r8.<java.net.HttpURLConnection: void setReadTimeout(int)>(10000);
+
+        virtualinvoke $r8.<java.net.HttpURLConnection: void connect()>();
+
+        $i0 = virtualinvoke $r8.<java.net.HttpURLConnection: int getResponseCode()>();
+
+     label017:
+        if $i0 == 200 goto label018;
+
+        return null;
+
+     label018:
+        $r9 = new java.io.FileOutputStream;
+
+     label019:
+        specialinvoke $r9.<java.io.FileOutputStream: void <init>(java.io.File)>($r2);
+
+     label020:
+        $r10 = new java.io.BufferedOutputStream;
+
+     label021:
+        specialinvoke $r10.<java.io.BufferedOutputStream: void <init>(java.io.OutputStream)>($r9);
+
+     label022:
+        $r11 = new java.io.BufferedInputStream;
+
+     label023:
+        $r12 = virtualinvoke $r6.<java.net.URL: java.io.InputStream openStream()>();
+
+        specialinvoke $r11.<java.io.BufferedInputStream: void <init>(java.io.InputStream)>($r12);
+
+     label024:
+        $r13 = newarray (byte)[4096];
+
+     label025:
+        $i0 = virtualinvoke $r11.<java.io.BufferedInputStream: int read(byte[])>($r13);
+
+     label026:
+        if $i0 <= -1 goto label037;
+
+     label027:
+        virtualinvoke $r10.<java.io.BufferedOutputStream: void write(byte[],int,int)>($r13, 0, $i0);
+
+        $z1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.d: boolean isCancelled()>();
+
+     label028:
+        if $z1 == 0 goto label025;
+
+     label029:
+        virtualinvoke $r2.<java.io.File: boolean delete()>();
+
+     label030:
+        if $r10 == null goto label032;
+
+     label031:
+        virtualinvoke $r10.<java.io.BufferedOutputStream: void close()>();
+
+     label032:
+        if $r11 == null goto label034;
+
+     label033:
+        virtualinvoke $r11.<java.io.BufferedInputStream: void close()>();
+
+     label034:
+        if $r8 == null goto label036;
+
+     label035:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void disconnect()>();
+
+     label036:
+        return null;
+
+     label037:
+        $z0 = 1;
+
+     label038:
+        virtualinvoke $r10.<java.io.BufferedOutputStream: void close()>();
+
+     label039:
+        virtualinvoke $r11.<java.io.BufferedInputStream: void close()>();
+
+     label040:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void disconnect()>();
+
+     label041:
+        $z1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.d: boolean isCancelled()>();
+
+     label042:
+        if $z1 == 0 goto label046;
+
+        goto label043;
+
+     label043:
+        goto label044;
+
+     label044:
+        goto label045;
+
+     label045:
+        return null;
+
+     label046:
+        $i0 = $r0.<com.seattleclouds.modules.podcast.b.d: int c>;
+
+     label047:
+        if $i0 != -1 goto label054;
+
+     label048:
+        $r3 = virtualinvoke $r2.<java.io.File: java.lang.String getAbsolutePath()>();
+
+        $r5 = staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeFile(java.lang.String)>($r3);
+
+     label049:
+        goto label050;
+
+     label050:
+        goto label051;
+
+     label051:
+        goto label006;
+
+     label052:
+        $r14 := @caughtexception;
+
+     label053:
+        return null;
+
+     label054:
+        $r3 = virtualinvoke $r2.<java.io.File: java.lang.String getAbsolutePath()>();
+
+     label055:
+        $i0 = $r0.<com.seattleclouds.modules.podcast.b.d: int c>;
+
+     label056:
+        $r5 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap b(java.lang.String,int)>($r3, $i0);
+
+     label057:
+        goto label049;
+
+     label058:
+        $r15 := @caughtexception;
+
+        $r10 = null;
+
+        $r11 = null;
+
+     label059:
+        if $z0 != 0 goto label061;
+
+     label060:
+        virtualinvoke $r2.<java.io.File: boolean delete()>();
+
+     label061:
+        if $r10 == null goto label063;
+
+     label062:
+        virtualinvoke $r10.<java.io.BufferedOutputStream: void close()>();
+
+     label063:
+        if $r11 == null goto label065;
+
+     label064:
+        virtualinvoke $r11.<java.io.BufferedInputStream: void close()>();
+
+     label065:
+        if $r8 == null goto label104;
+
+     label066:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void disconnect()>();
+
+     label067:
+        $r5 = null;
+
+        goto label006;
+
+     label068:
+        $r16 := @caughtexception;
+
+        $r10 = null;
+
+        $r17 = $r16;
+
+        $r11 = null;
+
+     label069:
+        if $z0 != 0 goto label071;
+
+     label070:
+        virtualinvoke $r2.<java.io.File: boolean delete()>();
+
+     label071:
+        if $r10 == null goto label073;
+
+     label072:
+        virtualinvoke $r10.<java.io.BufferedOutputStream: void close()>();
+
+     label073:
+        if $r11 == null goto label075;
+
+     label074:
+        virtualinvoke $r11.<java.io.BufferedInputStream: void close()>();
+
+     label075:
+        if $r8 == null goto label077;
+
+     label076:
+        virtualinvoke $r8.<java.net.HttpURLConnection: void disconnect()>();
+
+     label077:
+        throw $r17;
+
+     label078:
+        $r18 := @caughtexception;
+
+        goto label053;
+
+     label079:
+        if $r5 == null goto label105;
+
+        $i0 = $r0.<com.seattleclouds.modules.podcast.b.d: int c>;
+
+        if $i0 != -1 goto label087;
+
+     label080:
+        $i0 = virtualinvoke $r5.<android.graphics.Bitmap: int getWidth()>();
+
+     label081:
+        $i0 = $i0 / 6;
+
+     label082:
+        $i1 = virtualinvoke $r5.<android.graphics.Bitmap: int getHeight()>();
+
+     label083:
+        $i1 = $i1 / 6;
+
+     label084:
+        $r19 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap a(android.graphics.Bitmap,int,int,boolean)>($r5, $i0, $i1, 0);
+
+     label085:
+        $r19 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap b(android.graphics.Bitmap,int)>($r19, 5);
+
+     label086:
+        $r0.<com.seattleclouds.modules.podcast.b.d: android.graphics.Bitmap a> = $r19;
+
+        return $r5;
+
+     label087:
+        $i0 = $r0.<com.seattleclouds.modules.podcast.b.d: int c>;
+
+        $i0 = $i0 / 6;
+
+        $i1 = $r0.<com.seattleclouds.modules.podcast.b.d: int c>;
+
+        $i1 = $i1 / 6;
+
+     label088:
+        $r19 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap a(android.graphics.Bitmap,int,int,boolean)>($r5, $i0, $i1, 0);
+
+     label089:
+        goto label085;
+
+     label090:
+        $r20 := @caughtexception;
+
+        goto label032;
+
+     label091:
+        $r21 := @caughtexception;
+
+        goto label034;
+
+     label092:
+        $r22 := @caughtexception;
+
+        goto label063;
+
+     label093:
+        $r23 := @caughtexception;
+
+        goto label065;
+
+     label094:
+        $r24 := @caughtexception;
+
+        goto label073;
+
+     label095:
+        $r25 := @caughtexception;
+
+        goto label075;
+
+     label096:
+        $r26 := @caughtexception;
+
+        $z0 = 0;
+
+        $r17 = $r26;
+
+        $r11 = null;
+
+        goto label069;
+
+     label097:
+        $r27 := @caughtexception;
+
+        $r17 = $r27;
+
+        goto label069;
+
+     label098:
+        $r28 := @caughtexception;
+
+        $z0 = 1;
+
+        $r17 = $r28;
+
+        $r10 = null;
+
+        goto label069;
+
+     label099:
+        $r17 := @caughtexception;
+
+        $r11 = null;
+
+        $r10 = null;
+
+        $z0 = 1;
+
+        $r8 = null;
+
+        goto label069;
+
+     label100:
+        $r29 := @caughtexception;
+
+        $r11 = null;
+
+        goto label059;
+
+     label101:
+        $r30 := @caughtexception;
+
+        goto label059;
+
+     label102:
+        $r31 := @caughtexception;
+
+        $r10 = null;
+
+        goto label059;
+
+     label103:
+        $r32 := @caughtexception;
+
+        $r11 = null;
+
+        $r10 = null;
+
+        $r8 = null;
+
+        goto label059;
+
+     label104:
+        $r5 = null;
+
+        goto label006;
+
+     label105:
+        return $r5;
+
+        catch java.io.IOException from label001 to label002 with label052;
+        catch java.io.IOException from label003 to label004 with label052;
+        catch java.io.IOException from label005 to label006 with label052;
+        catch java.io.IOException from label006 to label007 with label052;
+        catch java.io.IOException from label008 to label009 with label052;
+        catch java.io.IOException from label010 to label011 with label052;
+        catch java.io.IOException from label012 to label013 with label052;
+        catch java.io.IOException from label014 to label015 with label052;
+        catch java.io.IOException from label016 to label017 with label052;
+        catch java.lang.OutOfMemoryError from label001 to label004 with label078;
+        catch java.lang.OutOfMemoryError from label005 to label006 with label078;
+        catch java.lang.OutOfMemoryError from label006 to label007 with label078;
+        catch java.lang.OutOfMemoryError from label008 to label009 with label078;
+        catch java.lang.OutOfMemoryError from label010 to label011 with label078;
+        catch java.lang.OutOfMemoryError from label012 to label015 with label078;
+        catch java.lang.OutOfMemoryError from label016 to label017 with label078;
+        catch java.io.IOException from label019 to label020 with label058;
+        catch java.io.IOException from label021 to label022 with label058;
+        catch java.lang.Throwable from label018 to label022 with label068;
+        catch java.io.IOException from label023 to label024 with label100;
+        catch java.lang.Throwable from label022 to label024 with label096;
+        catch java.io.IOException from label025 to label026 with label101;
+        catch java.io.IOException from label027 to label028 with label101;
+        catch java.lang.Throwable from label024 to label026 with label097;
+        catch java.lang.Throwable from label027 to label028 with label097;
+        catch java.io.IOException from label029 to label030 with label052;
+        catch java.lang.OutOfMemoryError from label029 to label030 with label078;
+        catch java.io.IOException from label031 to label032 with label090;
+        catch java.lang.OutOfMemoryError from label031 to label032 with label078;
+        catch java.io.IOException from label033 to label034 with label091;
+        catch java.lang.OutOfMemoryError from label033 to label034 with label078;
+        catch java.io.IOException from label035 to label036 with label052;
+        catch java.lang.OutOfMemoryError from label035 to label036 with label078;
+        catch java.io.IOException from label038 to label039 with label101;
+        catch java.lang.Throwable from label038 to label039 with label097;
+        catch java.io.IOException from label039 to label040 with label102;
+        catch java.lang.Throwable from label039 to label040 with label098;
+        catch java.io.IOException from label040 to label041 with label058;
+        catch java.lang.Throwable from label040 to label041 with label068;
+        catch java.io.IOException from label041 to label042 with label103;
+        catch java.lang.Throwable from label041 to label042 with label099;
+        catch java.lang.OutOfMemoryError from label043 to label043 with label078;
+        catch java.lang.OutOfMemoryError from label044 to label044 with label078;
+        catch java.io.IOException from label045 to label045 with label052;
+        catch java.lang.OutOfMemoryError from label045 to label045 with label078;
+        catch java.io.IOException from label048 to label049 with label103;
+        catch java.lang.Throwable from label046 to label047 with label099;
+        catch java.lang.Throwable from label048 to label049 with label099;
+        catch java.lang.OutOfMemoryError from label050 to label050 with label078;
+        catch java.lang.OutOfMemoryError from label051 to label051 with label078;
+        catch java.io.IOException from label052 to label052 with label052;
+        catch java.lang.OutOfMemoryError from label052 to label052 with label078;
+        catch java.io.IOException from label054 to label055 with label103;
+        catch java.io.IOException from label056 to label057 with label103;
+        catch java.lang.Throwable from label054 to label057 with label099;
+        catch java.io.IOException from label060 to label061 with label052;
+        catch java.lang.OutOfMemoryError from label060 to label061 with label078;
+        catch java.io.IOException from label062 to label063 with label092;
+        catch java.lang.OutOfMemoryError from label062 to label063 with label078;
+        catch java.io.IOException from label064 to label065 with label093;
+        catch java.lang.OutOfMemoryError from label064 to label065 with label078;
+        catch java.io.IOException from label066 to label067 with label052;
+        catch java.io.IOException from label070 to label071 with label052;
+        catch java.lang.OutOfMemoryError from label066 to label067 with label078;
+        catch java.lang.OutOfMemoryError from label070 to label071 with label078;
+        catch java.io.IOException from label072 to label073 with label094;
+        catch java.lang.OutOfMemoryError from label072 to label073 with label078;
+        catch java.io.IOException from label074 to label075 with label095;
+        catch java.lang.OutOfMemoryError from label074 to label075 with label078;
+        catch java.io.IOException from label076 to label078 with label052;
+        catch java.io.IOException from label080 to label081 with label052;
+        catch java.io.IOException from label082 to label083 with label052;
+        catch java.io.IOException from label084 to label085 with label052;
+        catch java.io.IOException from label085 to label086 with label052;
+        catch java.io.IOException from label088 to label089 with label052;
+        catch java.lang.OutOfMemoryError from label076 to label078 with label078;
+        catch java.lang.OutOfMemoryError from label080 to label081 with label078;
+        catch java.lang.OutOfMemoryError from label082 to label083 with label078;
+        catch java.lang.OutOfMemoryError from label084 to label085 with label078;
+        catch java.lang.OutOfMemoryError from label085 to label086 with label078;
+        catch java.lang.OutOfMemoryError from label088 to label089 with label078;
+    }
+
+    protected void a(android.graphics.Bitmap)
+    {
+        com.seattleclouds.modules.podcast.b.d $r0;
+        android.graphics.Bitmap $r1, $r2;
+        java.lang.Object $r3;
+        java.lang.ref.WeakReference $r4;
+        com.seattleclouds.modules.podcast.b.e $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.d;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.b.d: java.lang.ref.WeakReference b>;
+
+        if $r4 == null goto label1;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.b.d: java.lang.ref.WeakReference b>;
+
+        $r3 = virtualinvoke $r4.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r5 = (com.seattleclouds.modules.podcast.b.e) $r3;
+
+        if $r5 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.b.d: android.graphics.Bitmap a>;
+
+        interfaceinvoke $r5.<com.seattleclouds.modules.podcast.b.e: void a(android.graphics.Bitmap,android.graphics.Bitmap)>($r1, $r2);
+
+     label1:
+        return;
+    }
+
+    public void a(com.seattleclouds.modules.podcast.b.e)
+    {
+        com.seattleclouds.modules.podcast.b.d $r0;
+        com.seattleclouds.modules.podcast.b.e $r1;
+        java.lang.ref.WeakReference $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.d;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.b.e;
+
+        $r2 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r2.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.modules.podcast.b.d: java.lang.ref.WeakReference b> = $r2;
+
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.podcast.b.d $r0;
+        android.graphics.Bitmap $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.d;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.d: android.graphics.Bitmap a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.podcast.b.d $r0;
+        java.lang.Object $r1;
+        android.graphics.Bitmap $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.d;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (android.graphics.Bitmap) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.b.d: void a(android.graphics.Bitmap)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.modules.podcast.b.d $r0;
+        java.lang.Object $r1;
+        java.lang.ref.WeakReference $r2;
+        com.seattleclouds.modules.podcast.b.e $r3;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.b.d;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.b.d: java.lang.ref.WeakReference b>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.b.d: java.lang.ref.WeakReference b>;
+
+        $r1 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r3 = (com.seattleclouds.modules.podcast.b.e) $r1;
+
+        if $r3 == null goto label1;
+
+        interfaceinvoke $r3.<com.seattleclouds.modules.podcast.b.e: void a()>();
+
+     label1:
+        return;
+    }
+}

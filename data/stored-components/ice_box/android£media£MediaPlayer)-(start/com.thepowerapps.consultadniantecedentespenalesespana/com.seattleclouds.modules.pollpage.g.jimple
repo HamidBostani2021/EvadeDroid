@@ -1,0 +1,397 @@
+class com.seattleclouds.modules.pollpage.g extends android.os.AsyncTask
+{
+    private java.lang.ref.WeakReference a;
+
+    public void <init>(com.seattleclouds.modules.pollpage.a)
+    {
+        com.seattleclouds.modules.pollpage.g $r0;
+        com.seattleclouds.modules.pollpage.a $r1;
+        java.lang.ref.WeakReference $r2;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.g;
+
+        $r1 := @parameter0: com.seattleclouds.modules.pollpage.a;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r2 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r2.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.modules.pollpage.g: java.lang.ref.WeakReference a> = $r2;
+
+        return;
+    }
+
+    protected transient java.lang.Integer a(java.lang.String[])
+    {
+        com.seattleclouds.modules.pollpage.g $r0;
+        java.lang.String[] $r1;
+        java.lang.ref.WeakReference $r2;
+        java.lang.Object $r3;
+        com.seattleclouds.modules.pollpage.a $r4;
+        java.lang.Integer $r5;
+        java.util.HashMap $r6, r13;
+        java.lang.String $r7, $r8;
+        boolean $z0;
+        java.lang.StringBuilder $r9, r15;
+        java.lang.Throwable $r10;
+        android.support.v4.app.ac $r11;
+        int $i0;
+        org.json.JSONException $r12;
+        org.json.JSONObject r14;
+        java.io.IOException r16;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.g;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.g: java.lang.ref.WeakReference a>;
+
+        $r3 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r4 = (com.seattleclouds.modules.pollpage.a) $r3;
+
+        if $r4 != null goto label01;
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(1);
+
+        return $r5;
+
+     label01:
+        r13 = new java.util.HashMap;
+
+        $r6 = r13;
+
+     label02:
+        specialinvoke r13.<java.util.HashMap: void <init>()>();
+
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("action", "vote");
+
+     label03:
+        $r7 = $r1[0];
+
+     label04:
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appId", $r7);
+
+     label05:
+        $r7 = $r1[1];
+
+     label06:
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("pageId", $r7);
+
+     label07:
+        $r7 = $r1[2];
+
+     label08:
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherId", $r7);
+
+     label09:
+        $r7 = $r1[3];
+
+     label10:
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("votingString", $r7);
+
+     label11:
+        $r7 = $r1[4];
+
+     label12:
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("uniqueUUID", $r7);
+
+     label13:
+        $r7 = $r1[5];
+
+     label14:
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>("true");
+
+     label15:
+        if $z0 == 0 goto label17;
+
+     label16:
+        interfaceinvoke $r6.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("allowResultsPreview", "true");
+
+     label17:
+        $r7 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String ap()>();
+
+        $r7 = staticinvoke <com.seattleclouds.util.a: java.lang.String b(java.lang.String,java.util.Map)>($r7, $r6);
+
+     label18:
+        $r8 = $r1[5];
+
+     label19:
+        $z0 = virtualinvoke $r8.<java.lang.String: boolean equals(java.lang.Object)>("true");
+
+     label20:
+        if $z0 == 0 goto label23;
+
+        r14 = new org.json.JSONObject;
+
+     label21:
+        specialinvoke r14.<org.json.JSONObject: void <init>(java.lang.String)>($r7);
+
+        staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String c(com.seattleclouds.modules.pollpage.a,java.lang.String)>($r4, $r7);
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(0);
+
+     label22:
+        return $r5;
+
+     label23:
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>("1");
+
+     label24:
+        if $z0 == 0 goto label27;
+
+     label25:
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(0);
+
+     label26:
+        return $r5;
+
+     label27:
+        $r8 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String ao()>();
+
+     label28:
+        r15 = new java.lang.StringBuilder;
+
+        $r9 = r15;
+
+     label29:
+        specialinvoke r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR: ");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r7 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r8, $r7);
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(1);
+
+     label30:
+        return $r5;
+
+     label31:
+        $r10 := @caughtexception;
+
+        $r11 = virtualinvoke $r4.<com.seattleclouds.modules.pollpage.a: android.support.v4.app.ac n()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.bm: boolean a(android.content.Context)>($r11);
+
+        if $z0 == 0 goto label32;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String ao()>();
+
+        r15 = new java.lang.StringBuilder;
+
+        specialinvoke r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR Unable to submit voting: ");
+
+        r16 = (java.io.IOException) $r10;
+
+        $r8 = virtualinvoke r16.<java.io.IOException: java.lang.String getMessage()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r8 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r7, $r8, $r10);
+
+        $i0 = <com.seattleclouds.l: int common_network_error>;
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        return $r5;
+
+     label32:
+        $i0 = <com.seattleclouds.l: int common_no_network>;
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        return $r5;
+
+     label33:
+        $r12 := @caughtexception;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.pollpage.a: java.lang.String ao()>();
+
+        r15 = new java.lang.StringBuilder;
+
+        specialinvoke r15.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke r15.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ERROR Unable to parse JSON: ");
+
+        $r8 = virtualinvoke $r12.<org.json.JSONException: java.lang.String getMessage()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r8 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r7, $r8, $r12);
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        return $r5;
+
+        catch java.io.IOException from label02 to label03 with label31;
+        catch java.io.IOException from label04 to label05 with label31;
+        catch java.io.IOException from label06 to label07 with label31;
+        catch java.io.IOException from label08 to label09 with label31;
+        catch java.io.IOException from label10 to label11 with label31;
+        catch java.io.IOException from label12 to label13 with label31;
+        catch java.io.IOException from label14 to label15 with label31;
+        catch java.io.IOException from label16 to label18 with label31;
+        catch java.io.IOException from label19 to label20 with label31;
+        catch java.io.IOException from label21 to label22 with label31;
+        catch java.io.IOException from label23 to label24 with label31;
+        catch java.io.IOException from label25 to label26 with label31;
+        catch java.io.IOException from label27 to label28 with label31;
+        catch java.io.IOException from label29 to label30 with label31;
+        catch org.json.JSONException from label02 to label03 with label33;
+        catch org.json.JSONException from label04 to label05 with label33;
+        catch org.json.JSONException from label06 to label07 with label33;
+        catch org.json.JSONException from label08 to label09 with label33;
+        catch org.json.JSONException from label10 to label11 with label33;
+        catch org.json.JSONException from label12 to label13 with label33;
+        catch org.json.JSONException from label14 to label15 with label33;
+        catch org.json.JSONException from label16 to label18 with label33;
+        catch org.json.JSONException from label19 to label20 with label33;
+        catch org.json.JSONException from label21 to label22 with label33;
+        catch org.json.JSONException from label23 to label24 with label33;
+        catch org.json.JSONException from label25 to label26 with label33;
+        catch org.json.JSONException from label27 to label28 with label33;
+        catch org.json.JSONException from label29 to label30 with label33;
+    }
+
+    protected void a(java.lang.Integer)
+    {
+        com.seattleclouds.modules.pollpage.g $r0;
+        java.lang.Integer $r1;
+        java.lang.ref.WeakReference $r2;
+        java.lang.Object $r3;
+        com.seattleclouds.modules.pollpage.a $r4;
+        int $i0;
+        android.support.v4.app.ac $r5;
+        android.widget.Toast $r6;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.g;
+
+        $r1 := @parameter0: java.lang.Integer;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.g: java.lang.ref.WeakReference a>;
+
+        $r3 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r4 = (com.seattleclouds.modules.pollpage.a) $r3;
+
+        if $r4 != null goto label1;
+
+        return;
+
+     label1:
+        $i0 = virtualinvoke $r1.<java.lang.Integer: int intValue()>();
+
+        if $i0 != 0 goto label3;
+
+        staticinvoke <com.seattleclouds.modules.pollpage.a: boolean b(com.seattleclouds.modules.pollpage.a,boolean)>($r4, 1);
+
+        virtualinvoke $r4.<com.seattleclouds.modules.pollpage.a: void aa()>();
+
+     label2:
+        staticinvoke <com.seattleclouds.modules.pollpage.a: void a(com.seattleclouds.modules.pollpage.a,boolean)>($r4, 0);
+
+        return;
+
+     label3:
+        $i0 = virtualinvoke $r1.<java.lang.Integer: int intValue()>();
+
+        if $i0 != 1 goto label4;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.pollpage.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r5, $i0, 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label2;
+
+     label4:
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.pollpage.a: android.support.v4.app.ac n()>();
+
+        $i0 = virtualinvoke $r1.<java.lang.Integer: int intValue()>();
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r5, $i0, 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label2;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.pollpage.g $r0;
+        java.lang.Integer $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.g;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.pollpage.g: java.lang.Integer a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.pollpage.g $r0;
+        java.lang.Object $r1;
+        java.lang.Integer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.g;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.Integer) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.pollpage.g: void a(java.lang.Integer)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.modules.pollpage.g $r0;
+        java.lang.Object $r1;
+        java.lang.ref.WeakReference $r2;
+        com.seattleclouds.modules.pollpage.a $r3;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.g;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPreExecute()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.g: java.lang.ref.WeakReference a>;
+
+        $r1 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r3 = (com.seattleclouds.modules.pollpage.a) $r1;
+
+        if $r3 == null goto label1;
+
+        staticinvoke <com.seattleclouds.modules.pollpage.a: void a(com.seattleclouds.modules.pollpage.a,boolean)>($r3, 1);
+
+     label1:
+        return;
+    }
+}

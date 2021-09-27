@@ -1,0 +1,76 @@
+class com.seattleclouds.modules.calendar.k extends java.lang.Object implements com.seattleclouds.util.bi
+{
+    final android.view.View a;
+    final com.seattleclouds.modules.calendar.a b;
+
+    void <init>(com.seattleclouds.modules.calendar.a, android.view.View)
+    {
+        com.seattleclouds.modules.calendar.k $r0;
+        com.seattleclouds.modules.calendar.a $r1;
+        android.view.View $r2;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.calendar.a;
+
+        $r2 := @parameter1: android.view.View;
+
+        $r0.<com.seattleclouds.modules.calendar.k: com.seattleclouds.modules.calendar.a b> = $r1;
+
+        $r0.<com.seattleclouds.modules.calendar.k: android.view.View a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(java.lang.Object)
+    {
+        com.seattleclouds.modules.calendar.k $r0;
+        java.lang.Object $r1;
+        com.seattleclouds.modules.calendar.a $r2;
+        int $i0;
+        android.widget.ListView $r3;
+        com.jasonkostempski.android.calendar.CalendarView $r4;
+        android.view.View $r5;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.k;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("CalendarFragment", "Events sync done, reloading Calendar");
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.k: com.seattleclouds.modules.calendar.a b>;
+
+        staticinvoke <com.seattleclouds.modules.calendar.a: void a(com.seattleclouds.modules.calendar.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.k: com.seattleclouds.modules.calendar.a b>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.calendar.a: int b(com.seattleclouds.modules.calendar.a)>($r2);
+
+        if $i0 != 100 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.k: com.seattleclouds.modules.calendar.a b>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.calendar.a: android.widget.ListView d(com.seattleclouds.modules.calendar.a)>($r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.k: com.seattleclouds.modules.calendar.a b>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.calendar.a: int c(com.seattleclouds.modules.calendar.a)>($r2);
+
+        virtualinvoke $r3.<android.widget.ListView: void setSelection(int)>($i0);
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.calendar.k: com.seattleclouds.modules.calendar.a b>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.calendar.a: com.jasonkostempski.android.calendar.CalendarView e(com.seattleclouds.modules.calendar.a)>($r2);
+
+        virtualinvoke $r4.<com.jasonkostempski.android.calendar.CalendarView: void setVisibility(int)>(0);
+
+        $r5 = $r0.<com.seattleclouds.modules.calendar.k: android.view.View a>;
+
+        virtualinvoke $r5.<android.view.View: void setVisibility(int)>(8);
+
+        return;
+    }
+}

@@ -1,0 +1,1426 @@
+public class com.seattleclouds.b.f extends android.os.AsyncTask
+{
+    public static java.lang.String a;
+    private static final java.lang.String b;
+    private final android.app.Activity c;
+    private android.app.ProgressDialog d;
+    private com.seattleclouds.util.bi e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private java.lang.Integer h;
+    private java.lang.Integer i;
+    private java.lang.String j;
+    private java.util.HashMap k;
+    private boolean l;
+    private int m;
+    private boolean n;
+    private boolean o;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        <com.seattleclouds.b.f: java.lang.String a> = null;
+
+        $r1 = class "Lcom/seattleclouds/b/f;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.b.f: java.lang.String b> = $r0;
+
+        return;
+    }
+
+    public void <init>(android.app.Activity)
+    {
+        com.seattleclouds.b.f $r0;
+        android.app.Activity $r1;
+        java.lang.Integer $r2;
+        java.util.HashMap $r3;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        specialinvoke $r0.<android.os.AsyncTask: void <init>()>();
+
+        $r0.<com.seattleclouds.b.f: com.seattleclouds.util.bi e> = null;
+
+        $r0.<com.seattleclouds.b.f: java.lang.String f> = "";
+
+        $r0.<com.seattleclouds.b.f: java.lang.String g> = "";
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(0);
+
+        $r0.<com.seattleclouds.b.f: java.lang.Integer h> = $r2;
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(0);
+
+        $r0.<com.seattleclouds.b.f: java.lang.Integer i> = $r2;
+
+        $r0.<com.seattleclouds.b.f: java.lang.String j> = null;
+
+        $r3 = new java.util.HashMap;
+
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+        $r0.<com.seattleclouds.b.f: java.util.HashMap k> = $r3;
+
+        $r0.<com.seattleclouds.b.f: boolean l> = 0;
+
+        $r0.<com.seattleclouds.b.f: int m> = 0;
+
+        $r0.<com.seattleclouds.b.f: boolean n> = 0;
+
+        $r0.<com.seattleclouds.b.f: boolean o> = 1;
+
+        $r0.<com.seattleclouds.b.f: android.app.Activity c> = $r1;
+
+        return;
+    }
+
+    static android.app.Activity a(com.seattleclouds.b.f)
+    {
+        com.seattleclouds.b.f $r0;
+        android.app.Activity r1;
+
+        $r0 := @parameter0: com.seattleclouds.b.f;
+
+        r1 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        return r1;
+    }
+
+    private void a()
+    {
+        com.seattleclouds.b.f $r0;
+        android.app.Activity $r1;
+        java.io.File $r2;
+        int $i0, $i1;
+        java.lang.String[] $r3;
+        java.lang.String $r4;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $i0 = 0;
+
+        $r3 = newarray (java.lang.String)[1];
+
+        $r3[0] = "magazineCovers";
+
+        $i1 = lengthof $r3;
+
+     label1:
+        if $i0 >= $i1 goto label2;
+
+        $r4 = $r3[$i0];
+
+        $r1 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        $r2 = staticinvoke <com.google.android.bitmapfun.r: java.io.File a(android.content.Context,java.lang.String)>($r1, $r4);
+
+        staticinvoke <org.apache.commons.io.b: boolean d(java.io.File)>($r2);
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label2:
+        return;
+    }
+
+    private void a(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.b.f $r0;
+        java.lang.String $r1, $r2, $r6;
+        java.net.HttpURLConnection $r3, $r9;
+        int $i0;
+        java.net.URL $r4;
+        java.lang.StringBuilder $r5;
+        java.io.File $r7;
+        java.net.URLConnection $r8;
+        java.io.InputStream $r10;
+        java.io.FileOutputStream $r11;
+        byte[] $r12;
+        java.lang.Exception $r13, $r14;
+        boolean $z0;
+        java.lang.Throwable $r15, $r16;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = null;
+
+     label01:
+        $i0 = virtualinvoke $r1.<java.lang.String: int lastIndexOf(int)>(47);
+
+     label02:
+        $i0 = $i0 + 1;
+
+     label03:
+        $r4 = new java.net.URL;
+
+        $r5 = new java.lang.StringBuilder;
+
+     label04:
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int,int)>(0, $i0);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int)>($i0);
+
+        $r6 = staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>($r6, "UTF-8");
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("+", "%20");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r4.<java.net.URL: void <init>(java.lang.String)>($r6);
+
+     label05:
+        $r7 = new java.io.File;
+
+     label06:
+        specialinvoke $r7.<java.io.File: void <init>(java.lang.String)>($r2);
+
+        $r8 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>();
+
+        $r9 = (java.net.HttpURLConnection) $r8;
+
+     label07:
+        virtualinvoke $r9.<java.net.HttpURLConnection: void setReadTimeout(int)>(30000);
+
+        virtualinvoke $r9.<java.net.HttpURLConnection: void setConnectTimeout(int)>(30000);
+
+     label08:
+        $r5 = new java.lang.StringBuilder;
+
+     label09:
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("scvun=");
+
+     label10:
+        $r6 = <com.seattleclouds.App: java.lang.String w>;
+
+     label11:
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(";");
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r9.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Cookie", $r6);
+
+        $r10 = virtualinvoke $r9.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>();
+
+     label12:
+        $r11 = new java.io.FileOutputStream;
+
+     label13:
+        specialinvoke $r11.<java.io.FileOutputStream: void <init>(java.io.File)>($r7);
+
+     label14:
+        $r12 = newarray (byte)[1024];
+
+     label15:
+        $i0 = virtualinvoke $r10.<java.io.InputStream: int read(byte[])>($r12);
+
+     label16:
+        if $i0 == -1 goto label22;
+
+     label17:
+        virtualinvoke $r11.<java.io.FileOutputStream: void write(byte[],int,int)>($r12, 0, $i0);
+
+     label18:
+        goto label15;
+
+     label19:
+        $r13 := @caughtexception;
+
+        $r3 = $r9;
+
+        $r14 = $r13;
+
+     label20:
+        $r0.<com.seattleclouds.b.f: boolean o> = 0;
+
+        $r2 = <com.seattleclouds.b.f: java.lang.String b>;
+
+        $r5 = new java.lang.StringBuilder;
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("saveRemoteFileToLocalFolder failed on ");
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r1, $r14);
+
+     label21:
+        if $r3 == null goto label39;
+
+        virtualinvoke $r3.<java.net.HttpURLConnection: void disconnect()>();
+
+        return;
+
+     label22:
+        $r5 = new java.lang.StringBuilder;
+
+     label23:
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>()>();
+
+     label24:
+        $r6 = <java.io.File: java.lang.String separator>;
+
+     label25:
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("app.xml");
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean endsWith(java.lang.String)>($r6);
+
+     label26:
+        if $z0 == 0 goto label30;
+
+     label27:
+        $r0.<com.seattleclouds.b.f: boolean n> = 1;
+
+     label28:
+        virtualinvoke $r10.<java.io.InputStream: void close()>();
+
+        virtualinvoke $r11.<java.io.FileOutputStream: void close()>();
+
+     label29:
+        if $r9 == null goto label39;
+
+        virtualinvoke $r9.<java.net.HttpURLConnection: void disconnect()>();
+
+        return;
+
+     label30:
+        $i0 = $r0.<com.seattleclouds.b.f: int m>;
+
+     label31:
+        $i0 = $i0 + 1;
+
+     label32:
+        $r0.<com.seattleclouds.b.f: int m> = $i0;
+
+     label33:
+        goto label28;
+
+     label34:
+        $r15 := @caughtexception;
+
+        $r3 = $r9;
+
+        $r16 = $r15;
+
+     label35:
+        if $r3 == null goto label36;
+
+        virtualinvoke $r3.<java.net.HttpURLConnection: void disconnect()>();
+
+     label36:
+        throw $r16;
+
+     label37:
+        $r16 := @caughtexception;
+
+        goto label35;
+
+     label38:
+        $r14 := @caughtexception;
+
+        goto label20;
+
+     label39:
+        return;
+
+        catch java.lang.Exception from label01 to label02 with label38;
+        catch java.lang.Exception from label04 to label05 with label38;
+        catch java.lang.Exception from label06 to label07 with label38;
+        catch java.lang.Throwable from label01 to label02 with label37;
+        catch java.lang.Throwable from label03 to label07 with label37;
+        catch java.lang.Exception from label07 to label08 with label19;
+        catch java.lang.Exception from label09 to label10 with label19;
+        catch java.lang.Exception from label11 to label12 with label19;
+        catch java.lang.Exception from label13 to label16 with label19;
+        catch java.lang.Exception from label17 to label18 with label19;
+        catch java.lang.Throwable from label07 to label14 with label34;
+        catch java.lang.Throwable from label15 to label16 with label34;
+        catch java.lang.Throwable from label17 to label18 with label34;
+        catch java.lang.Throwable from label20 to label21 with label37;
+        catch java.lang.Exception from label23 to label24 with label19;
+        catch java.lang.Exception from label25 to label26 with label19;
+        catch java.lang.Exception from label27 to label29 with label19;
+        catch java.lang.Throwable from label22 to label26 with label34;
+        catch java.lang.Throwable from label27 to label29 with label34;
+        catch java.lang.Exception from label30 to label31 with label19;
+        catch java.lang.Exception from label32 to label33 with label19;
+        catch java.lang.Throwable from label30 to label31 with label34;
+        catch java.lang.Throwable from label32 to label33 with label34;
+    }
+
+    static boolean a(com.seattleclouds.b.f, boolean)
+    {
+        com.seattleclouds.b.f $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.b.f;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.seattleclouds.b.f: boolean l> = $z0;
+
+        return $z0;
+    }
+
+    protected transient java.lang.String a(java.lang.String[])
+    {
+        com.seattleclouds.b.f $r0;
+        java.lang.String[] $r1;
+        java.io.File $r2, $r27;
+        java.lang.String $r3, $r5, $r6, $r26, $r28, $r30;
+        boolean $z0;
+        java.lang.StringBuilder $r4;
+        java.io.ObjectInputStream $r7;
+        java.io.FileInputStream $r8;
+        java.lang.Object $r9;
+        java.util.HashMap $r10;
+        java.net.URL $r11;
+        android.app.Activity $r12;
+        org.xmlpull.v1.XmlPullParser $r13;
+        java.net.URLConnection $r14;
+        java.net.HttpURLConnection $r15;
+        java.io.InputStream $r16;
+        int $i0;
+        java.lang.Exception $r17, $r18, $r20, $r22, $r25, $r33, $r34;
+        java.lang.Throwable $r19;
+        com.seattleclouds.util.ab $r21;
+        long $l1;
+        java.lang.Integer $r23;
+        android.app.ProgressDialog $r24;
+        java.lang.Integer[] $r29;
+        java.io.ObjectOutputStream $r31;
+        java.io.FileOutputStream $r32;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $r2 = new java.io.File;
+
+        $r3 = staticinvoke <com.seattleclouds.App: java.lang.String h()>();
+
+        specialinvoke $r2.<java.io.File: void <init>(java.lang.String)>($r3);
+
+        staticinvoke <org.apache.commons.io.b: boolean d(java.io.File)>($r2);
+
+     label001:
+        $r3 = staticinvoke <com.seattleclouds.App: java.lang.String g()>();
+
+     label002:
+        $r2 = new java.io.File;
+
+     label003:
+        specialinvoke $r2.<java.io.File: void <init>(java.lang.String)>($r3);
+
+        $z0 = virtualinvoke $r2.<java.io.File: boolean exists()>();
+
+     label004:
+        if $z0 != 0 goto label006;
+
+     label005:
+        virtualinvoke $r2.<java.io.File: boolean mkdirs()>();
+
+     label006:
+        $r4 = new java.lang.StringBuilder;
+
+     label007:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+     label008:
+        $r3 = <java.io.File: java.lang.String separator>;
+
+     label009:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label010:
+        $r4 = new java.lang.StringBuilder;
+
+     label011:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+     label012:
+        $r5 = <com.seattleclouds.App: java.lang.String q>;
+
+     label013:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r5 = staticinvoke <com.seattleclouds.App: java.lang.String p()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label014:
+        $r2 = new java.io.File;
+
+        $r6 = <com.seattleclouds.b.f: java.lang.String a>;
+
+     label015:
+        specialinvoke $r2.<java.io.File: void <init>(java.lang.String)>($r6);
+
+        $z0 = virtualinvoke $r2.<java.io.File: boolean exists()>();
+
+     label016:
+        if $z0 == 0 goto label021;
+
+        $r7 = new java.io.ObjectInputStream;
+
+        $r8 = new java.io.FileInputStream;
+
+     label017:
+        specialinvoke $r8.<java.io.FileInputStream: void <init>(java.io.File)>($r2);
+
+        specialinvoke $r7.<java.io.ObjectInputStream: void <init>(java.io.InputStream)>($r8);
+
+     label018:
+        $r9 = virtualinvoke $r7.<java.io.ObjectInputStream: java.lang.Object readObject()>();
+
+        $r10 = (java.util.HashMap) $r9;
+
+        $r0.<com.seattleclouds.b.f: java.util.HashMap k> = $r10;
+
+     label019:
+        if $r7 == null goto label021;
+
+     label020:
+        virtualinvoke $r7.<java.io.ObjectInputStream: void close()>();
+
+     label021:
+        $r10 = $r0.<com.seattleclouds.b.f: java.util.HashMap k>;
+
+     label022:
+        if $r10 != null goto label024;
+
+        $r10 = new java.util.HashMap;
+
+     label023:
+        specialinvoke $r10.<java.util.HashMap: void <init>()>();
+
+        $r0.<com.seattleclouds.b.f: java.util.HashMap k> = $r10;
+
+     label024:
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 == 0 goto label062;
+
+        $r11 = new java.net.URL;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label025:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+     label026:
+        $r6 = <com.seattleclouds.App: java.lang.String q>;
+
+     label027:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/getfilelist.ashx");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("?publisherid=");
+
+     label028:
+        $r6 = <com.seattleclouds.App: java.lang.String v>;
+
+     label029:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&username=");
+
+     label030:
+        $r6 = <com.seattleclouds.App: java.lang.String w>;
+
+     label031:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&appid=");
+
+     label032:
+        $r6 = <com.seattleclouds.App: java.lang.String x>;
+
+     label033:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&uniqueAppId=");
+
+        $r12 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        $r6 = virtualinvoke $r12.<android.app.Activity: java.lang.String getPackageName()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&previewerAppPublisherId=");
+
+     label034:
+        $r6 = <com.seattleclouds.App: java.lang.String A>;
+
+     label035:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&previewerAppUsername=");
+
+     label036:
+        $r6 = <com.seattleclouds.App: java.lang.String B>;
+
+     label037:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&previewerAppId=");
+
+     label038:
+        $r6 = <com.seattleclouds.App: java.lang.String C>;
+
+     label039:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r11.<java.net.URL: void <init>(java.lang.String)>($r6);
+
+     label040:
+        $r13 = staticinvoke <android.util.Xml: org.xmlpull.v1.XmlPullParser newPullParser()>();
+
+     label041:
+        $r14 = virtualinvoke $r11.<java.net.URL: java.net.URLConnection openConnection()>();
+
+        $r15 = (java.net.HttpURLConnection) $r14;
+
+     label042:
+        $r4 = new java.lang.StringBuilder;
+
+     label043:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("scvun=");
+
+     label044:
+        $r6 = <com.seattleclouds.App: java.lang.String w>;
+
+     label045:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("; ");
+
+        $r6 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r15.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Cookie", $r6);
+
+        virtualinvoke $r15.<java.net.HttpURLConnection: void setConnectTimeout(int)>(30000);
+
+        virtualinvoke $r15.<java.net.HttpURLConnection: void setReadTimeout(int)>(30000);
+
+        $r16 = virtualinvoke $r15.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>();
+
+        interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: void setInput(java.io.InputStream,java.lang.String)>($r16, null);
+
+        $i0 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: int getEventType()>();
+
+     label046:
+        if $i0 == 1 goto label122;
+
+     label047:
+        $z0 = $r0.<com.seattleclouds.b.f: boolean l>;
+
+     label048:
+        if $z0 != 0 goto label122;
+
+        lookupswitch($i0)
+        {
+            case 0: goto label049;
+            case 1: goto label049;
+            case 2: goto label073;
+            case 3: goto label093;
+            default: goto label049;
+        };
+
+     label049:
+        $i0 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: int next()>();
+
+     label050:
+        goto label046;
+
+     label051:
+        $r17 := @caughtexception;
+
+        if $r7 == null goto label021;
+
+     label052:
+        virtualinvoke $r7.<java.io.ObjectInputStream: void close()>();
+
+     label053:
+        goto label021;
+
+     label054:
+        $r18 := @caughtexception;
+
+        goto label021;
+
+     label055:
+        $r19 := @caughtexception;
+
+        if $r7 == null goto label057;
+
+     label056:
+        virtualinvoke $r7.<java.io.ObjectInputStream: void close()>();
+
+     label057:
+        throw $r19;
+
+     label058:
+        $r20 := @caughtexception;
+
+        $r0.<com.seattleclouds.b.f: boolean o> = 0;
+
+        $r3 = <com.seattleclouds.b.f: java.lang.String b>;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("doInBackground ");
+
+        $r5 = virtualinvoke $r20.<java.lang.Exception: java.lang.String toString()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r3, $r5, $r20);
+
+     label059:
+        $i0 = $r0.<com.seattleclouds.b.f: int m>;
+
+        if $i0 <= 0 goto label060;
+
+        specialinvoke $r0.<com.seattleclouds.b.f: void a()>();
+
+     label060:
+        $z0 = $r0.<com.seattleclouds.b.f: boolean o>;
+
+        if $z0 == 0 goto label061;
+
+        $r12 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        $r21 = staticinvoke <com.seattleclouds.util.ab: com.seattleclouds.util.ab a(android.content.Context)>($r12);
+
+        $l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $r21 = virtualinvoke $r21.<com.seattleclouds.util.ab: com.seattleclouds.util.ab b(java.lang.String,long)>("lastSyncDate", $l1);
+
+        virtualinvoke $r21.<com.seattleclouds.util.ab: void b()>();
+
+     label061:
+        return "ok";
+
+     label062:
+        $r11 = new java.net.URL;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label063:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+     label064:
+        $r6 = <com.seattleclouds.App: java.lang.String q>;
+
+     label065:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/getnewsfilelist.ashx");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("?publisherid=");
+
+     label066:
+        $r6 = <com.seattleclouds.App: java.lang.String v>;
+
+     label067:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&username=");
+
+     label068:
+        $r6 = <com.seattleclouds.App: java.lang.String w>;
+
+     label069:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&appid=");
+
+     label070:
+        $r6 = <com.seattleclouds.App: java.lang.String x>;
+
+     label071:
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&uniqueAppId=");
+
+        $r12 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        $r6 = virtualinvoke $r12.<android.app.Activity: java.lang.String getPackageName()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r11.<java.net.URL: void <init>(java.lang.String)>($r6);
+
+     label072:
+        goto label040;
+
+     label073:
+        $r6 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: java.lang.String getName()>();
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("file");
+
+     label074:
+        if $z0 == 0 goto label082;
+
+     label075:
+        $r6 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>(null, "id");
+
+        $r0.<com.seattleclouds.b.f: java.lang.String f> = $r6;
+
+        $r6 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>(null, "datetime");
+
+        $r0.<com.seattleclouds.b.f: java.lang.String g> = $r6;
+
+     label076:
+        goto label049;
+
+     label077:
+        $r22 := @caughtexception;
+
+     label078:
+        $r0.<com.seattleclouds.b.f: boolean o> = 0;
+
+     label079:
+        $r3 = <com.seattleclouds.b.f: java.lang.String b>;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label080:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Resources sync error: ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r22);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r3, $r5);
+
+     label081:
+        goto label059;
+
+     label082:
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("total");
+
+     label083:
+        if $z0 == 0 goto label089;
+
+     label084:
+        $r6 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>(null, "nr");
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r6);
+
+        $r23 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r0.<com.seattleclouds.b.f: java.lang.Integer h> = $r23;
+
+        $r24 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+     label085:
+        if $r24 == null goto label049;
+
+     label086:
+        $r24 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        $r23 = $r0.<com.seattleclouds.b.f: java.lang.Integer h>;
+
+        $i0 = virtualinvoke $r23.<java.lang.Integer: int intValue()>();
+
+        virtualinvoke $r24.<android.app.ProgressDialog: void setMax(int)>($i0);
+
+     label087:
+        goto label049;
+
+     label088:
+        $r25 := @caughtexception;
+
+        goto label049;
+
+     label089:
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("mustexit");
+
+     label090:
+        if $z0 == 0 goto label049;
+
+     label091:
+        $r6 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: java.lang.String getAttributeValue(java.lang.String,java.lang.String)>(null, "reason");
+
+        $r0.<com.seattleclouds.b.f: java.lang.String j> = $r6;
+
+     label092:
+        goto label049;
+
+     label093:
+        $r6 = interfaceinvoke $r13.<org.xmlpull.v1.XmlPullParser: java.lang.String getName()>();
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("file");
+
+     label094:
+        if $z0 == 0 goto label049;
+
+        $z0 = <com.seattleclouds.App: boolean E>;
+
+        if $z0 != 0 goto label095;
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 == 0 goto label049;
+
+     label095:
+        $r4 = new java.lang.StringBuilder;
+
+     label096:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r6 = $r0.<com.seattleclouds.b.f: java.lang.String f>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r6);
+
+        $r6 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label097:
+        $r4 = new java.lang.StringBuilder;
+
+     label098:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r26 = $r0.<com.seattleclouds.b.f: java.lang.String f>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r26);
+
+        $r26 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label099:
+        $r27 = new java.io.File;
+
+        $r4 = new java.lang.StringBuilder;
+
+     label100:
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r28 = $r0.<com.seattleclouds.b.f: java.lang.String f>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r28);
+
+        $r28 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r27.<java.io.File: void <init>(java.lang.String)>($r28);
+
+        $z0 = virtualinvoke $r27.<java.io.File: boolean exists()>();
+
+     label101:
+        if $z0 == 0 goto label113;
+
+     label102:
+        $r10 = $r0.<com.seattleclouds.b.f: java.util.HashMap k>;
+
+        $r28 = $r0.<com.seattleclouds.b.f: java.lang.String f>;
+
+        $r9 = virtualinvoke $r10.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r28);
+
+        $r28 = (java.lang.String) $r9;
+
+     label103:
+        if $r28 != null goto label109;
+
+     label104:
+        specialinvoke $r0.<com.seattleclouds.b.f: void a(java.lang.String,java.lang.String)>($r6, $r26);
+
+     label105:
+        $r10 = $r0.<com.seattleclouds.b.f: java.util.HashMap k>;
+
+        $r6 = $r0.<com.seattleclouds.b.f: java.lang.String f>;
+
+        $r26 = $r0.<com.seattleclouds.b.f: java.lang.String g>;
+
+        virtualinvoke $r10.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r6, $r26);
+
+        $r29 = newarray (java.lang.Integer)[1];
+
+        $r23 = $r0.<com.seattleclouds.b.f: java.lang.Integer i>;
+
+        $i0 = virtualinvoke $r23.<java.lang.Integer: int intValue()>();
+
+     label106:
+        $i0 = $i0 + 1;
+
+     label107:
+        $r23 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r0.<com.seattleclouds.b.f: java.lang.Integer i> = $r23;
+
+        $r29[0] = $r23;
+
+        virtualinvoke $r0.<com.seattleclouds.b.f: void publishProgress(java.lang.Object[])>($r29);
+
+     label108:
+        goto label049;
+
+     label109:
+        $r30 = $r0.<com.seattleclouds.b.f: java.lang.String g>;
+
+        $z0 = virtualinvoke $r28.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r30);
+
+     label110:
+        if $z0 != 0 goto label105;
+
+     label111:
+        specialinvoke $r0.<com.seattleclouds.b.f: void a(java.lang.String,java.lang.String)>($r6, $r26);
+
+     label112:
+        goto label105;
+
+     label113:
+        $r28 = $r0.<com.seattleclouds.b.f: java.lang.String f>;
+
+        $z0 = virtualinvoke $r28.<java.lang.String: boolean contains(java.lang.CharSequence)>("/");
+
+     label114:
+        if $z0 == 0 goto label120;
+
+     label115:
+        $r27 = virtualinvoke $r27.<java.io.File: java.io.File getParentFile()>();
+
+     label116:
+        if $r27 == null goto label120;
+
+     label117:
+        $z0 = virtualinvoke $r27.<java.io.File: boolean exists()>();
+
+     label118:
+        if $z0 != 0 goto label120;
+
+     label119:
+        virtualinvoke $r27.<java.io.File: boolean mkdirs()>();
+
+     label120:
+        specialinvoke $r0.<com.seattleclouds.b.f: void a(java.lang.String,java.lang.String)>($r6, $r26);
+
+     label121:
+        goto label105;
+
+     label122:
+        $r31 = new java.io.ObjectOutputStream;
+
+     label123:
+        $r32 = staticinvoke <org.apache.commons.io.b: java.io.FileOutputStream b(java.io.File)>($r2);
+
+        specialinvoke $r31.<java.io.ObjectOutputStream: void <init>(java.io.OutputStream)>($r32);
+
+        $r10 = $r0.<com.seattleclouds.b.f: java.util.HashMap k>;
+
+        virtualinvoke $r31.<java.io.ObjectOutputStream: void writeObject(java.lang.Object)>($r10);
+
+        virtualinvoke $r31.<java.io.ObjectOutputStream: void close()>();
+
+     label124:
+        goto label059;
+
+     label125:
+        $r33 := @caughtexception;
+
+        goto label021;
+
+     label126:
+        $r34 := @caughtexception;
+
+        goto label057;
+
+        catch java.lang.Exception from label001 to label002 with label058;
+        catch java.lang.Exception from label003 to label004 with label058;
+        catch java.lang.Exception from label005 to label006 with label058;
+        catch java.lang.Exception from label007 to label008 with label058;
+        catch java.lang.Exception from label009 to label010 with label058;
+        catch java.lang.Exception from label011 to label012 with label058;
+        catch java.lang.Exception from label013 to label014 with label058;
+        catch java.lang.Exception from label015 to label016 with label058;
+        catch java.lang.Exception from label017 to label018 with label058;
+        catch java.lang.Exception from label018 to label019 with label051;
+        catch java.lang.Throwable from label018 to label019 with label055;
+        catch java.lang.Exception from label020 to label021 with label125;
+        catch java.lang.Exception from label021 to label022 with label058;
+        catch java.lang.Exception from label023 to label024 with label058;
+        catch java.lang.Exception from label025 to label026 with label058;
+        catch java.lang.Exception from label027 to label028 with label058;
+        catch java.lang.Exception from label029 to label030 with label058;
+        catch java.lang.Exception from label031 to label032 with label058;
+        catch java.lang.Exception from label033 to label034 with label058;
+        catch java.lang.Exception from label035 to label036 with label058;
+        catch java.lang.Exception from label037 to label038 with label058;
+        catch java.lang.Exception from label039 to label041 with label058;
+        catch java.lang.Exception from label041 to label042 with label077;
+        catch java.lang.Exception from label043 to label044 with label077;
+        catch java.lang.Exception from label045 to label046 with label077;
+        catch java.lang.Exception from label047 to label048 with label077;
+        catch java.lang.Exception from label049 to label050 with label077;
+        catch java.lang.Exception from label052 to label053 with label054;
+        catch java.lang.Exception from label056 to label057 with label126;
+        catch java.lang.Exception from label057 to label058 with label058;
+        catch java.lang.Exception from label063 to label064 with label058;
+        catch java.lang.Exception from label065 to label066 with label058;
+        catch java.lang.Exception from label067 to label068 with label058;
+        catch java.lang.Exception from label069 to label070 with label058;
+        catch java.lang.Exception from label071 to label072 with label058;
+        catch java.lang.Exception from label073 to label074 with label077;
+        catch java.lang.Exception from label075 to label076 with label077;
+        catch java.lang.Exception from label078 to label079 with label058;
+        catch java.lang.Exception from label080 to label081 with label058;
+        catch java.lang.Exception from label082 to label083 with label077;
+        catch java.lang.Exception from label084 to label085 with label088;
+        catch java.lang.Exception from label086 to label087 with label088;
+        catch java.lang.Exception from label089 to label090 with label077;
+        catch java.lang.Exception from label091 to label092 with label077;
+        catch java.lang.Exception from label093 to label094 with label077;
+        catch java.lang.Exception from label096 to label097 with label077;
+        catch java.lang.Exception from label098 to label099 with label077;
+        catch java.lang.Exception from label100 to label101 with label077;
+        catch java.lang.Exception from label102 to label103 with label077;
+        catch java.lang.Exception from label104 to label106 with label077;
+        catch java.lang.Exception from label107 to label108 with label077;
+        catch java.lang.Exception from label109 to label110 with label077;
+        catch java.lang.Exception from label111 to label112 with label077;
+        catch java.lang.Exception from label113 to label114 with label077;
+        catch java.lang.Exception from label115 to label116 with label077;
+        catch java.lang.Exception from label117 to label118 with label077;
+        catch java.lang.Exception from label119 to label121 with label077;
+        catch java.lang.Exception from label123 to label124 with label077;
+    }
+
+    public void a(com.seattleclouds.util.bi)
+    {
+        com.seattleclouds.b.f $r0;
+        com.seattleclouds.util.bi $r1;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: com.seattleclouds.util.bi;
+
+        $r0.<com.seattleclouds.b.f: com.seattleclouds.util.bi e> = $r1;
+
+        return;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.b.f $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        android.app.ProgressDialog $r2;
+        com.seattleclouds.util.bi $r3;
+        java.lang.Throwable $r4;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onPostExecute(java.lang.Object)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        if $r2 == null goto label4;
+
+        $r2 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+     label1:
+        $z0 = virtualinvoke $r2.<android.app.ProgressDialog: boolean isShowing()>();
+
+     label2:
+        if $z0 == 0 goto label4;
+
+        $r2 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+     label3:
+        virtualinvoke $r2.<android.app.ProgressDialog: void dismiss()>();
+
+     label4:
+        $r3 = $r0.<com.seattleclouds.b.f: com.seattleclouds.util.bi e>;
+
+        if $r3 == null goto label6;
+
+        $r3 = $r0.<com.seattleclouds.b.f: com.seattleclouds.util.bi e>;
+
+        $r1 = $r0.<com.seattleclouds.b.f: java.lang.String j>;
+
+        interfaceinvoke $r3.<com.seattleclouds.util.bi: void a(java.lang.Object)>($r1);
+
+        return;
+
+     label5:
+        $r4 := @caughtexception;
+
+        $r1 = <com.seattleclouds.b.f: java.lang.String b>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r1, "Exception while dismissing dialog", $r4);
+
+        goto label4;
+
+     label6:
+        return;
+
+        catch java.lang.IllegalArgumentException from label1 to label2 with label5;
+        catch java.lang.IllegalArgumentException from label3 to label4 with label5;
+    }
+
+    protected transient void a(java.lang.Integer[])
+    {
+        com.seattleclouds.b.f $r0;
+        java.lang.Integer[] $r1;
+        int $i0;
+        android.app.ProgressDialog $r2;
+        java.lang.Integer $r3;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: java.lang.Integer[];
+
+        specialinvoke $r0.<android.os.AsyncTask: void onProgressUpdate(java.lang.Object[])>($r1);
+
+        $r2 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        $r3 = $r1[0];
+
+        $i0 = virtualinvoke $r3.<java.lang.Integer: int intValue()>();
+
+        virtualinvoke $r2.<android.app.ProgressDialog: void setProgress(int)>($i0);
+
+     label1:
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.b.f $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        virtualinvoke $r0.<com.seattleclouds.b.f: java.lang.String a(java.lang.String[])>($r3);
+
+        return "ok";
+    }
+
+    protected void onCancelled()
+    {
+        com.seattleclouds.b.f $r0;
+        android.app.ProgressDialog $r1;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        specialinvoke $r0.<android.os.AsyncTask: void onCancelled()>();
+
+        $r1 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        virtualinvoke $r1.<android.app.ProgressDialog: void dismiss()>();
+
+     label1:
+        return;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.b.f $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.b.f: void a(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.b.f $r0;
+        int $i0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+        android.app.Activity $r3;
+        boolean $z0;
+        android.app.ProgressDialog $r4;
+        android.view.Window $r5;
+        com.seattleclouds.b.g $r6;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = staticinvoke <com.seattleclouds.App: java.lang.String l()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("sync");
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("filelist.obj");
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        <com.seattleclouds.b.f: java.lang.String a> = $r2;
+
+        $r3 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        $z0 = virtualinvoke $r3.<android.app.Activity: boolean isFinishing()>();
+
+        if $z0 != 0 goto label2;
+
+        $z0 = <com.seattleclouds.App: boolean E>;
+
+        if $z0 != 0 goto label1;
+
+        $z0 = <com.seattleclouds.App: boolean l>;
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        $r4 = new android.app.ProgressDialog;
+
+        $r3 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        specialinvoke $r4.<android.app.ProgressDialog: void <init>(android.content.Context)>($r3);
+
+        $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setProgressStyle(int)>(1);
+
+        $r4 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        $r3 = $r0.<com.seattleclouds.b.f: android.app.Activity c>;
+
+        $i0 = <com.seattleclouds.l: int app_state_syncing>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setMessage(java.lang.CharSequence)>($r2);
+
+        $r4 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setCancelable(boolean)>(1);
+
+        $r4 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        $r5 = virtualinvoke $r4.<android.app.ProgressDialog: android.view.Window getWindow()>();
+
+        virtualinvoke $r5.<android.view.Window: void clearFlags(int)>(2);
+
+        $r4 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void show()>();
+
+        $r4 = $r0.<com.seattleclouds.b.f: android.app.ProgressDialog d>;
+
+        $r6 = new com.seattleclouds.b.g;
+
+        specialinvoke $r6.<com.seattleclouds.b.g: void <init>(com.seattleclouds.b.f)>($r0);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setOnCancelListener(android.content.DialogInterface$OnCancelListener)>($r6);
+
+     label2:
+        specialinvoke $r0.<android.os.AsyncTask: void onPreExecute()>();
+
+        return;
+    }
+
+    protected void onProgressUpdate(java.lang.Object[])
+    {
+        com.seattleclouds.b.f $r0;
+        java.lang.Object[] $r1;
+        java.lang.Integer[] $r2;
+
+        $r0 := @this: com.seattleclouds.b.f;
+
+        $r1 := @parameter0: java.lang.Object[];
+
+        $r2 = (java.lang.Integer[]) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.b.f: void a(java.lang.Integer[])>($r2);
+
+        return;
+    }
+}

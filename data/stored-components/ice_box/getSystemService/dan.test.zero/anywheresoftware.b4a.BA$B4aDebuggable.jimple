@@ -1,0 +1,5 @@
+public interface  anywheresoftware.b4a.BA$B4aDebuggable extends java.lang.Object
+{
+
+    public abstract java.lang.Object[] debug(int, boolean[]);
+}

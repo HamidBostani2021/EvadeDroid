@@ -1,0 +1,1203 @@
+public class com.seattleclouds.modules.goaltracker.a extends java.lang.Object
+{
+    private static final java.lang.String a;
+    private static com.seattleclouds.modules.goaltracker.a b;
+    private android.content.Context c;
+    private org.json.JSONArray d;
+    private org.json.JSONArray e;
+    private org.json.JSONObject f;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/modules/goaltracker/a;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.modules.goaltracker.a: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    private void <init>()
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static com.seattleclouds.modules.goaltracker.a a(android.content.Context)
+    {
+        android.content.Context $r0;
+        com.seattleclouds.modules.goaltracker.a $r1;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 = new com.seattleclouds.modules.goaltracker.a;
+
+        specialinvoke $r1.<com.seattleclouds.modules.goaltracker.a: void <init>()>();
+
+        <com.seattleclouds.modules.goaltracker.a: com.seattleclouds.modules.goaltracker.a b> = $r1;
+
+        $r1 = <com.seattleclouds.modules.goaltracker.a: com.seattleclouds.modules.goaltracker.a b>;
+
+        specialinvoke $r1.<com.seattleclouds.modules.goaltracker.a: void b(android.content.Context)>($r0);
+
+        $r1 = <com.seattleclouds.modules.goaltracker.a: com.seattleclouds.modules.goaltracker.a b>;
+
+        return $r1;
+    }
+
+    private java.util.HashMap a(org.json.JSONObject)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        org.json.JSONObject $r1;
+        java.util.HashMap $r2;
+        java.lang.String $r3;
+        org.json.JSONException $r4;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 = new java.util.HashMap;
+
+        specialinvoke $r2.<java.util.HashMap: void <init>()>();
+
+     label1:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("title");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("title", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("due_date_time");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("due_date_time", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("created_time");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("created_time", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("priority");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("priority", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("repeat_interval");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("repeat_interval", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("note");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("note", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("progress");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("progress", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("id", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("category_id");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("category_id", $r3);
+
+     label2:
+        return $r2;
+
+     label3:
+        $r4 := @caughtexception;
+
+        return null;
+
+        catch org.json.JSONException from label1 to label2 with label3;
+    }
+
+    private java.util.HashMap b(org.json.JSONObject)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        org.json.JSONObject $r1;
+        java.util.HashMap $r2;
+        java.lang.String $r3;
+        org.json.JSONException $r4;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 = new java.util.HashMap;
+
+        specialinvoke $r2.<java.util.HashMap: void <init>()>();
+
+     label1:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("name");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("name", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("id", $r3);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("created_time");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("created_time", $r3);
+
+     label2:
+        return $r2;
+
+     label3:
+        $r4 := @caughtexception;
+
+        return null;
+
+        catch org.json.JSONException from label1 to label2 with label3;
+    }
+
+    private void b(android.content.Context)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        android.content.Context $r1;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r1 = virtualinvoke $r1.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        $r0.<com.seattleclouds.modules.goaltracker.a: android.content.Context c> = $r1;
+
+        return;
+    }
+
+    public java.util.ArrayList a(java.lang.String)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.lang.String $r1, $r6;
+        java.util.ArrayList $r2;
+        java.util.HashMap $r3;
+        int $i0, $i1;
+        org.json.JSONArray $r4;
+        org.json.JSONObject $r5;
+        boolean $z0;
+        org.json.JSONException $r7;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $i0 = 0;
+
+     label01:
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+        $i1 = virtualinvoke $r4.<org.json.JSONArray: int length()>();
+
+        if $i0 >= $i1 goto label12;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label02:
+        $r5 = virtualinvoke $r4.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+     label03:
+        $r3 = new java.util.HashMap;
+
+     label04:
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+     label05:
+        if $r1 == null goto label09;
+
+     label06:
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("category_id");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+     label07:
+        if $z0 != 0 goto label09;
+
+     label08:
+        $i0 = $i0 + 1;
+
+        goto label01;
+
+     label09:
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("title");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("title", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("id", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("due_date_time");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("due_date_time", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("created_time");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("created_time", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("priority");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("priority", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("repeat_interval");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("repeat_interval", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("note");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("note", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("progress");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("progress", $r6);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("category_id");
+
+        virtualinvoke $r3.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("category_id", $r6);
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r3);
+
+     label10:
+        goto label08;
+
+     label11:
+        $r7 := @caughtexception;
+
+        goto label08;
+
+     label12:
+        return $r2;
+
+        catch org.json.JSONException from label02 to label03 with label11;
+        catch org.json.JSONException from label04 to label05 with label11;
+        catch org.json.JSONException from label06 to label07 with label11;
+        catch org.json.JSONException from label09 to label10 with label11;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        android.content.Context $r1;
+        android.content.SharedPreferences $r2;
+        java.lang.String $r3;
+        org.json.JSONObject $r4;
+        org.json.JSONArray $r5;
+        org.json.JSONException $r6;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.goaltracker.a: android.content.Context c>;
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.goaltracker.a: android.content.Context c>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("GOAL_CATEGORIES_SHARED_PREF_KEY", 0);
+
+        $r3 = interfaceinvoke $r2.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("saved_goals_categories", "{\"categories\":[],\"goals\":[]}");
+
+        $r4 = new org.json.JSONObject;
+
+     label2:
+        specialinvoke $r4.<org.json.JSONObject: void <init>(java.lang.String)>($r3);
+
+     label3:
+        $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONObject f> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONObject f>;
+
+     label4:
+        $r5 = virtualinvoke $r4.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("categories");
+
+     label5:
+        $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d> = $r5;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONObject f>;
+
+     label6:
+        $r5 = virtualinvoke $r4.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("goals");
+
+     label7:
+        $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e> = $r5;
+
+        return;
+
+     label8:
+        $r6 := @caughtexception;
+
+        $r3 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r3, "Error parsing cofig", $r6);
+
+        return;
+
+        catch org.json.JSONException from label2 to label3 with label8;
+        catch org.json.JSONException from label4 to label5 with label8;
+        catch org.json.JSONException from label6 to label7 with label8;
+    }
+
+    public void a(java.lang.String, java.util.HashMap)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.lang.String $r1;
+        java.util.HashMap $r2;
+        int $i0;
+        org.json.JSONObject $r3;
+        java.lang.Object $r4;
+        org.json.JSONArray $r5;
+        org.json.JSONException $r6;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.util.HashMap;
+
+        if $r1 == null goto label7;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 == 0 goto label7;
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r3 = new org.json.JSONObject;
+
+     label2:
+        specialinvoke $r3.<org.json.JSONObject: void <init>()>();
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("title");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("title", $r4);
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("due_date_time");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("due_date_time", $r4);
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("priority");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("priority", $r4);
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("repeat_interval");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("repeat_interval", $r4);
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("note");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("note", $r4);
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("created_time");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("created_time", $r4);
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("id");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("id", $r4);
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("progress");
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("progress", $r4);
+
+        virtualinvoke $r3.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("category_id", $r1);
+
+     label3:
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label4:
+        virtualinvoke $r5.<org.json.JSONArray: org.json.JSONArray put(java.lang.Object)>($r3);
+
+     label5:
+        return;
+
+     label6:
+        $r6 := @caughtexception;
+
+        $r1 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r1, "Unable to add a new goal with", $r6);
+
+     label7:
+        return;
+
+        catch org.json.JSONException from label2 to label3 with label6;
+        catch org.json.JSONException from label4 to label5 with label6;
+    }
+
+    public void a(java.util.HashMap)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.util.HashMap $r1;
+        org.json.JSONObject $r2;
+        java.lang.Object $r3;
+        org.json.JSONArray $r4;
+        org.json.JSONException $r5;
+        java.lang.String $r6;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.util.HashMap;
+
+        $r2 = new org.json.JSONObject;
+
+        specialinvoke $r2.<org.json.JSONObject: void <init>()>();
+
+     label1:
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("name");
+
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("name", $r3);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("id");
+
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("id", $r3);
+
+        $r3 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("created_time");
+
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("created_time", $r3);
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label3:
+        virtualinvoke $r4.<org.json.JSONArray: org.json.JSONArray put(java.lang.Object)>($r2);
+
+     label4:
+        return;
+
+     label5:
+        $r5 := @caughtexception;
+
+        $r6 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r6, "Error adding a new category");
+
+        return;
+
+        catch org.json.JSONException from label1 to label2 with label5;
+        catch org.json.JSONException from label3 to label4 with label5;
+    }
+
+    public java.util.HashMap b(java.lang.String)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.lang.String $r1, $r4;
+        int $i0, $i1;
+        org.json.JSONArray $r2;
+        org.json.JSONObject $r3;
+        boolean $z0;
+        java.util.HashMap $r5;
+        org.json.JSONException $r6;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label01;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label02;
+
+     label01:
+        return null;
+
+     label02:
+        $i0 = 0;
+
+     label03:
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+        $i1 = virtualinvoke $r2.<org.json.JSONArray: int length()>();
+
+        if $i0 >= $i1 goto label10;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label04:
+        $r3 = virtualinvoke $r2.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r4 = virtualinvoke $r3.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>($r4);
+
+     label05:
+        if $z0 == 0 goto label09;
+
+     label06:
+        $r5 = specialinvoke $r0.<com.seattleclouds.modules.goaltracker.a: java.util.HashMap a(org.json.JSONObject)>($r3);
+
+     label07:
+        return $r5;
+
+     label08:
+        $r6 := @caughtexception;
+
+        $r4 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r4, "Can\'t get goal", $r6);
+
+     label09:
+        $i0 = $i0 + 1;
+
+        goto label03;
+
+     label10:
+        return null;
+
+        catch org.json.JSONException from label04 to label05 with label08;
+        catch org.json.JSONException from label06 to label07 with label08;
+    }
+
+    public void b()
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        android.content.Context $r1;
+        android.content.SharedPreferences $r2;
+        android.content.SharedPreferences$Editor $r3;
+        org.json.JSONObject $r4;
+        org.json.JSONArray $r5;
+        java.lang.String $r6;
+        org.json.JSONException $r7;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 = $r0.<com.seattleclouds.modules.goaltracker.a: android.content.Context c>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("GOAL_CATEGORIES_SHARED_PREF_KEY", 0);
+
+        $r3 = interfaceinvoke $r2.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONObject f>;
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label1:
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("categories", $r5);
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONObject f>;
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label3:
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("goals", $r5);
+
+     label4:
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONObject f>;
+
+        $r6 = virtualinvoke $r4.<org.json.JSONObject: java.lang.String toString()>();
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("saved_goals_categories", $r6);
+
+        interfaceinvoke $r3.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+
+     label5:
+        $r7 := @caughtexception;
+
+        $r6 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r6, "Unable to save settings:", $r7);
+
+        return;
+
+        catch org.json.JSONException from label1 to label2 with label5;
+        catch org.json.JSONException from label3 to label4 with label5;
+    }
+
+    public void b(java.util.HashMap)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.util.HashMap $r1;
+        java.lang.Object $r2;
+        java.lang.String $r3, $r6;
+        int $i0, $i1;
+        org.json.JSONArray $r4;
+        org.json.JSONObject $r5;
+        boolean $z0;
+        org.json.JSONException $r7;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.util.HashMap;
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("id");
+
+        $r3 = (java.lang.String) $r2;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $i0 = 0;
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+        $i1 = virtualinvoke $r4.<org.json.JSONArray: int length()>();
+
+        if $i0 >= $i1 goto label9;
+
+        $r4 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label3:
+        $r5 = virtualinvoke $r4.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>($r6);
+
+     label4:
+        if $z0 == 0 goto label8;
+
+     label5:
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("name");
+
+        virtualinvoke $r5.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("name", $r2);
+
+     label6:
+        return;
+
+     label7:
+        $r7 := @caughtexception;
+
+     label8:
+        $i0 = $i0 + 1;
+
+        goto label2;
+
+     label9:
+        return;
+
+        catch org.json.JSONException from label3 to label4 with label7;
+        catch org.json.JSONException from label5 to label6 with label7;
+    }
+
+    public java.util.ArrayList c()
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.util.ArrayList $r1;
+        org.json.JSONArray $r2;
+        int $i0, $i1;
+        java.util.HashMap $r3;
+        org.json.JSONObject $r4;
+        org.json.JSONException $r5;
+        java.lang.String $r6;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+        if $r2 != null goto label01;
+
+        return $r1;
+
+     label01:
+        $i0 = 0;
+
+     label02:
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label03:
+        $i1 = virtualinvoke $r2.<org.json.JSONArray: int length()>();
+
+     label04:
+        if $i0 >= $i1 goto label13;
+
+        $r3 = new java.util.HashMap;
+
+     label05:
+        specialinvoke $r3.<java.util.HashMap: void <init>()>();
+
+     label06:
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label07:
+        $r4 = virtualinvoke $r2.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r3 = specialinvoke $r0.<com.seattleclouds.modules.goaltracker.a: java.util.HashMap b(org.json.JSONObject)>($r4);
+
+     label08:
+        if $r3 != null goto label10;
+
+     label09:
+        $i0 = $i0 + 1;
+
+        goto label02;
+
+     label10:
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r3);
+
+     label11:
+        goto label09;
+
+     label12:
+        $r5 := @caughtexception;
+
+        $r6 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r6, "Error parsing cofig", $r5);
+
+     label13:
+        return $r1;
+
+        catch org.json.JSONException from label03 to label04 with label12;
+        catch org.json.JSONException from label05 to label06 with label12;
+        catch org.json.JSONException from label07 to label08 with label12;
+        catch org.json.JSONException from label10 to label11 with label12;
+    }
+
+    public java.util.HashMap c(java.lang.String)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.lang.String $r1, $r4;
+        int $i0, $i1, $i2;
+        org.json.JSONArray $r2, $r5;
+        org.json.JSONObject $r3;
+        boolean $z0;
+        java.lang.Object $r6;
+        java.util.HashMap $r7;
+        org.json.JSONException $r8;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label01;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label02;
+
+     label01:
+        return null;
+
+     label02:
+        $i0 = 0;
+
+     label03:
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+        $i1 = virtualinvoke $r2.<org.json.JSONArray: int length()>();
+
+        if $i0 >= $i1 goto label18;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label04:
+        $r3 = virtualinvoke $r2.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r4 = virtualinvoke $r3.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>($r4);
+
+     label05:
+        if $z0 == 0 goto label17;
+
+        $r2 = new org.json.JSONArray;
+
+     label06:
+        specialinvoke $r2.<org.json.JSONArray: void <init>()>();
+
+     label07:
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label08:
+        $i1 = virtualinvoke $r5.<org.json.JSONArray: int length()>();
+
+     label09:
+        $i2 = 0;
+
+     label10:
+        if $i2 >= $i1 goto label13;
+
+        if $i2 == $i0 goto label12;
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label11:
+        $r6 = virtualinvoke $r5.<org.json.JSONArray: java.lang.Object get(int)>($i2);
+
+        virtualinvoke $r2.<org.json.JSONArray: org.json.JSONArray put(java.lang.Object)>($r6);
+
+     label12:
+        $i2 = $i2 + 1;
+
+        goto label10;
+
+     label13:
+        $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e> = $r2;
+
+     label14:
+        $r7 = specialinvoke $r0.<com.seattleclouds.modules.goaltracker.a: java.util.HashMap a(org.json.JSONObject)>($r3);
+
+     label15:
+        return $r7;
+
+     label16:
+        $r8 := @caughtexception;
+
+        $r4 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r4, "Can\'t get json object", $r8);
+
+     label17:
+        $i0 = $i0 + 1;
+
+        goto label03;
+
+     label18:
+        return null;
+
+        catch org.json.JSONException from label04 to label05 with label16;
+        catch org.json.JSONException from label06 to label07 with label16;
+        catch org.json.JSONException from label08 to label09 with label16;
+        catch org.json.JSONException from label11 to label12 with label16;
+        catch org.json.JSONException from label14 to label15 with label16;
+    }
+
+    public void c(java.util.HashMap)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.util.HashMap $r1;
+        java.lang.Object $r2;
+        java.lang.String $r3, $r7;
+        int $i0, $i1;
+        org.json.JSONObject $r4, $r6;
+        org.json.JSONArray $r5;
+        boolean $z0;
+        org.json.JSONException $r8;
+        java.lang.StringBuilder $r9;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.util.HashMap;
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("id");
+
+        $r3 = (java.lang.String) $r2;
+
+        if $r3 == null goto label14;
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label01;
+
+        return;
+
+     label01:
+        $r4 = null;
+
+        $i0 = 0;
+
+     label02:
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label03:
+        $i1 = virtualinvoke $r5.<org.json.JSONArray: int length()>();
+
+     label04:
+        if $i0 >= $i1 goto label09;
+
+        $r5 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label05:
+        $r6 = virtualinvoke $r5.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+     label06:
+        $r4 = $r6;
+
+     label07:
+        $r7 = virtualinvoke $r6.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>($r7);
+
+     label08:
+        if $z0 == 0 goto label13;
+
+     label09:
+        if $r4 == null goto label14;
+
+     label10:
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("title");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("title", $r2);
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("due_date_time");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("due_date_time", $r2);
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("created_time");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("created_time", $r2);
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("priority");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("priority", $r2);
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("repeat_interval");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("repeat_interval", $r2);
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("note");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("note", $r2);
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("category_id");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("category_id", $r2);
+
+        $r2 = virtualinvoke $r1.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("progress");
+
+        virtualinvoke $r4.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("progress", $r2);
+
+     label11:
+        return;
+
+     label12:
+        $r8 := @caughtexception;
+
+        $r7 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Unable to update the goal with id:");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r7, $r3, $r8);
+
+        return;
+
+     label13:
+        $i0 = $i0 + 1;
+
+        goto label02;
+
+     label14:
+        return;
+
+        catch org.json.JSONException from label03 to label04 with label12;
+        catch org.json.JSONException from label05 to label06 with label12;
+        catch org.json.JSONException from label07 to label08 with label12;
+        catch org.json.JSONException from label10 to label11 with label12;
+    }
+
+    public java.util.HashMap d(java.lang.String)
+    {
+        com.seattleclouds.modules.goaltracker.a $r0;
+        java.lang.String $r1, $r4;
+        int $i0, $i1, $i2;
+        org.json.JSONArray $r2, $r11;
+        org.json.JSONObject $r3, $r6;
+        boolean $z0;
+        java.util.ArrayList $r5;
+        org.json.JSONException $r7, $r8;
+        java.util.Iterator $r9;
+        java.lang.Object $r10;
+        java.util.HashMap $r12;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.a;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label01;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label02;
+
+     label01:
+        return null;
+
+     label02:
+        $i0 = 0;
+
+     label03:
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+        $i1 = virtualinvoke $r2.<org.json.JSONArray: int length()>();
+
+        if $i0 >= $i1 goto label38;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label04:
+        $r3 = virtualinvoke $r2.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r4 = virtualinvoke $r3.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+     label05:
+        if $z0 == 0 goto label19;
+
+        $r5 = new java.util.ArrayList;
+
+     label06:
+        specialinvoke $r5.<java.util.ArrayList: void <init>()>();
+
+     label07:
+        $i1 = 0;
+
+     label08:
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label09:
+        $i2 = virtualinvoke $r2.<org.json.JSONArray: int length()>();
+
+     label10:
+        if $i1 >= $i2 goto label20;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray e>;
+
+     label11:
+        $r6 = virtualinvoke $r2.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i1);
+
+        $r4 = virtualinvoke $r6.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("category_id");
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+     label12:
+        if $z0 == 0 goto label14;
+
+     label13:
+        $r4 = virtualinvoke $r6.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        virtualinvoke $r5.<java.util.ArrayList: boolean add(java.lang.Object)>($r4);
+
+     label14:
+        $i1 = $i1 + 1;
+
+        goto label08;
+
+     label15:
+        $r7 := @caughtexception;
+
+        $r4 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+     label16:
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r4, "Can\'t get json object", $r7);
+
+     label17:
+        goto label14;
+
+     label18:
+        $r8 := @caughtexception;
+
+        $r4 = <com.seattleclouds.modules.goaltracker.a: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r4, "Can\'t get json object", $r8);
+
+     label19:
+        $i0 = $i0 + 1;
+
+        goto label03;
+
+     label20:
+        $r9 = virtualinvoke $r5.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label21:
+        $z0 = interfaceinvoke $r9.<java.util.Iterator: boolean hasNext()>();
+
+     label22:
+        if $z0 == 0 goto label27;
+
+     label23:
+        $r10 = interfaceinvoke $r9.<java.util.Iterator: java.lang.Object next()>();
+
+     label24:
+        $r4 = (java.lang.String) $r10;
+
+     label25:
+        virtualinvoke $r0.<com.seattleclouds.modules.goaltracker.a: java.util.HashMap c(java.lang.String)>($r4);
+
+     label26:
+        goto label21;
+
+     label27:
+        $r2 = new org.json.JSONArray;
+
+     label28:
+        specialinvoke $r2.<org.json.JSONArray: void <init>()>();
+
+     label29:
+        $r11 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label30:
+        $i1 = virtualinvoke $r11.<org.json.JSONArray: int length()>();
+
+     label31:
+        $i2 = 0;
+
+     label32:
+        if $i2 >= $i1 goto label35;
+
+        if $i2 == $i0 goto label34;
+
+        $r11 = $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d>;
+
+     label33:
+        $r10 = virtualinvoke $r11.<org.json.JSONArray: java.lang.Object get(int)>($i2);
+
+        virtualinvoke $r2.<org.json.JSONArray: org.json.JSONArray put(java.lang.Object)>($r10);
+
+     label34:
+        $i2 = $i2 + 1;
+
+        goto label32;
+
+     label35:
+        $r0.<com.seattleclouds.modules.goaltracker.a: org.json.JSONArray d> = $r2;
+
+     label36:
+        $r12 = specialinvoke $r0.<com.seattleclouds.modules.goaltracker.a: java.util.HashMap b(org.json.JSONObject)>($r3);
+
+     label37:
+        return $r12;
+
+     label38:
+        return null;
+
+        catch org.json.JSONException from label04 to label05 with label18;
+        catch org.json.JSONException from label06 to label07 with label18;
+        catch org.json.JSONException from label09 to label10 with label18;
+        catch org.json.JSONException from label11 to label12 with label15;
+        catch org.json.JSONException from label13 to label14 with label15;
+        catch org.json.JSONException from label16 to label17 with label18;
+        catch org.json.JSONException from label20 to label22 with label18;
+        catch org.json.JSONException from label23 to label24 with label18;
+        catch org.json.JSONException from label25 to label26 with label18;
+        catch org.json.JSONException from label28 to label29 with label18;
+        catch org.json.JSONException from label30 to label31 with label18;
+        catch org.json.JSONException from label33 to label34 with label18;
+        catch org.json.JSONException from label36 to label37 with label18;
+    }
+}

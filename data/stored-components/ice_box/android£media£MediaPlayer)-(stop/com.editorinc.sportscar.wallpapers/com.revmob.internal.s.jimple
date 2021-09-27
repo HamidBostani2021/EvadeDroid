@@ -1,0 +1,204 @@
+public class com.revmob.internal.s extends android.webkit.WebView
+{
+
+    public void <init>(android.content.Context, com.revmob.internal.t)
+    {
+        com.revmob.internal.s $r0;
+        android.content.Context $r1;
+        com.revmob.internal.t $r2;
+
+        $r0 := @this: com.revmob.internal.s;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: com.revmob.internal.t;
+
+        specialinvoke $r0.<com.revmob.internal.s: void <init>(android.content.Context,java.lang.String,java.lang.String,android.webkit.WebViewClient)>($r1, null, null, $r2);
+
+        return;
+    }
+
+    public void <init>(android.content.Context, java.lang.String, java.lang.String, android.webkit.WebViewClient)
+    {
+        com.revmob.internal.s $r0;
+        android.content.Context $r1;
+        java.lang.String $r2, $r3;
+        android.webkit.WebViewClient $r4;
+        android.webkit.WebSettings $r5;
+        int $i0;
+        android.webkit.WebChromeClient $r6;
+        boolean $z0;
+
+        $r0 := @this: com.revmob.internal.s;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: android.webkit.WebViewClient;
+
+        specialinvoke $r0.<android.webkit.WebView: void <init>(android.content.Context)>($r1);
+
+        virtualinvoke $r0.<com.revmob.internal.s: void setScrollContainer(boolean)>(0);
+
+        virtualinvoke $r0.<com.revmob.internal.s: void setHorizontalScrollBarEnabled(boolean)>(0);
+
+        virtualinvoke $r0.<com.revmob.internal.s: void setVerticalScrollBarEnabled(boolean)>(0);
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setJavaScriptEnabled(boolean)>(1);
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setLoadsImagesAutomatically(boolean)>(1);
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setJavaScriptCanOpenWindowsAutomatically(boolean)>(1);
+
+        virtualinvoke $r0.<com.revmob.internal.s: void setBackgroundColor(int)>(0);
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setSaveFormData(boolean)>(0);
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setSavePassword(boolean)>(0);
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setAllowFileAccess(boolean)>(0);
+
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i0 < 11 goto label1;
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setAllowContentAccess(boolean)>(0);
+
+     label1:
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i0 < 16 goto label2;
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setAllowFileAccessFromFileURLs(boolean)>(0);
+
+        $r5 = virtualinvoke $r0.<com.revmob.internal.s: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r5.<android.webkit.WebSettings: void setAllowUniversalAccessFromFileURLs(boolean)>(0);
+
+     label2:
+        if $r4 == null goto label3;
+
+        virtualinvoke $r0.<com.revmob.internal.s: void setWebViewClient(android.webkit.WebViewClient)>($r4);
+
+     label3:
+        $r6 = new android.webkit.WebChromeClient;
+
+        specialinvoke $r6.<android.webkit.WebChromeClient: void <init>()>();
+
+        virtualinvoke $r0.<com.revmob.internal.s: void setWebChromeClient(android.webkit.WebChromeClient)>($r6);
+
+        if $r3 == null goto label4;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>("");
+
+        if $z0 != 0 goto label4;
+
+        virtualinvoke $r0.<com.revmob.internal.s: void loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>(null, $r3, "text/html", "utf-8", null);
+
+        return;
+
+     label4:
+        if $r2 == null goto label5;
+
+        virtualinvoke $r0.<com.revmob.internal.s: void loadUrl(java.lang.String)>($r2);
+
+     label5:
+        return;
+    }
+
+    public void loadData(java.lang.String, java.lang.String, java.lang.String)
+    {
+        com.revmob.internal.s $r0;
+        java.lang.String $r1, $r2, $r3;
+        java.lang.StringBuilder $r4;
+        int $i0, $i1;
+        char[] $r5;
+        char $c2;
+
+        $r0 := @this: com.revmob.internal.s;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 = new java.lang.StringBuilder;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        $i0 = $i0 + 100;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>(int)>($i0);
+
+        $r5 = virtualinvoke $r1.<java.lang.String: char[] toCharArray()>();
+
+        $i0 = 0;
+
+     label1:
+        $i1 = lengthof $r5;
+
+        if $i0 >= $i1 goto label7;
+
+        $c2 = virtualinvoke $r1.<java.lang.String: char charAt(int)>($i0);
+
+        lookupswitch($c2)
+        {
+            case 35: goto label6;
+            case 36: goto label2;
+            case 37: goto label4;
+            case 38: goto label2;
+            case 39: goto label5;
+            default: goto label2;
+        };
+
+     label2:
+        virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>($c2);
+
+     label3:
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label4:
+        virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("%25");
+
+        goto label3;
+
+     label5:
+        virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("%27");
+
+        goto label3;
+
+     label6:
+        virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("%23");
+
+        goto label3;
+
+     label7:
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r0.<android.webkit.WebView: void loadData(java.lang.String,java.lang.String,java.lang.String)>($r1, $r2, $r3);
+
+        return;
+    }
+}

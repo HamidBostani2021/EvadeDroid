@@ -1,0 +1,456 @@
+public class anywheresoftware.b4a.objects.collections.List extends anywheresoftware.b4a.AbsObjectWrapper implements anywheresoftware.b4a.BA$IterableList
+{
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        specialinvoke $r0.<anywheresoftware.b4a.AbsObjectWrapper: void <init>()>();
+
+        return;
+    }
+
+    private void sortList(java.lang.String, boolean, boolean) throws java.lang.SecurityException, java.lang.NoSuchFieldException
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.lang.String $r1;
+        boolean $z0, $z1;
+        anywheresoftware.b4a.objects.collections.List$2 $r2;
+        int $i0;
+        java.lang.Object $r3;
+        java.lang.Class $r4;
+        java.lang.reflect.Field $r5;
+        java.util.List $r6;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 := @parameter2: boolean;
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: int getSize()>();
+
+        if $i0 != 0 goto label1;
+
+        return;
+
+     label1:
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object Get(int)>(0);
+
+        $r4 = virtualinvoke $r3.<java.lang.Object: java.lang.Class getClass()>();
+
+        $r5 = virtualinvoke $r4.<java.lang.Class: java.lang.reflect.Field getDeclaredField(java.lang.String)>($r1);
+
+        virtualinvoke $r5.<java.lang.reflect.Field: void setAccessible(boolean)>(1);
+
+        $r2 = new anywheresoftware.b4a.objects.collections.List$2;
+
+        specialinvoke $r2.<anywheresoftware.b4a.objects.collections.List$2: void <init>(anywheresoftware.b4a.objects.collections.List,boolean,java.lang.reflect.Field,boolean)>($r0, $z1, $r5, $z0);
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r6 = (java.util.List) $r3;
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r6, $r2);
+
+        return;
+    }
+
+    public void Add(java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.lang.Object $r1, $r2;
+        boolean $z0;
+        java.util.List $r3;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $z0 = <anywheresoftware.b4a.BA: boolean debugMode>;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        $i0 = interfaceinvoke $r3.<java.util.List: int size()>();
+
+        if $i0 <= 0 goto label1;
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: int getSize()>();
+
+        $i0 = $i0 + -1;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object Get(int)>($i0);
+
+        if $r2 == null goto label1;
+
+        if $r2 != $r1 goto label1;
+
+        $z0 = $r2 instanceof java.lang.String;
+
+        if $z0 != 0 goto label1;
+
+        $z0 = $r2 instanceof java.lang.Number;
+
+        if $z0 != 0 goto label1;
+
+        $z0 = $r2 instanceof java.lang.Boolean;
+
+        if $z0 != 0 goto label1;
+
+        staticinvoke <anywheresoftware.b4a.BA: void LogInfo(java.lang.String)>("Warning: same object added to list multiple times.");
+
+     label1:
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        interfaceinvoke $r3.<java.util.List: boolean add(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    public void AddAll(anywheresoftware.b4a.objects.collections.List)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0, $r1;
+        java.lang.Object $r2;
+        java.util.List $r3;
+        java.util.Collection $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 := @parameter0: anywheresoftware.b4a.objects.collections.List;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        $r2 = virtualinvoke $r1.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r4 = (java.util.Collection) $r2;
+
+        interfaceinvoke $r3.<java.util.List: boolean addAll(java.util.Collection)>($r4);
+
+        return;
+    }
+
+    public void AddAllAt(int, anywheresoftware.b4a.objects.collections.List)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0, $r1;
+        int $i0;
+        java.lang.Object $r2;
+        java.util.List $r3;
+        java.util.Collection $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: anywheresoftware.b4a.objects.collections.List;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        $r2 = virtualinvoke $r1.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r4 = (java.util.Collection) $r2;
+
+        interfaceinvoke $r3.<java.util.List: boolean addAll(int,java.util.Collection)>($i0, $r4);
+
+        return;
+    }
+
+    public void Clear()
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r2 = (java.util.List) $r1;
+
+        interfaceinvoke $r2.<java.util.List: void clear()>();
+
+        return;
+    }
+
+    public java.lang.Object Get(int)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        int $i0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r2 = (java.util.List) $r1;
+
+        $r1 = interfaceinvoke $r2.<java.util.List: java.lang.Object get(int)>($i0);
+
+        return $r1;
+    }
+
+    public int IndexOf(java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.lang.Object $r1, $r2;
+        java.util.List $r3;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        $i0 = interfaceinvoke $r3.<java.util.List: int indexOf(java.lang.Object)>($r1);
+
+        return $i0;
+    }
+
+    public void Initialize()
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: void setObject(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    public void Initialize2(anywheresoftware.b4a.objects.collections.List)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0, $r1;
+        java.lang.Object $r2;
+        java.util.List $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 := @parameter0: anywheresoftware.b4a.objects.collections.List;
+
+        $r2 = virtualinvoke $r1.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: void setObject(java.lang.Object)>($r3);
+
+        return;
+    }
+
+    public void InsertAt(int, java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        int $i0;
+        java.lang.Object $r1, $r2;
+        java.util.List $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.Object;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        interfaceinvoke $r3.<java.util.List: void add(int,java.lang.Object)>($i0, $r1);
+
+        return;
+    }
+
+    public void RemoveAt(int)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        int $i0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r2 = (java.util.List) $r1;
+
+        interfaceinvoke $r2.<java.util.List: java.lang.Object remove(int)>($i0);
+
+        return;
+    }
+
+    public void Set(int, java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        int $i0;
+        java.lang.Object $r1, $r2;
+        java.util.List $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.Object;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        interfaceinvoke $r3.<java.util.List: java.lang.Object set(int,java.lang.Object)>($i0, $r1);
+
+        return;
+    }
+
+    public void Sort(boolean)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        boolean $z0;
+        anywheresoftware.b4a.objects.collections.List$1 $r1;
+        java.lang.Object $r2;
+        java.util.List $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $z0 := @parameter0: boolean;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        staticinvoke <java.util.Collections: void sort(java.util.List)>($r3);
+
+        return;
+
+     label1:
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r3 = (java.util.List) $r2;
+
+        $r1 = new anywheresoftware.b4a.objects.collections.List$1;
+
+        specialinvoke $r1.<anywheresoftware.b4a.objects.collections.List$1: void <init>(anywheresoftware.b4a.objects.collections.List)>($r0);
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r3, $r1);
+
+        return;
+    }
+
+    public void SortCaseInsensitive(boolean)
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        boolean $z0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+        anywheresoftware.b4a.objects.collections.List$3 $r3;
+        anywheresoftware.b4a.objects.collections.List$4 $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $z0 := @parameter0: boolean;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r2 = (java.util.List) $r1;
+
+        $r3 = new anywheresoftware.b4a.objects.collections.List$3;
+
+        specialinvoke $r3.<anywheresoftware.b4a.objects.collections.List$3: void <init>(anywheresoftware.b4a.objects.collections.List)>($r0);
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r2, $r3);
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r2 = (java.util.List) $r1;
+
+        $r4 = new anywheresoftware.b4a.objects.collections.List$4;
+
+        specialinvoke $r4.<anywheresoftware.b4a.objects.collections.List$4: void <init>(anywheresoftware.b4a.objects.collections.List)>($r0);
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r2, $r4);
+
+        return;
+    }
+
+    public void SortType(java.lang.String, boolean) throws java.lang.SecurityException, java.lang.NoSuchFieldException
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.lang.String $r1;
+        boolean $z0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $z0 := @parameter1: boolean;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.collections.List: void sortList(java.lang.String,boolean,boolean)>($r1, $z0, 0);
+
+        return;
+    }
+
+    public void SortTypeCaseInsensitive(java.lang.String, boolean) throws java.lang.SecurityException, java.lang.NoSuchFieldException
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.lang.String $r1;
+        boolean $z0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $z0 := @parameter1: boolean;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.collections.List: void sortList(java.lang.String,boolean,boolean)>($r1, $z0, 1);
+
+        return;
+    }
+
+    public int getSize()
+    {
+        anywheresoftware.b4a.objects.collections.List $r0;
+        java.lang.Object $r1;
+        java.util.List $r2;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.List;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.collections.List: java.lang.Object getObject()>();
+
+        $r2 = (java.util.List) $r1;
+
+        $i0 = interfaceinvoke $r2.<java.util.List: int size()>();
+
+        return $i0;
+    }
+}

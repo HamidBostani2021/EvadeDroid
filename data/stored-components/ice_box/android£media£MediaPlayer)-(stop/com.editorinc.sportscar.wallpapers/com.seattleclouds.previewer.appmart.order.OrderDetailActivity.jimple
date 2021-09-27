@@ -1,0 +1,284 @@
+public class com.seattleclouds.previewer.appmart.order.OrderDetailActivity extends com.seattleclouds.bq
+{
+    private java.lang.String m;
+    private java.lang.String n;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        specialinvoke $r0.<com.seattleclouds.bq: void <init>()>();
+
+        return;
+    }
+
+    private void p()
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity $r0;
+        android.content.Intent $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lcom/seattleclouds/previewer/appmart/PreviewerAppMartActivity;");
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: void startActivity(android.content.Intent)>($r1);
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: void finish()>();
+
+        return;
+    }
+
+    public void onBackPressed()
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: void p()>();
+
+        specialinvoke $r0.<com.seattleclouds.bq: void onBackPressed()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity $r0;
+        android.view.View $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        $r1 := @parameter0: android.view.View;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: void p()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        android.view.View $r2;
+        android.widget.TextView $r3, $r4;
+        android.support.v7.a.a $r5;
+        android.content.Intent $r6;
+        java.util.ArrayList $r7;
+        java.lang.StringBuilder $r8;
+        java.lang.String $r9, $r12;
+        java.util.Iterator $r10;
+        boolean $z0;
+        java.lang.Object $r11;
+        android.content.res.Resources $r13;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bq: void onCreate(android.os.Bundle)>($r1);
+
+        $i0 = <com.seattleclouds.j: int activity_order_detail>;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: void setContentView(int)>($i0);
+
+        $i0 = <com.seattleclouds.h: int text_view_subscribe_new_order_info>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.TextView) $r2;
+
+        $i0 = <com.seattleclouds.h: int text_view_app_id_new_order_info>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r2;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.support.v7.a.a h()>();
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.content.Intent getIntent()>();
+
+        $r1 = virtualinvoke $r6.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r1 == null goto label3;
+
+        $r7 = virtualinvoke $r1.<android.os.Bundle: java.util.ArrayList getStringArrayList(java.lang.String)>("KEY_APP_ID");
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $i0 = <com.seattleclouds.l: int new_order_details_app_id>;
+
+        $r9 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String getString(int)>($i0);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String n> = $r9;
+
+        if $r7 == null goto label2;
+
+        $r10 = virtualinvoke $r7.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r10.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r11 = interfaceinvoke $r10.<java.util.Iterator: java.lang.Object next()>();
+
+        $r9 = (java.lang.String) $r11;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r12 = $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String n>;
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("ID: ");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String n> = $r9;
+
+        goto label1;
+
+     label2:
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean containsKey(java.lang.String)>("KEY_SUBSCRIPTION_ID");
+
+        if $z0 == 0 goto label5;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r13 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.l: int new_order_details_subscribe_id>;
+
+        $r9 = virtualinvoke $r13.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $r9 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("KEY_SUBSCRIPTION_ID");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String m> = $r9;
+
+     label3:
+        if $r4 == null goto label4;
+
+        if $r3 == null goto label4;
+
+        $r9 = $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String n>;
+
+        virtualinvoke $r4.<android.widget.TextView: void setText(java.lang.CharSequence)>($r9);
+
+        $r9 = $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String m>;
+
+        virtualinvoke $r3.<android.widget.TextView: void setText(java.lang.CharSequence)>($r9);
+
+     label4:
+        if $r5 == null goto label6;
+
+        virtualinvoke $r5.<android.support.v7.a.a: void a(boolean)>(1);
+
+        return;
+
+     label5:
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean containsKey(java.lang.String)>("KEY_ABC_ID");
+
+        if $z0 == 0 goto label3;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r13 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.content.res.Resources getResources()>();
+
+        $i0 = <com.seattleclouds.l: int new_order_details_abc_id>;
+
+        $r9 = virtualinvoke $r13.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n\n");
+
+        $r9 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("KEY_ABC_ID");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: java.lang.String m> = $r9;
+
+        goto label3;
+
+     label6:
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        $r0 = this.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.previewer.appmart.order.OrderDetailActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.previewer.appmart.order.OrderDetailActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.previewer.appmart.order.OrderDetailActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

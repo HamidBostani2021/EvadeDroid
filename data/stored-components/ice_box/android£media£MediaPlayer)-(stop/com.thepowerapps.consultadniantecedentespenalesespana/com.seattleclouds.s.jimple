@@ -1,0 +1,44 @@
+public abstract class com.seattleclouds.s extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        com.seattleclouds.s $r0;
+
+        $r0 := @this: com.seattleclouds.s;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public com.seattleclouds.FragmentInfo getPageFragmentInfo(android.content.Context, com.seattleclouds.t)
+    {
+        com.seattleclouds.s $r0;
+        android.content.Context $r1;
+        com.seattleclouds.t $r2;
+
+        $r0 := @this: com.seattleclouds.s;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: com.seattleclouds.t;
+
+        return null;
+    }
+
+    public android.content.Intent getPageIntent(android.content.Context, com.seattleclouds.t)
+    {
+        com.seattleclouds.s $r0;
+        android.content.Context $r1;
+        com.seattleclouds.t $r2;
+
+        $r0 := @this: com.seattleclouds.s;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: com.seattleclouds.t;
+
+        return null;
+    }
+}

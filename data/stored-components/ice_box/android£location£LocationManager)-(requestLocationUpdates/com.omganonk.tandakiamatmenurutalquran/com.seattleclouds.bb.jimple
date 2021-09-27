@@ -1,0 +1,398 @@
+public class com.seattleclouds.bb extends com.seattleclouds.r implements com.seattleclouds.util.al
+{
+    private static final java.lang.String a;
+    private static final android.net.Uri c;
+    private com.seattleclouds.util.ag b;
+
+    static void <clinit>()
+    {
+        java.lang.Class $r0;
+        java.lang.String $r1;
+        android.net.Uri $r2;
+
+        $r0 = class "Lcom/seattleclouds/bb;";
+
+        $r1 = virtualinvoke $r0.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.bb: java.lang.String a> = $r1;
+
+        $r2 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>("http://m.facebook.com");
+
+        <com.seattleclouds.bb: android.net.Uri c> = $r2;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.bb $r0;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    static android.net.Uri af()
+    {
+        android.net.Uri r0;
+
+        r0 = <com.seattleclouds.bb: android.net.Uri c>;
+
+        return r0;
+    }
+
+    private void b(com.seattleclouds.util.am)
+    {
+        com.seattleclouds.bb $r0;
+        com.seattleclouds.util.am $r1;
+        java.lang.String $r2, $r4, $r5;
+        long $l0, $l1;
+        byte $b2;
+        com.seattleclouds.bc $r3;
+        android.support.v4.app.ac $r6;
+        android.content.res.Resources $r7;
+        int $i3;
+        android.support.v7.a.u $r8;
+        java.lang.Object[] $r9;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r1 := @parameter0: com.seattleclouds.util.am;
+
+        $r2 = null;
+
+        $l0 = virtualinvoke $r1.<com.seattleclouds.util.am: long c()>();
+
+        $l1 = <com.seattleclouds.util.am: long a>;
+
+        $b2 = $l0 cmp $l1;
+
+        if $b2 != 0 goto label06;
+
+        $r3 = new com.seattleclouds.bc;
+
+        specialinvoke $r3.<com.seattleclouds.bc: void <init>(com.seattleclouds.bb)>($r0);
+
+        $r4 = null;
+
+     label01:
+        if $r1 != null goto label09;
+
+        $r5 = null;
+
+     label02:
+        if $r1 != null goto label10;
+
+     label03:
+        if $r2 != null goto label11;
+
+     label04:
+        if $r5 != null goto label05;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.bb: android.support.v4.app.ac n()>();
+
+        $r7 = virtualinvoke $r6.<android.support.v4.app.ac: android.content.res.Resources getResources()>();
+
+        $i3 = <com.seattleclouds.l: int facebook_error_dialog_title>;
+
+        $r5 = virtualinvoke $r7.<android.content.res.Resources: java.lang.String getString(int)>($i3);
+
+     label05:
+        $r8 = new android.support.v7.a.u;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.bb: android.support.v4.app.ac n()>();
+
+        specialinvoke $r8.<android.support.v7.a.u: void <init>(android.content.Context)>($r6);
+
+        $i3 = <com.seattleclouds.l: int facebook_error_dialog_button_text>;
+
+        $r8 = virtualinvoke $r8.<android.support.v7.a.u: android.support.v7.a.u a(int,android.content.DialogInterface$OnClickListener)>($i3, $r3);
+
+        $r8 = virtualinvoke $r8.<android.support.v7.a.u: android.support.v7.a.u a(java.lang.CharSequence)>($r5);
+
+        $r8 = virtualinvoke $r8.<android.support.v7.a.u: android.support.v7.a.u b(java.lang.CharSequence)>($r4);
+
+        virtualinvoke $r8.<android.support.v7.a.u: android.support.v7.a.t c()>();
+
+        return;
+
+     label06:
+        $l0 = virtualinvoke $r1.<com.seattleclouds.util.am: long c()>();
+
+        $l1 = <com.seattleclouds.util.am: long b>;
+
+        $b2 = $l0 cmp $l1;
+
+        if $b2 != 0 goto label07;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.bb: android.support.v4.app.ac n()>();
+
+        $i3 = <com.seattleclouds.l: int facebook_error_transient>;
+
+        $r9 = newarray (java.lang.Object)[1];
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.util.am: java.lang.String a()>();
+
+        $r9[0] = $r4;
+
+        $r4 = virtualinvoke $r6.<android.support.v4.app.ac: java.lang.String getString(int,java.lang.Object[])>($i3, $r9);
+
+        $r3 = null;
+
+        goto label01;
+
+     label07:
+        $l0 = virtualinvoke $r1.<com.seattleclouds.util.am: long c()>();
+
+        $l1 = <com.seattleclouds.util.am: long c>;
+
+        $b2 = $l0 cmp $l1;
+
+        if $b2 != 0 goto label08;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.bb: android.support.v4.app.ac n()>();
+
+        $i3 = <com.seattleclouds.l: int facebook_error_unknown>;
+
+        $r9 = newarray (java.lang.Object)[1];
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.util.am: java.lang.String a()>();
+
+        $r9[0] = $r4;
+
+        $r4 = virtualinvoke $r6.<android.support.v4.app.ac: java.lang.String getString(int,java.lang.Object[])>($i3, $r9);
+
+        $r3 = null;
+
+        goto label01;
+
+     label08:
+        $l0 = virtualinvoke $r1.<com.seattleclouds.util.am: long c()>();
+
+        $b2 = $l0 cmp 100L;
+
+        if $b2 != 0 goto label12;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.bb: android.support.v4.app.ac n()>();
+
+        $i3 = <com.seattleclouds.l: int facebook_request_exception>;
+
+        $r9 = newarray (java.lang.Object)[1];
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.util.am: java.lang.String a()>();
+
+        $r9[0] = $r4;
+
+        $r4 = virtualinvoke $r6.<android.support.v4.app.ac: java.lang.String getString(int,java.lang.Object[])>($i3, $r9);
+
+        $r3 = null;
+
+        goto label01;
+
+     label09:
+        $r5 = virtualinvoke $r1.<com.seattleclouds.util.am: java.lang.String b()>();
+
+        goto label02;
+
+     label10:
+        $r2 = virtualinvoke $r1.<com.seattleclouds.util.am: java.lang.String a()>();
+
+        goto label03;
+
+     label11:
+        $r4 = $r2;
+
+        goto label04;
+
+     label12:
+        $r4 = null;
+
+        $r3 = null;
+
+        goto label01;
+    }
+
+    public void D()
+    {
+        com.seattleclouds.bb $r0;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        specialinvoke $r0.<com.seattleclouds.r: void D()>();
+
+        return;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.bb $r0;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        specialinvoke $r0.<com.seattleclouds.r: void E()>();
+
+        return;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.bb $r0;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        specialinvoke $r0.<com.seattleclouds.r: void F()>();
+
+        return;
+    }
+
+    public void a(int, int, android.content.Intent)
+    {
+        com.seattleclouds.bb $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        boolean $z0;
+        com.seattleclouds.util.ag $r2;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.bb: com.seattleclouds.util.ag b>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.util.ag: boolean a(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.r: void a(int,int,android.content.Intent)>($i0, $i1, $r1);
+
+        return;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.bb $r0;
+        android.os.Bundle $r1;
+        com.seattleclouds.util.ag $r2;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $r2 = new com.seattleclouds.util.ag;
+
+        specialinvoke $r2.<com.seattleclouds.util.ag: void <init>(com.seattleclouds.util.al)>($r0);
+
+        $r0.<com.seattleclouds.bb: com.seattleclouds.util.ag b> = $r2;
+
+        return;
+    }
+
+    public void a(com.seattleclouds.util.ak)
+    {
+        com.seattleclouds.bb $r0;
+        com.seattleclouds.util.ak $r1;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r1 := @parameter0: com.seattleclouds.util.ak;
+
+        if $r1 == null goto label1;
+
+     label1:
+        return;
+    }
+
+    public void a(com.seattleclouds.util.am)
+    {
+        com.seattleclouds.bb $r0;
+        com.seattleclouds.util.am $r1;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r1 := @parameter0: com.seattleclouds.util.am;
+
+        specialinvoke $r0.<com.seattleclouds.bb: void b(com.seattleclouds.util.am)>($r1);
+
+        return;
+    }
+
+    public void ab()
+    {
+        com.seattleclouds.bb $r0;
+        com.seattleclouds.util.ag $r1;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r1 = $r0.<com.seattleclouds.bb: com.seattleclouds.util.ag b>;
+
+        virtualinvoke $r1.<com.seattleclouds.util.ag: void a(com.seattleclouds.bb)>($r0);
+
+        return;
+    }
+
+    public void ac()
+    {
+        com.seattleclouds.bb $r0;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        staticinvoke <com.seattleclouds.util.ag: void c()>();
+
+        return;
+    }
+
+    public com.facebook.Profile ad()
+    {
+        com.seattleclouds.bb $r0;
+        com.facebook.Profile $r1;
+        com.seattleclouds.util.ag $r2;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r2 = $r0.<com.seattleclouds.bb: com.seattleclouds.util.ag b>;
+
+        $r1 = virtualinvoke $r2.<com.seattleclouds.util.ag: com.facebook.Profile b()>();
+
+        return $r1;
+    }
+
+    public boolean ae()
+    {
+        com.seattleclouds.bb $r0;
+        boolean $z0;
+        com.seattleclouds.util.ag $r1;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r1 = $r0.<com.seattleclouds.bb: com.seattleclouds.util.ag b>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.util.ag: boolean e()>();
+
+        return $z0;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.bb $r0;
+        android.os.Bundle $r1;
+
+        $r0 := @this: com.seattleclouds.bb;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void e(android.os.Bundle)>($r1);
+
+        return;
+    }
+}

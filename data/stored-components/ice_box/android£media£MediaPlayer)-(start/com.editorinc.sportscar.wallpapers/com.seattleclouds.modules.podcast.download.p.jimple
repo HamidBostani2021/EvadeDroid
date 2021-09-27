@@ -1,0 +1,367 @@
+class com.seattleclouds.modules.podcast.download.p extends android.widget.BaseAdapter
+{
+    final com.seattleclouds.modules.podcast.download.g a;
+
+    void <init>(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.p $r0;
+        com.seattleclouds.modules.podcast.download.g $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.p;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a> = $r1;
+
+        specialinvoke $r0.<android.widget.BaseAdapter: void <init>()>();
+
+        return;
+    }
+
+    public com.seattleclouds.modules.podcast.PodcastItem a(int)
+    {
+        com.seattleclouds.modules.podcast.download.p $r0;
+        int $i0;
+        com.seattleclouds.modules.podcast.download.g $r1;
+        java.util.ArrayList $r2;
+        java.lang.Object $r3;
+        com.seattleclouds.modules.podcast.PodcastItem $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.p;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.download.g: java.util.ArrayList m(com.seattleclouds.modules.podcast.download.g)>($r1);
+
+        $r3 = virtualinvoke $r2.<java.util.ArrayList: java.lang.Object get(int)>($i0);
+
+        $r4 = (com.seattleclouds.modules.podcast.PodcastItem) $r3;
+
+        return $r4;
+    }
+
+    public int getCount()
+    {
+        com.seattleclouds.modules.podcast.download.p $r0;
+        com.seattleclouds.modules.podcast.download.g $r1;
+        java.util.ArrayList $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.p;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.download.g: java.util.ArrayList m(com.seattleclouds.modules.podcast.download.g)>($r1);
+
+        $i0 = virtualinvoke $r2.<java.util.ArrayList: int size()>();
+
+        return $i0;
+    }
+
+    public java.lang.Object getItem(int)
+    {
+        com.seattleclouds.modules.podcast.download.p $r0;
+        int $i0;
+        com.seattleclouds.modules.podcast.PodcastItem $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.p;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.PodcastItem a(int)>($i0);
+
+        return $r1;
+    }
+
+    public long getItemId(int)
+    {
+        com.seattleclouds.modules.podcast.download.p $r0;
+        int $i0;
+        long $l1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.p;
+
+        $i0 := @parameter0: int;
+
+        $l1 = (long) $i0;
+
+        return $l1;
+    }
+
+    public android.view.View getView(int, android.view.View, android.view.ViewGroup)
+    {
+        com.seattleclouds.modules.podcast.download.p $r0;
+        int $i0, $i1;
+        android.view.ViewGroup $r1;
+        android.widget.ImageView $r2;
+        android.view.View $r3, $r7, $r11;
+        com.seattleclouds.modules.podcast.download.g $r4;
+        android.support.v4.app.ac $r5;
+        android.view.LayoutInflater $r6;
+        android.util.TypedValue $r8;
+        android.content.res.Resources$Theme $r9;
+        com.seattleclouds.modules.podcast.download.s $r10;
+        android.widget.TextView $r12;
+        android.widget.ProgressBar $r13;
+        android.widget.ImageButton $r14;
+        com.seattleclouds.e.f $r15;
+        java.lang.String $r16;
+        boolean $z0;
+        com.seattleclouds.modules.podcast.PodcastItem $r17;
+        com.google.android.bitmapfun.v $r18;
+        java.util.ArrayList $r19;
+        java.lang.Object $r20;
+        java.util.Date $r21;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.p;
+
+        $i0 := @parameter0: int;
+
+        $r3 := @parameter1: android.view.View;
+
+        $r1 := @parameter2: android.view.ViewGroup;
+
+        if $r3 != null goto label08;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r6 = virtualinvoke $r5.<android.support.v4.app.ac: android.view.LayoutInflater getLayoutInflater()>();
+
+        $i1 = <com.seattleclouds.j: int podcast_downloads_grid_item>;
+
+        $r7 = virtualinvoke $r6.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i1, $r1, 0);
+
+        $r3 = $r7;
+
+        $i1 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i1 <= 10 goto label01;
+
+        $r8 = new android.util.TypedValue;
+
+        specialinvoke $r8.<android.util.TypedValue: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r9 = virtualinvoke $r5.<android.support.v4.app.ac: android.content.res.Resources$Theme getTheme()>();
+
+        virtualinvoke $r9.<android.content.res.Resources$Theme: boolean resolveAttribute(int,android.util.TypedValue,boolean)>(16843517, $r8, 1);
+
+        $i1 = $r8.<android.util.TypedValue: int resourceId>;
+
+        virtualinvoke $r7.<android.view.View: void setBackgroundResource(int)>($i1);
+
+     label01:
+        $r10 = new com.seattleclouds.modules.podcast.download.s;
+
+        specialinvoke $r10.<com.seattleclouds.modules.podcast.download.s: void <init>()>();
+
+        $i1 = <com.seattleclouds.h: int textView>;
+
+        $r11 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r12 = (android.widget.TextView) $r11;
+
+        $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView a> = $r12;
+
+        $i1 = <com.seattleclouds.h: int detailTextView>;
+
+        $r11 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r12 = (android.widget.TextView) $r11;
+
+        $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView b> = $r12;
+
+        $i1 = <com.seattleclouds.h: int authorTextView>;
+
+        $r11 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r12 = (android.widget.TextView) $r11;
+
+        $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView c> = $r12;
+
+        $i1 = <com.seattleclouds.h: int imageView>;
+
+        $r11 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r2 = (android.widget.ImageView) $r11;
+
+        $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.ImageView d> = $r2;
+
+        $i1 = <com.seattleclouds.h: int progressBar>;
+
+        $r11 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r13 = (android.widget.ProgressBar) $r11;
+
+        $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.ProgressBar f> = $r13;
+
+        $i1 = <com.seattleclouds.h: int warningButton>;
+
+        $r11 = virtualinvoke $r7.<android.view.View: android.view.View findViewById(int)>($i1);
+
+        $r14 = (android.widget.ImageButton) $r11;
+
+        $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.ImageButton e> = $r14;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r15 = virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.g: com.seattleclouds.e.f Z()>();
+
+        $r16 = virtualinvoke $r15.<com.seattleclouds.e.f: java.lang.String b()>();
+
+        $z0 = virtualinvoke $r16.<java.lang.String: boolean equals(java.lang.Object)>("Theme.Base.Light.DarkBars");
+
+        if $z0 != 0 goto label02;
+
+        $z0 = virtualinvoke $r16.<java.lang.String: boolean equals(java.lang.Object)>("Theme.Base.Light");
+
+        if $z0 == 0 goto label07;
+
+     label02:
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView a>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setTextColor(int)>(-16777216);
+
+     label03:
+        virtualinvoke $r7.<android.view.View: void setTag(java.lang.Object)>($r10);
+
+     label04:
+        $r17 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.PodcastItem a(int)>($i0);
+
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView a>;
+
+        $r16 = $r17.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String title>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r16);
+
+        $r16 = $r17.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String error>;
+
+        if $r16 == null goto label09;
+
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView c>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(8);
+
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView b>;
+
+        $r16 = $r17.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String error>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r16);
+
+     label05:
+        $r16 = virtualinvoke $r17.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getAnyImageUrl()>();
+
+        if $r16 == null goto label12;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r18 = staticinvoke <com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v a(com.seattleclouds.modules.podcast.download.g)>($r4);
+
+        $r2 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.ImageView d>;
+
+        virtualinvoke $r18.<com.google.android.bitmapfun.v: void a(java.lang.Object,android.widget.ImageView)>($r16, $r2);
+
+     label06:
+        $r13 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.ProgressBar f>;
+
+        virtualinvoke $r13.<android.widget.ProgressBar: void setVisibility(int)>(4);
+
+        $r14 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.ImageButton e>;
+
+        virtualinvoke $r14.<android.widget.ImageButton: void setVisibility(int)>(8);
+
+        $i0 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i0 >= 11 goto label14;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r19 = staticinvoke <com.seattleclouds.modules.podcast.download.g: java.util.ArrayList h(com.seattleclouds.modules.podcast.download.g)>($r4);
+
+        $z0 = virtualinvoke $r19.<java.util.ArrayList: boolean contains(java.lang.Object)>($r17);
+
+        if $z0 == 0 goto label13;
+
+        virtualinvoke $r3.<android.view.View: void setBackgroundColor(int)>(-12303292);
+
+        return $r3;
+
+     label07:
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView a>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setTextColor(int)>(-1);
+
+        goto label03;
+
+     label08:
+        $r20 = virtualinvoke $r3.<android.view.View: java.lang.Object getTag()>();
+
+        $r10 = (com.seattleclouds.modules.podcast.download.s) $r20;
+
+        goto label04;
+
+     label09:
+        $r21 = $r17.<com.seattleclouds.modules.podcast.PodcastItem: java.util.Date publishedDate>;
+
+        if $r21 == null goto label11;
+
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView b>;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.p: com.seattleclouds.modules.podcast.download.g a>;
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r16 = virtualinvoke $r17.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String getFormattedDate(android.content.Context)>($r5);
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r16);
+
+     label10:
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView c>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView c>;
+
+        $r16 = $r17.<com.seattleclouds.modules.podcast.PodcastItem: java.lang.String author>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r16);
+
+        goto label05;
+
+     label11:
+        $r12 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.TextView b>;
+
+        virtualinvoke $r12.<android.widget.TextView: void setVisibility(int)>(8);
+
+        goto label10;
+
+     label12:
+        $r2 = $r10.<com.seattleclouds.modules.podcast.download.s: android.widget.ImageView d>;
+
+        virtualinvoke $r2.<android.widget.ImageView: void setImageBitmap(android.graphics.Bitmap)>(null);
+
+        goto label06;
+
+     label13:
+        virtualinvoke $r3.<android.view.View: void setBackgroundColor(int)>(0);
+
+     label14:
+        return $r3;
+    }
+
+    public boolean hasStableIds()
+    {
+        com.seattleclouds.modules.podcast.download.p $r0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.p;
+
+        return 1;
+    }
+}

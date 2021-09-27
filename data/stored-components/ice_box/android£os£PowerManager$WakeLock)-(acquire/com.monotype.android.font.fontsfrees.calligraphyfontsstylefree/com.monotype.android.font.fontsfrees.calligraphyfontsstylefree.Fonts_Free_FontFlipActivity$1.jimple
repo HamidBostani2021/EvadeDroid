@@ -1,0 +1,44 @@
+class com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity$1 extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity this$0;
+
+    void <init>(com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity$1 $r0;
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity $r1;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity$1;
+
+        $r1 := @parameter0: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity$1: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity$1 $r0;
+        android.view.View $r1;
+        android.content.Intent $r2;
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity $r3;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity$1;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>("android.settings.DISPLAY_SETTINGS");
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent addFlags(int)>(268435456);
+
+        $r3 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity$1: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity this$0>;
+
+        virtualinvoke $r3.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_FontFlipActivity: void startActivity(android.content.Intent)>($r2);
+
+        return;
+    }
+}

@@ -1,0 +1,75 @@
+public abstract class com.facebook.share.model.l extends java.lang.Object
+{
+    private android.os.Bundle a;
+
+    public void <init>()
+    {
+        com.facebook.share.model.l $r0;
+        android.os.Bundle $r1;
+
+        $r0 := @this: com.facebook.share.model.l;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new android.os.Bundle;
+
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+
+        $r0.<com.facebook.share.model.l: android.os.Bundle a> = $r1;
+
+        return;
+    }
+
+    static android.os.Bundle a(com.facebook.share.model.l)
+    {
+        com.facebook.share.model.l $r0;
+        android.os.Bundle r1;
+
+        $r0 := @parameter0: com.facebook.share.model.l;
+
+        r1 = $r0.<com.facebook.share.model.l: android.os.Bundle a>;
+
+        return r1;
+    }
+
+    public com.facebook.share.model.l a(com.facebook.share.model.ShareOpenGraphValueContainer)
+    {
+        com.facebook.share.model.l $r0;
+        com.facebook.share.model.ShareOpenGraphValueContainer $r1;
+        android.os.Bundle $r2, $r3;
+
+        $r0 := @this: com.facebook.share.model.l;
+
+        $r1 := @parameter0: com.facebook.share.model.ShareOpenGraphValueContainer;
+
+        if $r1 == null goto label1;
+
+        $r2 = $r0.<com.facebook.share.model.l: android.os.Bundle a>;
+
+        $r3 = virtualinvoke $r1.<com.facebook.share.model.ShareOpenGraphValueContainer: android.os.Bundle b()>();
+
+        virtualinvoke $r2.<android.os.Bundle: void putAll(android.os.Bundle)>($r3);
+
+     label1:
+        return $r0;
+    }
+
+    public com.facebook.share.model.l a(java.lang.String, java.lang.String)
+    {
+        com.facebook.share.model.l $r0;
+        java.lang.String $r1, $r2;
+        android.os.Bundle $r3;
+
+        $r0 := @this: com.facebook.share.model.l;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.facebook.share.model.l: android.os.Bundle a>;
+
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("og:type", $r2);
+
+        return $r0;
+    }
+}

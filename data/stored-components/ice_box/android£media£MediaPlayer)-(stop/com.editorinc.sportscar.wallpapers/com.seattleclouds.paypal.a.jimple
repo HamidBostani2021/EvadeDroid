@@ -1,0 +1,56 @@
+class com.seattleclouds.paypal.a extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final com.seattleclouds.paypal.PayPalMessage a;
+
+    void <init>(com.seattleclouds.paypal.PayPalMessage)
+    {
+        com.seattleclouds.paypal.a $r0;
+        com.seattleclouds.paypal.PayPalMessage $r1;
+
+        $r0 := @this: com.seattleclouds.paypal.a;
+
+        $r1 := @parameter0: com.seattleclouds.paypal.PayPalMessage;
+
+        $r0.<com.seattleclouds.paypal.a: com.seattleclouds.paypal.PayPalMessage a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        com.seattleclouds.paypal.a $r0;
+        android.view.View $r1;
+        android.content.Intent $r2;
+        com.seattleclouds.paypal.PayPalMessage $r3;
+
+        $r0 := @this: com.seattleclouds.paypal.a;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = new android.content.Intent;
+
+        $r3 = $r0.<com.seattleclouds.paypal.a: com.seattleclouds.paypal.PayPalMessage a>;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r3, class "Lcom/seattleclouds/AppStarterActivity;");
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent addFlags(int)>(268435456);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent addFlags(int)>(2097152);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setAction(java.lang.String)>("android.intent.action.MAIN");
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent addCategory(java.lang.String)>("android.intent.category.LAUNCHER");
+
+        $r3 = $r0.<com.seattleclouds.paypal.a: com.seattleclouds.paypal.PayPalMessage a>;
+
+        virtualinvoke $r3.<com.seattleclouds.paypal.PayPalMessage: void startActivity(android.content.Intent)>($r2);
+
+        $r3 = $r0.<com.seattleclouds.paypal.a: com.seattleclouds.paypal.PayPalMessage a>;
+
+        virtualinvoke $r3.<com.seattleclouds.paypal.PayPalMessage: void finish()>();
+
+        return;
+    }
+}

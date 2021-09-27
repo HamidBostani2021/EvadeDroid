@@ -1,0 +1,193 @@
+public class com.seattleclouds.bj extends com.seattleclouds.bk
+{
+    private com.seattleclouds.ads.a i;
+
+    public void <init>()
+    {
+        com.seattleclouds.bj $r0;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void <init>()>();
+
+        return;
+    }
+
+    public void D()
+    {
+        com.seattleclouds.bj $r0;
+        com.seattleclouds.ads.a $r1;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void D()>();
+
+        $r1 = $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i>;
+
+        virtualinvoke $r1.<com.seattleclouds.ads.a: void a()>();
+
+     label1:
+        return;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.bj $r0;
+        com.seattleclouds.ads.a $r1;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        $r1 = $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i>;
+
+        virtualinvoke $r1.<com.seattleclouds.ads.a: void b()>();
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.bk: void E()>();
+
+        return;
+    }
+
+    public void a(android.view.View, android.os.Bundle)
+    {
+        com.seattleclouds.bj $r0;
+        android.view.View $r1;
+        android.os.Bundle $r2;
+        int $i0;
+        android.widget.LinearLayout $r3;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void a(android.view.View,android.os.Bundle)>($r1, $r2);
+
+        $i0 = <com.seattleclouds.h: int sc_ad_container>;
+
+        $r1 = virtualinvoke $r1.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.LinearLayout) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.bj: void a(android.widget.LinearLayout)>($r3);
+
+        return;
+    }
+
+    protected void a(android.widget.LinearLayout)
+    {
+        com.seattleclouds.bj $r0;
+        android.widget.LinearLayout $r1;
+        android.os.Bundle $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        $r1 := @parameter0: android.widget.LinearLayout;
+
+        if $r1 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.bj: android.os.Bundle j()>();
+
+        if $r2 == null goto label2;
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_ID");
+
+        virtualinvoke $r0.<com.seattleclouds.bj: void a(android.widget.LinearLayout,java.lang.String)>($r1, $r3);
+
+     label2:
+        return;
+    }
+
+    protected void a(android.widget.LinearLayout, com.seattleclouds.t)
+    {
+        com.seattleclouds.bj $r0;
+        android.widget.LinearLayout $r1;
+        com.seattleclouds.t $r2;
+        android.support.v4.app.ac $r3;
+        com.seattleclouds.ads.a $r4;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        $r1 := @parameter0: android.widget.LinearLayout;
+
+        $r2 := @parameter1: com.seattleclouds.t;
+
+        $r4 = new com.seattleclouds.ads.a;
+
+        specialinvoke $r4.<com.seattleclouds.ads.a: void <init>()>();
+
+        $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.bj: android.support.v4.app.ac n()>();
+
+        virtualinvoke $r4.<com.seattleclouds.ads.a: void a(android.app.Activity,android.widget.LinearLayout,com.seattleclouds.t)>($r3, $r1, $r2);
+
+        return;
+    }
+
+    protected void a(android.widget.LinearLayout, java.lang.String)
+    {
+        com.seattleclouds.bj $r0;
+        android.widget.LinearLayout $r1;
+        java.lang.String $r2;
+        com.seattleclouds.cc $r3;
+        java.util.Map $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.t $r6;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        $r1 := @parameter0: android.widget.LinearLayout;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = <com.seattleclouds.App: com.seattleclouds.cc c>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.cc: java.util.Map o()>();
+
+        $r5 = interfaceinvoke $r4.<java.util.Map: java.lang.Object get(java.lang.Object)>($r2);
+
+        $r6 = (com.seattleclouds.t) $r5;
+
+        virtualinvoke $r0.<com.seattleclouds.bj: void a(android.widget.LinearLayout,com.seattleclouds.t)>($r1, $r6);
+
+        return;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.bj $r0;
+        com.seattleclouds.ads.a $r1;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        $r1 = $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i>;
+
+        virtualinvoke $r1.<com.seattleclouds.ads.a: void c()>();
+
+        $r0.<com.seattleclouds.bj: com.seattleclouds.ads.a i> = null;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.bk: void g()>();
+
+        return;
+    }
+}

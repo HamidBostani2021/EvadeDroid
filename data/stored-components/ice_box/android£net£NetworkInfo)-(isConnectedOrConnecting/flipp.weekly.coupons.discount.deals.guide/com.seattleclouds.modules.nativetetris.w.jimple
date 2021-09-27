@@ -1,0 +1,39 @@
+class com.seattleclouds.modules.nativetetris.w extends java.util.TimerTask
+{
+    final com.seattleclouds.modules.nativetetris.v a;
+
+    void <init>(com.seattleclouds.modules.nativetetris.v)
+    {
+        com.seattleclouds.modules.nativetetris.w $r0;
+        com.seattleclouds.modules.nativetetris.v $r1;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.w;
+
+        $r1 := @parameter0: com.seattleclouds.modules.nativetetris.v;
+
+        $r0.<com.seattleclouds.modules.nativetetris.w: com.seattleclouds.modules.nativetetris.v a> = $r1;
+
+        specialinvoke $r0.<java.util.TimerTask: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.nativetetris.w $r0;
+        com.seattleclouds.modules.nativetetris.v $r1;
+        com.seattleclouds.modules.nativetetris.TetrisView $r2;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.w;
+
+        $r1 = $r0.<com.seattleclouds.modules.nativetetris.w: com.seattleclouds.modules.nativetetris.v a>;
+
+        $r2 = $r1.<com.seattleclouds.modules.nativetetris.v: com.seattleclouds.modules.nativetetris.TetrisView b>;
+
+        $r1 = staticinvoke <com.seattleclouds.modules.nativetetris.TetrisView: com.seattleclouds.modules.nativetetris.v b(com.seattleclouds.modules.nativetetris.TetrisView)>($r2);
+
+        virtualinvoke $r1.<com.seattleclouds.modules.nativetetris.v: void d()>();
+
+        return;
+    }
+}

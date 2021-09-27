@@ -1,0 +1,74 @@
+final class com.facebook.ap extends java.lang.Object implements com.facebook.internal.bd
+{
+
+    void <init>()
+    {
+        com.facebook.ap $r0;
+
+        $r0 := @this: com.facebook.ap;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(com.facebook.FacebookException)
+    {
+        com.facebook.ap $r0;
+        com.facebook.FacebookException $r1;
+
+        $r0 := @this: com.facebook.ap;
+
+        $r1 := @parameter0: com.facebook.FacebookException;
+
+        return;
+    }
+
+    public void a(org.json.JSONObject)
+    {
+        com.facebook.ap $r0;
+        org.json.JSONObject $r1;
+        java.lang.String $r2, $r3, $r5, $r6, $r7, $r8;
+        com.facebook.Profile $r4;
+        android.net.Uri $r9;
+
+        $r0 := @this: com.facebook.ap;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String optString(java.lang.String)>("id");
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String optString(java.lang.String)>("link");
+
+        $r4 = new com.facebook.Profile;
+
+        $r5 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String optString(java.lang.String)>("first_name");
+
+        $r6 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String optString(java.lang.String)>("middle_name");
+
+        $r7 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String optString(java.lang.String)>("last_name");
+
+        $r8 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String optString(java.lang.String)>("name");
+
+        if $r3 == null goto label3;
+
+        $r9 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r3);
+
+     label2:
+        specialinvoke $r4.<com.facebook.Profile: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,android.net.Uri)>($r2, $r5, $r6, $r7, $r8, $r9);
+
+        staticinvoke <com.facebook.Profile: void a(com.facebook.Profile)>($r4);
+
+        return;
+
+     label3:
+        $r9 = null;
+
+        goto label2;
+    }
+}

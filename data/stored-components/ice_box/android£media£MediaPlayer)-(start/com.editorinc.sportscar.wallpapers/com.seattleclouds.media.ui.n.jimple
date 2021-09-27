@@ -1,0 +1,34 @@
+class com.seattleclouds.media.ui.n extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.media.ui.a a;
+
+    void <init>(com.seattleclouds.media.ui.a)
+    {
+        com.seattleclouds.media.ui.n $r0;
+        com.seattleclouds.media.ui.a $r1;
+
+        $r0 := @this: com.seattleclouds.media.ui.n;
+
+        $r1 := @parameter0: com.seattleclouds.media.ui.a;
+
+        $r0.<com.seattleclouds.media.ui.n: com.seattleclouds.media.ui.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.media.ui.n $r0;
+        com.seattleclouds.media.ui.a $r1;
+
+        $r0 := @this: com.seattleclouds.media.ui.n;
+
+        $r1 = $r0.<com.seattleclouds.media.ui.n: com.seattleclouds.media.ui.a a>;
+
+        staticinvoke <com.seattleclouds.media.ui.a: void d(com.seattleclouds.media.ui.a)>($r1);
+
+        return;
+    }
+}

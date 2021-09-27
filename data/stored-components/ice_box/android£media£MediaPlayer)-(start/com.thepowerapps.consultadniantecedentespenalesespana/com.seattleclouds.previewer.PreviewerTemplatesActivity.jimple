@@ -1,0 +1,198 @@
+public class com.seattleclouds.previewer.PreviewerTemplatesActivity extends com.seattleclouds.bq implements com.seattleclouds.previewer.av, com.seattleclouds.previewer.bg
+{
+    public static boolean m;
+    private static java.lang.String n;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.previewer.PreviewerTemplatesActivity: java.lang.String n> = "PreviewerTemplatesActivity";
+
+        <com.seattleclouds.previewer.PreviewerTemplatesActivity: boolean m> = 0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.PreviewerTemplatesActivity $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.PreviewerTemplatesActivity;
+
+        specialinvoke $r0.<com.seattleclouds.bq: void <init>()>();
+
+        return;
+    }
+
+    public static android.content.Intent a(android.content.Context)
+    {
+        android.content.Context $r0;
+        android.content.Intent $r1;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lcom/seattleclouds/previewer/PreviewerTemplatesActivity;");
+
+        return $r1;
+    }
+
+    public void a(com.seattleclouds.previewer.data.SCTemplateApp)
+    {
+        com.seattleclouds.previewer.PreviewerTemplatesActivity $r0;
+        com.seattleclouds.previewer.data.SCTemplateApp $r1;
+        com.seattleclouds.previewer.at $r2;
+        android.support.v4.app.aj $r3;
+        android.support.v4.app.ax $r4;
+
+        $r0 := @this: com.seattleclouds.previewer.PreviewerTemplatesActivity;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.data.SCTemplateApp;
+
+        $r2 = staticinvoke <com.seattleclouds.previewer.at: com.seattleclouds.previewer.at a(com.seattleclouds.previewer.data.SCTemplateApp)>($r1);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerTemplatesActivity: android.support.v4.app.aj f()>();
+
+        $r4 = virtualinvoke $r3.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax a(int)>(4099);
+
+        virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax a(java.lang.String)>("fragment1");
+
+        $r4 = virtualinvoke $r4.<android.support.v4.app.ax: android.support.v4.app.ax b(int,android.support.v4.app.Fragment,java.lang.String)>(16908290, $r2, "fragment1");
+
+        virtualinvoke $r4.<android.support.v4.app.ax: int b()>();
+
+        return;
+    }
+
+    public void b(com.seattleclouds.previewer.data.SCTemplateApp)
+    {
+        com.seattleclouds.previewer.PreviewerTemplatesActivity $r0;
+        com.seattleclouds.previewer.data.SCTemplateApp $r1;
+        java.lang.String $r2;
+        com.seattleclouds.previewer.cl $r3;
+        android.support.v4.app.aj $r4;
+        android.support.v4.app.ax $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.PreviewerTemplatesActivity;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.data.SCTemplateApp;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.previewer.data.SCTemplateApp: java.lang.String a()>();
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.cl: com.seattleclouds.previewer.cl c(java.lang.String)>($r2);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerTemplatesActivity: android.support.v4.app.aj f()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        virtualinvoke $r5.<android.support.v4.app.ax: android.support.v4.app.ax a(int)>(4099);
+
+        virtualinvoke $r5.<android.support.v4.app.ax: android.support.v4.app.ax a(java.lang.String)>("fragment2");
+
+        $r5 = virtualinvoke $r5.<android.support.v4.app.ax: android.support.v4.app.ax b(int,android.support.v4.app.Fragment,java.lang.String)>(16908290, $r3, "fragment2");
+
+        virtualinvoke $r5.<android.support.v4.app.ax: int b()>();
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.seattleclouds.previewer.PreviewerTemplatesActivity $r0;
+        android.os.Bundle $r1;
+        android.content.Intent $r2;
+        boolean $z0;
+        com.seattleclouds.previewer.aw $r3;
+        android.support.v4.app.aj $r4;
+        android.support.v4.app.ax $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.PreviewerTemplatesActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bq: void onCreate(android.os.Bundle)>($r1);
+
+        if $r1 == null goto label1;
+
+        return;
+
+     label1:
+        $r2 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerTemplatesActivity: android.content.Intent getIntent()>();
+
+        $r1 = virtualinvoke $r2.<android.content.Intent: android.os.Bundle getExtras()>();
+
+        if $r1 == null goto label2;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean containsKey(java.lang.String)>("SELECT_TEMPLATE");
+
+        if $z0 == 0 goto label2;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean getBoolean(java.lang.String)>("SELECT_TEMPLATE");
+
+        <com.seattleclouds.previewer.PreviewerTemplatesActivity: boolean m> = $z0;
+
+     label2:
+        $r3 = new com.seattleclouds.previewer.aw;
+
+        specialinvoke $r3.<com.seattleclouds.previewer.aw: void <init>()>();
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.aw: void d(boolean)>(1);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.previewer.PreviewerTemplatesActivity: android.support.v4.app.aj f()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $r5 = virtualinvoke $r5.<android.support.v4.app.ax: android.support.v4.app.ax a(int,android.support.v4.app.Fragment,java.lang.String)>(16908290, $r3, "fragment");
+
+        virtualinvoke $r5.<android.support.v4.app.ax: int b()>();
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.previewer.PreviewerTemplatesActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.seattleclouds.previewer.PreviewerTemplatesActivity;
+
+        $r0 = this.<com.seattleclouds.previewer.PreviewerTemplatesActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.previewer.PreviewerTemplatesActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.previewer.PreviewerTemplatesActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.previewer.PreviewerTemplatesActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.seattleclouds.previewer.PreviewerTemplatesActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.seattleclouds.previewer.PreviewerTemplatesActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.seattleclouds.previewer.PreviewerTemplatesActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

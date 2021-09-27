@@ -1,0 +1,258 @@
+public class com.seattleclouds.modules.videolist.DownloadService extends android.app.IntentService
+{
+    public static final java.lang.String a;
+    static java.util.HashMap b;
+    private final android.os.IBinder c;
+    private android.os.ResultReceiver d;
+    public android.content.Intent ipcIntent;
+    public android.os.IBinder ipcBinder_0;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/modules/videolist/DownloadService;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.modules.videolist.DownloadService: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.videolist.DownloadService $r0;
+        com.seattleclouds.modules.videolist.e $r1;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.DownloadService;
+
+        specialinvoke $r0.<android.app.IntentService: void <init>(java.lang.String)>("DownloadService");
+
+        $r1 = new com.seattleclouds.modules.videolist.e;
+
+        specialinvoke $r1.<com.seattleclouds.modules.videolist.e: void <init>(com.seattleclouds.modules.videolist.DownloadService)>($r0);
+
+        $r0.<com.seattleclouds.modules.videolist.DownloadService: android.os.IBinder c> = $r1;
+
+        return;
+    }
+
+    public void a(android.os.ResultReceiver, java.lang.String)
+    {
+        com.seattleclouds.modules.videolist.DownloadService $r0;
+        android.os.ResultReceiver $r1;
+        java.lang.String $r2;
+        java.util.HashMap $r3;
+        java.lang.Object $r4;
+        java.util.Set $r5;
+        java.util.Iterator $r6;
+        boolean $z0;
+        java.util.Map$Entry $r7;
+        com.seattleclouds.modules.videolist.d $r8;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.DownloadService;
+
+        $r1 := @parameter0: android.os.ResultReceiver;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.videolist.DownloadService: android.os.ResultReceiver d> = $r1;
+
+        $r3 = <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b>;
+
+        if $r3 == null goto label3;
+
+        $r3 = <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b>;
+
+        $r4 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r2);
+
+        $r3 = (java.util.HashMap) $r4;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r5 = virtualinvoke $r3.<java.util.HashMap: java.util.Set entrySet()>();
+
+        $r6 = interfaceinvoke $r5.<java.util.Set: java.util.Iterator iterator()>();
+
+     label2:
+        $z0 = interfaceinvoke $r6.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label3;
+
+        $r4 = interfaceinvoke $r6.<java.util.Iterator: java.lang.Object next()>();
+
+        $r7 = (java.util.Map$Entry) $r4;
+
+        $r4 = interfaceinvoke $r7.<java.util.Map$Entry: java.lang.Object getValue()>();
+
+        $r8 = (com.seattleclouds.modules.videolist.d) $r4;
+
+        if $r8 == null goto label2;
+
+        virtualinvoke $r8.<com.seattleclouds.modules.videolist.d: void a(android.os.ResultReceiver)>($r1);
+
+        goto label2;
+
+     label3:
+        return;
+    }
+
+    public void a(java.lang.String, java.lang.Integer)
+    {
+        com.seattleclouds.modules.videolist.DownloadService $r0;
+        java.lang.String $r1;
+        java.lang.Integer $r2;
+        java.util.HashMap $r3;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.videolist.d $r5;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.DownloadService;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.Integer;
+
+        $r3 = <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b>;
+
+        if $r3 == null goto label2;
+
+        $r3 = <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b>;
+
+        $r4 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r3 = (java.util.HashMap) $r4;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r1 = virtualinvoke $r2.<java.lang.Integer: java.lang.String toString()>();
+
+        $r4 = virtualinvoke $r3.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r5 = (com.seattleclouds.modules.videolist.d) $r4;
+
+        if $r5 == null goto label2;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.videolist.d: boolean cancel(boolean)>(1);
+
+     label2:
+        return;
+    }
+
+    public android.os.IBinder onBind(android.content.Intent)
+    {
+        com.seattleclouds.modules.videolist.DownloadService this;
+        android.content.Intent parameter0;
+
+        this := @this: com.seattleclouds.modules.videolist.DownloadService;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.seattleclouds.modules.videolist.DownloadService: android.os.IBinder ipcBinder_0> = parameter0;
+
+        this.<com.seattleclouds.modules.videolist.DownloadService: android.os.IBinder ipcBinder_0> = parameter0;
+
+        this.<com.seattleclouds.modules.videolist.DownloadService: android.os.IBinder ipcBinder_0> = parameter0;
+
+        return parameter0;
+    }
+
+    protected void onHandleIntent(android.content.Intent)
+    {
+        com.seattleclouds.modules.videolist.DownloadService $r0;
+        android.content.Intent $r1;
+        com.seattleclouds.modules.videolist.d $r2;
+        java.lang.String $r3, $r4, $r5;
+        int $i0;
+        java.lang.Integer $r6;
+        android.os.Parcelable $r7;
+        android.os.ResultReceiver $r8;
+        java.util.concurrent.Executor $r9;
+        java.lang.String[] $r10;
+        java.util.HashMap $r11, $r13;
+        java.lang.Object $r12;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.DownloadService;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r3 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("url");
+
+        $r4 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("destination");
+
+        $r5 = virtualinvoke $r1.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("resid");
+
+        $i0 = virtualinvoke $r1.<android.content.Intent: int getIntExtra(java.lang.String,int)>("pos", 1);
+
+        $r6 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r7 = virtualinvoke $r1.<android.content.Intent: android.os.Parcelable getParcelableExtra(java.lang.String)>("receiver");
+
+        $r8 = (android.os.ResultReceiver) $r7;
+
+        $r0.<com.seattleclouds.modules.videolist.DownloadService: android.os.ResultReceiver d> = $r8;
+
+        $r2 = new com.seattleclouds.modules.videolist.d;
+
+        specialinvoke $r2.<com.seattleclouds.modules.videolist.d: void <init>()>();
+
+        $r8 = $r0.<com.seattleclouds.modules.videolist.DownloadService: android.os.ResultReceiver d>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.videolist.d: void a(android.os.ResultReceiver)>($r8);
+
+        $i0 = virtualinvoke $r6.<java.lang.Integer: int intValue()>();
+
+        virtualinvoke $r2.<com.seattleclouds.modules.videolist.d: void a(int)>($i0);
+
+        $r9 = <android.os.AsyncTask: java.util.concurrent.Executor THREAD_POOL_EXECUTOR>;
+
+        $r10 = newarray (java.lang.String)[2];
+
+        $r10[0] = $r3;
+
+        $r10[1] = $r4;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.videolist.d: android.os.AsyncTask executeOnExecutor(java.util.concurrent.Executor,java.lang.Object[])>($r9, $r10);
+
+        $r11 = <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b>;
+
+        if $r11 != null goto label1;
+
+        $r11 = new java.util.HashMap;
+
+        specialinvoke $r11.<java.util.HashMap: void <init>()>();
+
+        <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b> = $r11;
+
+     label1:
+        $r11 = <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b>;
+
+        $r12 = virtualinvoke $r11.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r5);
+
+        $r11 = (java.util.HashMap) $r12;
+
+        if $r11 != null goto label2;
+
+        $r11 = new java.util.HashMap;
+
+        specialinvoke $r11.<java.util.HashMap: void <init>()>();
+
+     label2:
+        $r3 = virtualinvoke $r6.<java.lang.Integer: java.lang.String toString()>();
+
+        virtualinvoke $r11.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r3, $r2);
+
+        $r13 = <com.seattleclouds.modules.videolist.DownloadService: java.util.HashMap b>;
+
+        virtualinvoke $r13.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r5, $r11);
+
+        return;
+    }
+}

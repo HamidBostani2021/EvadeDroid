@@ -1,0 +1,26 @@
+class com.seattleclouds.gcm.e extends java.lang.Object
+{
+    public java.lang.String a;
+    public java.lang.String b;
+    final com.seattleclouds.gcm.AnnouncementFragment c;
+
+    void <init>(com.seattleclouds.gcm.AnnouncementFragment)
+    {
+        com.seattleclouds.gcm.e $r0;
+        com.seattleclouds.gcm.AnnouncementFragment $r1;
+
+        $r0 := @this: com.seattleclouds.gcm.e;
+
+        $r1 := @parameter0: com.seattleclouds.gcm.AnnouncementFragment;
+
+        $r0.<com.seattleclouds.gcm.e: com.seattleclouds.gcm.AnnouncementFragment c> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.gcm.e: java.lang.String a> = null;
+
+        $r0.<com.seattleclouds.gcm.e: java.lang.String b> = null;
+
+        return;
+    }
+}

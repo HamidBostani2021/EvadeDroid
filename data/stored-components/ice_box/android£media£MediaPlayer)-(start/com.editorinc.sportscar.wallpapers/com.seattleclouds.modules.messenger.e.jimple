@@ -1,0 +1,53 @@
+class com.seattleclouds.modules.messenger.e extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final com.seattleclouds.modules.messenger.a b;
+
+    void <init>(com.seattleclouds.modules.messenger.a, java.lang.String)
+    {
+        com.seattleclouds.modules.messenger.e $r0;
+        com.seattleclouds.modules.messenger.a $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.messenger.a;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.messenger.e: com.seattleclouds.modules.messenger.a b> = $r1;
+
+        $r0.<com.seattleclouds.modules.messenger.e: java.lang.String a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.messenger.e $r0;
+        android.support.v4.app.ac $r1;
+        com.seattleclouds.modules.messenger.a $r2;
+        int $i0;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.e;
+
+        $r2 = $r0.<com.seattleclouds.modules.messenger.e: com.seattleclouds.modules.messenger.a b>;
+
+        staticinvoke <com.seattleclouds.modules.messenger.a: void a(com.seattleclouds.modules.messenger.a,boolean,boolean)>($r2, 0, 1);
+
+        $r2 = $r0.<com.seattleclouds.modules.messenger.e: com.seattleclouds.modules.messenger.a b>;
+
+        $r1 = virtualinvoke $r2.<com.seattleclouds.modules.messenger.a: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int error>;
+
+        $r3 = $r0.<com.seattleclouds.modules.messenger.e: java.lang.String a>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,java.lang.String)>($r1, $i0, $r3);
+
+        return;
+    }
+}

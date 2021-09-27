@@ -1,0 +1,314 @@
+public class com.seattleclouds.modules.l.b extends com.seattleclouds.aj implements com.seattleclouds.modules.l.e
+{
+    private static boolean a;
+    private java.lang.String b;
+    private java.lang.String c;
+    private android.support.v4.app.Fragment d;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.modules.l.b: boolean a> = 0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.l.b $r0;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        specialinvoke $r0.<com.seattleclouds.aj: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.l.b: java.lang.String b> = "";
+
+        $r0.<com.seattleclouds.modules.l.b: java.lang.String c> = "";
+
+        return;
+    }
+
+    public static boolean ab()
+    {
+        boolean z0;
+
+        z0 = <com.seattleclouds.modules.l.b: boolean a>;
+
+        return z0;
+    }
+
+    private boolean ad()
+    {
+        com.seattleclouds.modules.l.b $r0;
+        android.support.v4.app.aj $r1;
+        android.support.v4.app.Fragment $r2;
+        boolean $z0;
+        com.seattleclouds.modules.l.c $r3;
+        java.lang.String $r4, $r5;
+        android.support.v4.app.ac $r6;
+        com.seattleclouds.FragmentInfo $r7;
+        android.content.Intent $r8;
+        android.os.Bundle $r9;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.aj q()>();
+
+        $r2 = virtualinvoke $r1.<android.support.v4.app.aj: android.support.v4.app.Fragment a(java.lang.String)>("loginRegisterCurrentNested");
+
+        $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.Fragment d> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.Fragment d>;
+
+        $z0 = $r2 instanceof com.seattleclouds.modules.l.c;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.Fragment d>;
+
+        $r3 = (com.seattleclouds.modules.l.c) $r2;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.l.c: void a(com.seattleclouds.modules.l.e)>($r0);
+
+     label1:
+        $z0 = <com.seattleclouds.modules.l.b: boolean a>;
+
+        if $z0 == 0 goto label3;
+
+        $r4 = $r0.<com.seattleclouds.modules.l.b: java.lang.String c>;
+
+     label2:
+        $r5 = $r0.<com.seattleclouds.modules.l.b: java.lang.String b>;
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>($r4);
+
+        if $z0 == 0 goto label4;
+
+        return 0;
+
+     label3:
+        $r4 = "$LOGIN_FAKE_PAGE_ID";
+
+        goto label2;
+
+     label4:
+        $r0.<com.seattleclouds.modules.l.b: java.lang.String b> = $r4;
+
+        $z0 = <com.seattleclouds.modules.l.b: boolean a>;
+
+        if $z0 == 0 goto label7;
+
+        $r4 = $r0.<com.seattleclouds.modules.l.b: java.lang.String c>;
+
+        $r4 = staticinvoke <com.seattleclouds.App: java.lang.String h(java.lang.String)>($r4);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.ac n()>();
+
+        $r7 = staticinvoke <com.seattleclouds.App: com.seattleclouds.FragmentInfo a(java.lang.String,android.content.Context)>($r4, $r6);
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.ac n()>();
+
+        $r8 = staticinvoke <com.seattleclouds.App: android.content.Intent a(java.lang.String,com.seattleclouds.FragmentInfo,android.app.Activity)>($r4, $r7, $r6);
+
+        if $r8 == null goto label6;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.ac n()>();
+
+        virtualinvoke $r6.<android.support.v4.app.ac: void startActivity(android.content.Intent)>($r8);
+
+        staticinvoke <com.seattleclouds.App: boolean a(android.support.v4.app.Fragment)>($r0);
+
+     label5:
+        return 1;
+
+     label6:
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.ac n()>();
+
+        $r4 = virtualinvoke $r7.<com.seattleclouds.FragmentInfo: java.lang.String a()>();
+
+        $r9 = virtualinvoke $r7.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+        $r2 = staticinvoke <android.support.v4.app.Fragment: android.support.v4.app.Fragment a(android.content.Context,java.lang.String,android.os.Bundle)>($r6, $r4, $r9);
+
+        specialinvoke $r0.<com.seattleclouds.modules.l.b: void b(android.support.v4.app.Fragment)>($r2);
+
+        goto label5;
+
+     label7:
+        $r9 = new android.os.Bundle;
+
+        specialinvoke $r9.<android.os.Bundle: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.l.b: java.lang.String c>;
+
+        virtualinvoke $r9.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("NEXT_PAGE_ID", $r4);
+
+        $r3 = new com.seattleclouds.modules.l.c;
+
+        specialinvoke $r3.<com.seattleclouds.modules.l.c: void <init>()>();
+
+        virtualinvoke $r3.<com.seattleclouds.modules.l.c: void g(android.os.Bundle)>($r9);
+
+        virtualinvoke $r3.<com.seattleclouds.modules.l.c: void a(com.seattleclouds.modules.l.e)>($r0);
+
+        specialinvoke $r0.<com.seattleclouds.modules.l.b: void b(android.support.v4.app.Fragment)>($r3);
+
+        goto label5;
+    }
+
+    private void b(android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.modules.l.b $r0;
+        android.support.v4.app.Fragment $r1, $r4;
+        android.support.v4.app.aj $r2;
+        android.support.v4.app.ax $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        $r1 := @parameter0: android.support.v4.app.Fragment;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.aj q()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.aj: android.support.v4.app.ax a()>();
+
+        $i0 = <com.seattleclouds.b: int freeze>;
+
+        virtualinvoke $r3.<android.support.v4.app.ax: android.support.v4.app.ax a(int,int)>($i0, 0);
+
+        $r4 = $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.Fragment d>;
+
+        if $r4 != null goto label2;
+
+        $i0 = <com.seattleclouds.h: int login_register_fragment>;
+
+        virtualinvoke $r3.<android.support.v4.app.ax: android.support.v4.app.ax a(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r1, "loginRegisterCurrentNested");
+
+     label1:
+        $r0.<com.seattleclouds.modules.l.b: android.support.v4.app.Fragment d> = $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.l.b: void a(android.support.v4.app.Fragment)>($r1);
+
+        virtualinvoke $r3.<android.support.v4.app.ax: int b()>();
+
+        return;
+
+     label2:
+        $i0 = <com.seattleclouds.h: int login_register_fragment>;
+
+        virtualinvoke $r3.<android.support.v4.app.ax: android.support.v4.app.ax b(int,android.support.v4.app.Fragment,java.lang.String)>($i0, $r1, "loginRegisterCurrentNested");
+
+        goto label1;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.l.b $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        android.view.View $r4;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.aj: android.view.View a(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>($r1, $r2, $r3);
+
+        $i0 = <com.seattleclouds.j: int login_register_fragment>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        specialinvoke $r0.<com.seattleclouds.modules.l.b: boolean ad()>();
+
+        return $r4;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.l.b $r0;
+        android.os.Bundle $r1, $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.aj: void a(android.os.Bundle)>($r1);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.os.Bundle j()>();
+
+        if $r2 == null goto label1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.l.b: android.os.Bundle j()>();
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("NEXT_PAGE_ID");
+
+        $r0.<com.seattleclouds.modules.l.b: java.lang.String c> = $r3;
+
+     label1:
+        if $r1 == null goto label2;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("STATE_CURRENT_PAGE_ID");
+
+        $r0.<com.seattleclouds.modules.l.b: java.lang.String b> = $r3;
+
+     label2:
+        return;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.modules.l.b $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.aj: void a_(boolean)>($z0);
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.l.b: boolean ad()>();
+
+     label1:
+        return;
+    }
+
+    public void ac()
+    {
+        com.seattleclouds.modules.l.b $r0;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        <com.seattleclouds.modules.l.b: boolean a> = 1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.l.b: boolean ad()>();
+
+        return;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.l.b $r0;
+        android.os.Bundle $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.l.b;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = $r0.<com.seattleclouds.modules.l.b: java.lang.String b>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("STATE_CURRENT_PAGE_ID", $r2);
+
+        specialinvoke $r0.<com.seattleclouds.aj: void e(android.os.Bundle)>($r1);
+
+        return;
+    }
+}

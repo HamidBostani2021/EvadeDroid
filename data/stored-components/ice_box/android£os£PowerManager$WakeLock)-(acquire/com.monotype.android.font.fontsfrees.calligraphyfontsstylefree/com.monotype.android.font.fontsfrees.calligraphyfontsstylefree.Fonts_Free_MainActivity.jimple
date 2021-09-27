@@ -1,0 +1,391 @@
+public class com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity extends android.app.Activity implements android.widget.AdapterView$OnItemClickListener
+{
+    public static java.lang.String[] fonts_free_cname;
+    com.google.android.gms.ads.InterstitialAd entryInterstitialAd;
+    android.widget.Button fonts_free_back;
+    java.lang.String[] fonts_free_cnam;
+    android.view.LayoutInflater fonts_free_inflater;
+    private boolean fonts_free_isfinalize;
+    android.view.View$OnTouchListener fonts_free_listner;
+    android.widget.ImageButton fonts_free_settbtn;
+    android.widget.Button fonts_free_share;
+    android.widget.TextView fonts_free_title;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity $r0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    public void onBackPressed()
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity $r0;
+        android.content.Intent $r1;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        $r1 = new android.content.Intent;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.MAIN");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent addCategory(java.lang.String)>("android.intent.category.HOME");
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setFlags(int)>(268435456);
+
+        virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: void startActivity(android.content.Intent)>($r1);
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity $r0;
+        android.os.Bundle $r1;
+        java.lang.Throwable $r2;
+        com.google.android.gms.ads.InterstitialAd $r3, r20;
+        java.lang.String $r4;
+        com.google.android.gms.ads.AdRequest $r5;
+        android.view.View $r6;
+        com.google.android.gms.ads.AdView $r7;
+        android.widget.Button $r8;
+        android.widget.ImageButton $r9;
+        android.widget.TextView $r10;
+        android.content.res.AssetManager $r11;
+        android.graphics.Typeface $r12;
+        java.lang.String[] $r13, $r17;
+        int $i0, $i1;
+        java.lang.Object $r14;
+        android.view.LayoutInflater $r15;
+        android.widget.ListView $r16;
+        android.content.res.Resources $r18;
+        java.lang.StringBuilder $r19, r26;
+        com.google.android.gms.ads.AdRequest$Builder r21;
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity$1 r22;
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity$2 r23;
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder r24;
+        android.graphics.drawable.ColorDrawable r25;
+        java.io.IOException r27;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: void setContentView(int)>(2130903040);
+
+        r20 = new com.google.android.gms.ads.InterstitialAd;
+
+        specialinvoke r20.<com.google.android.gms.ads.InterstitialAd: void <init>(android.content.Context)>($r0);
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: com.google.android.gms.ads.InterstitialAd entryInterstitialAd> = r20;
+
+        $r3 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: com.google.android.gms.ads.InterstitialAd entryInterstitialAd>;
+
+        $r4 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String getString(int)>(2130968608);
+
+        virtualinvoke $r3.<com.google.android.gms.ads.InterstitialAd: void setAdUnitId(java.lang.String)>($r4);
+
+        r21 = new com.google.android.gms.ads.AdRequest$Builder;
+
+        specialinvoke r21.<com.google.android.gms.ads.AdRequest$Builder: void <init>()>();
+
+        $r5 = virtualinvoke r21.<com.google.android.gms.ads.AdRequest$Builder: com.google.android.gms.ads.AdRequest build()>();
+
+        $r3 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: com.google.android.gms.ads.InterstitialAd entryInterstitialAd>;
+
+        virtualinvoke $r3.<com.google.android.gms.ads.InterstitialAd: void loadAd(com.google.android.gms.ads.AdRequest)>($r5);
+
+        $r6 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.view.View findViewById(int)>(2131165212);
+
+        $r7 = (com.google.android.gms.ads.AdView) $r6;
+
+        r21 = new com.google.android.gms.ads.AdRequest$Builder;
+
+        specialinvoke r21.<com.google.android.gms.ads.AdRequest$Builder: void <init>()>();
+
+        $r5 = virtualinvoke r21.<com.google.android.gms.ads.AdRequest$Builder: com.google.android.gms.ads.AdRequest build()>();
+
+        virtualinvoke $r7.<com.google.android.gms.ads.AdView: void loadAd(com.google.android.gms.ads.AdRequest)>($r5);
+
+        $r6 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.view.View findViewById(int)>(2131165210);
+
+        $r8 = (android.widget.Button) $r6;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.widget.Button fonts_free_back> = $r8;
+
+        $r6 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.view.View findViewById(int)>(2131165214);
+
+        $r9 = (android.widget.ImageButton) $r6;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.widget.ImageButton fonts_free_settbtn> = $r9;
+
+        $r6 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.view.View findViewById(int)>(2131165211);
+
+        $r10 = (android.widget.TextView) $r6;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.widget.TextView fonts_free_title> = $r10;
+
+        $r11 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.content.res.AssetManager getAssets()>();
+
+        $r12 = staticinvoke <android.graphics.Typeface: android.graphics.Typeface createFromAsset(android.content.res.AssetManager,java.lang.String)>($r11, "Scribble.ttf");
+
+        $r10 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.widget.TextView fonts_free_title>;
+
+        virtualinvoke $r10.<android.widget.TextView: void setTypeface(android.graphics.Typeface)>($r12);
+
+        $r8 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.widget.Button fonts_free_back>;
+
+        r22 = new com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity$1;
+
+        specialinvoke r22.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity$1: void <init>(com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity)>($r0);
+
+        virtualinvoke $r8.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>(r22);
+
+        $r9 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.widget.ImageButton fonts_free_settbtn>;
+
+        r23 = new com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity$2;
+
+        specialinvoke r23.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity$2: void <init>(com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity)>($r0);
+
+        virtualinvoke $r9.<android.widget.ImageButton: void setOnClickListener(android.view.View$OnClickListener)>(r23);
+
+        $r11 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.content.res.AssetManager getAssets()>();
+
+     label1:
+        $r13 = virtualinvoke $r11.<android.content.res.AssetManager: java.lang.String[] list(java.lang.String)>("fonts");
+
+     label2:
+        <com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cname> = $r13;
+
+     label3:
+        $r13 = virtualinvoke $r11.<android.content.res.AssetManager: java.lang.String[] list(java.lang.String)>("fonts");
+
+     label4:
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cnam> = $r13;
+
+     label5:
+        $i0 = 0;
+
+     label6:
+        $r13 = <com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cname>;
+
+        $i1 = lengthof $r13;
+
+        if $i0 < $i1 goto label8;
+
+        $r14 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.Object getSystemService(java.lang.String)>("layout_inflater");
+
+        $r15 = (android.view.LayoutInflater) $r14;
+
+        $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.view.LayoutInflater fonts_free_inflater> = $r15;
+
+        $r6 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.view.View findViewById(int)>(2131165213);
+
+        $r16 = (android.widget.ListView) $r6;
+
+        r24 = new com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder;
+
+        $r13 = <com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cname>;
+
+        $r17 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cnam>;
+
+        specialinvoke r24.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder: void <init>(android.content.Context,java.lang.String[],java.lang.String[])>($r0, $r13, $r17);
+
+        virtualinvoke $r16.<android.widget.ListView: void setAdapter(android.widget.ListAdapter)>(r24);
+
+        virtualinvoke $r16.<android.widget.ListView: void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)>($r0);
+
+        r25 = new android.graphics.drawable.ColorDrawable;
+
+        $r18 = virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.content.res.Resources getResources()>();
+
+        $i0 = virtualinvoke $r18.<android.content.res.Resources: int getColor(int)>(2131099658);
+
+        specialinvoke r25.<android.graphics.drawable.ColorDrawable: void <init>(int)>($i0);
+
+        virtualinvoke $r16.<android.widget.ListView: void setDivider(android.graphics.drawable.Drawable)>(r25);
+
+        virtualinvoke $r16.<android.widget.ListView: void setDividerHeight(int)>(20);
+
+        return;
+
+     label7:
+        $r2 := @caughtexception;
+
+        r27 = (java.io.IOException) $r2;
+
+        virtualinvoke r27.<java.io.IOException: void printStackTrace()>();
+
+        goto label5;
+
+     label8:
+        $r13 = <com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cname>;
+
+        $r17 = <com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cname>;
+
+        $r4 = $r17[$i0];
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String toString()>();
+
+        $r13[$i0] = $r4;
+
+        $r13 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cnam>;
+
+        r26 = new java.lang.StringBuilder;
+
+        specialinvoke r26.<java.lang.StringBuilder: void <init>()>();
+
+        $r17 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cnam>;
+
+        $r4 = $r17[$i0];
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>(".ttf", "");
+
+        $r19 = virtualinvoke r26.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r4 = virtualinvoke $r19.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r13[$i0] = $r4;
+
+        $i0 = $i0 + 1;
+
+        goto label6;
+
+        catch java.io.IOException from label1 to label2 with label7;
+        catch java.io.IOException from label3 to label4 with label7;
+    }
+
+    public boolean onCreateOptionsMenu(android.view.Menu)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity $r0;
+        android.view.Menu $r1;
+        android.view.MenuItem $r2;
+        boolean $z0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $z0 = $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: boolean fonts_free_isfinalize>;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem getItem(int)>(1);
+
+        interfaceinvoke $r2.<android.view.MenuItem: android.view.MenuItem setVisible(boolean)>(0);
+
+     label1:
+        return 1;
+    }
+
+    public void onItemClick(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        android.content.Intent $r3;
+        java.lang.String $r4;
+        java.lang.String[] $r5;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r5 = <com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: java.lang.String[] fonts_free_cname>;
+
+        $r4 = $r5[$i0];
+
+        $r3 = new android.content.Intent;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lcom/monotype/android/font/fontsfrees/calligraphyfontsstylefree/Fonts_Free_FontFlipActivity;");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("item", $r4);
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)>("position", $i0);
+
+        virtualinvoke $r0.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: void startActivity(android.content.Intent)>($r3);
+
+        return;
+    }
+
+    protected void onPause()
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity $r0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        specialinvoke $r0.<android.app.Activity: void onPause()>();
+
+        return;
+    }
+
+    protected void onResume()
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity $r0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        specialinvoke $r0.<android.app.Activity: void onResume()>();
+
+        return;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        $r0 = this.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_MainActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

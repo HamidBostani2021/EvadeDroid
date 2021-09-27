@@ -1,0 +1,15 @@
+class com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder extends java.lang.Object
+{
+    android.widget.TextView tv;
+
+    void <init>()
+    {
+        com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder $r0;
+
+        $r0 := @this: com.monotype.android.font.fontsfrees.calligraphyfontsstylefree.Fonts_Free_ListDataBinder$ViewHolder;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

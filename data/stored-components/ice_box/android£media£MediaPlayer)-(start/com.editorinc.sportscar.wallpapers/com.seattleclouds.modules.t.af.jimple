@@ -1,0 +1,5 @@
+public interface  com.seattleclouds.modules.t.af extends java.lang.Object
+{
+
+    public abstract void onClick(com.seattleclouds.modules.t.ab);
+}

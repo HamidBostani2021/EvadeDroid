@@ -1,0 +1,29 @@
+class com.seattleclouds.modules.messenger.r extends java.lang.Object
+{
+    public android.widget.TextView a;
+
+    private void <init>()
+    {
+        com.seattleclouds.modules.messenger.r $r0;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.r;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.messenger.q)
+    {
+        com.seattleclouds.modules.messenger.r $r0;
+        com.seattleclouds.modules.messenger.q $r1;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.r;
+
+        $r1 := @parameter0: com.seattleclouds.modules.messenger.q;
+
+        specialinvoke $r0.<com.seattleclouds.modules.messenger.r: void <init>()>();
+
+        return;
+    }
+}

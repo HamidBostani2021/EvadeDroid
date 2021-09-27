@@ -1,0 +1,30 @@
+class com.seattleclouds.modules.p.m extends java.lang.Object
+{
+    public android.widget.TextView a;
+    public android.widget.TextView b;
+
+    private void <init>()
+    {
+        com.seattleclouds.modules.p.m $r0;
+
+        $r0 := @this: com.seattleclouds.modules.p.m;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.p.l)
+    {
+        com.seattleclouds.modules.p.m $r0;
+        com.seattleclouds.modules.p.l $r1;
+
+        $r0 := @this: com.seattleclouds.modules.p.m;
+
+        $r1 := @parameter0: com.seattleclouds.modules.p.l;
+
+        specialinvoke $r0.<com.seattleclouds.modules.p.m: void <init>()>();
+
+        return;
+    }
+}

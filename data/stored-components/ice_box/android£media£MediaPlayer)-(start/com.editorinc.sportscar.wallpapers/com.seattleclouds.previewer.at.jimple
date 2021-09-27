@@ -1,0 +1,382 @@
+public class com.seattleclouds.previewer.at extends com.seattleclouds.r
+{
+    private static int a;
+    private com.google.android.bitmapfun.v b;
+    private com.seattleclouds.previewer.data.SCTemplateApp c;
+    private com.seattleclouds.previewer.av d;
+    private android.widget.ImageView e;
+
+    static void <clinit>()
+    {
+        <com.seattleclouds.previewer.at: int a> = 144;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.at $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    public static com.seattleclouds.previewer.at a(com.seattleclouds.previewer.data.SCTemplateApp)
+    {
+        com.seattleclouds.previewer.data.SCTemplateApp $r0;
+        com.seattleclouds.previewer.at $r1;
+        android.os.Bundle $r2;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.data.SCTemplateApp;
+
+        $r1 = new com.seattleclouds.previewer.at;
+
+        specialinvoke $r1.<com.seattleclouds.previewer.at: void <init>()>();
+
+        $r2 = new android.os.Bundle;
+
+        specialinvoke $r2.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r2.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("template", $r0);
+
+        virtualinvoke $r1.<com.seattleclouds.previewer.at: void g(android.os.Bundle)>($r2);
+
+        return $r1;
+    }
+
+    static com.seattleclouds.previewer.data.SCTemplateApp a(com.seattleclouds.previewer.at)
+    {
+        com.seattleclouds.previewer.at $r0;
+        com.seattleclouds.previewer.data.SCTemplateApp r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.at;
+
+        r1 = $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.data.SCTemplateApp c>;
+
+        return r1;
+    }
+
+    static com.seattleclouds.previewer.av b(com.seattleclouds.previewer.at)
+    {
+        com.seattleclouds.previewer.at $r0;
+        com.seattleclouds.previewer.av r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.at;
+
+        r1 = $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.av d>;
+
+        return r1;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.previewer.at $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        specialinvoke $r0.<com.seattleclouds.r: void E()>();
+
+        return;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.previewer.at $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        specialinvoke $r0.<com.seattleclouds.r: void F()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.previewer.at $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        android.widget.ImageView $r4;
+        int $i0;
+        android.view.View $r5, $r6;
+        android.widget.Button $r7;
+        boolean $z0;
+        com.seattleclouds.previewer.au $r8;
+        com.google.android.bitmapfun.v $r9;
+        com.seattleclouds.previewer.data.SCTemplateApp $r10;
+        java.lang.String $r11;
+        android.widget.TextView $r12;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int fragment_previewer_template_details>;
+
+        $r5 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int create_app_button>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.Button) $r6;
+
+        $z0 = <com.seattleclouds.previewer.PreviewerTemplatesActivity: boolean m>;
+
+        if $z0 == 0 goto label1;
+
+        $i0 = <com.seattleclouds.l: int previewer_templates_select>;
+
+        virtualinvoke $r7.<android.widget.Button: void setText(int)>($i0);
+
+     label1:
+        $r8 = new com.seattleclouds.previewer.au;
+
+        specialinvoke $r8.<com.seattleclouds.previewer.au: void <init>(com.seattleclouds.previewer.at)>($r0);
+
+        virtualinvoke $r7.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r8);
+
+        $i0 = <com.seattleclouds.h: int template_icon>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.ImageView) $r6;
+
+        $r0.<com.seattleclouds.previewer.at: android.widget.ImageView e> = $r4;
+
+        $r9 = $r0.<com.seattleclouds.previewer.at: com.google.android.bitmapfun.v b>;
+
+        $r10 = $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.data.SCTemplateApp c>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.data.SCTemplateApp: java.lang.String b()>();
+
+        $r4 = $r0.<com.seattleclouds.previewer.at: android.widget.ImageView e>;
+
+        virtualinvoke $r9.<com.google.android.bitmapfun.v: void a(java.lang.Object,android.widget.ImageView)>($r11, $r4);
+
+        $i0 = <com.seattleclouds.h: int template_id>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r12 = (android.widget.TextView) $r6;
+
+        $r10 = $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.data.SCTemplateApp c>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.data.SCTemplateApp: java.lang.String e()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r11);
+
+        $i0 = <com.seattleclouds.h: int template_description>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r12 = (android.widget.TextView) $r6;
+
+        $r10 = $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.data.SCTemplateApp c>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.data.SCTemplateApp: java.lang.String c()>();
+
+        virtualinvoke $r12.<android.widget.TextView: void setText(java.lang.CharSequence)>($r11);
+
+        $r10 = $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.data.SCTemplateApp c>;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.data.SCTemplateApp: java.lang.String e()>();
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.at: void a(java.lang.CharSequence)>($r11);
+
+        return $r5;
+    }
+
+    public void a(android.app.Activity)
+    {
+        com.seattleclouds.previewer.at $r0;
+        android.app.Activity $r1;
+        boolean $z0;
+        com.seattleclouds.previewer.av $r2;
+        java.lang.RuntimeException $r3;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.app.Activity)>($r1);
+
+        $z0 = $r1 instanceof com.seattleclouds.previewer.av;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = (com.seattleclouds.previewer.av) $r1;
+
+        $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.av d> = $r2;
+
+        return;
+
+     label1:
+        $r3 = new java.lang.RuntimeException;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r5 = virtualinvoke $r1.<java.lang.Object: java.lang.String toString()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" must implement Listener");
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r3.<java.lang.RuntimeException: void <init>(java.lang.String)>($r5);
+
+        throw $r3;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.previewer.at $r0;
+        android.os.Bundle $r1;
+        int $i0;
+        android.os.Parcelable $r2;
+        com.seattleclouds.previewer.data.SCTemplateApp $r3;
+        com.google.android.bitmapfun.t $r4;
+        android.support.v4.app.ac $r5;
+        android.graphics.Bitmap$CompressFormat $r6;
+        com.google.android.bitmapfun.v $r7;
+        android.support.v4.app.aj $r8;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.previewer.at: android.os.Bundle j()>();
+
+        if $r1 == null goto label1;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.previewer.at: android.os.Bundle j()>();
+
+        $r2 = virtualinvoke $r1.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("template");
+
+        $r3 = (com.seattleclouds.previewer.data.SCTemplateApp) $r2;
+
+        $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.data.SCTemplateApp c> = $r3;
+
+     label1:
+        $r4 = new com.google.android.bitmapfun.t;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.previewer.at: android.support.v4.app.ac n()>();
+
+        specialinvoke $r4.<com.google.android.bitmapfun.t: void <init>(android.content.Context,java.lang.String)>($r5, "previewer/templateIcons");
+
+        $r4.<com.google.android.bitmapfun.t: boolean g> = 0;
+
+        $r6 = <android.graphics.Bitmap$CompressFormat: android.graphics.Bitmap$CompressFormat PNG>;
+
+        $r4.<com.google.android.bitmapfun.t: android.graphics.Bitmap$CompressFormat d> = $r6;
+
+        virtualinvoke $r4.<com.google.android.bitmapfun.t: void a(float)>(0.05F);
+
+        $r7 = new com.google.android.bitmapfun.v;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.previewer.at: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.previewer.at: int a>;
+
+        specialinvoke $r7.<com.google.android.bitmapfun.v: void <init>(android.content.Context,int,boolean)>($r5, $i0, 0);
+
+        $r0.<com.seattleclouds.previewer.at: com.google.android.bitmapfun.v b> = $r7;
+
+        $r7 = $r0.<com.seattleclouds.previewer.at: com.google.android.bitmapfun.v b>;
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.previewer.at: android.support.v4.app.ac n()>();
+
+        $r8 = virtualinvoke $r5.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        virtualinvoke $r7.<com.google.android.bitmapfun.v: void a(android.support.v4.app.aj,com.google.android.bitmapfun.t)>($r8, $r4);
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.at: void e(boolean)>(1);
+
+        return;
+    }
+
+    public void a(android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.previewer.at $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 := @parameter1: android.view.MenuInflater;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.Menu,android.view.MenuInflater)>($r1, $r2);
+
+        $i0 = <com.seattleclouds.k: int previewer_templates_details>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        return;
+    }
+
+    public boolean a(android.view.MenuItem)
+    {
+        com.seattleclouds.previewer.at $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.previewer.data.SCTemplateApp $r3;
+        java.lang.String $r4;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i0 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i1 = <com.seattleclouds.h: int templates_preview>;
+
+        if $i0 != $i1 goto label1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.previewer.at: android.support.v4.app.ac n()>();
+
+        $r3 = $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.data.SCTemplateApp c>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.previewer.data.SCTemplateApp: java.lang.String a()>();
+
+        staticinvoke <com.seattleclouds.previewer.bu: void b(android.app.Activity,java.lang.String)>($r2, $r4);
+
+        return 1;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.r: boolean a(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public void d()
+    {
+        com.seattleclouds.previewer.at $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.at;
+
+        specialinvoke $r0.<com.seattleclouds.r: void d()>();
+
+        $r0.<com.seattleclouds.previewer.at: com.seattleclouds.previewer.av d> = null;
+
+        return;
+    }
+}

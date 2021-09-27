@@ -1,0 +1,36 @@
+public abstract class com.facebook.internal.v extends java.lang.Object
+{
+    final com.facebook.internal.u a;
+
+    protected void <init>(com.facebook.internal.u)
+    {
+        com.facebook.internal.v $r0;
+        com.facebook.internal.u $r1;
+
+        $r0 := @this: com.facebook.internal.v;
+
+        $r1 := @parameter0: com.facebook.internal.u;
+
+        $r0.<com.facebook.internal.v: com.facebook.internal.u a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public abstract com.facebook.internal.a a(java.lang.Object);
+
+    public java.lang.Object a()
+    {
+        com.facebook.internal.v $r0;
+        java.lang.Object r1;
+
+        $r0 := @this: com.facebook.internal.v;
+
+        r1 = <com.facebook.internal.u: java.lang.Object a>;
+
+        return r1;
+    }
+
+    public abstract boolean a(java.lang.Object, boolean);
+}

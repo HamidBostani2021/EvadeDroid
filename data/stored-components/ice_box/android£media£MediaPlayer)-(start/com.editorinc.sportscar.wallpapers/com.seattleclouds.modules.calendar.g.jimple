@@ -1,0 +1,509 @@
+public class com.seattleclouds.modules.calendar.g extends java.lang.Object
+{
+    private int a;
+    private com.seattleclouds.modules.calendar.g b;
+    private long c;
+    private java.lang.String d;
+    private java.lang.String e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private java.lang.String h;
+    private java.lang.String i;
+    private java.util.Date j;
+    private java.util.Date k;
+    private boolean l;
+    private boolean m;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.calendar.g: int a> = 1;
+
+        return;
+    }
+
+    public void <init>(int, com.seattleclouds.modules.calendar.g, long, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.util.Date, java.util.Date, boolean, boolean)
+    {
+        com.seattleclouds.modules.calendar.g $r0, $r1;
+        int $i0;
+        long $l1;
+        java.lang.String $r2, $r3, $r4, $r5, $r6, $r7;
+        java.util.Date $r8, $r9;
+        boolean $z0, $z1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: com.seattleclouds.modules.calendar.g;
+
+        $l1 := @parameter2: long;
+
+        $r2 := @parameter3: java.lang.String;
+
+        $r3 := @parameter4: java.lang.String;
+
+        $r4 := @parameter5: java.lang.String;
+
+        $r5 := @parameter6: java.lang.String;
+
+        $r6 := @parameter7: java.lang.String;
+
+        $r7 := @parameter8: java.lang.String;
+
+        $r8 := @parameter9: java.util.Date;
+
+        $r9 := @parameter10: java.util.Date;
+
+        $z0 := @parameter11: boolean;
+
+        $z1 := @parameter12: boolean;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.calendar.g: int a> = 1;
+
+        $r0.<com.seattleclouds.modules.calendar.g: int a> = $i0;
+
+        $r0.<com.seattleclouds.modules.calendar.g: com.seattleclouds.modules.calendar.g b> = $r1;
+
+        $r0.<com.seattleclouds.modules.calendar.g: long c> = $l1;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String d> = $r2;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String e> = $r3;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String f> = $r4;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String g> = $r5;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String h> = $r6;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String i> = $r7;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.util.Date j> = $r8;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.util.Date k> = $r9;
+
+        $r0.<com.seattleclouds.modules.calendar.g: boolean l> = $z0;
+
+        $r0.<com.seattleclouds.modules.calendar.g: boolean m> = $z1;
+
+        return;
+    }
+
+    public void <init>(com.seattleclouds.modules.calendar.g)
+    {
+        com.seattleclouds.modules.calendar.g $r0, $r1, $r2;
+        int $i0;
+        long $l1;
+        java.lang.String $r3, $r4, $r5, $r6, $r7, $r8;
+        java.util.Date $r9, $r10;
+        boolean $z0, $z1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: com.seattleclouds.modules.calendar.g;
+
+        $i0 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: int a()>();
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: com.seattleclouds.modules.calendar.g b()>();
+
+        $l1 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: long c()>();
+
+        $r3 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.lang.String d()>();
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.lang.String e()>();
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.lang.String f()>();
+
+        $r6 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.lang.String g()>();
+
+        $r7 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.lang.String h()>();
+
+        $r8 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.lang.String i()>();
+
+        $r9 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.util.Date j()>();
+
+        $r10 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: java.util.Date k()>();
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: boolean l()>();
+
+        $z1 = virtualinvoke $r1.<com.seattleclouds.modules.calendar.g: boolean m()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.calendar.g: void <init>(int,com.seattleclouds.modules.calendar.g,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Date,java.util.Date,boolean,boolean)>($i0, $r2, $l1, $r3, $r4, $r5, $r6, $r7, $r8, $r9, $r10, $z0, $z1);
+
+        return;
+    }
+
+    public int a()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        int i0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        i0 = $r0.<com.seattleclouds.modules.calendar.g: int a>;
+
+        return i0;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.calendar.g: int a> = 0;
+
+        return;
+    }
+
+    public void a(long)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $l0 := @parameter0: long;
+
+        $r0.<com.seattleclouds.modules.calendar.g: long c> = $l0;
+
+        return;
+    }
+
+    public void a(com.seattleclouds.modules.calendar.g)
+    {
+        com.seattleclouds.modules.calendar.g $r0, $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: com.seattleclouds.modules.calendar.g;
+
+        $r0.<com.seattleclouds.modules.calendar.g: com.seattleclouds.modules.calendar.g b> = $r1;
+
+        return;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String d> = $r1;
+
+        return;
+    }
+
+    public void a(java.util.Date)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.util.Date $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.util.Date;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.util.Date j> = $r1;
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.calendar.g: boolean l> = $z0;
+
+        return;
+    }
+
+    public com.seattleclouds.modules.calendar.g b()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r0 = $r0.<com.seattleclouds.modules.calendar.g: com.seattleclouds.modules.calendar.g b>;
+
+        return $r0;
+    }
+
+    public void b(java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String e> = $r1;
+
+        return;
+    }
+
+    public void b(java.util.Date)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.util.Date $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.util.Date;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.util.Date k> = $r1;
+
+        return;
+    }
+
+    public void b(boolean)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.calendar.g: boolean m> = $z0;
+
+        return;
+    }
+
+    public long c()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        long l0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        l0 = $r0.<com.seattleclouds.modules.calendar.g: long c>;
+
+        return l0;
+    }
+
+    public void c(java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String f> = $r1;
+
+        return;
+    }
+
+    public java.lang.String d()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.lang.String d>;
+
+        return r1;
+    }
+
+    public void d(java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String g> = $r1;
+
+        return;
+    }
+
+    public java.lang.String e()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.lang.String e>;
+
+        return r1;
+    }
+
+    public void e(java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String h> = $r1;
+
+        return;
+    }
+
+    public java.lang.String f()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.lang.String f>;
+
+        return r1;
+    }
+
+    public void f(java.lang.String)
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.calendar.g: java.lang.String i> = $r1;
+
+        return;
+    }
+
+    public java.lang.String g()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.lang.String g>;
+
+        return r1;
+    }
+
+    public java.lang.String h()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.lang.String h>;
+
+        return r1;
+    }
+
+    public java.lang.String i()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.lang.String i>;
+
+        return r1;
+    }
+
+    public java.util.Date j()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.util.Date r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.util.Date j>;
+
+        return r1;
+    }
+
+    public java.util.Date k()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.util.Date r1;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        r1 = $r0.<com.seattleclouds.modules.calendar.g: java.util.Date k>;
+
+        return r1;
+    }
+
+    public boolean l()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        z0 = $r0.<com.seattleclouds.modules.calendar.g: boolean l>;
+
+        return z0;
+    }
+
+    public boolean m()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        z0 = $r0.<com.seattleclouds.modules.calendar.g: boolean m>;
+
+        return z0;
+    }
+
+    public java.lang.String toString()
+    {
+        com.seattleclouds.modules.calendar.g $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+        java.util.Date $r3;
+
+        $r0 := @this: com.seattleclouds.modules.calendar.g;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("title=");
+
+        $r2 = $r0.<com.seattleclouds.modules.calendar.g: java.lang.String e>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" date=");
+
+        $r3 = $r0.<com.seattleclouds.modules.calendar.g: java.util.Date j>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r3);
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+}

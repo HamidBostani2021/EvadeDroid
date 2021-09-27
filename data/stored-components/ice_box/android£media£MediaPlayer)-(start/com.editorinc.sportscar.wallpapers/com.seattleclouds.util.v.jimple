@@ -1,0 +1,70 @@
+final class com.seattleclouds.util.v extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final java.lang.String a;
+    final android.app.Activity b;
+
+    void <init>(java.lang.String, android.app.Activity)
+    {
+        com.seattleclouds.util.v $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.v;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        $r0.<com.seattleclouds.util.v: java.lang.String a> = $r1;
+
+        $r0.<com.seattleclouds.util.v: android.app.Activity b> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.util.v $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        boolean $z0;
+        java.lang.String $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.v;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        if $i0 != 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.util.v: java.lang.String a>;
+
+        $r3 = $r0.<com.seattleclouds.util.v: android.app.Activity b>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.u: boolean a(java.lang.String,android.app.Activity)>($r2, $r3);
+
+        if $z0 != 0 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.util.v: java.lang.String a>;
+
+        $r3 = $r0.<com.seattleclouds.util.v: android.app.Activity b>;
+
+        staticinvoke <com.seattleclouds.util.u: boolean b(java.lang.String,android.app.Activity)>($r2, $r3);
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.util.v: java.lang.String a>;
+
+        $r3 = $r0.<com.seattleclouds.util.v: android.app.Activity b>;
+
+        staticinvoke <com.seattleclouds.util.u: boolean b(java.lang.String,android.app.Activity)>($r2, $r3);
+
+     label2:
+        return;
+    }
+}

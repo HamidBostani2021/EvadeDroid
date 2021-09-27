@@ -1,0 +1,55 @@
+public class Slicedan.test.zeromethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicedan.test.zeromethod this;
+        anywheresoftware.b4a.objects.WebViewWrapper $r0;
+        anywheresoftware.b4a.BA $r1;
+        java.lang.String $r2;
+        boolean $z0;
+        android.webkit.WebView $r3;
+        android.content.Context $r4;
+        java.lang.Object $r5;
+        android.webkit.WebSettings $r6;
+        anywheresoftware.b4a.objects.WebViewWrapper$1 $r7;
+
+        this := @this: Slicedan.test.zeromethod;
+
+        $r4 = virtualinvoke this.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        $r3 = new android.webkit.WebView;
+
+        $r4 = $r1.<anywheresoftware.b4a.BA: android.content.Context context>;
+
+        specialinvoke $r3.<android.webkit.WebView: void <init>(android.content.Context)>($r4);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.WebViewWrapper: void setObject(java.lang.Object)>($r3);
+
+        $r5 = virtualinvoke $r0.<anywheresoftware.b4a.objects.WebViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.webkit.WebView) $r5;
+
+        $r6 = virtualinvoke $r3.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r6.<android.webkit.WebSettings: void setJavaScriptEnabled(boolean)>(1);
+
+        $r5 = virtualinvoke $r0.<anywheresoftware.b4a.objects.WebViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.webkit.WebView) $r5;
+
+        $r6 = virtualinvoke $r3.<android.webkit.WebView: android.webkit.WebSettings getSettings()>();
+
+        virtualinvoke $r6.<android.webkit.WebSettings: void setBuiltInZoomControls(boolean)>(1);
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void innerInitialize(anywheresoftware.b4a.BA,java.lang.String,boolean)>($r1, $r2, 1);
+
+        $r5 = virtualinvoke $r0.<anywheresoftware.b4a.objects.WebViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.webkit.WebView) $r5;
+
+        $r7 = new anywheresoftware.b4a.objects.WebViewWrapper$1;
+
+        return;
+    }
+}

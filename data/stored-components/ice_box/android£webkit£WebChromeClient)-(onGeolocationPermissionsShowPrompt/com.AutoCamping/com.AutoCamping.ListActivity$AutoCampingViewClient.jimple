@@ -1,0 +1,370 @@
+class com.AutoCamping.ListActivity$AutoCampingViewClient extends android.webkit.WebViewClient
+{
+    final com.AutoCamping.ListActivity this$0;
+
+    private void <init>(com.AutoCamping.ListActivity)
+    {
+        com.AutoCamping.ListActivity$AutoCampingViewClient $r0;
+        com.AutoCamping.ListActivity $r1;
+
+        $r0 := @this: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        $r1 := @parameter0: com.AutoCamping.ListActivity;
+
+        $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.AutoCamping.ListActivity, com.AutoCamping.ListActivity$AutoCampingViewClient)
+    {
+        com.AutoCamping.ListActivity$AutoCampingViewClient $r0, $r2;
+        com.AutoCamping.ListActivity $r1;
+
+        $r0 := @this: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        $r1 := @parameter0: com.AutoCamping.ListActivity;
+
+        $r2 := @parameter1: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        specialinvoke $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: void <init>(com.AutoCamping.ListActivity)>($r1);
+
+        return;
+    }
+
+    public void onLoadResource(android.webkit.WebView, java.lang.String)
+    {
+        com.AutoCamping.ListActivity$AutoCampingViewClient $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("ListActivity", "onLoadResource");
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onLoadResource(android.webkit.WebView,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+
+    public void onPageFinished(android.webkit.WebView, java.lang.String)
+    {
+        com.AutoCamping.ListActivity$AutoCampingViewClient $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        com.AutoCamping.ListActivity $r3;
+        android.app.ProgressDialog $r4;
+
+        $r0 := @this: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onPageFinished(android.webkit.WebView,java.lang.String)>($r1, $r2);
+
+        $r3 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        $r4 = $r3.<com.AutoCamping.ListActivity: android.app.ProgressDialog pd>;
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void dismiss()>();
+
+        return;
+    }
+
+    public void onPageStarted(android.webkit.WebView, java.lang.String, android.graphics.Bitmap)
+    {
+        com.AutoCamping.ListActivity$AutoCampingViewClient $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        android.graphics.Bitmap $r3;
+        com.AutoCamping.ListActivity $r4, $r5;
+        android.app.ProgressDialog $r6;
+
+        $r0 := @this: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.graphics.Bitmap;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap)>($r1, $r2, $r3);
+
+        $r5 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        $r6 = new android.app.ProgressDialog;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        specialinvoke $r6.<android.app.ProgressDialog: void <init>(android.content.Context)>($r4);
+
+        $r5.<com.AutoCamping.ListActivity: android.app.ProgressDialog pd> = $r6;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        $r6 = $r4.<com.AutoCamping.ListActivity: android.app.ProgressDialog pd>;
+
+        virtualinvoke $r6.<android.app.ProgressDialog: void setTitle(java.lang.CharSequence)>("Please wait");
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        $r6 = $r4.<com.AutoCamping.ListActivity: android.app.ProgressDialog pd>;
+
+        virtualinvoke $r6.<android.app.ProgressDialog: void setMessage(java.lang.CharSequence)>("Page is loading..");
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        $r6 = $r4.<com.AutoCamping.ListActivity: android.app.ProgressDialog pd>;
+
+        virtualinvoke $r6.<android.app.ProgressDialog: void show()>();
+
+        return;
+    }
+
+    public void onReceivedError(android.webkit.WebView, int, java.lang.String, java.lang.String)
+    {
+        com.AutoCamping.ListActivity$AutoCampingViewClient $r0;
+        android.webkit.WebView $r1;
+        int $i0;
+        java.lang.String $r2, $r3;
+        com.AutoCamping.ListActivity $r4;
+        android.app.Activity $r5;
+        java.lang.StringBuilder $r6;
+        android.widget.Toast $r7;
+
+        $r0 := @this: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r3 := @parameter3: java.lang.String;
+
+        specialinvoke $r0.<android.webkit.WebViewClient: void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String)>($r1, $i0, $r2, $r3);
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        $r5 = $r4.<com.AutoCamping.ListActivity: android.app.Activity activity>;
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>(java.lang.String)>("\ud398\uc774\uc9c0 \ub85c\ub529\uc2e4\ud328! ");
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r5, $r2, 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+        lookupswitch($i0)
+        {
+            case -15: goto label1;
+            case -14: goto label1;
+            case -13: goto label1;
+            case -12: goto label1;
+            case -11: goto label1;
+            case -10: goto label1;
+            case -9: goto label1;
+            case -8: goto label1;
+            case -7: goto label1;
+            case -6: goto label1;
+            case -5: goto label1;
+            case -4: goto label1;
+            case -3: goto label1;
+            case -2: goto label1;
+            case -1: goto label1;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+    }
+
+    public boolean shouldOverrideUrlLoading(android.webkit.WebView, java.lang.String)
+    {
+        com.AutoCamping.ListActivity$AutoCampingViewClient $r0;
+        android.webkit.WebView $r1;
+        java.lang.String $r2;
+        android.content.Intent $r3;
+        int $i0;
+        com.AutoCamping.ListActivity $r4;
+        boolean $z0;
+        android.net.Uri $r5;
+        java.lang.String[] $r6;
+
+        $r0 := @this: com.AutoCamping.ListActivity$AutoCampingViewClient;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $i0 = virtualinvoke $r2.<java.lang.String: int indexOf(java.lang.String)>("view.asp");
+
+        if $i0 < 0 goto label1;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/AutoCamping/ViewActivity;");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("URL", $r2);
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void startActivity(android.content.Intent)>($r3);
+
+        return 1;
+
+     label1:
+        $i0 = virtualinvoke $r2.<java.lang.String: int indexOf(java.lang.String)>("editlist.asp");
+
+        if $i0 < 0 goto label2;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/AutoCamping/EditListActivity;");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("URL", $r2);
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void startActivity(android.content.Intent)>($r3);
+
+        return 1;
+
+     label2:
+        $i0 = virtualinvoke $r2.<java.lang.String: int indexOf(java.lang.String)>("rewrite.asp");
+
+        if $i0 < 0 goto label3;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/AutoCamping/ReviewActivity;");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("URL", $r2);
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void startActivity(android.content.Intent)>($r3);
+
+        return 1;
+
+     label3:
+        $i0 = virtualinvoke $r2.<java.lang.String: int indexOf(java.lang.String)>("login.asp");
+
+        if $i0 < 0 goto label4;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/AutoCamping/LoginActivity;");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("URL", $r2);
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void startActivity(android.content.Intent)>($r3);
+
+        return 1;
+
+     label4:
+        $i0 = virtualinvoke $r2.<java.lang.String: int indexOf(java.lang.String)>("barcode.asp");
+
+        if $i0 < 0 goto label5;
+
+        $r3 = new android.content.Intent;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r4, class "Lcom/AutoCamping/BarcodeActivity;");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("URL", $r2);
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void startActivity(android.content.Intent)>($r3);
+
+        return 1;
+
+     label5:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("tel:");
+
+        if $z0 == 0 goto label6;
+
+        $r3 = new android.content.Intent;
+
+        $r5 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r2);
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String,android.net.Uri)>("android.intent.action.VIEW", $r5);
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void startActivity(android.content.Intent)>($r3);
+
+        return 1;
+
+     label6:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("close:");
+
+        if $z0 == 0 goto label7;
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void finish()>();
+
+        return 1;
+
+     label7:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>("mailto:");
+
+        if $z0 == 0 goto label8;
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("mailto:", "");
+
+        $r3 = new android.content.Intent;
+
+        specialinvoke $r3.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent setType(java.lang.String)>("plain/text");
+
+        $r6 = newarray (java.lang.String)[1];
+
+        $r6[0] = $r2;
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>("android.intent.extra.EMAIL", $r6);
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.SUBJECT", "\uc81c\ubaa9");
+
+        virtualinvoke $r3.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.TEXT", "\ub0b4\uc6a9");
+
+        $r4 = $r0.<com.AutoCamping.ListActivity$AutoCampingViewClient: com.AutoCamping.ListActivity this$0>;
+
+        $r3 = staticinvoke <android.content.Intent: android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)>($r3, "\uc774\uba54\uc77c \uc804\uc1a1");
+
+        virtualinvoke $r4.<com.AutoCamping.ListActivity: void startActivity(android.content.Intent)>($r3);
+
+        return 1;
+
+     label8:
+        virtualinvoke $r1.<android.webkit.WebView: void loadUrl(java.lang.String)>($r2);
+
+        return 1;
+    }
+}

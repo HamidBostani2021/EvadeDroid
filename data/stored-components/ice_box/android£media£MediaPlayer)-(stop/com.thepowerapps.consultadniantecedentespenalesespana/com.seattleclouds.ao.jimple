@@ -1,0 +1,49 @@
+class com.seattleclouds.ao extends java.util.TimerTask
+{
+    final android.app.Activity a;
+    final com.seattleclouds.an b;
+
+    void <init>(com.seattleclouds.an, android.app.Activity)
+    {
+        com.seattleclouds.ao $r0;
+        com.seattleclouds.an $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.ao;
+
+        $r1 := @parameter0: com.seattleclouds.an;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        $r0.<com.seattleclouds.ao: com.seattleclouds.an b> = $r1;
+
+        $r0.<com.seattleclouds.ao: android.app.Activity a> = $r2;
+
+        specialinvoke $r0.<java.util.TimerTask: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.ao $r0;
+        android.app.Activity $r1;
+        boolean $z0;
+        com.seattleclouds.an $r2;
+
+        $r0 := @this: com.seattleclouds.ao;
+
+        $z0 = staticinvoke <com.seattleclouds.an: boolean a()>();
+
+        if $z0 != 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.ao: com.seattleclouds.an b>;
+
+        $r1 = $r0.<com.seattleclouds.ao: android.app.Activity a>;
+
+        staticinvoke <com.seattleclouds.an: void a(com.seattleclouds.an,android.app.Activity)>($r2, $r1);
+
+     label1:
+        return;
+    }
+}

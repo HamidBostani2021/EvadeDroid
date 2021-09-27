@@ -1,0 +1,230 @@
+public class com.seattleclouds.util.ak extends java.lang.Object
+{
+    java.lang.String a;
+    java.lang.String b;
+    java.lang.String c;
+    java.lang.String d;
+    java.lang.String e;
+    java.lang.String f;
+    java.lang.String g;
+    java.lang.String h;
+    java.lang.String i;
+    java.lang.String j;
+    final com.seattleclouds.util.ag k;
+
+    public void <init>(com.seattleclouds.util.ag)
+    {
+        com.seattleclouds.util.ak $r0;
+        com.seattleclouds.util.ag $r1;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        $r1 := @parameter0: com.seattleclouds.util.ag;
+
+        $r0.<com.seattleclouds.util.ak: com.seattleclouds.util.ag k> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public java.lang.String a()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        r1 = $r0.<com.seattleclouds.util.ak: java.lang.String a>;
+
+        return r1;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        r1 = $r0.<com.seattleclouds.util.ak: java.lang.String g>;
+
+        return r1;
+    }
+
+    public java.lang.String c()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        r1 = $r0.<com.seattleclouds.util.ak: java.lang.String b>;
+
+        return r1;
+    }
+
+    public java.lang.String d()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        r1 = $r0.<com.seattleclouds.util.ak: java.lang.String d>;
+
+        return r1;
+    }
+
+    public java.lang.String e()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        r1 = $r0.<com.seattleclouds.util.ak: java.lang.String c>;
+
+        return r1;
+    }
+
+    public java.lang.String f()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String c>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String d>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String trim()>();
+
+        return $r2;
+    }
+
+    public java.lang.String g()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        r1 = $r0.<com.seattleclouds.util.ak: java.lang.String e>;
+
+        return r1;
+    }
+
+    public java.lang.String toString()
+    {
+        com.seattleclouds.util.ak $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.util.ak;
+
+        $r1 = new java.lang.StringBuilder;
+
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("FacebookUser{id=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String a>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", token=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String b>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", firstname=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String c>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", lastname=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String d>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", gender=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String e>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", birthdate=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String f>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", email=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String g>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", urlPicture=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String j>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", city=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String h>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", country=\'");
+
+        $r2 = $r0.<com.seattleclouds.util.ak: java.lang.String i>;
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(39);
+
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(char)>(125);
+
+        $r2 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r2;
+    }
+}

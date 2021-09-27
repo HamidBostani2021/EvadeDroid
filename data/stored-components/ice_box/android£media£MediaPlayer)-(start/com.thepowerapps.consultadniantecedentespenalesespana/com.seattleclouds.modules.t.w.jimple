@@ -1,0 +1,572 @@
+class com.seattleclouds.modules.t.w extends com.seattleclouds.modules.t.ah
+{
+    final com.seattleclouds.modules.t.p a;
+
+    public void <init>(com.seattleclouds.modules.t.p, android.content.Context)
+    {
+        com.seattleclouds.modules.t.w $r0;
+        com.seattleclouds.modules.t.p $r1;
+        android.content.Context $r2;
+
+        $r0 := @this: com.seattleclouds.modules.t.w;
+
+        $r1 := @parameter0: com.seattleclouds.modules.t.p;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.t.ah: void <init>(android.content.Context)>($r2);
+
+        return;
+    }
+
+    protected transient java.lang.Integer a(java.lang.Void[])
+    {
+        com.seattleclouds.modules.t.w $r0;
+        java.lang.Void[] $r1;
+        android.graphics.Point[] $r2;
+        int $i0, $i1, $i2, $i3;
+        android.graphics.Point $r3;
+        com.seattleclouds.modules.t.p $r4, $r5;
+        android.graphics.Bitmap $r6, $r7;
+        boolean $z0;
+        float $f0, $f1;
+        java.lang.StringBuilder $r8;
+        java.lang.String $r9, $r13;
+        java.io.FileOutputStream $r10;
+        android.graphics.Bitmap$CompressFormat $r11;
+        java.io.File $r12, $r14, $r15;
+        android.graphics.Paint $r16;
+        android.graphics.ColorMatrix $r17;
+        android.graphics.ColorMatrixColorFilter $r18;
+        android.graphics.Bitmap$Config $r19;
+        android.graphics.Canvas $r20;
+        java.lang.OutOfMemoryError $r21;
+        java.lang.Exception $r22, $r23;
+        java.lang.Integer $r24;
+        java.lang.Throwable $r25, $r26, $r27, $r28, $r29;
+
+        $r0 := @this: com.seattleclouds.modules.t.w;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r2 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Point[] ab()>();
+
+        $i0 = lengthof $r2;
+
+        $i1 = 0;
+
+     label01:
+        if $i1 >= $i0 goto label28;
+
+        $r3 = $r2[$i1];
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r5 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $i2 = $r3.<android.graphics.Point: int x>;
+
+        $i3 = $r3.<android.graphics.Point: int y>;
+
+     label02:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap a(com.seattleclouds.modules.t.p,int,int)>($r5, $i2, $i3);
+
+        staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap a(com.seattleclouds.modules.t.p,android.graphics.Bitmap)>($r4, $r6);
+
+     label03:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label04:
+        $z0 = staticinvoke <com.seattleclouds.modules.t.p: boolean j(com.seattleclouds.modules.t.p)>($r4);
+
+     label05:
+        if $z0 == 0 goto label07;
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label06:
+        staticinvoke <com.seattleclouds.modules.t.p: void d(com.seattleclouds.modules.t.p)>($r4);
+
+     label07:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label08:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        $i2 = virtualinvoke $r6.<android.graphics.Bitmap: int getWidth()>();
+
+        $r3 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Point ac()>();
+
+     label09:
+        $i3 = $r3.<android.graphics.Point: int x>;
+
+        if $i2 > $i3 goto label12;
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label10:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        $i2 = virtualinvoke $r6.<android.graphics.Bitmap: int getHeight()>();
+
+        $r3 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Point ac()>();
+
+     label11:
+        $i3 = $r3.<android.graphics.Point: int y>;
+
+        if $i2 <= $i3 goto label24;
+
+     label12:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label13:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        $i2 = virtualinvoke $r6.<android.graphics.Bitmap: int getWidth()>();
+
+     label14:
+        $f0 = (float) $i2;
+
+     label15:
+        $r3 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Point ac()>();
+
+     label16:
+        $i2 = $r3.<android.graphics.Point: int x>;
+
+        $f1 = (float) $i2;
+
+        $f0 = $f0 / $f1;
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r5 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label17:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r5);
+
+     label18:
+        $r5 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label19:
+        $r7 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r5);
+
+        $i2 = virtualinvoke $r7.<android.graphics.Bitmap: int getWidth()>();
+
+     label20:
+        $f1 = (float) $i2;
+
+        $f1 = $f1 / $f0;
+
+        $i2 = (int) $f1;
+
+        $r5 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label21:
+        $r7 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r5);
+
+        $i3 = virtualinvoke $r7.<android.graphics.Bitmap: int getHeight()>();
+
+     label22:
+        $f1 = (float) $i3;
+
+        $f0 = $f1 / $f0;
+
+        $i3 = (int) $f0;
+
+     label23:
+        $r6 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap a(android.graphics.Bitmap,int,int,boolean)>($r6, $i2, $i3, 1);
+
+        staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap a(com.seattleclouds.modules.t.p,android.graphics.Bitmap)>($r4, $r6);
+
+     label24:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label25:
+        $z0 = staticinvoke <com.seattleclouds.modules.t.p: boolean k(com.seattleclouds.modules.t.p)>($r4);
+
+     label26:
+        if $z0 == 0 goto label37;
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r5 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label27:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r5);
+
+        $r6 = staticinvoke <com.seattleclouds.modules.t.a: android.graphics.Bitmap a(android.graphics.Bitmap)>($r6);
+
+        staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap a(com.seattleclouds.modules.t.p,android.graphics.Bitmap)>($r4, $r6);
+
+     label28:
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.t.p: java.lang.String b(com.seattleclouds.modules.t.p)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r9);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_temp");
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label29:
+        $r10 = new java.io.FileOutputStream;
+
+     label30:
+        specialinvoke $r10.<java.io.FileOutputStream: void <init>(java.lang.String)>($r9);
+
+     label31:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+     label32:
+        $r11 = <android.graphics.Bitmap$CompressFormat: android.graphics.Bitmap$CompressFormat JPEG>;
+
+     label33:
+        virtualinvoke $r6.<android.graphics.Bitmap: boolean compress(android.graphics.Bitmap$CompressFormat,int,java.io.OutputStream)>($r11, 100, $r10);
+
+     label34:
+        if $r10 == null goto label36;
+
+     label35:
+        virtualinvoke $r10.<java.io.FileOutputStream: void close()>();
+
+     label36:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        virtualinvoke $r6.<android.graphics.Bitmap: void recycle()>();
+
+        $r12 = new java.io.File;
+
+        $r8 = new java.lang.StringBuilder;
+
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r13 = staticinvoke <com.seattleclouds.modules.t.p: java.lang.String b(com.seattleclouds.modules.t.p)>($r4);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13);
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_temp2");
+
+        $r13 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $r12.<java.io.File: void <init>(java.lang.String)>($r13);
+
+        $r14 = new java.io.File;
+
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r13 = staticinvoke <com.seattleclouds.modules.t.p: java.lang.String b(com.seattleclouds.modules.t.p)>($r4);
+
+        specialinvoke $r14.<java.io.File: void <init>(java.lang.String)>($r13);
+
+        $z0 = virtualinvoke $r14.<java.io.File: boolean renameTo(java.io.File)>($r12);
+
+        if $z0 == 0 goto label64;
+
+        $r15 = new java.io.File;
+
+        specialinvoke $r15.<java.io.File: void <init>(java.lang.String)>($r9);
+
+        $z0 = virtualinvoke $r15.<java.io.File: boolean renameTo(java.io.File)>($r14);
+
+        if $z0 == 0 goto label63;
+
+        virtualinvoke $r12.<java.io.File: boolean delete()>();
+
+        return null;
+
+     label37:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label38:
+        $z0 = staticinvoke <com.seattleclouds.modules.t.p: boolean l(com.seattleclouds.modules.t.p)>($r4);
+
+     label39:
+        if $z0 == 0 goto label28;
+
+     label40:
+        $r16 = new android.graphics.Paint;
+
+        specialinvoke $r16.<android.graphics.Paint: void <init>()>();
+
+        $r17 = new android.graphics.ColorMatrix;
+
+        specialinvoke $r17.<android.graphics.ColorMatrix: void <init>()>();
+
+        virtualinvoke $r17.<android.graphics.ColorMatrix: void setSaturation(float)>(0.0F);
+
+        $r18 = new android.graphics.ColorMatrixColorFilter;
+
+        specialinvoke $r18.<android.graphics.ColorMatrixColorFilter: void <init>(android.graphics.ColorMatrix)>($r17);
+
+        virtualinvoke $r16.<android.graphics.Paint: android.graphics.ColorFilter setColorFilter(android.graphics.ColorFilter)>($r18);
+
+     label41:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label42:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        $i2 = virtualinvoke $r6.<android.graphics.Bitmap: int getWidth()>();
+
+     label43:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label44:
+        $r6 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        $i3 = virtualinvoke $r6.<android.graphics.Bitmap: int getHeight()>();
+
+        $r19 = <android.graphics.Bitmap$Config: android.graphics.Bitmap$Config RGB_565>;
+
+        $r6 = staticinvoke <android.graphics.Bitmap: android.graphics.Bitmap createBitmap(int,int,android.graphics.Bitmap$Config)>($i2, $i3, $r19);
+
+        $r20 = new android.graphics.Canvas;
+
+        specialinvoke $r20.<android.graphics.Canvas: void <init>(android.graphics.Bitmap)>($r6);
+
+     label45:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label46:
+        $r7 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        virtualinvoke $r20.<android.graphics.Canvas: void drawBitmap(android.graphics.Bitmap,float,float,android.graphics.Paint)>($r7, 0.0F, 0.0F, $r16);
+
+     label47:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label48:
+        $r7 = staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap g(com.seattleclouds.modules.t.p)>($r4);
+
+        virtualinvoke $r7.<android.graphics.Bitmap: void recycle()>();
+
+     label49:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+     label50:
+        staticinvoke <com.seattleclouds.modules.t.p: android.graphics.Bitmap a(com.seattleclouds.modules.t.p,android.graphics.Bitmap)>($r4, $r6);
+
+     label51:
+        goto label28;
+
+     label52:
+        $r21 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ImageCropFragment:", "save", $r21);
+
+        $i1 = $i1 + 1;
+
+        goto label01;
+
+     label53:
+        $r22 := @caughtexception;
+
+        $r10 = null;
+
+        $r23 = $r22;
+
+     label54:
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ImageCropFragment", "saveCroppedImage", $r23);
+
+        $i0 = <com.seattleclouds.l: int scan_document_failed_to_save>;
+
+        $r24 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label55:
+        if $r10 == null goto label69;
+
+     label56:
+        virtualinvoke $r10.<java.io.FileOutputStream: void close()>();
+
+     label57:
+        return $r24;
+
+     label58:
+        $r25 := @caughtexception;
+
+        return $r24;
+
+     label59:
+        $r26 := @caughtexception;
+
+        $r10 = null;
+
+        $r27 = $r26;
+
+     label60:
+        if $r10 == null goto label62;
+
+     label61:
+        virtualinvoke $r10.<java.io.FileOutputStream: void close()>();
+
+     label62:
+        throw $r27;
+
+     label63:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        staticinvoke <com.seattleclouds.modules.t.p: void m(com.seattleclouds.modules.t.p)>($r4);
+
+        $i0 = <com.seattleclouds.l: int scan_document_failed_to_save>;
+
+        $r24 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        return $r24;
+
+     label64:
+        $r4 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        staticinvoke <com.seattleclouds.modules.t.p: void m(com.seattleclouds.modules.t.p)>($r4);
+
+        $i0 = <com.seattleclouds.l: int scan_document_failed_to_save>;
+
+        $r24 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        return $r24;
+
+     label65:
+        $r28 := @caughtexception;
+
+        goto label36;
+
+     label66:
+        $r29 := @caughtexception;
+
+        goto label62;
+
+     label67:
+        $r27 := @caughtexception;
+
+        goto label60;
+
+     label68:
+        $r23 := @caughtexception;
+
+        goto label54;
+
+     label69:
+        return $r24;
+
+        catch java.lang.OutOfMemoryError from label02 to label03 with label52;
+        catch java.lang.OutOfMemoryError from label04 to label05 with label52;
+        catch java.lang.OutOfMemoryError from label06 to label07 with label52;
+        catch java.lang.OutOfMemoryError from label08 to label09 with label52;
+        catch java.lang.OutOfMemoryError from label10 to label11 with label52;
+        catch java.lang.OutOfMemoryError from label13 to label14 with label52;
+        catch java.lang.OutOfMemoryError from label15 to label16 with label52;
+        catch java.lang.OutOfMemoryError from label17 to label18 with label52;
+        catch java.lang.OutOfMemoryError from label19 to label20 with label52;
+        catch java.lang.OutOfMemoryError from label21 to label22 with label52;
+        catch java.lang.OutOfMemoryError from label23 to label24 with label52;
+        catch java.lang.OutOfMemoryError from label25 to label26 with label52;
+        catch java.lang.OutOfMemoryError from label27 to label28 with label52;
+        catch java.lang.Exception from label30 to label31 with label53;
+        catch java.lang.Throwable from label29 to label31 with label59;
+        catch java.lang.Exception from label31 to label32 with label68;
+        catch java.lang.Exception from label33 to label34 with label68;
+        catch java.lang.Throwable from label31 to label34 with label67;
+        catch java.lang.Throwable from label35 to label36 with label65;
+        catch java.lang.OutOfMemoryError from label38 to label39 with label52;
+        catch java.lang.OutOfMemoryError from label40 to label41 with label52;
+        catch java.lang.OutOfMemoryError from label42 to label43 with label52;
+        catch java.lang.OutOfMemoryError from label44 to label45 with label52;
+        catch java.lang.OutOfMemoryError from label46 to label47 with label52;
+        catch java.lang.OutOfMemoryError from label48 to label49 with label52;
+        catch java.lang.OutOfMemoryError from label50 to label51 with label52;
+        catch java.lang.Throwable from label54 to label55 with label67;
+        catch java.lang.Throwable from label56 to label57 with label58;
+        catch java.lang.Throwable from label61 to label62 with label66;
+    }
+
+    protected void a(java.lang.Integer)
+    {
+        com.seattleclouds.modules.t.w $r0;
+        java.lang.Integer $r1;
+        com.seattleclouds.modules.t.p $r2;
+        android.support.v4.app.ac $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.modules.t.w;
+
+        $r1 := @parameter0: java.lang.Integer;
+
+        specialinvoke $r0.<com.seattleclouds.modules.t.ah: void a(java.lang.Integer)>($r1);
+
+        if $r1 != null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.t.p: android.support.v4.app.ac n()>();
+
+        virtualinvoke $r3.<android.support.v4.app.ac: void setResult(int)>(-1);
+
+        $r2 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.t.p: android.support.v4.app.ac n()>();
+
+        virtualinvoke $r3.<android.support.v4.app.ac: void finish()>();
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.t.w: com.seattleclouds.modules.t.p a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.t.p: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int error>;
+
+        $i1 = virtualinvoke $r1.<java.lang.Integer: int intValue()>();
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,int,int)>($r3, $i0, $i1);
+
+        return;
+    }
+
+    protected java.lang.Object doInBackground(java.lang.Object[])
+    {
+        com.seattleclouds.modules.t.w $r0;
+        java.lang.Integer $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.t.w;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.t.w: java.lang.Integer a(java.lang.Void[])>($r3);
+
+        return $r1;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.t.w $r0;
+        java.lang.Object $r1;
+        java.lang.Integer $r2;
+
+        $r0 := @this: com.seattleclouds.modules.t.w;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.Integer) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.t.w: void a(java.lang.Integer)>($r2);
+
+        return;
+    }
+}

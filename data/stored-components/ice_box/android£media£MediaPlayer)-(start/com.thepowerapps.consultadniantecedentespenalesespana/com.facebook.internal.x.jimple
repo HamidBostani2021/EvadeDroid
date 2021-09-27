@@ -1,0 +1,40 @@
+class com.facebook.internal.x extends java.lang.Object implements com.facebook.internal.bo
+{
+    final com.facebook.internal.w a;
+
+    void <init>(com.facebook.internal.w)
+    {
+        com.facebook.internal.x $r0;
+        com.facebook.internal.w $r1;
+
+        $r0 := @this: com.facebook.internal.x;
+
+        $r1 := @parameter0: com.facebook.internal.w;
+
+        $r0.<com.facebook.internal.x: com.facebook.internal.w a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(android.os.Bundle, com.facebook.FacebookException)
+    {
+        com.facebook.internal.x $r0;
+        android.os.Bundle $r1;
+        com.facebook.FacebookException $r2;
+        com.facebook.internal.w $r3;
+
+        $r0 := @this: com.facebook.internal.x;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 := @parameter1: com.facebook.FacebookException;
+
+        $r3 = $r0.<com.facebook.internal.x: com.facebook.internal.w a>;
+
+        staticinvoke <com.facebook.internal.w: void a(com.facebook.internal.w,android.os.Bundle,com.facebook.FacebookException)>($r3, null, $r2);
+
+        return;
+    }
+}

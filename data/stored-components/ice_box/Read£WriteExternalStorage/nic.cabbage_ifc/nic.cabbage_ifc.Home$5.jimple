@@ -1,0 +1,58 @@
+class nic.cabbage_ifc.Home$5 extends java.lang.Object implements android.widget.AdapterView$OnItemSelectedListener
+{
+    final nic.cabbage_ifc.Home this$0;
+
+    void <init>(nic.cabbage_ifc.Home)
+    {
+        nic.cabbage_ifc.Home$5 $r0;
+        nic.cabbage_ifc.Home $r1;
+
+        $r0 := @this: nic.cabbage_ifc.Home$5;
+
+        $r1 := @parameter0: nic.cabbage_ifc.Home;
+
+        $r0.<nic.cabbage_ifc.Home$5: nic.cabbage_ifc.Home this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onItemSelected(android.widget.AdapterView, android.view.View, int, long)
+    {
+        nic.cabbage_ifc.Home$5 $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        nic.cabbage_ifc.Home $r3;
+
+        $r0 := @this: nic.cabbage_ifc.Home$5;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = $r0.<nic.cabbage_ifc.Home$5: nic.cabbage_ifc.Home this$0>;
+
+        virtualinvoke $r3.<nic.cabbage_ifc.Home: void callSpinner4()>();
+
+        return;
+    }
+
+    public void onNothingSelected(android.widget.AdapterView)
+    {
+        nic.cabbage_ifc.Home$5 $r0;
+        android.widget.AdapterView $r1;
+
+        $r0 := @this: nic.cabbage_ifc.Home$5;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        return;
+    }
+}

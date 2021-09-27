@@ -1,0 +1,290 @@
+public class com.seattleclouds.modules.esignature.c extends com.google.android.bitmapfun.a
+{
+    public static final java.lang.String d;
+    private com.seattleclouds.modules.esignature.utility.Transaction e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private java.lang.ref.WeakReference h;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/modules/esignature/c;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.modules.esignature.c: java.lang.String d> = $r0;
+
+        return;
+    }
+
+    public void <init>(com.seattleclouds.modules.esignature.a, com.seattleclouds.modules.esignature.utility.Transaction, java.lang.String)
+    {
+        com.seattleclouds.modules.esignature.c $r0;
+        com.seattleclouds.modules.esignature.a $r1;
+        com.seattleclouds.modules.esignature.utility.Transaction $r2;
+        java.lang.String $r3;
+        java.lang.ref.WeakReference $r4;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.c;
+
+        $r1 := @parameter0: com.seattleclouds.modules.esignature.a;
+
+        $r2 := @parameter1: com.seattleclouds.modules.esignature.utility.Transaction;
+
+        $r3 := @parameter2: java.lang.String;
+
+        specialinvoke $r0.<com.google.android.bitmapfun.a: void <init>()>();
+
+        $r4 = new java.lang.ref.WeakReference;
+
+        specialinvoke $r4.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        $r0.<com.seattleclouds.modules.esignature.c: java.lang.ref.WeakReference h> = $r4;
+
+        $r0.<com.seattleclouds.modules.esignature.c: com.seattleclouds.modules.esignature.utility.Transaction e> = $r2;
+
+        $r0.<com.seattleclouds.modules.esignature.c: java.lang.String g> = $r3;
+
+        return;
+    }
+
+    protected volatile java.lang.Object a(java.lang.Object[])
+    {
+        com.seattleclouds.modules.esignature.c $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.c;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.esignature.c: java.lang.String a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected transient java.lang.String a(java.lang.String[])
+    {
+        com.seattleclouds.modules.esignature.c $r0;
+        java.lang.String[] $r1;
+        java.lang.String $r2, $r5, $r6;
+        com.seattleclouds.api.b $r3;
+        com.seattleclouds.modules.esignature.utility.Transaction $r4;
+        org.json.JSONObject $r7;
+        boolean $z0;
+        java.lang.Throwable $r8;
+        android.content.Context $r9;
+        android.content.res.Resources $r10;
+        int $i0;
+        org.json.JSONException $r11;
+        com.seattleclouds.api.HttpResponseException $r12;
+        com.seattleclouds.api.SCApiException $r13;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.c;
+
+        $r1 := @parameter0: java.lang.String[];
+
+     label01:
+        $r3 = staticinvoke <com.seattleclouds.api.b: com.seattleclouds.api.b a()>();
+
+     label02:
+        $r4 = $r0.<com.seattleclouds.modules.esignature.c: com.seattleclouds.modules.esignature.utility.Transaction e>;
+
+     label03:
+        $r5 = virtualinvoke $r4.<com.seattleclouds.modules.esignature.utility.Transaction: java.lang.String b()>();
+
+     label04:
+        $r4 = $r0.<com.seattleclouds.modules.esignature.c: com.seattleclouds.modules.esignature.utility.Transaction e>;
+
+     label05:
+        $r6 = virtualinvoke $r4.<com.seattleclouds.modules.esignature.utility.Transaction: java.lang.String c()>();
+
+     label06:
+        $r2 = $r0.<com.seattleclouds.modules.esignature.c: java.lang.String g>;
+
+     label07:
+        $r7 = virtualinvoke $r3.<com.seattleclouds.api.b: org.json.JSONObject a(java.lang.String,java.lang.String,java.lang.String)>($r5, $r6, $r2);
+
+        $r2 = virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("url");
+
+     label08:
+        $r0.<com.seattleclouds.modules.esignature.c: java.lang.String f> = $r2;
+
+     label09:
+        virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("roleId");
+
+        virtualinvoke $r7.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("packageId");
+
+     label10:
+        $r2 = $r0.<com.seattleclouds.modules.esignature.c: java.lang.String f>;
+
+        if $r2 == null goto label13;
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.c: java.lang.String f>;
+
+     label11:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean isEmpty()>();
+
+     label12:
+        if $z0 != 0 goto label13;
+
+        return "OK";
+
+     label13:
+        return null;
+
+     label14:
+        $r8 := @caughtexception;
+
+        $r9 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.bt: boolean i(android.content.Context)>($r9);
+
+        if $z0 != 0 goto label15;
+
+        $r10 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int common_no_network>;
+
+        $r2 = virtualinvoke $r10.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        return $r2;
+
+     label15:
+        $r10 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int common_network_error>;
+
+        $r2 = virtualinvoke $r10.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        return $r2;
+
+     label16:
+        $r11 := @caughtexception;
+
+        $r10 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        $r2 = virtualinvoke $r10.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        return $r2;
+
+     label17:
+        $r12 := @caughtexception;
+
+        $r10 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        $r2 = virtualinvoke $r10.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        return $r2;
+
+     label18:
+        $r13 := @caughtexception;
+
+        $r10 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int common_internal_server_error>;
+
+        $r2 = virtualinvoke $r10.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        return $r2;
+
+        catch java.io.IOException from label01 to label02 with label14;
+        catch java.io.IOException from label03 to label04 with label14;
+        catch java.io.IOException from label05 to label06 with label14;
+        catch java.io.IOException from label07 to label08 with label14;
+        catch java.io.IOException from label09 to label10 with label14;
+        catch java.io.IOException from label11 to label12 with label14;
+        catch org.json.JSONException from label01 to label02 with label16;
+        catch org.json.JSONException from label03 to label04 with label16;
+        catch org.json.JSONException from label05 to label06 with label16;
+        catch org.json.JSONException from label07 to label08 with label16;
+        catch org.json.JSONException from label09 to label10 with label16;
+        catch org.json.JSONException from label11 to label12 with label16;
+        catch com.seattleclouds.api.HttpResponseException from label01 to label02 with label17;
+        catch com.seattleclouds.api.HttpResponseException from label03 to label04 with label17;
+        catch com.seattleclouds.api.HttpResponseException from label05 to label06 with label17;
+        catch com.seattleclouds.api.HttpResponseException from label07 to label08 with label17;
+        catch com.seattleclouds.api.HttpResponseException from label09 to label10 with label17;
+        catch com.seattleclouds.api.HttpResponseException from label11 to label12 with label17;
+        catch com.seattleclouds.api.SCApiException from label01 to label02 with label18;
+        catch com.seattleclouds.api.SCApiException from label03 to label04 with label18;
+        catch com.seattleclouds.api.SCApiException from label05 to label06 with label18;
+        catch com.seattleclouds.api.SCApiException from label07 to label08 with label18;
+        catch com.seattleclouds.api.SCApiException from label09 to label10 with label18;
+        catch com.seattleclouds.api.SCApiException from label11 to label12 with label18;
+    }
+
+    protected volatile void a(java.lang.Object)
+    {
+        com.seattleclouds.modules.esignature.c $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.c;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.esignature.c: void a(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void a(java.lang.String)
+    {
+        com.seattleclouds.modules.esignature.c $r0;
+        java.lang.String $r1;
+        java.lang.ref.WeakReference $r2;
+        java.lang.Object $r3;
+        com.seattleclouds.modules.esignature.a $r4;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.esignature.c;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<com.google.android.bitmapfun.a: void a(java.lang.Object)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.esignature.c: java.lang.ref.WeakReference h>;
+
+        $r3 = virtualinvoke $r2.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r4 = (com.seattleclouds.modules.esignature.a) $r3;
+
+        if $r4 == null goto label3;
+
+        if $r1 == null goto label2;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>("OK");
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.esignature.c: java.lang.String f>;
+
+        interfaceinvoke $r4.<com.seattleclouds.modules.esignature.a: void b(java.lang.String)>($r1);
+
+        return;
+
+     label1:
+        interfaceinvoke $r4.<com.seattleclouds.modules.esignature.a: void a(java.lang.String)>($r1);
+
+        return;
+
+     label2:
+        interfaceinvoke $r4.<com.seattleclouds.modules.esignature.a: void a(java.lang.String)>(null);
+
+     label3:
+        return;
+    }
+}

@@ -1,0 +1,78 @@
+public class com.seattleclouds.api.SCApiException extends java.lang.Exception
+{
+    private static final long serialVersionUID;
+    private org.json.JSONObject details;
+
+    public void <init>(java.lang.String, org.json.JSONObject)
+    {
+        com.seattleclouds.api.SCApiException $r0;
+        java.lang.String $r1;
+        org.json.JSONObject $r2;
+
+        $r0 := @this: com.seattleclouds.api.SCApiException;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: org.json.JSONObject;
+
+        specialinvoke $r0.<java.lang.Exception: void <init>(java.lang.String)>($r1);
+
+        $r0.<com.seattleclouds.api.SCApiException: org.json.JSONObject details> = $r2;
+
+        return;
+    }
+
+    public org.json.JSONObject getDetails()
+    {
+        com.seattleclouds.api.SCApiException $r0;
+        org.json.JSONObject r1;
+
+        $r0 := @this: com.seattleclouds.api.SCApiException;
+
+        r1 = $r0.<com.seattleclouds.api.SCApiException: org.json.JSONObject details>;
+
+        return r1;
+    }
+
+    public int getErrorCode()
+    {
+        com.seattleclouds.api.SCApiException $r0;
+        org.json.JSONObject $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.api.SCApiException;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.api.SCApiException: org.json.JSONObject getDetails()>();
+
+        $i0 = virtualinvoke $r1.<org.json.JSONObject: int getInt(java.lang.String)>("code");
+
+        return $i0;
+    }
+
+    public java.lang.String getErrorReason()
+    {
+        com.seattleclouds.api.SCApiException $r0;
+        org.json.JSONObject $r1;
+        org.json.JSONArray $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.api.SCApiException;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.api.SCApiException: org.json.JSONObject getDetails()>();
+
+        $r2 = virtualinvoke $r1.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("errors");
+
+        $r1 = virtualinvoke $r2.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>(0);
+
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("reason");
+
+        return $r3;
+    }
+
+    public static void <clinit>()
+    {
+        <com.seattleclouds.api.SCApiException: long serialVersionUID> = 1L;
+
+        return;
+    }
+}

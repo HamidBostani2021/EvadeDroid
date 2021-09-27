@@ -1,0 +1,242 @@
+public class com.hrishiz.memo.DebugActivity extends android.app.Activity
+{
+    java.lang.String[] errMessage;
+    java.lang.String[] exceptionType;
+    public android.content.Intent ipcIntent;
+    public android.content.Intent ipcResultIntent;
+
+    public void <init>()
+    {
+        com.hrishiz.memo.DebugActivity $r0;
+        java.lang.String[] $r1;
+
+        $r0 := @this: com.hrishiz.memo.DebugActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        $r1 = newarray (java.lang.String)[5];
+
+        $r1[0] = "StringIndexOutOfBoundsException";
+
+        $r1[1] = "IndexOutOfBoundsException";
+
+        $r1[2] = "ArithmeticException";
+
+        $r1[3] = "NumberFormatException";
+
+        $r1[4] = "ActivityNotFoundException";
+
+        $r0.<com.hrishiz.memo.DebugActivity: java.lang.String[] exceptionType> = $r1;
+
+        $r1 = newarray (java.lang.String)[5];
+
+        $r1[0] = "Invalid string operation\n";
+
+        $r1[1] = "Invalid list operation\n";
+
+        $r1[2] = "Invalid arithmetical operation\n";
+
+        $r1[3] = "Invalid toNumber block operation\n";
+
+        $r1[4] = "Invalid intent operation";
+
+        $r0.<com.hrishiz.memo.DebugActivity: java.lang.String[] errMessage> = $r1;
+
+        return;
+    }
+
+    protected void onCreate(android.os.Bundle)
+    {
+        com.hrishiz.memo.DebugActivity $r0;
+        android.os.Bundle $r1;
+        int $i0, $i1;
+        android.content.Intent $r2;
+        java.lang.String $r3, $r4, $r5, $r11;
+        java.lang.String[] $r6, $r7;
+        boolean $z0;
+        android.app.AlertDialog$Builder $r8;
+        com.hrishiz.memo.DebugActivity$1 $r9;
+        android.app.AlertDialog $r10;
+        java.lang.StringBuilder $r12;
+        java.lang.Exception $r13;
+
+        $r0 := @this: com.hrishiz.memo.DebugActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $i0 = 0;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        $r2 = virtualinvoke $r0.<com.hrishiz.memo.DebugActivity: android.content.Intent getIntent()>();
+
+        $r3 = "";
+
+        if $r2 == null goto label14;
+
+        $r4 = virtualinvoke $r2.<android.content.Intent: java.lang.String getStringExtra(java.lang.String)>("error");
+
+        $r5 = $r4;
+
+        $r6 = virtualinvoke $r4.<java.lang.String: java.lang.String[] split(java.lang.String)>("\n");
+
+     label01:
+        $r7 = $r0.<com.hrishiz.memo.DebugActivity: java.lang.String[] exceptionType>;
+
+        $i1 = lengthof $r7;
+
+     label02:
+        if $i0 < $i1 goto label06;
+
+     label03:
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean isEmpty()>();
+
+     label04:
+        if $z0 == 0 goto label14;
+
+     label05:
+        $r8 = new android.app.AlertDialog$Builder;
+
+        specialinvoke $r8.<android.app.AlertDialog$Builder: void <init>(android.content.Context)>($r0);
+
+        virtualinvoke $r8.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setTitle(java.lang.CharSequence)>("An error occured");
+
+        virtualinvoke $r8.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setMessage(java.lang.CharSequence)>($r5);
+
+        $r9 = new com.hrishiz.memo.DebugActivity$1;
+
+        specialinvoke $r9.<com.hrishiz.memo.DebugActivity$1: void <init>(com.hrishiz.memo.DebugActivity)>($r0);
+
+        virtualinvoke $r8.<android.app.AlertDialog$Builder: android.app.AlertDialog$Builder setNeutralButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)>("End Application", $r9);
+
+        $r10 = virtualinvoke $r8.<android.app.AlertDialog$Builder: android.app.AlertDialog create()>();
+
+        virtualinvoke $r10.<android.app.AlertDialog: void show()>();
+
+        return;
+
+     label06:
+        $r4 = $r6[0];
+
+        $r7 = $r0.<com.hrishiz.memo.DebugActivity: java.lang.String[] exceptionType>;
+
+        $r11 = $r7[$i0];
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean contains(java.lang.CharSequence)>($r11);
+
+     label07:
+        if $z0 == 0 goto label12;
+
+     label08:
+        $r7 = $r0.<com.hrishiz.memo.DebugActivity: java.lang.String[] errMessage>;
+
+        $r3 = $r7[$i0];
+
+        $r4 = $r6[0];
+
+        $r7 = $r0.<com.hrishiz.memo.DebugActivity: java.lang.String[] exceptionType>;
+
+        $r11 = $r7[$i0];
+
+        $i1 = virtualinvoke $r4.<java.lang.String: int indexOf(java.lang.String)>($r11);
+
+        $r7 = $r0.<com.hrishiz.memo.DebugActivity: java.lang.String[] exceptionType>;
+
+        $r4 = $r7[$i0];
+
+        $i0 = virtualinvoke $r4.<java.lang.String: int length()>();
+
+     label09:
+        $i0 = $i0 + $i1;
+
+        $r12 = new java.lang.StringBuilder;
+
+     label10:
+        $r4 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r3);
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>(java.lang.String)>($r4);
+
+        $r4 = $r6[0];
+
+        $r11 = $r6[0];
+
+        $i1 = virtualinvoke $r11.<java.lang.String: int length()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.String: java.lang.String substring(int,int)>($i0, $i1);
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4);
+
+        $r4 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label11:
+        $r3 = $r4;
+
+        goto label03;
+
+     label12:
+        $i0 = $i0 + 1;
+
+        goto label01;
+
+     label13:
+        $r13 := @caughtexception;
+
+        $r5 = $r3;
+
+        goto label05;
+
+     label14:
+        $r5 = $r3;
+
+        goto label05;
+
+        catch java.lang.Exception from label01 to label02 with label13;
+        catch java.lang.Exception from label03 to label04 with label13;
+        catch java.lang.Exception from label06 to label07 with label13;
+        catch java.lang.Exception from label08 to label09 with label13;
+        catch java.lang.Exception from label10 to label11 with label13;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.hrishiz.memo.DebugActivity this;
+        android.content.Intent $r0;
+
+        this := @this: com.hrishiz.memo.DebugActivity;
+
+        $r0 = this.<com.hrishiz.memo.DebugActivity: android.content.Intent ipcIntent>;
+
+        return $r0;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.hrishiz.memo.DebugActivity this;
+        android.content.Intent parameter0;
+
+        this := @this: com.hrishiz.memo.DebugActivity;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        this.<com.hrishiz.memo.DebugActivity: android.content.Intent ipcIntent> = parameter0;
+
+        return;
+    }
+
+    public void setResult(int, android.content.Intent)
+    {
+        com.hrishiz.memo.DebugActivity this;
+        int parameter0;
+        android.content.Intent parameter1;
+
+        this := @this: com.hrishiz.memo.DebugActivity;
+
+        parameter0 := @parameter0: int;
+
+        parameter1 := @parameter1: android.content.Intent;
+
+        this.<com.hrishiz.memo.DebugActivity: android.content.Intent ipcResultIntent> = parameter1;
+
+        return;
+    }
+}

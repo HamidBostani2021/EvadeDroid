@@ -1,0 +1,501 @@
+abstract class com.facebook.login.LoginMethodHandler extends java.lang.Object implements android.os.Parcelable
+{
+    java.util.Map a;
+    protected com.facebook.login.LoginClient b;
+
+    void <init>(android.os.Parcel)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        android.os.Parcel $r1;
+        java.util.Map $r2;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = staticinvoke <com.facebook.internal.ax: java.util.Map a(android.os.Parcel)>($r1);
+
+        $r0.<com.facebook.login.LoginMethodHandler: java.util.Map a> = $r2;
+
+        return;
+    }
+
+    void <init>(com.facebook.login.LoginClient)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        com.facebook.login.LoginClient $r1;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.facebook.login.LoginMethodHandler: com.facebook.login.LoginClient b> = $r1;
+
+        return;
+    }
+
+    static com.facebook.AccessToken a(android.os.Bundle, com.facebook.AccessTokenSource, java.lang.String)
+    {
+        android.os.Bundle $r0;
+        com.facebook.AccessTokenSource $r1;
+        java.lang.String $r2, $r6, $r7;
+        java.util.Date $r3, $r4;
+        java.util.ArrayList $r5;
+        boolean $z0;
+        com.facebook.AccessToken $r8;
+
+        $r0 := @parameter0: android.os.Bundle;
+
+        $r1 := @parameter1: com.facebook.AccessTokenSource;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r3 = new java.util.Date;
+
+        specialinvoke $r3.<java.util.Date: void <init>(long)>(0L);
+
+        $r4 = staticinvoke <com.facebook.internal.ax: java.util.Date a(android.os.Bundle,java.lang.String,java.util.Date)>($r0, "com.facebook.platform.extra.EXPIRES_SECONDS_SINCE_EPOCH", $r3);
+
+        $r5 = virtualinvoke $r0.<android.os.Bundle: java.util.ArrayList getStringArrayList(java.lang.String)>("com.facebook.platform.extra.PERMISSIONS");
+
+        $r6 = virtualinvoke $r0.<android.os.Bundle: java.lang.String getString(java.lang.String)>("com.facebook.platform.extra.ACCESS_TOKEN");
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.String)>($r6);
+
+        if $z0 == 0 goto label1;
+
+        return null;
+
+     label1:
+        $r7 = virtualinvoke $r0.<android.os.Bundle: java.lang.String getString(java.lang.String)>("com.facebook.platform.extra.USER_ID");
+
+        $r8 = new com.facebook.AccessToken;
+
+        $r3 = new java.util.Date;
+
+        specialinvoke $r3.<java.util.Date: void <init>()>();
+
+        specialinvoke $r8.<com.facebook.AccessToken: void <init>(java.lang.String,java.lang.String,java.lang.String,java.util.Collection,java.util.Collection,com.facebook.AccessTokenSource,java.util.Date,java.util.Date)>($r6, $r2, $r7, $r5, null, $r1, $r4, $r3);
+
+        return $r8;
+    }
+
+    public static com.facebook.AccessToken a(java.util.Collection, android.os.Bundle, com.facebook.AccessTokenSource, java.lang.String)
+    {
+        java.util.Collection $r0;
+        android.os.Bundle $r1;
+        com.facebook.AccessTokenSource $r2;
+        java.lang.String $r3, $r5, $r6;
+        java.util.Date $r4, r12;
+        boolean $z0;
+        java.lang.Object $r7;
+        java.lang.String[] $r8;
+        java.util.List $r9;
+        java.util.ArrayList $r10, r11;
+        com.facebook.AccessToken r13;
+
+        $r0 := @parameter0: java.util.Collection;
+
+        $r1 := @parameter1: android.os.Bundle;
+
+        $r2 := @parameter2: com.facebook.AccessTokenSource;
+
+        $r3 := @parameter3: java.lang.String;
+
+        $r4 = new java.util.Date;
+
+        specialinvoke $r4.<java.util.Date: void <init>()>();
+
+        $r4 = staticinvoke <com.facebook.internal.ax: java.util.Date a(android.os.Bundle,java.lang.String,java.util.Date)>($r1, "expires_in", $r4);
+
+        $r5 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("access_token");
+
+        $r6 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("granted_scopes");
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.String)>($r6);
+
+        if $z0 != 0 goto label5;
+
+        $r10 = new java.util.ArrayList;
+
+        $r7 = $r10;
+
+        $r8 = virtualinvoke $r6.<java.lang.String: java.lang.String[] split(java.lang.String)>(",");
+
+        $r9 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($r8);
+
+        specialinvoke $r10.<java.util.ArrayList: void <init>(java.util.Collection)>($r9);
+
+     label1:
+        $r6 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("denied_scopes");
+
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.String)>($r6);
+
+        if $z0 != 0 goto label4;
+
+        r11 = new java.util.ArrayList;
+
+        $r10 = r11;
+
+        $r8 = virtualinvoke $r6.<java.lang.String: java.lang.String[] split(java.lang.String)>(",");
+
+        $r9 = staticinvoke <java.util.Arrays: java.util.List asList(java.lang.Object[])>($r8);
+
+        specialinvoke r11.<java.util.ArrayList: void <init>(java.util.Collection)>($r9);
+
+     label2:
+        $z0 = staticinvoke <com.facebook.internal.ax: boolean a(java.lang.String)>($r5);
+
+        if $z0 == 0 goto label3;
+
+        return null;
+
+     label3:
+        $r6 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("signed_request");
+
+        $r6 = staticinvoke <com.facebook.login.LoginMethodHandler: java.lang.String c(java.lang.String)>($r6);
+
+        r13 = new com.facebook.AccessToken;
+
+        r12 = new java.util.Date;
+
+        specialinvoke r12.<java.util.Date: void <init>()>();
+
+        $r0 = (java.util.Collection) $r7;
+
+        specialinvoke r13.<com.facebook.AccessToken: void <init>(java.lang.String,java.lang.String,java.lang.String,java.util.Collection,java.util.Collection,com.facebook.AccessTokenSource,java.util.Date,java.util.Date)>($r5, $r3, $r6, $r0, $r10, $r2, $r4, r12);
+
+        return r13;
+
+     label4:
+        $r10 = null;
+
+        goto label2;
+
+     label5:
+        $r7 = $r0;
+
+        goto label1;
+    }
+
+    private static java.lang.String c(java.lang.String)
+    {
+        java.lang.String $r0;
+        boolean $z0;
+        com.facebook.FacebookException $r1;
+        java.lang.String[] $r2;
+        int $i0;
+        byte[] $r3;
+        org.json.JSONObject $r4;
+        org.json.JSONException $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @parameter0: java.lang.String;
+
+        if $r0 == null goto label01;
+
+        $z0 = virtualinvoke $r0.<java.lang.String: boolean isEmpty()>();
+
+        if $z0 == 0 goto label02;
+
+     label01:
+        $r1 = new com.facebook.FacebookException;
+
+        specialinvoke $r1.<com.facebook.FacebookException: void <init>(java.lang.String)>("Authorization response does not contain the signed_request");
+
+        throw $r1;
+
+     label02:
+        $r2 = virtualinvoke $r0.<java.lang.String: java.lang.String[] split(java.lang.String)>("\\.");
+
+     label03:
+        $i0 = lengthof $r2;
+
+        if $i0 != 2 goto label11;
+
+        $r0 = $r2[1];
+
+     label04:
+        $r3 = staticinvoke <android.util.Base64: byte[] decode(java.lang.String,int)>($r0, 0);
+
+     label05:
+        $r0 = new java.lang.String;
+
+     label06:
+        specialinvoke $r0.<java.lang.String: void <init>(byte[],java.lang.String)>($r3, "UTF-8");
+
+     label07:
+        $r4 = new org.json.JSONObject;
+
+     label08:
+        specialinvoke $r4.<org.json.JSONObject: void <init>(java.lang.String)>($r0);
+
+        $r0 = virtualinvoke $r4.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("user_id");
+
+     label09:
+        return $r0;
+
+     label10:
+        $r5 := @caughtexception;
+
+     label11:
+        $r1 = new com.facebook.FacebookException;
+
+        specialinvoke $r1.<com.facebook.FacebookException: void <init>(java.lang.String)>("Failed to retrieve user_id from signed_request");
+
+        throw $r1;
+
+     label12:
+        $r6 := @caughtexception;
+
+        goto label11;
+
+        catch java.io.UnsupportedEncodingException from label02 to label03 with label12;
+        catch java.io.UnsupportedEncodingException from label04 to label05 with label12;
+        catch java.io.UnsupportedEncodingException from label06 to label07 with label12;
+        catch java.io.UnsupportedEncodingException from label08 to label09 with label12;
+        catch org.json.JSONException from label02 to label03 with label10;
+        catch org.json.JSONException from label04 to label05 with label10;
+        catch org.json.JSONException from label06 to label07 with label10;
+        catch org.json.JSONException from label08 to label09 with label10;
+    }
+
+    abstract java.lang.String a();
+
+    protected java.lang.String a(java.lang.String)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        java.lang.String $r1;
+        org.json.JSONObject $r2;
+        org.json.JSONException $r3;
+        java.lang.StringBuilder $r4;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new org.json.JSONObject;
+
+        specialinvoke $r2.<org.json.JSONObject: void <init>()>();
+
+     label1:
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("0_auth_logger_id", $r1);
+
+        $r1 = virtualinvoke $r0.<com.facebook.login.LoginMethodHandler: java.lang.String a()>();
+
+        virtualinvoke $r2.<org.json.JSONObject: org.json.JSONObject put(java.lang.String,java.lang.Object)>("3_method", $r1);
+
+        virtualinvoke $r0.<com.facebook.login.LoginMethodHandler: void a(org.json.JSONObject)>($r2);
+
+     label2:
+        $r1 = virtualinvoke $r2.<org.json.JSONObject: java.lang.String toString()>();
+
+        return $r1;
+
+     label3:
+        $r3 := @caughtexception;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error creating client state json: ");
+
+        $r1 = virtualinvoke $r3.<org.json.JSONException: java.lang.String getMessage()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("LoginMethodHandler", $r1);
+
+        goto label2;
+
+        catch org.json.JSONException from label1 to label2 with label3;
+    }
+
+    void a(com.facebook.login.LoginClient)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        com.facebook.login.LoginClient $r1, $r2;
+        com.facebook.FacebookException $r3;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: com.facebook.login.LoginClient;
+
+        $r2 = $r0.<com.facebook.login.LoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        if $r2 == null goto label1;
+
+        $r3 = new com.facebook.FacebookException;
+
+        specialinvoke $r3.<com.facebook.FacebookException: void <init>(java.lang.String)>("Can\'t set LoginClient if it is already set.");
+
+        throw $r3;
+
+     label1:
+        $r0.<com.facebook.login.LoginMethodHandler: com.facebook.login.LoginClient b> = $r1;
+
+        return;
+    }
+
+    protected void a(java.lang.String, java.lang.Object)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        java.lang.String $r1, $r4;
+        java.lang.Object $r2;
+        java.util.Map $r3;
+        java.util.HashMap $r5;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $r3 = $r0.<com.facebook.login.LoginMethodHandler: java.util.Map a>;
+
+        if $r3 != null goto label1;
+
+        $r5 = new java.util.HashMap;
+
+        specialinvoke $r5.<java.util.HashMap: void <init>()>();
+
+        $r0.<com.facebook.login.LoginMethodHandler: java.util.Map a> = $r5;
+
+     label1:
+        $r3 = $r0.<com.facebook.login.LoginMethodHandler: java.util.Map a>;
+
+        if $r2 != null goto label3;
+
+        $r4 = null;
+
+     label2:
+        interfaceinvoke $r3.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r4);
+
+        return;
+
+     label3:
+        $r4 = virtualinvoke $r2.<java.lang.Object: java.lang.String toString()>();
+
+        goto label2;
+    }
+
+    void a(org.json.JSONObject)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        org.json.JSONObject $r1;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        return;
+    }
+
+    boolean a(int, int, android.content.Intent)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        return 0;
+    }
+
+    abstract boolean a(com.facebook.login.LoginClient$Request);
+
+    void b()
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        return;
+    }
+
+    protected void b(java.lang.String)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        java.lang.String $r1, $r5;
+        android.os.Bundle $r2;
+        com.facebook.login.LoginClient $r3;
+        com.facebook.login.LoginClient$Request $r4;
+        android.support.v4.app.ac $r6;
+        com.facebook.appevents.AppEventsLogger $r7;
+        long $l0;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.facebook.login.LoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r4 = virtualinvoke $r3.<com.facebook.login.LoginClient: com.facebook.login.LoginClient$Request c()>();
+
+        $r5 = virtualinvoke $r4.<com.facebook.login.LoginClient$Request: java.lang.String d()>();
+
+        $r3 = $r0.<com.facebook.login.LoginMethodHandler: com.facebook.login.LoginClient b>;
+
+        $r6 = virtualinvoke $r3.<com.facebook.login.LoginClient: android.support.v4.app.ac b()>();
+
+        $r7 = staticinvoke <com.facebook.appevents.AppEventsLogger: com.facebook.appevents.AppEventsLogger a(android.content.Context,java.lang.String)>($r6, $r5);
+
+        $r2 = new android.os.Bundle;
+
+        specialinvoke $r2.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("fb_web_login_e2e", $r1);
+
+        $l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        virtualinvoke $r2.<android.os.Bundle: void putLong(java.lang.String,long)>("fb_web_login_switchback_time", $l0);
+
+        virtualinvoke $r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("app_id", $r5);
+
+        virtualinvoke $r7.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>("fb_dialogs_web_login_dialog_complete", null, $r2);
+
+        return;
+    }
+
+    boolean d()
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        return 0;
+    }
+
+    public void writeToParcel(android.os.Parcel, int)
+    {
+        com.facebook.login.LoginMethodHandler $r0;
+        android.os.Parcel $r1;
+        int $i0;
+        java.util.Map $r2;
+
+        $r0 := @this: com.facebook.login.LoginMethodHandler;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.facebook.login.LoginMethodHandler: java.util.Map a>;
+
+        staticinvoke <com.facebook.internal.ax: void a(android.os.Parcel,java.util.Map)>($r1, $r2);
+
+        return;
+    }
+}

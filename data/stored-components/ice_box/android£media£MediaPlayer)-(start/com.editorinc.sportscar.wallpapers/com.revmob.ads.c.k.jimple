@@ -1,0 +1,148 @@
+final class com.revmob.ads.c.k extends java.lang.Object implements android.media.MediaPlayer$OnPreparedListener
+{
+    private com.revmob.ads.c.b a;
+
+    void <init>(com.revmob.ads.c.b)
+    {
+        com.revmob.ads.c.k $r0;
+        com.revmob.ads.c.b $r1;
+
+        $r0 := @this: com.revmob.ads.c.k;
+
+        $r1 := @parameter0: com.revmob.ads.c.b;
+
+        $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public final void onPrepared(android.media.MediaPlayer)
+    {
+        com.revmob.ads.c.k $r0;
+        android.media.MediaPlayer $r1;
+        com.revmob.ads.c.b $r2;
+        float $f0, $f1;
+        android.widget.VideoView $r3;
+        boolean $z0;
+        java.lang.Boolean $r4;
+        android.widget.TextView $r5;
+        java.lang.StringBuilder $r6;
+        java.lang.Object[] $r7;
+        int $i0, $i1;
+        com.revmob.FullscreenActivity $r8;
+        java.lang.Integer $r9;
+        java.lang.String $r10;
+        android.os.Handler $r11;
+        java.lang.Runnable $r12;
+
+        $r0 := @this: com.revmob.ads.c.k;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r2.<com.revmob.ads.c.b: android.media.MediaPlayer i> = $r1;
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $f0 = staticinvoke <com.revmob.ads.c.b: float b(com.revmob.ads.c.b)>($r2);
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $f1 = staticinvoke <com.revmob.ads.c.b: float b(com.revmob.ads.c.b)>($r2);
+
+        virtualinvoke $r1.<android.media.MediaPlayer: void setVolume(float,float)>($f0, $f1);
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r3 = $r2.<com.revmob.ads.c.b: android.widget.VideoView b>;
+
+        virtualinvoke $r3.<android.widget.VideoView: boolean requestFocus()>();
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $z0 = $r2.<com.revmob.ads.c.b: boolean f>;
+
+        if $z0 != 0 goto label2;
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r4 = $r2.<com.revmob.ads.c.b: java.lang.Boolean l>;
+
+        $z0 = virtualinvoke $r4.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 != 0 goto label1;
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        staticinvoke <com.revmob.ads.c.b: void a(com.revmob.ads.c.b,java.lang.String)>($r2, "start");
+
+     label1:
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r2.<com.revmob.ads.c.b: boolean f> = 1;
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r3 = $r2.<com.revmob.ads.c.b: android.widget.VideoView b>;
+
+        virtualinvoke $r3.<android.widget.VideoView: void start()>();
+
+     label2:
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r5 = $r2.<com.revmob.ads.c.b: android.widget.TextView c>;
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r7 = newarray (java.lang.Object)[1];
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $i0 = virtualinvoke $r2.<com.revmob.ads.c.b: int c()>();
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r8 = $r2.<com.revmob.ads.c.b: com.revmob.FullscreenActivity h>;
+
+        $i1 = virtualinvoke $r8.<com.revmob.FullscreenActivity: int g()>();
+
+        $i0 = $i0 - $i1;
+
+        $i0 = $i0 / 1000;
+
+        $r9 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r7[0] = $r9;
+
+        $r10 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>("%02d", $r7);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r10);
+
+        $r10 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>($r10);
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r11 = $r2.<com.revmob.ads.c.b: android.os.Handler g>;
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r12 = staticinvoke <com.revmob.ads.c.b: java.lang.Runnable c(com.revmob.ads.c.b)>($r2);
+
+        virtualinvoke $r11.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r12, 1000L);
+
+        $r2 = $r0.<com.revmob.ads.c.k: com.revmob.ads.c.b a>;
+
+        $r12 = staticinvoke <com.revmob.ads.c.b: java.lang.Runnable d(com.revmob.ads.c.b)>($r2);
+
+        interfaceinvoke $r12.<java.lang.Runnable: void run()>();
+
+        return;
+    }
+}

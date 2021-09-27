@@ -1,0 +1,36 @@
+class com.seattleclouds.modules.videolist.h extends java.lang.Object
+{
+    final android.widget.TextView a;
+    final android.widget.TextView b;
+    final android.widget.ImageView c;
+    final android.widget.ImageView d;
+
+    void <init>(android.widget.TextView, android.widget.TextView, android.widget.ImageView, android.widget.ImageView)
+    {
+        com.seattleclouds.modules.videolist.h $r0;
+        android.widget.TextView $r1, $r2;
+        android.widget.ImageView $r3, $r4;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.h;
+
+        $r1 := @parameter0: android.widget.TextView;
+
+        $r2 := @parameter1: android.widget.TextView;
+
+        $r3 := @parameter2: android.widget.ImageView;
+
+        $r4 := @parameter3: android.widget.ImageView;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.videolist.h: android.widget.TextView a> = $r1;
+
+        $r0.<com.seattleclouds.modules.videolist.h: android.widget.TextView b> = $r2;
+
+        $r0.<com.seattleclouds.modules.videolist.h: android.widget.ImageView c> = $r3;
+
+        $r0.<com.seattleclouds.modules.videolist.h: android.widget.ImageView d> = $r4;
+
+        return;
+    }
+}

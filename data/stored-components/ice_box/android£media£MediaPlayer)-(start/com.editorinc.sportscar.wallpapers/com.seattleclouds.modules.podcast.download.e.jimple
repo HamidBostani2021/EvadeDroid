@@ -1,0 +1,37 @@
+class com.seattleclouds.modules.podcast.download.e extends java.util.TimerTask
+{
+    final com.seattleclouds.modules.podcast.download.a a;
+
+    void <init>(com.seattleclouds.modules.podcast.download.a)
+    {
+        com.seattleclouds.modules.podcast.download.e $r0;
+        com.seattleclouds.modules.podcast.download.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.podcast.download.a;
+
+        $r0.<com.seattleclouds.modules.podcast.download.e: com.seattleclouds.modules.podcast.download.a a> = $r1;
+
+        specialinvoke $r0.<java.util.TimerTask: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.podcast.download.e $r0;
+        java.net.HttpURLConnection $r1;
+        com.seattleclouds.modules.podcast.download.a $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.e;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.e: com.seattleclouds.modules.podcast.download.a a>;
+
+        $r1 = staticinvoke <com.seattleclouds.modules.podcast.download.a: java.net.HttpURLConnection a(com.seattleclouds.modules.podcast.download.a)>($r2);
+
+        virtualinvoke $r1.<java.net.HttpURLConnection: void disconnect()>();
+
+        return;
+    }
+}

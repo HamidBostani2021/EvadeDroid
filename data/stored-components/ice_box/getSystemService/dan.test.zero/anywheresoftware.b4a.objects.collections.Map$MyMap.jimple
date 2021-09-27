@@ -1,0 +1,365 @@
+public class anywheresoftware.b4a.objects.collections.Map$MyMap extends java.lang.Object implements java.util.Map
+{
+    private java.util.Map$Entry currentEntry;
+    private java.util.LinkedHashMap innerMap;
+    private java.util.Iterator iterator;
+    private int iteratorPosition;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.util.LinkedHashMap $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r1 = new java.util.LinkedHashMap;
+
+        specialinvoke $r1.<java.util.LinkedHashMap: void <init>()>();
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap> = $r1;
+
+        return;
+    }
+
+    private java.util.Map$Entry getEntry(int)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        int $i0, $i1, $i2;
+        java.util.Iterator $r1;
+        java.lang.Object $r2;
+        java.util.Map$Entry $r3;
+        java.util.LinkedHashMap $r4;
+        java.util.Set $r5;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator>;
+
+        if $r1 == null goto label1;
+
+        $i1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: int iteratorPosition>;
+
+        if $i1 == $i0 goto label1;
+
+        $i2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: int iteratorPosition>;
+
+        $i1 = $i0 + -1;
+
+        if $i2 != $i1 goto label4;
+
+        $r1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator>;
+
+        $r2 = interfaceinvoke $r1.<java.util.Iterator: java.lang.Object next()>();
+
+        $r3 = (java.util.Map$Entry) $r2;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Map$Entry currentEntry> = $r3;
+
+        $i1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: int iteratorPosition>;
+
+        $i1 = $i1 + 1;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: int iteratorPosition> = $i1;
+
+     label1:
+        $r1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator>;
+
+        if $r1 != null goto label3;
+
+        $r4 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r5 = virtualinvoke $r4.<java.util.LinkedHashMap: java.util.Set entrySet()>();
+
+        $r1 = interfaceinvoke $r5.<java.util.Set: java.util.Iterator iterator()>();
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator> = $r1;
+
+        $i1 = 0;
+
+     label2:
+        if $i1 <= $i0 goto label5;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: int iteratorPosition> = $i0;
+
+     label3:
+        $r3 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Map$Entry currentEntry>;
+
+        return $r3;
+
+     label4:
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator> = null;
+
+        goto label1;
+
+     label5:
+        $r1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator>;
+
+        $r2 = interfaceinvoke $r1.<java.util.Iterator: java.lang.Object next()>();
+
+        $r3 = (java.util.Map$Entry) $r2;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Map$Entry currentEntry> = $r3;
+
+        $i1 = $i1 + 1;
+
+        goto label2;
+    }
+
+    public void clear()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.util.LinkedHashMap $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator> = null;
+
+        $r1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        virtualinvoke $r1.<java.util.LinkedHashMap: void clear()>();
+
+        return;
+    }
+
+    public boolean containsKey(java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.lang.Object $r1;
+        boolean $z0;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $z0 = virtualinvoke $r2.<java.util.LinkedHashMap: boolean containsKey(java.lang.Object)>($r1);
+
+        return $z0;
+    }
+
+    public boolean containsValue(java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.lang.Object $r1;
+        boolean $z0;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $z0 = virtualinvoke $r2.<java.util.LinkedHashMap: boolean containsValue(java.lang.Object)>($r1);
+
+        return $z0;
+    }
+
+    public java.util.Set entrySet()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.util.Set $r1;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r1 = virtualinvoke $r2.<java.util.LinkedHashMap: java.util.Set entrySet()>();
+
+        return $r1;
+    }
+
+    public java.lang.Object get(java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.lang.Object $r1;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r1 = virtualinvoke $r2.<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>($r1);
+
+        return $r1;
+    }
+
+    public java.lang.Object getKey(int)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        int $i0;
+        java.util.Map$Entry $r1;
+        java.lang.Object $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $i0 := @parameter0: int;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Map$Entry getEntry(int)>($i0);
+
+        $r2 = interfaceinvoke $r1.<java.util.Map$Entry: java.lang.Object getKey()>();
+
+        return $r2;
+    }
+
+    public java.lang.Object getValue(int)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        int $i0;
+        java.util.Map$Entry $r1;
+        java.lang.Object $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $i0 := @parameter0: int;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Map$Entry getEntry(int)>($i0);
+
+        $r2 = interfaceinvoke $r1.<java.util.Map$Entry: java.lang.Object getValue()>();
+
+        return $r2;
+    }
+
+    public boolean isEmpty()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        boolean $z0;
+        java.util.LinkedHashMap $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $z0 = virtualinvoke $r1.<java.util.LinkedHashMap: boolean isEmpty()>();
+
+        return $z0;
+    }
+
+    public java.util.Set keySet()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.util.Set $r1;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r1 = virtualinvoke $r2.<java.util.LinkedHashMap: java.util.Set keySet()>();
+
+        return $r1;
+    }
+
+    public java.lang.Object put(java.lang.Object, java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.lang.Object $r1, $r2;
+        java.util.LinkedHashMap $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator> = null;
+
+        $r3 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r1 = virtualinvoke $r3.<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2);
+
+        return $r1;
+    }
+
+    public void putAll(java.util.Map)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.util.Map $r1;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 := @parameter0: java.util.Map;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator> = null;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        virtualinvoke $r2.<java.util.LinkedHashMap: void putAll(java.util.Map)>($r1);
+
+        return;
+    }
+
+    public java.lang.Object remove(java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.lang.Object $r1;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.Iterator iterator> = null;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r1 = virtualinvoke $r2.<java.util.LinkedHashMap: java.lang.Object remove(java.lang.Object)>($r1);
+
+        return $r1;
+    }
+
+    public int size()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        int $i0;
+        java.util.LinkedHashMap $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r1 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $i0 = virtualinvoke $r1.<java.util.LinkedHashMap: int size()>();
+
+        return $i0;
+    }
+
+    public java.lang.String toString()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.lang.String $r1;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r1 = virtualinvoke $r2.<java.util.LinkedHashMap: java.lang.String toString()>();
+
+        return $r1;
+    }
+
+    public java.util.Collection values()
+    {
+        anywheresoftware.b4a.objects.collections.Map$MyMap $r0;
+        java.util.Collection $r1;
+        java.util.LinkedHashMap $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.collections.Map$MyMap;
+
+        $r2 = $r0.<anywheresoftware.b4a.objects.collections.Map$MyMap: java.util.LinkedHashMap innerMap>;
+
+        $r1 = virtualinvoke $r2.<java.util.LinkedHashMap: java.util.Collection values()>();
+
+        return $r1;
+    }
+}

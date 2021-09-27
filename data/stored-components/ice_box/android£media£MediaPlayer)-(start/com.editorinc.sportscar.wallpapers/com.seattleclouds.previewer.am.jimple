@@ -1,0 +1,220 @@
+class com.seattleclouds.previewer.am extends java.lang.Object implements java.lang.Runnable
+{
+    final int a;
+    final org.json.JSONObject b;
+    final com.seattleclouds.previewer.af c;
+
+    void <init>(com.seattleclouds.previewer.af, int, org.json.JSONObject)
+    {
+        com.seattleclouds.previewer.am $r0;
+        com.seattleclouds.previewer.af $r1;
+        int $i0;
+        org.json.JSONObject $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.am;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.af;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: org.json.JSONObject;
+
+        $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c> = $r1;
+
+        $r0.<com.seattleclouds.previewer.am: int a> = $i0;
+
+        $r0.<com.seattleclouds.previewer.am: org.json.JSONObject b> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.previewer.am $r0;
+        com.seattleclouds.previewer.af $r1;
+        android.support.v4.app.ac $r2;
+        int $i0, $i1;
+        boolean $z0;
+        android.widget.Button $r3;
+        android.view.View $r4;
+        org.json.JSONObject $r5;
+        java.lang.String $r6;
+        org.json.JSONException $r7;
+
+        $r0 := @this: com.seattleclouds.previewer.am;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.previewer.af: android.support.v4.app.ac n()>();
+
+        if $r2 != null goto label01;
+
+        return;
+
+     label01:
+        $i0 = $r0.<com.seattleclouds.previewer.am: int a>;
+
+        if $i0 == 0 goto label09;
+
+        $i0 = $r0.<com.seattleclouds.previewer.am: int a>;
+
+        if $i0 != -1001 goto label05;
+
+        $z0 = staticinvoke <com.seattleclouds.util.bt: boolean i(android.content.Context)>($r2);
+
+        if $z0 != 0 goto label04;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $i0 = <com.seattleclouds.l: int previewer_pn_network_error>;
+
+        $i1 = <com.seattleclouds.l: int common_no_network>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void a(com.seattleclouds.previewer.af,int,int)>($r1, $i0, $i1);
+
+     label02:
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.af: android.widget.Button h(com.seattleclouds.previewer.af)>($r1);
+
+        virtualinvoke $r3.<android.widget.Button: void setVisibility(int)>(4);
+
+     label03:
+        $i0 = $r0.<com.seattleclouds.previewer.am: int a>;
+
+        if $i0 == -1001 goto label19;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void j(com.seattleclouds.previewer.af)>($r1);
+
+        return;
+
+     label04:
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $i0 = <com.seattleclouds.l: int previewer_pn_network_error>;
+
+        $i1 = <com.seattleclouds.l: int common_network_error>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void a(com.seattleclouds.previewer.af,int,int)>($r1, $i0, $i1);
+
+        goto label02;
+
+     label05:
+        $i0 = $r0.<com.seattleclouds.previewer.am: int a>;
+
+        if $i0 != 500 goto label06;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $i0 = <com.seattleclouds.l: int previewer_pn_server_error>;
+
+        $i1 = <com.seattleclouds.l: int previewer_try_again>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void a(com.seattleclouds.previewer.af,int,int)>($r1, $i0, $i1);
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.af: android.widget.Button h(com.seattleclouds.previewer.af)>($r1);
+
+        virtualinvoke $r3.<android.widget.Button: void setVisibility(int)>(4);
+
+        goto label03;
+
+     label06:
+        $i0 = $r0.<com.seattleclouds.previewer.am: int a>;
+
+        if $i0 != 404 goto label08;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $r4 = staticinvoke <com.seattleclouds.previewer.af: android.view.View i(com.seattleclouds.previewer.af)>($r1);
+
+        $i0 = virtualinvoke $r4.<android.view.View: int getVisibility()>();
+
+        if $i0 == 0 goto label07;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void b(com.seattleclouds.previewer.af)>($r1);
+
+        goto label03;
+
+     label07:
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $i0 = <com.seattleclouds.l: int previewer_pn_server_error>;
+
+        $i1 = <com.seattleclouds.l: int previewer_try_again>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void a(com.seattleclouds.previewer.af,int,int)>($r1, $i0, $i1);
+
+        goto label03;
+
+     label08:
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $i0 = <com.seattleclouds.l: int previewer_pn_server_error>;
+
+        $i1 = <com.seattleclouds.l: int previewer_try_again>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void a(com.seattleclouds.previewer.af,int,int)>($r1, $i0, $i1);
+
+        goto label03;
+
+     label09:
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $r5 = $r0.<com.seattleclouds.previewer.am: org.json.JSONObject b>;
+
+     label10:
+        staticinvoke <com.seattleclouds.previewer.af: void a(com.seattleclouds.previewer.af,org.json.JSONObject)>($r1, $r5);
+
+     label11:
+        $r5 = $r0.<com.seattleclouds.previewer.am: org.json.JSONObject b>;
+
+     label12:
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("status");
+
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("queued");
+
+     label13:
+        if $z0 != 0 goto label19;
+
+     label14:
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>("processing");
+
+     label15:
+        if $z0 != 0 goto label19;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+     label16:
+        staticinvoke <com.seattleclouds.previewer.af: void j(com.seattleclouds.previewer.af)>($r1);
+
+     label17:
+        return;
+
+     label18:
+        $r7 := @caughtexception;
+
+        $r1 = $r0.<com.seattleclouds.previewer.am: com.seattleclouds.previewer.af c>;
+
+        $i0 = <com.seattleclouds.l: int previewer_pn_server_error>;
+
+        $i1 = <com.seattleclouds.l: int previewer_try_again>;
+
+        staticinvoke <com.seattleclouds.previewer.af: void a(com.seattleclouds.previewer.af,int,int)>($r1, $i0, $i1);
+
+     label19:
+        return;
+
+        catch org.json.JSONException from label10 to label11 with label18;
+        catch org.json.JSONException from label12 to label13 with label18;
+        catch org.json.JSONException from label14 to label15 with label18;
+        catch org.json.JSONException from label16 to label17 with label18;
+    }
+}

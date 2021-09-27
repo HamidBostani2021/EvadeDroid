@@ -1,0 +1,37 @@
+class com.facebook.share.internal.c extends java.lang.Object implements java.lang.Runnable
+{
+    final com.facebook.share.internal.DeviceShareDialogFragment a;
+
+    void <init>(com.facebook.share.internal.DeviceShareDialogFragment)
+    {
+        com.facebook.share.internal.c $r0;
+        com.facebook.share.internal.DeviceShareDialogFragment $r1;
+
+        $r0 := @this: com.facebook.share.internal.c;
+
+        $r1 := @parameter0: com.facebook.share.internal.DeviceShareDialogFragment;
+
+        $r0.<com.facebook.share.internal.c: com.facebook.share.internal.DeviceShareDialogFragment a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.facebook.share.internal.c $r0;
+        android.app.Dialog $r1;
+        com.facebook.share.internal.DeviceShareDialogFragment $r2;
+
+        $r0 := @this: com.facebook.share.internal.c;
+
+        $r2 = $r0.<com.facebook.share.internal.c: com.facebook.share.internal.DeviceShareDialogFragment a>;
+
+        $r1 = staticinvoke <com.facebook.share.internal.DeviceShareDialogFragment: android.app.Dialog a(com.facebook.share.internal.DeviceShareDialogFragment)>($r2);
+
+        virtualinvoke $r1.<android.app.Dialog: void dismiss()>();
+
+        return;
+    }
+}

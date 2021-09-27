@@ -1,0 +1,66 @@
+class com.seattleclouds.media.ui.h extends java.lang.Object implements java.lang.Runnable
+{
+    final int a;
+    final com.seattleclouds.media.ui.a b;
+
+    void <init>(com.seattleclouds.media.ui.a, int)
+    {
+        com.seattleclouds.media.ui.h $r0;
+        com.seattleclouds.media.ui.a $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.media.ui.h;
+
+        $r1 := @parameter0: com.seattleclouds.media.ui.a;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.media.ui.h: com.seattleclouds.media.ui.a b> = $r1;
+
+        $r0.<com.seattleclouds.media.ui.h: int a> = $i0;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.media.ui.h $r0;
+        com.seattleclouds.media.ui.a $r1;
+        android.support.v4.media.session.r $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.content.Context $r4;
+        java.lang.String $r5;
+
+        $r0 := @this: com.seattleclouds.media.ui.h;
+
+        $r1 = $r0.<com.seattleclouds.media.ui.h: com.seattleclouds.media.ui.a b>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.r l(com.seattleclouds.media.ui.a)>($r1);
+
+        if $r2 == null goto label1;
+
+        $r3 = new android.os.Bundle;
+
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+
+        $i0 = $r0.<com.seattleclouds.media.ui.h: int a>;
+
+        virtualinvoke $r3.<android.os.Bundle: void putInt(java.lang.String,int)>("KEY_STATE_TRACK_DETAILS", $i0);
+
+        $r1 = $r0.<com.seattleclouds.media.ui.h: com.seattleclouds.media.ui.a b>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.r l(com.seattleclouds.media.ui.a)>($r1);
+
+        $r4 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r5 = staticinvoke <com.seattleclouds.media.i: java.lang.String c(android.content.Context)>($r4);
+
+        virtualinvoke $r2.<android.support.v4.media.session.r: void b(java.lang.String,android.os.Bundle)>($r5, $r3);
+
+     label1:
+        return;
+    }
+}

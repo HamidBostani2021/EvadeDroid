@@ -1,0 +1,177 @@
+class com.seattleclouds.modules.messenger.w extends com.seattleclouds.api.d
+{
+    final com.seattleclouds.modules.messenger.v a;
+
+    public void <init>(com.seattleclouds.modules.messenger.v, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.modules.messenger.w $r0;
+        com.seattleclouds.modules.messenger.v $r1;
+        android.support.v4.app.Fragment $r2;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.w;
+
+        $r1 := @parameter0: com.seattleclouds.modules.messenger.v;
+
+        $r2 := @parameter1: android.support.v4.app.Fragment;
+
+        $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void <init>(android.support.v4.app.Fragment)>($r2);
+
+        return;
+    }
+
+    protected volatile java.lang.Object a(java.lang.Object[])
+    {
+        com.seattleclouds.modules.messenger.w $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.Void[] $r3;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.w;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.Void[]) $r2;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.messenger.w: java.lang.String a(java.lang.Void[])>($r3);
+
+        return "ok";
+    }
+
+    protected transient java.lang.String a(java.lang.Void[])
+    {
+        com.seattleclouds.modules.messenger.w $r0;
+        java.lang.Void[] $r1;
+        com.seattleclouds.modules.messenger.Conversation $r2;
+        com.seattleclouds.modules.messenger.v $r3;
+        java.util.ArrayList $r4;
+        com.seattleclouds.api.b $r5;
+        org.json.JSONObject $r6;
+        org.json.JSONArray $r7;
+        int $i0, $i1;
+        java.lang.String $r8;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.w;
+
+        $r1 := @parameter0: java.lang.Void[];
+
+        $r3 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.messenger.v: java.util.ArrayList a(com.seattleclouds.modules.messenger.v)>($r3);
+
+        virtualinvoke $r4.<java.util.ArrayList: void clear()>();
+
+        $r5 = staticinvoke <com.seattleclouds.api.b: com.seattleclouds.api.b a()>();
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.api.b: org.json.JSONObject h()>();
+
+        $r7 = virtualinvoke $r6.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("items");
+
+        $i0 = 0;
+
+     label1:
+        $i1 = virtualinvoke $r7.<org.json.JSONArray: int length()>();
+
+        if $i0 >= $i1 goto label2;
+
+        $r6 = virtualinvoke $r7.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r2 = new com.seattleclouds.modules.messenger.Conversation;
+
+        specialinvoke $r2.<com.seattleclouds.modules.messenger.Conversation: void <init>()>();
+
+        $r8 = virtualinvoke $r6.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("id");
+
+        $r2.<com.seattleclouds.modules.messenger.Conversation: java.lang.String a> = $r8;
+
+        $r8 = virtualinvoke $r6.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("title");
+
+        $r2.<com.seattleclouds.modules.messenger.Conversation: java.lang.String b> = $r8;
+
+        $r3 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.messenger.v: java.util.ArrayList a(com.seattleclouds.modules.messenger.v)>($r3);
+
+        virtualinvoke $r4.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label2:
+        return "ok";
+    }
+
+    protected void c(java.lang.String)
+    {
+        com.seattleclouds.modules.messenger.w $r0;
+        java.lang.String $r1;
+        com.seattleclouds.modules.messenger.o $r2;
+        com.seattleclouds.modules.messenger.v $r3;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.w;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        staticinvoke <com.seattleclouds.modules.messenger.v: boolean a(com.seattleclouds.modules.messenger.v,boolean)>($r3, 1);
+
+        $r3 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.messenger.v: com.seattleclouds.modules.messenger.o b(com.seattleclouds.modules.messenger.v)>($r3);
+
+        virtualinvoke $r2.<com.seattleclouds.modules.messenger.o: void notifyDataSetChanged()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.messenger.v: void Z()>();
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        staticinvoke <com.seattleclouds.modules.messenger.v: void a(com.seattleclouds.modules.messenger.v,boolean,boolean)>($r3, 0, 1);
+
+        return;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.modules.messenger.w $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.w;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.messenger.w: void c(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.modules.messenger.w $r0;
+        com.seattleclouds.modules.messenger.v $r1;
+
+        $r0 := @this: com.seattleclouds.modules.messenger.w;
+
+        $r1 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        staticinvoke <com.seattleclouds.modules.messenger.v: void a(com.seattleclouds.modules.messenger.v,boolean,boolean)>($r1, 1, 0);
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void onPreExecute()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.messenger.w: com.seattleclouds.modules.messenger.v a>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.messenger.v: void Z()>();
+
+        return;
+    }
+}

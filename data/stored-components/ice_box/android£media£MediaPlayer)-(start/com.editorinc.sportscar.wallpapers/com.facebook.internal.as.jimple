@@ -1,0 +1,323 @@
+public abstract class com.facebook.internal.as extends java.lang.Object implements android.content.ServiceConnection
+{
+    private final android.content.Context a;
+    private final android.os.Handler b;
+    private com.facebook.internal.au c;
+    private boolean d;
+    private android.os.Messenger e;
+    private int f;
+    private int g;
+    private final java.lang.String h;
+    private final int i;
+
+    public void <init>(android.content.Context, int, int, int, java.lang.String)
+    {
+        com.facebook.internal.as $r0;
+        int $i0, $i1, $i2;
+        java.lang.String $r1;
+        android.content.Context $r2, $r3;
+        com.facebook.internal.at $r4;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r3 := @parameter0: android.content.Context;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $r1 := @parameter4: java.lang.String;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r2 = virtualinvoke $r3.<android.content.Context: android.content.Context getApplicationContext()>();
+
+        if $r2 == null goto label1;
+
+        $r3 = $r2;
+
+     label1:
+        $r0.<com.facebook.internal.as: android.content.Context a> = $r3;
+
+        $r0.<com.facebook.internal.as: int f> = 65536;
+
+        $r0.<com.facebook.internal.as: int g> = 65537;
+
+        $r0.<com.facebook.internal.as: java.lang.String h> = $r1;
+
+        $r0.<com.facebook.internal.as: int i> = 20121101;
+
+        $r4 = new com.facebook.internal.at;
+
+        specialinvoke $r4.<com.facebook.internal.at: void <init>(com.facebook.internal.as)>($r0);
+
+        $r0.<com.facebook.internal.as: android.os.Handler b> = $r4;
+
+        return;
+    }
+
+    private void b(android.os.Bundle)
+    {
+        com.facebook.internal.as $r0;
+        android.os.Bundle $r1;
+        boolean $z0;
+        com.facebook.internal.au $r2;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $z0 = $r0.<com.facebook.internal.as: boolean d>;
+
+        if $z0 != 0 goto label1;
+
+        return;
+
+     label1:
+        $r0.<com.facebook.internal.as: boolean d> = 0;
+
+        $r2 = $r0.<com.facebook.internal.as: com.facebook.internal.au c>;
+
+        if $r2 == null goto label2;
+
+        interfaceinvoke $r2.<com.facebook.internal.au: void a(android.os.Bundle)>($r1);
+
+     label2:
+        return;
+    }
+
+    private void c()
+    {
+        com.facebook.internal.as $r0;
+        android.os.Message $r1;
+        android.os.Bundle $r2;
+        java.lang.String $r3;
+        int $i0;
+        android.os.Messenger $r4;
+        android.os.Handler $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r2 = new android.os.Bundle;
+
+        specialinvoke $r2.<android.os.Bundle: void <init>()>();
+
+        $r3 = $r0.<com.facebook.internal.as: java.lang.String h>;
+
+        virtualinvoke $r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("com.facebook.platform.extra.APPLICATION_ID", $r3);
+
+        virtualinvoke $r0.<com.facebook.internal.as: void a(android.os.Bundle)>($r2);
+
+        $i0 = $r0.<com.facebook.internal.as: int f>;
+
+        $r1 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int)>(null, $i0);
+
+        $i0 = $r0.<com.facebook.internal.as: int i>;
+
+        $r1.<android.os.Message: int arg1> = $i0;
+
+        virtualinvoke $r1.<android.os.Message: void setData(android.os.Bundle)>($r2);
+
+        $r4 = new android.os.Messenger;
+
+        $r5 = $r0.<com.facebook.internal.as: android.os.Handler b>;
+
+        specialinvoke $r4.<android.os.Messenger: void <init>(android.os.Handler)>($r5);
+
+        $r1.<android.os.Message: android.os.Messenger replyTo> = $r4;
+
+        $r4 = $r0.<com.facebook.internal.as: android.os.Messenger e>;
+
+     label1:
+        virtualinvoke $r4.<android.os.Messenger: void send(android.os.Message)>($r1);
+
+     label2:
+        return;
+
+     label3:
+        $r6 := @caughtexception;
+
+        specialinvoke $r0.<com.facebook.internal.as: void b(android.os.Bundle)>(null);
+
+        return;
+
+        catch android.os.RemoteException from label1 to label2 with label3;
+    }
+
+    protected abstract void a(android.os.Bundle);
+
+    protected void a(android.os.Message)
+    {
+        com.facebook.internal.as $r0;
+        android.os.Message $r1;
+        int $i0, $i1;
+        android.os.Bundle $r2;
+        java.lang.String $r3;
+        android.content.Context $r4;
+        java.lang.Throwable $r5;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r1 := @parameter0: android.os.Message;
+
+        $i0 = $r1.<android.os.Message: int what>;
+
+        $i1 = $r0.<com.facebook.internal.as: int g>;
+
+        if $i0 != $i1 goto label6;
+
+        $r2 = virtualinvoke $r1.<android.os.Message: android.os.Bundle getData()>();
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("com.facebook.platform.status.ERROR_TYPE");
+
+        if $r3 == null goto label4;
+
+        specialinvoke $r0.<com.facebook.internal.as: void b(android.os.Bundle)>(null);
+
+     label1:
+        $r4 = $r0.<com.facebook.internal.as: android.content.Context a>;
+
+     label2:
+        virtualinvoke $r4.<android.content.Context: void unbindService(android.content.ServiceConnection)>($r0);
+
+     label3:
+        return;
+
+     label4:
+        specialinvoke $r0.<com.facebook.internal.as: void b(android.os.Bundle)>($r2);
+
+        goto label1;
+
+     label5:
+        $r5 := @caughtexception;
+
+     label6:
+        return;
+
+        catch java.lang.IllegalArgumentException from label2 to label3 with label5;
+    }
+
+    public void a(com.facebook.internal.au)
+    {
+        com.facebook.internal.as $r0;
+        com.facebook.internal.au $r1;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r1 := @parameter0: com.facebook.internal.au;
+
+        $r0.<com.facebook.internal.as: com.facebook.internal.au c> = $r1;
+
+        return;
+    }
+
+    public boolean a()
+    {
+        com.facebook.internal.as $r0;
+        boolean $z0;
+        int $i0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $z0 = $r0.<com.facebook.internal.as: boolean d>;
+
+        if $z0 == 0 goto label1;
+
+        return 0;
+
+     label1:
+        $i0 = $r0.<com.facebook.internal.as: int i>;
+
+        $i0 = staticinvoke <com.facebook.internal.al: int b(int)>($i0);
+
+        if $i0 == -1 goto label2;
+
+        $r1 = $r0.<com.facebook.internal.as: android.content.Context a>;
+
+        $r2 = staticinvoke <com.facebook.internal.al: android.content.Intent a(android.content.Context)>($r1);
+
+        if $r2 == null goto label2;
+
+        $r0.<com.facebook.internal.as: boolean d> = 1;
+
+        $r1 = $r0.<com.facebook.internal.as: android.content.Context a>;
+
+        virtualinvoke $r1.<android.content.Context: boolean bindService(android.content.Intent,android.content.ServiceConnection,int)>($r2, $r0, 1);
+
+        return 1;
+
+     label2:
+        return 0;
+    }
+
+    public void b()
+    {
+        com.facebook.internal.as $r0;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r0.<com.facebook.internal.as: boolean d> = 0;
+
+        return;
+    }
+
+    public void onServiceConnected(android.content.ComponentName, android.os.IBinder)
+    {
+        com.facebook.internal.as $r0;
+        android.content.ComponentName $r1;
+        android.os.IBinder $r2;
+        android.os.Messenger $r3;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r1 := @parameter0: android.content.ComponentName;
+
+        $r2 := @parameter1: android.os.IBinder;
+
+        $r3 = new android.os.Messenger;
+
+        specialinvoke $r3.<android.os.Messenger: void <init>(android.os.IBinder)>($r2);
+
+        $r0.<com.facebook.internal.as: android.os.Messenger e> = $r3;
+
+        specialinvoke $r0.<com.facebook.internal.as: void c()>();
+
+        return;
+    }
+
+    public void onServiceDisconnected(android.content.ComponentName)
+    {
+        com.facebook.internal.as $r0;
+        android.content.ComponentName $r1;
+        android.content.Context $r2;
+        java.lang.Throwable $r3;
+
+        $r0 := @this: com.facebook.internal.as;
+
+        $r1 := @parameter0: android.content.ComponentName;
+
+        $r0.<com.facebook.internal.as: android.os.Messenger e> = null;
+
+        $r2 = $r0.<com.facebook.internal.as: android.content.Context a>;
+
+     label1:
+        virtualinvoke $r2.<android.content.Context: void unbindService(android.content.ServiceConnection)>($r0);
+
+     label2:
+        specialinvoke $r0.<com.facebook.internal.as: void b(android.os.Bundle)>(null);
+
+        return;
+
+     label3:
+        $r3 := @caughtexception;
+
+        goto label2;
+
+        catch java.lang.IllegalArgumentException from label1 to label2 with label3;
+    }
+}

@@ -1,0 +1,83 @@
+class com.seattleclouds.modules.v.c extends java.lang.Object implements android.view.ViewTreeObserver$OnGlobalLayoutListener
+{
+    final com.seattleclouds.modules.v.a a;
+
+    void <init>(com.seattleclouds.modules.v.a)
+    {
+        com.seattleclouds.modules.v.c $r0;
+        com.seattleclouds.modules.v.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.v.c;
+
+        $r1 := @parameter0: com.seattleclouds.modules.v.a;
+
+        $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onGlobalLayout()
+    {
+        com.seattleclouds.modules.v.c $r0;
+        com.seattleclouds.modules.v.a $r1, $r2;
+        android.widget.ImageView $r3;
+        int $i0;
+        java.lang.Integer $r4;
+        android.view.ViewTreeObserver $r5;
+        android.view.ViewTreeObserver$OnGlobalLayoutListener $r6;
+
+        $r0 := @this: com.seattleclouds.modules.v.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.v.a: android.widget.ImageView a(com.seattleclouds.modules.v.a)>($r2);
+
+        $i0 = virtualinvoke $r3.<android.widget.ImageView: int getWidth()>();
+
+        staticinvoke <com.seattleclouds.modules.v.a: int b(com.seattleclouds.modules.v.a,int)>($r1, $i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.v.a: android.widget.ImageView a(com.seattleclouds.modules.v.a)>($r2);
+
+        $i0 = virtualinvoke $r3.<android.widget.ImageView: int getHeight()>();
+
+        staticinvoke <com.seattleclouds.modules.v.a: int c(com.seattleclouds.modules.v.a,int)>($r1, $i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.v.a: android.widget.ImageView a(com.seattleclouds.modules.v.a)>($r1);
+
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(-1);
+
+        virtualinvoke $r3.<android.widget.ImageView: void setTag(java.lang.Object)>($r4);
+
+        $r1 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r2 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.v.a: int b(com.seattleclouds.modules.v.a)>($r2);
+
+        staticinvoke <com.seattleclouds.modules.v.a: void a(com.seattleclouds.modules.v.a,int)>($r1, $i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.v.a: android.widget.ImageView a(com.seattleclouds.modules.v.a)>($r1);
+
+        $r5 = virtualinvoke $r3.<android.widget.ImageView: android.view.ViewTreeObserver getViewTreeObserver()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.v.c: com.seattleclouds.modules.v.a a>;
+
+        $r6 = $r1.<com.seattleclouds.modules.v.a: android.view.ViewTreeObserver$OnGlobalLayoutListener a>;
+
+        staticinvoke <com.seattleclouds.util.bl: void a(android.view.ViewTreeObserver,android.view.ViewTreeObserver$OnGlobalLayoutListener)>($r5, $r6);
+
+        return;
+    }
+}

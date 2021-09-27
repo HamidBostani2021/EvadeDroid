@@ -1,0 +1,90 @@
+class com.seattleclouds.modules.goaltracker.n extends java.lang.Object implements android.app.DatePickerDialog$OnDateSetListener
+{
+    final java.util.Calendar a;
+    final com.seattleclouds.modules.goaltracker.j b;
+
+    void <init>(com.seattleclouds.modules.goaltracker.j, java.util.Calendar)
+    {
+        com.seattleclouds.modules.goaltracker.n $r0;
+        com.seattleclouds.modules.goaltracker.j $r1;
+        java.util.Calendar $r2;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.n;
+
+        $r1 := @parameter0: com.seattleclouds.modules.goaltracker.j;
+
+        $r2 := @parameter1: java.util.Calendar;
+
+        $r0.<com.seattleclouds.modules.goaltracker.n: com.seattleclouds.modules.goaltracker.j b> = $r1;
+
+        $r0.<com.seattleclouds.modules.goaltracker.n: java.util.Calendar a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onDateSet(android.widget.DatePicker, int, int, int)
+    {
+        com.seattleclouds.modules.goaltracker.n $r0;
+        android.widget.DatePicker $r1;
+        int $i0, $i1, $i2;
+        java.util.Calendar $r2;
+        com.seattleclouds.modules.goaltracker.j $r3;
+        java.util.Date $r4;
+        java.text.SimpleDateFormat $r5;
+        java.util.Locale $r6;
+        android.widget.TextView $r7;
+        java.lang.String $r8;
+
+        $r0 := @this: com.seattleclouds.modules.goaltracker.n;
+
+        $r1 := @parameter0: android.widget.DatePicker;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.n: java.util.Calendar a>;
+
+        virtualinvoke $r2.<java.util.Calendar: void set(int,int)>(1, $i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.n: java.util.Calendar a>;
+
+        virtualinvoke $r2.<java.util.Calendar: void set(int,int)>(2, $i1);
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.n: java.util.Calendar a>;
+
+        virtualinvoke $r2.<java.util.Calendar: void set(int,int)>(5, $i2);
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.n: com.seattleclouds.modules.goaltracker.j b>;
+
+        $r2 = $r0.<com.seattleclouds.modules.goaltracker.n: java.util.Calendar a>;
+
+        $r4 = virtualinvoke $r2.<java.util.Calendar: java.util.Date getTime()>();
+
+        staticinvoke <com.seattleclouds.modules.goaltracker.j: java.util.Date a(com.seattleclouds.modules.goaltracker.j,java.util.Date)>($r3, $r4);
+
+        $r5 = new java.text.SimpleDateFormat;
+
+        $r6 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        specialinvoke $r5.<java.text.SimpleDateFormat: void <init>(java.lang.String,java.util.Locale)>("yyyy-MM-dd", $r6);
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.n: com.seattleclouds.modules.goaltracker.j b>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.goaltracker.j: android.widget.TextView i(com.seattleclouds.modules.goaltracker.j)>($r3);
+
+        $r3 = $r0.<com.seattleclouds.modules.goaltracker.n: com.seattleclouds.modules.goaltracker.j b>;
+
+        $r4 = staticinvoke <com.seattleclouds.modules.goaltracker.j: java.util.Date e(com.seattleclouds.modules.goaltracker.j)>($r3);
+
+        $r8 = virtualinvoke $r5.<java.text.SimpleDateFormat: java.lang.String format(java.util.Date)>($r4);
+
+        virtualinvoke $r7.<android.widget.TextView: void setText(java.lang.CharSequence)>($r8);
+
+        return;
+    }
+}

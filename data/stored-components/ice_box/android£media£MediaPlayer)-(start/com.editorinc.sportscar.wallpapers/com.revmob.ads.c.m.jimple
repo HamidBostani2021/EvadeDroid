@@ -1,0 +1,37 @@
+final class com.revmob.ads.c.m extends java.lang.Object implements android.media.MediaPlayer$OnCompletionListener
+{
+    private com.revmob.ads.c.b a;
+
+    void <init>(com.revmob.ads.c.b)
+    {
+        com.revmob.ads.c.m $r0;
+        com.revmob.ads.c.b $r1;
+
+        $r0 := @this: com.revmob.ads.c.m;
+
+        $r1 := @parameter0: com.revmob.ads.c.b;
+
+        $r0.<com.revmob.ads.c.m: com.revmob.ads.c.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public final void onCompletion(android.media.MediaPlayer)
+    {
+        com.revmob.ads.c.m $r0;
+        android.media.MediaPlayer $r1;
+        com.revmob.ads.c.b $r2;
+
+        $r0 := @this: com.revmob.ads.c.m;
+
+        $r1 := @parameter0: android.media.MediaPlayer;
+
+        $r2 = $r0.<com.revmob.ads.c.m: com.revmob.ads.c.b a>;
+
+        virtualinvoke $r2.<com.revmob.ads.c.b: void a()>();
+
+        return;
+    }
+}

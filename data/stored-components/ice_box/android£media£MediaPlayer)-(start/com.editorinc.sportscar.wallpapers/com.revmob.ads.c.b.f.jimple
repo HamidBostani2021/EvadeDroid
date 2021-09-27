@@ -1,0 +1,51 @@
+final class com.revmob.ads.c.b.f extends java.lang.Object implements android.view.View$OnClickListener
+{
+    private com.revmob.ads.c.b.a a;
+    private com.revmob.ads.c.b.e b;
+
+    void <init>(com.revmob.ads.c.b.e, com.revmob.ads.c.b.a)
+    {
+        com.revmob.ads.c.b.f $r0;
+        com.revmob.ads.c.b.e $r1;
+        com.revmob.ads.c.b.a $r2;
+
+        $r0 := @this: com.revmob.ads.c.b.f;
+
+        $r1 := @parameter0: com.revmob.ads.c.b.e;
+
+        $r2 := @parameter1: com.revmob.ads.c.b.a;
+
+        $r0.<com.revmob.ads.c.b.f: com.revmob.ads.c.b.e b> = $r1;
+
+        $r0.<com.revmob.ads.c.b.f: com.revmob.ads.c.b.a a> = $r2;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public final void onClick(android.view.View)
+    {
+        com.revmob.ads.c.b.f $r0;
+        android.view.View $r1;
+        android.widget.ImageView $r2;
+        com.revmob.ads.c.b.e $r3;
+        com.revmob.ads.c.b.a $r4;
+
+        $r0 := @this: com.revmob.ads.c.b.f;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r3 = $r0.<com.revmob.ads.c.b.f: com.revmob.ads.c.b.e b>;
+
+        $r2 = staticinvoke <com.revmob.ads.c.b.e: android.widget.ImageView a(com.revmob.ads.c.b.e)>($r3);
+
+        virtualinvoke $r2.<android.widget.ImageView: void setOnClickListener(android.view.View$OnClickListener)>(null);
+
+        $r4 = $r0.<com.revmob.ads.c.b.f: com.revmob.ads.c.b.a a>;
+
+        virtualinvoke $r4.<com.revmob.ads.c.b.a: boolean b()>();
+
+        return;
+    }
+}

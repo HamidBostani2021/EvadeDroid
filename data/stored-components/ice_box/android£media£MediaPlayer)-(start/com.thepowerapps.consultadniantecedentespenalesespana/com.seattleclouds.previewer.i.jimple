@@ -1,0 +1,213 @@
+class com.seattleclouds.previewer.i extends com.seattleclouds.api.d
+{
+    final com.seattleclouds.previewer.f a;
+
+    public void <init>(com.seattleclouds.previewer.f, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.previewer.i $r0;
+        com.seattleclouds.previewer.f $r1;
+        android.support.v4.app.Fragment $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.i;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.f;
+
+        $r2 := @parameter1: android.support.v4.app.Fragment;
+
+        $r0.<com.seattleclouds.previewer.i: com.seattleclouds.previewer.f a> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void <init>(android.support.v4.app.Fragment)>($r2);
+
+        return;
+    }
+
+    protected volatile java.lang.Object a(java.lang.Object[])
+    {
+        com.seattleclouds.previewer.i $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.i;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.previewer.i: java.lang.String a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected transient java.lang.String a(java.lang.String[])
+    {
+        com.seattleclouds.previewer.i $r0;
+        java.lang.String[] $r1, $r4;
+        com.seattleclouds.api.b $r2;
+        com.seattleclouds.api.c $r3;
+        java.lang.String $r5;
+        java.util.HashMap $r6, $r7;
+        com.seattleclouds.api.SCApiException $r8;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.previewer.i;
+
+        $r1 := @parameter0: java.lang.String[];
+
+     label1:
+        $r2 = staticinvoke <com.seattleclouds.api.b: com.seattleclouds.api.b a()>();
+
+     label2:
+        $r3 = new com.seattleclouds.api.c;
+
+        $r4 = newarray (java.lang.String)[2];
+
+        $r4[0] = "publisherId";
+
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+        $r4[1] = $r5;
+
+     label3:
+        $r6 = staticinvoke <com.seattleclouds.util.bj: java.util.HashMap a(java.lang.String[])>($r4);
+
+     label4:
+        $r4 = newarray (java.lang.String)[2];
+
+        $r4[0] = "email";
+
+        $r5 = $r1[0];
+
+        $r4[1] = $r5;
+
+     label5:
+        $r7 = staticinvoke <com.seattleclouds.util.bj: java.util.HashMap a(java.lang.String[])>($r4);
+
+        specialinvoke $r3.<com.seattleclouds.api.c: void <init>(java.lang.String,java.lang.String,java.util.Map,java.util.Map)>("POST", "auth/passwordResetTokens", $r6, $r7);
+
+        virtualinvoke $r2.<com.seattleclouds.api.b: org.json.JSONObject a(com.seattleclouds.api.c)>($r3);
+
+     label6:
+        return "ok";
+
+     label7:
+        $r8 := @caughtexception;
+
+        $i0 = virtualinvoke $r8.<com.seattleclouds.api.SCApiException: int getErrorCode()>();
+
+        if $i0 != 404 goto label8;
+
+        $r5 = virtualinvoke $r8.<com.seattleclouds.api.SCApiException: java.lang.String getErrorReason()>();
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>("userDoesntExist");
+
+        if $z0 == 0 goto label8;
+
+        $i0 = <com.seattleclouds.l: int previewer_forgot_password_user_not_found>;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.i: void a(int)>($i0);
+
+        return null;
+
+     label8:
+        throw $r8;
+
+        catch com.seattleclouds.api.SCApiException from label1 to label2 with label7;
+        catch com.seattleclouds.api.SCApiException from label3 to label4 with label7;
+        catch com.seattleclouds.api.SCApiException from label5 to label6 with label7;
+    }
+
+    protected void b(java.lang.String)
+    {
+        com.seattleclouds.previewer.i $r0;
+        java.lang.String $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.previewer.f $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.i;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.previewer.i: com.seattleclouds.previewer.f a>;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.previewer.f: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,java.lang.String,java.lang.String)>($r2, null, $r1);
+
+        return;
+    }
+
+    protected void c(java.lang.String)
+    {
+        com.seattleclouds.previewer.i $r0;
+        java.lang.String $r1, $r5;
+        com.seattleclouds.previewer.f $r2;
+        android.support.v4.app.ac $r3;
+        android.widget.Button $r4;
+        boolean $z0;
+        int $i0;
+        android.widget.Toast $r6;
+
+        $r0 := @this: com.seattleclouds.previewer.i;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.previewer.i: com.seattleclouds.previewer.f a>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.previewer.f: android.support.v4.app.ac n()>();
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.previewer.i: com.seattleclouds.previewer.f a>;
+
+        $r4 = staticinvoke <com.seattleclouds.previewer.f: android.widget.Button b(com.seattleclouds.previewer.f)>($r2);
+
+        virtualinvoke $r4.<android.widget.Button: void setEnabled(boolean)>(1);
+
+        $r2 = $r0.<com.seattleclouds.previewer.i: com.seattleclouds.previewer.f a>;
+
+        staticinvoke <com.seattleclouds.previewer.f: boolean a(com.seattleclouds.previewer.f,boolean)>($r2, 0);
+
+        $r5 = "ok";
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label2;
+
+        $i0 = <com.seattleclouds.l: int previewer_forgot_password_email_sent>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r3, $i0, 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        $r2 = $r0.<com.seattleclouds.previewer.i: com.seattleclouds.previewer.f a>;
+
+        staticinvoke <com.seattleclouds.previewer.f: void c(com.seattleclouds.previewer.f)>($r2);
+
+        virtualinvoke $r3.<android.app.Activity: void finish()>();
+
+     label2:
+        return;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.previewer.i $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.i;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.i: void c(java.lang.String)>($r2);
+
+        return;
+    }
+}

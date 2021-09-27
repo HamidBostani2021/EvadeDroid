@@ -1,0 +1,4283 @@
+public class com.seattleclouds.util.ActivityWrapper extends android.support.v7.a.v
+{
+    private android.app.Activity m;
+
+    public void <init>(android.app.Activity)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        specialinvoke $r0.<android.support.v7.a.v: void <init>()>();
+
+        $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m> = $r1;
+
+        return;
+    }
+
+    public void a(android.app.Activity)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m> = $r1;
+
+        return;
+    }
+
+    public boolean bindService(android.content.Intent, android.content.ServiceConnection, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.content.ServiceConnection $r2;
+        int $i0;
+        boolean $z0;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.content.ServiceConnection;
+
+        $i0 := @parameter2: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r3.<android.app.Activity: boolean bindService(android.content.Intent,android.content.ServiceConnection,int)>($r1, $r2, $i0);
+
+        return $z0;
+    }
+
+    public int checkCallingOrSelfPermission(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r2.<android.app.Activity: int checkCallingOrSelfPermission(java.lang.String)>($r1);
+
+        return $i0;
+    }
+
+    public int checkCallingOrSelfUriPermission(android.net.Uri, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        int $i0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r2.<android.app.Activity: int checkCallingOrSelfUriPermission(android.net.Uri,int)>($r1, $i0);
+
+        return $i0;
+    }
+
+    public int checkCallingPermission(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r2.<android.app.Activity: int checkCallingPermission(java.lang.String)>($r1);
+
+        return $i0;
+    }
+
+    public int checkCallingUriPermission(android.net.Uri, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        int $i0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r2.<android.app.Activity: int checkCallingUriPermission(android.net.Uri,int)>($r1, $i0);
+
+        return $i0;
+    }
+
+    public int checkPermission(java.lang.String, int, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0, $i1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r2.<android.app.Activity: int checkPermission(java.lang.String,int,int)>($r1, $i0, $i1);
+
+        return $i0;
+    }
+
+    public int checkUriPermission(android.net.Uri, int, int, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        int $i0, $i1, $i2;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r2.<android.app.Activity: int checkUriPermission(android.net.Uri,int,int,int)>($r1, $i0, $i1, $i2);
+
+        return $i0;
+    }
+
+    public int checkUriPermission(android.net.Uri, java.lang.String, java.lang.String, int, int, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        java.lang.String $r2, $r3;
+        int $i0, $i1, $i2;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $i0 := @parameter3: int;
+
+        $i1 := @parameter4: int;
+
+        $i2 := @parameter5: int;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r4.<android.app.Activity: int checkUriPermission(android.net.Uri,java.lang.String,java.lang.String,int,int,int)>($r1, $r2, $r3, $i0, $i1, $i2);
+
+        return $i0;
+    }
+
+    public void clearWallpaper()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void clearWallpaper()>();
+
+        return;
+    }
+
+    public void closeContextMenu()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void closeContextMenu()>();
+
+        return;
+    }
+
+    public void closeOptionsMenu()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void closeOptionsMenu()>();
+
+        return;
+    }
+
+    public android.content.Context createConfigurationContext(android.content.res.Configuration)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.res.Configuration $r1;
+        android.content.Context $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.res.Configuration;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.content.Context createConfigurationContext(android.content.res.Configuration)>($r1);
+
+        return $r2;
+    }
+
+    public android.content.Context createDisplayContext(android.view.Display)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.Display $r1;
+        android.content.Context $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.Display;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.content.Context createDisplayContext(android.view.Display)>($r1);
+
+        return $r2;
+    }
+
+    public android.content.Context createPackageContext(java.lang.String, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        android.content.Context $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.content.Context createPackageContext(java.lang.String,int)>($r1, $i0);
+
+        return $r2;
+    }
+
+    public android.app.PendingIntent createPendingResult(int, android.content.Intent, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        android.app.PendingIntent $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.content.Intent;
+
+        $i1 := @parameter2: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.app.PendingIntent createPendingResult(int,android.content.Intent,int)>($i0, $r1, $i1);
+
+        return $r2;
+    }
+
+    public java.lang.String[] databaseList()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String[] $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String[] databaseList()>();
+
+        return $r1;
+    }
+
+    public boolean deleteDatabase(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean deleteDatabase(java.lang.String)>($r1);
+
+        return $z0;
+    }
+
+    public boolean deleteFile(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean deleteFile(java.lang.String)>($r1);
+
+        return $z0;
+    }
+
+    public boolean dispatchGenericMotionEvent(android.view.MotionEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MotionEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean dispatchGenericMotionEvent(android.view.MotionEvent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean dispatchKeyEvent(android.view.KeyEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.KeyEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.KeyEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean dispatchKeyEvent(android.view.KeyEvent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean dispatchKeyShortcutEvent(android.view.KeyEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.KeyEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.KeyEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean dispatchKeyShortcutEvent(android.view.KeyEvent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.accessibility.AccessibilityEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.accessibility.AccessibilityEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean dispatchTouchEvent(android.view.MotionEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MotionEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean dispatchTouchEvent(android.view.MotionEvent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean dispatchTrackballEvent(android.view.MotionEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MotionEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean dispatchTrackballEvent(android.view.MotionEvent)>($r1);
+
+        return $z0;
+    }
+
+    public void enforceCallingOrSelfPermission(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1, $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void enforceCallingOrSelfPermission(java.lang.String,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+
+    public void enforceCallingOrSelfUriPermission(android.net.Uri, int, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        int $i0;
+        java.lang.String $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void enforceCallingOrSelfUriPermission(android.net.Uri,int,java.lang.String)>($r1, $i0, $r2);
+
+        return;
+    }
+
+    public void enforceCallingPermission(java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1, $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void enforceCallingPermission(java.lang.String,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+
+    public void enforceCallingUriPermission(android.net.Uri, int, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        int $i0;
+        java.lang.String $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void enforceCallingUriPermission(android.net.Uri,int,java.lang.String)>($r1, $i0, $r2);
+
+        return;
+    }
+
+    public void enforcePermission(java.lang.String, int, int, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1, $r2;
+        int $i0, $i1;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 := @parameter3: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void enforcePermission(java.lang.String,int,int,java.lang.String)>($r1, $i0, $i1, $r2);
+
+        return;
+    }
+
+    public void enforceUriPermission(android.net.Uri, int, int, int, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        int $i0, $i1, $i2;
+        java.lang.String $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $r2 := @parameter4: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void enforceUriPermission(android.net.Uri,int,int,int,java.lang.String)>($r1, $i0, $i1, $i2, $r2);
+
+        return;
+    }
+
+    public void enforceUriPermission(android.net.Uri, java.lang.String, java.lang.String, int, int, int, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        java.lang.String $r2, $r3, $r4;
+        int $i0, $i1, $i2;
+        android.app.Activity $r5;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $i0 := @parameter3: int;
+
+        $i1 := @parameter4: int;
+
+        $i2 := @parameter5: int;
+
+        $r4 := @parameter6: java.lang.String;
+
+        $r5 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r5.<android.app.Activity: void enforceUriPermission(android.net.Uri,java.lang.String,java.lang.String,int,int,int,java.lang.String)>($r1, $r2, $r3, $i0, $i1, $i2, $r4);
+
+        return;
+    }
+
+    public java.lang.String[] fileList()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String[] $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String[] fileList()>();
+
+        return $r1;
+    }
+
+    public android.view.View findViewById(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.view.View $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.view.View findViewById(int)>($i0);
+
+        return $r1;
+    }
+
+    public void finish()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void finish()>();
+
+        return;
+    }
+
+    public void finishActivity(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void finishActivity(int)>($i0);
+
+        return;
+    }
+
+    public void finishActivityFromChild(android.app.Activity, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void finishActivityFromChild(android.app.Activity,int)>($r1, $i0);
+
+        return;
+    }
+
+    public void finishAffinity()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void finishAffinity()>();
+
+        return;
+    }
+
+    public void finishAfterTransition()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void finishAfterTransition()>();
+
+        return;
+    }
+
+    public void finishAndRemoveTask()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void finishAndRemoveTask()>();
+
+        return;
+    }
+
+    public void finishFromChild(android.app.Activity)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void finishFromChild(android.app.Activity)>($r1);
+
+        return;
+    }
+
+    public android.app.ActionBar getActionBar()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.ActionBar $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.app.ActionBar getActionBar()>();
+
+        return $r1;
+    }
+
+    public android.content.Context getApplicationContext()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Context $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.Context getApplicationContext()>();
+
+        return $r1;
+    }
+
+    public android.content.pm.ApplicationInfo getApplicationInfo()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.pm.ApplicationInfo $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.pm.ApplicationInfo getApplicationInfo()>();
+
+        return $r1;
+    }
+
+    public android.content.res.AssetManager getAssets()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.res.AssetManager $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.res.AssetManager getAssets()>();
+
+        return $r1;
+    }
+
+    public java.lang.String getBasePackageName()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.Class $r1;
+        java.lang.Class[] $r2;
+        java.lang.reflect.Method $r3;
+        android.app.Activity $r4;
+        java.lang.Object[] $r5;
+        java.lang.Object $r6;
+        java.lang.String $r7, $r9;
+        java.lang.StringBuilder $r8;
+        java.lang.Throwable $r10, $r11, $r12, $r13;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = class "Landroid/content/Context;";
+
+        $r2 = newarray (java.lang.Class)[0];
+
+     label01:
+        $r3 = virtualinvoke $r1.<java.lang.Class: java.lang.reflect.Method getDeclaredMethod(java.lang.String,java.lang.Class[])>("getBasePackageName", $r2);
+
+     label02:
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r5 = newarray (java.lang.Object)[0];
+
+     label03:
+        $r6 = virtualinvoke $r3.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>($r4, $r5);
+
+     label04:
+        $r7 = (java.lang.String) $r6;
+
+        $r8 = new java.lang.StringBuilder;
+
+     label05:
+        specialinvoke $r8.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("reflective getBasePackageName result: ");
+
+        $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("ActivityWrapper", $r9);
+
+     label06:
+        return $r7;
+
+     label07:
+        $r10 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ActivityWrapper", "reflective getBasePackageName exception", $r10);
+
+     label08:
+        return null;
+
+     label09:
+        $r11 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ActivityWrapper", "reflective getBasePackageName exception", $r11);
+
+        goto label08;
+
+     label10:
+        $r12 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ActivityWrapper", "reflective getBasePackageName exception", $r12);
+
+        goto label08;
+
+     label11:
+        $r13 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("ActivityWrapper", "reflective getBasePackageName exception", $r13);
+
+        goto label08;
+
+        catch java.lang.NoSuchMethodException from label01 to label02 with label07;
+        catch java.lang.NoSuchMethodException from label03 to label04 with label07;
+        catch java.lang.NoSuchMethodException from label05 to label06 with label07;
+        catch java.lang.IllegalAccessException from label01 to label02 with label09;
+        catch java.lang.IllegalAccessException from label03 to label04 with label09;
+        catch java.lang.IllegalAccessException from label05 to label06 with label09;
+        catch java.lang.IllegalArgumentException from label01 to label02 with label10;
+        catch java.lang.IllegalArgumentException from label03 to label04 with label10;
+        catch java.lang.IllegalArgumentException from label05 to label06 with label10;
+        catch java.lang.reflect.InvocationTargetException from label01 to label02 with label11;
+        catch java.lang.reflect.InvocationTargetException from label03 to label04 with label11;
+        catch java.lang.reflect.InvocationTargetException from label05 to label06 with label11;
+    }
+
+    public java.io.File getCacheDir()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File getCacheDir()>();
+
+        return $r1;
+    }
+
+    public android.content.ComponentName getCallingActivity()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.ComponentName $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.ComponentName getCallingActivity()>();
+
+        return $r1;
+    }
+
+    public java.lang.String getCallingPackage()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String getCallingPackage()>();
+
+        return $r1;
+    }
+
+    public int getChangingConfigurations()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r1.<android.app.Activity: int getChangingConfigurations()>();
+
+        return $i0;
+    }
+
+    public java.lang.ClassLoader getClassLoader()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.ClassLoader $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.ClassLoader getClassLoader()>();
+
+        return $r1;
+    }
+
+    public java.io.File getCodeCacheDir()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File getCodeCacheDir()>();
+
+        return $r1;
+    }
+
+    public android.content.ComponentName getComponentName()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.ComponentName $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.ComponentName getComponentName()>();
+
+        return $r1;
+    }
+
+    public android.content.ContentResolver getContentResolver()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.ContentResolver $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.ContentResolver getContentResolver()>();
+
+        return $r1;
+    }
+
+    public android.transition.Scene getContentScene()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.transition.Scene $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.transition.Scene getContentScene()>();
+
+        return $r1;
+    }
+
+    public android.transition.TransitionManager getContentTransitionManager()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.transition.TransitionManager $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.transition.TransitionManager getContentTransitionManager()>();
+
+        return $r1;
+    }
+
+    public android.view.View getCurrentFocus()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.View $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.view.View getCurrentFocus()>();
+
+        return $r1;
+    }
+
+    public java.io.File getDatabasePath(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        java.io.File $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.io.File getDatabasePath(java.lang.String)>($r1);
+
+        return $r2;
+    }
+
+    public java.io.File getDir(java.lang.String, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        java.io.File $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.io.File getDir(java.lang.String,int)>($r1, $i0);
+
+        return $r2;
+    }
+
+    public java.io.File getExternalCacheDir()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File getExternalCacheDir()>();
+
+        return $r1;
+    }
+
+    public java.io.File[] getExternalCacheDirs()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File[] $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File[] getExternalCacheDirs()>();
+
+        return $r1;
+    }
+
+    public java.io.File getExternalFilesDir(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        java.io.File $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.io.File getExternalFilesDir(java.lang.String)>($r1);
+
+        return $r2;
+    }
+
+    public java.io.File[] getExternalFilesDirs(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        java.io.File[] $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.io.File[] getExternalFilesDirs(java.lang.String)>($r1);
+
+        return $r2;
+    }
+
+    public java.io.File[] getExternalMediaDirs()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File[] $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File[] getExternalMediaDirs()>();
+
+        return $r1;
+    }
+
+    public java.io.File getFileStreamPath(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        java.io.File $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.io.File getFileStreamPath(java.lang.String)>($r1);
+
+        return $r2;
+    }
+
+    public java.io.File getFilesDir()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File getFilesDir()>();
+
+        return $r1;
+    }
+
+    public android.app.FragmentManager getFragmentManager()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.FragmentManager $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.app.FragmentManager getFragmentManager()>();
+
+        return $r1;
+    }
+
+    public android.content.Intent getIntent()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.Intent getIntent()>();
+
+        return $r1;
+    }
+
+    public java.lang.Object getLastNonConfigurationInstance()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.Object $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.Object getLastNonConfigurationInstance()>();
+
+        return $r1;
+    }
+
+    public android.view.LayoutInflater getLayoutInflater()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.LayoutInflater $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.view.LayoutInflater getLayoutInflater()>();
+
+        return $r1;
+    }
+
+    public android.app.LoaderManager getLoaderManager()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.LoaderManager $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.app.LoaderManager getLoaderManager()>();
+
+        return $r1;
+    }
+
+    public java.lang.String getLocalClassName()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String getLocalClassName()>();
+
+        return $r1;
+    }
+
+    public android.os.Looper getMainLooper()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.os.Looper $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.os.Looper getMainLooper()>();
+
+        return $r1;
+    }
+
+    public java.io.File getNoBackupFilesDir()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File getNoBackupFilesDir()>();
+
+        return $r1;
+    }
+
+    public java.io.File getObbDir()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File getObbDir()>();
+
+        return $r1;
+    }
+
+    public java.io.File[] getObbDirs()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.File[] $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.io.File[] getObbDirs()>();
+
+        return $r1;
+    }
+
+    public java.lang.String getPackageCodePath()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String getPackageCodePath()>();
+
+        return $r1;
+    }
+
+    public android.content.pm.PackageManager getPackageManager()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.pm.PackageManager $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.pm.PackageManager getPackageManager()>();
+
+        return $r1;
+    }
+
+    public java.lang.String getPackageName()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String getPackageName()>();
+
+        return $r1;
+    }
+
+    public java.lang.String getPackageResourcePath()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.String getPackageResourcePath()>();
+
+        return $r1;
+    }
+
+    public android.content.Intent getParentActivityIntent()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.Intent getParentActivityIntent()>();
+
+        return $r1;
+    }
+
+    public android.content.SharedPreferences getPreferences(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.content.SharedPreferences $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.SharedPreferences getPreferences(int)>($i0);
+
+        return $r1;
+    }
+
+    public android.net.Uri getReferrer()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.net.Uri getReferrer()>();
+
+        return $r1;
+    }
+
+    public int getRequestedOrientation()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r1.<android.app.Activity: int getRequestedOrientation()>();
+
+        return $i0;
+    }
+
+    public android.content.res.Resources getResources()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.res.Resources $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.res.Resources getResources()>();
+
+        return $r1;
+    }
+
+    public android.content.SharedPreferences getSharedPreferences(java.lang.String, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        android.content.SharedPreferences $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r1, $i0);
+
+        return $r2;
+    }
+
+    public java.lang.Object getSystemService(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        java.lang.Object $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.lang.Object getSystemService(java.lang.String)>($r1);
+
+        return $r2;
+    }
+
+    public int getTaskId()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r1.<android.app.Activity: int getTaskId()>();
+
+        return $i0;
+    }
+
+    public android.content.res.Resources$Theme getTheme()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.res.Resources$Theme $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.content.res.Resources$Theme getTheme()>();
+
+        return $r1;
+    }
+
+    public android.graphics.drawable.Drawable getWallpaper()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.graphics.drawable.Drawable $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.graphics.drawable.Drawable getWallpaper()>();
+
+        return $r1;
+    }
+
+    public int getWallpaperDesiredMinimumHeight()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r1.<android.app.Activity: int getWallpaperDesiredMinimumHeight()>();
+
+        return $i0;
+    }
+
+    public int getWallpaperDesiredMinimumWidth()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $i0 = virtualinvoke $r1.<android.app.Activity: int getWallpaperDesiredMinimumWidth()>();
+
+        return $i0;
+    }
+
+    public android.view.Window getWindow()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.Window $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.view.Window getWindow()>();
+
+        return $r1;
+    }
+
+    public android.view.WindowManager getWindowManager()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.WindowManager $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.view.WindowManager getWindowManager()>();
+
+        return $r1;
+    }
+
+    public void grantUriPermission(java.lang.String, android.net.Uri, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        android.net.Uri $r2;
+        int $i0;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: android.net.Uri;
+
+        $i0 := @parameter2: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void grantUriPermission(java.lang.String,android.net.Uri,int)>($r1, $r2, $i0);
+
+        return;
+    }
+
+    public boolean hasWindowFocus()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean hasWindowFocus()>();
+
+        return $z0;
+    }
+
+    public boolean isChangingConfigurations()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean isChangingConfigurations()>();
+
+        return $z0;
+    }
+
+    public boolean isDestroyed()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean isDestroyed()>();
+
+        return $z0;
+    }
+
+    public boolean isFinishing()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean isFinishing()>();
+
+        return $z0;
+    }
+
+    public boolean isImmersive()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean isImmersive()>();
+
+        return $z0;
+    }
+
+    public boolean isRestricted()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean isRestricted()>();
+
+        return $z0;
+    }
+
+    public boolean isTaskRoot()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean isTaskRoot()>();
+
+        return $z0;
+    }
+
+    public boolean moveTaskToBack(boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean moveTaskToBack(boolean)>($z0);
+
+        return $z0;
+    }
+
+    public boolean navigateUpTo(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean navigateUpTo(android.content.Intent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean navigateUpToFromChild(android.app.Activity, android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r3;
+        android.content.Intent $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r3.<android.app.Activity: boolean navigateUpToFromChild(android.app.Activity,android.content.Intent)>($r1, $r2);
+
+        return $z0;
+    }
+
+    public void onActionModeFinished(android.view.ActionMode)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.ActionMode $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.ActionMode;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onActionModeFinished(android.view.ActionMode)>($r1);
+
+        return;
+    }
+
+    public void onActionModeStarted(android.view.ActionMode)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.ActionMode $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.ActionMode;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onActionModeStarted(android.view.ActionMode)>($r1);
+
+        return;
+    }
+
+    public void onActivityReenter(int, android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onActivityReenter(int,android.content.Intent)>($i0, $r1);
+
+        return;
+    }
+
+    public void onAttachFragment(android.app.Fragment)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Fragment $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Fragment;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onAttachFragment(android.app.Fragment)>($r1);
+
+        return;
+    }
+
+    public void onAttachedToWindow()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void onAttachedToWindow()>();
+
+        return;
+    }
+
+    public boolean onContextItemSelected(android.view.MenuItem)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MenuItem $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onContextItemSelected(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public void onContextMenuClosed(android.view.Menu)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.Menu $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onContextMenuClosed(android.view.Menu)>($r1);
+
+        return;
+    }
+
+    public void onCreate(android.os.Bundle, android.os.PersistableBundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.os.Bundle $r1;
+        android.os.PersistableBundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 := @parameter1: android.os.PersistableBundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void onCreate(android.os.Bundle,android.os.PersistableBundle)>($r1, $r2);
+
+        return;
+    }
+
+    public void onCreateContextMenu(android.view.ContextMenu, android.view.View, android.view.ContextMenu$ContextMenuInfo)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.ContextMenu $r1;
+        android.view.View $r2;
+        android.view.ContextMenu$ContextMenuInfo $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.ContextMenu;
+
+        $r2 := @parameter1: android.view.View;
+
+        $r3 := @parameter2: android.view.ContextMenu$ContextMenuInfo;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r4.<android.app.Activity: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)>($r1, $r2, $r3);
+
+        return;
+    }
+
+    public java.lang.CharSequence onCreateDescription()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.CharSequence $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: java.lang.CharSequence onCreateDescription()>();
+
+        return $r1;
+    }
+
+    public void onCreateNavigateUpTaskStack(android.app.TaskStackBuilder)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.TaskStackBuilder $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.TaskStackBuilder;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onCreateNavigateUpTaskStack(android.app.TaskStackBuilder)>($r1);
+
+        return;
+    }
+
+    public boolean onCreateOptionsMenu(android.view.Menu)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.Menu $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onCreateOptionsMenu(android.view.Menu)>($r1);
+
+        return $z0;
+    }
+
+    public android.view.View onCreatePanelView(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.view.View $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.view.View onCreatePanelView(int)>($i0);
+
+        return $r1;
+    }
+
+    public boolean onCreateThumbnail(android.graphics.Bitmap, android.graphics.Canvas)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.graphics.Bitmap $r1;
+        android.graphics.Canvas $r2;
+        boolean $z0;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r2 := @parameter1: android.graphics.Canvas;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r3.<android.app.Activity: boolean onCreateThumbnail(android.graphics.Bitmap,android.graphics.Canvas)>($r1, $r2);
+
+        return $z0;
+    }
+
+    public android.view.View onCreateView(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.View $r1;
+        java.lang.String $r2;
+        android.content.Context $r3;
+        android.util.AttributeSet $r4;
+        android.app.Activity $r5;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.content.Context;
+
+        $r4 := @parameter3: android.util.AttributeSet;
+
+        $r5 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r5.<android.app.Activity: android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet)>($r1, $r2, $r3, $r4);
+
+        return $r1;
+    }
+
+    public void onDetachedFromWindow()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void onDetachedFromWindow()>();
+
+        return;
+    }
+
+    public void onEnterAnimationComplete()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void onEnterAnimationComplete()>();
+
+        return;
+    }
+
+    public boolean onGenericMotionEvent(android.view.MotionEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MotionEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onGenericMotionEvent(android.view.MotionEvent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean onKeyLongPress(int, android.view.KeyEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.view.KeyEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.view.KeyEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onKeyLongPress(int,android.view.KeyEvent)>($i0, $r1);
+
+        return $z0;
+    }
+
+    public boolean onKeyMultiple(int, int, android.view.KeyEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0, $i1;
+        android.view.KeyEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.view.KeyEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onKeyMultiple(int,int,android.view.KeyEvent)>($i0, $i1, $r1);
+
+        return $z0;
+    }
+
+    public boolean onKeyShortcut(int, android.view.KeyEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.view.KeyEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.view.KeyEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onKeyShortcut(int,android.view.KeyEvent)>($i0, $r1);
+
+        return $z0;
+    }
+
+    public boolean onKeyUp(int, android.view.KeyEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.view.KeyEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.view.KeyEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onKeyUp(int,android.view.KeyEvent)>($i0, $r1);
+
+        return $z0;
+    }
+
+    public boolean onMenuOpened(int, android.view.Menu)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.view.Menu $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: android.view.Menu;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onMenuOpened(int,android.view.Menu)>($i0, $r1);
+
+        return $z0;
+    }
+
+    public boolean onNavigateUp()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean onNavigateUp()>();
+
+        return $z0;
+    }
+
+    public boolean onNavigateUpFromChild(android.app.Activity)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onNavigateUpFromChild(android.app.Activity)>($r1);
+
+        return $z0;
+    }
+
+    public boolean onOptionsItemSelected(android.view.MenuItem)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MenuItem $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onOptionsItemSelected(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public void onOptionsMenuClosed(android.view.Menu)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.Menu $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onOptionsMenuClosed(android.view.Menu)>($r1);
+
+        return;
+    }
+
+    public void onPostCreate(android.os.Bundle, android.os.PersistableBundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.os.Bundle $r1;
+        android.os.PersistableBundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 := @parameter1: android.os.PersistableBundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void onPostCreate(android.os.Bundle,android.os.PersistableBundle)>($r1, $r2);
+
+        return;
+    }
+
+    public void onPrepareNavigateUpTaskStack(android.app.TaskStackBuilder)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.TaskStackBuilder $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.TaskStackBuilder;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onPrepareNavigateUpTaskStack(android.app.TaskStackBuilder)>($r1);
+
+        return;
+    }
+
+    public boolean onPrepareOptionsMenu(android.view.Menu)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.Menu $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onPrepareOptionsMenu(android.view.Menu)>($r1);
+
+        return $z0;
+    }
+
+    public void onProvideAssistData(android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.os.Bundle $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onProvideAssistData(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void onRestoreInstanceState(android.os.Bundle, android.os.PersistableBundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.os.Bundle $r1;
+        android.os.PersistableBundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 := @parameter1: android.os.PersistableBundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void onRestoreInstanceState(android.os.Bundle,android.os.PersistableBundle)>($r1, $r2);
+
+        return;
+    }
+
+    public void onSaveInstanceState(android.os.Bundle, android.os.PersistableBundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.os.Bundle $r1;
+        android.os.PersistableBundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 := @parameter1: android.os.PersistableBundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void onSaveInstanceState(android.os.Bundle,android.os.PersistableBundle)>($r1, $r2);
+
+        return;
+    }
+
+    public boolean onSearchRequested()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean onSearchRequested()>();
+
+        return $z0;
+    }
+
+    public boolean onTouchEvent(android.view.MotionEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MotionEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onTouchEvent(android.view.MotionEvent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean onTrackballEvent(android.view.MotionEvent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.MotionEvent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.MotionEvent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean onTrackballEvent(android.view.MotionEvent)>($r1);
+
+        return $z0;
+    }
+
+    public void onTrimMemory(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void onTrimMemory(int)>($i0);
+
+        return;
+    }
+
+    public void onUserInteraction()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void onUserInteraction()>();
+
+        return;
+    }
+
+    public void onVisibleBehindCanceled()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void onVisibleBehindCanceled()>();
+
+        return;
+    }
+
+    public void onWindowAttributesChanged(android.view.WindowManager$LayoutParams)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.WindowManager$LayoutParams $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.WindowManager$LayoutParams;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void onWindowAttributesChanged(android.view.WindowManager$LayoutParams)>($r1);
+
+        return;
+    }
+
+    public void onWindowFocusChanged(boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void onWindowFocusChanged(boolean)>($z0);
+
+        return;
+    }
+
+    public android.view.ActionMode onWindowStartingActionMode(android.view.ActionMode$Callback)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.ActionMode$Callback $r1;
+        android.view.ActionMode $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.ActionMode$Callback;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.view.ActionMode onWindowStartingActionMode(android.view.ActionMode$Callback)>($r1);
+
+        return $r2;
+    }
+
+    public void openContextMenu(android.view.View)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.View $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void openContextMenu(android.view.View)>($r1);
+
+        return;
+    }
+
+    public java.io.FileInputStream openFileInput(java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        java.io.FileInputStream $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.io.FileInputStream openFileInput(java.lang.String)>($r1);
+
+        return $r2;
+    }
+
+    public java.io.FileOutputStream openFileOutput(java.lang.String, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        java.io.FileOutputStream $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: java.io.FileOutputStream openFileOutput(java.lang.String,int)>($r1, $i0);
+
+        return $r2;
+    }
+
+    public void openOptionsMenu()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void openOptionsMenu()>();
+
+        return;
+    }
+
+    public android.database.sqlite.SQLiteDatabase openOrCreateDatabase(java.lang.String, int, android.database.sqlite.SQLiteDatabase$CursorFactory)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        android.database.sqlite.SQLiteDatabase$CursorFactory $r2;
+        android.database.sqlite.SQLiteDatabase $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: android.database.sqlite.SQLiteDatabase$CursorFactory;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r3 = virtualinvoke $r4.<android.app.Activity: android.database.sqlite.SQLiteDatabase openOrCreateDatabase(java.lang.String,int,android.database.sqlite.SQLiteDatabase$CursorFactory)>($r1, $i0, $r2);
+
+        return $r3;
+    }
+
+    public android.database.sqlite.SQLiteDatabase openOrCreateDatabase(java.lang.String, int, android.database.sqlite.SQLiteDatabase$CursorFactory, android.database.DatabaseErrorHandler)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        int $i0;
+        android.database.sqlite.SQLiteDatabase$CursorFactory $r2;
+        android.database.DatabaseErrorHandler $r3;
+        android.database.sqlite.SQLiteDatabase $r4;
+        android.app.Activity $r5;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: android.database.sqlite.SQLiteDatabase$CursorFactory;
+
+        $r3 := @parameter3: android.database.DatabaseErrorHandler;
+
+        $r5 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r4 = virtualinvoke $r5.<android.app.Activity: android.database.sqlite.SQLiteDatabase openOrCreateDatabase(java.lang.String,int,android.database.sqlite.SQLiteDatabase$CursorFactory,android.database.DatabaseErrorHandler)>($r1, $i0, $r2, $r3);
+
+        return $r4;
+    }
+
+    public void overridePendingTransition(int, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0, $i1;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void overridePendingTransition(int,int)>($i0, $i1);
+
+        return;
+    }
+
+    public android.graphics.drawable.Drawable peekWallpaper()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.graphics.drawable.Drawable $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r1 = virtualinvoke $r2.<android.app.Activity: android.graphics.drawable.Drawable peekWallpaper()>();
+
+        return $r1;
+    }
+
+    public void postponeEnterTransition()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void postponeEnterTransition()>();
+
+        return;
+    }
+
+    public void recreate()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void recreate()>();
+
+        return;
+    }
+
+    public void registerForContextMenu(android.view.View)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.View $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void registerForContextMenu(android.view.View)>($r1);
+
+        return;
+    }
+
+    public android.content.Intent registerReceiver(android.content.BroadcastReceiver, android.content.IntentFilter)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.BroadcastReceiver $r1;
+        android.content.IntentFilter $r2;
+        android.content.Intent $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.BroadcastReceiver;
+
+        $r2 := @parameter1: android.content.IntentFilter;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r3 = virtualinvoke $r4.<android.app.Activity: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r1, $r2);
+
+        return $r3;
+    }
+
+    public android.content.Intent registerReceiver(android.content.BroadcastReceiver, android.content.IntentFilter, java.lang.String, android.os.Handler)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.BroadcastReceiver $r1;
+        android.content.IntentFilter $r2;
+        java.lang.String $r3;
+        android.os.Handler $r4;
+        android.content.Intent $r5;
+        android.app.Activity $r6;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.BroadcastReceiver;
+
+        $r2 := @parameter1: android.content.IntentFilter;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: android.os.Handler;
+
+        $r6 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r5 = virtualinvoke $r6.<android.app.Activity: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)>($r1, $r2, $r3, $r4);
+
+        return $r5;
+    }
+
+    public boolean releaseInstance()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean releaseInstance()>();
+
+        return $z0;
+    }
+
+    public void removeStickyBroadcast(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void removeStickyBroadcast(android.content.Intent)>($r1);
+
+        return;
+    }
+
+    public void removeStickyBroadcastAsUser(android.content.Intent, android.os.UserHandle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.UserHandle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.UserHandle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void removeStickyBroadcastAsUser(android.content.Intent,android.os.UserHandle)>($r1, $r2);
+
+        return;
+    }
+
+    public void reportFullyDrawn()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void reportFullyDrawn()>();
+
+        return;
+    }
+
+    public boolean requestVisibleBehind(boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r1.<android.app.Activity: boolean requestVisibleBehind(boolean)>($z0);
+
+        return $z0;
+    }
+
+    public void revokeUriPermission(android.net.Uri, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.net.Uri $r1;
+        int $i0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.net.Uri;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void revokeUriPermission(android.net.Uri,int)>($r1, $i0);
+
+        return;
+    }
+
+    public void sendBroadcast(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void sendBroadcast(android.content.Intent)>($r1);
+
+        return;
+    }
+
+    public void sendBroadcast(android.content.Intent, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        java.lang.String $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void sendBroadcast(android.content.Intent,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+
+    public void sendBroadcastAsUser(android.content.Intent, android.os.UserHandle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.UserHandle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.UserHandle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)>($r1, $r2);
+
+        return;
+    }
+
+    public void sendBroadcastAsUser(android.content.Intent, android.os.UserHandle, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.UserHandle $r2;
+        java.lang.String $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.UserHandle;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r4.<android.app.Activity: void sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)>($r1, $r2, $r3);
+
+        return;
+    }
+
+    public void sendOrderedBroadcast(android.content.Intent, java.lang.String)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        java.lang.String $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void sendOrderedBroadcast(android.content.Intent,java.lang.String)>($r1, $r2);
+
+        return;
+    }
+
+    public void sendOrderedBroadcast(android.content.Intent, java.lang.String, android.content.BroadcastReceiver, android.os.Handler, int, java.lang.String, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        java.lang.String $r2, $r5;
+        android.content.BroadcastReceiver $r3;
+        android.os.Handler $r4;
+        int $i0;
+        android.os.Bundle $r6;
+        android.app.Activity $r7;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.content.BroadcastReceiver;
+
+        $r4 := @parameter3: android.os.Handler;
+
+        $i0 := @parameter4: int;
+
+        $r5 := @parameter5: java.lang.String;
+
+        $r6 := @parameter6: android.os.Bundle;
+
+        $r7 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r7.<android.app.Activity: void sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)>($r1, $r2, $r3, $r4, $i0, $r5, $r6);
+
+        return;
+    }
+
+    public void sendOrderedBroadcastAsUser(android.content.Intent, android.os.UserHandle, java.lang.String, android.content.BroadcastReceiver, android.os.Handler, int, java.lang.String, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.UserHandle $r2;
+        java.lang.String $r3, $r6;
+        android.content.BroadcastReceiver $r4;
+        android.os.Handler $r5;
+        int $i0;
+        android.os.Bundle $r7;
+        android.app.Activity $r8;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.UserHandle;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r4 := @parameter3: android.content.BroadcastReceiver;
+
+        $r5 := @parameter4: android.os.Handler;
+
+        $i0 := @parameter5: int;
+
+        $r6 := @parameter6: java.lang.String;
+
+        $r7 := @parameter7: android.os.Bundle;
+
+        $r8 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r8.<android.app.Activity: void sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)>($r1, $r2, $r3, $r4, $r5, $i0, $r6, $r7);
+
+        return;
+    }
+
+    public void sendStickyBroadcast(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void sendStickyBroadcast(android.content.Intent)>($r1);
+
+        return;
+    }
+
+    public void sendStickyBroadcastAsUser(android.content.Intent, android.os.UserHandle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.UserHandle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.UserHandle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void sendStickyBroadcastAsUser(android.content.Intent,android.os.UserHandle)>($r1, $r2);
+
+        return;
+    }
+
+    public void sendStickyOrderedBroadcast(android.content.Intent, android.content.BroadcastReceiver, android.os.Handler, int, java.lang.String, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.content.BroadcastReceiver $r2;
+        android.os.Handler $r3;
+        int $i0;
+        java.lang.String $r4;
+        android.os.Bundle $r5;
+        android.app.Activity $r6;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.content.BroadcastReceiver;
+
+        $r3 := @parameter2: android.os.Handler;
+
+        $i0 := @parameter3: int;
+
+        $r4 := @parameter4: java.lang.String;
+
+        $r5 := @parameter5: android.os.Bundle;
+
+        $r6 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r6.<android.app.Activity: void sendStickyOrderedBroadcast(android.content.Intent,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)>($r1, $r2, $r3, $i0, $r4, $r5);
+
+        return;
+    }
+
+    public void sendStickyOrderedBroadcastAsUser(android.content.Intent, android.os.UserHandle, android.content.BroadcastReceiver, android.os.Handler, int, java.lang.String, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.UserHandle $r2;
+        android.content.BroadcastReceiver $r3;
+        android.os.Handler $r4;
+        int $i0;
+        java.lang.String $r5;
+        android.os.Bundle $r6;
+        android.app.Activity $r7;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.UserHandle;
+
+        $r3 := @parameter2: android.content.BroadcastReceiver;
+
+        $r4 := @parameter3: android.os.Handler;
+
+        $i0 := @parameter4: int;
+
+        $r5 := @parameter5: java.lang.String;
+
+        $r6 := @parameter6: android.os.Bundle;
+
+        $r7 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r7.<android.app.Activity: void sendStickyOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)>($r1, $r2, $r3, $r4, $i0, $r5, $r6);
+
+        return;
+    }
+
+    public void setActionBar(android.widget.Toolbar)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.widget.Toolbar $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.widget.Toolbar;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setActionBar(android.widget.Toolbar)>($r1);
+
+        return;
+    }
+
+    public void setContentTransitionManager(android.transition.TransitionManager)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.transition.TransitionManager $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.transition.TransitionManager;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setContentTransitionManager(android.transition.TransitionManager)>($r1);
+
+        return;
+    }
+
+    public void setEnterSharedElementCallback(android.app.SharedElementCallback)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.SharedElementCallback $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.SharedElementCallback;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setEnterSharedElementCallback(android.app.SharedElementCallback)>($r1);
+
+        return;
+    }
+
+    public void setExitSharedElementCallback(android.app.SharedElementCallback)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.SharedElementCallback $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.SharedElementCallback;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setExitSharedElementCallback(android.app.SharedElementCallback)>($r1);
+
+        return;
+    }
+
+    public void setFinishOnTouchOutside(boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void setFinishOnTouchOutside(boolean)>($z0);
+
+        return;
+    }
+
+    public void setImmersive(boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void setImmersive(boolean)>($z0);
+
+        return;
+    }
+
+    public void setIntent(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setIntent(android.content.Intent)>($r1);
+
+        return;
+    }
+
+    public void setRequestedOrientation(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void setRequestedOrientation(int)>($i0);
+
+        return;
+    }
+
+    public void setTaskDescription(android.app.ActivityManager$TaskDescription)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.ActivityManager$TaskDescription $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.ActivityManager$TaskDescription;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setTaskDescription(android.app.ActivityManager$TaskDescription)>($r1);
+
+        return;
+    }
+
+    public void setTheme(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void setTheme(int)>($i0);
+
+        return;
+    }
+
+    public void setTitle(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void setTitle(int)>($i0);
+
+        return;
+    }
+
+    public void setTitle(java.lang.CharSequence)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.CharSequence $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.CharSequence;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setTitle(java.lang.CharSequence)>($r1);
+
+        return;
+    }
+
+    public void setTitleColor(int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        int $i0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void setTitleColor(int)>($i0);
+
+        return;
+    }
+
+    public void setVisible(boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void setVisible(boolean)>($z0);
+
+        return;
+    }
+
+    public void setWallpaper(android.graphics.Bitmap)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.graphics.Bitmap $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setWallpaper(android.graphics.Bitmap)>($r1);
+
+        return;
+    }
+
+    public void setWallpaper(java.io.InputStream)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.io.InputStream $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.io.InputStream;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void setWallpaper(java.io.InputStream)>($r1);
+
+        return;
+    }
+
+    public boolean shouldUpRecreateTask(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean shouldUpRecreateTask(android.content.Intent)>($r1);
+
+        return $z0;
+    }
+
+    public android.view.ActionMode startActionMode(android.view.ActionMode$Callback)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.ActionMode$Callback $r1;
+        android.view.ActionMode $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.ActionMode$Callback;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.view.ActionMode startActionMode(android.view.ActionMode$Callback)>($r1);
+
+        return $r2;
+    }
+
+    public void startActivities(android.content.Intent[])
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent[] $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent[];
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void startActivities(android.content.Intent[])>($r1);
+
+        return;
+    }
+
+    public void startActivities(android.content.Intent[], android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent[] $r1;
+        android.os.Bundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent[];
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startActivities(android.content.Intent[],android.os.Bundle)>($r1, $r2);
+
+        return;
+    }
+
+    public void startActivity(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void startActivity(android.content.Intent)>($r1);
+
+        return;
+    }
+
+    public void startActivity(android.content.Intent, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.Bundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startActivity(android.content.Intent,android.os.Bundle)>($r1, $r2);
+
+        return;
+    }
+
+    public void startActivityForResult(android.content.Intent, int, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        int $i0;
+        android.os.Bundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: android.os.Bundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)>($r1, $i0, $r2);
+
+        return;
+    }
+
+    public void startActivityFromChild(android.app.Activity, android.content.Intent, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r3;
+        android.content.Intent $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $i0 := @parameter2: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startActivityFromChild(android.app.Activity,android.content.Intent,int)>($r1, $r2, $i0);
+
+        return;
+    }
+
+    public void startActivityFromChild(android.app.Activity, android.content.Intent, int, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r4;
+        android.content.Intent $r2;
+        int $i0;
+        android.os.Bundle $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $i0 := @parameter2: int;
+
+        $r3 := @parameter3: android.os.Bundle;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r4.<android.app.Activity: void startActivityFromChild(android.app.Activity,android.content.Intent,int,android.os.Bundle)>($r1, $r2, $i0, $r3);
+
+        return;
+    }
+
+    public void startActivityFromFragment(android.app.Fragment, android.content.Intent, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Fragment $r1;
+        android.content.Intent $r2;
+        int $i0;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Fragment;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $i0 := @parameter2: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startActivityFromFragment(android.app.Fragment,android.content.Intent,int)>($r1, $r2, $i0);
+
+        return;
+    }
+
+    public void startActivityFromFragment(android.app.Fragment, android.content.Intent, int, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Fragment $r1;
+        android.content.Intent $r2;
+        int $i0;
+        android.os.Bundle $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Fragment;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $i0 := @parameter2: int;
+
+        $r3 := @parameter3: android.os.Bundle;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r4.<android.app.Activity: void startActivityFromFragment(android.app.Fragment,android.content.Intent,int,android.os.Bundle)>($r1, $r2, $i0, $r3);
+
+        return;
+    }
+
+    public boolean startActivityIfNeeded(android.content.Intent, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        int $i0;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean startActivityIfNeeded(android.content.Intent,int)>($r1, $i0);
+
+        return $z0;
+    }
+
+    public boolean startActivityIfNeeded(android.content.Intent, int, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        int $i0;
+        android.os.Bundle $r2;
+        boolean $z0;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: android.os.Bundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r3.<android.app.Activity: boolean startActivityIfNeeded(android.content.Intent,int,android.os.Bundle)>($r1, $i0, $r2);
+
+        return $z0;
+    }
+
+    public boolean startInstrumentation(android.content.ComponentName, java.lang.String, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.ComponentName $r1;
+        java.lang.String $r2;
+        android.os.Bundle $r3;
+        boolean $z0;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.ComponentName;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r4.<android.app.Activity: boolean startInstrumentation(android.content.ComponentName,java.lang.String,android.os.Bundle)>($r1, $r2, $r3);
+
+        return $z0;
+    }
+
+    public void startIntentSender(android.content.IntentSender, android.content.Intent, int, int, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.IntentSender $r1;
+        android.content.Intent $r2;
+        int $i0, $i1, $i2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.IntentSender;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $i0 := @parameter2: int;
+
+        $i1 := @parameter3: int;
+
+        $i2 := @parameter4: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startIntentSender(android.content.IntentSender,android.content.Intent,int,int,int)>($r1, $r2, $i0, $i1, $i2);
+
+        return;
+    }
+
+    public void startIntentSender(android.content.IntentSender, android.content.Intent, int, int, int, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.IntentSender $r1;
+        android.content.Intent $r2;
+        int $i0, $i1, $i2;
+        android.os.Bundle $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.IntentSender;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $i0 := @parameter2: int;
+
+        $i1 := @parameter3: int;
+
+        $i2 := @parameter4: int;
+
+        $r3 := @parameter5: android.os.Bundle;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r4.<android.app.Activity: void startIntentSender(android.content.IntentSender,android.content.Intent,int,int,int,android.os.Bundle)>($r1, $r2, $i0, $i1, $i2, $r3);
+
+        return;
+    }
+
+    public void startIntentSenderForResult(android.content.IntentSender, int, android.content.Intent, int, int, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.IntentSender $r1;
+        int $i0, $i1, $i2, $i3;
+        android.content.Intent $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.IntentSender;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: android.content.Intent;
+
+        $i1 := @parameter3: int;
+
+        $i2 := @parameter4: int;
+
+        $i3 := @parameter5: int;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int)>($r1, $i0, $r2, $i1, $i2, $i3);
+
+        return;
+    }
+
+    public void startIntentSenderForResult(android.content.IntentSender, int, android.content.Intent, int, int, int, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.IntentSender $r1;
+        int $i0, $i1, $i2, $i3;
+        android.content.Intent $r2;
+        android.os.Bundle $r3;
+        android.app.Activity $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.IntentSender;
+
+        $i0 := @parameter1: int;
+
+        $r2 := @parameter2: android.content.Intent;
+
+        $i1 := @parameter3: int;
+
+        $i2 := @parameter4: int;
+
+        $i3 := @parameter5: int;
+
+        $r3 := @parameter6: android.os.Bundle;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r4.<android.app.Activity: void startIntentSenderForResult(android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>($r1, $i0, $r2, $i1, $i2, $i3, $r3);
+
+        return;
+    }
+
+    public void startIntentSenderFromChild(android.app.Activity, android.content.IntentSender, int, android.content.Intent, int, int, int)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r4;
+        android.content.IntentSender $r2;
+        int $i0, $i1, $i2, $i3;
+        android.content.Intent $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.content.IntentSender;
+
+        $i0 := @parameter2: int;
+
+        $r3 := @parameter3: android.content.Intent;
+
+        $i1 := @parameter4: int;
+
+        $i2 := @parameter5: int;
+
+        $i3 := @parameter6: int;
+
+        $r4 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r4.<android.app.Activity: void startIntentSenderFromChild(android.app.Activity,android.content.IntentSender,int,android.content.Intent,int,int,int)>($r1, $r2, $i0, $r3, $i1, $i2, $i3);
+
+        return;
+    }
+
+    public void startIntentSenderFromChild(android.app.Activity, android.content.IntentSender, int, android.content.Intent, int, int, int, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1, $r5;
+        android.content.IntentSender $r2;
+        int $i0, $i1, $i2, $i3;
+        android.content.Intent $r3;
+        android.os.Bundle $r4;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: android.content.IntentSender;
+
+        $i0 := @parameter2: int;
+
+        $r3 := @parameter3: android.content.Intent;
+
+        $i1 := @parameter4: int;
+
+        $i2 := @parameter5: int;
+
+        $i3 := @parameter6: int;
+
+        $r4 := @parameter7: android.os.Bundle;
+
+        $r5 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r5.<android.app.Activity: void startIntentSenderFromChild(android.app.Activity,android.content.IntentSender,int,android.content.Intent,int,int,int,android.os.Bundle)>($r1, $r2, $i0, $r3, $i1, $i2, $i3, $r4);
+
+        return;
+    }
+
+    public void startLockTask()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void startLockTask()>();
+
+        return;
+    }
+
+    public void startManagingCursor(android.database.Cursor)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.database.Cursor $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.database.Cursor;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void startManagingCursor(android.database.Cursor)>($r1);
+
+        return;
+    }
+
+    public boolean startNextMatchingActivity(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean startNextMatchingActivity(android.content.Intent)>($r1);
+
+        return $z0;
+    }
+
+    public boolean startNextMatchingActivity(android.content.Intent, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.os.Bundle $r2;
+        boolean $z0;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r3.<android.app.Activity: boolean startNextMatchingActivity(android.content.Intent,android.os.Bundle)>($r1, $r2);
+
+        return $z0;
+    }
+
+    public void startPostponedEnterTransition()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void startPostponedEnterTransition()>();
+
+        return;
+    }
+
+    public void startSearch(java.lang.String, boolean, android.os.Bundle, boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        boolean $z0, $z1;
+        android.os.Bundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $z0 := @parameter1: boolean;
+
+        $r2 := @parameter2: android.os.Bundle;
+
+        $z1 := @parameter3: boolean;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void startSearch(java.lang.String,boolean,android.os.Bundle,boolean)>($r1, $z0, $r2, $z1);
+
+        return;
+    }
+
+    public android.content.ComponentName startService(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        android.content.ComponentName $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $r2 = virtualinvoke $r3.<android.app.Activity: android.content.ComponentName startService(android.content.Intent)>($r1);
+
+        return $r2;
+    }
+
+    public void stopLockTask()
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void stopLockTask()>();
+
+        return;
+    }
+
+    public void stopManagingCursor(android.database.Cursor)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.database.Cursor $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.database.Cursor;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void stopManagingCursor(android.database.Cursor)>($r1);
+
+        return;
+    }
+
+    public boolean stopService(android.content.Intent)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.Intent $r1;
+        boolean $z0;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        $z0 = virtualinvoke $r2.<android.app.Activity: boolean stopService(android.content.Intent)>($r1);
+
+        return $z0;
+    }
+
+    public void takeKeyEvents(boolean)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r1.<android.app.Activity: void takeKeyEvents(boolean)>($z0);
+
+        return;
+    }
+
+    public void triggerSearch(java.lang.String, android.os.Bundle)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        java.lang.String $r1;
+        android.os.Bundle $r2;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        $r3 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r3.<android.app.Activity: void triggerSearch(java.lang.String,android.os.Bundle)>($r1, $r2);
+
+        return;
+    }
+
+    public void unbindService(android.content.ServiceConnection)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.ServiceConnection $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.ServiceConnection;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void unbindService(android.content.ServiceConnection)>($r1);
+
+        return;
+    }
+
+    public void unregisterForContextMenu(android.view.View)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.view.View $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void unregisterForContextMenu(android.view.View)>($r1);
+
+        return;
+    }
+
+    public void unregisterReceiver(android.content.BroadcastReceiver)
+    {
+        com.seattleclouds.util.ActivityWrapper $r0;
+        android.content.BroadcastReceiver $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.util.ActivityWrapper;
+
+        $r1 := @parameter0: android.content.BroadcastReceiver;
+
+        $r2 = $r0.<com.seattleclouds.util.ActivityWrapper: android.app.Activity m>;
+
+        virtualinvoke $r2.<android.app.Activity: void unregisterReceiver(android.content.BroadcastReceiver)>($r1);
+
+        return;
+    }
+}

@@ -1,0 +1,101 @@
+public class kankan.wheel.widget.a extends java.lang.Object
+{
+    private int a;
+    private int b;
+
+    public void <init>()
+    {
+        kankan.wheel.widget.a $r0;
+
+        $r0 := @this: kankan.wheel.widget.a;
+
+        specialinvoke $r0.<kankan.wheel.widget.a: void <init>(int,int)>(0, 0);
+
+        return;
+    }
+
+    public void <init>(int, int)
+    {
+        kankan.wheel.widget.a $r0;
+        int $i0, $i1;
+
+        $r0 := @this: kankan.wheel.widget.a;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<kankan.wheel.widget.a: int a> = $i0;
+
+        $r0.<kankan.wheel.widget.a: int b> = $i1;
+
+        return;
+    }
+
+    public int a()
+    {
+        kankan.wheel.widget.a $r0;
+        int i0;
+
+        $r0 := @this: kankan.wheel.widget.a;
+
+        i0 = $r0.<kankan.wheel.widget.a: int a>;
+
+        return i0;
+    }
+
+    public boolean a(int)
+    {
+        kankan.wheel.widget.a $r0;
+        int $i0, $i1;
+
+        $r0 := @this: kankan.wheel.widget.a;
+
+        $i0 := @parameter0: int;
+
+        $i1 = virtualinvoke $r0.<kankan.wheel.widget.a: int a()>();
+
+        if $i0 < $i1 goto label1;
+
+        $i1 = virtualinvoke $r0.<kankan.wheel.widget.a: int b()>();
+
+        if $i0 > $i1 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public int b()
+    {
+        kankan.wheel.widget.a $r0;
+        int $i0, $i1;
+
+        $r0 := @this: kankan.wheel.widget.a;
+
+        $i0 = virtualinvoke $r0.<kankan.wheel.widget.a: int a()>();
+
+        $i1 = virtualinvoke $r0.<kankan.wheel.widget.a: int c()>();
+
+        $i0 = $i0 + $i1;
+
+        $i0 = $i0 + -1;
+
+        return $i0;
+    }
+
+    public int c()
+    {
+        kankan.wheel.widget.a $r0;
+        int i0;
+
+        $r0 := @this: kankan.wheel.widget.a;
+
+        i0 = $r0.<kankan.wheel.widget.a: int b>;
+
+        return i0;
+    }
+}

@@ -1,0 +1,1393 @@
+public class com.seattleclouds.media.d extends android.content.BroadcastReceiver
+{
+    private static final java.lang.String a;
+    private com.seattleclouds.media.MediaService b;
+    private android.support.v4.media.session.MediaSessionCompat$Token c;
+    private android.support.v4.media.session.g d;
+    private android.support.v4.media.session.r e;
+    private android.support.v4.media.session.PlaybackStateCompat f;
+    private android.support.v4.media.MediaMetadataCompat g;
+    private android.support.v4.app.dg h;
+    private android.app.PendingIntent i;
+    private android.app.PendingIntent j;
+    private android.app.PendingIntent k;
+    private android.app.PendingIntent l;
+    private boolean m;
+    private int n;
+    private java.util.Timer o;
+    private int p;
+    private android.support.v4.media.session.i q;
+    public android.content.Intent ipcIntent;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/media/d;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.media.d: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    public void <init>(com.seattleclouds.media.MediaService)
+    {
+        com.seattleclouds.media.d $r0;
+        com.seattleclouds.media.MediaService $r1;
+        com.seattleclouds.media.e $r2;
+        android.support.v4.app.dg $r3;
+        java.lang.String $r4, $r7;
+        android.content.Intent $r5;
+        android.content.Context $r6;
+        android.app.PendingIntent $r8;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 := @parameter0: com.seattleclouds.media.MediaService;
+
+        specialinvoke $r0.<android.content.BroadcastReceiver: void <init>()>();
+
+        $r0.<com.seattleclouds.media.d: boolean m> = 0;
+
+        $r0.<com.seattleclouds.media.d: int p> = 0;
+
+        $r2 = new com.seattleclouds.media.e;
+
+        specialinvoke $r2.<com.seattleclouds.media.e: void <init>(com.seattleclouds.media.d)>($r0);
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.session.i q> = $r2;
+
+        $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.media.d: void g()>();
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r3 = staticinvoke <android.support.v4.app.dg: android.support.v4.app.dg a(android.content.Context)>($r1);
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.app.dg h> = $r3;
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r4 = virtualinvoke $r1.<com.seattleclouds.media.MediaService: java.lang.String getPackageName()>();
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r5 = new android.content.Intent;
+
+        $r6 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r7 = staticinvoke <com.seattleclouds.media.i: java.lang.String g(android.content.Context)>($r6);
+
+        specialinvoke $r5.<android.content.Intent: void <init>(java.lang.String)>($r7);
+
+        $r5 = virtualinvoke $r5.<android.content.Intent: android.content.Intent setPackage(java.lang.String)>($r4);
+
+        $r8 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r1, 0, $r5, 268435456);
+
+        $r0.<com.seattleclouds.media.d: android.app.PendingIntent i> = $r8;
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r5 = new android.content.Intent;
+
+        $r6 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r7 = staticinvoke <com.seattleclouds.media.i: java.lang.String f(android.content.Context)>($r6);
+
+        specialinvoke $r5.<android.content.Intent: void <init>(java.lang.String)>($r7);
+
+        $r5 = virtualinvoke $r5.<android.content.Intent: android.content.Intent setPackage(java.lang.String)>($r4);
+
+        $r8 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r1, 0, $r5, 268435456);
+
+        $r0.<com.seattleclouds.media.d: android.app.PendingIntent j> = $r8;
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r5 = new android.content.Intent;
+
+        $r6 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r7 = staticinvoke <com.seattleclouds.media.i: java.lang.String i(android.content.Context)>($r6);
+
+        specialinvoke $r5.<android.content.Intent: void <init>(java.lang.String)>($r7);
+
+        $r5 = virtualinvoke $r5.<android.content.Intent: android.content.Intent setPackage(java.lang.String)>($r4);
+
+        $r8 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r1, 0, $r5, 268435456);
+
+        $r0.<com.seattleclouds.media.d: android.app.PendingIntent k> = $r8;
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r5 = new android.content.Intent;
+
+        $r6 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r7 = staticinvoke <com.seattleclouds.media.i: java.lang.String h(android.content.Context)>($r6);
+
+        specialinvoke $r5.<android.content.Intent: void <init>(java.lang.String)>($r7);
+
+        $r5 = virtualinvoke $r5.<android.content.Intent: android.content.Intent setPackage(java.lang.String)>($r4);
+
+        $r8 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getBroadcast(android.content.Context,int,android.content.Intent,int)>($r1, 0, $r5, 268435456);
+
+        $r0.<com.seattleclouds.media.d: android.app.PendingIntent l> = $r8;
+
+        $r3 = $r0.<com.seattleclouds.media.d: android.support.v4.app.dg h>;
+
+        virtualinvoke $r3.<android.support.v4.app.dg: void a()>();
+
+        return;
+    }
+
+    static android.support.v4.media.MediaMetadataCompat a(com.seattleclouds.media.d, android.support.v4.media.MediaMetadataCompat)
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v4.media.MediaMetadataCompat $r1;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        $r1 := @parameter1: android.support.v4.media.MediaMetadataCompat;
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat g> = $r1;
+
+        return $r1;
+    }
+
+    static android.support.v4.media.session.PlaybackStateCompat a(com.seattleclouds.media.d, android.support.v4.media.session.PlaybackStateCompat)
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v4.media.session.PlaybackStateCompat $r1;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        $r1 := @parameter1: android.support.v4.media.session.PlaybackStateCompat;
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f> = $r1;
+
+        return $r1;
+    }
+
+    private void a(android.support.v7.a.ay)
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v7.a.ay $r1;
+        android.support.v4.app.bz $r2;
+        android.support.v4.media.session.PlaybackStateCompat $r3;
+        int $i0;
+        android.content.res.Resources $r4;
+        java.lang.String $r5;
+        android.app.PendingIntent $r6;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 := @parameter0: android.support.v7.a.ay;
+
+        $r3 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $i0 = virtualinvoke $r3.<android.support.v4.media.session.PlaybackStateCompat: int a()>();
+
+        if $i0 != 3 goto label2;
+
+        $r4 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int media_service_label_pause>;
+
+        $r5 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $i0 = <com.seattleclouds.g: int ic_media_service_pause_white>;
+
+        $r6 = $r0.<com.seattleclouds.media.d: android.app.PendingIntent i>;
+
+     label1:
+        $r2 = new android.support.v4.app.bz;
+
+        specialinvoke $r2.<android.support.v4.app.bz: void <init>(int,java.lang.CharSequence,android.app.PendingIntent)>($i0, $r5, $r6);
+
+        virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(android.support.v4.app.bz)>($r2);
+
+        return;
+
+     label2:
+        $r4 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i0 = <com.seattleclouds.l: int media_service_label_play>;
+
+        $r5 = virtualinvoke $r4.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        $i0 = <com.seattleclouds.g: int ic_media_service_play_arrow_white>;
+
+        $r6 = $r0.<com.seattleclouds.media.d: android.app.PendingIntent j>;
+
+        goto label1;
+    }
+
+    static void a(com.seattleclouds.media.d)
+    {
+        com.seattleclouds.media.d $r0;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        specialinvoke $r0.<com.seattleclouds.media.d: void g()>();
+
+        return;
+    }
+
+    private void a(java.lang.String, android.support.v7.a.ay)
+    {
+        com.seattleclouds.media.d $r0;
+        java.lang.String $r1;
+        android.support.v7.a.ay $r2;
+        com.seattleclouds.media.f $r3;
+        com.seattleclouds.media.a $r4;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: android.support.v7.a.ay;
+
+        $r4 = staticinvoke <com.seattleclouds.media.a: com.seattleclouds.media.a a()>();
+
+        $r3 = new com.seattleclouds.media.f;
+
+        specialinvoke $r3.<com.seattleclouds.media.f: void <init>(com.seattleclouds.media.d,android.support.v7.a.ay)>($r0, $r2);
+
+        virtualinvoke $r4.<com.seattleclouds.media.a: void a(java.lang.String,com.seattleclouds.media.c)>($r1, $r3);
+
+        return;
+    }
+
+    static android.app.Notification b(com.seattleclouds.media.d)
+    {
+        com.seattleclouds.media.d $r0;
+        android.app.Notification $r1;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.media.d: android.app.Notification d()>();
+
+        return $r1;
+    }
+
+    private void b(android.support.v7.a.ay)
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v7.a.ay $r1;
+        boolean $z0, $z1;
+        java.lang.String $r2, $r5;
+        java.lang.StringBuilder $r3;
+        android.support.v4.media.session.PlaybackStateCompat $r4;
+        int $i0;
+        long $l1, $l3;
+        byte $b2;
+        android.support.v4.app.ce $r6;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 := @parameter0: android.support.v7.a.ay;
+
+        $z0 = 1;
+
+        $r2 = <com.seattleclouds.media.d: java.lang.String a>;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("updateNotificationPlaybackState. mPlaybackState=");
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r4);
+
+        $r5 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r2, $r5);
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        if $r4 == null goto label1;
+
+        $z1 = $r0.<com.seattleclouds.media.d: boolean m>;
+
+        if $z1 != 0 goto label2;
+
+     label1:
+        $r2 = <com.seattleclouds.media.d: java.lang.String a>;
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r2, "updateNotificationPlaybackState. cancelling notification!");
+
+        return;
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $i0 = virtualinvoke $r4.<android.support.v4.media.session.PlaybackStateCompat: int a()>();
+
+        if $i0 != 3 goto label5;
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $l1 = virtualinvoke $r4.<android.support.v4.media.session.PlaybackStateCompat: long b()>();
+
+        $b2 = $l1 cmp 0L;
+
+        if $b2 < 0 goto label5;
+
+        $l1 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $l3 = virtualinvoke $r4.<android.support.v4.media.session.PlaybackStateCompat: long b()>();
+
+        $l1 = $l1 - $l3;
+
+        $r6 = virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(long)>($l1);
+
+        $r6 = virtualinvoke $r6.<android.support.v4.app.ce: android.support.v4.app.ce a(boolean)>(1);
+
+        virtualinvoke $r6.<android.support.v4.app.ce: android.support.v4.app.ce b(boolean)>(1);
+
+     label3:
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $i0 = virtualinvoke $r4.<android.support.v4.media.session.PlaybackStateCompat: int a()>();
+
+        if $i0 != 3 goto label6;
+
+     label4:
+        virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce c(boolean)>($z0);
+
+        return;
+
+     label5:
+        $r6 = virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(long)>(0L);
+
+        $r6 = virtualinvoke $r6.<android.support.v4.app.ce: android.support.v4.app.ce a(boolean)>(0);
+
+        virtualinvoke $r6.<android.support.v4.app.ce: android.support.v4.app.ce b(boolean)>(0);
+
+        goto label3;
+
+     label6:
+        $z0 = 0;
+
+        goto label4;
+    }
+
+    static android.support.v4.app.dg c(com.seattleclouds.media.d)
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v4.app.dg r1;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        r1 = $r0.<com.seattleclouds.media.d: android.support.v4.app.dg h>;
+
+        return r1;
+    }
+
+    static java.lang.String c()
+    {
+        java.lang.String r0;
+
+        r0 = <com.seattleclouds.media.d: java.lang.String a>;
+
+        return r0;
+    }
+
+    private android.app.Notification d()
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v7.a.ay $r1, r24;
+        java.lang.String $r2, $r8;
+        android.support.v4.media.MediaMetadataCompat $r3;
+        android.support.v4.media.session.PlaybackStateCompat $r4;
+        com.seattleclouds.media.model.b $r5;
+        com.seattleclouds.media.model.a $r6;
+        int $i0, $i3, $i4;
+        com.seattleclouds.media.MediaService $r7;
+        long $l1;
+        byte $b2, $b5;
+        android.app.PendingIntent $r9;
+        android.support.v4.media.MediaDescriptionCompat $r10;
+        android.support.v7.a.bc $r11, r25;
+        int[] $r12;
+        android.support.v4.media.session.MediaSessionCompat$Token $r13;
+        android.support.v4.app.ce $r14;
+        android.net.Uri $r15;
+        com.seattleclouds.media.a $r16;
+        android.graphics.Bitmap $r17, $r18;
+        android.content.res.Resources $r19;
+        java.lang.CharSequence $r20, $r21;
+        java.lang.Object $r22;
+        boolean $z0;
+        android.app.Notification $r23;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r2 = null;
+
+        $r3 = $r0.<com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat g>;
+
+        if $r3 == null goto label14;
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        if $r4 != null goto label01;
+
+        return null;
+
+     label01:
+        $r5 = staticinvoke <com.seattleclouds.media.model.b: com.seattleclouds.media.model.b a()>();
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.media.model.b: com.seattleclouds.media.model.a b()>();
+
+        if $r6 == null goto label13;
+
+        $i0 = virtualinvoke $r6.<com.seattleclouds.media.model.a: int a()>();
+
+     label02:
+        r24 = new android.support.v7.a.ay;
+
+        $r1 = r24;
+
+        $r7 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        specialinvoke r24.<android.support.v7.a.ay: void <init>(android.content.Context)>($r7);
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $l1 = virtualinvoke $r4.<android.support.v4.media.session.PlaybackStateCompat: long d()>();
+
+        $l1 = $l1 & 16L;
+
+        $b2 = $l1 cmp 0L;
+
+        if $b2 == 0 goto label12;
+
+        $i3 = <com.seattleclouds.g: int ic_media_service_skip_previous_white>;
+
+        $r7 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $i4 = <com.seattleclouds.l: int media_service_label_previous>;
+
+        $r8 = virtualinvoke $r7.<com.seattleclouds.media.MediaService: java.lang.String getString(int)>($i4);
+
+        $r9 = $r0.<com.seattleclouds.media.d: android.app.PendingIntent k>;
+
+        virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(int,java.lang.CharSequence,android.app.PendingIntent)>($i3, $r8, $r9);
+
+        $b2 = 1;
+
+     label03:
+        specialinvoke $r0.<com.seattleclouds.media.d: void a(android.support.v7.a.ay)>($r1);
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $l1 = virtualinvoke $r4.<android.support.v4.media.session.PlaybackStateCompat: long d()>();
+
+        $l1 = $l1 & 32L;
+
+        $b5 = $l1 cmp 0L;
+
+        if $b5 == 0 goto label04;
+
+        $i3 = <com.seattleclouds.g: int ic_media_service_skip_next_white>;
+
+        $r7 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $i4 = <com.seattleclouds.l: int media_service_label_next>;
+
+        $r8 = virtualinvoke $r7.<com.seattleclouds.media.MediaService: java.lang.String getString(int)>($i4);
+
+        $r9 = $r0.<com.seattleclouds.media.d: android.app.PendingIntent l>;
+
+        virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(int,java.lang.CharSequence,android.app.PendingIntent)>($i3, $r8, $r9);
+
+     label04:
+        $r3 = $r0.<com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat g>;
+
+        $r10 = virtualinvoke $r3.<android.support.v4.media.MediaMetadataCompat: android.support.v4.media.MediaDescriptionCompat a()>();
+
+        r25 = new android.support.v7.a.bc;
+
+        specialinvoke r25.<android.support.v7.a.bc: void <init>()>();
+
+        $r11 = virtualinvoke r25.<android.support.v7.a.bc: android.support.v7.a.bc a(boolean)>(1);
+
+        $r9 = specialinvoke $r0.<com.seattleclouds.media.d: android.app.PendingIntent f()>();
+
+        $r11 = virtualinvoke $r11.<android.support.v7.a.bc: android.support.v7.a.bc a(android.app.PendingIntent)>($r9);
+
+        $r12 = newarray (int)[1];
+
+        $r12[0] = $b2;
+
+        $r11 = virtualinvoke $r11.<android.support.v7.a.bc: android.support.v7.a.bc a(int[])>($r12);
+
+        $r13 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.MediaSessionCompat$Token c>;
+
+        $r11 = virtualinvoke $r11.<android.support.v7.a.bc: android.support.v7.a.bc a(android.support.v4.media.session.MediaSessionCompat$Token)>($r13);
+
+        $r14 = virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(android.support.v4.app.cq)>($r11);
+
+        $r14 = virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce c(int)>($i0);
+
+        $i3 = <com.seattleclouds.g: int ic_media_service_notification>;
+
+        $r14 = virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce a(int)>($i3);
+
+        $r14 = virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce d(int)>(1);
+
+        $r14 = virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce b(boolean)>(1);
+
+        $r9 = specialinvoke $r0.<com.seattleclouds.media.d: android.app.PendingIntent e()>();
+
+        $r14 = virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce a(android.app.PendingIntent)>($r9);
+
+        $r9 = specialinvoke $r0.<com.seattleclouds.media.d: android.app.PendingIntent f()>();
+
+        virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce b(android.app.PendingIntent)>($r9);
+
+        $i3 = $r0.<com.seattleclouds.media.d: int p>;
+
+        if $i3 != 0 goto label08;
+
+        $r15 = virtualinvoke $r10.<android.support.v4.media.MediaDescriptionCompat: android.net.Uri e()>();
+
+        if $r15 == null goto label11;
+
+        $r15 = virtualinvoke $r10.<android.support.v4.media.MediaDescriptionCompat: android.net.Uri e()>();
+
+        $r8 = virtualinvoke $r15.<android.net.Uri: java.lang.String toString()>();
+
+        $r16 = staticinvoke <com.seattleclouds.media.a: com.seattleclouds.media.a a()>();
+
+        $r17 = virtualinvoke $r16.<com.seattleclouds.media.a: android.graphics.Bitmap a(java.lang.String)>($r8);
+
+        $r18 = $r17;
+
+        if $r17 != null goto label05;
+
+        $r7 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r19 = virtualinvoke $r7.<com.seattleclouds.media.MediaService: android.content.res.Resources getResources()>();
+
+        $i3 = <com.seattleclouds.g: int ic_media_service_default_vinyl_mymy>;
+
+        $r18 = staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeResource(android.content.res.Resources,int)>($r19, $i3);
+
+        $r2 = $r8;
+
+     label05:
+        $r20 = virtualinvoke $r10.<android.support.v4.media.MediaDescriptionCompat: java.lang.CharSequence b()>();
+
+        $r14 = virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(java.lang.CharSequence)>($r20);
+
+        $r21 = virtualinvoke $r10.<android.support.v4.media.MediaDescriptionCompat: java.lang.CharSequence c()>();
+
+        virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce b(java.lang.CharSequence)>($r21);
+
+        if $r2 == null goto label10;
+
+        specialinvoke $r0.<com.seattleclouds.media.d: void a(java.lang.String,android.support.v7.a.ay)>($r2, $r1);
+
+        $r17 = $r18;
+
+        $r22 = $r20;
+
+     label06:
+        $r20 = (java.lang.CharSequence) $r22;
+
+        $r14 = virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(java.lang.CharSequence)>($r20);
+
+        virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce a(android.graphics.Bitmap)>($r17);
+
+        specialinvoke $r0.<com.seattleclouds.media.d: void b(android.support.v7.a.ay)>($r1);
+
+        $z0 = <com.seattleclouds.media.i: boolean a>;
+
+        if $z0 == 0 goto label09;
+
+        virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce c(int)>($i0);
+
+     label07:
+        $r23 = virtualinvoke $r1.<android.support.v7.a.ay: android.app.Notification a()>();
+
+        return $r23;
+
+     label08:
+        $r19 = staticinvoke <com.seattleclouds.App: android.content.res.Resources f()>();
+
+        $i3 = <com.seattleclouds.l: int media_service_default_title_name>;
+
+        $r22 = virtualinvoke $r19.<android.content.res.Resources: java.lang.String getString(int)>($i3);
+
+        $r7 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r19 = virtualinvoke $r7.<com.seattleclouds.media.MediaService: android.content.res.Resources getResources()>();
+
+        $i3 = <com.seattleclouds.g: int ic_media_service_default_vinyl_mymy>;
+
+        $r17 = staticinvoke <android.graphics.BitmapFactory: android.graphics.Bitmap decodeResource(android.content.res.Resources,int)>($r19, $i3);
+
+        goto label06;
+
+     label09:
+        $r14 = virtualinvoke $r1.<android.support.v7.a.ay: android.support.v4.app.ce a(long)>(0L);
+
+        $r14 = virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce a(boolean)>(0);
+
+        virtualinvoke $r14.<android.support.v4.app.ce: android.support.v4.app.ce b(boolean)>(0);
+
+        goto label07;
+
+     label10:
+        $r17 = $r18;
+
+        $r22 = $r20;
+
+        goto label06;
+
+     label11:
+        $r18 = null;
+
+        goto label05;
+
+     label12:
+        $b2 = 0;
+
+        goto label03;
+
+     label13:
+        $i0 = 0;
+
+        goto label02;
+
+     label14:
+        return null;
+    }
+
+    static com.seattleclouds.media.MediaService d(com.seattleclouds.media.d)
+    {
+        com.seattleclouds.media.d $r0;
+        com.seattleclouds.media.MediaService r1;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        return r1;
+    }
+
+    private android.app.PendingIntent e()
+    {
+        com.seattleclouds.media.d $r0;
+        android.content.Intent $r1, $r8;
+        com.seattleclouds.media.MediaService $r2;
+        com.seattleclouds.media.model.a $r3;
+        java.lang.String $r4, $r6;
+        android.support.v4.app.ee $r5;
+        java.lang.Class $r7;
+        com.seattleclouds.FragmentInfo $r9;
+        android.os.Bundle $r10;
+        android.content.Context $r11;
+        android.app.PendingIntent $r12;
+        java.lang.ClassNotFoundException $r13;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r2 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.media.MediaService: com.seattleclouds.media.model.a b()>();
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.media.model.a: java.lang.String b()>();
+
+        $r2 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r5 = staticinvoke <android.support.v4.app.ee: android.support.v4.app.ee a(android.content.Context)>($r2);
+
+        virtualinvoke $r5.<android.support.v4.app.ee: android.support.v4.app.ee a(java.lang.Class)>(class "Lcom/seattleclouds/AppStarterActivity;");
+
+        $r2 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.media.MediaService: com.seattleclouds.media.model.a b()>();
+
+        $r6 = virtualinvoke $r3.<com.seattleclouds.media.model.a: java.lang.String c()>();
+
+        if $r6 == null goto label16;
+
+     label01:
+        $r7 = staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>($r6);
+
+     label02:
+        $r1 = new android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+     label03:
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r2, $r7);
+
+     label04:
+        $r2 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+     label05:
+        $r8 = staticinvoke <com.seattleclouds.AppStarterActivity: android.content.Intent a(android.content.Context)>($r2);
+
+        virtualinvoke $r5.<android.support.v4.app.ee: android.support.v4.app.ee a(android.content.Intent)>($r8);
+
+     label06:
+        if $r4 == null goto label16;
+
+     label07:
+        $r9 = staticinvoke <com.seattleclouds.App: com.seattleclouds.FragmentInfo q(java.lang.String)>($r4);
+
+     label08:
+        if $r9 == null goto label16;
+
+     label09:
+        $r4 = virtualinvoke $r9.<com.seattleclouds.FragmentInfo: java.lang.String a()>();
+
+     label10:
+        if $r4 == null goto label16;
+
+     label11:
+        $r10 = virtualinvoke $r9.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+     label12:
+        if $r10 == null goto label16;
+
+     label13:
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)>("ARG_PAGE_FRAGMENT_INFO", $r9);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setFlags(int)>(805306368);
+
+        virtualinvoke $r5.<android.support.v4.app.ee: android.support.v4.app.ee a(android.content.Intent)>($r1);
+
+        $r11 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r12 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getActivity(android.content.Context,int,android.content.Intent,int)>($r11, 0, $r1, 134217728);
+
+     label14:
+        return $r12;
+
+     label15:
+        $r13 := @caughtexception;
+
+        $r4 = <com.seattleclouds.media.d: java.lang.String a>;
+
+        $r6 = virtualinvoke $r13.<java.lang.ClassNotFoundException: java.lang.String getMessage()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r4, $r6);
+
+     label16:
+        return null;
+
+        catch java.lang.ClassNotFoundException from label01 to label02 with label15;
+        catch java.lang.ClassNotFoundException from label03 to label04 with label15;
+        catch java.lang.ClassNotFoundException from label05 to label06 with label15;
+        catch java.lang.ClassNotFoundException from label07 to label08 with label15;
+        catch java.lang.ClassNotFoundException from label09 to label10 with label15;
+        catch java.lang.ClassNotFoundException from label11 to label12 with label15;
+        catch java.lang.ClassNotFoundException from label13 to label14 with label15;
+    }
+
+    static android.support.v4.media.MediaMetadataCompat e(com.seattleclouds.media.d)
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v4.media.MediaMetadataCompat r1;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat g>;
+
+        return r1;
+    }
+
+    private android.app.PendingIntent f()
+    {
+        com.seattleclouds.media.d $r0;
+        android.content.Intent $r1;
+        com.seattleclouds.media.MediaService $r2;
+        android.content.Context $r3;
+        java.lang.String $r4;
+        android.app.PendingIntent $r5;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 = new android.content.Intent;
+
+        $r2 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r2, class "Lcom/seattleclouds/media/MediaService;");
+
+        $r3 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r4 = staticinvoke <com.seattleclouds.media.i: java.lang.String e(android.content.Context)>($r3);
+
+        virtualinvoke $r1.<android.content.Intent: android.content.Intent setAction(java.lang.String)>($r4);
+
+        $r2 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r5 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getService(android.content.Context,int,android.content.Intent,int)>($r2, 0, $r1, 134217728);
+
+        return $r5;
+    }
+
+    static void f(com.seattleclouds.media.d)
+    {
+        com.seattleclouds.media.d $r0;
+
+        $r0 := @parameter0: com.seattleclouds.media.d;
+
+        specialinvoke $r0.<com.seattleclouds.media.d: void h()>();
+
+        return;
+    }
+
+    private void g()
+    {
+        com.seattleclouds.media.d $r0;
+        com.seattleclouds.media.MediaService $r1;
+        android.support.v4.media.session.MediaSessionCompat$Token $r2, $r3;
+        boolean $z0;
+        android.support.v4.media.session.g $r4;
+        android.support.v4.media.session.i $r5;
+        android.support.v4.media.session.r $r6;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.media.MediaService: android.support.v4.media.session.MediaSessionCompat$Token a()>();
+
+        $r3 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.MediaSessionCompat$Token c>;
+
+        if $r3 == null goto label1;
+
+        $r3 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.MediaSessionCompat$Token c>;
+
+        $z0 = virtualinvoke $r3.<java.lang.Object: boolean equals(java.lang.Object)>($r2);
+
+        if $z0 != 0 goto label3;
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        if $r4 == null goto label2;
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        $r5 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.i q>;
+
+        virtualinvoke $r4.<android.support.v4.media.session.g: void b(android.support.v4.media.session.i)>($r5);
+
+     label2:
+        if $r2 == null goto label3;
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.session.MediaSessionCompat$Token c> = $r2;
+
+        $r4 = new android.support.v4.media.session.g;
+
+        $r1 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        $r2 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.MediaSessionCompat$Token c>;
+
+        specialinvoke $r4.<android.support.v4.media.session.g: void <init>(android.content.Context,android.support.v4.media.session.MediaSessionCompat$Token)>($r1, $r2);
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        $r6 = virtualinvoke $r4.<android.support.v4.media.session.g: android.support.v4.media.session.r a()>();
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e> = $r6;
+
+        $z0 = $r0.<com.seattleclouds.media.d: boolean m>;
+
+        if $z0 == 0 goto label3;
+
+        $r4 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        $r5 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.i q>;
+
+        virtualinvoke $r4.<android.support.v4.media.session.g: void a(android.support.v4.media.session.i)>($r5);
+
+     label3:
+        return;
+    }
+
+    private void h()
+    {
+        com.seattleclouds.media.d $r0;
+        android.support.v4.media.session.r $r1;
+        int $i0;
+        android.support.v4.media.session.PlaybackStateCompat $r2;
+        long $l1, $l2;
+        boolean $z0, $z1, $z2;
+        byte $b3;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        if $r1 != null goto label01;
+
+        return;
+
+     label01:
+        $i0 = $r0.<com.seattleclouds.media.d: int n>;
+
+        if $i0 != 1 goto label12;
+
+        $r2 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        if $r2 != null goto label07;
+
+        $l1 = 0L;
+
+     label02:
+        $r2 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        if $r2 == null goto label08;
+
+        $r2 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $i0 = virtualinvoke $r2.<android.support.v4.media.session.PlaybackStateCompat: int a()>();
+
+        if $i0 != 3 goto label08;
+
+        $z0 = 1;
+
+     label03:
+        $l2 = 516L & $l1;
+
+        $b3 = $l2 cmp 0L;
+
+        if $b3 == 0 goto label09;
+
+        $z1 = 1;
+
+     label04:
+        $l1 = $l1 & 514L;
+
+        $b3 = $l1 cmp 0L;
+
+        if $b3 == 0 goto label10;
+
+        $z2 = 1;
+
+     label05:
+        if $z0 == 0 goto label11;
+
+        if $z2 == 0 goto label11;
+
+        $r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r1.<android.support.v4.media.session.r: void b()>();
+
+     label06:
+        $r0.<com.seattleclouds.media.d: int n> = 0;
+
+        return;
+
+     label07:
+        $r2 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f>;
+
+        $l1 = virtualinvoke $r2.<android.support.v4.media.session.PlaybackStateCompat: long d()>();
+
+        goto label02;
+
+     label08:
+        $z0 = 0;
+
+        goto label03;
+
+     label09:
+        $z1 = 0;
+
+        goto label04;
+
+     label10:
+        $z2 = 0;
+
+        goto label05;
+
+     label11:
+        if $z0 != 0 goto label06;
+
+        if $z1 == 0 goto label06;
+
+        $r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r1.<android.support.v4.media.session.r: void a()>();
+
+        goto label06;
+
+     label12:
+        $i0 = $r0.<com.seattleclouds.media.d: int n>;
+
+        if $i0 != 2 goto label06;
+
+        $r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r1.<android.support.v4.media.session.r: void d()>();
+
+        goto label06;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.media.d $r0;
+        boolean $z0;
+        android.support.v4.media.session.g $r1;
+        android.support.v4.media.MediaMetadataCompat $r2;
+        android.support.v4.media.session.PlaybackStateCompat $r3;
+        android.app.Notification $r4;
+        android.support.v4.media.session.i $r5;
+        android.content.IntentFilter $r6;
+        android.content.Context $r7;
+        java.lang.String $r8;
+        com.seattleclouds.media.MediaService $r9;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $z0 = $r0.<com.seattleclouds.media.d: boolean m>;
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        $r2 = virtualinvoke $r1.<android.support.v4.media.session.g: android.support.v4.media.MediaMetadataCompat c()>();
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.MediaMetadataCompat g> = $r2;
+
+        $r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        $r3 = virtualinvoke $r1.<android.support.v4.media.session.g: android.support.v4.media.session.PlaybackStateCompat b()>();
+
+        $r0.<com.seattleclouds.media.d: android.support.v4.media.session.PlaybackStateCompat f> = $r3;
+
+        $r4 = specialinvoke $r0.<com.seattleclouds.media.d: android.app.Notification d()>();
+
+        if $r4 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        $r5 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.i q>;
+
+        virtualinvoke $r1.<android.support.v4.media.session.g: void a(android.support.v4.media.session.i)>($r5);
+
+        $r6 = new android.content.IntentFilter;
+
+        specialinvoke $r6.<android.content.IntentFilter: void <init>()>();
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r8 = staticinvoke <com.seattleclouds.media.i: java.lang.String g(android.content.Context)>($r7);
+
+        virtualinvoke $r6.<android.content.IntentFilter: void addAction(java.lang.String)>($r8);
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r8 = staticinvoke <com.seattleclouds.media.i: java.lang.String f(android.content.Context)>($r7);
+
+        virtualinvoke $r6.<android.content.IntentFilter: void addAction(java.lang.String)>($r8);
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r8 = staticinvoke <com.seattleclouds.media.i: java.lang.String i(android.content.Context)>($r7);
+
+        virtualinvoke $r6.<android.content.IntentFilter: void addAction(java.lang.String)>($r8);
+
+        $r7 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r8 = staticinvoke <com.seattleclouds.media.i: java.lang.String h(android.content.Context)>($r7);
+
+        virtualinvoke $r6.<android.content.IntentFilter: void addAction(java.lang.String)>($r8);
+
+        $r9 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        virtualinvoke $r9.<com.seattleclouds.media.MediaService: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>($r0, $r6);
+
+        $r0.<com.seattleclouds.media.d: boolean m> = 1;
+
+        $r9 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        virtualinvoke $r9.<com.seattleclouds.media.MediaService: void startForeground(int,android.app.Notification)>(41209, $r4);
+
+     label1:
+        return;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.media.d $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.media.d: int p> = $i0;
+
+        return;
+    }
+
+    public boolean a(android.content.Intent)
+    {
+        com.seattleclouds.media.d $r0;
+        android.content.Intent $r1;
+        android.os.Parcelable $r2;
+        android.view.KeyEvent $r3;
+        int $i0;
+        java.util.Timer $r4;
+        android.support.v4.media.session.r $r5;
+        com.seattleclouds.media.g $r6;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 := @parameter0: android.content.Intent;
+
+        $r2 = virtualinvoke $r1.<android.content.Intent: android.os.Parcelable getParcelableExtra(java.lang.String)>("android.intent.extra.KEY_EVENT");
+
+        $r3 = (android.view.KeyEvent) $r2;
+
+        if $r3 == null goto label1;
+
+        $i0 = virtualinvoke $r3.<android.view.KeyEvent: int getAction()>();
+
+        if $i0 == 0 goto label2;
+
+     label1:
+        return 0;
+
+     label2:
+        $i0 = virtualinvoke $r3.<android.view.KeyEvent: int getKeyCode()>();
+
+        lookupswitch($i0)
+        {
+            case 79: goto label4;
+            case 85: goto label4;
+            default: goto label3;
+        };
+
+     label3:
+        return 0;
+
+     label4:
+        $r4 = $r0.<com.seattleclouds.media.d: java.util.Timer o>;
+
+        if $r4 == null goto label5;
+
+        $r4 = $r0.<com.seattleclouds.media.d: java.util.Timer o>;
+
+        virtualinvoke $r4.<java.util.Timer: void cancel()>();
+
+        $r4 = $r0.<com.seattleclouds.media.d: java.util.Timer o>;
+
+        virtualinvoke $r4.<java.util.Timer: int purge()>();
+
+        $r0.<com.seattleclouds.media.d: java.util.Timer o> = null;
+
+     label5:
+        $i0 = $r0.<com.seattleclouds.media.d: int n>;
+
+        $i0 = $i0 + 1;
+
+        $r0.<com.seattleclouds.media.d: int n> = $i0;
+
+        $i0 = $r0.<com.seattleclouds.media.d: int n>;
+
+        if $i0 != 3 goto label6;
+
+        $r5 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        if $r5 == null goto label6;
+
+        $r5 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r5.<android.support.v4.media.session.r: void e()>();
+
+     label6:
+        $r4 = new java.util.Timer;
+
+        specialinvoke $r4.<java.util.Timer: void <init>()>();
+
+        $r0.<com.seattleclouds.media.d: java.util.Timer o> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.media.d: java.util.Timer o>;
+
+        $r6 = new com.seattleclouds.media.g;
+
+        specialinvoke $r6.<com.seattleclouds.media.g: void <init>(com.seattleclouds.media.d)>($r0);
+
+        virtualinvoke $r4.<java.util.Timer: void schedule(java.util.TimerTask,long)>($r6, 300L);
+
+        return 1;
+    }
+
+    public void b()
+    {
+        com.seattleclouds.media.d $r0;
+        java.lang.String $r1, $r7;
+        boolean $z0;
+        android.support.v4.media.session.g $r2;
+        android.support.v4.media.session.i $r3;
+        com.seattleclouds.media.MediaService $r4;
+        android.support.v4.app.dg $r5;
+        java.lang.Throwable $r6;
+        java.lang.IllegalArgumentException r8;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $z0 = $r0.<com.seattleclouds.media.d: boolean m>;
+
+        if $z0 == 0 goto label6;
+
+        $r0.<com.seattleclouds.media.d: boolean m> = 0;
+
+        $r2 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.g d>;
+
+        $r3 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.i q>;
+
+        virtualinvoke $r2.<android.support.v4.media.session.g: void b(android.support.v4.media.session.i)>($r3);
+
+        $r4 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+        virtualinvoke $r4.<com.seattleclouds.media.MediaService: void stopForeground(boolean)>(1);
+
+        $r5 = $r0.<com.seattleclouds.media.d: android.support.v4.app.dg h>;
+
+     label1:
+        virtualinvoke $r5.<android.support.v4.app.dg: void a(int)>(41209);
+
+     label2:
+        $r4 = $r0.<com.seattleclouds.media.d: com.seattleclouds.media.MediaService b>;
+
+     label3:
+        virtualinvoke $r4.<com.seattleclouds.media.MediaService: void unregisterReceiver(android.content.BroadcastReceiver)>($r0);
+
+     label4:
+        return;
+
+     label5:
+        $r6 := @caughtexception;
+
+        $r7 = <com.seattleclouds.media.d: java.lang.String a>;
+
+        r8 = (java.lang.IllegalArgumentException) $r6;
+
+        $r1 = virtualinvoke r8.<java.lang.IllegalArgumentException: java.lang.String getMessage()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r7, $r1);
+
+     label6:
+        return;
+
+        catch java.lang.IllegalArgumentException from label1 to label2 with label5;
+        catch java.lang.IllegalArgumentException from label3 to label4 with label5;
+    }
+
+    public void onReceive(android.content.Context, android.content.Intent)
+    {
+        com.seattleclouds.media.d $r0;
+        android.content.Context $r1;
+        android.content.Intent $r2;
+        java.lang.String $r3, $r4, $r5, $r6, $r7;
+        boolean $z0;
+        android.support.v4.media.session.r $r8;
+        java.lang.StringBuilder $r9;
+
+        $r0 := @this: com.seattleclouds.media.d;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: android.content.Intent;
+
+        $r3 = virtualinvoke $r2.<android.content.Intent: java.lang.String getAction()>();
+
+        $r1 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r4 = staticinvoke <com.seattleclouds.media.i: java.lang.String g(android.content.Context)>($r1);
+
+        $r1 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r5 = staticinvoke <com.seattleclouds.media.i: java.lang.String f(android.content.Context)>($r1);
+
+        $r1 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r6 = staticinvoke <com.seattleclouds.media.i: java.lang.String h(android.content.Context)>($r1);
+
+        $r1 = staticinvoke <com.seattleclouds.App: android.content.Context e()>();
+
+        $r7 = staticinvoke <com.seattleclouds.media.i: java.lang.String i(android.content.Context)>($r1);
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label1;
+
+        $r8 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r8.<android.support.v4.media.session.r: void b()>();
+
+        return;
+
+     label1:
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label2;
+
+        $r8 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r8.<android.support.v4.media.session.r: void a()>();
+
+        return;
+
+     label2:
+        $z0 = virtualinvoke $r6.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label3;
+
+        $r8 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r8.<android.support.v4.media.session.r: void d()>();
+
+        return;
+
+     label3:
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equals(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label4;
+
+        $r8 = $r0.<com.seattleclouds.media.d: android.support.v4.media.session.r e>;
+
+        virtualinvoke $r8.<android.support.v4.media.session.r: void e()>();
+
+        return;
+
+     label4:
+        $r4 = <com.seattleclouds.media.d: java.lang.String a>;
+
+        $r9 = new java.lang.StringBuilder;
+
+        specialinvoke $r9.<java.lang.StringBuilder: void <init>()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Unknown intent ignored. Action=");
+
+        $r9 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r3 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.media.i: void a(java.lang.String,java.lang.String)>($r4, $r3);
+
+        return;
+    }
+}

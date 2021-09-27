@@ -1,0 +1,78 @@
+class com.seattleclouds.modules.puzzle.e extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.seattleclouds.modules.puzzle.a a;
+
+    void <init>(com.seattleclouds.modules.puzzle.a)
+    {
+        com.seattleclouds.modules.puzzle.e $r0;
+        com.seattleclouds.modules.puzzle.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.e;
+
+        $r1 := @parameter0: com.seattleclouds.modules.puzzle.a;
+
+        $r0.<com.seattleclouds.modules.puzzle.e: com.seattleclouds.modules.puzzle.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.seattleclouds.modules.puzzle.e $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        com.seattleclouds.modules.puzzle.a $r2;
+        java.util.List $r3;
+        java.lang.Object $r4;
+        java.util.HashMap $r5;
+        java.lang.String $r6;
+
+        $r0 := @this: com.seattleclouds.modules.puzzle.e;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<com.seattleclouds.modules.puzzle.e: com.seattleclouds.modules.puzzle.a a>;
+
+        staticinvoke <com.seattleclouds.modules.puzzle.a: boolean a(com.seattleclouds.modules.puzzle.a,boolean)>($r2, 0);
+
+        $r2 = $r0.<com.seattleclouds.modules.puzzle.e: com.seattleclouds.modules.puzzle.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.modules.puzzle.a: java.util.List b(com.seattleclouds.modules.puzzle.a)>($r2);
+
+        $r4 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r5 = (java.util.HashMap) $r4;
+
+        $r2 = $r0.<com.seattleclouds.modules.puzzle.e: com.seattleclouds.modules.puzzle.a a>;
+
+        $r4 = virtualinvoke $r5.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("rows");
+
+        $r6 = (java.lang.String) $r4;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.puzzle.a: int a(java.lang.String,int)>($r6, 15);
+
+        staticinvoke <com.seattleclouds.modules.puzzle.a: int a(com.seattleclouds.modules.puzzle.a,int)>($r2, $i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.puzzle.e: com.seattleclouds.modules.puzzle.a a>;
+
+        $r4 = virtualinvoke $r5.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("nextPage");
+
+        $r6 = (java.lang.String) $r4;
+
+        staticinvoke <com.seattleclouds.modules.puzzle.a: java.lang.String a(com.seattleclouds.modules.puzzle.a,java.lang.String)>($r2, $r6);
+
+        $r2 = $r0.<com.seattleclouds.modules.puzzle.e: com.seattleclouds.modules.puzzle.a a>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.puzzle.a: void ad()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.puzzle.e: com.seattleclouds.modules.puzzle.a a>;
+
+        staticinvoke <com.seattleclouds.modules.puzzle.a: void c(com.seattleclouds.modules.puzzle.a)>($r2);
+
+        return;
+    }
+}

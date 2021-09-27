@@ -1,0 +1,95 @@
+public class com.seattleclouds.modules.nativetetris.h extends com.seattleclouds.modules.nativetetris.a
+{
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.nativetetris.h $r0;
+        android.graphics.Point $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.h;
+
+        specialinvoke $r0.<com.seattleclouds.modules.nativetetris.a: void <init>()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.nativetetris.h: android.graphics.Point a>;
+
+        $i0 = $r1.<android.graphics.Point: int y>;
+
+        $i0 = $i0 + -2;
+
+        $r1.<android.graphics.Point: int y> = $i0;
+
+        specialinvoke $r0.<com.seattleclouds.modules.nativetetris.h: void d()>();
+
+        return;
+    }
+
+    private void d()
+    {
+        com.seattleclouds.modules.nativetetris.h $r0;
+        android.graphics.Point[] $r1;
+        android.graphics.Point $r2;
+        com.seattleclouds.modules.nativetetris.BlockObject$BlockState $r3;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.h;
+
+        $r1 = $r0.<com.seattleclouds.modules.nativetetris.h: android.graphics.Point[] b>;
+
+        $r2 = new android.graphics.Point;
+
+        specialinvoke $r2.<android.graphics.Point: void <init>(int,int)>(0, 2);
+
+        $r1[0] = $r2;
+
+        $r1 = $r0.<com.seattleclouds.modules.nativetetris.h: android.graphics.Point[] b>;
+
+        $r2 = new android.graphics.Point;
+
+        specialinvoke $r2.<android.graphics.Point: void <init>(int,int)>(0, 3);
+
+        $r1[1] = $r2;
+
+        $r1 = $r0.<com.seattleclouds.modules.nativetetris.h: android.graphics.Point[] b>;
+
+        $r2 = new android.graphics.Point;
+
+        specialinvoke $r2.<android.graphics.Point: void <init>(int,int)>(1, 2);
+
+        $r1[2] = $r2;
+
+        $r1 = $r0.<com.seattleclouds.modules.nativetetris.h: android.graphics.Point[] b>;
+
+        $r2 = new android.graphics.Point;
+
+        specialinvoke $r2.<android.graphics.Point: void <init>(int,int)>(1, 3);
+
+        $r1[3] = $r2;
+
+        $r3 = <com.seattleclouds.modules.nativetetris.BlockObject$BlockState: com.seattleclouds.modules.nativetetris.BlockObject$BlockState STATE_0>;
+
+        $r0.<com.seattleclouds.modules.nativetetris.h: com.seattleclouds.modules.nativetetris.BlockObject$BlockState c> = $r3;
+
+        return;
+    }
+
+    void a(com.seattleclouds.modules.nativetetris.BlockObject$RotateDirection)
+    {
+        com.seattleclouds.modules.nativetetris.h $r0;
+        com.seattleclouds.modules.nativetetris.BlockObject$RotateDirection $r1;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.h;
+
+        $r1 := @parameter0: com.seattleclouds.modules.nativetetris.BlockObject$RotateDirection;
+
+        return;
+    }
+
+    int c()
+    {
+        com.seattleclouds.modules.nativetetris.h $r0;
+
+        $r0 := @this: com.seattleclouds.modules.nativetetris.h;
+
+        return 2;
+    }
+}

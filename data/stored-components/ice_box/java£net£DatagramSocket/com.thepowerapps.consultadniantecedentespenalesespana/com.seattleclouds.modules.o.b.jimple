@@ -1,0 +1,118 @@
+class com.seattleclouds.modules.o.b extends java.lang.Object implements com.google.android.gms.maps.m
+{
+    final com.seattleclouds.modules.o.a a;
+
+    void <init>(com.seattleclouds.modules.o.a)
+    {
+        com.seattleclouds.modules.o.b $r0;
+        com.seattleclouds.modules.o.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.o.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.o.a;
+
+        $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(com.google.android.gms.maps.model.CameraPosition)
+    {
+        com.seattleclouds.modules.o.b $r0;
+        com.google.android.gms.maps.model.CameraPosition $r1;
+        com.google.android.gms.maps.model.LatLng $r2, $r7;
+        com.seattleclouds.modules.o.a $r3, $r6;
+        android.support.v4.app.ac $r4;
+        boolean $z0;
+        com.seattleclouds.modules.o.c $r5;
+        java.util.ArrayList $r8;
+        int $i0;
+        com.google.android.gms.maps.c $r9;
+        float $f0;
+
+        $r0 := @this: com.seattleclouds.modules.o.b;
+
+        $r1 := @parameter0: com.google.android.gms.maps.model.CameraPosition;
+
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.o.a: android.support.v4.app.ac n()>();
+
+        $z0 = staticinvoke <com.seattleclouds.util.bm: boolean a(android.content.Context)>($r4);
+
+        if $z0 != 0 goto label1;
+
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.o.a: android.support.v4.app.ac n()>();
+
+        $r5 = new com.seattleclouds.modules.o.c;
+
+        specialinvoke $r5.<com.seattleclouds.modules.o.c: void <init>(com.seattleclouds.modules.o.b)>($r0);
+
+        virtualinvoke $r4.<android.support.v4.app.ac: void runOnUiThread(java.lang.Runnable)>($r5);
+
+        return;
+
+     label1:
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.model.LatLng a(com.seattleclouds.modules.o.a)>($r3);
+
+        if $r2 == null goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r6 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r7 = staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.model.LatLng a(com.seattleclouds.modules.o.a)>($r6);
+
+        $r2 = $r1.<com.google.android.gms.maps.model.CameraPosition: com.google.android.gms.maps.model.LatLng a>;
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.modules.o.a: boolean a(com.google.android.gms.maps.model.LatLng,com.google.android.gms.maps.model.LatLng)>($r7, $r2);
+
+        if $z0 == 0 goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r8 = staticinvoke <com.seattleclouds.modules.o.a: java.util.ArrayList b(com.seattleclouds.modules.o.a)>($r3);
+
+        $i0 = virtualinvoke $r8.<java.util.ArrayList: int size()>();
+
+        if $i0 != 0 goto label3;
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r2 = $r1.<com.google.android.gms.maps.model.CameraPosition: com.google.android.gms.maps.model.LatLng a>;
+
+        staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.model.LatLng a(com.seattleclouds.modules.o.a,com.google.android.gms.maps.model.LatLng)>($r3, $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r6 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r9 = staticinvoke <com.seattleclouds.modules.o.a: com.google.android.gms.maps.c c(com.seattleclouds.modules.o.a)>($r6);
+
+        $r1 = virtualinvoke $r9.<com.google.android.gms.maps.c: com.google.android.gms.maps.model.CameraPosition a()>();
+
+        $f0 = $r1.<com.google.android.gms.maps.model.CameraPosition: float b>;
+
+        staticinvoke <com.seattleclouds.modules.o.a: float a(com.seattleclouds.modules.o.a,float)>($r3, $f0);
+
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.o.a: android.support.v4.app.ac n()>();
+
+        if $r4 == null goto label3;
+
+        $r3 = $r0.<com.seattleclouds.modules.o.b: com.seattleclouds.modules.o.a a>;
+
+        virtualinvoke $r3.<com.seattleclouds.modules.o.a: void ae()>();
+
+     label3:
+        return;
+    }
+}

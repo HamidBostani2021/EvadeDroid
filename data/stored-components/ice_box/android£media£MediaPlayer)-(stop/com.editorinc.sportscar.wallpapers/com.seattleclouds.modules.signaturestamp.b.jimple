@@ -1,0 +1,34 @@
+class com.seattleclouds.modules.signaturestamp.b extends java.lang.Object implements android.view.ViewTreeObserver$OnGlobalLayoutListener
+{
+    final com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity a;
+
+    void <init>(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)
+    {
+        com.seattleclouds.modules.signaturestamp.b $r0;
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r1;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity;
+
+        $r0.<com.seattleclouds.modules.signaturestamp.b: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onGlobalLayout()
+    {
+        com.seattleclouds.modules.signaturestamp.b $r0;
+        com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity $r1;
+
+        $r0 := @this: com.seattleclouds.modules.signaturestamp.b;
+
+        $r1 = $r0.<com.seattleclouds.modules.signaturestamp.b: com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity a>;
+
+        staticinvoke <com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity: void a(com.seattleclouds.modules.signaturestamp.DrawSurfaceActivity)>($r1);
+
+        return;
+    }
+}

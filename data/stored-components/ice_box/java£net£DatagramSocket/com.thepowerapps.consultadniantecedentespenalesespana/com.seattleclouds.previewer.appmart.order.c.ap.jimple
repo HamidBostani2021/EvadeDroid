@@ -1,0 +1,861 @@
+public class com.seattleclouds.previewer.appmart.order.c.ap extends com.seattleclouds.r
+{
+    public static final java.lang.String a;
+    private android.support.design.widget.TextInputLayout ai;
+    private android.widget.EditText aj;
+    private android.support.design.widget.TextInputLayout ak;
+    private android.widget.EditText al;
+    private android.support.design.widget.TextInputLayout am;
+    private android.widget.EditText an;
+    private android.support.design.widget.TextInputLayout ao;
+    private android.widget.EditText ap;
+    private android.support.design.widget.TextInputLayout aq;
+    private android.widget.EditText ar;
+    private android.support.design.widget.TextInputLayout as;
+    private com.seattleclouds.previewer.appmart.order.b.a at;
+    private android.support.design.widget.TextInputLayout au;
+    private android.widget.EditText av;
+    private android.widget.EditText aw;
+    private android.widget.EditText ax;
+    private android.widget.EditText ay;
+    private android.widget.RelativeLayout b;
+    private android.widget.EditText c;
+    private android.support.design.widget.TextInputLayout d;
+    private android.widget.EditText e;
+    private android.support.design.widget.TextInputLayout f;
+    private android.widget.EditText g;
+    private android.support.design.widget.TextInputLayout h;
+    private android.widget.EditText i;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/previewer/appmart/order/c/ap;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getName()>();
+
+        <com.seattleclouds.previewer.appmart.order.c.ap: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        return;
+    }
+
+    static android.support.design.widget.TextInputLayout a(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout d>;
+
+        return r1;
+    }
+
+    private boolean a(android.widget.EditText)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.widget.EditText $r1;
+        android.text.Editable $r2;
+        java.lang.String $r3;
+        boolean $z0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 := @parameter0: android.widget.EditText;
+
+        $r2 = virtualinvoke $r1.<android.widget.EditText: android.text.Editable getText()>();
+
+        if $r2 == null goto label1;
+
+        $r2 = virtualinvoke $r1.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r3 = virtualinvoke $r2.<java.lang.Object: java.lang.String toString()>();
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean isEmpty()>();
+
+        if $z0 != 0 goto label1;
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label1;
+
+        return 0;
+
+     label1:
+        return 1;
+    }
+
+    private boolean a(android.widget.EditText, android.support.design.widget.TextInputLayout)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.widget.EditText $r1;
+        android.support.design.widget.TextInputLayout $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 := @parameter0: android.widget.EditText;
+
+        $r2 := @parameter1: android.support.design.widget.TextInputLayout;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText)>($r1);
+
+        if $z0 != 0 goto label1;
+
+        return 0;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: void c(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        return 1;
+    }
+
+    private void ad()
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        boolean $z0;
+        com.seattleclouds.previewer.appmart.order.b.a $r1;
+        android.widget.RelativeLayout $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: com.seattleclouds.previewer.appmart.order.b.a at>;
+
+        $z0 = virtualinvoke $r1.<com.seattleclouds.previewer.appmart.order.b.a: boolean V()>();
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.RelativeLayout b>;
+
+        virtualinvoke $r2.<android.widget.RelativeLayout: void setVisibility(int)>(0);
+
+     label1:
+        return;
+    }
+
+    static com.seattleclouds.previewer.appmart.order.b.a b(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        com.seattleclouds.previewer.appmart.order.b.a r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: com.seattleclouds.previewer.appmart.order.b.a at>;
+
+        return r1;
+    }
+
+    private boolean b(android.widget.EditText, android.support.design.widget.TextInputLayout)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.widget.EditText $r1;
+        android.support.design.widget.TextInputLayout $r2;
+        boolean $z0;
+        android.text.Editable $r3;
+        java.lang.String $r4, $r6;
+        java.util.regex.Pattern $r5;
+        android.content.res.Resources $r7;
+        int $i0;
+        android.view.ViewParent $r8;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 := @parameter0: android.widget.EditText;
+
+        $r2 := @parameter1: android.support.design.widget.TextInputLayout;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r3 = virtualinvoke $r1.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r4 = virtualinvoke $r3.<java.lang.Object: java.lang.String toString()>();
+
+        $r5 = <android.util.Patterns: java.util.regex.Pattern EMAIL_ADDRESS>;
+
+        $r6 = virtualinvoke $r5.<java.util.regex.Pattern: java.lang.String pattern()>();
+
+        $z0 = virtualinvoke $r4.<java.lang.String: boolean matches(java.lang.String)>($r6);
+
+        if $z0 != 0 goto label2;
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.content.res.Resources o()>();
+
+        $i0 = <com.seattleclouds.l: int new_order_error_incorrect_email>;
+
+        $r4 = virtualinvoke $r7.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<android.support.design.widget.TextInputLayout: void setError(java.lang.CharSequence)>($r4);
+
+        $r8 = virtualinvoke $r1.<android.widget.EditText: android.view.ViewParent getParent()>();
+
+        interfaceinvoke $r8.<android.view.ViewParent: void requestChildFocus(android.view.View,android.view.View)>($r1, $r1);
+
+     label1:
+        return 0;
+
+     label2:
+        return 1;
+    }
+
+    static android.support.design.widget.TextInputLayout c(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ai>;
+
+        return r1;
+    }
+
+    private void c(android.widget.EditText, android.support.design.widget.TextInputLayout)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.widget.EditText $r1;
+        android.support.design.widget.TextInputLayout $r2;
+        int $i0;
+        android.content.res.Resources $r3;
+        java.lang.String $r4;
+        android.view.ViewParent $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 := @parameter0: android.widget.EditText;
+
+        $r2 := @parameter1: android.support.design.widget.TextInputLayout;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.content.res.Resources o()>();
+
+        $i0 = <com.seattleclouds.l: int new_order_error_text_appearance>;
+
+        $r4 = virtualinvoke $r3.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r2.<android.support.design.widget.TextInputLayout: void setError(java.lang.CharSequence)>($r4);
+
+        $r5 = virtualinvoke $r1.<android.widget.EditText: android.view.ViewParent getParent()>();
+
+        interfaceinvoke $r5.<android.view.ViewParent: void requestChildFocus(android.view.View,android.view.View)>($r1, $r1);
+
+        return;
+    }
+
+    static android.support.design.widget.TextInputLayout d(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout f>;
+
+        return r1;
+    }
+
+    static android.support.design.widget.TextInputLayout e(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout h>;
+
+        return r1;
+    }
+
+    static android.support.design.widget.TextInputLayout f(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ak>;
+
+        return r1;
+    }
+
+    static android.support.design.widget.TextInputLayout g(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout am>;
+
+        return r1;
+    }
+
+    static android.support.design.widget.TextInputLayout h(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ao>;
+
+        return r1;
+    }
+
+    static android.support.design.widget.TextInputLayout i(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout au>;
+
+        return r1;
+    }
+
+    static android.support.design.widget.TextInputLayout j(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout aq>;
+
+        return r1;
+    }
+
+    static android.support.design.widget.TextInputLayout k(com.seattleclouds.previewer.appmart.order.c.ap)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.support.design.widget.TextInputLayout r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout as>;
+
+        return r1;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        com.seattleclouds.previewer.appmart.order.b.a $r4;
+        android.view.View $r5, $r6;
+        android.support.design.widget.TextInputLayout $r7;
+        android.widget.Spinner $r8;
+        android.widget.RelativeLayout $r9;
+        android.widget.EditText $r10;
+        com.seattleclouds.previewer.appmart.order.c.aq $r11;
+        com.seattleclouds.previewer.appmart.order.c.e $r12;
+        com.seattleclouds.previewer.appmart.order.c.f $r13;
+        com.seattleclouds.previewer.appmart.order.c.g $r14;
+        com.seattleclouds.previewer.appmart.order.c.h $r15;
+        com.seattleclouds.previewer.appmart.order.c.i $r16;
+        com.seattleclouds.previewer.appmart.order.c.j $r17;
+        com.seattleclouds.previewer.appmart.order.c.k $r18;
+        com.seattleclouds.previewer.appmart.order.c.l $r19;
+        com.seattleclouds.previewer.appmart.order.c.ar $r20;
+        com.seattleclouds.previewer.appmart.order.c.as $r21;
+        com.seattleclouds.previewer.appmart.order.c.b $r22;
+        com.seattleclouds.previewer.appmart.order.c.c $r23;
+        java.lang.String[] $r24;
+        android.widget.ArrayAdapter $r25;
+        android.support.v4.app.ac $r26;
+        com.seattleclouds.previewer.appmart.order.c.d $r27;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $r4 = staticinvoke <com.seattleclouds.previewer.appmart.order.b.a: com.seattleclouds.previewer.appmart.order.b.a a()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: com.seattleclouds.previewer.appmart.order.b.a at> = $r4;
+
+        $i0 = <com.seattleclouds.j: int fragment_new_order_information>;
+
+        $r5 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $i0 = <com.seattleclouds.h: int text_input_layout>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout d> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_phone_personal>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ai> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_user_email>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout f> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_company_name>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout h> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_company_email>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout am> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_phone_company>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ak> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_company_address>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ao> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_country>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout aq> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_language>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout as> = $r7;
+
+        $i0 = <com.seattleclouds.h: int text_input_layout_company_web_site>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.support.design.widget.TextInputLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout au> = $r7;
+
+        $i0 = <com.seattleclouds.h: int spinner_device_type_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r8 = (android.widget.Spinner) $r6;
+
+        $i0 = <com.seattleclouds.h: int device_type_layout>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r9 = (android.widget.RelativeLayout) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.RelativeLayout b> = $r9;
+
+        $i0 = <com.seattleclouds.h: int edit_text_user_name_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText c> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText c>;
+
+        $r11 = new com.seattleclouds.previewer.appmart.order.c.aq;
+
+        specialinvoke $r11.<com.seattleclouds.previewer.appmart.order.c.aq: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r11);
+
+        $i0 = <com.seattleclouds.h: int edit_text_phone_personal_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText i> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText i>;
+
+        $r12 = new com.seattleclouds.previewer.appmart.order.c.e;
+
+        specialinvoke $r12.<com.seattleclouds.previewer.appmart.order.c.e: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r12);
+
+        $i0 = <com.seattleclouds.h: int edit_text_user_email_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText e> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText e>;
+
+        $r13 = new com.seattleclouds.previewer.appmart.order.c.f;
+
+        specialinvoke $r13.<com.seattleclouds.previewer.appmart.order.c.f: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r13);
+
+        $i0 = <com.seattleclouds.h: int edit_text_company_name_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText g> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText g>;
+
+        $r14 = new com.seattleclouds.previewer.appmart.order.c.g;
+
+        specialinvoke $r14.<com.seattleclouds.previewer.appmart.order.c.g: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r14);
+
+        $i0 = <com.seattleclouds.h: int edit_text_phone_company_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText aj> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText aj>;
+
+        $r15 = new com.seattleclouds.previewer.appmart.order.c.h;
+
+        specialinvoke $r15.<com.seattleclouds.previewer.appmart.order.c.h: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r15);
+
+        $i0 = <com.seattleclouds.h: int edit_text_company_email_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText al> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText al>;
+
+        $r16 = new com.seattleclouds.previewer.appmart.order.c.i;
+
+        specialinvoke $r16.<com.seattleclouds.previewer.appmart.order.c.i: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r16);
+
+        $i0 = <com.seattleclouds.h: int edit_text_company_address>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText an> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText an>;
+
+        $r17 = new com.seattleclouds.previewer.appmart.order.c.j;
+
+        specialinvoke $r17.<com.seattleclouds.previewer.appmart.order.c.j: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r17);
+
+        $i0 = <com.seattleclouds.h: int edit_text_web_site_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText av> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText av>;
+
+        $r18 = new com.seattleclouds.previewer.appmart.order.c.k;
+
+        specialinvoke $r18.<com.seattleclouds.previewer.appmart.order.c.k: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r18);
+
+        $i0 = <com.seattleclouds.h: int edit_text_country>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ap> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ap>;
+
+        $r19 = new com.seattleclouds.previewer.appmart.order.c.l;
+
+        specialinvoke $r19.<com.seattleclouds.previewer.appmart.order.c.l: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r19);
+
+        $i0 = <com.seattleclouds.h: int edit_text_language>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ar> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ar>;
+
+        $r20 = new com.seattleclouds.previewer.appmart.order.c.ar;
+
+        specialinvoke $r20.<com.seattleclouds.previewer.appmart.order.c.ar: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r20);
+
+        $i0 = <com.seattleclouds.h: int edit_text_we_chat_id_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText aw> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText aw>;
+
+        $r21 = new com.seattleclouds.previewer.appmart.order.c.as;
+
+        specialinvoke $r21.<com.seattleclouds.previewer.appmart.order.c.as: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r21);
+
+        $i0 = <com.seattleclouds.h: int edit_text_requirements_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ax> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ax>;
+
+        $r22 = new com.seattleclouds.previewer.appmart.order.c.b;
+
+        specialinvoke $r22.<com.seattleclouds.previewer.appmart.order.c.b: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r22);
+
+        $i0 = <com.seattleclouds.h: int edit_text_notes_order>;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r10 = (android.widget.EditText) $r6;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ay> = $r10;
+
+        $r10 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ay>;
+
+        $r23 = new com.seattleclouds.previewer.appmart.order.c.c;
+
+        specialinvoke $r23.<com.seattleclouds.previewer.appmart.order.c.c: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r10.<android.widget.EditText: void addTextChangedListener(android.text.TextWatcher)>($r23);
+
+        $r24 = newarray (java.lang.String)[2];
+
+        $r24[0] = "Android";
+
+        $r24[1] = "iOS";
+
+        $r25 = new android.widget.ArrayAdapter;
+
+        $r26 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.j: int new_order_spinner_item>;
+
+        specialinvoke $r25.<android.widget.ArrayAdapter: void <init>(android.content.Context,int,java.lang.Object[])>($r26, $i0, $r24);
+
+        virtualinvoke $r25.<android.widget.ArrayAdapter: void setDropDownViewResource(int)>(17367049);
+
+        virtualinvoke $r8.<android.widget.Spinner: void setAdapter(android.widget.SpinnerAdapter)>($r25);
+
+        $r27 = new com.seattleclouds.previewer.appmart.order.c.d;
+
+        specialinvoke $r27.<com.seattleclouds.previewer.appmart.order.c.d: void <init>(com.seattleclouds.previewer.appmart.order.c.ap)>($r0);
+
+        virtualinvoke $r8.<android.widget.Spinner: void setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener)>($r27);
+
+        return $r5;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a_(boolean)>($z0);
+
+        if $z0 == 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: void ad()>();
+
+     label1:
+        return;
+    }
+
+    public void ab()
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.widget.RelativeLayout $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.RelativeLayout b>;
+
+        virtualinvoke $r1.<android.widget.RelativeLayout: void setVisibility(int)>(0);
+
+        return;
+    }
+
+    public boolean ac()
+    {
+        com.seattleclouds.previewer.appmart.order.c.ap $r0;
+        android.widget.EditText $r1;
+        android.support.design.widget.TextInputLayout $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.c.ap;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText c>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout d>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText g>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout h>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText g>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout h>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText i>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ai>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText aj>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ak>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText e>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout f>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean b(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText al>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout am>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean b(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText an>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout ao>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ap>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout aq>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.widget.EditText ar>;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.c.ap: android.support.design.widget.TextInputLayout as>;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.c.ap: boolean a(android.widget.EditText,android.support.design.widget.TextInputLayout)>($r1, $r2);
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        return 1;
+
+     label2:
+        return 0;
+    }
+}

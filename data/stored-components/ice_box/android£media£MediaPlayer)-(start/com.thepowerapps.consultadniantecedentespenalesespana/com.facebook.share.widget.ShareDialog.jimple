@@ -1,0 +1,485 @@
+public final class com.facebook.share.widget.ShareDialog extends com.facebook.internal.u implements com.facebook.share.a
+{
+    private static final int b;
+    private boolean c;
+    private boolean d;
+
+    static void <clinit>()
+    {
+        int $i0;
+        com.facebook.internal.CallbackManagerImpl$RequestCodeOffset $r0;
+
+        $r0 = <com.facebook.internal.CallbackManagerImpl$RequestCodeOffset: com.facebook.internal.CallbackManagerImpl$RequestCodeOffset Share>;
+
+        $i0 = virtualinvoke $r0.<com.facebook.internal.CallbackManagerImpl$RequestCodeOffset: int toRequestCode()>();
+
+        <com.facebook.share.widget.ShareDialog: int b> = $i0;
+
+        return;
+    }
+
+    public void <init>(android.app.Activity)
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        android.app.Activity $r1;
+        int $i0;
+
+        $r0 := @this: com.facebook.share.widget.ShareDialog;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $i0 = <com.facebook.share.widget.ShareDialog: int b>;
+
+        specialinvoke $r0.<com.facebook.internal.u: void <init>(android.app.Activity,int)>($r1, $i0);
+
+        $r0.<com.facebook.share.widget.ShareDialog: boolean c> = 0;
+
+        $r0.<com.facebook.share.widget.ShareDialog: boolean d> = 1;
+
+        $i0 = <com.facebook.share.widget.ShareDialog: int b>;
+
+        staticinvoke <com.facebook.share.internal.o: void a(int)>($i0);
+
+        return;
+    }
+
+    static android.app.Activity a(com.facebook.share.widget.ShareDialog)
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        android.app.Activity $r1;
+
+        $r0 := @parameter0: com.facebook.share.widget.ShareDialog;
+
+        $r1 = virtualinvoke $r0.<com.facebook.share.widget.ShareDialog: android.app.Activity b()>();
+
+        return $r1;
+    }
+
+    private void a(android.content.Context, com.facebook.share.model.ShareContent, com.facebook.share.widget.ShareDialog$Mode)
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        android.content.Context $r1;
+        com.facebook.share.model.ShareContent $r2;
+        android.os.Bundle $r3;
+        com.facebook.share.widget.ShareDialog$Mode $r4;
+        boolean $z0;
+        int[] $r5;
+        int $i0;
+        java.lang.String $r6, $r10;
+        java.lang.Class $r7;
+        com.facebook.internal.r $r8;
+        com.facebook.share.internal.ShareDialogFeature $r9;
+        com.facebook.appevents.AppEventsLogger $r11;
+        com.facebook.share.internal.OpenGraphActionDialogFeature $r12;
+
+        $r0 := @this: com.facebook.share.widget.ShareDialog;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 := @parameter1: com.facebook.share.model.ShareContent;
+
+        $r4 := @parameter2: com.facebook.share.widget.ShareDialog$Mode;
+
+        $z0 = $r0.<com.facebook.share.widget.ShareDialog: boolean d>;
+
+        if $z0 == 0 goto label01;
+
+        $r4 = <com.facebook.share.widget.ShareDialog$Mode: com.facebook.share.widget.ShareDialog$Mode AUTOMATIC>;
+
+     label01:
+        $r5 = <com.facebook.share.widget.a: int[] a>;
+
+        $i0 = virtualinvoke $r4.<com.facebook.share.widget.ShareDialog$Mode: int ordinal()>();
+
+        $i0 = $r5[$i0];
+
+        lookupswitch($i0)
+        {
+            case 1: goto label05;
+            case 2: goto label06;
+            case 3: goto label07;
+            default: goto label02;
+        };
+
+     label02:
+        $r6 = "unknown";
+
+     label03:
+        $r7 = virtualinvoke $r2.<java.lang.Object: java.lang.Class getClass()>();
+
+        $r8 = staticinvoke <com.facebook.share.widget.ShareDialog: com.facebook.internal.r f(java.lang.Class)>($r7);
+
+        $r9 = <com.facebook.share.internal.ShareDialogFeature: com.facebook.share.internal.ShareDialogFeature SHARE_DIALOG>;
+
+        if $r8 != $r9 goto label08;
+
+        $r10 = "status";
+
+     label04:
+        $r11 = staticinvoke <com.facebook.appevents.AppEventsLogger: com.facebook.appevents.AppEventsLogger a(android.content.Context)>($r1);
+
+        $r3 = new android.os.Bundle;
+
+        specialinvoke $r3.<android.os.Bundle: void <init>()>();
+
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("fb_share_dialog_show", $r6);
+
+        virtualinvoke $r3.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("fb_share_dialog_content_type", $r10);
+
+        virtualinvoke $r11.<com.facebook.appevents.AppEventsLogger: void a(java.lang.String,java.lang.Double,android.os.Bundle)>("fb_share_dialog_show", null, $r3);
+
+        return;
+
+     label05:
+        $r6 = "automatic";
+
+        goto label03;
+
+     label06:
+        $r6 = "web";
+
+        goto label03;
+
+     label07:
+        $r6 = "native";
+
+        goto label03;
+
+     label08:
+        $r9 = <com.facebook.share.internal.ShareDialogFeature: com.facebook.share.internal.ShareDialogFeature PHOTOS>;
+
+        if $r8 != $r9 goto label09;
+
+        $r10 = "photo";
+
+        goto label04;
+
+     label09:
+        $r9 = <com.facebook.share.internal.ShareDialogFeature: com.facebook.share.internal.ShareDialogFeature VIDEO>;
+
+        if $r8 != $r9 goto label10;
+
+        $r10 = "video";
+
+        goto label04;
+
+     label10:
+        $r12 = <com.facebook.share.internal.OpenGraphActionDialogFeature: com.facebook.share.internal.OpenGraphActionDialogFeature OG_ACTION_DIALOG>;
+
+        if $r8 != $r12 goto label11;
+
+        $r10 = "open_graph";
+
+        goto label04;
+
+     label11:
+        $r10 = "unknown";
+
+        goto label04;
+    }
+
+    static void a(com.facebook.share.widget.ShareDialog, android.content.Context, com.facebook.share.model.ShareContent, com.facebook.share.widget.ShareDialog$Mode)
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        android.content.Context $r1;
+        com.facebook.share.model.ShareContent $r2;
+        com.facebook.share.widget.ShareDialog$Mode $r3;
+
+        $r0 := @parameter0: com.facebook.share.widget.ShareDialog;
+
+        $r1 := @parameter1: android.content.Context;
+
+        $r2 := @parameter2: com.facebook.share.model.ShareContent;
+
+        $r3 := @parameter3: com.facebook.share.widget.ShareDialog$Mode;
+
+        specialinvoke $r0.<com.facebook.share.widget.ShareDialog: void a(android.content.Context,com.facebook.share.model.ShareContent,com.facebook.share.widget.ShareDialog$Mode)>($r1, $r2, $r3);
+
+        return;
+    }
+
+    static boolean a(java.lang.Class)
+    {
+        java.lang.Class $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: java.lang.Class;
+
+        $z0 = staticinvoke <com.facebook.share.widget.ShareDialog: boolean d(java.lang.Class)>($r0);
+
+        return $z0;
+    }
+
+    static android.app.Activity b(com.facebook.share.widget.ShareDialog)
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        android.app.Activity $r1;
+
+        $r0 := @parameter0: com.facebook.share.widget.ShareDialog;
+
+        $r1 = virtualinvoke $r0.<com.facebook.share.widget.ShareDialog: android.app.Activity b()>();
+
+        return $r1;
+    }
+
+    static com.facebook.internal.r b(java.lang.Class)
+    {
+        java.lang.Class $r0;
+        com.facebook.internal.r $r1;
+
+        $r0 := @parameter0: java.lang.Class;
+
+        $r1 = staticinvoke <com.facebook.share.widget.ShareDialog: com.facebook.internal.r f(java.lang.Class)>($r0);
+
+        return $r1;
+    }
+
+    static android.app.Activity c(com.facebook.share.widget.ShareDialog)
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        android.app.Activity $r1;
+
+        $r0 := @parameter0: com.facebook.share.widget.ShareDialog;
+
+        $r1 = virtualinvoke $r0.<com.facebook.share.widget.ShareDialog: android.app.Activity b()>();
+
+        return $r1;
+    }
+
+    static boolean c(java.lang.Class)
+    {
+        java.lang.Class $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: java.lang.Class;
+
+        $z0 = staticinvoke <com.facebook.share.widget.ShareDialog: boolean e(java.lang.Class)>($r0);
+
+        return $z0;
+    }
+
+    private static boolean d(java.lang.Class)
+    {
+        java.lang.Class $r0;
+        com.facebook.internal.r $r1;
+        boolean $z0;
+
+        $r0 := @parameter0: java.lang.Class;
+
+        $r1 = staticinvoke <com.facebook.share.widget.ShareDialog: com.facebook.internal.r f(java.lang.Class)>($r0);
+
+        if $r1 == null goto label1;
+
+        $z0 = staticinvoke <com.facebook.internal.s: boolean a(com.facebook.internal.r)>($r1);
+
+        if $z0 == 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    private static boolean e(java.lang.Class)
+    {
+        java.lang.Class $r0, $r1;
+        boolean $z0;
+
+        $r0 := @parameter0: java.lang.Class;
+
+        $r1 = class "Lcom/facebook/share/model/ShareLinkContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = class "Lcom/facebook/share/model/ShareOpenGraphContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = class "Lcom/facebook/share/model/SharePhotoContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 == 0 goto label2;
+
+     label1:
+        return 1;
+
+     label2:
+        return 0;
+    }
+
+    private static com.facebook.internal.r f(java.lang.Class)
+    {
+        java.lang.Class $r0, $r1;
+        boolean $z0;
+        com.facebook.share.internal.ShareDialogFeature r2;
+        com.facebook.share.internal.OpenGraphActionDialogFeature r3;
+
+        $r0 := @parameter0: java.lang.Class;
+
+        $r1 = class "Lcom/facebook/share/model/ShareLinkContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 == 0 goto label1;
+
+        r2 = <com.facebook.share.internal.ShareDialogFeature: com.facebook.share.internal.ShareDialogFeature SHARE_DIALOG>;
+
+        return r2;
+
+     label1:
+        $r1 = class "Lcom/facebook/share/model/SharePhotoContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 == 0 goto label2;
+
+        r2 = <com.facebook.share.internal.ShareDialogFeature: com.facebook.share.internal.ShareDialogFeature PHOTOS>;
+
+        return r2;
+
+     label2:
+        $r1 = class "Lcom/facebook/share/model/ShareVideoContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 == 0 goto label3;
+
+        r2 = <com.facebook.share.internal.ShareDialogFeature: com.facebook.share.internal.ShareDialogFeature VIDEO>;
+
+        return r2;
+
+     label3:
+        $r1 = class "Lcom/facebook/share/model/ShareOpenGraphContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 == 0 goto label4;
+
+        r3 = <com.facebook.share.internal.OpenGraphActionDialogFeature: com.facebook.share.internal.OpenGraphActionDialogFeature OG_ACTION_DIALOG>;
+
+        return r3;
+
+     label4:
+        $r1 = class "Lcom/facebook/share/model/ShareMediaContent;";
+
+        $z0 = virtualinvoke $r1.<java.lang.Class: boolean isAssignableFrom(java.lang.Class)>($r0);
+
+        if $z0 == 0 goto label5;
+
+        r2 = <com.facebook.share.internal.ShareDialogFeature: com.facebook.share.internal.ShareDialogFeature MULTIMEDIA>;
+
+        return r2;
+
+     label5:
+        return null;
+    }
+
+    public void a(com.facebook.share.model.ShareContent, com.facebook.share.widget.ShareDialog$Mode)
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        com.facebook.share.model.ShareContent $r1;
+        java.lang.Object $r2;
+        com.facebook.share.widget.ShareDialog$Mode $r3;
+        boolean $z0;
+
+        $r0 := @this: com.facebook.share.widget.ShareDialog;
+
+        $r1 := @parameter0: com.facebook.share.model.ShareContent;
+
+        $r2 := @parameter1: com.facebook.share.widget.ShareDialog$Mode;
+
+        $r3 = <com.facebook.share.widget.ShareDialog$Mode: com.facebook.share.widget.ShareDialog$Mode AUTOMATIC>;
+
+        if $r2 != $r3 goto label3;
+
+        $z0 = 1;
+
+     label1:
+        $r0.<com.facebook.share.widget.ShareDialog: boolean d> = $z0;
+
+        $z0 = $r0.<com.facebook.share.widget.ShareDialog: boolean d>;
+
+        if $z0 == 0 goto label2;
+
+        $r2 = <com.facebook.share.widget.ShareDialog: java.lang.Object a>;
+
+     label2:
+        virtualinvoke $r0.<com.facebook.share.widget.ShareDialog: void a(java.lang.Object,java.lang.Object)>($r1, $r2);
+
+        return;
+
+     label3:
+        $z0 = 0;
+
+        goto label1;
+    }
+
+    protected java.util.List c()
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        java.util.ArrayList $r1;
+        com.facebook.share.widget.c $r2;
+        com.facebook.share.widget.b $r3;
+        com.facebook.share.widget.e $r4;
+
+        $r0 := @this: com.facebook.share.widget.ShareDialog;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r2 = new com.facebook.share.widget.c;
+
+        specialinvoke $r2.<com.facebook.share.widget.c: void <init>(com.facebook.share.widget.ShareDialog,com.facebook.share.widget.a)>($r0, null);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r2);
+
+        $r3 = new com.facebook.share.widget.b;
+
+        specialinvoke $r3.<com.facebook.share.widget.b: void <init>(com.facebook.share.widget.ShareDialog,com.facebook.share.widget.a)>($r0, null);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r3);
+
+        $r4 = new com.facebook.share.widget.e;
+
+        specialinvoke $r4.<com.facebook.share.widget.e: void <init>(com.facebook.share.widget.ShareDialog,com.facebook.share.widget.a)>($r0, null);
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r4);
+
+        return $r1;
+    }
+
+    protected com.facebook.internal.a d()
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        com.facebook.internal.a $r1;
+        int $i0;
+
+        $r0 := @this: com.facebook.share.widget.ShareDialog;
+
+        $r1 = new com.facebook.internal.a;
+
+        $i0 = virtualinvoke $r0.<com.facebook.share.widget.ShareDialog: int a()>();
+
+        specialinvoke $r1.<com.facebook.internal.a: void <init>(int)>($i0);
+
+        return $r1;
+    }
+
+    public boolean e()
+    {
+        com.facebook.share.widget.ShareDialog $r0;
+        boolean z0;
+
+        $r0 := @this: com.facebook.share.widget.ShareDialog;
+
+        z0 = $r0.<com.facebook.share.widget.ShareDialog: boolean c>;
+
+        return z0;
+    }
+}

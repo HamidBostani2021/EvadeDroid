@@ -1,0 +1,1115 @@
+public class com.seattleclouds.location.geofencing.a extends java.lang.Object implements com.google.android.gms.common.api.s, com.google.android.gms.common.api.t
+{
+    public static final java.lang.String a;
+    private static java.util.Map e;
+    private static java.lang.String i;
+    private com.google.android.gms.common.api.q b;
+    private android.app.PendingIntent c;
+    private android.content.Context d;
+    private int f;
+    private boolean g;
+    private java.lang.String h;
+    private boolean j;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/location/geofencing/a;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getName()>();
+
+        <com.seattleclouds.location.geofencing.a: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    public void <init>(android.content.Context)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.content.Context $r1;
+        com.google.android.gms.common.api.r $r2;
+        com.google.android.gms.common.api.a $r3;
+        com.google.android.gms.common.api.q $r4;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.location.geofencing.a: boolean g> = 0;
+
+        $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d> = $r1;
+
+        $r0.<com.seattleclouds.location.geofencing.a: int f> = 3;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void i()>();
+
+        $r2 = new com.google.android.gms.common.api.r;
+
+        $r1 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        specialinvoke $r2.<com.google.android.gms.common.api.r: void <init>(android.content.Context)>($r1);
+
+        $r3 = <com.google.android.gms.location.m: com.google.android.gms.common.api.a a>;
+
+        $r2 = virtualinvoke $r2.<com.google.android.gms.common.api.r: com.google.android.gms.common.api.r a(com.google.android.gms.common.api.a)>($r3);
+
+        $r2 = virtualinvoke $r2.<com.google.android.gms.common.api.r: com.google.android.gms.common.api.r a(com.google.android.gms.common.api.s)>($r0);
+
+        $r2 = virtualinvoke $r2.<com.google.android.gms.common.api.r: com.google.android.gms.common.api.r a(com.google.android.gms.common.api.t)>($r0);
+
+        $r4 = virtualinvoke $r2.<com.google.android.gms.common.api.r: com.google.android.gms.common.api.q b()>();
+
+        $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b> = $r4;
+
+        return;
+    }
+
+    static int a(com.seattleclouds.location.geofencing.a, int)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.location.geofencing.a: int f> = 1;
+
+        return 1;
+    }
+
+    public static java.lang.Boolean a(android.content.Context)
+    {
+        android.content.Context $r0;
+        java.lang.String $r1;
+        android.content.SharedPreferences $r2;
+        boolean $z0;
+        java.lang.Boolean $r3;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 = staticinvoke <com.seattleclouds.location.geofencing.a: java.lang.String g()>();
+
+        $r2 = virtualinvoke $r0.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r1, 0);
+
+        $z0 = interfaceinvoke $r2.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("geofenceAvailable", 1);
+
+        $r3 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        return $r3;
+    }
+
+    static java.lang.String a(com.seattleclouds.location.geofencing.a)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        r1 = $r0.<com.seattleclouds.location.geofencing.a: java.lang.String h>;
+
+        return r1;
+    }
+
+    static java.util.List a(com.seattleclouds.location.geofencing.a, java.util.Map)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        java.util.Map $r1;
+        java.util.List $r2;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        $r1 := @parameter1: java.util.Map;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.location.geofencing.a: java.util.List b(java.util.Map)>($r1);
+
+        return $r2;
+    }
+
+    static java.util.Map a(java.util.Map)
+    {
+        java.util.Map $r0;
+
+        $r0 := @parameter0: java.util.Map;
+
+        <com.seattleclouds.location.geofencing.a: java.util.Map e> = $r0;
+
+        return $r0;
+    }
+
+    public static void a(android.content.Context, java.lang.Boolean)
+    {
+        android.content.Context $r0;
+        java.lang.Boolean $r1;
+        java.lang.String $r2;
+        android.content.SharedPreferences $r3;
+        android.content.SharedPreferences$Editor $r4;
+        boolean $z0;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: java.lang.Boolean;
+
+        $r2 = staticinvoke <com.seattleclouds.location.geofencing.a: java.lang.String g()>();
+
+        $r3 = virtualinvoke $r0.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r2, 0);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $z0 = virtualinvoke $r1.<java.lang.Boolean: boolean booleanValue()>();
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("geofenceAvailable", $z0);
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+    }
+
+    static void a(com.seattleclouds.location.geofencing.a, java.util.List, android.app.PendingIntent, com.google.android.gms.common.api.y)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        java.util.List $r1;
+        android.app.PendingIntent $r2;
+        com.google.android.gms.common.api.y $r3;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        $r1 := @parameter1: java.util.List;
+
+        $r2 := @parameter2: android.app.PendingIntent;
+
+        $r3 := @parameter3: com.google.android.gms.common.api.y;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void a(java.util.List,android.app.PendingIntent,com.google.android.gms.common.api.y)>($r1, $r2, $r3);
+
+        return;
+    }
+
+    public static void a(com.seattleclouds.location.geofencing.h)
+    {
+        com.seattleclouds.location.geofencing.h $r0;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.h;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void a(boolean,com.seattleclouds.location.geofencing.h)>(0, $r0);
+
+        return;
+    }
+
+    static void a(java.lang.String)
+    {
+        java.lang.String $r0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>($r0);
+
+        return;
+    }
+
+    private void a(java.util.List, android.app.PendingIntent, com.google.android.gms.common.api.y)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        java.util.List $r1;
+        android.app.PendingIntent $r2;
+        com.google.android.gms.common.api.y $r3;
+        int $i0;
+        com.google.android.gms.location.j $r4;
+        com.google.android.gms.location.GeofencingRequest $r5;
+        android.content.Context $r6;
+        com.google.android.gms.location.g $r7;
+        com.google.android.gms.common.api.q $r8;
+        com.google.android.gms.common.api.u $r9;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 := @parameter0: java.util.List;
+
+        $r2 := @parameter1: android.app.PendingIntent;
+
+        $r3 := @parameter2: com.google.android.gms.common.api.y;
+
+        $i0 = interfaceinvoke $r1.<java.util.List: int size()>();
+
+        if $i0 <= 0 goto label2;
+
+        $r4 = new com.google.android.gms.location.j;
+
+        specialinvoke $r4.<com.google.android.gms.location.j: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<com.google.android.gms.location.j: com.google.android.gms.location.j a(java.util.List)>($r1);
+
+        $r4 = virtualinvoke $r4.<com.google.android.gms.location.j: com.google.android.gms.location.j a(int)>(1);
+
+        $r5 = virtualinvoke $r4.<com.google.android.gms.location.j: com.google.android.gms.location.GeofencingRequest a()>();
+
+        $r6 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $i0 = staticinvoke <android.support.v4.app.a: int a(android.content.Context,java.lang.String)>($r6, "android.permission.ACCESS_FINE_LOCATION");
+
+        if $i0 == 0 goto label1;
+
+        $r6 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void b(android.content.Context)>($r6);
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void l()>();
+
+        return;
+
+     label1:
+        $r7 = <com.google.android.gms.location.m: com.google.android.gms.location.g c>;
+
+        $r8 = $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b>;
+
+        $r9 = interfaceinvoke $r7.<com.google.android.gms.location.g: com.google.android.gms.common.api.u a(com.google.android.gms.common.api.q,com.google.android.gms.location.GeofencingRequest,android.app.PendingIntent)>($r8, $r5, $r2);
+
+        virtualinvoke $r9.<com.google.android.gms.common.api.u: void a(com.google.android.gms.common.api.y)>($r3);
+
+        return;
+
+     label2:
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void k()>();
+
+        return;
+    }
+
+    public static void a(boolean, com.seattleclouds.location.geofencing.h)
+    {
+        boolean $z0;
+        com.seattleclouds.location.geofencing.h $r0;
+        java.util.Map $r1;
+        com.seattleclouds.location.geofencing.g $r2;
+        java.lang.Void[] $r3;
+
+        $z0 := @parameter0: boolean;
+
+        $r0 := @parameter1: com.seattleclouds.location.geofencing.h;
+
+        if $z0 != 0 goto label1;
+
+        $r1 = <com.seattleclouds.location.geofencing.a: java.util.Map e>;
+
+        if $r1 == null goto label1;
+
+        $r1 = <com.seattleclouds.location.geofencing.a: java.util.Map e>;
+
+        interfaceinvoke $r0.<com.seattleclouds.location.geofencing.h: void a(int,java.util.Map)>(0, $r1);
+
+        return;
+
+     label1:
+        $r2 = new com.seattleclouds.location.geofencing.g;
+
+        specialinvoke $r2.<com.seattleclouds.location.geofencing.g: void <init>(com.seattleclouds.location.geofencing.h)>($r0);
+
+        $r3 = newarray (java.lang.Void)[0];
+
+        virtualinvoke $r2.<com.seattleclouds.location.geofencing.g: android.os.AsyncTask execute(java.lang.Object[])>($r3);
+
+        return;
+    }
+
+    static com.google.android.gms.common.api.q b(com.seattleclouds.location.geofencing.a)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        com.google.android.gms.common.api.q r1;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        r1 = $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b>;
+
+        return r1;
+    }
+
+    static java.lang.String b(java.lang.String)
+    {
+        java.lang.String $r0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        <com.seattleclouds.location.geofencing.a: java.lang.String i> = $r0;
+
+        return $r0;
+    }
+
+    private java.util.List b(java.util.Map)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        java.util.Map $r1;
+        java.util.ArrayList $r2;
+        java.util.Collection $r3;
+        java.util.Iterator $r4;
+        boolean $z0;
+        java.lang.Object $r5;
+        com.seattleclouds.location.geofencing.k $r6;
+        com.google.android.gms.location.e $r7;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 := @parameter0: java.util.Map;
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r3 = interfaceinvoke $r1.<java.util.Map: java.util.Collection values()>();
+
+        $r4 = interfaceinvoke $r3.<java.util.Collection: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r4.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r5 = interfaceinvoke $r4.<java.util.Iterator: java.lang.Object next()>();
+
+        $r6 = (com.seattleclouds.location.geofencing.k) $r5;
+
+        $r7 = virtualinvoke $r6.<com.seattleclouds.location.geofencing.k: com.google.android.gms.location.e l()>();
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r7);
+
+        goto label1;
+
+     label2:
+        return $r2;
+    }
+
+    public static void b(android.content.Context)
+    {
+        android.content.Context $r0;
+        java.lang.Object[] $r1;
+        android.content.Intent $r2;
+        android.app.PendingIntent $r3;
+        android.support.v4.app.ce $r4;
+        int $i0;
+        java.lang.String $r5, $r6;
+        java.lang.Object $r7;
+        android.app.NotificationManager $r8;
+        android.app.Notification $r9;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r0, class "Lcom/seattleclouds/AppStarterActivity;");
+
+        $r3 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getActivity(android.content.Context,int,android.content.Intent,int)>($r0, 0, $r2, 0);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setFlags(int)>(268435456);
+
+        $r4 = new android.support.v4.app.ce;
+
+        specialinvoke $r4.<android.support.v4.app.ce: void <init>(android.content.Context)>($r0);
+
+        $i0 = <com.seattleclouds.g: int ic_notif_warning>;
+
+        virtualinvoke $r4.<android.support.v4.app.ce: android.support.v4.app.ce a(int)>($i0);
+
+        virtualinvoke $r4.<android.support.v4.app.ce: android.support.v4.app.ce a(android.app.PendingIntent)>($r3);
+
+        virtualinvoke $r4.<android.support.v4.app.ce: android.support.v4.app.ce d(boolean)>(1);
+
+        $i0 = <com.seattleclouds.l: int geofences_permission_location_notif_title>;
+
+        $r5 = virtualinvoke $r0.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r4.<android.support.v4.app.ce: android.support.v4.app.ce a(java.lang.CharSequence)>($r5);
+
+        $i0 = <com.seattleclouds.l: int geofences_permission_location_notif_text>;
+
+        $r5 = virtualinvoke $r0.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        $r1 = newarray (java.lang.Object)[1];
+
+        $r6 = <com.seattleclouds.App: java.lang.String y>;
+
+        if $r6 != null goto label2;
+
+        $r6 = "App";
+
+     label1:
+        $r1[0] = $r6;
+
+        $r5 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r5, $r1);
+
+        virtualinvoke $r4.<android.support.v4.app.ce: android.support.v4.app.ce b(java.lang.CharSequence)>($r5);
+
+        $r7 = virtualinvoke $r0.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("notification");
+
+        $r8 = (android.app.NotificationManager) $r7;
+
+        $r9 = virtualinvoke $r4.<android.support.v4.app.ce: android.app.Notification a()>();
+
+        virtualinvoke $r8.<android.app.NotificationManager: void notify(int,android.app.Notification)>(1, $r9);
+
+        return;
+
+     label2:
+        $r6 = <com.seattleclouds.App: java.lang.String y>;
+
+        goto label1;
+    }
+
+    static void c(com.seattleclouds.location.geofencing.a)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void l()>();
+
+        return;
+    }
+
+    private static void c(java.lang.String)
+    {
+        java.lang.String $r0;
+
+        $r0 := @parameter0: java.lang.String;
+
+        return;
+    }
+
+    static android.app.PendingIntent d(com.seattleclouds.location.geofencing.a)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.app.PendingIntent r1;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        r1 = $r0.<com.seattleclouds.location.geofencing.a: android.app.PendingIntent c>;
+
+        return r1;
+    }
+
+    static java.lang.String e()
+    {
+        java.lang.String r0;
+
+        r0 = <com.seattleclouds.location.geofencing.a: java.lang.String i>;
+
+        return r0;
+    }
+
+    static void e(com.seattleclouds.location.geofencing.a)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void k()>();
+
+        return;
+    }
+
+    static android.content.Context f(com.seattleclouds.location.geofencing.a)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.content.Context r1;
+
+        $r0 := @parameter0: com.seattleclouds.location.geofencing.a;
+
+        r1 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        return r1;
+    }
+
+    static java.util.Map f()
+    {
+        java.util.Map r0;
+
+        r0 = <com.seattleclouds.location.geofencing.a: java.util.Map e>;
+
+        return r0;
+    }
+
+    private static java.lang.String g()
+    {
+        java.lang.StringBuilder $r0;
+        java.lang.String $r1, $r2;
+
+        $r0 = new java.lang.StringBuilder;
+
+        specialinvoke $r0.<java.lang.StringBuilder: void <init>()>();
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("com.seattleclouds.location.geofencing.GeofenceManager.");
+
+        $r1 = <com.seattleclouds.App: java.lang.String v>;
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".");
+
+        $r1 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".");
+
+        $r1 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0 = new java.lang.StringBuilder;
+
+        specialinvoke $r0.<java.lang.StringBuilder: void <init>()>();
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Geofence Mananger prefs name: ");
+
+        $r0 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r0.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>($r2);
+
+        return $r1;
+    }
+
+    private android.app.PendingIntent h()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.app.PendingIntent $r1;
+        android.content.Intent $r2;
+        android.content.Context $r3;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r2 = new android.content.Intent;
+
+        $r3 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r3, class "Lcom/seattleclouds/location/geofencing/ReceiveTransitionsIntentService;");
+
+        $r3 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $r1 = staticinvoke <android.app.PendingIntent: android.app.PendingIntent getService(android.content.Context,int,android.content.Intent,int)>($r3, 0, $r2, 134217728);
+
+        return $r1;
+    }
+
+    private void i()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        android.content.SharedPreferences $r3;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $r2 = staticinvoke <com.seattleclouds.location.geofencing.a: java.lang.String g()>();
+
+        $r3 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r2, 0);
+
+        $r2 = interfaceinvoke $r3.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("configHash", "");
+
+        $r0.<com.seattleclouds.location.geofencing.a: java.lang.String h> = $r2;
+
+        $z0 = interfaceinvoke $r3.<android.content.SharedPreferences: boolean getBoolean(java.lang.String,boolean)>("geofencesRegistered", 0);
+
+        $r0.<com.seattleclouds.location.geofencing.a: boolean j> = $z0;
+
+        return;
+    }
+
+    private void j()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.content.Context $r1;
+        java.lang.String $r2;
+        android.content.SharedPreferences $r3;
+        android.content.SharedPreferences$Editor $r4;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $r2 = staticinvoke <com.seattleclouds.location.geofencing.a: java.lang.String g()>();
+
+        $r3 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>($r2, 0);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: java.lang.String h>;
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("configHash", $r2);
+
+        $z0 = $r0.<com.seattleclouds.location.geofencing.a: boolean j>;
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)>("geofencesRegistered", $z0);
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+    }
+
+    private void k()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r0.<com.seattleclouds.location.geofencing.a: boolean j> = 1;
+
+        $r1 = <com.seattleclouds.location.geofencing.a: java.lang.String i>;
+
+        $r0.<com.seattleclouds.location.geofencing.a: java.lang.String h> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void j()>();
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("Geofence refreshing process finished");
+
+        return;
+    }
+
+    private void l()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r0.<com.seattleclouds.location.geofencing.a: boolean j> = 0;
+
+        $r0.<com.seattleclouds.location.geofencing.a: java.lang.String h> = "";
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void j()>();
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("Geofence removing process finished");
+
+        return;
+    }
+
+    private void m()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r0.<com.seattleclouds.location.geofencing.a: boolean j> = 0;
+
+        $r0.<com.seattleclouds.location.geofencing.a: java.lang.String h> = "";
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void j()>();
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("Google play services error");
+
+        return;
+    }
+
+    private void n()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.content.ComponentName $r1;
+        android.content.Context $r2;
+        android.content.pm.PackageManager $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 = new android.content.ComponentName;
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        specialinvoke $r1.<android.content.ComponentName: void <init>(android.content.Context,java.lang.Class)>($r2, class "Lcom/seattleclouds/location/LocationProvidersChangedBroadcastReceiver;");
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $r3 = virtualinvoke $r2.<android.content.Context: android.content.pm.PackageManager getPackageManager()>();
+
+        $i0 = virtualinvoke $r3.<android.content.pm.PackageManager: int getComponentEnabledSetting(android.content.ComponentName)>($r1);
+
+        if $i0 != 2 goto label1;
+
+        virtualinvoke $r3.<android.content.pm.PackageManager: void setComponentEnabledSetting(android.content.ComponentName,int,int)>($r1, 1, 1);
+
+     label1:
+        return;
+    }
+
+    private void o()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.content.ComponentName $r1;
+        android.content.Context $r2;
+        android.content.pm.PackageManager $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 = new android.content.ComponentName;
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        specialinvoke $r1.<android.content.ComponentName: void <init>(android.content.Context,java.lang.Class)>($r2, class "Lcom/seattleclouds/location/LocationProvidersChangedBroadcastReceiver;");
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $r3 = virtualinvoke $r2.<android.content.Context: android.content.pm.PackageManager getPackageManager()>();
+
+        $i0 = virtualinvoke $r3.<android.content.pm.PackageManager: int getComponentEnabledSetting(android.content.ComponentName)>($r1);
+
+        if $i0 != 1 goto label1;
+
+        virtualinvoke $r3.<android.content.pm.PackageManager: void setComponentEnabledSetting(android.content.ComponentName,int,int)>($r1, 2, 1);
+
+     label1:
+        return;
+    }
+
+    public void a()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        com.seattleclouds.location.geofencing.b $r1;
+        com.seattleclouds.ce $r2;
+        boolean $z0;
+        com.google.android.gms.common.api.q $r3;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r2 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.ce: boolean C()>();
+
+        if $z0 != 0 goto label1;
+
+        $z0 = $r0.<com.seattleclouds.location.geofencing.a: boolean j>;
+
+        if $z0 != 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void o()>();
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("Geofencing disabled, there are NO registered geofences => Do nothing");
+
+        return;
+
+     label1:
+        $r2 = <com.seattleclouds.App: com.seattleclouds.ce c>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.ce: boolean C()>();
+
+        if $z0 != 0 goto label2;
+
+        $z0 = $r0.<com.seattleclouds.location.geofencing.a: boolean j>;
+
+        if $z0 == 0 goto label2;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void o()>();
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("Geofencing disabled, there are registered geofences => Remove all currently registered geofences");
+
+        $r0.<com.seattleclouds.location.geofencing.a: int f> = 2;
+
+        $r3 = $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b>;
+
+        virtualinvoke $r3.<com.google.android.gms.common.api.q: void e()>();
+
+        return;
+
+     label2:
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void n()>();
+
+        $r1 = new com.seattleclouds.location.geofencing.b;
+
+        specialinvoke $r1.<com.seattleclouds.location.geofencing.b: void <init>(com.seattleclouds.location.geofencing.a)>($r0);
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void a(boolean,com.seattleclouds.location.geofencing.h)>(1, $r1);
+
+        return;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $i0 := @parameter0: int;
+
+        return;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        android.os.Bundle $r1;
+        android.app.PendingIntent $r2;
+        int $i0;
+        com.google.android.gms.location.g $r3;
+        com.google.android.gms.common.api.q $r4;
+        com.google.android.gms.common.api.u $r5;
+        com.seattleclouds.location.geofencing.c $r6;
+        android.content.Context $r7;
+        java.lang.Boolean $r8;
+        com.seattleclouds.location.geofencing.e $r9;
+        java.util.Map $r10;
+        java.util.List $r11;
+        com.seattleclouds.location.geofencing.f $r12;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.location.geofencing.a: android.app.PendingIntent h()>();
+
+        $r0.<com.seattleclouds.location.geofencing.a: android.app.PendingIntent c> = $r2;
+
+        $i0 = $r0.<com.seattleclouds.location.geofencing.a: int f>;
+
+        if $i0 != 1 goto label2;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("ACTION_REGISTER_GEOFENCES");
+
+        $r3 = <com.google.android.gms.location.m: com.google.android.gms.location.g c>;
+
+        $r4 = $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b>;
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.app.PendingIntent c>;
+
+        $r5 = interfaceinvoke $r3.<com.google.android.gms.location.g: com.google.android.gms.common.api.u a(com.google.android.gms.common.api.q,android.app.PendingIntent)>($r4, $r2);
+
+        $r6 = new com.seattleclouds.location.geofencing.c;
+
+        specialinvoke $r6.<com.seattleclouds.location.geofencing.c: void <init>(com.seattleclouds.location.geofencing.a)>($r0);
+
+        virtualinvoke $r5.<com.google.android.gms.common.api.u: void a(com.google.android.gms.common.api.y)>($r6);
+
+     label1:
+        $r7 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $r8 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>(0);
+
+        staticinvoke <com.seattleclouds.util.ax: void a(android.content.Context,java.lang.String,java.lang.Boolean)>($r7, "Start geofence service", $r8);
+
+        return;
+
+     label2:
+        $i0 = $r0.<com.seattleclouds.location.geofencing.a: int f>;
+
+        if $i0 != 2 goto label3;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("ACTION_REMOVE_GEOFENCES");
+
+        $r3 = <com.google.android.gms.location.m: com.google.android.gms.location.g c>;
+
+        $r4 = $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b>;
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.app.PendingIntent c>;
+
+        $r5 = interfaceinvoke $r3.<com.google.android.gms.location.g: com.google.android.gms.common.api.u a(com.google.android.gms.common.api.q,android.app.PendingIntent)>($r4, $r2);
+
+        $r9 = new com.seattleclouds.location.geofencing.e;
+
+        specialinvoke $r9.<com.seattleclouds.location.geofencing.e: void <init>(com.seattleclouds.location.geofencing.a)>($r0);
+
+        virtualinvoke $r5.<com.google.android.gms.common.api.u: void a(com.google.android.gms.common.api.y)>($r9);
+
+        goto label1;
+
+     label3:
+        $i0 = $r0.<com.seattleclouds.location.geofencing.a: int f>;
+
+        if $i0 != 0 goto label4;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("ACTION_RESTORE_GEOFECES");
+
+        $r10 = <com.seattleclouds.location.geofencing.a: java.util.Map e>;
+
+        $r11 = specialinvoke $r0.<com.seattleclouds.location.geofencing.a: java.util.List b(java.util.Map)>($r10);
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.app.PendingIntent c>;
+
+        $r12 = new com.seattleclouds.location.geofencing.f;
+
+        specialinvoke $r12.<com.seattleclouds.location.geofencing.f: void <init>(com.seattleclouds.location.geofencing.a)>($r0);
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void a(java.util.List,android.app.PendingIntent,com.google.android.gms.common.api.y)>($r11, $r2, $r12);
+
+        goto label1;
+
+     label4:
+        $i0 = $r0.<com.seattleclouds.location.geofencing.a: int f>;
+
+        if $i0 != 3 goto label1;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("ACTION_ONLY_CONNECT");
+
+        goto label1;
+    }
+
+    public void a(com.google.android.gms.common.ConnectionResult)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        com.google.android.gms.common.ConnectionResult $r1;
+        android.content.Context $r2;
+        boolean $z0;
+        com.google.android.gms.common.c $r3;
+        android.app.Activity $r4;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 := @parameter0: com.google.android.gms.common.ConnectionResult;
+
+        specialinvoke $r0.<com.seattleclouds.location.geofencing.a: void m()>();
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $z0 = $r2 instanceof android.app.Activity;
+
+        if $z0 == 0 goto label2;
+
+        $z0 = $r0.<com.seattleclouds.location.geofencing.a: boolean g>;
+
+        if $z0 == 0 goto label1;
+
+        return;
+
+     label1:
+        $r0.<com.seattleclouds.location.geofencing.a: boolean g> = 1;
+
+        $r3 = staticinvoke <com.google.android.gms.common.c: com.google.android.gms.common.c a()>();
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $r4 = (android.app.Activity) $r2;
+
+        $i0 = virtualinvoke $r1.<com.google.android.gms.common.ConnectionResult: int c()>();
+
+        virtualinvoke $r3.<com.google.android.gms.common.c: boolean a(android.app.Activity,int,int)>($r4, $i0, 9000);
+
+        return;
+
+     label2:
+        $r3 = staticinvoke <com.google.android.gms.common.c: com.google.android.gms.common.c a()>();
+
+        $r2 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $i0 = virtualinvoke $r1.<com.google.android.gms.common.ConnectionResult: int c()>();
+
+        virtualinvoke $r3.<com.google.android.gms.common.c: void a(android.content.Context,int)>($r2, $i0);
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.location.geofencing.a: boolean g> = $z0;
+
+        return;
+    }
+
+    public boolean a(int, int, android.content.Intent)
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        int $i0, $i1;
+        android.content.Intent $r1;
+        com.google.android.gms.common.c $r2;
+        android.content.Context $r3;
+        java.lang.String $r4, $r5;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 := @parameter2: android.content.Intent;
+
+        staticinvoke <com.seattleclouds.location.geofencing.a: void c(java.lang.String)>("Processing activity result...");
+
+        if $i0 != 9000 goto label3;
+
+        $r2 = staticinvoke <com.google.android.gms.common.c: com.google.android.gms.common.c a()>();
+
+        $r3 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $i0 = virtualinvoke $r2.<com.google.android.gms.common.c: int a(android.content.Context)>($r3);
+
+        if $i0 != 0 goto label2;
+
+        virtualinvoke $r0.<com.seattleclouds.location.geofencing.a: void a()>();
+
+     label1:
+        return 1;
+
+     label2:
+        $r4 = <com.seattleclouds.location.geofencing.a: java.lang.String a>;
+
+        $r3 = $r0.<com.seattleclouds.location.geofencing.a: android.content.Context d>;
+
+        $i0 = <com.seattleclouds.l: int no_resolution>;
+
+        $r5 = virtualinvoke $r3.<android.content.Context: java.lang.String getString(int)>($i0);
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r4, $r5);
+
+        goto label1;
+
+     label3:
+        return 0;
+    }
+
+    public void b()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r0.<com.seattleclouds.location.geofencing.a: int f> = 0;
+
+        virtualinvoke $r0.<com.seattleclouds.location.geofencing.a: void a()>();
+
+        return;
+    }
+
+    public void c()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        com.google.android.gms.common.api.q $r1;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        $r1 = $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.location.geofencing.a: com.google.android.gms.common.api.q b>;
+
+        virtualinvoke $r1.<com.google.android.gms.common.api.q: void g()>();
+
+     label1:
+        return;
+    }
+
+    public boolean d()
+    {
+        com.seattleclouds.location.geofencing.a $r0;
+        boolean z0;
+
+        $r0 := @this: com.seattleclouds.location.geofencing.a;
+
+        z0 = $r0.<com.seattleclouds.location.geofencing.a: boolean g>;
+
+        return z0;
+    }
+}

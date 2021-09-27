@@ -1,0 +1,20 @@
+public abstract class anywheresoftware.b4a.BA$ResumableSub extends java.lang.Object
+{
+    public int catchState;
+    public boolean completed;
+    public int state;
+    public anywheresoftware.b4a.BA waitForBA;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.BA$ResumableSub $r0;
+
+        $r0 := @this: anywheresoftware.b4a.BA$ResumableSub;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public abstract void resume(anywheresoftware.b4a.BA, java.lang.Object[]) throws java.lang.Exception;
+}

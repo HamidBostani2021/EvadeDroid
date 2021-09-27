@@ -1,0 +1,56 @@
+class com.seattleclouds.modules.feedback.o extends java.lang.Object implements android.app.DatePickerDialog$OnDateSetListener
+{
+    final com.seattleclouds.modules.feedback.a a;
+
+    void <init>(com.seattleclouds.modules.feedback.a)
+    {
+        com.seattleclouds.modules.feedback.o $r0;
+        com.seattleclouds.modules.feedback.a $r1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.o;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.a;
+
+        $r0.<com.seattleclouds.modules.feedback.o: com.seattleclouds.modules.feedback.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onDateSet(android.widget.DatePicker, int, int, int)
+    {
+        com.seattleclouds.modules.feedback.o $r0;
+        android.widget.DatePicker $r1;
+        int $i0, $i1, $i2;
+        com.seattleclouds.modules.feedback.a $r2;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.o;
+
+        $r1 := @parameter0: android.widget.DatePicker;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.o: com.seattleclouds.modules.feedback.a a>;
+
+        $r2.<com.seattleclouds.modules.feedback.a: int f> = $i0;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.o: com.seattleclouds.modules.feedback.a a>;
+
+        $r2.<com.seattleclouds.modules.feedback.a: int g> = $i1;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.o: com.seattleclouds.modules.feedback.a a>;
+
+        $r2.<com.seattleclouds.modules.feedback.a: int h> = $i2;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.o: com.seattleclouds.modules.feedback.a a>;
+
+        staticinvoke <com.seattleclouds.modules.feedback.a: void a(com.seattleclouds.modules.feedback.a)>($r2);
+
+        return;
+    }
+}

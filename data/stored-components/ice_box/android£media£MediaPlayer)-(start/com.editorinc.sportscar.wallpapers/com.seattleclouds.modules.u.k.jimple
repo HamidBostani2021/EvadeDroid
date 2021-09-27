@@ -1,0 +1,140 @@
+public class com.seattleclouds.modules.u.k extends java.lang.Object implements android.widget.AdapterView$OnItemSelectedListener
+{
+    int a;
+    android.widget.SpinnerAdapter b;
+    java.lang.String c;
+    java.util.HashMap d;
+    final com.seattleclouds.modules.u.g e;
+
+    public void <init>(com.seattleclouds.modules.u.g)
+    {
+        com.seattleclouds.modules.u.k $r0;
+        com.seattleclouds.modules.u.g $r1;
+
+        $r0 := @this: com.seattleclouds.modules.u.k;
+
+        $r1 := @parameter0: com.seattleclouds.modules.u.g;
+
+        $r0.<com.seattleclouds.modules.u.k: com.seattleclouds.modules.u.g e> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onItemSelected(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.u.k $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        android.widget.SpinnerAdapter $r3;
+        java.lang.Object $r4;
+        java.lang.String $r5, $r7;
+        java.util.HashMap $r6;
+        java.lang.Integer $r8;
+        com.seattleclouds.modules.u.g $r9;
+        android.widget.TextView $r10;
+        java.lang.StringBuilder $r11;
+
+        $r0 := @this: com.seattleclouds.modules.u.k;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = $r0.<com.seattleclouds.modules.u.k: android.widget.SpinnerAdapter b>;
+
+        $r4 = interfaceinvoke $r3.<android.widget.SpinnerAdapter: java.lang.Object getItem(int)>($i0);
+
+        $r5 = (java.lang.String) $r4;
+
+        $r6 = $r0.<com.seattleclouds.modules.u.k: java.util.HashMap d>;
+
+        if $r6 == null goto label1;
+
+        $r6 = $r0.<com.seattleclouds.modules.u.k: java.util.HashMap d>;
+
+        $r7 = $r0.<com.seattleclouds.modules.u.k: java.lang.String c>;
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r5);
+
+        $r8 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r6.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r7, $r8);
+
+     label1:
+        $r9 = $r0.<com.seattleclouds.modules.u.k: com.seattleclouds.modules.u.g e>;
+
+        $r10 = $r9.<com.seattleclouds.modules.u.g: android.widget.TextView an>;
+
+        if $r10 == null goto label2;
+
+        $r9 = $r0.<com.seattleclouds.modules.u.k: com.seattleclouds.modules.u.g e>;
+
+        $r10 = $r9.<com.seattleclouds.modules.u.g: android.widget.TextView an>;
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>()>();
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r9 = $r0.<com.seattleclouds.modules.u.k: com.seattleclouds.modules.u.g e>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.u.g: int b(com.seattleclouds.modules.u.g)>($r9);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r10.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+     label2:
+        $r9 = $r0.<com.seattleclouds.modules.u.k: com.seattleclouds.modules.u.g e>;
+
+        $r10 = $r9.<com.seattleclouds.modules.u.g: android.widget.TextView ao>;
+
+        if $r10 == null goto label3;
+
+        $r9 = $r0.<com.seattleclouds.modules.u.k: com.seattleclouds.modules.u.g e>;
+
+        $r10 = $r9.<com.seattleclouds.modules.u.g: android.widget.TextView ao>;
+
+        $r11 = new java.lang.StringBuilder;
+
+        specialinvoke $r11.<java.lang.StringBuilder: void <init>()>();
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r9 = $r0.<com.seattleclouds.modules.u.k: com.seattleclouds.modules.u.g e>;
+
+        $i0 = staticinvoke <com.seattleclouds.modules.u.g: int c(com.seattleclouds.modules.u.g)>($r9);
+
+        $r11 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r10.<android.widget.TextView: void setText(java.lang.CharSequence)>($r5);
+
+     label3:
+        return;
+    }
+
+    public void onNothingSelected(android.widget.AdapterView)
+    {
+        com.seattleclouds.modules.u.k $r0;
+        android.widget.AdapterView $r1;
+
+        $r0 := @this: com.seattleclouds.modules.u.k;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        return;
+    }
+}

@@ -1,0 +1,93 @@
+public class com.seattleclouds.modules.podcast.o extends com.google.android.bitmapfun.v
+{
+    private boolean e;
+
+    public void <init>(android.content.Context, int, boolean)
+    {
+        com.seattleclouds.modules.podcast.o $r0;
+        android.content.Context $r1;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.o;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $i0 := @parameter1: int;
+
+        $z0 := @parameter2: boolean;
+
+        specialinvoke $r0.<com.google.android.bitmapfun.v: void <init>(android.content.Context,int,boolean)>($r1, $i0, $z0);
+
+        $r0.<com.seattleclouds.modules.podcast.o: boolean e> = 1;
+
+        return;
+    }
+
+    protected void a(android.widget.ImageView, android.graphics.drawable.Drawable)
+    {
+        com.seattleclouds.modules.podcast.o $r0;
+        android.widget.ImageView $r1;
+        android.graphics.drawable.Drawable $r2;
+        boolean $z0;
+        android.graphics.drawable.TransitionDrawable $r3, r6;
+        java.lang.Object[] $r4;
+        android.graphics.drawable.ColorDrawable r5;
+        android.graphics.drawable.Drawable[] r7;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.o;
+
+        $r1 := @parameter0: android.widget.ImageView;
+
+        $r2 := @parameter1: android.graphics.drawable.Drawable;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.o: boolean e>;
+
+        if $z0 == 0 goto label1;
+
+        r6 = new android.graphics.drawable.TransitionDrawable;
+
+        $r3 = r6;
+
+        $r4 = newarray (android.graphics.drawable.Drawable)[2];
+
+        r5 = new android.graphics.drawable.ColorDrawable;
+
+        specialinvoke r5.<android.graphics.drawable.ColorDrawable: void <init>(int)>(17170445);
+
+        $r4[0] = r5;
+
+        $r4[1] = $r2;
+
+        r7 = (android.graphics.drawable.Drawable[]) $r4;
+
+        specialinvoke r6.<android.graphics.drawable.TransitionDrawable: void <init>(android.graphics.drawable.Drawable[])>(r7);
+
+        virtualinvoke $r1.<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>($r3);
+
+        virtualinvoke $r3.<android.graphics.drawable.TransitionDrawable: void startTransition(int)>(200);
+
+        return;
+
+     label1:
+        virtualinvoke $r1.<android.widget.ImageView: void setImageDrawable(android.graphics.drawable.Drawable)>($r2);
+
+        return;
+    }
+
+    public void a(boolean)
+    {
+        com.seattleclouds.modules.podcast.o $r0;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.o;
+
+        $z0 := @parameter0: boolean;
+
+        $r0.<com.seattleclouds.modules.podcast.o: boolean e> = $z0;
+
+        specialinvoke $r0.<com.google.android.bitmapfun.v: void a(boolean)>($z0);
+
+        return;
+    }
+}

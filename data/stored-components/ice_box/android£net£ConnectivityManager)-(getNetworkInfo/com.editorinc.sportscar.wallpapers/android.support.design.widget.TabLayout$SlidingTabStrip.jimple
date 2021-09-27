@@ -1,0 +1,4 @@
+class android.support.design.widget.TabLayout$SlidingTabStrip extends android.widget.LinearLayout
+{
+
+}

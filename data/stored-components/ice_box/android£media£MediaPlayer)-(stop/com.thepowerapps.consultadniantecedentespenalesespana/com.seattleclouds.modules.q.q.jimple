@@ -1,0 +1,1658 @@
+public class com.seattleclouds.modules.q.q extends com.seattleclouds.bm
+{
+    private android.os.Bundle ai;
+    private java.util.List aj;
+    private java.util.List ak;
+    private java.util.List al;
+    private java.util.List am;
+    private java.util.List an;
+    private com.seattleclouds.modules.q.n ao;
+    private int ap;
+    private java.lang.String aq;
+    private android.support.v7.widget.SearchView ar;
+    private boolean as;
+    private java.lang.String at;
+    private boolean au;
+    private boolean av;
+    private java.lang.String i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        specialinvoke $r0.<com.seattleclouds.bm: void <init>()>();
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List aj> = $r1;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List ak> = $r1;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List al> = $r1;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List am> = $r1;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List an> = $r1;
+
+        $r0.<com.seattleclouds.modules.q.q: int ap> = 0;
+
+        $r0.<com.seattleclouds.modules.q.q: java.lang.String aq> = "";
+
+        $r0.<com.seattleclouds.modules.q.q: boolean as> = 1;
+
+        $r0.<com.seattleclouds.modules.q.q: java.lang.String at> = "";
+
+        $r0.<com.seattleclouds.modules.q.q: boolean au> = 0;
+
+        $r0.<com.seattleclouds.modules.q.q: boolean av> = 0;
+
+        return;
+    }
+
+    static android.os.Bundle a(com.seattleclouds.modules.q.q)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.os.Bundle r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        r1 = $r0.<com.seattleclouds.modules.q.q: android.os.Bundle ai>;
+
+        return r1;
+    }
+
+    static android.text.Spanned a(com.seattleclouds.modules.q.q, java.lang.String, int, int)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.lang.String $r1;
+        int $i0, $i1;
+        android.text.Spanned $r2;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $i0 := @parameter2: int;
+
+        $i1 := @parameter3: int;
+
+        $r2 = specialinvoke $r0.<com.seattleclouds.modules.q.q: android.text.Spanned a(java.lang.String,int,int)>($r1, $i0, $i1);
+
+        return $r2;
+    }
+
+    private android.text.Spanned a(java.lang.String, int, int)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.lang.String $r1, $r3;
+        int $i0, $i1;
+        java.lang.StringBuilder $r2;
+        android.text.Spanned $r4;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = new java.lang.StringBuilder;
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int,int)>(0, $i0);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("<b>");
+
+        $r3 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int,int)>($i0, $i1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("</b>");
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int)>($i1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r4 = staticinvoke <android.text.Html: android.text.Spanned fromHtml(java.lang.String)>($r1);
+
+        return $r4;
+    }
+
+    private void a(com.seattleclouds.modules.q.n)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        com.seattleclouds.modules.q.n $r1;
+        java.lang.String[] $r2;
+        int[] $r3;
+        java.lang.String $r4;
+        java.util.List $r5;
+        android.widget.SimpleAdapter $r6;
+        android.support.v4.app.ac $r7;
+        int $i0;
+        com.seattleclouds.modules.q.x $r8;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: com.seattleclouds.modules.q.n;
+
+        $r4 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.modules.q.n: java.util.List c(java.lang.String)>($r4);
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List aj> = $r5;
+
+        $r6 = new android.widget.SimpleAdapter;
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List aj>;
+
+        $r2 = newarray (java.lang.String)[2];
+
+        $r2[0] = "city";
+
+        $r2[1] = "locationDetail";
+
+        $r3 = newarray (int)[2];
+
+        $r3[0] = 16908308;
+
+        $r3[1] = 16908309;
+
+        specialinvoke $r6.<android.widget.SimpleAdapter: void <init>(android.content.Context,java.util.List,int,java.lang.String[],int[])>($r7, $r5, 17367044, $r2, $r3);
+
+        $i0 = <com.seattleclouds.l: int product_order_info_message_there_are_no_any_locations>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(java.lang.CharSequence)>($r4);
+
+        $r8 = new com.seattleclouds.modules.q.x;
+
+        specialinvoke $r8.<com.seattleclouds.modules.q.x: void <init>(com.seattleclouds.modules.q.q,com.seattleclouds.modules.q.r)>($r0, null);
+
+        virtualinvoke $r6.<android.widget.SimpleAdapter: void setViewBinder(android.widget.SimpleAdapter$ViewBinder)>($r8);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(android.widget.ListAdapter)>($r6);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.modules.q.q, java.lang.String)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void d(java.lang.String)>($r1);
+
+        return;
+    }
+
+    static boolean a(com.seattleclouds.modules.q.q, boolean)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        $z0 := @parameter1: boolean;
+
+        $r0.<com.seattleclouds.modules.q.q: boolean au> = $z0;
+
+        return $z0;
+    }
+
+    private void ab()
+    {
+        com.seattleclouds.modules.q.q $r0;
+        int $i0, $i1;
+        java.lang.String[] $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.modules.q.n $r3;
+        java.lang.String $r4;
+        java.util.List $r5;
+        android.widget.SimpleAdapter $r6;
+        int[] $r7;
+        com.seattleclouds.modules.q.x $r8;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r3 = staticinvoke <com.seattleclouds.modules.q.n: com.seattleclouds.modules.q.n a(android.content.Context)>($r2);
+
+        $r4 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        $r5 = virtualinvoke $r3.<com.seattleclouds.modules.q.n: java.util.List e(java.lang.String)>($r4);
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List al> = $r5;
+
+        $r6 = new android.widget.SimpleAdapter;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List al>;
+
+        $i0 = <com.seattleclouds.j: int product_order_product_list_item>;
+
+        $r1 = newarray (java.lang.String)[3];
+
+        $r1[0] = "product";
+
+        $r1[1] = "product_details";
+
+        $r1[2] = "price";
+
+        $r7 = newarray (int)[3];
+
+        $i1 = <com.seattleclouds.h: int product_order_products_list_item_product_name_txtview>;
+
+        $r7[0] = $i1;
+
+        $i1 = <com.seattleclouds.h: int product_order_products_list_item_product_details_txtview>;
+
+        $r7[1] = $i1;
+
+        $i1 = <com.seattleclouds.h: int product_order_products_list_item_product_price_txtview>;
+
+        $r7[2] = $i1;
+
+        specialinvoke $r6.<android.widget.SimpleAdapter: void <init>(android.content.Context,java.util.List,int,java.lang.String[],int[])>($r2, $r5, $i0, $r1, $r7);
+
+        $r8 = new com.seattleclouds.modules.q.x;
+
+        specialinvoke $r8.<com.seattleclouds.modules.q.x: void <init>(com.seattleclouds.modules.q.q,com.seattleclouds.modules.q.r)>($r0, null);
+
+        virtualinvoke $r6.<android.widget.SimpleAdapter: void setViewBinder(android.widget.SimpleAdapter$ViewBinder)>($r8);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(android.widget.ListAdapter)>($r6);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int product_order_info_message_there_are_no_any_products>;
+
+        $r4 = virtualinvoke $r2.<android.support.v4.app.ac: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(java.lang.CharSequence)>($r4);
+
+        return;
+    }
+
+    private void ac()
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.support.v7.a.u $r1, $r12;
+        android.support.v4.app.ac $r2;
+        android.view.LayoutInflater $r3;
+        int $i0;
+        android.view.View $r4, $r5;
+        android.widget.TextView $r6, $r7;
+        com.seattleclouds.modules.q.n $r8;
+        java.lang.String $r9;
+        com.seattleclouds.modules.q.m $r10;
+        com.seattleclouds.modules.q.o $r11;
+        com.seattleclouds.modules.q.r $r13;
+        android.support.v7.a.t $r14;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 = new android.support.v7.a.u;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        specialinvoke $r1.<android.support.v7.a.u: void <init>(android.content.Context)>($r2);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r3 = virtualinvoke $r2.<android.support.v4.app.ac: android.view.LayoutInflater getLayoutInflater()>();
+
+        $i0 = <com.seattleclouds.j: int product_order_company_info>;
+
+        $r4 = virtualinvoke $r3.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup)>($i0, null);
+
+        $i0 = <com.seattleclouds.h: int product_order_company_info>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r6 = (android.widget.TextView) $r5;
+
+        $i0 = <com.seattleclouds.h: int product_order_company_brief>;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r7 = (android.widget.TextView) $r5;
+
+        $r8 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        $r9 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        $r10 = virtualinvoke $r8.<com.seattleclouds.modules.q.n: com.seattleclouds.modules.q.m b(java.lang.String)>($r9);
+
+        if $r10 != null goto label1;
+
+        return;
+
+     label1:
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.q.m: com.seattleclouds.modules.q.o a()>();
+
+        $r9 = virtualinvoke $r11.<com.seattleclouds.modules.q.o: java.lang.String a()>();
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r9);
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.modules.q.m: com.seattleclouds.modules.q.o a()>();
+
+        $r9 = virtualinvoke $r11.<com.seattleclouds.modules.q.o: java.lang.String b()>();
+
+        virtualinvoke $r7.<android.widget.TextView: void setText(java.lang.CharSequence)>($r9);
+
+        $r12 = virtualinvoke $r1.<android.support.v7.a.u: android.support.v7.a.u b(android.view.View)>($r4);
+
+        $i0 = <com.seattleclouds.l: int OK>;
+
+        $r13 = new com.seattleclouds.modules.q.r;
+
+        specialinvoke $r13.<com.seattleclouds.modules.q.r: void <init>(com.seattleclouds.modules.q.q)>($r0);
+
+        virtualinvoke $r12.<android.support.v7.a.u: android.support.v7.a.u a(int,android.content.DialogInterface$OnClickListener)>($i0, $r13);
+
+        $r14 = virtualinvoke $r1.<android.support.v7.a.u: android.support.v7.a.t b()>();
+
+        virtualinvoke $r14.<android.support.v7.a.t: void show()>();
+
+        return;
+    }
+
+    static android.support.v7.widget.SearchView b(com.seattleclouds.modules.q.q)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.support.v7.widget.SearchView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        return r1;
+    }
+
+    private void b(com.seattleclouds.modules.q.n)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        com.seattleclouds.modules.q.n $r1;
+        java.lang.String[] $r2;
+        int[] $r3;
+        java.lang.String $r4;
+        java.util.List $r5;
+        android.widget.SimpleAdapter $r6;
+        android.support.v4.app.ac $r7;
+        com.seattleclouds.modules.q.x $r8;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: com.seattleclouds.modules.q.n;
+
+        $r4 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        $r5 = virtualinvoke $r1.<com.seattleclouds.modules.q.n: java.util.List d(java.lang.String)>($r4);
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List ak> = $r5;
+
+        $r6 = new android.widget.SimpleAdapter;
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List ak>;
+
+        $r2 = newarray (java.lang.String)[2];
+
+        $r2[0] = "category";
+
+        $r2[1] = "productCount";
+
+        $r3 = newarray (int)[2];
+
+        $r3[0] = 16908308;
+
+        $r3[1] = 16908309;
+
+        specialinvoke $r6.<android.widget.SimpleAdapter: void <init>(android.content.Context,java.util.List,int,java.lang.String[],int[])>($r7, $r5, 17367044, $r2, $r3);
+
+        $r8 = new com.seattleclouds.modules.q.x;
+
+        specialinvoke $r8.<com.seattleclouds.modules.q.x: void <init>(com.seattleclouds.modules.q.q,com.seattleclouds.modules.q.r)>($r0, null);
+
+        virtualinvoke $r6.<android.widget.SimpleAdapter: void setViewBinder(android.widget.SimpleAdapter$ViewBinder)>($r8);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(android.widget.ListAdapter)>($r6);
+
+        $i0 = <com.seattleclouds.l: int product_order_info_message_there_are_no_any_categoreis>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(java.lang.CharSequence)>($r4);
+
+        return;
+    }
+
+    static java.util.List c(com.seattleclouds.modules.q.q)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        r1 = $r0.<com.seattleclouds.modules.q.q: java.util.List aj>;
+
+        return r1;
+    }
+
+    static java.util.List d(com.seattleclouds.modules.q.q)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        r1 = $r0.<com.seattleclouds.modules.q.q: java.util.List am>;
+
+        return r1;
+    }
+
+    private void d(java.lang.String)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.lang.String $r1, $r2;
+        boolean $z0;
+        int $i0, $i1, $i2;
+        java.lang.StringBuilder $r3;
+        java.util.regex.Pattern $r4;
+        java.util.List $r5;
+        com.seattleclouds.modules.q.n $r6;
+        java.util.ArrayList $r7;
+        java.util.Iterator $r8;
+        java.lang.Object $r9;
+        java.util.Map $r10;
+        java.lang.CharSequence $r11;
+        java.util.regex.Matcher $r12, $r13, $r22;
+        java.lang.Boolean $r14, $r15, $r23;
+        com.seattleclouds.modules.q.y $r16;
+        com.seattleclouds.modules.q.v $r17;
+        android.support.v4.app.ac $r18;
+        java.lang.String[] $r19;
+        int[] $r20;
+        com.seattleclouds.modules.q.x $r21;
+        com.seattleclouds.modules.q.w $r24;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 != null goto label02;
+
+        $r1 = "";
+
+     label01:
+        $r2 = $r0.<com.seattleclouds.modules.q.q: java.lang.String at>;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>($r2);
+
+        if $z0 == 0 goto label03;
+
+        $z0 = $r0.<com.seattleclouds.modules.q.q: boolean av>;
+
+        if $z0 != 0 goto label03;
+
+        return;
+
+     label02:
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        goto label01;
+
+     label03:
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label04;
+
+        $i0 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        if $i0 != 1 goto label04;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void e(java.lang.String)>($r1);
+
+     label04:
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 <= 0 goto label25;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 >= 3 goto label24;
+
+        $r3 = new java.lang.StringBuilder;
+
+        specialinvoke $r3.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\\b");
+
+        $r3 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label05:
+        $r4 = staticinvoke <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>($r2, 2);
+
+     label06:
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List aj>;
+
+        interfaceinvoke $r5.<java.util.List: void clear()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List ak>;
+
+        interfaceinvoke $r5.<java.util.List: void clear()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List am>;
+
+        interfaceinvoke $r5.<java.util.List: void clear()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List an>;
+
+        interfaceinvoke $r5.<java.util.List: void clear()>();
+
+        $i0 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        if $i0 != 1 goto label15;
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void a(com.seattleclouds.modules.q.n)>($r6);
+
+        $r7 = new java.util.ArrayList;
+
+        specialinvoke $r7.<java.util.ArrayList: void <init>()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List aj>;
+
+        $r8 = interfaceinvoke $r5.<java.util.List: java.util.Iterator iterator()>();
+
+     label07:
+        $z0 = interfaceinvoke $r8.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label11;
+
+        $r9 = interfaceinvoke $r8.<java.util.Iterator: java.lang.Object next()>();
+
+        $r10 = (java.util.Map) $r9;
+
+        if $r4 == null goto label07;
+
+        $r9 = interfaceinvoke $r10.<java.util.Map: java.lang.Object get(java.lang.Object)>("city");
+
+        $r11 = (java.lang.CharSequence) $r9;
+
+        $r12 = virtualinvoke $r4.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r11);
+
+        $r9 = interfaceinvoke $r10.<java.util.Map: java.lang.Object get(java.lang.Object)>("locationDetail");
+
+        $r11 = (java.lang.CharSequence) $r9;
+
+        $r13 = virtualinvoke $r4.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r11);
+
+        $z0 = virtualinvoke $r12.<java.util.regex.Matcher: boolean find()>();
+
+        $r14 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $z0 = virtualinvoke $r13.<java.util.regex.Matcher: boolean find()>();
+
+        $r15 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $z0 = virtualinvoke $r14.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 != 0 goto label08;
+
+        $z0 = virtualinvoke $r15.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label07;
+
+     label08:
+        $z0 = virtualinvoke $r14.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label09;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List am>;
+
+        $r16 = new com.seattleclouds.modules.q.y;
+
+        $i0 = virtualinvoke $r12.<java.util.regex.Matcher: int start()>();
+
+        $i1 = virtualinvoke $r12.<java.util.regex.Matcher: int end()>();
+
+        $i2 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        specialinvoke $r16.<com.seattleclouds.modules.q.y: void <init>(com.seattleclouds.modules.q.q,int,int,int,int)>($r0, 0, $i0, $i1, $i2);
+
+        interfaceinvoke $r5.<java.util.List: boolean add(java.lang.Object)>($r16);
+
+     label09:
+        $z0 = virtualinvoke $r15.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label10;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List am>;
+
+        $r16 = new com.seattleclouds.modules.q.y;
+
+        $i0 = virtualinvoke $r13.<java.util.regex.Matcher: int start()>();
+
+        $i1 = virtualinvoke $r13.<java.util.regex.Matcher: int end()>();
+
+        $i2 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        specialinvoke $r16.<com.seattleclouds.modules.q.y: void <init>(com.seattleclouds.modules.q.q,int,int,int,int)>($r0, 1, $i0, $i1, $i2);
+
+        interfaceinvoke $r5.<java.util.List: boolean add(java.lang.Object)>($r16);
+
+     label10:
+        interfaceinvoke $r7.<java.util.List: boolean add(java.lang.Object)>($r10);
+
+        goto label07;
+
+     label11:
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List aj>;
+
+        interfaceinvoke $r5.<java.util.List: void clear()>();
+
+        $i0 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        if $i0 <= 0 goto label14;
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List aj> = $r7;
+
+     label12:
+        $r17 = new com.seattleclouds.modules.q.v;
+
+        $r18 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List aj>;
+
+        $r19 = newarray (java.lang.String)[2];
+
+        $r19[0] = "city";
+
+        $r19[1] = "locationDetail";
+
+        $r20 = newarray (int)[2];
+
+        $r20[0] = 16908308;
+
+        $r20[1] = 16908309;
+
+        specialinvoke $r17.<com.seattleclouds.modules.q.v: void <init>(com.seattleclouds.modules.q.q,android.content.Context,java.util.List,int,java.lang.String[],int[])>($r0, $r18, $r5, 17367044, $r19, $r20);
+
+        $i0 = <com.seattleclouds.l: int product_order_search_by_location_no_any_locations>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(java.lang.CharSequence)>($r2);
+
+        $r21 = new com.seattleclouds.modules.q.x;
+
+        specialinvoke $r21.<com.seattleclouds.modules.q.x: void <init>(com.seattleclouds.modules.q.q,com.seattleclouds.modules.q.r)>($r0, null);
+
+        virtualinvoke $r17.<android.widget.SimpleAdapter: void setViewBinder(android.widget.SimpleAdapter$ViewBinder)>($r21);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(android.widget.ListAdapter)>($r17);
+
+     label13:
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void e(java.lang.String)>($r1);
+
+        return;
+
+     label14:
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label12;
+
+        $i0 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        if $i0 != 0 goto label12;
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void a(com.seattleclouds.modules.q.n)>($r6);
+
+        goto label12;
+
+     label15:
+        $i0 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        if $i0 != 2 goto label13;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void ab()>();
+
+        $r7 = new java.util.ArrayList;
+
+        specialinvoke $r7.<java.util.ArrayList: void <init>()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List al>;
+
+        $r8 = interfaceinvoke $r5.<java.util.List: java.util.Iterator iterator()>();
+
+     label16:
+        $z0 = interfaceinvoke $r8.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label21;
+
+        $r9 = interfaceinvoke $r8.<java.util.Iterator: java.lang.Object next()>();
+
+        $r10 = (java.util.Map) $r9;
+
+        if $r4 == null goto label16;
+
+        $r9 = interfaceinvoke $r10.<java.util.Map: java.lang.Object get(java.lang.Object)>("product");
+
+        $r11 = (java.lang.CharSequence) $r9;
+
+        $r12 = virtualinvoke $r4.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r11);
+
+        $r9 = interfaceinvoke $r10.<java.util.Map: java.lang.Object get(java.lang.Object)>("product_details");
+
+        $r11 = (java.lang.CharSequence) $r9;
+
+        $r13 = virtualinvoke $r4.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r11);
+
+        $r9 = interfaceinvoke $r10.<java.util.Map: java.lang.Object get(java.lang.Object)>("price");
+
+        $r11 = (java.lang.CharSequence) $r9;
+
+        $r22 = virtualinvoke $r4.<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>($r11);
+
+        $z0 = virtualinvoke $r12.<java.util.regex.Matcher: boolean find()>();
+
+        $r14 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $z0 = virtualinvoke $r13.<java.util.regex.Matcher: boolean find()>();
+
+        $r15 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $z0 = virtualinvoke $r22.<java.util.regex.Matcher: boolean find()>();
+
+        $r23 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $z0 = virtualinvoke $r14.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 != 0 goto label17;
+
+        $z0 = virtualinvoke $r15.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 != 0 goto label17;
+
+        $z0 = virtualinvoke $r23.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label16;
+
+     label17:
+        $z0 = virtualinvoke $r14.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label18;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List an>;
+
+        $r16 = new com.seattleclouds.modules.q.y;
+
+        $i0 = virtualinvoke $r12.<java.util.regex.Matcher: int start()>();
+
+        $i1 = virtualinvoke $r12.<java.util.regex.Matcher: int end()>();
+
+        $i2 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        specialinvoke $r16.<com.seattleclouds.modules.q.y: void <init>(com.seattleclouds.modules.q.q,int,int,int,int)>($r0, 0, $i0, $i1, $i2);
+
+        interfaceinvoke $r5.<java.util.List: boolean add(java.lang.Object)>($r16);
+
+     label18:
+        $z0 = virtualinvoke $r15.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label19;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List an>;
+
+        $r16 = new com.seattleclouds.modules.q.y;
+
+        $i0 = virtualinvoke $r13.<java.util.regex.Matcher: int start()>();
+
+        $i1 = virtualinvoke $r13.<java.util.regex.Matcher: int end()>();
+
+        $i2 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        specialinvoke $r16.<com.seattleclouds.modules.q.y: void <init>(com.seattleclouds.modules.q.q,int,int,int,int)>($r0, 1, $i0, $i1, $i2);
+
+        interfaceinvoke $r5.<java.util.List: boolean add(java.lang.Object)>($r16);
+
+     label19:
+        $z0 = virtualinvoke $r23.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z0 == 0 goto label20;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List an>;
+
+        $r16 = new com.seattleclouds.modules.q.y;
+
+        $i0 = virtualinvoke $r22.<java.util.regex.Matcher: int start()>();
+
+        $i1 = virtualinvoke $r22.<java.util.regex.Matcher: int end()>();
+
+        $i2 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        specialinvoke $r16.<com.seattleclouds.modules.q.y: void <init>(com.seattleclouds.modules.q.q,int,int,int,int)>($r0, 2, $i0, $i1, $i2);
+
+        interfaceinvoke $r5.<java.util.List: boolean add(java.lang.Object)>($r16);
+
+     label20:
+        interfaceinvoke $r7.<java.util.List: boolean add(java.lang.Object)>($r10);
+
+        goto label16;
+
+     label21:
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List al>;
+
+        interfaceinvoke $r5.<java.util.List: void clear()>();
+
+        $r19 = null;
+
+        $r20 = null;
+
+        $i0 = 17367044;
+
+        $i1 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        if $i1 <= 0 goto label23;
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List al> = $r7;
+
+        $r19 = newarray (java.lang.String)[3];
+
+        $r19[0] = "product";
+
+        $r19[1] = "product_details";
+
+        $r19[2] = "price";
+
+        $r20 = newarray (int)[3];
+
+        $i0 = <com.seattleclouds.h: int product_order_products_list_item_product_name_txtview>;
+
+        $r20[0] = $i0;
+
+        $i0 = <com.seattleclouds.h: int product_order_products_list_item_product_details_txtview>;
+
+        $r20[1] = $i0;
+
+        $i0 = <com.seattleclouds.h: int product_order_products_list_item_product_price_txtview>;
+
+        $r20[2] = $i0;
+
+        $i0 = <com.seattleclouds.j: int product_order_product_list_item>;
+
+     label22:
+        $r24 = new com.seattleclouds.modules.q.w;
+
+        $r18 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List al>;
+
+        specialinvoke $r24.<com.seattleclouds.modules.q.w: void <init>(com.seattleclouds.modules.q.q,android.content.Context,java.util.List,int,java.lang.String[],int[])>($r0, $r18, $r5, $i0, $r19, $r20);
+
+        $i0 = <com.seattleclouds.l: int product_order_search_by_location_no_any_products>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(java.lang.CharSequence)>($r2);
+
+        $r21 = new com.seattleclouds.modules.q.x;
+
+        specialinvoke $r21.<com.seattleclouds.modules.q.x: void <init>(com.seattleclouds.modules.q.q,com.seattleclouds.modules.q.r)>($r0, null);
+
+        virtualinvoke $r24.<android.widget.SimpleAdapter: void setViewBinder(android.widget.SimpleAdapter$ViewBinder)>($r21);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void a(android.widget.ListAdapter)>($r24);
+
+        goto label13;
+
+     label23:
+        $i1 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i1 != 0 goto label22;
+
+        $i1 = interfaceinvoke $r7.<java.util.List: int size()>();
+
+        if $i1 != 0 goto label22;
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void b(com.seattleclouds.modules.q.n)>($r6);
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.util.List ak>;
+
+        $r0.<com.seattleclouds.modules.q.q: java.util.List al> = $r5;
+
+        $r19 = newarray (java.lang.String)[2];
+
+        $r19[0] = "category";
+
+        $r19[1] = "productCount";
+
+        $r20 = newarray (int)[2];
+
+        $r20[0] = 16908308;
+
+        $r20[1] = 16908309;
+
+        goto label22;
+
+     label24:
+        $r2 = $r1;
+
+        goto label05;
+
+     label25:
+        $r4 = null;
+
+        goto label06;
+    }
+
+    static java.util.List e(com.seattleclouds.modules.q.q)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        r1 = $r0.<com.seattleclouds.modules.q.q: java.util.List al>;
+
+        return r1;
+    }
+
+    private void e(java.lang.String)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.q.q: java.lang.String at> = $r1;
+
+        return;
+    }
+
+    static java.util.List f(com.seattleclouds.modules.q.q)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.q.q;
+
+        r1 = $r0.<com.seattleclouds.modules.q.q: java.util.List an>;
+
+        return r1;
+    }
+
+    public void E()
+    {
+        com.seattleclouds.modules.q.q $r0;
+        boolean $z0;
+        android.support.v7.widget.SearchView $r1;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        specialinvoke $r0.<com.seattleclouds.bm: void E()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $z0 = virtualinvoke $r1.<android.support.v7.widget.SearchView: boolean c()>();
+
+        $r0.<com.seattleclouds.modules.q.q: boolean as> = $z0;
+
+     label1:
+        return;
+    }
+
+    public void a(android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        int $i0;
+        android.view.MenuItem $r3;
+        android.view.View $r4;
+        boolean $z0;
+        java.lang.String $r5;
+        android.support.v7.widget.SearchView $r6;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 := @parameter1: android.view.MenuInflater;
+
+        specialinvoke $r0.<com.seattleclouds.bm: void a(android.view.Menu,android.view.MenuInflater)>($r1, $r2);
+
+        $i0 = <com.seattleclouds.k: int product_order_info_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        $i0 = <com.seattleclouds.h: int search>;
+
+        $r3 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.view.View aa()>();
+
+        interfaceinvoke $r3.<android.view.MenuItem: android.view.MenuItem setActionView(android.view.View)>($r4);
+
+        $z0 = $r0.<com.seattleclouds.modules.q.q: boolean av>;
+
+        if $z0 == 0 goto label1;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.lang.String at>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void d(java.lang.String)>($r5);
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: java.lang.String at>;
+
+        virtualinvoke $r6.<android.support.v7.widget.SearchView: void a(java.lang.CharSequence,boolean)>($r5, 1);
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        virtualinvoke $r6.<android.support.v7.widget.SearchView: void setFocusable(boolean)>(1);
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        virtualinvoke $r6.<android.support.v7.widget.SearchView: void setIconified(boolean)>(0);
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        virtualinvoke $r6.<android.support.v7.widget.SearchView: boolean requestFocusFromTouch()>();
+
+     label1:
+        return;
+    }
+
+    public void a(android.widget.ListView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.widget.ListView $r1;
+        android.view.View $r2;
+        int $i0, $i2;
+        long $l1;
+        java.util.List $r3;
+        java.lang.Object $r4;
+        java.util.Map $r5;
+        java.lang.String $r6;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: android.widget.ListView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        specialinvoke $r0.<com.seattleclouds.bm: void a(android.widget.ListView,android.view.View,int,long)>($r1, $r2, $i0, $l1);
+
+        $i2 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        lookupswitch($i2)
+        {
+            case 1: goto label2;
+            case 2: goto label3;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $r3 = $r0.<com.seattleclouds.modules.q.q: java.util.List aj>;
+
+        $r4 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r5 = (java.util.Map) $r4;
+
+        $r4 = interfaceinvoke $r5.<java.util.Map: java.lang.Object get(java.lang.Object)>("locationDetail");
+
+        $r6 = (java.lang.String) $r4;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void c(java.lang.String)>($r6);
+
+        return;
+
+     label3:
+        $z0 = $r0.<com.seattleclouds.modules.q.q: boolean au>;
+
+        if $z0 == 0 goto label4;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void d(int)>($i0);
+
+        return;
+
+     label4:
+        virtualinvoke $r0.<com.seattleclouds.modules.q.q: void c(int)>($i0);
+
+        return;
+    }
+
+    public boolean a(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i1 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i0 = <com.seattleclouds.h: int product_order_info_menu_icon>;
+
+        if $i1 != $i0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void ac()>();
+
+        return 1;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.bm: boolean a(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public android.view.View aa()
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.support.v7.widget.SearchView $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.p $r3;
+        android.support.v7.a.a $r4;
+        android.content.Context $r5;
+        int $i0;
+        java.lang.String $r6;
+        com.seattleclouds.modules.q.s $r7;
+        com.seattleclouds.modules.q.t $r8;
+        boolean $z0;
+        android.os.Handler $r9;
+        com.seattleclouds.modules.q.u $r10;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 = new android.support.v7.widget.SearchView;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r3 = (com.seattleclouds.p) $r2;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.p: android.support.v7.a.a h()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v7.a.a: android.content.Context f()>();
+
+        specialinvoke $r1.<android.support.v7.widget.SearchView: void <init>(android.content.Context)>($r5);
+
+        $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar> = $r1;
+
+        $i0 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        if $i0 != 1 goto label3;
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int product_order_search_by_location_hint>;
+
+        $r6 = virtualinvoke $r2.<android.support.v4.app.ac: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setQueryHint(java.lang.CharSequence)>($r6);
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: java.lang.String at>;
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void a(java.lang.CharSequence,boolean)>($r6, 0);
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setFocusable(boolean)>(0);
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.seattleclouds.util.bt: int d(android.content.Context)>($r2);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setMaxWidth(int)>($i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $r7 = new com.seattleclouds.modules.q.s;
+
+        specialinvoke $r7.<com.seattleclouds.modules.q.s: void <init>(com.seattleclouds.modules.q.q)>($r0);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setOnQueryTextListener(android.support.v7.widget.ge)>($r7);
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $r8 = new com.seattleclouds.modules.q.t;
+
+        specialinvoke $r8.<com.seattleclouds.modules.q.t: void <init>(com.seattleclouds.modules.q.q)>($r0);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setOnQueryTextFocusChangeListener(android.view.View$OnFocusChangeListener)>($r8);
+
+        $z0 = $r0.<com.seattleclouds.modules.q.q: boolean as>;
+
+        if $z0 != 0 goto label2;
+
+        $r9 = new android.os.Handler;
+
+        specialinvoke $r9.<android.os.Handler: void <init>()>();
+
+        $r10 = new com.seattleclouds.modules.q.u;
+
+        specialinvoke $r10.<com.seattleclouds.modules.q.u: void <init>(com.seattleclouds.modules.q.q)>($r0);
+
+        virtualinvoke $r9.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r10, 10L);
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        return $r1;
+
+     label3:
+        $i0 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        if $i0 != 2 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.support.v7.widget.SearchView ar>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int product_order_search_by_products>;
+
+        $r6 = virtualinvoke $r2.<android.support.v4.app.ac: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setQueryHint(java.lang.CharSequence)>($r6);
+
+        goto label1;
+    }
+
+    void c(int)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        int $i0;
+        android.os.Bundle $r1, $r3;
+        java.lang.String $r2;
+        com.seattleclouds.FragmentInfo $r4;
+        java.lang.Class $r5;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $i0 := @parameter0: int;
+
+        $r1 = new android.os.Bundle;
+
+        specialinvoke $r1.<android.os.Bundle: void <init>()>();
+
+        $r2 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("PAGE_ID_KEY", $r2);
+
+        virtualinvoke $r1.<android.os.Bundle: void putInt(java.lang.String,int)>("INDEX_KEY", $i0);
+
+        $r2 = $r0.<com.seattleclouds.modules.q.q: java.lang.String aq>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("ADDRESS_KEY", $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.q.q: android.os.Bundle ai>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putBundle(java.lang.String,android.os.Bundle)>("PAGE_STYLE", $r3);
+
+        $r4 = new com.seattleclouds.FragmentInfo;
+
+        $r5 = class "Lcom/seattleclouds/modules/q/f;";
+
+        $r2 = virtualinvoke $r5.<java.lang.Class: java.lang.String getName()>();
+
+        specialinvoke $r4.<com.seattleclouds.FragmentInfo: void <init>(java.lang.String,android.os.Bundle)>($r2, $r1);
+
+        staticinvoke <com.seattleclouds.App: void a(com.seattleclouds.FragmentInfo,android.support.v4.app.Fragment)>($r4, $r0);
+
+        return;
+    }
+
+    void c(java.lang.String)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        java.lang.String $r1, $r3;
+        android.os.Bundle $r2, $r4;
+        com.seattleclouds.FragmentInfo $r5;
+        java.lang.Class $r6;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = new android.os.Bundle;
+
+        specialinvoke $r2.<android.os.Bundle: void <init>()>();
+
+        $r3 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        virtualinvoke $r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("PAGE_ID_KEY", $r3);
+
+        virtualinvoke $r2.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("PICKUP_ADDRESS_KEY", $r1);
+
+        virtualinvoke $r2.<android.os.Bundle: void putInt(java.lang.String,int)>("MODE_KEY", 2);
+
+        $r4 = $r0.<com.seattleclouds.modules.q.q: android.os.Bundle ai>;
+
+        virtualinvoke $r2.<android.os.Bundle: void putBundle(java.lang.String,android.os.Bundle)>("PAGE_STYLE", $r4);
+
+        $r5 = new com.seattleclouds.FragmentInfo;
+
+        $r6 = class "Lcom/seattleclouds/modules/q/q;";
+
+        $r1 = virtualinvoke $r6.<java.lang.Class: java.lang.String getName()>();
+
+        specialinvoke $r5.<com.seattleclouds.FragmentInfo: void <init>(java.lang.String,android.os.Bundle)>($r1, $r2);
+
+        staticinvoke <com.seattleclouds.App: void a(com.seattleclouds.FragmentInfo,android.support.v4.app.Fragment)>($r5, $r0);
+
+        return;
+    }
+
+    void d(int)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        int $i0, $i1;
+        java.util.List $r1;
+        java.lang.Object $r2;
+        java.util.Map $r3;
+        java.lang.String $r4;
+        android.os.Bundle $r5, $r6;
+        com.seattleclouds.FragmentInfo $r7;
+        java.lang.Class $r8;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $i0 := @parameter0: int;
+
+        $i1 = -1;
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: java.util.List al>;
+
+        $r2 = interfaceinvoke $r1.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r3 = (java.util.Map) $r2;
+
+        if $r3 == null goto label2;
+
+        $r2 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>("categoryIndex");
+
+        $r4 = (java.lang.String) $r2;
+
+        $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r4);
+
+        $r2 = interfaceinvoke $r3.<java.util.Map: java.lang.Object get(java.lang.Object)>("productIndex");
+
+        $r4 = (java.lang.String) $r2;
+
+        $i0 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r4);
+
+     label1:
+        $r5 = new android.os.Bundle;
+
+        specialinvoke $r5.<android.os.Bundle: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        virtualinvoke $r5.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("PAGE_ID_KEY", $r4);
+
+        $r4 = $r0.<com.seattleclouds.modules.q.q: java.lang.String aq>;
+
+        virtualinvoke $r5.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("ADDRESS_KEY", $r4);
+
+        virtualinvoke $r5.<android.os.Bundle: void putInt(java.lang.String,int)>("CATEGORY_INDEX_KEY", $i1);
+
+        virtualinvoke $r5.<android.os.Bundle: void putInt(java.lang.String,int)>("PRODUCT_INDEX_KEY", $i0);
+
+        $r6 = $r0.<com.seattleclouds.modules.q.q: android.os.Bundle ai>;
+
+        virtualinvoke $r5.<android.os.Bundle: void putBundle(java.lang.String,android.os.Bundle)>("PAGE_STYLE", $r6);
+
+        $r7 = new com.seattleclouds.FragmentInfo;
+
+        $r8 = class "Lcom/seattleclouds/modules/q/aa;";
+
+        $r4 = virtualinvoke $r8.<java.lang.Class: java.lang.String getName()>();
+
+        specialinvoke $r7.<com.seattleclouds.FragmentInfo: void <init>(java.lang.String,android.os.Bundle)>($r4, $r5);
+
+        staticinvoke <com.seattleclouds.App: void a(com.seattleclouds.FragmentInfo,android.support.v4.app.Fragment)>($r7, $r0);
+
+        return;
+
+     label2:
+        $i0 = -1;
+
+        goto label1;
+    }
+
+    public void d(android.os.Bundle)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.os.Bundle $r1, $r2;
+        java.lang.String $r3;
+        int $i0;
+        boolean $z0;
+        android.support.v4.app.ac $r4;
+        com.seattleclouds.modules.q.n $r5;
+        java.util.List $r6;
+        java.lang.Object $r7;
+        java.util.Map $r8;
+        android.view.View $r9;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bm: void d(android.os.Bundle)>($r1);
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.os.Bundle j()>();
+
+        if $r2 == null goto label1;
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_ID_KEY");
+
+        $r0.<com.seattleclouds.modules.q.q: java.lang.String i> = $r3;
+
+        $i0 = virtualinvoke $r2.<android.os.Bundle: int getInt(java.lang.String)>("MODE_KEY");
+
+        $r0.<com.seattleclouds.modules.q.q: int ap> = $i0;
+
+        $r3 = virtualinvoke $r2.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PICKUP_ADDRESS_KEY");
+
+        $r0.<com.seattleclouds.modules.q.q: java.lang.String aq> = $r3;
+
+        $r2 = virtualinvoke $r2.<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)>("PAGE_STYLE");
+
+        $r0.<com.seattleclouds.modules.q.q: android.os.Bundle ai> = $r2;
+
+     label1:
+        if $r1 == null goto label2;
+
+        $z0 = virtualinvoke $r1.<android.os.Bundle: boolean containsKey(java.lang.String)>("SEARCH_KEY");
+
+        if $z0 == 0 goto label2;
+
+        $r3 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("SEARCH_KEY");
+
+        $r0.<com.seattleclouds.modules.q.q: java.lang.String at> = $r3;
+
+        $r3 = $r0.<com.seattleclouds.modules.q.q: java.lang.String at>;
+
+        if $r3 == null goto label2;
+
+        $r3 = $r0.<com.seattleclouds.modules.q.q: java.lang.String at>;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean isEmpty()>();
+
+        if $z0 != 0 goto label2;
+
+        $r0.<com.seattleclouds.modules.q.q: boolean av> = 1;
+
+     label2:
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.support.v4.app.ac n()>();
+
+        $r5 = staticinvoke <com.seattleclouds.modules.q.n: com.seattleclouds.modules.q.n a(android.content.Context)>($r4);
+
+        $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao> = $r5;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        $r3 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        virtualinvoke $r5.<com.seattleclouds.modules.q.n: void a(java.lang.String)>($r3);
+
+        $i0 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        if $i0 != 0 goto label3;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        $r3 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.modules.q.n: java.util.List c(java.lang.String)>($r3);
+
+        $i0 = interfaceinvoke $r6.<java.util.List: int size()>();
+
+        if $i0 != 1 goto label5;
+
+        $r0.<com.seattleclouds.modules.q.q: int ap> = 2;
+
+        $r5 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        $r3 = $r0.<com.seattleclouds.modules.q.q: java.lang.String i>;
+
+        $r6 = virtualinvoke $r5.<com.seattleclouds.modules.q.n: java.util.List c(java.lang.String)>($r3);
+
+        $r7 = interfaceinvoke $r6.<java.util.List: java.lang.Object get(int)>(0);
+
+        $r8 = (java.util.Map) $r7;
+
+        $r7 = interfaceinvoke $r8.<java.util.Map: java.lang.Object get(java.lang.Object)>("locationDetail");
+
+        $r3 = (java.lang.String) $r7;
+
+        $r0.<com.seattleclouds.modules.q.q: java.lang.String aq> = $r3;
+
+     label3:
+        $i0 = $r0.<com.seattleclouds.modules.q.q: int ap>;
+
+        lookupswitch($i0)
+        {
+            case 1: goto label7;
+            case 2: goto label6;
+            default: goto label4;
+        };
+
+     label4:
+        $r9 = virtualinvoke $r0.<com.seattleclouds.modules.q.q: android.view.View C()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.q.q: android.os.Bundle ai>;
+
+        staticinvoke <com.seattleclouds.util.av: void a(android.view.View,android.os.Bundle)>($r9, $r1);
+
+        return;
+
+     label5:
+        $r0.<com.seattleclouds.modules.q.q: int ap> = 1;
+
+        goto label3;
+
+     label6:
+        $r5 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void b(com.seattleclouds.modules.q.n)>($r5);
+
+        goto label4;
+
+     label7:
+        $r5 = $r0.<com.seattleclouds.modules.q.q: com.seattleclouds.modules.q.n ao>;
+
+        specialinvoke $r0.<com.seattleclouds.modules.q.q: void a(com.seattleclouds.modules.q.n)>($r5);
+
+        goto label4;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.q.q $r0;
+        android.os.Bundle $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.q.q;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bm: void e(android.os.Bundle)>($r1);
+
+        $r2 = $r0.<com.seattleclouds.modules.q.q: java.lang.String at>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("SEARCH_KEY", $r2);
+
+        return;
+    }
+}

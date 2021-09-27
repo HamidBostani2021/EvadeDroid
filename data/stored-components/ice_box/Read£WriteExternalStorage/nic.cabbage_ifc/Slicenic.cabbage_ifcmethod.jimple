@@ -1,0 +1,17 @@
+public class Slicenic.cabbage_ifcmethod extends java.lang.Object
+{
+
+    public void tmp()
+    {
+        Slicenic.cabbage_ifcmethod this;
+        nic.cabbage_ifc.Info $r0;
+
+        this := @this: Slicenic.cabbage_ifcmethod;
+
+        $r0 = new nic.cabbage_ifc.Info;
+
+        virtualinvoke $r0.<nic.cabbage_ifc.Info: void onClick(android.view.View)>(null);
+
+        return;
+    }
+}

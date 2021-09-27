@@ -1,0 +1,583 @@
+public class com.seattleclouds.a.a extends java.lang.Object
+{
+    private static final java.lang.String a;
+    private static com.seattleclouds.a.a b;
+    private static android.content.Context c;
+    private android.content.SharedPreferences d;
+    private android.content.SharedPreferences$Editor e;
+    private long f;
+    private long g;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/a/a;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.a.a: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    private void <init>(android.content.Context)
+    {
+        com.seattleclouds.a.a $r0;
+        android.content.Context $r1;
+        android.content.SharedPreferences $r2;
+        android.content.SharedPreferences$Editor $r3;
+        long $l0;
+
+        $r0 := @this: com.seattleclouds.a.a;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        <com.seattleclouds.a.a: android.content.Context c> = $r1;
+
+        $r1 = <com.seattleclouds.a.a: android.content.Context c>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("com.seattleclouds.analytics.SCAnalyticsTracker", 0);
+
+        $r0.<com.seattleclouds.a.a: android.content.SharedPreferences d> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.a.a: android.content.SharedPreferences d>;
+
+        $r3 = interfaceinvoke $r2.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r0.<com.seattleclouds.a.a: android.content.SharedPreferences$Editor e> = $r3;
+
+        $r2 = $r0.<com.seattleclouds.a.a: android.content.SharedPreferences d>;
+
+        $l0 = interfaceinvoke $r2.<android.content.SharedPreferences: long getLong(java.lang.String,long)>("installationTimestamp", 0L);
+
+        $r0.<com.seattleclouds.a.a: long f> = $l0;
+
+        $r2 = $r0.<com.seattleclouds.a.a: android.content.SharedPreferences d>;
+
+        $l0 = interfaceinvoke $r2.<android.content.SharedPreferences: long getLong(java.lang.String,long)>("activationTimestamp", 0L);
+
+        $r0.<com.seattleclouds.a.a: long g> = $l0;
+
+        return;
+    }
+
+    static long a(com.seattleclouds.a.a)
+    {
+        com.seattleclouds.a.a $r0;
+        long l0;
+
+        $r0 := @parameter0: com.seattleclouds.a.a;
+
+        l0 = $r0.<com.seattleclouds.a.a: long g>;
+
+        return l0;
+    }
+
+    static long a(com.seattleclouds.a.a, long)
+    {
+        com.seattleclouds.a.a $r0;
+        long $l0;
+
+        $r0 := @parameter0: com.seattleclouds.a.a;
+
+        $l0 := @parameter1: long;
+
+        $r0.<com.seattleclouds.a.a: long g> = $l0;
+
+        return $l0;
+    }
+
+    public static com.seattleclouds.a.a a(android.content.Context)
+    {
+        android.content.Context $r0;
+        java.lang.IllegalArgumentException $r1;
+        com.seattleclouds.a.a $r2;
+
+        $r0 := @parameter0: android.content.Context;
+
+        if $r0 != null goto label1;
+
+        $r1 = new java.lang.IllegalArgumentException;
+
+        specialinvoke $r1.<java.lang.IllegalArgumentException: void <init>(java.lang.String)>("Context cannot be null");
+
+        throw $r1;
+
+     label1:
+        $r2 = <com.seattleclouds.a.a: com.seattleclouds.a.a b>;
+
+        if $r2 != null goto label2;
+
+        $r2 = new com.seattleclouds.a.a;
+
+        specialinvoke $r2.<com.seattleclouds.a.a: void <init>(android.content.Context)>($r0);
+
+        <com.seattleclouds.a.a: com.seattleclouds.a.a b> = $r2;
+
+     label2:
+        <com.seattleclouds.a.a: android.content.Context c> = $r0;
+
+        $r2 = <com.seattleclouds.a.a: com.seattleclouds.a.a b>;
+
+        return $r2;
+    }
+
+    private static java.lang.String a(java.lang.String, java.lang.String)
+    {
+        java.util.Locale $r0;
+        java.lang.String $r1, $r2, $r3;
+        int $i0;
+        boolean $z0;
+        java.lang.StringBuilder $r4;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: java.lang.String;
+
+        if $r1 == null goto label1;
+
+        $r3 = virtualinvoke $r1.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label2;
+
+     label1:
+        $r1 = "Unknown";
+
+     label2:
+        if $r2 == null goto label3;
+
+        $r3 = virtualinvoke $r2.<java.lang.String: java.lang.String trim()>();
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label4;
+
+     label3:
+        $r2 = "Unknown";
+
+     label4:
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 1 goto label6;
+
+        $r0 = <java.util.Locale: java.util.Locale US>;
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>($r0);
+
+     label5:
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean startsWith(java.lang.String)>($r1);
+
+        if $z0 == 0 goto label7;
+
+        return $r2;
+
+     label6:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r3 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int,int)>(0, 1);
+
+        $r0 = <java.util.Locale: java.util.Locale US>;
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>($r0);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3);
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String substring(int)>(1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label5;
+
+     label7:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r1 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r1;
+    }
+
+    private boolean a()
+    {
+        com.seattleclouds.a.a $r0;
+        boolean $z0, $z1;
+        long $l0;
+        byte $b1;
+        android.content.SharedPreferences$Editor $r1;
+        java.lang.Throwable $r2;
+
+        $r0 := @this: com.seattleclouds.a.a;
+
+        $z0 = 1;
+
+        entermonitor $r0;
+
+     label1:
+        $l0 = $r0.<com.seattleclouds.a.a: long f>;
+
+        $b1 = $l0 cmp 0L;
+
+        if $b1 != 0 goto label2;
+
+        $l0 = staticinvoke <java.lang.System: long currentTimeMillis()>();
+
+        $z1 = specialinvoke $r0.<com.seattleclouds.a.a: boolean b(int)>(1);
+
+        $z0 = $z1;
+
+        if $z1 == 0 goto label2;
+
+        $r0.<com.seattleclouds.a.a: long f> = $l0;
+
+        $r1 = $r0.<com.seattleclouds.a.a: android.content.SharedPreferences$Editor e>;
+
+        $l0 = $r0.<com.seattleclouds.a.a: long f>;
+
+        interfaceinvoke $r1.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)>("installationTimestamp", $l0);
+
+        $r1 = $r0.<com.seattleclouds.a.a: android.content.SharedPreferences$Editor e>;
+
+        $z0 = interfaceinvoke $r1.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+     label2:
+        exitmonitor $r0;
+
+        return $z0;
+
+     label3:
+        $r2 := @caughtexception;
+
+        exitmonitor $r0;
+
+        throw $r2;
+
+        catch java.lang.Throwable from label1 to label2 with label3;
+    }
+
+    static boolean a(com.seattleclouds.a.a, int)
+    {
+        com.seattleclouds.a.a $r0;
+        int $i0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.a.a;
+
+        $i0 := @parameter1: int;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.a.a: boolean b(int)>($i0);
+
+        return $z0;
+    }
+
+    private int b()
+    {
+        com.seattleclouds.a.a $r0;
+        android.content.Context $r1;
+        java.lang.Object $r2;
+        android.net.ConnectivityManager $r3;
+        android.net.NetworkInfo $r4;
+        int $i0;
+        java.lang.NoSuchMethodError $r5;
+        java.lang.Throwable $r6;
+
+        $r0 := @this: com.seattleclouds.a.a;
+
+        $r1 = <com.seattleclouds.a.a: android.content.Context c>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: java.lang.Object getSystemService(java.lang.String)>("connectivity");
+
+        $r3 = (android.net.ConnectivityManager) $r2;
+
+     label1:
+        $r4 = virtualinvoke $r3.<android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>();
+
+     label2:
+        if $r4 != null goto label3;
+
+        return 100;
+
+     label3:
+        $r4 = virtualinvoke $r3.<android.net.ConnectivityManager: android.net.NetworkInfo getActiveNetworkInfo()>();
+
+        $i0 = virtualinvoke $r4.<android.net.NetworkInfo: int getType()>();
+
+     label4:
+        if $i0 == 1 goto label7;
+
+        return 2;
+
+     label5:
+        $r5 := @caughtexception;
+
+        return 0;
+
+     label6:
+        $r6 := @caughtexception;
+
+        return 200;
+
+     label7:
+        return 1;
+
+        catch java.lang.NoSuchMethodError from label1 to label2 with label5;
+        catch java.lang.NoSuchMethodError from label3 to label4 with label5;
+        catch java.lang.SecurityException from label1 to label2 with label6;
+        catch java.lang.SecurityException from label3 to label4 with label6;
+    }
+
+    private boolean b(int)
+    {
+        com.seattleclouds.a.a $r0;
+        int $i0;
+        android.content.Context $r1;
+        android.content.res.Resources $r2;
+        android.util.DisplayMetrics $r3;
+        java.util.HashMap $r4;
+        java.lang.String $r5, $r7, $r9;
+        java.lang.StringBuilder $r6;
+        boolean $z0;
+        java.lang.Throwable $r8, $r10;
+
+        $r0 := @this: com.seattleclouds.a.a;
+
+        $i0 := @parameter0: int;
+
+        $r1 = <com.seattleclouds.a.a: android.content.Context c>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $r3 = virtualinvoke $r2.<android.content.res.Resources: android.util.DisplayMetrics getDisplayMetrics()>();
+
+        $r4 = new java.util.HashMap;
+
+        specialinvoke $r4.<java.util.HashMap: void <init>()>();
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.String toString(int)>($i0);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("type", $r5);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("param", "");
+
+        $r5 = <com.seattleclouds.App: java.lang.String w>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("username", $r5);
+
+        $r5 = <com.seattleclouds.App: java.lang.String x>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("appId", $r5);
+
+        $r5 = <com.seattleclouds.App: java.lang.String v>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("publisherid", $r5);
+
+        $r1 = <com.seattleclouds.a.a: android.content.Context c>;
+
+        $r5 = virtualinvoke $r1.<android.content.Context: java.lang.String getPackageName()>();
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("uniqueAppId", $r5);
+
+        $r1 = <com.seattleclouds.a.a: android.content.Context c>;
+
+        $r5 = staticinvoke <com.seattleclouds.cg: java.lang.String a(android.content.Context)>($r1);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("deviceId", $r5);
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.String toString(int)>(1);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("os", $r5);
+
+        $r5 = <android.os.Build$VERSION: java.lang.String RELEASE>;
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("osVersion", $r5);
+
+        $r5 = staticinvoke <com.seattleclouds.a.a: java.lang.String d()>();
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("deviceModel", $r5);
+
+        $i0 = specialinvoke $r0.<com.seattleclouds.a.a: int b()>();
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.String toString(int)>($i0);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("connectionType", $r5);
+
+        $i0 = specialinvoke $r0.<com.seattleclouds.a.a: int c()>();
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.String toString(int)>($i0);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("screenSize", $r5);
+
+        $i0 = $r3.<android.util.DisplayMetrics: int densityDpi>;
+
+        $r5 = staticinvoke <java.lang.Integer: java.lang.String toString(int)>($i0);
+
+        interfaceinvoke $r4.<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>("screenDensity", $r5);
+
+        $r5 = null;
+
+        $r6 = new java.lang.StringBuilder;
+
+     label1:
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+     label2:
+        $r7 = <com.seattleclouds.App: java.lang.String u>;
+
+     label3:
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r7);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/");
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("trackevent.ashx");
+
+        $r7 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r7 = staticinvoke <com.seattleclouds.util.a: java.lang.String b(java.lang.String,java.util.Map)>($r7, $r4);
+
+     label4:
+        $r5 = $r7;
+
+     label5:
+        $r7 = "OK";
+
+        $z0 = virtualinvoke $r7.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r5);
+
+        if $z0 == 0 goto label7;
+
+        return 1;
+
+     label6:
+        $r8 := @caughtexception;
+
+        $r7 = <com.seattleclouds.a.a: java.lang.String a>;
+
+        $r6 = new java.lang.StringBuilder;
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>()>();
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Error performing analytics request: ");
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r8);
+
+        $r9 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r7, $r9);
+
+        goto label5;
+
+     label7:
+        return 0;
+
+     label8:
+        $r10 := @caughtexception;
+
+        goto label5;
+
+        catch java.lang.SecurityException from label1 to label2 with label6;
+        catch java.lang.SecurityException from label3 to label4 with label6;
+        catch java.io.IOException from label1 to label2 with label8;
+        catch java.io.IOException from label3 to label4 with label8;
+    }
+
+    static boolean b(com.seattleclouds.a.a)
+    {
+        com.seattleclouds.a.a $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.a.a;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.a.a: boolean a()>();
+
+        return $z0;
+    }
+
+    private int c()
+    {
+        com.seattleclouds.a.a $r0;
+        android.content.Context $r1;
+        android.content.res.Resources $r2;
+        android.content.res.Configuration $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.a.a;
+
+        $r1 = <com.seattleclouds.a.a: android.content.Context c>;
+
+        $r2 = virtualinvoke $r1.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $r3 = virtualinvoke $r2.<android.content.res.Resources: android.content.res.Configuration getConfiguration()>();
+
+        $i0 = $r3.<android.content.res.Configuration: int screenLayout>;
+
+        $i0 = $i0 & 15;
+
+        return $i0;
+    }
+
+    static android.content.SharedPreferences$Editor c(com.seattleclouds.a.a)
+    {
+        com.seattleclouds.a.a $r0;
+        android.content.SharedPreferences$Editor r1;
+
+        $r0 := @parameter0: com.seattleclouds.a.a;
+
+        r1 = $r0.<com.seattleclouds.a.a: android.content.SharedPreferences$Editor e>;
+
+        return r1;
+    }
+
+    private static java.lang.String d()
+    {
+        java.lang.String $r0, $r1;
+
+        $r1 = <android.os.Build: java.lang.String MANUFACTURER>;
+
+        $r0 = <android.os.Build: java.lang.String MODEL>;
+
+        $r0 = staticinvoke <com.seattleclouds.a.a: java.lang.String a(java.lang.String,java.lang.String)>($r1, $r0);
+
+        return $r0;
+    }
+
+    public void a(int)
+    {
+        com.seattleclouds.a.a $r0;
+        int $i0;
+        java.lang.Thread $r1;
+        com.seattleclouds.a.b $r2;
+
+        $r0 := @this: com.seattleclouds.a.a;
+
+        $i0 := @parameter0: int;
+
+        $r1 = new java.lang.Thread;
+
+        $r2 = new com.seattleclouds.a.b;
+
+        specialinvoke $r2.<com.seattleclouds.a.b: void <init>(com.seattleclouds.a.a,int)>($r0, 2);
+
+        specialinvoke $r1.<java.lang.Thread: void <init>(java.lang.Runnable)>($r2);
+
+        virtualinvoke $r1.<java.lang.Thread: void start()>();
+
+        return;
+    }
+}

@@ -1,0 +1,209 @@
+public class com.seattleclouds.modules.o.k extends java.lang.Object
+{
+    public static final java.lang.String a;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        java.lang.Class $r1;
+
+        $r1 = class "Lcom/seattleclouds/modules/o/k;";
+
+        $r0 = virtualinvoke $r1.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.modules.o.k: java.lang.String a> = $r0;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.o.k $r0;
+
+        $r0 := @this: com.seattleclouds.modules.o.k;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    private java.util.List a(org.json.JSONArray)
+    {
+        com.seattleclouds.modules.o.k $r0;
+        org.json.JSONArray $r1;
+        java.util.ArrayList $r2;
+        java.lang.String $r3;
+        int $i0, $i1;
+        java.lang.Object $r4;
+        org.json.JSONObject $r5;
+        java.util.HashMap $r6;
+        org.json.JSONException $r7;
+
+        $r0 := @this: com.seattleclouds.modules.o.k;
+
+        $r1 := @parameter0: org.json.JSONArray;
+
+        $i0 = virtualinvoke $r1.<org.json.JSONArray: int length()>();
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $i1 = 0;
+
+     label1:
+        if $i1 >= $i0 goto label7;
+
+     label2:
+        $r4 = virtualinvoke $r1.<org.json.JSONArray: java.lang.Object get(int)>($i1);
+
+     label3:
+        $r5 = (org.json.JSONObject) $r4;
+
+     label4:
+        $r6 = specialinvoke $r0.<com.seattleclouds.modules.o.k: java.util.HashMap b(org.json.JSONObject)>($r5);
+
+        interfaceinvoke $r2.<java.util.List: boolean add(java.lang.Object)>($r6);
+
+     label5:
+        $i1 = $i1 + 1;
+
+        goto label1;
+
+     label6:
+        $r7 := @caughtexception;
+
+        $r3 = <com.seattleclouds.modules.o.k: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r3, "JSONException in getPlaces method", $r7);
+
+        goto label5;
+
+     label7:
+        return $r2;
+
+        catch org.json.JSONException from label2 to label3 with label6;
+        catch org.json.JSONException from label4 to label5 with label6;
+    }
+
+    private java.util.HashMap b(org.json.JSONObject)
+    {
+        com.seattleclouds.modules.o.k $r0;
+        org.json.JSONObject $r1, $r5;
+        java.util.HashMap $r2;
+        java.lang.String $r3, $r4, $r6, $r7, $r8;
+        boolean $z0;
+        org.json.JSONException $r9;
+
+        $r0 := @this: com.seattleclouds.modules.o.k;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r2 = new java.util.HashMap;
+
+        specialinvoke $r2.<java.util.HashMap: void <init>()>();
+
+        $r3 = "-NA-";
+
+        $r4 = "-NA-";
+
+     label1:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean isNull(java.lang.String)>("name");
+
+     label2:
+        if $z0 != 0 goto label4;
+
+     label3:
+        $r3 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("name");
+
+     label4:
+        $z0 = virtualinvoke $r1.<org.json.JSONObject: boolean isNull(java.lang.String)>("vicinity");
+
+     label5:
+        if $z0 != 0 goto label7;
+
+     label6:
+        $r4 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("vicinity");
+
+     label7:
+        $r5 = virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>("geometry");
+
+        $r5 = virtualinvoke $r5.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>("location");
+
+        $r6 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("lat");
+
+        $r5 = virtualinvoke $r1.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>("geometry");
+
+        $r5 = virtualinvoke $r5.<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>("location");
+
+        $r7 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("lng");
+
+        $r8 = virtualinvoke $r1.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("reference");
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("place_name", $r3);
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("vicinity", $r4);
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("lat", $r6);
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("lng", $r7);
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("reference", $r8);
+
+     label8:
+        return $r2;
+
+     label9:
+        $r9 := @caughtexception;
+
+        $r3 = <com.seattleclouds.modules.o.k: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r3, "JSONException in getPlace Method", $r9);
+
+        return $r2;
+
+        catch org.json.JSONException from label1 to label2 with label9;
+        catch org.json.JSONException from label3 to label4 with label9;
+        catch org.json.JSONException from label4 to label5 with label9;
+        catch org.json.JSONException from label6 to label7 with label9;
+        catch org.json.JSONException from label7 to label8 with label9;
+    }
+
+    public java.util.List a(org.json.JSONObject)
+    {
+        com.seattleclouds.modules.o.k $r0;
+        org.json.JSONObject $r1;
+        java.lang.String $r2;
+        org.json.JSONArray $r3, $r4;
+        java.util.List $r5;
+        org.json.JSONException $r6;
+
+        $r0 := @this: com.seattleclouds.modules.o.k;
+
+        $r1 := @parameter0: org.json.JSONObject;
+
+        $r3 = null;
+
+     label1:
+        $r4 = virtualinvoke $r1.<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>("results");
+
+     label2:
+        $r3 = $r4;
+
+     label3:
+        $r5 = specialinvoke $r0.<com.seattleclouds.modules.o.k: java.util.List a(org.json.JSONArray)>($r3);
+
+        return $r5;
+
+     label4:
+        $r6 := @caughtexception;
+
+        $r2 = <com.seattleclouds.modules.o.k: java.lang.String a>;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, "JSONException in a parse method", $r6);
+
+        goto label3;
+
+        catch org.json.JSONException from label1 to label2 with label4;
+    }
+}

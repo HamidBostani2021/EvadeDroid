@@ -1,0 +1,41 @@
+class com.seattleclouds.modules.p.q extends com.seattleclouds.util.b
+{
+    final com.seattleclouds.modules.p.n o;
+
+    void <init>(com.seattleclouds.modules.p.n, android.content.Context)
+    {
+        com.seattleclouds.modules.p.q $r0;
+        com.seattleclouds.modules.p.n $r1;
+        android.content.Context $r2;
+
+        $r0 := @this: com.seattleclouds.modules.p.q;
+
+        $r1 := @parameter0: com.seattleclouds.modules.p.n;
+
+        $r2 := @parameter1: android.content.Context;
+
+        $r0.<com.seattleclouds.modules.p.q: com.seattleclouds.modules.p.n o> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.util.b: void <init>(android.content.Context)>($r2);
+
+        return;
+    }
+
+    protected android.database.Cursor x()
+    {
+        com.seattleclouds.modules.p.q $r0;
+        com.seattleclouds.modules.p.n $r1;
+        com.seattleclouds.modules.p.a $r2;
+        android.database.Cursor $r3;
+
+        $r0 := @this: com.seattleclouds.modules.p.q;
+
+        $r1 = $r0.<com.seattleclouds.modules.p.q: com.seattleclouds.modules.p.n o>;
+
+        $r2 = staticinvoke <com.seattleclouds.modules.p.n: com.seattleclouds.modules.p.a b(com.seattleclouds.modules.p.n)>($r1);
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.modules.p.a: android.database.Cursor a()>();
+
+        return $r3;
+    }
+}

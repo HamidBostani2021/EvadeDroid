@@ -1,0 +1,42 @@
+class com.seattleclouds.modules.peopledirectory.c extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.modules.peopledirectory.b a;
+
+    void <init>(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.c $r0;
+        com.seattleclouds.modules.peopledirectory.b $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.c;
+
+        $r1 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.c: com.seattleclouds.modules.peopledirectory.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.peopledirectory.c $r0;
+        com.seattleclouds.modules.peopledirectory.b $r1, $r3;
+        int $i0;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.c;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.c: com.seattleclouds.modules.peopledirectory.b a>;
+
+        $r3 = $r0.<com.seattleclouds.modules.peopledirectory.c: com.seattleclouds.modules.peopledirectory.b a>;
+
+        $i0 = <com.seattleclouds.l: int people_directory_no_results>;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.modules.peopledirectory.b: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r1.<com.seattleclouds.modules.peopledirectory.b: void a(java.lang.CharSequence)>($r2);
+
+        return;
+    }
+}

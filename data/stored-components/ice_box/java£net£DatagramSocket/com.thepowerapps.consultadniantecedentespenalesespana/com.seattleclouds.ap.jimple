@@ -1,0 +1,643 @@
+public class com.seattleclouds.ap extends com.seattleclouds.al
+{
+    private java.util.List a;
+    private com.seattleclouds.ax ai;
+    private android.widget.ProgressBar b;
+    private android.widget.TextView c;
+    private android.widget.Button d;
+    private android.widget.Button e;
+    private android.widget.FrameLayout f;
+    private com.seattleclouds.FragmentInfo g;
+    private boolean h;
+    private java.util.List i;
+
+    public void <init>()
+    {
+        com.seattleclouds.ap $r0;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        specialinvoke $r0.<com.seattleclouds.al: void <init>()>();
+
+        $r0.<com.seattleclouds.ap: java.util.List a> = null;
+
+        $r0.<com.seattleclouds.ap: android.widget.ProgressBar b> = null;
+
+        $r0.<com.seattleclouds.ap: android.widget.TextView c> = null;
+
+        $r0.<com.seattleclouds.ap: android.widget.Button d> = null;
+
+        $r0.<com.seattleclouds.ap: android.widget.Button e> = null;
+
+        $r0.<com.seattleclouds.ap: android.widget.FrameLayout f> = null;
+
+        $r0.<com.seattleclouds.ap: com.seattleclouds.FragmentInfo g> = null;
+
+        $r0.<com.seattleclouds.ap: boolean h> = 1;
+
+        $r0.<com.seattleclouds.ap: java.util.List i> = null;
+
+        $r0.<com.seattleclouds.ap: com.seattleclouds.ax ai> = null;
+
+        return;
+    }
+
+    static com.seattleclouds.ax a(com.seattleclouds.ap)
+    {
+        com.seattleclouds.ap $r0;
+        com.seattleclouds.ax r1;
+
+        $r0 := @parameter0: com.seattleclouds.ap;
+
+        r1 = $r0.<com.seattleclouds.ap: com.seattleclouds.ax ai>;
+
+        return r1;
+    }
+
+    private void a(android.view.View, com.seattleclouds.aw)
+    {
+        com.seattleclouds.ap $r0;
+        android.view.View $r1;
+        com.seattleclouds.aw $r2;
+        android.view.animation.AlphaAnimation $r3;
+        com.seattleclouds.at $r4;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: com.seattleclouds.aw;
+
+        $r3 = new android.view.animation.AlphaAnimation;
+
+        specialinvoke $r3.<android.view.animation.AlphaAnimation: void <init>(float,float)>(0.0F, 1.0F);
+
+        if $r2 == null goto label1;
+
+        $r4 = new com.seattleclouds.at;
+
+        specialinvoke $r4.<com.seattleclouds.at: void <init>(com.seattleclouds.ap,com.seattleclouds.aw)>($r0, $r2);
+
+        virtualinvoke $r3.<android.view.animation.AlphaAnimation: void setAnimationListener(android.view.animation.Animation$AnimationListener)>($r4);
+
+     label1:
+        virtualinvoke $r3.<android.view.animation.AlphaAnimation: void setDuration(long)>(200L);
+
+        virtualinvoke $r1.<android.view.View: void startAnimation(android.view.animation.Animation)>($r3);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.ap, android.view.View, com.seattleclouds.aw)
+    {
+        com.seattleclouds.ap $r0;
+        android.view.View $r1;
+        com.seattleclouds.aw $r2;
+
+        $r0 := @parameter0: com.seattleclouds.ap;
+
+        $r1 := @parameter1: android.view.View;
+
+        $r2 := @parameter2: com.seattleclouds.aw;
+
+        specialinvoke $r0.<com.seattleclouds.ap: void a(android.view.View,com.seattleclouds.aw)>($r1, $r2);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.ap, java.util.List)
+    {
+        com.seattleclouds.ap $r0;
+        java.util.List $r1;
+
+        $r0 := @parameter0: com.seattleclouds.ap;
+
+        $r1 := @parameter1: java.util.List;
+
+        specialinvoke $r0.<com.seattleclouds.ap: void a(java.util.List)>($r1);
+
+        return;
+    }
+
+    static void a(com.seattleclouds.ap, boolean)
+    {
+        com.seattleclouds.ap $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.ap;
+
+        $z0 := @parameter1: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.ap: void h(boolean)>($z0);
+
+        return;
+    }
+
+    private void a(java.util.List)
+    {
+        com.seattleclouds.ap $r0;
+        java.util.List $r1;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $r1 := @parameter0: java.util.List;
+
+        $r0.<com.seattleclouds.ap: java.util.List i> = $r1;
+
+        $i0 = interfaceinvoke $r1.<java.util.List: int size()>();
+
+        if $i0 != 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.ap: void ac()>();
+
+        return;
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.ap: void h(boolean)>(1);
+
+        return;
+    }
+
+    private void ac()
+    {
+        com.seattleclouds.ap $r0;
+        android.view.View $r1;
+        android.widget.FrameLayout $r2;
+        int $i0;
+        com.seattleclouds.as $r3;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $r2 = $r0.<com.seattleclouds.ap: android.widget.FrameLayout f>;
+
+        $i0 = <com.seattleclouds.h: int fragment_frame>;
+
+        $r1 = virtualinvoke $r2.<android.widget.FrameLayout: android.view.View findViewById(int)>($i0);
+
+        $r3 = new com.seattleclouds.as;
+
+        specialinvoke $r3.<com.seattleclouds.as: void <init>(com.seattleclouds.ap,android.view.View)>($r0, $r1);
+
+        specialinvoke $r0.<com.seattleclouds.ap: void b(android.view.View,com.seattleclouds.aw)>($r1, $r3);
+
+        return;
+    }
+
+    static java.util.List b(com.seattleclouds.ap)
+    {
+        com.seattleclouds.ap $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.ap;
+
+        r1 = $r0.<com.seattleclouds.ap: java.util.List i>;
+
+        return r1;
+    }
+
+    private void b(android.view.View, com.seattleclouds.aw)
+    {
+        com.seattleclouds.ap $r0;
+        android.view.View $r1;
+        com.seattleclouds.aw $r2;
+        android.view.animation.AlphaAnimation $r3;
+        com.seattleclouds.au $r4;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: com.seattleclouds.aw;
+
+        $r3 = new android.view.animation.AlphaAnimation;
+
+        specialinvoke $r3.<android.view.animation.AlphaAnimation: void <init>(float,float)>(1.0F, 0.0F);
+
+        $r4 = new com.seattleclouds.au;
+
+        specialinvoke $r4.<com.seattleclouds.au: void <init>(com.seattleclouds.ap,com.seattleclouds.aw)>($r0, $r2);
+
+        virtualinvoke $r3.<android.view.animation.AlphaAnimation: void setAnimationListener(android.view.animation.Animation$AnimationListener)>($r4);
+
+        virtualinvoke $r3.<android.view.animation.AlphaAnimation: void setDuration(long)>(200L);
+
+        virtualinvoke $r1.<android.view.View: void startAnimation(android.view.animation.Animation)>($r3);
+
+        return;
+    }
+
+    static com.seattleclouds.FragmentInfo c(com.seattleclouds.ap)
+    {
+        com.seattleclouds.ap $r0;
+        com.seattleclouds.FragmentInfo r1;
+
+        $r0 := @parameter0: com.seattleclouds.ap;
+
+        r1 = $r0.<com.seattleclouds.ap: com.seattleclouds.FragmentInfo g>;
+
+        return r1;
+    }
+
+    public static java.lang.String c(java.lang.String)
+    {
+        java.lang.String $r0, $r1;
+        java.lang.Throwable $r2;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r0 = staticinvoke <com.seattleclouds.util.au: java.lang.String a(java.lang.String)>($r0);
+
+     label1:
+        $r1 = staticinvoke <java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>($r0, "UTF-8");
+
+     label2:
+        return $r1;
+
+     label3:
+        $r2 := @caughtexception;
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("HostedResourcesDownloader", "Exception", $r2);
+
+        return $r0;
+
+        catch java.io.UnsupportedEncodingException from label1 to label2 with label3;
+    }
+
+    static android.widget.ProgressBar d(com.seattleclouds.ap)
+    {
+        com.seattleclouds.ap $r0;
+        android.widget.ProgressBar r1;
+
+        $r0 := @parameter0: com.seattleclouds.ap;
+
+        r1 = $r0.<com.seattleclouds.ap: android.widget.ProgressBar b>;
+
+        return r1;
+    }
+
+    private void h(boolean)
+    {
+        com.seattleclouds.ap $r0;
+        boolean $z0;
+        android.content.res.Resources $r1;
+        android.widget.Button $r2;
+        android.view.ViewParent $r3;
+        android.widget.FrameLayout $r4;
+        android.view.ViewGroup$LayoutParams $r5;
+        android.widget.FrameLayout$LayoutParams $r6;
+        android.support.v4.app.ac $r7;
+        int $i0;
+        android.widget.TextView $r8;
+        java.lang.String $r9;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.ap: android.content.res.Resources o()>();
+
+        $r2 = $r0.<com.seattleclouds.ap: android.widget.Button e>;
+
+        $r3 = virtualinvoke $r2.<android.widget.Button: android.view.ViewParent getParent()>();
+
+        if $r3 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.ap: android.widget.Button e>;
+
+        $r3 = virtualinvoke $r2.<android.widget.Button: android.view.ViewParent getParent()>();
+
+        $r4 = (android.widget.FrameLayout) $r3;
+
+        virtualinvoke $r4.<android.widget.FrameLayout: void setVisibility(int)>(0);
+
+     label1:
+        $z0 = $r0.<com.seattleclouds.ap: boolean h>;
+
+        if $z0 == 0 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.ap: android.widget.Button d>;
+
+        $r5 = virtualinvoke $r2.<android.widget.Button: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r6 = (android.widget.FrameLayout$LayoutParams) $r5;
+
+        if $r6 == null goto label2;
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.ap: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r7, 20.0F);
+
+        $r6.<android.widget.FrameLayout$LayoutParams: int rightMargin> = $i0;
+
+        $r6.<android.widget.FrameLayout$LayoutParams: int gravity> = 21;
+
+        $r2 = $r0.<com.seattleclouds.ap: android.widget.Button d>;
+
+        virtualinvoke $r2.<android.widget.Button: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r6);
+
+     label2:
+        $r8 = $r0.<com.seattleclouds.ap: android.widget.TextView c>;
+
+        $i0 = <com.seattleclouds.l: int hprd_downloading_failed_label>;
+
+        $r9 = virtualinvoke $r1.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r8.<android.widget.TextView: void setText(java.lang.CharSequence)>($r9);
+
+        return;
+
+     label3:
+        return;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.ap $r0;
+        com.seattleclouds.ax $r1;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $r1 = $r0.<com.seattleclouds.ap: com.seattleclouds.ax ai>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.ap: com.seattleclouds.ax ai>;
+
+        virtualinvoke $r1.<com.seattleclouds.ax: void a()>();
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.al: void F()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.ap $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        android.view.View $r4;
+        int $i0;
+        android.widget.FrameLayout $r5;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int download_hosted_resources_fragment>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r5 = (android.widget.FrameLayout) $r4;
+
+        $r0.<com.seattleclouds.ap: android.widget.FrameLayout f> = $r5;
+
+        virtualinvoke $r0.<com.seattleclouds.ap: void ab()>();
+
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.FrameLayout f>;
+
+        return $r5;
+    }
+
+    public android.view.animation.Animation a(int, boolean, int)
+    {
+        com.seattleclouds.ap $r0;
+        int $i0, $i1;
+        boolean $z0;
+        android.view.animation.Animation $r1;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $i0 := @parameter0: int;
+
+        $z0 := @parameter1: boolean;
+
+        $i1 := @parameter2: int;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.al: android.view.animation.Animation a(int,boolean,int)>($i0, $z0, $i1);
+
+        return $r1;
+    }
+
+    protected void ab()
+    {
+        com.seattleclouds.ap $r0;
+        android.widget.FrameLayout $r1;
+        int $i0;
+        android.view.View $r2;
+        android.widget.ProgressBar $r3;
+        android.widget.TextView $r4;
+        android.widget.Button $r5;
+        boolean $z0;
+        android.os.Bundle $r6;
+        java.io.Serializable $r7;
+        java.util.List $r8;
+        android.os.Parcelable $r9;
+        com.seattleclouds.FragmentInfo $r10;
+        android.support.v4.app.ac $r11;
+        java.lang.ClassLoader $r12;
+        com.seattleclouds.ax $r13;
+        com.seattleclouds.aq $r14;
+        com.seattleclouds.ar $r15;
+        android.view.ViewParent $r16;
+        android.view.ViewGroup$LayoutParams $r17;
+        android.widget.FrameLayout$LayoutParams $r18;
+        android.content.res.Resources $r19;
+        java.lang.String $r20;
+
+        $r0 := @this: com.seattleclouds.ap;
+
+        $r1 = $r0.<com.seattleclouds.ap: android.widget.FrameLayout f>;
+
+        $i0 = <com.seattleclouds.h: int download_progress_bar>;
+
+        $r2 = virtualinvoke $r1.<android.widget.FrameLayout: android.view.View findViewById(int)>($i0);
+
+        $r3 = (android.widget.ProgressBar) $r2;
+
+        $r0.<com.seattleclouds.ap: android.widget.ProgressBar b> = $r3;
+
+        $r1 = $r0.<com.seattleclouds.ap: android.widget.FrameLayout f>;
+
+        $i0 = <com.seattleclouds.h: int download_title>;
+
+        $r2 = virtualinvoke $r1.<android.widget.FrameLayout: android.view.View findViewById(int)>($i0);
+
+        $r4 = (android.widget.TextView) $r2;
+
+        $r0.<com.seattleclouds.ap: android.widget.TextView c> = $r4;
+
+        $r1 = $r0.<com.seattleclouds.ap: android.widget.FrameLayout f>;
+
+        $i0 = <com.seattleclouds.h: int cancel_button>;
+
+        $r2 = virtualinvoke $r1.<android.widget.FrameLayout: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<com.seattleclouds.ap: android.widget.Button d> = $r5;
+
+        $r1 = $r0.<com.seattleclouds.ap: android.widget.FrameLayout f>;
+
+        $i0 = <com.seattleclouds.h: int retry_download_button>;
+
+        $r2 = virtualinvoke $r1.<android.widget.FrameLayout: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.Button) $r2;
+
+        $r0.<com.seattleclouds.ap: android.widget.Button e> = $r5;
+
+        $z0 = <com.seattleclouds.App: boolean E>;
+
+        if $z0 == 0 goto label7;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.ap: android.os.Bundle j()>();
+
+        if $r6 == null goto label1;
+
+        $r7 = virtualinvoke $r6.<android.os.Bundle: java.io.Serializable getSerializable(java.lang.String)>("ARG_HOSTED_RESOURCES");
+
+        $r8 = (java.util.List) $r7;
+
+        $r0.<com.seattleclouds.ap: java.util.List a> = $r8;
+
+        $r9 = virtualinvoke $r6.<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)>("ARG_PAGE_FRAGMENT_INFO");
+
+        $r10 = (com.seattleclouds.FragmentInfo) $r9;
+
+        $r0.<com.seattleclouds.ap: com.seattleclouds.FragmentInfo g> = $r10;
+
+        $z0 = virtualinvoke $r6.<android.os.Bundle: boolean getBoolean(java.lang.String,boolean)>("ARG_CAN_BE_CANCELED", 1);
+
+        $r0.<com.seattleclouds.ap: boolean h> = $z0;
+
+     label1:
+        $r8 = $r0.<com.seattleclouds.ap: java.util.List a>;
+
+        if $r8 == null goto label2;
+
+        $r10 = $r0.<com.seattleclouds.ap: com.seattleclouds.FragmentInfo g>;
+
+        if $r10 != null goto label3;
+
+     label2:
+        staticinvoke <com.seattleclouds.App: boolean a(android.support.v4.app.Fragment)>($r0);
+
+        return;
+
+     label3:
+        $r10 = $r0.<com.seattleclouds.ap: com.seattleclouds.FragmentInfo g>;
+
+        $r6 = virtualinvoke $r10.<com.seattleclouds.FragmentInfo: android.os.Bundle b()>();
+
+        $r11 = virtualinvoke $r0.<com.seattleclouds.ap: android.support.v4.app.ac n()>();
+
+        $r12 = virtualinvoke $r11.<android.support.v4.app.ac: java.lang.ClassLoader getClassLoader()>();
+
+        virtualinvoke $r6.<android.os.Bundle: void setClassLoader(java.lang.ClassLoader)>($r12);
+
+        virtualinvoke $r6.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("PAGE_TRANSITION", "FADE");
+
+        $r13 = new com.seattleclouds.ax;
+
+        specialinvoke $r13.<com.seattleclouds.ax: void <init>(com.seattleclouds.ap)>($r0);
+
+        $r0.<com.seattleclouds.ap: com.seattleclouds.ax ai> = $r13;
+
+        $z0 = $r0.<com.seattleclouds.ap: boolean h>;
+
+        if $z0 == 0 goto label5;
+
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button d>;
+
+        $r14 = new com.seattleclouds.aq;
+
+        specialinvoke $r14.<com.seattleclouds.aq: void <init>(com.seattleclouds.ap)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r14);
+
+     label4:
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button e>;
+
+        $r15 = new com.seattleclouds.ar;
+
+        specialinvoke $r15.<com.seattleclouds.ar: void <init>(com.seattleclouds.ap)>($r0);
+
+        virtualinvoke $r5.<android.widget.Button: void setOnClickListener(android.view.View$OnClickListener)>($r15);
+
+        $r13 = $r0.<com.seattleclouds.ap: com.seattleclouds.ax ai>;
+
+        $r8 = $r0.<com.seattleclouds.ap: java.util.List a>;
+
+        virtualinvoke $r13.<com.seattleclouds.ax: void a(java.util.List)>($r8);
+
+        specialinvoke $r0.<com.seattleclouds.ap: void h(boolean)>(0);
+
+        return;
+
+     label5:
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button d>;
+
+        $r16 = virtualinvoke $r5.<android.widget.Button: android.view.ViewParent getParent()>();
+
+        if $r16 == null goto label6;
+
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button d>;
+
+        $r16 = virtualinvoke $r5.<android.widget.Button: android.view.ViewParent getParent()>();
+
+        $r2 = (android.view.View) $r16;
+
+        virtualinvoke $r2.<android.view.View: void setVisibility(int)>(8);
+
+     label6:
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button e>;
+
+        $r17 = virtualinvoke $r5.<android.widget.Button: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r18 = (android.widget.FrameLayout$LayoutParams) $r17;
+
+        if $r18 == null goto label4;
+
+        $r18.<android.widget.FrameLayout$LayoutParams: int leftMargin> = 0;
+
+        $r18.<android.widget.FrameLayout$LayoutParams: int gravity> = 17;
+
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button e>;
+
+        virtualinvoke $r5.<android.widget.Button: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r18);
+
+        goto label4;
+
+     label7:
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button d>;
+
+        virtualinvoke $r5.<android.widget.Button: void setVisibility(int)>(8);
+
+        $r5 = $r0.<com.seattleclouds.ap: android.widget.Button e>;
+
+        virtualinvoke $r5.<android.widget.Button: void setVisibility(int)>(8);
+
+        $r3 = $r0.<com.seattleclouds.ap: android.widget.ProgressBar b>;
+
+        virtualinvoke $r3.<android.widget.ProgressBar: void setVisibility(int)>(8);
+
+        $r19 = virtualinvoke $r0.<com.seattleclouds.ap: android.content.res.Resources o()>();
+
+        $r4 = $r0.<com.seattleclouds.ap: android.widget.TextView c>;
+
+        $i0 = <com.seattleclouds.l: int hprd_sync_should_be_enabled_info>;
+
+        $r20 = virtualinvoke $r19.<android.content.res.Resources: java.lang.String getString(int)>($i0);
+
+        virtualinvoke $r4.<android.widget.TextView: void setText(java.lang.CharSequence)>($r20);
+
+        return;
+    }
+}

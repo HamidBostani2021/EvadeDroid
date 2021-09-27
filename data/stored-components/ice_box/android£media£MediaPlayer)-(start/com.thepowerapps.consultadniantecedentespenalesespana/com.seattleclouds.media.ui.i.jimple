@@ -1,0 +1,95 @@
+class com.seattleclouds.media.ui.i extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.media.ui.a a;
+
+    void <init>(com.seattleclouds.media.ui.a)
+    {
+        com.seattleclouds.media.ui.i $r0;
+        com.seattleclouds.media.ui.a $r1;
+
+        $r0 := @this: com.seattleclouds.media.ui.i;
+
+        $r1 := @parameter0: com.seattleclouds.media.ui.a;
+
+        $r0.<com.seattleclouds.media.ui.i: com.seattleclouds.media.ui.a a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.media.ui.i $r0;
+        com.seattleclouds.media.ui.a $r1;
+        android.support.v4.media.session.PlaybackStateCompat $r2;
+        long $l0, $l2, $l3;
+        int $i1;
+        float $f0, $f1, $f2;
+        java.lang.String $r3;
+
+        $r0 := @this: com.seattleclouds.media.ui.i;
+
+        $r1 = $r0.<com.seattleclouds.media.ui.i: com.seattleclouds.media.ui.a a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.PlaybackStateCompat k(com.seattleclouds.media.ui.a)>($r1);
+
+        if $r2 != null goto label1;
+
+        return;
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.media.ui.i: com.seattleclouds.media.ui.a a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.PlaybackStateCompat k(com.seattleclouds.media.ui.a)>($r1);
+
+        $l0 = virtualinvoke $r2.<android.support.v4.media.session.PlaybackStateCompat: long b()>();
+
+        $r1 = $r0.<com.seattleclouds.media.ui.i: com.seattleclouds.media.ui.a a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.PlaybackStateCompat k(com.seattleclouds.media.ui.a)>($r1);
+
+        $i1 = virtualinvoke $r2.<android.support.v4.media.session.PlaybackStateCompat: int a()>();
+
+        if $i1 != 3 goto label2;
+
+        $l2 = staticinvoke <android.os.SystemClock: long elapsedRealtime()>();
+
+        $r1 = $r0.<com.seattleclouds.media.ui.i: com.seattleclouds.media.ui.a a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.PlaybackStateCompat k(com.seattleclouds.media.ui.a)>($r1);
+
+        $l3 = virtualinvoke $r2.<android.support.v4.media.session.PlaybackStateCompat: long g()>();
+
+        $l2 = $l2 - $l3;
+
+        $f0 = (float) $l0;
+
+        $i1 = (int) $l2;
+
+        $f1 = (float) $i1;
+
+        $r1 = $r0.<com.seattleclouds.media.ui.i: com.seattleclouds.media.ui.a a>;
+
+        $r2 = staticinvoke <com.seattleclouds.media.ui.a: android.support.v4.media.session.PlaybackStateCompat k(com.seattleclouds.media.ui.a)>($r1);
+
+        $f2 = virtualinvoke $r2.<android.support.v4.media.session.PlaybackStateCompat: float c()>();
+
+        $f1 = $f1 * $f2;
+
+        $f0 = $f0 + $f1;
+
+        $l0 = (long) $f0;
+
+        $l0 = $l0 / 1000L;
+
+        $r1 = $r0.<com.seattleclouds.media.ui.i: com.seattleclouds.media.ui.a a>;
+
+        $r3 = staticinvoke <java.lang.String: java.lang.String valueOf(long)>($l0);
+
+        staticinvoke <com.seattleclouds.media.ui.a: void a(com.seattleclouds.media.ui.a,java.lang.String,java.lang.String)>($r1, "mm_ElapsedTime", $r3);
+
+     label2:
+        return;
+    }
+}

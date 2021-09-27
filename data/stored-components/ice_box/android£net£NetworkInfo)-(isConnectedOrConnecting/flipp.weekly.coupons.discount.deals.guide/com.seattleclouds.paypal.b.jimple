@@ -1,0 +1,1094 @@
+public class com.seattleclouds.paypal.b extends java.lang.Object
+{
+    private boolean a;
+    private android.app.Activity b;
+    private java.net.URL c;
+    private java.util.Hashtable d;
+
+    public void <init>(boolean, android.app.Activity)
+    {
+        com.seattleclouds.paypal.b $r0;
+        boolean $z0;
+        android.app.Activity $r1;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 := @parameter1: android.app.Activity;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.paypal.b: boolean a> = 0;
+
+        $r0.<com.seattleclouds.paypal.b: boolean a> = $z0;
+
+        $r0.<com.seattleclouds.paypal.b: android.app.Activity b> = $r1;
+
+        return;
+    }
+
+    static java.util.Hashtable a(com.seattleclouds.paypal.b)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.util.Hashtable r1;
+
+        $r0 := @parameter0: com.seattleclouds.paypal.b;
+
+        r1 = $r0.<com.seattleclouds.paypal.b: java.util.Hashtable d>;
+
+        return r1;
+    }
+
+    private void a()
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.util.Hashtable $r1, $r12;
+        android.app.Activity $r2;
+        android.content.SharedPreferences $r3;
+        int $i0, $i1;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5, $r8;
+        boolean $z0;
+        java.util.HashMap $r6;
+        java.lang.Object $r7;
+        com.seattleclouds.paypal.c $r9;
+        java.lang.Void[] $r10;
+        java.lang.String[] $r11;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 = $r0.<com.seattleclouds.paypal.b: java.util.Hashtable d>;
+
+        $r2 = $r0.<com.seattleclouds.paypal.b: android.app.Activity b>;
+
+        $r3 = virtualinvoke $r2.<android.app.Activity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("PayPal", 0);
+
+        $i0 = 0;
+
+     label1:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("paypalitems");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $z0 = interfaceinvoke $r3.<android.content.SharedPreferences: boolean contains(java.lang.String)>($r5);
+
+        if $z0 != 0 goto label3;
+
+        $z0 = 0;
+
+     label2:
+        if $z0 != 0 goto label5;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+        $r5 = <com.seattleclouds.App: java.lang.String q>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/paypalcheckproduct.ashx?");
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r6 = new java.util.HashMap;
+
+        specialinvoke $r6.<java.util.HashMap: void <init>(int)>(3);
+
+        $r7 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemid");
+
+        virtualinvoke $r6.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("productid", $r7);
+
+        $r8 = staticinvoke <com.seattleclouds.paypal.b: java.lang.String b()>();
+
+        virtualinvoke $r6.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("deviceid", $r8);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".");
+
+        $r8 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r8 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $r6.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("appid", $r8);
+
+        $r9 = new com.seattleclouds.paypal.c;
+
+        specialinvoke $r9.<com.seattleclouds.paypal.c: void <init>(com.seattleclouds.paypal.b,java.lang.String,java.util.HashMap)>($r0, $r5, $r6);
+
+        $r10 = newarray (java.lang.Void)[0];
+
+        virtualinvoke $r9.<com.seattleclouds.paypal.c: android.os.AsyncTask execute(java.lang.Object[])>($r10);
+
+        return;
+
+     label3:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("paypalitems");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r5 = interfaceinvoke $r3.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>($r5, "");
+
+        $r11 = virtualinvoke $r5.<java.lang.String: java.lang.String[] split(java.lang.String)>("\\|\\|");
+
+        $i1 = lengthof $r11;
+
+        if $i1 < 6 goto label4;
+
+        $r12 = new java.util.Hashtable;
+
+        specialinvoke $r12.<java.util.Hashtable: void <init>()>();
+
+        $r5 = $r11[0];
+
+        $r8 = $r11[1];
+
+        virtualinvoke $r12.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>($r5, $r8);
+
+        $r5 = $r11[2];
+
+        $r8 = $r11[3];
+
+        virtualinvoke $r12.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>($r5, $r8);
+
+        $r5 = $r11[4];
+
+        $r8 = $r11[5];
+
+        virtualinvoke $r12.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>($r5, $r8);
+
+        $r7 = virtualinvoke $r12.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("productid");
+
+        $r5 = (java.lang.String) $r7;
+
+        $r7 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemid");
+
+        $r8 = (java.lang.String) $r7;
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r8);
+
+        if $z0 == 0 goto label4;
+
+        $r7 = virtualinvoke $r12.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("deviceid");
+
+        $r5 = (java.lang.String) $r7;
+
+        $r8 = staticinvoke <com.seattleclouds.paypal.b: java.lang.String b()>();
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r8);
+
+        if $z0 == 0 goto label4;
+
+        $r7 = virtualinvoke $r12.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("appid");
+
+        $r5 = (java.lang.String) $r7;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r8 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".");
+
+        $r8 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8);
+
+        $r8 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $z0 = virtualinvoke $r5.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r8);
+
+        if $z0 == 0 goto label4;
+
+        $r7 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemid");
+
+        $r5 = (java.lang.String) $r7;
+
+        specialinvoke $r0.<com.seattleclouds.paypal.b: void c(java.lang.String)>($r5);
+
+        $z0 = 1;
+
+        goto label2;
+
+     label4:
+        $i0 = $i0 + 1;
+
+        goto label1;
+
+     label5:
+        return;
+    }
+
+    static void a(com.seattleclouds.paypal.b, java.lang.String)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.paypal.b: void c(java.lang.String)>($r1);
+
+        return;
+    }
+
+    private void a(java.util.Hashtable, java.net.URL)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.util.Hashtable $r1;
+        java.net.URL $r2;
+        int $i0;
+        android.app.Activity $r3;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter0: java.util.Hashtable;
+
+        $r2 := @parameter1: java.net.URL;
+
+        $i0 = virtualinvoke $r1.<java.util.Hashtable: int size()>();
+
+        if $i0 != 0 goto label1;
+
+        $r3 = $r0.<com.seattleclouds.paypal.b: android.app.Activity b>;
+
+        staticinvoke <com.seattleclouds.util.bu: void a(android.content.Context,java.lang.String,java.lang.String)>($r3, "ERROR", "The URL scheme is not configured correctly.");
+
+        return;
+
+     label1:
+        $r0.<com.seattleclouds.paypal.b: java.util.Hashtable d> = $r1;
+
+        $r0.<com.seattleclouds.paypal.b: java.net.URL c> = $r2;
+
+        specialinvoke $r0.<com.seattleclouds.paypal.b: void a()>();
+
+        return;
+    }
+
+    private static java.lang.String b()
+    {
+        java.lang.String $r0;
+
+        $r0 = staticinvoke <com.seattleclouds.util.bs: java.lang.String a()>();
+
+        return $r0;
+    }
+
+    private java.lang.String b(java.lang.String)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.lang.String $r1;
+        java.lang.Throwable $r2;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+     label1:
+        $r1 = staticinvoke <java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>($r1, "UTF-8");
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>("+", "%20");
+
+     label2:
+        return $r1;
+
+     label3:
+        $r2 := @caughtexception;
+
+        return "";
+
+        catch java.io.UnsupportedEncodingException from label1 to label2 with label3;
+    }
+
+    static java.net.URL b(com.seattleclouds.paypal.b)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.net.URL r1;
+
+        $r0 := @parameter0: com.seattleclouds.paypal.b;
+
+        r1 = $r0.<com.seattleclouds.paypal.b: java.net.URL c>;
+
+        return r1;
+    }
+
+    private void b(java.util.Hashtable)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.util.Hashtable $r1;
+        boolean $z0;
+        java.lang.Object $r2;
+        java.lang.String $r3;
+        int $i0;
+        com.seattleclouds.e.c $r4;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter0: java.util.Hashtable;
+
+        $r0.<com.seattleclouds.paypal.b: java.util.Hashtable d> = $r1;
+
+        $z0 = $r0.<com.seattleclouds.paypal.b: boolean a>;
+
+        if $z0 != 0 goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.paypal.b: void c()>();
+
+     label1:
+        $r2 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemid");
+
+        $r3 = (java.lang.String) $r2;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.paypal.b: boolean d(java.lang.String)>($r3);
+
+        if $z0 == 0 goto label2;
+
+        $i0 = virtualinvoke $r3.<java.lang.String: int length()>();
+
+        if $i0 != 13 goto label2;
+
+        $r4 = <com.seattleclouds.App: com.seattleclouds.e.c R>;
+
+        virtualinvoke $r4.<com.seattleclouds.e.c: void a()>();
+
+        return;
+
+     label2:
+        specialinvoke $r0.<com.seattleclouds.paypal.b: void c(java.lang.String)>($r3);
+
+        return;
+    }
+
+    static android.app.Activity c(com.seattleclouds.paypal.b)
+    {
+        com.seattleclouds.paypal.b $r0;
+        android.app.Activity r1;
+
+        $r0 := @parameter0: com.seattleclouds.paypal.b;
+
+        r1 = $r0.<com.seattleclouds.paypal.b: android.app.Activity b>;
+
+        return r1;
+    }
+
+    private void c()
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.util.Hashtable $r1;
+        android.app.Activity $r2;
+        android.content.SharedPreferences $r3;
+        int $i0;
+        java.lang.StringBuilder $r4;
+        java.lang.String $r5, $r8;
+        boolean $z0;
+        java.lang.Object $r6;
+        android.content.SharedPreferences$Editor $r7;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 = $r0.<com.seattleclouds.paypal.b: java.util.Hashtable d>;
+
+        $r2 = $r0.<com.seattleclouds.paypal.b: android.app.Activity b>;
+
+        $r3 = virtualinvoke $r2.<android.app.Activity: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("PayPal", 0);
+
+        $i0 = 0;
+
+     label1:
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("paypalitems");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $z0 = interfaceinvoke $r3.<android.content.SharedPreferences: boolean contains(java.lang.String)>($r5);
+
+        if $z0 != 0 goto label2;
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("productid||");
+
+        $r6 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemid");
+
+        $r5 = (java.lang.String) $r6;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("||deviceid||");
+
+        $r5 = staticinvoke <com.seattleclouds.paypal.b: java.lang.String b()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("||appid||");
+
+        $r5 = <com.seattleclouds.App: java.lang.String w>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".");
+
+        $r5 = <com.seattleclouds.App: java.lang.String x>;
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r7 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("paypalitems");
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r8 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        interfaceinvoke $r7.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>($r8, $r5);
+
+        interfaceinvoke $r7.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+
+     label2:
+        $i0 = $i0 + 1;
+
+        goto label1;
+    }
+
+    private void c(java.lang.String)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.lang.String $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = $r0.<com.seattleclouds.paypal.b: android.app.Activity b>;
+
+        staticinvoke <com.seattleclouds.App: void a(java.lang.String,android.app.Activity)>($r1, $r2);
+
+        return;
+    }
+
+    private boolean d(java.lang.String)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.lang.String $r1;
+        int $i0, $i1;
+        char $c2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        if $r1 == null goto label4;
+
+        $i0 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 != 0 goto label1;
+
+        return 0;
+
+     label1:
+        $i0 = 0;
+
+     label2:
+        $i1 = virtualinvoke $r1.<java.lang.String: int length()>();
+
+        if $i0 >= $i1 goto label3;
+
+        $c2 = virtualinvoke $r1.<java.lang.String: char charAt(int)>($i0);
+
+        $z0 = staticinvoke <java.lang.Character: boolean isDigit(char)>($c2);
+
+        if $z0 == 0 goto label4;
+
+        $i0 = $i0 + 1;
+
+        goto label2;
+
+     label3:
+        return 1;
+
+     label4:
+        return 0;
+    }
+
+    public java.lang.String a(java.util.Hashtable)
+    {
+        com.seattleclouds.paypal.b $r0, $r4;
+        java.util.Hashtable $r1, $r6;
+        java.lang.Object $r2;
+        java.lang.String $r3;
+        boolean $z0;
+        android.app.Activity $r5;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter0: java.util.Hashtable;
+
+        $r2 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("succ");
+
+        $r3 = (java.lang.String) $r2;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("YES");
+
+        if $z0 == 0 goto label4;
+
+        $r2 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("istest");
+
+        if $r2 == null goto label5;
+
+        $r2 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("istest");
+
+        $r3 = (java.lang.String) $r2;
+
+        $z0 = virtualinvoke $r3.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("YES");
+
+        if $z0 == 0 goto label3;
+
+        $z0 = 1;
+
+     label1:
+        $r4 = <com.seattleclouds.App: com.seattleclouds.paypal.b Q>;
+
+        if $r4 != null goto label2;
+
+        $r4 = new com.seattleclouds.paypal.b;
+
+        $r5 = $r0.<com.seattleclouds.paypal.b: android.app.Activity b>;
+
+        specialinvoke $r4.<com.seattleclouds.paypal.b: void <init>(boolean,android.app.Activity)>($z0, $r5);
+
+        <com.seattleclouds.App: com.seattleclouds.paypal.b Q> = $r4;
+
+     label2:
+        $r6 = new java.util.Hashtable;
+
+        specialinvoke $r6.<java.util.Hashtable: void <init>()>();
+
+        $r2 = virtualinvoke $r1.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("idtran");
+
+        virtualinvoke $r6.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>("itemid", $r2);
+
+        $r0 = <com.seattleclouds.App: com.seattleclouds.paypal.b Q>;
+
+        specialinvoke $r0.<com.seattleclouds.paypal.b: void b(java.util.Hashtable)>($r6);
+
+        return "Successful pay.";
+
+     label3:
+        $z0 = 0;
+
+        goto label1;
+
+     label4:
+        return "Failed pay.";
+
+     label5:
+        $z0 = 0;
+
+        goto label1;
+    }
+
+    public void a(java.lang.String)
+    {
+        com.seattleclouds.paypal.b $r0;
+        java.lang.String $r1, $r17, $r18;
+        java.lang.String[] $r2, $r3;
+        java.util.Hashtable $r4, $r5, r29;
+        android.net.Uri $r6;
+        javax.xml.parsers.DocumentBuilderFactory $r7;
+        javax.xml.parsers.DocumentBuilder $r8, $r9;
+        java.io.InputStream $r10;
+        org.w3c.dom.Document $r11;
+        org.w3c.dom.Element $r12;
+        org.w3c.dom.NodeList $r13;
+        int $i0, $i1, $i2;
+        org.w3c.dom.Node $r14, $r15;
+        org.w3c.dom.Attr $r16;
+        boolean $z0;
+        java.lang.Throwable $r19, $r20, $r21, $r27, $r28;
+        java.lang.StringBuilder $r22, r30;
+        java.lang.Object $r23;
+        java.net.URL $r24, $r26;
+        java.net.URI $r25, r31;
+        javax.xml.parsers.ParserConfigurationException r32;
+        org.xml.sax.SAXException r33;
+        java.io.IOException r34;
+        java.net.URISyntaxException r35;
+        java.net.MalformedURLException r36;
+
+        $r0 := @this: com.seattleclouds.paypal.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 = newarray (java.lang.String)[6];
+
+        $r2[0] = "recipient";
+
+        $r2[1] = "currency";
+
+        $r2[2] = "description";
+
+        $r2[3] = "merchant";
+
+        $r2[4] = "totalship";
+
+        $r2[5] = "totaltax";
+
+        $r3 = newarray (java.lang.String)[4];
+
+        $r3[0] = "itemid";
+
+        $r3[1] = "itemname";
+
+        $r3[2] = "itemprice";
+
+        $r3[3] = "itemcount";
+
+        $r6 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r6.<android.net.Uri: java.lang.String getHost()>();
+
+        $r5 = new java.util.Hashtable;
+
+        $r4 = $r5;
+
+        specialinvoke $r5.<java.util.Hashtable: void <init>()>();
+
+        r29 = new java.util.Hashtable;
+
+        $r5 = r29;
+
+        specialinvoke r29.<java.util.Hashtable: void <init>()>();
+
+        $r7 = staticinvoke <javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilderFactory newInstance()>();
+
+        $r8 = null;
+
+     label01:
+        $r9 = virtualinvoke $r7.<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilder newDocumentBuilder()>();
+
+     label02:
+        $r8 = $r9;
+
+     label03:
+        $r10 = staticinvoke <com.seattleclouds.App: java.io.InputStream e(java.lang.String)>("app.xml");
+
+        $r11 = virtualinvoke $r8.<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>($r10);
+
+     label04:
+        $r12 = interfaceinvoke $r11.<org.w3c.dom.Document: org.w3c.dom.Element getDocumentElement()>();
+
+        $r13 = interfaceinvoke $r12.<org.w3c.dom.Element: org.w3c.dom.NodeList getElementsByTagName(java.lang.String)>("paypalbt");
+
+        if $r13 == null goto label19;
+
+        $i0 = interfaceinvoke $r13.<org.w3c.dom.NodeList: int getLength()>();
+
+        if $i0 <= 0 goto label19;
+
+        $i0 = 0;
+
+     label05:
+        $i1 = interfaceinvoke $r13.<org.w3c.dom.NodeList: int getLength()>();
+
+        if $i0 >= $i1 goto label19;
+
+        $r14 = interfaceinvoke $r13.<org.w3c.dom.NodeList: org.w3c.dom.Node item(int)>($i0);
+
+        $r15 = interfaceinvoke $r14.<org.w3c.dom.Node: org.w3c.dom.Node getParentNode()>();
+
+        $r12 = (org.w3c.dom.Element) $r15;
+
+        $r16 = interfaceinvoke $r12.<org.w3c.dom.Element: org.w3c.dom.Attr getAttributeNode(java.lang.String)>("id");
+
+        $r17 = interfaceinvoke $r16.<org.w3c.dom.Attr: java.lang.String getValue()>();
+
+        if $r17 == null goto label18;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r17);
+
+        if $z0 == 0 goto label18;
+
+        if $r14 == null goto label18;
+
+        $i1 = lengthof $r3;
+
+        $i2 = 0;
+
+     label06:
+        if $i2 >= $i1 goto label11;
+
+        $r17 = $r3[$i2];
+
+        $r12 = (org.w3c.dom.Element) $r14;
+
+        $r16 = interfaceinvoke $r12.<org.w3c.dom.Element: org.w3c.dom.Attr getAttributeNode(java.lang.String)>($r17);
+
+        if $r16 == null goto label07;
+
+        $r18 = interfaceinvoke $r16.<org.w3c.dom.Attr: java.lang.String getValue()>();
+
+        virtualinvoke $r4.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>($r17, $r18);
+
+     label07:
+        $i2 = $i2 + 1;
+
+        goto label06;
+
+     label08:
+        $r19 := @caughtexception;
+
+        r32 = (javax.xml.parsers.ParserConfigurationException) $r19;
+
+        $r17 = virtualinvoke r32.<javax.xml.parsers.ParserConfigurationException: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("PayPalProcessing", $r17);
+
+        goto label03;
+
+     label09:
+        $r20 := @caughtexception;
+
+        r33 = (org.xml.sax.SAXException) $r20;
+
+        $r17 = virtualinvoke r33.<org.xml.sax.SAXException: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("PayPalProcessing", $r17);
+
+        $r11 = null;
+
+        goto label04;
+
+     label10:
+        $r21 := @caughtexception;
+
+        r34 = (java.io.IOException) $r21;
+
+        $r17 = virtualinvoke r34.<java.io.IOException: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("PayPalProcessing", $r17);
+
+        $r11 = null;
+
+        goto label04;
+
+     label11:
+        $i1 = lengthof $r2;
+
+        $i2 = 0;
+
+     label12:
+        if $i2 >= $i1 goto label14;
+
+        $r17 = $r2[$i2];
+
+        $r12 = (org.w3c.dom.Element) $r14;
+
+        $r16 = interfaceinvoke $r12.<org.w3c.dom.Element: org.w3c.dom.Attr getAttributeNode(java.lang.String)>($r17);
+
+        if $r16 == null goto label13;
+
+        $r18 = interfaceinvoke $r16.<org.w3c.dom.Attr: java.lang.String getValue()>();
+
+        virtualinvoke $r5.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>($r17, $r18);
+
+     label13:
+        $i2 = $i2 + 1;
+
+        goto label12;
+
+     label14:
+        virtualinvoke $r4.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>("itemcount", "1");
+
+        $i1 = 0;
+
+     label15:
+        $i2 = lengthof $r2;
+
+        if $i1 >= $i2 goto label18;
+
+        $r17 = $r2[$i1];
+
+        $z0 = virtualinvoke $r5.<java.util.Hashtable: boolean containsKey(java.lang.Object)>($r17);
+
+        if $z0 != 0 goto label17;
+
+        if $i1 >= 4 goto label17;
+
+        virtualinvoke $r5.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>($r17, "");
+
+     label16:
+        $i1 = $i1 + 1;
+
+        goto label15;
+
+     label17:
+        $z0 = virtualinvoke $r5.<java.util.Hashtable: boolean containsKey(java.lang.Object)>($r17);
+
+        if $z0 != 0 goto label16;
+
+        if $i1 <= 3 goto label16;
+
+        virtualinvoke $r5.<java.util.Hashtable: java.lang.Object put(java.lang.Object,java.lang.Object)>($r17, "0");
+
+        goto label16;
+
+     label18:
+        $i0 = $i0 + 1;
+
+        goto label05;
+
+     label19:
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("");
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("http://");
+
+        $r17 = <com.seattleclouds.App: java.lang.String r>;
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/PayPalShop.aspx?business=");
+
+        $r23 = virtualinvoke $r5.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("recipient");
+
+        $r17 = (java.lang.String) $r23;
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r17 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&currency=");
+
+        $r23 = virtualinvoke $r5.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("currency");
+
+        $r17 = (java.lang.String) $r23;
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r17 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r23 = virtualinvoke $r4.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemprice");
+
+        if $r23 == null goto label26;
+
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&amount=");
+
+        $r23 = virtualinvoke $r4.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemprice");
+
+        $r17 = (java.lang.String) $r23;
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r17 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label20:
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&return=");
+
+        $r17 = <com.seattleclouds.App: java.lang.String L>;
+
+        $r17 = specialinvoke $r0.<com.seattleclouds.paypal.b: java.lang.String b(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r17 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r18 = $r17;
+
+        $r23 = virtualinvoke $r4.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemname");
+
+        if $r23 == null goto label21;
+
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&name=");
+
+        $r23 = virtualinvoke $r4.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemname");
+
+        $r17 = (java.lang.String) $r23;
+
+        $r17 = specialinvoke $r0.<com.seattleclouds.paypal.b: java.lang.String b(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r18 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label21:
+        $r23 = virtualinvoke $r4.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemid");
+
+        if $r23 == null goto label22;
+
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r18);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&number=");
+
+        $r23 = virtualinvoke $r4.<java.util.Hashtable: java.lang.Object get(java.lang.Object)>("itemid");
+
+        $r17 = (java.lang.String) $r23;
+
+        $r17 = specialinvoke $r0.<com.seattleclouds.paypal.b: java.lang.String b(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r18 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label22:
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r18);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&test=NO");
+
+        $r17 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&page=");
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.paypal.b: java.lang.String b(java.lang.String)>($r1);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r24 = null;
+
+        r31 = new java.net.URI;
+
+        $r25 = r31;
+
+     label23:
+        specialinvoke r31.<java.net.URI: void <init>(java.lang.String)>($r1);
+
+        $r26 = virtualinvoke $r25.<java.net.URI: java.net.URL toURL()>();
+
+     label24:
+        $r24 = $r26;
+
+     label25:
+        specialinvoke $r0.<com.seattleclouds.paypal.b: void a(java.util.Hashtable,java.net.URL)>($r4, $r24);
+
+        return;
+
+     label26:
+        r30 = new java.lang.StringBuilder;
+
+        specialinvoke r30.<java.lang.StringBuilder: void <init>()>();
+
+        $r22 = virtualinvoke r30.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r17);
+
+        $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("&amount=0");
+
+        $r17 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label20;
+
+     label27:
+        $r27 := @caughtexception;
+
+        r35 = (java.net.URISyntaxException) $r27;
+
+        $r1 = virtualinvoke r35.<java.net.URISyntaxException: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("PayPalProcessing", $r1);
+
+        goto label25;
+
+     label28:
+        $r28 := @caughtexception;
+
+        r36 = (java.net.MalformedURLException) $r28;
+
+        $r1 = virtualinvoke r36.<java.net.MalformedURLException: java.lang.String toString()>();
+
+        staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("PayPalProcessing", $r1);
+
+        goto label25;
+
+        catch javax.xml.parsers.ParserConfigurationException from label01 to label02 with label08;
+        catch org.xml.sax.SAXException from label03 to label04 with label09;
+        catch java.io.IOException from label03 to label04 with label10;
+        catch java.net.URISyntaxException from label23 to label24 with label27;
+        catch java.net.MalformedURLException from label23 to label24 with label28;
+    }
+}

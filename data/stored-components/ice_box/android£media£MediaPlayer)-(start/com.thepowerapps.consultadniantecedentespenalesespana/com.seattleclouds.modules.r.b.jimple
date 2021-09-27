@@ -1,0 +1,218 @@
+public class com.seattleclouds.modules.r.b extends java.lang.Object
+{
+    private java.lang.String a;
+    private java.lang.String b;
+    private java.lang.String c;
+    private java.lang.Integer d;
+    private java.lang.String e;
+    private java.lang.String f;
+    private java.lang.String g;
+    private java.util.ArrayList h;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.r.b $r0;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    java.lang.String a()
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        r1 = $r0.<com.seattleclouds.modules.r.b: java.lang.String b>;
+
+        return r1;
+    }
+
+    void a(java.lang.Integer)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.Integer $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.lang.Integer;
+
+        $r0.<com.seattleclouds.modules.r.b: java.lang.Integer d> = $r1;
+
+        return;
+    }
+
+    void a(java.lang.String)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.r.b: java.lang.String a> = $r1;
+
+        return;
+    }
+
+    void a(java.util.ArrayList)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.util.ArrayList;
+
+        $r0.<com.seattleclouds.modules.r.b: java.util.ArrayList h> = $r1;
+
+        return;
+    }
+
+    java.lang.String b()
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        r1 = $r0.<com.seattleclouds.modules.r.b: java.lang.String c>;
+
+        return r1;
+    }
+
+    void b(java.lang.String)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.r.b: java.lang.String b> = $r1;
+
+        return;
+    }
+
+    java.lang.Integer c()
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.Integer r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        r1 = $r0.<com.seattleclouds.modules.r.b: java.lang.Integer d>;
+
+        return r1;
+    }
+
+    void c(java.lang.String)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.r.b: java.lang.String c> = $r1;
+
+        return;
+    }
+
+    java.lang.String d()
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        r1 = $r0.<com.seattleclouds.modules.r.b: java.lang.String e>;
+
+        return r1;
+    }
+
+    void d(java.lang.String)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.r.b: java.lang.String e> = $r1;
+
+        return;
+    }
+
+    java.lang.String e()
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        r1 = $r0.<com.seattleclouds.modules.r.b: java.lang.String f>;
+
+        return r1;
+    }
+
+    void e(java.lang.String)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.r.b: java.lang.String f> = $r1;
+
+        return;
+    }
+
+    java.lang.String f()
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        r1 = $r0.<com.seattleclouds.modules.r.b: java.lang.String g>;
+
+        return r1;
+    }
+
+    void f(java.lang.String)
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.r.b: java.lang.String g> = $r1;
+
+        return;
+    }
+
+    java.util.ArrayList g()
+    {
+        com.seattleclouds.modules.r.b $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @this: com.seattleclouds.modules.r.b;
+
+        r1 = $r0.<com.seattleclouds.modules.r.b: java.util.ArrayList h>;
+
+        return r1;
+    }
+}

@@ -1,0 +1,83 @@
+class com.hrishiz.memo.SettingActivity$9 extends java.lang.Object implements android.widget.CompoundButton$OnCheckedChangeListener
+{
+    final com.hrishiz.memo.SettingActivity this$0;
+
+    void <init>(com.hrishiz.memo.SettingActivity)
+    {
+        com.hrishiz.memo.SettingActivity$9 $r0;
+        com.hrishiz.memo.SettingActivity $r1;
+
+        $r0 := @this: com.hrishiz.memo.SettingActivity$9;
+
+        $r1 := @parameter0: com.hrishiz.memo.SettingActivity;
+
+        $r0.<com.hrishiz.memo.SettingActivity$9: com.hrishiz.memo.SettingActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onCheckedChanged(android.widget.CompoundButton, boolean)
+    {
+        com.hrishiz.memo.SettingActivity$9 $r0;
+        android.widget.CompoundButton $r1;
+        boolean $z0;
+        com.hrishiz.memo.SettingActivity $r2;
+        android.content.SharedPreferences $r3;
+        android.content.SharedPreferences$Editor $r4;
+
+        $r0 := @this: com.hrishiz.memo.SettingActivity$9;
+
+        $r1 := @parameter0: android.widget.CompoundButton;
+
+        $z0 := @parameter1: boolean;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.hrishiz.memo.SettingActivity$9: com.hrishiz.memo.SettingActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.SettingActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.SettingActivity)>($r2);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("v", "y");
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.SettingActivity$9: com.hrishiz.memo.SettingActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.SettingActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.SettingActivity)>($r2);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("vs", "");
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+
+     label1:
+        $r2 = $r0.<com.hrishiz.memo.SettingActivity$9: com.hrishiz.memo.SettingActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.SettingActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.SettingActivity)>($r2);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("v", "");
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        $r2 = $r0.<com.hrishiz.memo.SettingActivity$9: com.hrishiz.memo.SettingActivity this$0>;
+
+        $r3 = staticinvoke <com.hrishiz.memo.SettingActivity: android.content.SharedPreferences access$3(com.hrishiz.memo.SettingActivity)>($r2);
+
+        $r4 = interfaceinvoke $r3.<android.content.SharedPreferences: android.content.SharedPreferences$Editor edit()>();
+
+        $r4 = interfaceinvoke $r4.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("vs", "n");
+
+        interfaceinvoke $r4.<android.content.SharedPreferences$Editor: boolean commit()>();
+
+        return;
+    }
+}

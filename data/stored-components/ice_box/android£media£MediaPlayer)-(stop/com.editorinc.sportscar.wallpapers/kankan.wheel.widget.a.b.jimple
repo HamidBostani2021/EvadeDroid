@@ -1,0 +1,13 @@
+public interface  kankan.wheel.widget.a.b extends java.lang.Object
+{
+
+    public abstract int a();
+
+    public abstract android.view.View a(int, android.view.View, android.view.ViewGroup);
+
+    public abstract android.view.View a(android.view.View, android.view.ViewGroup);
+
+    public abstract void a(android.database.DataSetObserver);
+
+    public abstract void b(android.database.DataSetObserver);
+}

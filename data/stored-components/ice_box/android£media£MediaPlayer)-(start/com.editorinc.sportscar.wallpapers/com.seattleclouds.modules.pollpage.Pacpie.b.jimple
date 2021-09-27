@@ -1,0 +1,78 @@
+class com.seattleclouds.modules.pollpage.Pacpie.b extends android.view.animation.Animation
+{
+    final com.seattleclouds.modules.pollpage.Pacpie.Pacpie a;
+
+    void <init>(com.seattleclouds.modules.pollpage.Pacpie.Pacpie)
+    {
+        com.seattleclouds.modules.pollpage.Pacpie.b $r0;
+        com.seattleclouds.modules.pollpage.Pacpie.Pacpie $r1;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.Pacpie.b;
+
+        $r1 := @parameter0: com.seattleclouds.modules.pollpage.Pacpie.Pacpie;
+
+        $r0.<com.seattleclouds.modules.pollpage.Pacpie.b: com.seattleclouds.modules.pollpage.Pacpie.Pacpie a> = $r1;
+
+        specialinvoke $r0.<android.view.animation.Animation: void <init>()>();
+
+        return;
+    }
+
+    protected void applyTransformation(float, android.view.animation.Transformation)
+    {
+        com.seattleclouds.modules.pollpage.Pacpie.b $r0;
+        float $f0;
+        android.view.animation.Transformation $r1;
+        boolean $z0;
+        com.seattleclouds.modules.pollpage.Pacpie.Pacpie $r2;
+        com.seattleclouds.modules.pollpage.Pacpie.PacpieState $r3;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.Pacpie.b;
+
+        $f0 := @parameter0: float;
+
+        $r1 := @parameter1: android.view.animation.Transformation;
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.Pacpie.b: com.seattleclouds.modules.pollpage.Pacpie.Pacpie a>;
+
+        $r3 = <com.seattleclouds.modules.pollpage.Pacpie.PacpieState: com.seattleclouds.modules.pollpage.Pacpie.PacpieState IS_READY_TO_DRAW>;
+
+        staticinvoke <com.seattleclouds.modules.pollpage.Pacpie.Pacpie: com.seattleclouds.modules.pollpage.Pacpie.PacpieState a(com.seattleclouds.modules.pollpage.Pacpie.Pacpie,com.seattleclouds.modules.pollpage.Pacpie.PacpieState)>($r2, $r3);
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.Pacpie.b: com.seattleclouds.modules.pollpage.Pacpie.Pacpie a>;
+
+        staticinvoke <com.seattleclouds.modules.pollpage.Pacpie.d: void b(android.view.View,float)>($r2, $f0);
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.Pacpie.b: com.seattleclouds.modules.pollpage.Pacpie.Pacpie a>;
+
+        staticinvoke <com.seattleclouds.modules.pollpage.Pacpie.d: void c(android.view.View,float)>($r2, $f0);
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.Pacpie.b: com.seattleclouds.modules.pollpage.Pacpie.Pacpie a>;
+
+        $z0 = staticinvoke <com.seattleclouds.modules.pollpage.Pacpie.Pacpie: boolean a(com.seattleclouds.modules.pollpage.Pacpie.Pacpie)>($r2);
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.Pacpie.b: com.seattleclouds.modules.pollpage.Pacpie.Pacpie a>;
+
+        $f0 = 360.0F * $f0;
+
+        staticinvoke <com.seattleclouds.modules.pollpage.Pacpie.d: void a(android.view.View,float)>($r2, $f0);
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.pollpage.Pacpie.b: com.seattleclouds.modules.pollpage.Pacpie.Pacpie a>;
+
+        virtualinvoke $r2.<com.seattleclouds.modules.pollpage.Pacpie.Pacpie: void invalidate()>();
+
+        return;
+    }
+
+    public boolean willChangeBounds()
+    {
+        com.seattleclouds.modules.pollpage.Pacpie.b $r0;
+
+        $r0 := @this: com.seattleclouds.modules.pollpage.Pacpie.b;
+
+        return 1;
+    }
+}

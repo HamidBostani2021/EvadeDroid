@@ -1,0 +1,158 @@
+class com.myle.toumarket.apk_install$3 extends java.lang.Object implements android.content.DialogInterface$OnClickListener
+{
+    final com.myle.toumarket.apk_install this$0;
+
+    void <init>(com.myle.toumarket.apk_install)
+    {
+        com.myle.toumarket.apk_install$3 $r0;
+        com.myle.toumarket.apk_install $r1;
+
+        $r0 := @this: com.myle.toumarket.apk_install$3;
+
+        $r1 := @parameter0: com.myle.toumarket.apk_install;
+
+        $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.content.DialogInterface, int)
+    {
+        com.myle.toumarket.apk_install$3 $r0;
+        android.content.DialogInterface $r1;
+        int $i0;
+        java.lang.String $r2, $r3;
+        java.lang.Throwable $r4;
+        android.content.pm.PackageInfo $r5, $r8;
+        com.myle.toumarket.apk_install $r6;
+        android.content.pm.PackageManager $r7;
+        android.content.SharedPreferences $r9;
+        java.lang.StringBuilder $r10, r14;
+        java.lang.String[] $r11;
+        boolean $z0;
+        android.content.Context $r12;
+        android.widget.Toast $r13;
+        android.content.Intent r15;
+        android.content.pm.PackageManager$NameNotFoundException r16;
+
+        $r0 := @this: com.myle.toumarket.apk_install$3;
+
+        $r1 := @parameter0: android.content.DialogInterface;
+
+        $i0 := @parameter1: int;
+
+        $r5 = null;
+
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+     label1:
+        $r7 = virtualinvoke $r6.<com.myle.toumarket.apk_install: android.content.pm.PackageManager getPackageManager()>();
+
+     label2:
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+     label3:
+        $r2 = virtualinvoke $r6.<com.myle.toumarket.apk_install: java.lang.String getPackageName()>();
+
+        $r8 = virtualinvoke $r7.<android.content.pm.PackageManager: android.content.pm.PackageInfo getPackageInfo(java.lang.String,int)>($r2, 0);
+
+     label4:
+        $r5 = $r8;
+
+     label5:
+        $i0 = $r5.<android.content.pm.PackageInfo: int versionCode>;
+
+        $r2 = $r5.<android.content.pm.PackageInfo: java.lang.String versionName>;
+
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+        $r9 = virtualinvoke $r6.<com.myle.toumarket.apk_install: android.content.SharedPreferences getSharedPreferences(java.lang.String,int)>("TOUMARKET_PREF", 0);
+
+        $r2 = interfaceinvoke $r9.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("addresse_ip", "");
+
+        r14 = new java.lang.StringBuilder;
+
+        specialinvoke r14.<java.lang.StringBuilder: void <init>(java.lang.String)>("TOUMARKET_SUCCESS;0;1;http://");
+
+        $r10 = virtualinvoke r14.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r10 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/toumarket/update/toumarket.apk; ; ; ; ; ;");
+
+        $r2 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r2 = interfaceinvoke $r9.<android.content.SharedPreferences: java.lang.String getString(java.lang.String,java.lang.String)>("WriteRights", $r2);
+
+        $r11 = virtualinvoke $r2.<java.lang.String: java.lang.String[] split(java.lang.String)>(";");
+
+        $r2 = $r11[1];
+
+        $r3 = $r11[2];
+
+        $r3 = virtualinvoke $r3.<java.lang.String: java.lang.String trim()>();
+
+        staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r3);
+
+        $r3 = $r11[3];
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String trim()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("0");
+
+        if $z0 == 0 goto label7;
+
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+        $r12 = virtualinvoke $r6.<com.myle.toumarket.apk_install: android.content.Context getApplicationContext()>();
+
+        $r13 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r12, "VOUS N\'ETES PAS AUTORISE A UTILISER TOUMARKET VEUILLEZ CONTACTER L\'ADMINISTRATEUR !!!!", 1);
+
+        virtualinvoke $r13.<android.widget.Toast: void show()>();
+
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r6.<com.myle.toumarket.apk_install: void finish()>();
+
+        return;
+
+     label6:
+        $r4 := @caughtexception;
+
+        r16 = (android.content.pm.PackageManager$NameNotFoundException) $r4;
+
+        virtualinvoke r16.<android.content.pm.PackageManager$NameNotFoundException: void printStackTrace()>();
+
+        goto label5;
+
+     label7:
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+        $r12 = virtualinvoke $r6.<com.myle.toumarket.apk_install: android.content.Context getApplicationContext()>();
+
+        $r13 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r12, "L\'Application Pourrait ne pas Fonctionner Correctement !. BV Mettre \u00e0 Jour", 1);
+
+        virtualinvoke $r13.<android.widget.Toast: void show()>();
+
+        interfaceinvoke $r1.<android.content.DialogInterface: void cancel()>();
+
+        r15 = new android.content.Intent;
+
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+        specialinvoke r15.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r6, class "Lcom/myle/toumarket/SplashScreen;");
+
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r6.<com.myle.toumarket.apk_install: void startActivity(android.content.Intent)>(r15);
+
+        $r6 = $r0.<com.myle.toumarket.apk_install$3: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r6.<com.myle.toumarket.apk_install: void finish()>();
+
+        return;
+
+        catch android.content.pm.PackageManager$NameNotFoundException from label1 to label2 with label6;
+        catch android.content.pm.PackageManager$NameNotFoundException from label3 to label4 with label6;
+    }
+}

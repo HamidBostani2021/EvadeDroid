@@ -1,0 +1,31 @@
+class com.seattleclouds.modules.peopledirectory.h extends java.lang.Object
+{
+    public android.widget.TextView a;
+    public android.widget.TextView b;
+    public android.widget.ImageView c;
+
+    private void <init>()
+    {
+        com.seattleclouds.modules.peopledirectory.h $r0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.h;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.seattleclouds.modules.peopledirectory.c)
+    {
+        com.seattleclouds.modules.peopledirectory.h $r0;
+        com.seattleclouds.modules.peopledirectory.c $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.h;
+
+        $r1 := @parameter0: com.seattleclouds.modules.peopledirectory.c;
+
+        specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.h: void <init>()>();
+
+        return;
+    }
+}

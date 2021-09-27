@@ -1,0 +1,505 @@
+class com.myle.toumarket.apk_install$1 extends android.os.Handler
+{
+    final com.myle.toumarket.apk_install this$0;
+
+    void <init>(com.myle.toumarket.apk_install)
+    {
+        com.myle.toumarket.apk_install$1 $r0;
+        com.myle.toumarket.apk_install $r1;
+
+        $r0 := @this: com.myle.toumarket.apk_install$1;
+
+        $r1 := @parameter0: com.myle.toumarket.apk_install;
+
+        $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0> = $r1;
+
+        specialinvoke $r0.<android.os.Handler: void <init>()>();
+
+        return;
+    }
+
+    public void handleMessage(android.os.Message)
+    {
+        com.myle.toumarket.apk_install$1 $r0;
+        android.os.Message $r1;
+        int $i0;
+        android.content.Intent $r2, r21;
+        com.myle.toumarket.apk_install $r3, $r9;
+        android.app.ProgressDialog $r4, r20;
+        java.lang.Object $r5;
+        boolean $z0;
+        java.lang.String $r6, $r8;
+        java.lang.StringBuilder $r7, r19;
+        android.content.ContentResolver $r10;
+        android.content.Context $r11;
+        android.widget.Toast $r12;
+        android.webkit.MimeTypeMap $r13;
+        java.io.File $r14, r22;
+        android.net.Uri $r15;
+        java.lang.Throwable $r16, $r17;
+        java.lang.Thread $r18;
+        android.provider.Settings$SettingNotFoundException r23;
+
+        $r0 := @this: com.myle.toumarket.apk_install$1;
+
+        $r1 := @parameter0: android.os.Message;
+
+        $i0 = $r1.<android.os.Message: int what>;
+
+        lookupswitch($i0)
+        {
+            case 1000: goto label05;
+            case 1001: goto label06;
+            case 1002: goto label02;
+            case 1003: goto label17;
+            case 1004: goto label03;
+            case 1005: goto label19;
+            default: goto label01;
+        };
+
+     label01:
+        return;
+
+     label02:
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        if $r4 == null goto label21;
+
+        $i0 = $r1.<android.os.Message: int arg1>;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setProgress(int)>($i0);
+
+        return;
+
+     label03:
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        if $r5 == null goto label21;
+
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        $z0 = $r5 instanceof java.lang.String;
+
+        if $z0 == 0 goto label21;
+
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        $r6 = (java.lang.String) $r5;
+
+        $i0 = virtualinvoke $r6.<java.lang.String: int length()>();
+
+        if $i0 <= 16 goto label04;
+
+        $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String substring(int,int)>(0, 15);
+
+        r19 = new java.lang.StringBuilder;
+
+        $r6 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r6);
+
+        specialinvoke r19.<java.lang.StringBuilder: void <init>(java.lang.String)>($r6);
+
+        $r7 = virtualinvoke r19.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("...");
+
+        virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label04:
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r3 = staticinvoke <com.myle.toumarket.apk_install: com.myle.toumarket.apk_install access$1(com.myle.toumarket.apk_install)>($r3);
+
+        $r6 = virtualinvoke $r3.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361814);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r3 = staticinvoke <com.myle.toumarket.apk_install: com.myle.toumarket.apk_install access$1(com.myle.toumarket.apk_install)>($r3);
+
+        $r8 = virtualinvoke $r3.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361816);
+
+        r19 = new java.lang.StringBuilder;
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r8);
+
+        specialinvoke r19.<java.lang.StringBuilder: void <init>(java.lang.String)>($r8);
+
+        $r7 = virtualinvoke r19.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" TOUMARKET Server...");
+
+        $r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void dismissCurrentProgressDialog()>();
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        r20 = new android.app.ProgressDialog;
+
+        $r9 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r9 = staticinvoke <com.myle.toumarket.apk_install: com.myle.toumarket.apk_install access$1(com.myle.toumarket.apk_install)>($r9);
+
+        specialinvoke r20.<android.app.ProgressDialog: void <init>(android.content.Context)>($r9);
+
+        staticinvoke <com.myle.toumarket.apk_install: void access$2(com.myle.toumarket.apk_install,android.app.ProgressDialog)>($r3, r20);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setTitle(java.lang.CharSequence)>($r6);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setMessage(java.lang.CharSequence)>($r8);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setProgressStyle(int)>(1);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setIndeterminate(boolean)>(1);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setIcon(int)>(2130837557);
+
+        $r1 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int)>($r0, 1003);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setCancelMessage(android.os.Message)>($r1);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void show()>();
+
+        return;
+
+     label05:
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        if $r5 == null goto label21;
+
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        $z0 = $r5 instanceof java.lang.String;
+
+        if $z0 == 0 goto label21;
+
+        $i0 = $r1.<android.os.Message: int arg1>;
+
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        $r6 = (java.lang.String) $r5;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r3 = staticinvoke <com.myle.toumarket.apk_install: com.myle.toumarket.apk_install access$1(com.myle.toumarket.apk_install)>($r3);
+
+        $r6 = virtualinvoke $r3.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361813);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r3 = staticinvoke <com.myle.toumarket.apk_install: com.myle.toumarket.apk_install access$1(com.myle.toumarket.apk_install)>($r3);
+
+        $r8 = virtualinvoke $r3.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361815);
+
+        r19 = new java.lang.StringBuilder;
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r8);
+
+        specialinvoke r19.<java.lang.StringBuilder: void <init>(java.lang.String)>($r8);
+
+        $r7 = virtualinvoke r19.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" TOUMARKET Server !");
+
+        $r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void dismissCurrentProgressDialog()>();
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        r20 = new android.app.ProgressDialog;
+
+        $r9 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r9 = staticinvoke <com.myle.toumarket.apk_install: com.myle.toumarket.apk_install access$1(com.myle.toumarket.apk_install)>($r9);
+
+        specialinvoke r20.<android.app.ProgressDialog: void <init>(android.content.Context)>($r9);
+
+        staticinvoke <com.myle.toumarket.apk_install: void access$2(com.myle.toumarket.apk_install,android.app.ProgressDialog)>($r3, r20);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setTitle(java.lang.CharSequence)>($r6);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setMessage(java.lang.CharSequence)>($r8);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setProgressStyle(int)>(1);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setProgress(int)>(0);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setMax(int)>($i0);
+
+        $r1 = staticinvoke <android.os.Message: android.os.Message obtain(android.os.Handler,int)>($r0, 1003);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setCancelMessage(android.os.Message)>($r1);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void setCancelable(boolean)>(1);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r4 = staticinvoke <com.myle.toumarket.apk_install: android.app.ProgressDialog access$0(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r4.<android.app.ProgressDialog: void show()>();
+
+        return;
+
+     label06:
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void dismissCurrentProgressDialog()>();
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r9 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r6 = virtualinvoke $r9.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361817);
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void displayMessage(java.lang.String)>($r6);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+     label07:
+        $r10 = virtualinvoke $r3.<com.myle.toumarket.apk_install: android.content.ContentResolver getContentResolver()>();
+
+        $i0 = staticinvoke <android.provider.Settings$Secure: int getInt(android.content.ContentResolver,java.lang.String)>($r10, "install_non_market_apps");
+
+     label08:
+        if $i0 != 1 goto label14;
+
+        $z0 = 1;
+
+     label09:
+        if $z0 != 0 goto label11;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        r21 = new android.content.Intent;
+
+        $r2 = r21;
+
+     label10:
+        specialinvoke r21.<android.content.Intent: void <init>(java.lang.String)>("android.settings.SECURITY_SETTINGS");
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void startActivity(android.content.Intent)>($r2);
+
+     label11:
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r11 = virtualinvoke $r3.<com.myle.toumarket.apk_install: android.content.Context getApplicationContext()>();
+
+        $r12 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r11, "Installation En Cours.....", 0);
+
+        virtualinvoke $r12.<android.widget.Toast: void show()>();
+
+        r21 = new android.content.Intent;
+
+        $r2 = r21;
+
+        specialinvoke r21.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.VIEW");
+
+        $r13 = staticinvoke <android.webkit.MimeTypeMap: android.webkit.MimeTypeMap getSingleton()>();
+
+        $r6 = virtualinvoke $r13.<android.webkit.MimeTypeMap: java.lang.String getMimeTypeFromExtension(java.lang.String)>("apk");
+
+        r22 = new java.io.File;
+
+        r19 = new java.lang.StringBuilder;
+
+        specialinvoke r19.<java.lang.StringBuilder: void <init>()>();
+
+        $r14 = staticinvoke <android.os.Environment: java.io.File getExternalStorageDirectory()>();
+
+        $r7 = virtualinvoke r19.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r14);
+
+        $r7 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/TOUMARKET/Update/toumarket.apk");
+
+        $r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke r22.<java.io.File: void <init>(java.lang.String)>($r8);
+
+        $r15 = staticinvoke <android.net.Uri: android.net.Uri fromFile(java.io.File)>(r22);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setDataAndType(android.net.Uri,java.lang.String)>($r15, $r6);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setFlags(int)>(268435456);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+     label12:
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void startActivity(android.content.Intent)>($r2);
+
+     label13:
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void finish()>();
+
+        return;
+
+     label14:
+        $z0 = 0;
+
+        goto label09;
+
+     label15:
+        $r16 := @caughtexception;
+
+        r23 = (android.provider.Settings$SettingNotFoundException) $r16;
+
+        virtualinvoke r23.<android.provider.Settings$SettingNotFoundException: void printStackTrace()>();
+
+        goto label11;
+
+     label16:
+        $r17 := @caughtexception;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r11 = $r3.<com.myle.toumarket.apk_install: android.content.Context context>;
+
+        $r12 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r11, "Probl\u00e8me Installation !!!", 4000);
+
+        virtualinvoke $r12.<android.widget.Toast: void show()>();
+
+        r21 = new android.content.Intent;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        specialinvoke r21.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r3, class "Lcom/myle/toumarket/SplashScreen;");
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void startActivity(android.content.Intent)>(r21);
+
+        goto label13;
+
+     label17:
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r18 = staticinvoke <com.myle.toumarket.apk_install: java.lang.Thread access$3(com.myle.toumarket.apk_install)>($r3);
+
+        if $r18 == null goto label18;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r18 = staticinvoke <com.myle.toumarket.apk_install: java.lang.Thread access$3(com.myle.toumarket.apk_install)>($r3);
+
+        virtualinvoke $r18.<java.lang.Thread: void interrupt()>();
+
+     label18:
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void dismissCurrentProgressDialog()>();
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r9 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        $r6 = virtualinvoke $r9.<com.myle.toumarket.apk_install: java.lang.String getString(int)>(2131361818);
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void displayMessage(java.lang.String)>($r6);
+
+        return;
+
+     label19:
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        if $r5 == null goto label20;
+
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        $z0 = $r5 instanceof java.lang.String;
+
+        if $z0 == 0 goto label20;
+
+        $r5 = $r1.<android.os.Message: java.lang.Object obj>;
+
+        $r6 = (java.lang.String) $r5;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void dismissCurrentProgressDialog()>();
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void displayMessage(java.lang.String)>($r6);
+
+     label20:
+        r21 = new android.content.Intent;
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        specialinvoke r21.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r3, class "Lcom/myle/toumarket/SplashScreen;");
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void startActivity(android.content.Intent)>(r21);
+
+        $r3 = $r0.<com.myle.toumarket.apk_install$1: com.myle.toumarket.apk_install this$0>;
+
+        virtualinvoke $r3.<com.myle.toumarket.apk_install: void finish()>();
+
+     label21:
+        return;
+
+        catch android.provider.Settings$SettingNotFoundException from label07 to label08 with label15;
+        catch android.provider.Settings$SettingNotFoundException from label10 to label11 with label15;
+        catch android.content.ActivityNotFoundException from label12 to label13 with label16;
+    }
+}

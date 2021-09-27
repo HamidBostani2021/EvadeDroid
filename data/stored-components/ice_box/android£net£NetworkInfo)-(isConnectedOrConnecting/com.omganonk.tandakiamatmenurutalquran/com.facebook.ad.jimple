@@ -1,0 +1,5 @@
+public interface  com.facebook.ad extends java.lang.Object
+{
+
+    public abstract void a(org.json.JSONObject, com.facebook.am);
+}

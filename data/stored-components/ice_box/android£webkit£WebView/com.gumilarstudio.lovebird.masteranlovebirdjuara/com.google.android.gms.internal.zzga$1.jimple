@@ -1,0 +1,69 @@
+class com.google.android.gms.internal.zzga$1 extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String zzEr;
+    final java.lang.String zzEs;
+    final com.google.android.gms.internal.zzga zzEt;
+
+    void <init>(com.google.android.gms.internal.zzga, java.lang.String, java.lang.String)
+    {
+        com.google.android.gms.internal.zzga$1 $r0;
+        com.google.android.gms.internal.zzga $r1;
+        java.lang.String $r2, $r3;
+
+        $r0 := @this: com.google.android.gms.internal.zzga$1;
+
+        $r1 := @parameter0: com.google.android.gms.internal.zzga;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r0.<com.google.android.gms.internal.zzga$1: com.google.android.gms.internal.zzga zzEt> = $r1;
+
+        $r0.<com.google.android.gms.internal.zzga$1: java.lang.String zzEr> = $r2;
+
+        $r0.<com.google.android.gms.internal.zzga$1: java.lang.String zzEs> = $r3;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.google.android.gms.internal.zzga$1 $r0;
+        java.lang.String $r1, $r6;
+        android.webkit.WebView $r2;
+        com.google.android.gms.internal.zzga $r3;
+        com.google.android.gms.internal.zzga$1$1 $r4;
+        java.util.Set $r5;
+
+        $r0 := @this: com.google.android.gms.internal.zzga$1;
+
+        $r3 = $r0.<com.google.android.gms.internal.zzga$1: com.google.android.gms.internal.zzga zzEt>;
+
+        $r2 = virtualinvoke $r3.<com.google.android.gms.internal.zzga: android.webkit.WebView zzfE()>();
+
+        $r4 = new com.google.android.gms.internal.zzga$1$1;
+
+        specialinvoke $r4.<com.google.android.gms.internal.zzga$1$1: void <init>(com.google.android.gms.internal.zzga$1,android.webkit.WebView)>($r0, $r2);
+
+        virtualinvoke $r2.<android.webkit.WebView: void setWebViewClient(android.webkit.WebViewClient)>($r4);
+
+        $r3 = $r0.<com.google.android.gms.internal.zzga$1: com.google.android.gms.internal.zzga zzEt>;
+
+        $r5 = $r3.<com.google.android.gms.internal.zzga: java.util.Set zzEq>;
+
+        interfaceinvoke $r5.<java.util.Set: boolean add(java.lang.Object)>($r2);
+
+        $r6 = $r0.<com.google.android.gms.internal.zzga$1: java.lang.String zzEr>;
+
+        $r1 = $r0.<com.google.android.gms.internal.zzga$1: java.lang.String zzEs>;
+
+        virtualinvoke $r2.<android.webkit.WebView: void loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>($r6, $r1, "text/html", "UTF-8", null);
+
+        staticinvoke <com.google.android.gms.ads.internal.util.client.zzb: void zzaF(java.lang.String)>("Fetching assets finished.");
+
+        return;
+    }
+}

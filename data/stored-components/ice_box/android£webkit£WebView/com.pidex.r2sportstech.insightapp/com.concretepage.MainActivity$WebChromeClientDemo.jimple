@@ -1,0 +1,59 @@
+class com.concretepage.MainActivity$WebChromeClientDemo extends android.webkit.WebChromeClient
+{
+    final com.concretepage.MainActivity this$0;
+
+    private void <init>(com.concretepage.MainActivity)
+    {
+        com.concretepage.MainActivity$WebChromeClientDemo $r0;
+        com.concretepage.MainActivity $r1;
+
+        $r0 := @this: com.concretepage.MainActivity$WebChromeClientDemo;
+
+        $r1 := @parameter0: com.concretepage.MainActivity;
+
+        $r0.<com.concretepage.MainActivity$WebChromeClientDemo: com.concretepage.MainActivity this$0> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebChromeClient: void <init>()>();
+
+        return;
+    }
+
+    void <init>(com.concretepage.MainActivity, com.concretepage.MainActivity$WebChromeClientDemo)
+    {
+        com.concretepage.MainActivity$WebChromeClientDemo $r0, $r2;
+        com.concretepage.MainActivity $r1;
+
+        $r0 := @this: com.concretepage.MainActivity$WebChromeClientDemo;
+
+        $r1 := @parameter0: com.concretepage.MainActivity;
+
+        $r2 := @parameter1: com.concretepage.MainActivity$WebChromeClientDemo;
+
+        specialinvoke $r0.<com.concretepage.MainActivity$WebChromeClientDemo: void <init>(com.concretepage.MainActivity)>($r1);
+
+        return;
+    }
+
+    public void onProgressChanged(android.webkit.WebView, int)
+    {
+        com.concretepage.MainActivity$WebChromeClientDemo $r0;
+        android.webkit.WebView $r1;
+        int $i0;
+        android.widget.ProgressBar $r2;
+        com.concretepage.MainActivity $r3;
+
+        $r0 := @this: com.concretepage.MainActivity$WebChromeClientDemo;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $i0 := @parameter1: int;
+
+        $r3 = $r0.<com.concretepage.MainActivity$WebChromeClientDemo: com.concretepage.MainActivity this$0>;
+
+        $r2 = staticinvoke <com.concretepage.MainActivity: android.widget.ProgressBar access$0(com.concretepage.MainActivity)>($r3);
+
+        virtualinvoke $r2.<android.widget.ProgressBar: void setProgress(int)>($i0);
+
+        return;
+    }
+}

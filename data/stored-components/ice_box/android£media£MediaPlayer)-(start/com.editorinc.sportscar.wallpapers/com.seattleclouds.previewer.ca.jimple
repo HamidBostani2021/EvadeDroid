@@ -1,0 +1,43 @@
+class com.seattleclouds.previewer.ca extends java.lang.Object implements java.lang.Runnable
+{
+    final com.seattleclouds.previewer.bu a;
+
+    void <init>(com.seattleclouds.previewer.bu)
+    {
+        com.seattleclouds.previewer.ca $r0;
+        com.seattleclouds.previewer.bu $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.ca;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.bu;
+
+        $r0.<com.seattleclouds.previewer.ca: com.seattleclouds.previewer.bu a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.previewer.ca $r0;
+        com.seattleclouds.previewer.bu $r1;
+        android.support.v7.widget.SearchView $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.ca;
+
+        $r1 = $r0.<com.seattleclouds.previewer.ca: com.seattleclouds.previewer.bu a>;
+
+        $r2 = staticinvoke <com.seattleclouds.previewer.bu: android.support.v7.widget.SearchView b(com.seattleclouds.previewer.bu)>($r1);
+
+        virtualinvoke $r2.<android.support.v7.widget.SearchView: void setIconified(boolean)>(0);
+
+        $r1 = $r0.<com.seattleclouds.previewer.ca: com.seattleclouds.previewer.bu a>;
+
+        $r2 = staticinvoke <com.seattleclouds.previewer.bu: android.support.v7.widget.SearchView b(com.seattleclouds.previewer.bu)>($r1);
+
+        virtualinvoke $r2.<android.support.v7.widget.SearchView: void clearFocus()>();
+
+        return;
+    }
+}

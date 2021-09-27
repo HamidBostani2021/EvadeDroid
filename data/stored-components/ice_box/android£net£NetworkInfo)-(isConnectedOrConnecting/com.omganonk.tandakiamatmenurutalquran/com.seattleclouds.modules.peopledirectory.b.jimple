@@ -1,0 +1,837 @@
+public class com.seattleclouds.modules.peopledirectory.b extends com.seattleclouds.bk implements com.seattleclouds.modules.peopledirectory.m
+{
+    private java.util.ArrayList ai;
+    private android.widget.ListView aj;
+    private com.seattleclouds.modules.peopledirectory.j ak;
+    private java.lang.String al;
+    private com.seattleclouds.modules.peopledirectory.i am;
+    private android.support.v7.widget.SearchView an;
+    private java.lang.String ao;
+    private int ap;
+    private android.widget.BaseAdapter aq;
+    private java.util.ArrayList i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        com.seattleclouds.modules.peopledirectory.g $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String ao> = "";
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: int ap> = -1;
+
+        $r1 = new com.seattleclouds.modules.peopledirectory.g;
+
+        specialinvoke $r1.<com.seattleclouds.modules.peopledirectory.g: void <init>(com.seattleclouds.modules.peopledirectory.b)>($r0);
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.BaseAdapter aq> = $r1;
+
+        return;
+    }
+
+    static android.support.v7.widget.SearchView a(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.support.v7.widget.SearchView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an>;
+
+        return r1;
+    }
+
+    static java.lang.String a(com.seattleclouds.modules.peopledirectory.b, java.lang.String)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String ao> = $r1;
+
+        return $r1;
+    }
+
+    static java.util.ArrayList a(com.seattleclouds.modules.peopledirectory.b, java.util.ArrayList)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.util.ArrayList $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter1: java.util.ArrayList;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList ai> = $r1;
+
+        return $r1;
+    }
+
+    static java.lang.String b(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String ao>;
+
+        return r1;
+    }
+
+    static void b(com.seattleclouds.modules.peopledirectory.b, java.lang.String)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter1: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void c(java.lang.String)>($r1);
+
+        return;
+    }
+
+    static android.widget.BaseAdapter c(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.widget.BaseAdapter r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.BaseAdapter aq>;
+
+        return r1;
+    }
+
+    private void c(java.lang.String)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.lang.String $r1, $r9;
+        java.util.ArrayList $r2, $r4;
+        java.util.Locale $r3;
+        java.util.Iterator $r5, $r11;
+        boolean $z0;
+        java.lang.Object $r6;
+        com.seattleclouds.modules.peopledirectory.ListItem $r7;
+        int $i0;
+        com.seattleclouds.modules.peopledirectory.Person $r8;
+        java.util.List $r10;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r3 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        $r1 = virtualinvoke $r1.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r3);
+
+        $r2 = new java.util.ArrayList;
+
+        specialinvoke $r2.<java.util.ArrayList: void <init>()>();
+
+        $r4 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i>;
+
+        $r5 = virtualinvoke $r4.<java.util.ArrayList: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r5.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label6;
+
+        $r6 = interfaceinvoke $r5.<java.util.Iterator: java.lang.Object next()>();
+
+        $r7 = (com.seattleclouds.modules.peopledirectory.ListItem) $r6;
+
+        $i0 = $r7.<com.seattleclouds.modules.peopledirectory.ListItem: int a>;
+
+        if $i0 == 0 goto label1;
+
+        $r8 = $r7.<com.seattleclouds.modules.peopledirectory.ListItem: com.seattleclouds.modules.peopledirectory.Person b>;
+
+        $r9 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        if $r9 == null goto label2;
+
+        $r9 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String a>;
+
+        $r3 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r3);
+
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean contains(java.lang.CharSequence)>($r1);
+
+        if $z0 == 0 goto label2;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r7);
+
+        goto label1;
+
+     label2:
+        $r9 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        if $r9 == null goto label3;
+
+        $r9 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String b>;
+
+        $r3 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r3);
+
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean contains(java.lang.CharSequence)>($r1);
+
+        if $z0 == 0 goto label3;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r7);
+
+        goto label1;
+
+     label3:
+        $r9 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c>;
+
+        if $r9 == null goto label4;
+
+        $r9 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.lang.String c>;
+
+        $r3 = staticinvoke <java.util.Locale: java.util.Locale getDefault()>();
+
+        $r9 = virtualinvoke $r9.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r3);
+
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean contains(java.lang.CharSequence)>($r1);
+
+        if $z0 == 0 goto label4;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r7);
+
+        goto label1;
+
+     label4:
+        $r10 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h>;
+
+        if $r10 == null goto label1;
+
+        $r10 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h>;
+
+        $i0 = interfaceinvoke $r10.<java.util.List: int size()>();
+
+        if $i0 <= 0 goto label1;
+
+        $r10 = $r8.<com.seattleclouds.modules.peopledirectory.Person: java.util.List h>;
+
+        $r11 = interfaceinvoke $r10.<java.util.List: java.util.Iterator iterator()>();
+
+     label5:
+        $z0 = interfaceinvoke $r11.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label1;
+
+        $r6 = interfaceinvoke $r11.<java.util.Iterator: java.lang.Object next()>();
+
+        $r9 = (java.lang.String) $r6;
+
+        $z0 = virtualinvoke $r9.<java.lang.String: boolean contains(java.lang.CharSequence)>($r1);
+
+        if $z0 == 0 goto label5;
+
+        virtualinvoke $r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r7);
+
+        goto label1;
+
+     label6:
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList ai> = $r2;
+
+        return;
+    }
+
+    static java.util.ArrayList d(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList ai>;
+
+        return r1;
+    }
+
+    static java.util.ArrayList e(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i>;
+
+        return r1;
+    }
+
+    static com.seattleclouds.modules.peopledirectory.i f(com.seattleclouds.modules.peopledirectory.b)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        com.seattleclouds.modules.peopledirectory.i r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.peopledirectory.b;
+
+        r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.i am>;
+
+        return r1;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void F()>();
+
+        return;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.os.Bundle $r1, $r3;
+        java.lang.String $r2;
+        int $i0;
+        java.lang.StringBuilder $r4;
+        java.util.ArrayList $r5;
+        com.seattleclouds.modules.peopledirectory.j $r6;
+        java.lang.String[] $r7;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void a(android.os.Bundle)>($r1);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.os.Bundle j()>();
+
+        if $r3 == null goto label1;
+
+        $r2 = virtualinvoke $r3.<android.os.Bundle: java.lang.String getString(java.lang.String)>("PAGE_ID");
+
+        if $r2 == null goto label1;
+
+        $i0 = virtualinvoke $r2.<java.lang.String: int lastIndexOf(int)>(46);
+
+        if $i0 <= 0 goto label1;
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String substring(int,int)>(0, $i0);
+
+        $r4 = new java.lang.StringBuilder;
+
+        specialinvoke $r4.<java.lang.StringBuilder: void <init>()>();
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2);
+
+        $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".config.xml");
+
+        $r2 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String al> = $r2;
+
+     label1:
+        if $r1 == null goto label2;
+
+        $r5 = virtualinvoke $r1.<android.os.Bundle: java.util.ArrayList getParcelableArrayList(java.lang.String)>("STATE_LIST_ITEMS");
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i> = $r5;
+
+        $r5 = virtualinvoke $r1.<android.os.Bundle: java.util.ArrayList getParcelableArrayList(java.lang.String)>("STATE_SEARCH_LIST_ITEMS");
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList ai> = $r5;
+
+        $r2 = virtualinvoke $r1.<android.os.Bundle: java.lang.String getString(java.lang.String)>("STATE_QUERY");
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String ao> = $r2;
+
+        $i0 = virtualinvoke $r1.<android.os.Bundle: int getInt(java.lang.String)>("STATE_ERROR_STRING");
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: int ap> = $i0;
+
+     label2:
+        $i0 = $r0.<com.seattleclouds.modules.peopledirectory.b: int ap>;
+
+        if $i0 != -1 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String al>;
+
+        if $r2 == null goto label3;
+
+        $r5 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i>;
+
+        if $r5 != null goto label3;
+
+        $r6 = new com.seattleclouds.modules.peopledirectory.j;
+
+        specialinvoke $r6.<com.seattleclouds.modules.peopledirectory.j: void <init>(com.seattleclouds.modules.peopledirectory.m)>($r0);
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.j ak> = $r6;
+
+        $r6 = $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.j ak>;
+
+        $r7 = newarray (java.lang.String)[1];
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String al>;
+
+        $r7[0] = $r2;
+
+        virtualinvoke $r6.<com.seattleclouds.modules.peopledirectory.j: android.os.AsyncTask execute(java.lang.Object[])>($r7);
+
+     label3:
+        return;
+    }
+
+    public void a(android.view.Menu, android.view.MenuInflater)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.view.Menu $r1;
+        android.view.MenuInflater $r2;
+        int $i0;
+        android.view.MenuItem $r3;
+        android.view.View $r4;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: android.view.Menu;
+
+        $r2 := @parameter1: android.view.MenuInflater;
+
+        $i0 = <com.seattleclouds.k: int people_directory_menu>;
+
+        virtualinvoke $r2.<android.view.MenuInflater: void inflate(int,android.view.Menu)>($i0, $r1);
+
+        $i0 = <com.seattleclouds.h: int search>;
+
+        $r3 = interfaceinvoke $r1.<android.view.Menu: android.view.MenuItem findItem(int)>($i0);
+
+        if $r3 == null goto label1;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.view.View aa()>();
+
+        interfaceinvoke $r3.<android.view.MenuItem: android.view.MenuItem setActionView(android.view.View)>($r4);
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.bk: void a(android.view.Menu,android.view.MenuInflater)>($r1, $r2);
+
+        return;
+    }
+
+    public void a(android.view.View, android.os.Bundle)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.view.View $r1;
+        android.os.Bundle $r2;
+        android.widget.ListView $r3;
+        int $i0;
+        java.lang.String $r4;
+        android.support.v4.app.ac $r5, $r6;
+        android.support.v4.app.aj $r7;
+        com.seattleclouds.modules.peopledirectory.i $r8;
+        java.util.ArrayList $r9;
+        android.widget.BaseAdapter $r10;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void a(android.view.View,android.os.Bundle)>($r1, $r2);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.ListView i_()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.ListView aj> = $r3;
+
+        $i0 = $r0.<com.seattleclouds.modules.peopledirectory.b: int ap>;
+
+        if $i0 == -1 goto label2;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void a(android.widget.ListAdapter)>(null);
+
+        $i0 = $r0.<com.seattleclouds.modules.peopledirectory.b: int ap>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void a(java.lang.CharSequence)>($r4);
+
+     label1:
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r5, 50.0F);
+
+        $r5 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v4.app.ac n()>();
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v4.app.ac n()>();
+
+        $r7 = virtualinvoke $r6.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        $r8 = staticinvoke <com.seattleclouds.modules.peopledirectory.i: com.seattleclouds.modules.peopledirectory.i a(android.content.Context,android.support.v4.app.aj,int)>($r5, $r7, $i0);
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.i am> = $r8;
+
+        return;
+
+     label2:
+        $r9 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i>;
+
+        if $r9 == null goto label1;
+
+        $r10 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.BaseAdapter aq>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void a(android.widget.ListAdapter)>($r10);
+
+        $r9 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i>;
+
+        $i0 = virtualinvoke $r9.<java.util.ArrayList: int size()>();
+
+        if $i0 != 0 goto label1;
+
+        $i0 = <com.seattleclouds.l: int people_directory_no_results>;
+
+        $r4 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void a(java.lang.CharSequence)>($r4);
+
+        goto label1;
+    }
+
+    public void a(android.widget.ListView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.widget.ListView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        android.widget.BaseAdapter $r3;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.peopledirectory.ListItem $r5;
+        android.os.Bundle $r6;
+        com.seattleclouds.modules.peopledirectory.Person $r7;
+        com.seattleclouds.FragmentInfo $r8;
+        java.lang.Class $r9;
+        java.lang.String $r10;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: android.widget.ListView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void a(android.widget.ListView,android.view.View,int,long)>($r1, $r2, $i0, $l1);
+
+        $r3 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.BaseAdapter aq>;
+
+        $r4 = virtualinvoke $r3.<android.widget.BaseAdapter: java.lang.Object getItem(int)>($i0);
+
+        $r5 = (com.seattleclouds.modules.peopledirectory.ListItem) $r4;
+
+        $i0 = $r5.<com.seattleclouds.modules.peopledirectory.ListItem: int a>;
+
+        if $i0 != 0 goto label1;
+
+        return;
+
+     label1:
+        $r6 = new android.os.Bundle;
+
+        specialinvoke $r6.<android.os.Bundle: void <init>()>();
+
+        $r7 = $r5.<com.seattleclouds.modules.peopledirectory.ListItem: com.seattleclouds.modules.peopledirectory.Person b>;
+
+        virtualinvoke $r6.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("ARG_PERSON", $r7);
+
+        $r8 = new com.seattleclouds.FragmentInfo;
+
+        $r9 = class "Lcom/seattleclouds/modules/peopledirectory/o;";
+
+        $r10 = virtualinvoke $r9.<java.lang.Class: java.lang.String getName()>();
+
+        specialinvoke $r8.<com.seattleclouds.FragmentInfo: void <init>(java.lang.String,android.os.Bundle)>($r10, $r6);
+
+        staticinvoke <com.seattleclouds.App: void a(com.seattleclouds.FragmentInfo,android.support.v4.app.Fragment)>($r8, $r0);
+
+        return;
+    }
+
+    public void a(java.util.ArrayList)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        java.util.ArrayList $r1;
+        com.seattleclouds.modules.peopledirectory.c $r2;
+        int $i0;
+        android.widget.ListView $r3;
+        android.widget.BaseAdapter $r4;
+        android.os.Handler $r5;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: java.util.ArrayList;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.j ak> = null;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i> = $r1;
+
+        $r3 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.ListView aj>;
+
+        if $r3 == null goto label1;
+
+        $r4 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.widget.BaseAdapter aq>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void a(android.widget.ListAdapter)>($r4);
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i>;
+
+        $i0 = virtualinvoke $r1.<java.util.ArrayList: int size()>();
+
+        if $i0 != 0 goto label2;
+
+        $r5 = new android.os.Handler;
+
+        specialinvoke $r5.<android.os.Handler: void <init>()>();
+
+        $r2 = new com.seattleclouds.modules.peopledirectory.c;
+
+        specialinvoke $r2.<com.seattleclouds.modules.peopledirectory.c: void <init>(com.seattleclouds.modules.peopledirectory.b)>($r0);
+
+        virtualinvoke $r5.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r2, 400L);
+
+     label2:
+        return;
+    }
+
+    public boolean a(android.view.MenuItem)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.view.MenuItem $r1;
+        int $i0, $i1;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: android.view.MenuItem;
+
+        $i1 = interfaceinvoke $r1.<android.view.MenuItem: int getItemId()>();
+
+        $i0 = <com.seattleclouds.h: int search>;
+
+        if $i1 != $i0 goto label1;
+
+        return 1;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.bk: boolean a(android.view.MenuItem)>($r1);
+
+        return $z0;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        boolean $z0;
+        com.seattleclouds.modules.peopledirectory.i $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void a_(boolean)>($z0);
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.i am>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.i am>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.peopledirectory.i: void h()>();
+
+     label1:
+        return;
+    }
+
+    public android.view.View aa()
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.support.v7.widget.SearchView $r1;
+        android.support.v4.app.ac $r2;
+        com.seattleclouds.p $r3;
+        android.support.v7.a.a $r4;
+        android.content.Context $r5;
+        java.lang.String $r6;
+        int $i0;
+        com.seattleclouds.modules.peopledirectory.d $r7;
+        boolean $z0;
+        android.os.Handler $r8;
+        com.seattleclouds.modules.peopledirectory.e $r9;
+        com.seattleclouds.modules.peopledirectory.f $r10;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 = new android.support.v7.widget.SearchView;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v4.app.ac n()>();
+
+        $r3 = (com.seattleclouds.p) $r2;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.p: android.support.v7.a.a h()>();
+
+        $r5 = virtualinvoke $r4.<android.support.v7.a.a: android.content.Context f()>();
+
+        specialinvoke $r1.<android.support.v7.widget.SearchView: void <init>(android.content.Context)>($r5);
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an> = $r1;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an>;
+
+        $r6 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String ao>;
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void a(java.lang.CharSequence,boolean)>($r6, 0);
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an>;
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setFocusable(boolean)>(0);
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an>;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r2, 330.0F);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setMaxWidth(int)>($i0);
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an>;
+
+        $r7 = new com.seattleclouds.modules.peopledirectory.d;
+
+        specialinvoke $r7.<com.seattleclouds.modules.peopledirectory.d: void <init>(com.seattleclouds.modules.peopledirectory.b)>($r0);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setOnQueryTextListener(android.support.v7.widget.gf)>($r7);
+
+        $r6 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String ao>;
+
+        $z0 = staticinvoke <com.seattleclouds.util.au: boolean b(java.lang.String)>($r6);
+
+        if $z0 != 0 goto label1;
+
+        $r8 = new android.os.Handler;
+
+        specialinvoke $r8.<android.os.Handler: void <init>()>();
+
+        $r9 = new com.seattleclouds.modules.peopledirectory.e;
+
+        specialinvoke $r9.<com.seattleclouds.modules.peopledirectory.e: void <init>(com.seattleclouds.modules.peopledirectory.b)>($r0);
+
+        virtualinvoke $r8.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r9, 10L);
+
+     label1:
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an>;
+
+        $r10 = new com.seattleclouds.modules.peopledirectory.f;
+
+        specialinvoke $r10.<com.seattleclouds.modules.peopledirectory.f: void <init>(com.seattleclouds.modules.peopledirectory.b)>($r0);
+
+        virtualinvoke $r1.<android.support.v7.widget.SearchView: void setOnQueryTextFocusChangeListener(android.view.View$OnFocusChangeListener)>($r10);
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: android.support.v7.widget.SearchView an>;
+
+        return $r1;
+    }
+
+    public void c(int)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        int $i0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.j ak> = null;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: int ap> = $i0;
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i> = null;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void a(android.widget.ListAdapter)>(null);
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String a_(int)>($i0);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.peopledirectory.b: void a(java.lang.CharSequence)>($r1);
+
+        return;
+    }
+
+    public void e(android.os.Bundle)
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        android.os.Bundle $r1;
+        java.util.ArrayList $r2;
+        java.lang.String $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList i>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putParcelableArrayList(java.lang.String,java.util.ArrayList)>("STATE_LIST_ITEMS", $r2);
+
+        $r2 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.util.ArrayList ai>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putParcelableArrayList(java.lang.String,java.util.ArrayList)>("STATE_SEARCH_LIST_ITEMS", $r2);
+
+        $r3 = $r0.<com.seattleclouds.modules.peopledirectory.b: java.lang.String ao>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("STATE_QUERY", $r3);
+
+        $i0 = $r0.<com.seattleclouds.modules.peopledirectory.b: int ap>;
+
+        virtualinvoke $r1.<android.os.Bundle: void putInt(java.lang.String,int)>("STATE_ERROR_STRING", $i0);
+
+        specialinvoke $r0.<com.seattleclouds.bk: void e(android.os.Bundle)>($r1);
+
+        return;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.modules.peopledirectory.b $r0;
+        com.seattleclouds.modules.peopledirectory.i $r1;
+
+        $r0 := @this: com.seattleclouds.modules.peopledirectory.b;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void g()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.i am>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.i am>;
+
+        virtualinvoke $r1.<com.seattleclouds.modules.peopledirectory.i: void i()>();
+
+        $r0.<com.seattleclouds.modules.peopledirectory.b: com.seattleclouds.modules.peopledirectory.i am> = null;
+
+     label1:
+        return;
+    }
+}

@@ -1,0 +1,119 @@
+class nic.cabbage_ifc.Feedback$1 extends java.lang.Object implements android.view.View$OnClickListener
+{
+    final nic.cabbage_ifc.Feedback this$0;
+
+    void <init>(nic.cabbage_ifc.Feedback)
+    {
+        nic.cabbage_ifc.Feedback$1 $r0;
+        nic.cabbage_ifc.Feedback $r1;
+
+        $r0 := @this: nic.cabbage_ifc.Feedback$1;
+
+        $r1 := @parameter0: nic.cabbage_ifc.Feedback;
+
+        $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void onClick(android.view.View)
+    {
+        nic.cabbage_ifc.Feedback$1 $r0;
+        android.view.View $r1;
+        android.content.Intent $r2;
+        nic.cabbage_ifc.Feedback $r3;
+        android.widget.EditText $r4;
+        int $i0;
+        android.content.Context $r5;
+        android.widget.Toast $r6;
+        android.text.Editable $r7;
+        java.lang.String $r8, $r9;
+        java.lang.String[] $r10;
+
+        $r0 := @this: nic.cabbage_ifc.Feedback$1;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r4 = $r3.<nic.cabbage_ifc.Feedback: android.widget.EditText textSubject>;
+
+        $i0 = virtualinvoke $r4.<android.widget.EditText: int length()>();
+
+        if $i0 == 0 goto label1;
+
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r4 = $r3.<nic.cabbage_ifc.Feedback: android.widget.EditText textMessage>;
+
+        $i0 = virtualinvoke $r4.<android.widget.EditText: int length()>();
+
+        if $i0 != 0 goto label2;
+
+     label1:
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r5 = virtualinvoke $r3.<nic.cabbage_ifc.Feedback: android.content.Context getApplicationContext()>();
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r5, "Please insert value ", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        return;
+
+     label2:
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r4 = $r3.<nic.cabbage_ifc.Feedback: android.widget.EditText textSubject>;
+
+        $r7 = virtualinvoke $r4.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r8 = interfaceinvoke $r7.<android.text.Editable: java.lang.String toString()>();
+
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r4 = $r3.<nic.cabbage_ifc.Feedback: android.widget.EditText textMessage>;
+
+        $r7 = virtualinvoke $r4.<android.widget.EditText: android.text.Editable getText()>();
+
+        $r9 = interfaceinvoke $r7.<android.text.Editable: java.lang.String toString()>();
+
+        $r2 = new android.content.Intent;
+
+        specialinvoke $r2.<android.content.Intent: void <init>(java.lang.String)>("android.intent.action.SEND");
+
+        $r10 = newarray (java.lang.String)[1];
+
+        $r10[0] = "svennila96@gmail.com";
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])>("android.intent.extra.EMAIL", $r10);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.SUBJECT", $r8);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)>("android.intent.extra.TEXT", $r9);
+
+        virtualinvoke $r2.<android.content.Intent: android.content.Intent setType(java.lang.String)>("message/rfc822");
+
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r2 = staticinvoke <android.content.Intent: android.content.Intent createChooser(android.content.Intent,java.lang.CharSequence)>($r2, "Choose an Email client :");
+
+        virtualinvoke $r3.<nic.cabbage_ifc.Feedback: void startActivity(android.content.Intent)>($r2);
+
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r4 = $r3.<nic.cabbage_ifc.Feedback: android.widget.EditText textSubject>;
+
+        virtualinvoke $r4.<android.widget.EditText: void setText(java.lang.CharSequence)>("");
+
+        $r3 = $r0.<nic.cabbage_ifc.Feedback$1: nic.cabbage_ifc.Feedback this$0>;
+
+        $r4 = $r3.<nic.cabbage_ifc.Feedback: android.widget.EditText textMessage>;
+
+        virtualinvoke $r4.<android.widget.EditText: void setText(java.lang.CharSequence)>("");
+
+        return;
+    }
+}

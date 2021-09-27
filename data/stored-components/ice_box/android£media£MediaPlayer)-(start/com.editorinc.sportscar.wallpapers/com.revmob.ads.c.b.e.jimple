@@ -1,0 +1,394 @@
+public final class com.revmob.ads.c.b.e extends android.widget.RelativeLayout implements com.revmob.ads.c.b.g
+{
+    private android.widget.ImageView a;
+    private com.revmob.ads.c.a.b b;
+    private boolean c;
+    private int d;
+    private int e;
+    private int f;
+    private int g;
+    private int h;
+    private int i;
+    private int j;
+    private int k;
+
+    public void <init>(android.app.Activity, com.revmob.ads.c.a.b, com.revmob.ads.c.b.a, boolean, int)
+    {
+        com.revmob.ads.c.b.e $r0;
+        android.app.Activity $r1;
+        com.revmob.ads.c.a.b $r2;
+        com.revmob.ads.c.b.a $r3;
+        boolean $z0;
+        int $i0, $i1;
+        android.util.DisplayMetrics $r4;
+        android.view.WindowManager $r5;
+        android.view.Display $r6;
+        android.widget.RelativeLayout$LayoutParams $r7;
+        android.view.View $r8;
+
+        $r0 := @this: com.revmob.ads.c.b.e;
+
+        $r1 := @parameter0: android.app.Activity;
+
+        $r2 := @parameter1: com.revmob.ads.c.a.b;
+
+        $r3 := @parameter2: com.revmob.ads.c.b.a;
+
+        $z0 := @parameter3: boolean;
+
+        $i0 := @parameter4: int;
+
+        specialinvoke $r0.<android.widget.RelativeLayout: void <init>(android.content.Context)>($r1);
+
+        $r0.<com.revmob.ads.c.b.e: boolean c> = 0;
+
+        $r0.<com.revmob.ads.c.b.e: int d> = 0;
+
+        $r0.<com.revmob.ads.c.b.e: int e> = 28;
+
+        $r0.<com.revmob.ads.c.b.e: int h> = -999;
+
+        $r0.<com.revmob.ads.c.b.e: int i> = -999;
+
+        $r0.<com.revmob.ads.c.b.e: int j> = 0;
+
+        $r0.<com.revmob.ads.c.b.e: int k> = 0;
+
+        $r0.<com.revmob.ads.c.b.e: com.revmob.ads.c.a.b b> = $r2;
+
+        $r0.<com.revmob.ads.c.b.e: boolean c> = $z0;
+
+        $i1 = $r0.<com.revmob.ads.c.b.e: int e>;
+
+        if $i0 > $i1 goto label2;
+
+     label1:
+        $r0.<com.revmob.ads.c.b.e: int d> = $i0;
+
+        if $z0 == 0 goto label3;
+
+        $r4 = new android.util.DisplayMetrics;
+
+        specialinvoke $r4.<android.util.DisplayMetrics: void <init>()>();
+
+        $r5 = virtualinvoke $r1.<android.app.Activity: android.view.WindowManager getWindowManager()>();
+
+        $r6 = interfaceinvoke $r5.<android.view.WindowManager: android.view.Display getDefaultDisplay()>();
+
+        virtualinvoke $r6.<android.view.Display: void getMetrics(android.util.DisplayMetrics)>($r4);
+
+        $i0 = $r4.<android.util.DisplayMetrics: int widthPixels>;
+
+        $r0.<com.revmob.ads.c.b.e: int f> = $i0;
+
+        $i0 = $r4.<android.util.DisplayMetrics: int heightPixels>;
+
+        $r0.<com.revmob.ads.c.b.e: int g> = $i0;
+
+        $r0.<com.revmob.ads.c.b.e: int k> = 0;
+
+        $r0.<com.revmob.ads.c.b.e: int j> = 0;
+
+        virtualinvoke $r0.<com.revmob.ads.c.b.e: void setWillNotDraw(boolean)>(0);
+
+        $r7 = new android.widget.RelativeLayout$LayoutParams;
+
+        $i0 = $r0.<com.revmob.ads.c.b.e: int f>;
+
+        $i1 = $r0.<com.revmob.ads.c.b.e: int g>;
+
+        specialinvoke $r7.<android.widget.RelativeLayout$LayoutParams: void <init>(int,int)>($i0, $i1);
+
+        virtualinvoke $r0.<com.revmob.ads.c.b.e: void setGravity(int)>(48);
+
+        $r7.<android.widget.RelativeLayout$LayoutParams: int leftMargin> = 0;
+
+        $r7.<android.widget.RelativeLayout$LayoutParams: int topMargin> = 0;
+
+        $r8 = specialinvoke $r0.<com.revmob.ads.c.b.e: android.view.View a(com.revmob.ads.c.b.a)>($r3);
+
+        virtualinvoke $r0.<com.revmob.ads.c.b.e: void addView(android.view.View,android.view.ViewGroup$LayoutParams)>($r8, $r7);
+
+        return;
+
+     label2:
+        $i0 = $r0.<com.revmob.ads.c.b.e: int e>;
+
+        goto label1;
+
+     label3:
+        $r7 = new android.widget.RelativeLayout$LayoutParams;
+
+        specialinvoke $r7.<android.widget.RelativeLayout$LayoutParams: void <init>(int,int)>(-1, -1);
+
+        $r8 = specialinvoke $r0.<com.revmob.ads.c.b.e: android.view.View a(com.revmob.ads.c.b.a)>($r3);
+
+        virtualinvoke $r0.<com.revmob.ads.c.b.e: void addView(android.view.View,android.view.ViewGroup$LayoutParams)>($r8, $r7);
+
+        return;
+    }
+
+    private android.view.View a(com.revmob.ads.c.b.a)
+    {
+        com.revmob.ads.c.b.e $r0;
+        com.revmob.ads.c.b.a $r1;
+        android.content.Context $r2;
+        android.widget.ImageView $r3;
+        com.revmob.ads.c.b.f $r4;
+
+        $r0 := @this: com.revmob.ads.c.b.e;
+
+        $r1 := @parameter0: com.revmob.ads.c.b.a;
+
+        $r3 = new android.widget.ImageView;
+
+        $r2 = virtualinvoke $r0.<com.revmob.ads.c.b.e: android.content.Context getContext()>();
+
+        specialinvoke $r3.<android.widget.ImageView: void <init>(android.content.Context)>($r2);
+
+        $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a> = $r3;
+
+        virtualinvoke $r0.<com.revmob.ads.c.b.e: void e()>();
+
+        $r3 = $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a>;
+
+        $r4 = new com.revmob.ads.c.b.f;
+
+        specialinvoke $r4.<com.revmob.ads.c.b.f: void <init>(com.revmob.ads.c.b.e,com.revmob.ads.c.b.a)>($r0, $r1);
+
+        virtualinvoke $r3.<android.widget.ImageView: void setOnClickListener(android.view.View$OnClickListener)>($r4);
+
+        $r3 = $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a>;
+
+        return $r3;
+    }
+
+    static android.widget.ImageView a(com.revmob.ads.c.b.e)
+    {
+        com.revmob.ads.c.b.e $r0;
+        android.widget.ImageView r1;
+
+        $r0 := @parameter0: com.revmob.ads.c.b.e;
+
+        r1 = $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a>;
+
+        return r1;
+    }
+
+    public final void a(int, int)
+    {
+        com.revmob.ads.c.b.e $r0;
+        int $i0, $i1, $i2;
+        boolean $z0;
+        android.os.Looper $r1;
+        java.lang.Thread $r2, $r3;
+
+        $r0 := @this: com.revmob.ads.c.b.e;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $z0 = $r0.<com.revmob.ads.c.b.e: boolean c>;
+
+        if $z0 == 0 goto label10;
+
+        $i2 = $r0.<com.revmob.ads.c.b.e: int h>;
+
+        if $i2 != -999 goto label01;
+
+        $r0.<com.revmob.ads.c.b.e: int h> = $i0;
+
+     label01:
+        $i2 = $r0.<com.revmob.ads.c.b.e: int i>;
+
+        if $i2 != -999 goto label02;
+
+        $r0.<com.revmob.ads.c.b.e: int i> = $i1;
+
+     label02:
+        $i2 = $r0.<com.revmob.ads.c.b.e: int h>;
+
+        $i0 = $i0 - $i2;
+
+        if $i0 < 0 goto label06;
+
+        $i0 = staticinvoke <java.lang.Math: int abs(int)>($i0);
+
+        $i2 = $r0.<com.revmob.ads.c.b.e: int d>;
+
+        $i2 = 0 - $i2;
+
+        $i0 = 0 - $i0;
+
+        $i0 = staticinvoke <java.lang.Math: int max(int,int)>($i2, $i0);
+
+        $r0.<com.revmob.ads.c.b.e: int k> = $i0;
+
+     label03:
+        $i0 = $r0.<com.revmob.ads.c.b.e: int i>;
+
+        $i0 = $i1 - $i0;
+
+        if $i0 < 0 goto label07;
+
+        $i0 = staticinvoke <java.lang.Math: int abs(int)>($i0);
+
+        $i1 = $r0.<com.revmob.ads.c.b.e: int d>;
+
+        $i1 = 0 - $i1;
+
+        $i0 = 0 - $i0;
+
+        $i0 = staticinvoke <java.lang.Math: int max(int,int)>($i1, $i0);
+
+        $r0.<com.revmob.ads.c.b.e: int j> = $i0;
+
+     label04:
+        $r1 = staticinvoke <android.os.Looper: android.os.Looper getMainLooper()>();
+
+        $r2 = virtualinvoke $r1.<android.os.Looper: java.lang.Thread getThread()>();
+
+        $r3 = staticinvoke <java.lang.Thread: java.lang.Thread currentThread()>();
+
+        if $r2 != $r3 goto label08;
+
+        $z0 = 1;
+
+     label05:
+        if $z0 == 0 goto label09;
+
+        virtualinvoke $r0.<com.revmob.ads.c.b.e: void invalidate()>();
+
+        return;
+
+     label06:
+        $i0 = staticinvoke <java.lang.Math: int abs(int)>($i0);
+
+        $i2 = $r0.<com.revmob.ads.c.b.e: int d>;
+
+        $i0 = staticinvoke <java.lang.Math: int min(int,int)>($i2, $i0);
+
+        $r0.<com.revmob.ads.c.b.e: int k> = $i0;
+
+        goto label03;
+
+     label07:
+        $i0 = staticinvoke <java.lang.Math: int abs(int)>($i0);
+
+        $i1 = $r0.<com.revmob.ads.c.b.e: int d>;
+
+        $i0 = staticinvoke <java.lang.Math: int min(int,int)>($i1, $i0);
+
+        $r0.<com.revmob.ads.c.b.e: int j> = $i0;
+
+        goto label04;
+
+     label08:
+        $z0 = 0;
+
+        goto label05;
+
+     label09:
+        virtualinvoke $r0.<com.revmob.ads.c.b.e: void postInvalidate()>();
+
+     label10:
+        return;
+    }
+
+    public final void e()
+    {
+        com.revmob.ads.c.b.e $r0;
+        com.revmob.ads.c.a.b $r1;
+        android.widget.ImageView $r2;
+        android.content.res.Resources $r3;
+        android.content.res.Configuration $r4;
+        int $i0;
+        android.graphics.Bitmap $r5;
+        boolean $z0;
+        android.widget.ImageView$ScaleType $r6;
+
+        $r0 := @this: com.revmob.ads.c.b.e;
+
+        $r2 = $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a>;
+
+        if $r2 == null goto label3;
+
+        $r3 = virtualinvoke $r0.<com.revmob.ads.c.b.e: android.content.res.Resources getResources()>();
+
+        $r4 = virtualinvoke $r3.<android.content.res.Resources: android.content.res.Configuration getConfiguration()>();
+
+        $i0 = $r4.<android.content.res.Configuration: int orientation>;
+
+        $r2 = $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a>;
+
+        $r1 = $r0.<com.revmob.ads.c.b.e: com.revmob.ads.c.a.b b>;
+
+        $r5 = virtualinvoke $r1.<com.revmob.ads.c.a.b: android.graphics.Bitmap a(int)>($i0);
+
+        virtualinvoke $r2.<android.widget.ImageView: void setImageBitmap(android.graphics.Bitmap)>($r5);
+
+        $r1 = $r0.<com.revmob.ads.c.b.e: com.revmob.ads.c.a.b b>;
+
+        $z0 = virtualinvoke $r1.<com.revmob.ads.c.a.b: boolean h()>();
+
+        if $z0 != 0 goto label1;
+
+        $r1 = $r0.<com.revmob.ads.c.b.e: com.revmob.ads.c.a.b b>;
+
+        $i0 = virtualinvoke $r1.<com.revmob.ads.c.a.b: int R()>();
+
+        if $i0 != 1 goto label2;
+
+     label1:
+        $r2 = $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a>;
+
+        $r6 = <android.widget.ImageView$ScaleType: android.widget.ImageView$ScaleType FIT_XY>;
+
+        virtualinvoke $r2.<android.widget.ImageView: void setScaleType(android.widget.ImageView$ScaleType)>($r6);
+
+        return;
+
+     label2:
+        $r2 = $r0.<com.revmob.ads.c.b.e: android.widget.ImageView a>;
+
+        $r6 = <android.widget.ImageView$ScaleType: android.widget.ImageView$ScaleType CENTER_CROP>;
+
+        virtualinvoke $r2.<android.widget.ImageView: void setScaleType(android.widget.ImageView$ScaleType)>($r6);
+
+     label3:
+        return;
+    }
+
+    protected final void onDraw(android.graphics.Canvas)
+    {
+        com.revmob.ads.c.b.e $r0;
+        android.graphics.Canvas $r1;
+        boolean $z0;
+        int $i0;
+        float $f0, $f1;
+
+        $r0 := @this: com.revmob.ads.c.b.e;
+
+        $r1 := @parameter0: android.graphics.Canvas;
+
+        $z0 = $r0.<com.revmob.ads.c.b.e: boolean c>;
+
+        if $z0 == 0 goto label1;
+
+        $i0 = $r0.<com.revmob.ads.c.b.e: int k>;
+
+        $f0 = (float) $i0;
+
+        $i0 = $r0.<com.revmob.ads.c.b.e: int j>;
+
+        $f1 = (float) $i0;
+
+        virtualinvoke $r1.<android.graphics.Canvas: void translate(float,float)>($f0, $f1);
+
+     label1:
+        specialinvoke $r0.<android.widget.RelativeLayout: void onDraw(android.graphics.Canvas)>($r1);
+
+        return;
+    }
+}

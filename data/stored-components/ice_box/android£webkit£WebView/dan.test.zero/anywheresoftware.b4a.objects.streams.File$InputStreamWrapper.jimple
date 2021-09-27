@@ -1,0 +1,98 @@
+public class anywheresoftware.b4a.objects.streams.File$InputStreamWrapper extends anywheresoftware.b4a.AbsObjectWrapper
+{
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.objects.streams.File$InputStreamWrapper $r0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.AbsObjectWrapper: void <init>()>();
+
+        return;
+    }
+
+    public int BytesAvailable() throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$InputStreamWrapper $r0;
+        java.lang.Object $r1;
+        java.io.InputStream $r2;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: java.lang.Object getObject()>();
+
+        $r2 = (java.io.InputStream) $r1;
+
+        $i0 = virtualinvoke $r2.<java.io.InputStream: int available()>();
+
+        return $i0;
+    }
+
+    public void Close() throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$InputStreamWrapper $r0;
+        java.lang.Object $r1;
+        java.io.InputStream $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: java.lang.Object getObject()>();
+
+        $r2 = (java.io.InputStream) $r1;
+
+        virtualinvoke $r2.<java.io.InputStream: void close()>();
+
+        return;
+    }
+
+    public void InitializeFromBytesArray(byte[], int, int)
+    {
+        anywheresoftware.b4a.objects.streams.File$InputStreamWrapper $r0;
+        byte[] $r1;
+        int $i0, $i1;
+        java.io.ByteArrayInputStream $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper;
+
+        $r1 := @parameter0: byte[];
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = new java.io.ByteArrayInputStream;
+
+        specialinvoke $r2.<java.io.ByteArrayInputStream: void <init>(byte[],int,int)>($r1, $i0, $i1);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: void setObject(java.lang.Object)>($r2);
+
+        return;
+    }
+
+    public int ReadBytes(byte[], int, int) throws java.io.IOException
+    {
+        anywheresoftware.b4a.objects.streams.File$InputStreamWrapper $r0;
+        byte[] $r1;
+        int $i0, $i1;
+        java.lang.Object $r2;
+        java.io.InputStream $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.streams.File$InputStreamWrapper;
+
+        $r1 := @parameter0: byte[];
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.streams.File$InputStreamWrapper: java.lang.Object getObject()>();
+
+        $r3 = (java.io.InputStream) $r2;
+
+        $i0 = virtualinvoke $r3.<java.io.InputStream: int read(byte[],int,int)>($r1, $i0, $i1);
+
+        return $i0;
+    }
+}

@@ -1,0 +1,701 @@
+public class com.seattleclouds.previewer.appmart.order.a.d extends android.support.v7.widget.eb
+{
+    private static int i;
+    private static boolean j;
+    private static android.util.SparseBooleanArray k;
+    private java.util.List a;
+    private java.util.List b;
+    private java.util.List c;
+    private com.seattleclouds.previewer.appmart.order.b.a d;
+    private android.content.Context e;
+    private int f;
+    private int g;
+    private int h;
+
+    static void <clinit>()
+    {
+        android.util.SparseBooleanArray $r0;
+
+        $r0 = new android.util.SparseBooleanArray;
+
+        specialinvoke $r0.<android.util.SparseBooleanArray: void <init>()>();
+
+        <com.seattleclouds.previewer.appmart.order.a.d: android.util.SparseBooleanArray k> = $r0;
+
+        return;
+    }
+
+    public void <init>(android.content.Context)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        android.content.Context $r1;
+        com.seattleclouds.previewer.appmart.order.b.a $r2;
+        java.util.ArrayList $r3, $r4;
+        java.util.Iterator $r5;
+        boolean $z0;
+        java.lang.Object $r6;
+        com.seattleclouds.previewer.appmart.order.b.b $r7;
+        java.lang.String $r8;
+        java.util.List $r9;
+        int $i0;
+        android.util.SparseBooleanArray $r10;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<android.support.v7.widget.eb: void <init>()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: android.content.Context e> = $r1;
+
+        $r2 = staticinvoke <com.seattleclouds.previewer.appmart.order.b.a: com.seattleclouds.previewer.appmart.order.b.a a()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d> = $r2;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d>;
+
+        $r3 = virtualinvoke $r2.<com.seattleclouds.previewer.appmart.order.b.a: java.util.ArrayList z()>();
+
+        $r4 = new java.util.ArrayList;
+
+        specialinvoke $r4.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List c> = $r4;
+
+        $r4 = new java.util.ArrayList;
+
+        specialinvoke $r4.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List b> = $r4;
+
+        $r5 = interfaceinvoke $r3.<java.util.List: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r5.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label3;
+
+        $r6 = interfaceinvoke $r5.<java.util.Iterator: java.lang.Object next()>();
+
+        $r7 = (com.seattleclouds.previewer.appmart.order.b.b) $r6;
+
+        $r8 = virtualinvoke $r7.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String a()>();
+
+        $z0 = virtualinvoke $r8.<java.lang.String: boolean contains(java.lang.CharSequence)>("Annual");
+
+        if $z0 == 0 goto label2;
+
+        $r9 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List c>;
+
+        interfaceinvoke $r9.<java.util.List: boolean add(java.lang.Object)>($r7);
+
+        goto label1;
+
+     label2:
+        $r9 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List b>;
+
+        interfaceinvoke $r9.<java.util.List: boolean add(java.lang.Object)>($r7);
+
+        goto label1;
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.previewer.appmart.order.b.a: boolean Y()>();
+
+        if $z0 == 0 goto label4;
+
+        <com.seattleclouds.previewer.appmart.order.a.d: boolean j> = 1;
+
+     label4:
+        $z0 = <com.seattleclouds.previewer.appmart.order.a.d: boolean j>;
+
+        if $z0 == 0 goto label7;
+
+        $r9 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List b>;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a> = $r9;
+
+     label5:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d>;
+
+        $i0 = virtualinvoke $r2.<com.seattleclouds.previewer.appmart.order.b.a: int W()>();
+
+        <com.seattleclouds.previewer.appmart.order.a.d: int i> = $i0;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d>;
+
+        $z0 = virtualinvoke $r2.<com.seattleclouds.previewer.appmart.order.b.a: boolean U()>();
+
+        if $z0 != 0 goto label6;
+
+        $r10 = <com.seattleclouds.previewer.appmart.order.a.d: android.util.SparseBooleanArray k>;
+
+        virtualinvoke $r10.<android.util.SparseBooleanArray: void clear()>();
+
+     label6:
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: android.content.Context e>;
+
+        $i0 = <com.seattleclouds.e: int colorTextBlack>;
+
+        $i0 = staticinvoke <com.seattleclouds.previewer.appmart.order.i: int b(android.content.Context,int)>($r1, $i0);
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: int g> = $i0;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: android.content.Context e>;
+
+        $i0 = <com.seattleclouds.e: int colorWhite>;
+
+        $i0 = staticinvoke <com.seattleclouds.previewer.appmart.order.i: int b(android.content.Context,int)>($r1, $i0);
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: int f> = $i0;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: android.content.Context e>;
+
+        $i0 = <com.seattleclouds.e: int ic_color>;
+
+        $i0 = staticinvoke <com.seattleclouds.previewer.appmart.order.i: int b(android.content.Context,int)>($r1, $i0);
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: int h> = $i0;
+
+        return;
+
+     label7:
+        $r9 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List c>;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a> = $r9;
+
+        goto label5;
+    }
+
+    static java.util.List a(com.seattleclouds.previewer.appmart.order.a.d)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List b>;
+
+        return r1;
+    }
+
+    static java.util.List a(com.seattleclouds.previewer.appmart.order.a.d, java.util.List)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        java.util.List $r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter1: java.util.List;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a> = $r1;
+
+        return $r1;
+    }
+
+    private void a(android.widget.TextView, android.support.v7.widget.AppCompatSeekBar, int)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        android.widget.TextView $r1;
+        android.support.v7.widget.AppCompatSeekBar $r2;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: android.widget.TextView;
+
+        $r2 := @parameter1: android.support.v7.widget.AppCompatSeekBar;
+
+        $i0 := @parameter2: int;
+
+        $i1 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i1 >= 23 goto label2;
+
+        $i1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: int g>;
+
+        virtualinvoke $r1.<android.widget.TextView: void setTextColor(int)>($i1);
+
+     label1:
+        virtualinvoke $r2.<android.support.v7.widget.AppCompatSeekBar: void setProgress(int)>($i0);
+
+        return;
+
+     label2:
+        virtualinvoke $r1.<android.widget.TextView: void setTextAppearance(int)>(16974344);
+
+        goto label1;
+    }
+
+    static void a(com.seattleclouds.previewer.appmart.order.a.d, android.widget.TextView, android.support.v7.widget.AppCompatSeekBar, int)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        android.widget.TextView $r1;
+        android.support.v7.widget.AppCompatSeekBar $r2;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter1: android.widget.TextView;
+
+        $r2 := @parameter2: android.support.v7.widget.AppCompatSeekBar;
+
+        $i0 := @parameter3: int;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.a.d: void a(android.widget.TextView,android.support.v7.widget.AppCompatSeekBar,int)>($r1, $r2, $i0);
+
+        return;
+    }
+
+    static boolean a(boolean)
+    {
+        boolean $z0;
+
+        $z0 := @parameter0: boolean;
+
+        <com.seattleclouds.previewer.appmart.order.a.d: boolean j> = $z0;
+
+        return $z0;
+    }
+
+    static int b(com.seattleclouds.previewer.appmart.order.a.d)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        i0 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: int h>;
+
+        return i0;
+    }
+
+    static void c(com.seattleclouds.previewer.appmart.order.a.d)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.a.d: void f()>();
+
+        return;
+    }
+
+    static int d(int)
+    {
+        int $i0;
+
+        $i0 := @parameter0: int;
+
+        <com.seattleclouds.previewer.appmart.order.a.d: int i> = $i0;
+
+        return $i0;
+    }
+
+    static android.util.SparseBooleanArray d()
+    {
+        android.util.SparseBooleanArray r0;
+
+        r0 = <com.seattleclouds.previewer.appmart.order.a.d: android.util.SparseBooleanArray k>;
+
+        return r0;
+    }
+
+    static com.seattleclouds.previewer.appmart.order.b.a d(com.seattleclouds.previewer.appmart.order.a.d)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        com.seattleclouds.previewer.appmart.order.b.a r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d>;
+
+        return r1;
+    }
+
+    static int e()
+    {
+        int i0;
+
+        i0 = <com.seattleclouds.previewer.appmart.order.a.d: int i>;
+
+        return i0;
+    }
+
+    static java.util.List e(com.seattleclouds.previewer.appmart.order.a.d)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List c>;
+
+        return r1;
+    }
+
+    static java.util.List f(com.seattleclouds.previewer.appmart.order.a.d)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        java.util.List r1;
+
+        $r0 := @parameter0: com.seattleclouds.previewer.appmart.order.a.d;
+
+        r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a>;
+
+        return r1;
+    }
+
+    private void f()
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        com.seattleclouds.previewer.appmart.order.b.a $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d>;
+
+        virtualinvoke $r1.<com.seattleclouds.previewer.appmart.order.b.a: void a(com.seattleclouds.previewer.appmart.order.b.b)>(null);
+
+        <com.seattleclouds.previewer.appmart.order.a.d: int i> = -1;
+
+        return;
+    }
+
+    public int a()
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        int $i0;
+        java.util.List $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a>;
+
+        $i0 = interfaceinvoke $r1.<java.util.List: int size()>();
+
+        return $i0;
+    }
+
+    public android.support.v7.widget.fb a(android.view.ViewGroup, int)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        android.view.ViewGroup $r1;
+        int $i0;
+        com.seattleclouds.previewer.appmart.order.a.i $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: android.view.ViewGroup;
+
+        $i0 := @parameter1: int;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.a.i c(android.view.ViewGroup,int)>($r1, $i0);
+
+        return $r2;
+    }
+
+    public void a(android.support.v7.widget.fb, int)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        int $i0;
+        android.support.v7.widget.fb $r1;
+        com.seattleclouds.previewer.appmart.order.a.i $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: android.support.v7.widget.fb;
+
+        $i0 := @parameter1: int;
+
+        $r2 = (com.seattleclouds.previewer.appmart.order.a.i) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.a.d: void a(com.seattleclouds.previewer.appmart.order.a.i,int)>($r2, $i0);
+
+        return;
+    }
+
+    public void a(com.seattleclouds.previewer.appmart.order.a.i)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        com.seattleclouds.previewer.appmart.order.a.i $r1;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.appmart.order.a.i;
+
+        specialinvoke $r0.<android.support.v7.widget.eb: void c(android.support.v7.widget.fb)>($r1);
+
+        return;
+    }
+
+    public void a(com.seattleclouds.previewer.appmart.order.a.i, int)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        com.seattleclouds.previewer.appmart.order.a.i $r1;
+        int $i0, $i1;
+        android.support.v7.widget.AppCompatSeekBar $r2;
+        com.seattleclouds.previewer.appmart.order.a.e $r3;
+        android.widget.RelativeLayout $r4;
+        boolean $z0;
+        java.util.List $r5;
+        android.widget.TextView $r6;
+        com.seattleclouds.previewer.appmart.order.a.f $r7;
+        com.seattleclouds.previewer.appmart.order.a.g $r8;
+        java.lang.Object $r9;
+        com.seattleclouds.previewer.appmart.order.b.b $r10;
+        java.lang.String $r11;
+        java.lang.StringBuilder $r12;
+        android.content.Context $r13;
+        android.content.res.Resources $r14;
+        com.seattleclouds.previewer.appmart.order.b.a $r15;
+        java.lang.Boolean $r16;
+        android.support.v7.widget.CardView $r17;
+        com.seattleclouds.previewer.appmart.order.a.h $r18;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.appmart.order.a.i;
+
+        $i0 := @parameter1: int;
+
+        $i0 = virtualinvoke $r1.<com.seattleclouds.previewer.appmart.order.a.i: int e()>();
+
+        $r2 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.support.v7.widget.AppCompatSeekBar s>;
+
+        $r3 = new com.seattleclouds.previewer.appmart.order.a.e;
+
+        specialinvoke $r3.<com.seattleclouds.previewer.appmart.order.a.e: void <init>(com.seattleclouds.previewer.appmart.order.a.d)>($r0);
+
+        virtualinvoke $r2.<android.support.v7.widget.AppCompatSeekBar: void setOnTouchListener(android.view.View$OnTouchListener)>($r3);
+
+        if $i0 <= 0 goto label5;
+
+        $r4 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.RelativeLayout t>;
+
+        virtualinvoke $r4.<android.widget.RelativeLayout: void setVisibility(int)>(8);
+
+     label1:
+        $z0 = <com.seattleclouds.previewer.appmart.order.a.d: boolean j>;
+
+        if $z0 == 0 goto label6;
+
+        $r5 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List b>;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a> = $r5;
+
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView q>;
+
+        $r2 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.support.v7.widget.AppCompatSeekBar s>;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.a.d: void a(android.widget.TextView,android.support.v7.widget.AppCompatSeekBar,int)>($r6, $r2, 0);
+
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView r>;
+
+        $i1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: int h>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>($i1);
+
+     label2:
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView q>;
+
+        $r7 = new com.seattleclouds.previewer.appmart.order.a.f;
+
+        specialinvoke $r7.<com.seattleclouds.previewer.appmart.order.a.f: void <init>(com.seattleclouds.previewer.appmart.order.a.d,com.seattleclouds.previewer.appmart.order.a.i)>($r0, $r1);
+
+        virtualinvoke $r6.<android.widget.TextView: void setOnClickListener(android.view.View$OnClickListener)>($r7);
+
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView r>;
+
+        $r8 = new com.seattleclouds.previewer.appmart.order.a.g;
+
+        specialinvoke $r8.<com.seattleclouds.previewer.appmart.order.a.g: void <init>(com.seattleclouds.previewer.appmart.order.a.d,com.seattleclouds.previewer.appmart.order.a.i)>($r0, $r1);
+
+        virtualinvoke $r6.<android.widget.TextView: void setOnClickListener(android.view.View$OnClickListener)>($r8);
+
+        $r5 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a>;
+
+        $r9 = interfaceinvoke $r5.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r10 = (com.seattleclouds.previewer.appmart.order.b.b) $r9;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String d()>();
+
+        if $r11 == null goto label7;
+
+        $r12 = new java.lang.StringBuilder;
+
+        specialinvoke $r12.<java.lang.StringBuilder: void <init>()>();
+
+        $r13 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: android.content.Context e>;
+
+        $r14 = virtualinvoke $r13.<android.content.Context: android.content.res.Resources getResources()>();
+
+        $i1 = <com.seattleclouds.l: int new_order_payment_plans_prices>;
+
+        $r11 = virtualinvoke $r14.<android.content.res.Resources: java.lang.String getString(int)>($i1);
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\n");
+
+        $r5 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a>;
+
+        $r9 = interfaceinvoke $r5.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r10 = (com.seattleclouds.previewer.appmart.order.b.b) $r9;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String d()>();
+
+        $r12 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r11);
+
+        $r11 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView n>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r11);
+
+     label3:
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView l>;
+
+        $r5 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a>;
+
+        $r9 = interfaceinvoke $r5.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r10 = (com.seattleclouds.previewer.appmart.order.b.b) $r9;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String a()>();
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r11);
+
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView m>;
+
+        $r5 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a>;
+
+        $r9 = interfaceinvoke $r5.<java.util.List: java.lang.Object get(int)>($i0);
+
+        $r10 = (com.seattleclouds.previewer.appmart.order.b.b) $r9;
+
+        $r11 = virtualinvoke $r10.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String c()>();
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>($r11);
+
+        $i1 = <com.seattleclouds.previewer.appmart.order.a.d: int i>;
+
+        if $i1 != $i0 goto label8;
+
+        $r15 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: com.seattleclouds.previewer.appmart.order.b.a d>;
+
+        $r10 = virtualinvoke $r15.<com.seattleclouds.previewer.appmart.order.b.a: com.seattleclouds.previewer.appmart.order.b.b F()>();
+
+        if $r10 == null goto label8;
+
+        $z0 = 1;
+
+     label4:
+        $r16 = staticinvoke <java.lang.Boolean: java.lang.Boolean valueOf(boolean)>($z0);
+
+        $r17 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.support.v7.widget.CardView p>;
+
+        $z0 = virtualinvoke $r16.<java.lang.Boolean: boolean booleanValue()>();
+
+        virtualinvoke $r17.<android.support.v7.widget.CardView: void setSelected(boolean)>($z0);
+
+        $r17 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.support.v7.widget.CardView p>;
+
+        $r18 = new com.seattleclouds.previewer.appmart.order.a.h;
+
+        specialinvoke $r18.<com.seattleclouds.previewer.appmart.order.a.h: void <init>(com.seattleclouds.previewer.appmart.order.a.d,int,com.seattleclouds.previewer.appmart.order.a.i)>($r0, $i0, $r1);
+
+        virtualinvoke $r17.<android.support.v7.widget.CardView: void setOnClickListener(android.view.View$OnClickListener)>($r18);
+
+        return;
+
+     label5:
+        $r4 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.RelativeLayout t>;
+
+        virtualinvoke $r4.<android.widget.RelativeLayout: void setVisibility(int)>(0);
+
+        goto label1;
+
+     label6:
+        $r5 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List c>;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.a.d: java.util.List a> = $r5;
+
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView r>;
+
+        $r2 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.support.v7.widget.AppCompatSeekBar s>;
+
+        specialinvoke $r0.<com.seattleclouds.previewer.appmart.order.a.d: void a(android.widget.TextView,android.support.v7.widget.AppCompatSeekBar,int)>($r6, $r2, 10);
+
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView q>;
+
+        $i1 = $r0.<com.seattleclouds.previewer.appmart.order.a.d: int h>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setTextColor(int)>($i1);
+
+        goto label2;
+
+     label7:
+        $r6 = $r1.<com.seattleclouds.previewer.appmart.order.a.i: android.widget.TextView n>;
+
+        virtualinvoke $r6.<android.widget.TextView: void setText(java.lang.CharSequence)>("");
+
+        goto label3;
+
+     label8:
+        $z0 = 0;
+
+        goto label4;
+    }
+
+    public com.seattleclouds.previewer.appmart.order.a.i c(android.view.ViewGroup, int)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        android.view.ViewGroup $r1;
+        int $i0;
+        android.content.Context $r2;
+        android.view.LayoutInflater $r3;
+        android.view.View $r4;
+        com.seattleclouds.previewer.appmart.order.a.i $r5;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: android.view.ViewGroup;
+
+        $i0 := @parameter1: int;
+
+        $r2 = virtualinvoke $r1.<android.view.ViewGroup: android.content.Context getContext()>();
+
+        $r3 = staticinvoke <android.view.LayoutInflater: android.view.LayoutInflater 'from'(android.content.Context)>($r2);
+
+        $i0 = <com.seattleclouds.j: int fragment_new_order_payment_list_item>;
+
+        $r4 = virtualinvoke $r3.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r1, 0);
+
+        $r5 = new com.seattleclouds.previewer.appmart.order.a.i;
+
+        specialinvoke $r5.<com.seattleclouds.previewer.appmart.order.a.i: void <init>(com.seattleclouds.previewer.appmart.order.a.d,android.view.View)>($r0, $r4);
+
+        return $r5;
+    }
+
+    public void c(android.support.v7.widget.fb)
+    {
+        com.seattleclouds.previewer.appmart.order.a.d $r0;
+        android.support.v7.widget.fb $r1;
+        com.seattleclouds.previewer.appmart.order.a.i $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.a.d;
+
+        $r1 := @parameter0: android.support.v7.widget.fb;
+
+        $r2 = (com.seattleclouds.previewer.appmart.order.a.i) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.a.d: void a(com.seattleclouds.previewer.appmart.order.a.i)>($r2);
+
+        return;
+    }
+}

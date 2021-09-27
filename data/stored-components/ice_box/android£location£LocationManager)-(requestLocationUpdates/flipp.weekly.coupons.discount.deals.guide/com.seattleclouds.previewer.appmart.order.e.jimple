@@ -1,0 +1,440 @@
+class com.seattleclouds.previewer.appmart.order.e extends com.seattleclouds.api.d
+{
+    final com.seattleclouds.previewer.appmart.order.a a;
+    private java.lang.String b;
+
+    public void <init>(com.seattleclouds.previewer.appmart.order.a, android.support.v4.app.Fragment)
+    {
+        com.seattleclouds.previewer.appmart.order.e $r0;
+        com.seattleclouds.previewer.appmart.order.a $r1;
+        android.support.v4.app.Fragment $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.e;
+
+        $r1 := @parameter0: com.seattleclouds.previewer.appmart.order.a;
+
+        $r2 := @parameter1: android.support.v4.app.Fragment;
+
+        $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a> = $r1;
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void <init>(android.support.v4.app.Fragment)>($r2);
+
+        $r0.<com.seattleclouds.previewer.appmart.order.e: java.lang.String b> = null;
+
+        return;
+    }
+
+    protected volatile java.lang.Object a(java.lang.Object[])
+    {
+        com.seattleclouds.previewer.appmart.order.e $r0;
+        java.lang.String $r1;
+        java.lang.Object[] $r2;
+        java.lang.String[] $r3;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.e;
+
+        $r2 := @parameter0: java.lang.Object[];
+
+        $r3 = (java.lang.String[]) $r2;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.e: java.lang.String a(java.lang.String[])>($r3);
+
+        return $r1;
+    }
+
+    protected transient java.lang.String a(java.lang.String[])
+    {
+        com.seattleclouds.previewer.appmart.order.e $r0;
+        java.lang.String[] $r1;
+        int $i0, $i1;
+        java.lang.String $r2, $r3;
+        com.seattleclouds.api.b $r4;
+        org.json.JSONObject $r5;
+        boolean $z0;
+        com.seattleclouds.previewer.appmart.order.a $r6;
+        com.seattleclouds.previewer.appmart.order.b.a $r7;
+        com.seattleclouds.api.SCApiException $r8;
+        org.json.JSONArray $r9;
+        java.util.ArrayList $r10;
+        com.seattleclouds.previewer.appmart.order.b.b $r11;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.e;
+
+        $r1 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+        $r2 = $r1[0];
+
+        $i1 = lengthof $r1;
+
+        if $i1 <= 1 goto label01;
+
+        $r3 = $r1[1];
+
+        $r0.<com.seattleclouds.previewer.appmart.order.e: java.lang.String b> = $r3;
+
+     label01:
+        $r4 = staticinvoke <com.seattleclouds.api.b: com.seattleclouds.api.b a()>();
+
+        $r5 = virtualinvoke $r4.<com.seattleclouds.api.b: org.json.JSONObject h(java.lang.String)>($r2);
+
+        $z0 = virtualinvoke $r5.<org.json.JSONObject: boolean has(java.lang.String)>("abcId");
+
+     label02:
+        if $z0 == 0 goto label05;
+
+        $r6 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+     label03:
+        $r7 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r6);
+
+        $r2 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("abcId");
+
+        virtualinvoke $r7.<com.seattleclouds.previewer.appmart.order.b.a: void w(java.lang.String)>($r2);
+
+     label04:
+        return "ok";
+
+     label05:
+        $z0 = virtualinvoke $r5.<org.json.JSONObject: boolean has(java.lang.String)>("subscriptionId");
+
+     label06:
+        if $z0 == 0 goto label10;
+
+        $r6 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+     label07:
+        $r7 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r6);
+
+        $r2 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("subscriptionId");
+
+        virtualinvoke $r7.<com.seattleclouds.previewer.appmart.order.b.a: void x(java.lang.String)>($r2);
+
+     label08:
+        goto label04;
+
+     label09:
+        $r8 := @caughtexception;
+
+        virtualinvoke $r8.<com.seattleclouds.api.SCApiException: void printStackTrace()>();
+
+        $r5 = virtualinvoke $r8.<com.seattleclouds.api.SCApiException: org.json.JSONObject getDetails()>();
+
+        $z0 = virtualinvoke $r5.<org.json.JSONObject: boolean has(java.lang.String)>("message");
+
+        if $z0 == 0 goto label25;
+
+        $r5 = virtualinvoke $r8.<com.seattleclouds.api.SCApiException: org.json.JSONObject getDetails()>();
+
+        $r2 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("message");
+
+        return $r2;
+
+     label10:
+        $z0 = virtualinvoke $r5.<org.json.JSONObject: boolean has(java.lang.String)>("plans");
+
+     label11:
+        if $z0 == 0 goto label25;
+
+     label12:
+        $r9 = virtualinvoke $r5.<org.json.JSONObject: org.json.JSONArray optJSONArray(java.lang.String)>("plans");
+
+     label13:
+        $r10 = new java.util.ArrayList;
+
+     label14:
+        specialinvoke $r10.<java.util.ArrayList: void <init>()>();
+
+     label15:
+        $i1 = virtualinvoke $r9.<org.json.JSONArray: int length()>();
+
+     label16:
+        if $i0 >= $i1 goto label22;
+
+        $r11 = new com.seattleclouds.previewer.appmart.order.b.b;
+
+     label17:
+        specialinvoke $r11.<com.seattleclouds.previewer.appmart.order.b.b: void <init>()>();
+
+        $r5 = virtualinvoke $r9.<org.json.JSONArray: org.json.JSONObject getJSONObject(int)>($i0);
+
+        $r2 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("displayName");
+
+        virtualinvoke $r11.<com.seattleclouds.previewer.appmart.order.b.b: void a(java.lang.String)>($r2);
+
+        $r2 = virtualinvoke $r5.<org.json.JSONObject: java.lang.String getString(java.lang.String)>("name");
+
+        virtualinvoke $r11.<com.seattleclouds.previewer.appmart.order.b.b: void b(java.lang.String)>($r2);
+
+        $i1 = virtualinvoke $r5.<org.json.JSONObject: int getInt(java.lang.String)>("price");
+
+        virtualinvoke $r11.<com.seattleclouds.previewer.appmart.order.b.b: void a(int)>($i1);
+
+        $r2 = virtualinvoke $r11.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String d()>();
+
+     label18:
+        if $r2 == null goto label20;
+
+     label19:
+        $r2 = virtualinvoke $r11.<com.seattleclouds.previewer.appmart.order.b.b: java.lang.String d()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>(",", " \n - ");
+
+        virtualinvoke $r11.<com.seattleclouds.previewer.appmart.order.b.b: void c(java.lang.String)>($r2);
+
+     label20:
+        virtualinvoke $r10.<java.util.ArrayList: boolean add(java.lang.Object)>($r11);
+
+     label21:
+        $i0 = $i0 + 1;
+
+        goto label15;
+
+     label22:
+        $r6 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+     label23:
+        $r7 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r6);
+
+        virtualinvoke $r7.<com.seattleclouds.previewer.appmart.order.b.a: void a(java.util.ArrayList)>($r10);
+
+     label24:
+        goto label04;
+
+     label25:
+        return null;
+
+        catch com.seattleclouds.api.SCApiException from label01 to label02 with label09;
+        catch com.seattleclouds.api.SCApiException from label03 to label04 with label09;
+        catch com.seattleclouds.api.SCApiException from label05 to label06 with label09;
+        catch com.seattleclouds.api.SCApiException from label07 to label08 with label09;
+        catch com.seattleclouds.api.SCApiException from label10 to label11 with label09;
+        catch com.seattleclouds.api.SCApiException from label12 to label13 with label09;
+        catch com.seattleclouds.api.SCApiException from label14 to label16 with label09;
+        catch com.seattleclouds.api.SCApiException from label17 to label18 with label09;
+        catch com.seattleclouds.api.SCApiException from label19 to label21 with label09;
+        catch com.seattleclouds.api.SCApiException from label23 to label24 with label09;
+    }
+
+    protected void c(java.lang.String)
+    {
+        com.seattleclouds.previewer.appmart.order.e $r0;
+        java.lang.String $r1;
+        boolean $z0;
+        com.seattleclouds.previewer.appmart.order.a $r2, $r4;
+        com.seattleclouds.previewer.appmart.order.b.a $r3;
+        android.support.v4.app.Fragment $r5;
+        com.seattleclouds.previewer.appmart.order.c.ap $r6;
+        android.widget.TextView $r7;
+        android.support.v4.app.ac $r8;
+        android.widget.Toast $r9;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.e;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void onPostExecute(java.lang.Object)>($r1);
+
+        if $r1 == null goto label9;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>("ok");
+
+        if $z0 == 0 goto label8;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.e: java.lang.String b>;
+
+        if $r1 == null goto label5;
+
+        $r1 = $r0.<com.seattleclouds.previewer.appmart.order.e: java.lang.String b>;
+
+        $z0 = virtualinvoke $r1.<java.lang.String: boolean equals(java.lang.Object)>("device_visible");
+
+        if $z0 == 0 goto label5;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: boolean A()>();
+
+        if $z0 == 0 goto label2;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r4 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r5 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: android.support.v4.app.Fragment a(com.seattleclouds.previewer.appmart.order.a,int)>($r4, 0);
+
+        $r6 = (com.seattleclouds.previewer.appmart.order.c.ap) $r5;
+
+        staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.c.ap a(com.seattleclouds.previewer.appmart.order.a,com.seattleclouds.previewer.appmart.order.c.ap)>($r2, $r6);
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r6 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.c.ap i(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        if $r6 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r6 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.c.ap i(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        $z0 = virtualinvoke $r6.<com.seattleclouds.previewer.appmart.order.c.ap: boolean s()>();
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r6 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.c.ap i(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r6.<com.seattleclouds.previewer.appmart.order.c.ap: void ab()>();
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: void a(boolean)>(1);
+
+     label2:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: boolean B()>();
+
+        if $z0 == 0 goto label3;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        staticinvoke <com.seattleclouds.previewer.appmart.order.a: void a(com.seattleclouds.previewer.appmart.order.a,boolean)>($r2, 0);
+
+     label3:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: boolean C()>();
+
+        if $z0 == 0 goto label4;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        staticinvoke <com.seattleclouds.previewer.appmart.order.a: void a(com.seattleclouds.previewer.appmart.order.a,boolean)>($r2, 1);
+
+     label4:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: void d(boolean)>(1);
+
+        return;
+
+     label5:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: boolean B()>();
+
+        if $z0 == 0 goto label7;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        $z0 = virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: boolean A()>();
+
+        if $z0 == 0 goto label6;
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: void a(boolean)>(1);
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: void l(java.lang.String)>("Android");
+
+     label6:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r7 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: android.widget.TextView j(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r7.<android.widget.TextView: void setVisibility(int)>(8);
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r7 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: android.widget.TextView k(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r7.<android.widget.TextView: void setVisibility(int)>(0);
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        staticinvoke <com.seattleclouds.previewer.appmart.order.a: void a(com.seattleclouds.previewer.appmart.order.a,boolean)>($r2, 0);
+
+        goto label4;
+
+     label7:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        staticinvoke <com.seattleclouds.previewer.appmart.order.a: boolean b(com.seattleclouds.previewer.appmart.order.a,boolean)>($r2, 0);
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        staticinvoke <com.seattleclouds.previewer.appmart.order.a: void a(com.seattleclouds.previewer.appmart.order.a,boolean)>($r2, 1);
+
+        goto label4;
+
+     label8:
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r8 = virtualinvoke $r2.<com.seattleclouds.previewer.appmart.order.a: android.support.v4.app.ac n()>();
+
+        $r9 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r8, $r1, 0);
+
+        virtualinvoke $r9.<android.widget.Toast: void show()>();
+
+        $r2 = $r0.<com.seattleclouds.previewer.appmart.order.e: com.seattleclouds.previewer.appmart.order.a a>;
+
+        $r3 = staticinvoke <com.seattleclouds.previewer.appmart.order.a: com.seattleclouds.previewer.appmart.order.b.a e(com.seattleclouds.previewer.appmart.order.a)>($r2);
+
+        virtualinvoke $r3.<com.seattleclouds.previewer.appmart.order.b.a: void d(boolean)>(0);
+
+     label9:
+        return;
+    }
+
+    protected void onPostExecute(java.lang.Object)
+    {
+        com.seattleclouds.previewer.appmart.order.e $r0;
+        java.lang.Object $r1;
+        java.lang.String $r2;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.e;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = (java.lang.String) $r1;
+
+        virtualinvoke $r0.<com.seattleclouds.previewer.appmart.order.e: void c(java.lang.String)>($r2);
+
+        return;
+    }
+
+    protected void onPreExecute()
+    {
+        com.seattleclouds.previewer.appmart.order.e $r0;
+
+        $r0 := @this: com.seattleclouds.previewer.appmart.order.e;
+
+        specialinvoke $r0.<com.seattleclouds.api.d: void onPreExecute()>();
+
+        return;
+    }
+}

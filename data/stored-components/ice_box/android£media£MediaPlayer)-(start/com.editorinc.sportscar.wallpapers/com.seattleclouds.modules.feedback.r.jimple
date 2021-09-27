@@ -1,0 +1,76 @@
+final class com.seattleclouds.modules.feedback.r extends java.lang.Object implements android.os.Parcelable$Creator
+{
+
+    void <init>()
+    {
+        com.seattleclouds.modules.feedback.r $r0;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.r;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState a(android.os.Parcel)
+    {
+        com.seattleclouds.modules.feedback.r $r0;
+        android.os.Parcel $r1;
+        com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState $r2;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.r;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $r2 = new com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState;
+
+        specialinvoke $r2.<com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState: void <init>(android.os.Parcel,com.seattleclouds.modules.feedback.o)>($r1, null);
+
+        return $r2;
+    }
+
+    public com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState[] a(int)
+    {
+        com.seattleclouds.modules.feedback.r $r0;
+        int $i0;
+        com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState[] $r1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.r;
+
+        $i0 := @parameter0: int;
+
+        $r1 = newarray (com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState)[$i0];
+
+        return $r1;
+    }
+
+    public java.lang.Object createFromParcel(android.os.Parcel)
+    {
+        com.seattleclouds.modules.feedback.r $r0;
+        android.os.Parcel $r1;
+        com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState $r2;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.r;
+
+        $r1 := @parameter0: android.os.Parcel;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.feedback.r: com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState a(android.os.Parcel)>($r1);
+
+        return $r2;
+    }
+
+    public java.lang.Object[] newArray(int)
+    {
+        com.seattleclouds.modules.feedback.r $r0;
+        int $i0;
+        com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState[] $r1;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.r;
+
+        $i0 := @parameter0: int;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.feedback.r: com.seattleclouds.modules.feedback.PickerView$ImagePickerSavedState[] a(int)>($i0);
+
+        return $r1;
+    }
+}

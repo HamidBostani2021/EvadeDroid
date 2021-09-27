@@ -1,0 +1,64 @@
+public class com.seattleclouds.widget.h extends android.widget.ImageView
+{
+
+    public void <init>(android.content.Context)
+    {
+        com.seattleclouds.widget.h $r0;
+        android.content.Context $r1;
+
+        $r0 := @this: com.seattleclouds.widget.h;
+
+        $r1 := @parameter0: android.content.Context;
+
+        specialinvoke $r0.<android.widget.ImageView: void <init>(android.content.Context)>($r1);
+
+        return;
+    }
+
+    protected void onMeasure(int, int)
+    {
+        com.seattleclouds.widget.h $r0;
+        int $i0, $i1;
+        android.graphics.drawable.Drawable $r1;
+        float $f0, $f1;
+
+        $r0 := @this: com.seattleclouds.widget.h;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.widget.h: android.graphics.drawable.Drawable getDrawable()>();
+
+        if $r1 == null goto label1;
+
+        $i0 = staticinvoke <android.view.View$MeasureSpec: int getSize(int)>($i0);
+
+        $i1 = virtualinvoke $r1.<android.graphics.drawable.Drawable: int getIntrinsicHeight()>();
+
+        $f0 = (float) $i1;
+
+        $i1 = virtualinvoke $r1.<android.graphics.drawable.Drawable: int getIntrinsicWidth()>();
+
+        $f1 = (float) $i1;
+
+        $f0 = $f0 / $f1;
+
+        $f1 = (float) $i0;
+
+        $f0 = $f0 * $f1;
+
+        $f0 = $f0 + 0.5F;
+
+        $i1 = (int) $f0;
+
+        virtualinvoke $r0.<com.seattleclouds.widget.h: void setMeasuredDimension(int,int)>($i0, $i1);
+
+        return;
+
+     label1:
+        specialinvoke $r0.<android.widget.ImageView: void onMeasure(int,int)>($i0, $i1);
+
+        return;
+    }
+}

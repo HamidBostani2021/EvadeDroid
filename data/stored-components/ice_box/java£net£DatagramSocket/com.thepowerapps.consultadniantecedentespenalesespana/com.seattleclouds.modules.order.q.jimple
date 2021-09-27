@@ -1,0 +1,112 @@
+public class com.seattleclouds.modules.order.q extends java.lang.Object
+{
+    final com.seattleclouds.modules.order.d a;
+    private java.lang.String b;
+    private java.lang.String c;
+
+    public void <init>(com.seattleclouds.modules.order.d, java.lang.String, java.lang.String)
+    {
+        com.seattleclouds.modules.order.q $r0;
+        com.seattleclouds.modules.order.d $r1;
+        java.lang.String $r2, $r3;
+
+        $r0 := @this: com.seattleclouds.modules.order.q;
+
+        $r1 := @parameter0: com.seattleclouds.modules.order.d;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.q: com.seattleclouds.modules.order.d a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.order.q: java.lang.String b> = "";
+
+        $r0.<com.seattleclouds.modules.order.q: java.lang.String c> = "";
+
+        $r0.<com.seattleclouds.modules.order.q: java.lang.String b> = $r2;
+
+        $r0.<com.seattleclouds.modules.order.q: java.lang.String c> = $r3;
+
+        return;
+    }
+
+    static java.lang.String a(com.seattleclouds.modules.order.q)
+    {
+        com.seattleclouds.modules.order.q $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.order.q;
+
+        r1 = $r0.<com.seattleclouds.modules.order.q: java.lang.String b>;
+
+        return r1;
+    }
+
+    static java.lang.String a(com.seattleclouds.modules.order.q, java.lang.String)
+    {
+        com.seattleclouds.modules.order.q $r0;
+        java.lang.String $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.order.q;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r0.<com.seattleclouds.modules.order.q: java.lang.String b> = $r1;
+
+        return $r1;
+    }
+
+    static java.lang.String b(com.seattleclouds.modules.order.q)
+    {
+        com.seattleclouds.modules.order.q $r0;
+        java.lang.String r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.order.q;
+
+        r1 = $r0.<com.seattleclouds.modules.order.q: java.lang.String c>;
+
+        return r1;
+    }
+
+    public boolean equals(java.lang.Object)
+    {
+        com.seattleclouds.modules.order.q $r0;
+        java.lang.Object $r1;
+        boolean $z0;
+        java.lang.String $r2, $r3;
+
+        $r0 := @this: com.seattleclouds.modules.order.q;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $z0 = $r1 instanceof java.lang.String;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.order.q: java.lang.String b>;
+
+        if $r2 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.order.q: java.lang.String b>;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean isEmpty()>();
+
+        if $z0 != 0 goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.order.q: java.lang.String b>;
+
+        $r3 = (java.lang.String) $r1;
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>($r3);
+
+        return $z0;
+
+     label1:
+        $z0 = specialinvoke $r0.<java.lang.Object: boolean equals(java.lang.Object)>($r1);
+
+        return $z0;
+    }
+}

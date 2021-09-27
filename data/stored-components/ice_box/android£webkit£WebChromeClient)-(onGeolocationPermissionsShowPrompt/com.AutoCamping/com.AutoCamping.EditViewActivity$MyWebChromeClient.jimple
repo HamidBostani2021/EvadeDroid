@@ -1,0 +1,62 @@
+class com.AutoCamping.EditViewActivity$MyWebChromeClient extends android.webkit.WebChromeClient
+{
+    protected android.app.Activity mActivity;
+    final com.AutoCamping.EditViewActivity this$0;
+
+    public void <init>(com.AutoCamping.EditViewActivity, android.app.Activity)
+    {
+        com.AutoCamping.EditViewActivity$MyWebChromeClient $r0;
+        com.AutoCamping.EditViewActivity $r1;
+        android.app.Activity $r2;
+
+        $r0 := @this: com.AutoCamping.EditViewActivity$MyWebChromeClient;
+
+        $r1 := @parameter0: com.AutoCamping.EditViewActivity;
+
+        $r2 := @parameter1: android.app.Activity;
+
+        $r0.<com.AutoCamping.EditViewActivity$MyWebChromeClient: com.AutoCamping.EditViewActivity this$0> = $r1;
+
+        specialinvoke $r0.<android.webkit.WebChromeClient: void <init>()>();
+
+        $r0.<com.AutoCamping.EditViewActivity$MyWebChromeClient: android.app.Activity mActivity> = null;
+
+        $r0.<com.AutoCamping.EditViewActivity$MyWebChromeClient: android.app.Activity mActivity> = $r2;
+
+        return;
+    }
+
+    public void onGeolocationPermissionsShowPrompt(java.lang.String, android.webkit.GeolocationPermissions$Callback)
+    {
+        com.AutoCamping.EditViewActivity$MyWebChromeClient $r0;
+        java.lang.String $r1;
+        android.webkit.GeolocationPermissions$Callback $r2;
+
+        $r0 := @this: com.AutoCamping.EditViewActivity$MyWebChromeClient;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: android.webkit.GeolocationPermissions$Callback;
+
+        specialinvoke $r0.<android.webkit.WebChromeClient: void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback)>("", $r2);
+
+        interfaceinvoke $r2.<android.webkit.GeolocationPermissions$Callback: void invoke(java.lang.String,boolean,boolean)>("", 1, 0);
+
+        return;
+    }
+
+    public void onProgressChanged(android.webkit.WebView, int)
+    {
+        com.AutoCamping.EditViewActivity$MyWebChromeClient $r0;
+        android.webkit.WebView $r1;
+        int $i0;
+
+        $r0 := @this: com.AutoCamping.EditViewActivity$MyWebChromeClient;
+
+        $r1 := @parameter0: android.webkit.WebView;
+
+        $i0 := @parameter1: int;
+
+        return;
+    }
+}

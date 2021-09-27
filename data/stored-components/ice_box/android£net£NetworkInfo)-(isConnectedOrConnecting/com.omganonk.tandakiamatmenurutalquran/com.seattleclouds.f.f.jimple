@@ -1,0 +1,481 @@
+public class com.seattleclouds.f.f extends com.seattleclouds.f.a
+{
+    public static final com.seattleclouds.f.f a;
+    private static final java.lang.String b;
+
+    static void <clinit>()
+    {
+        java.lang.String $r0;
+        com.seattleclouds.f.f $r1;
+        java.lang.Class $r2;
+
+        $r1 = new com.seattleclouds.f.f;
+
+        specialinvoke $r1.<com.seattleclouds.f.f: void <init>(java.lang.String)>("Theme.Empty");
+
+        <com.seattleclouds.f.f: com.seattleclouds.f.f a> = $r1;
+
+        $r2 = class "Lcom/seattleclouds/f/f;";
+
+        $r0 = virtualinvoke $r2.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        <com.seattleclouds.f.f: java.lang.String b> = $r0;
+
+        return;
+    }
+
+    public void <init>(java.lang.String)
+    {
+        com.seattleclouds.f.f $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: java.lang.String;
+
+        specialinvoke $r0.<com.seattleclouds.f.a: void <init>(java.lang.String)>($r1);
+
+        return;
+    }
+
+    public static com.seattleclouds.f.f e(java.lang.String)
+    {
+        java.lang.String $r0;
+        boolean $z0;
+        com.seattleclouds.cc $r1;
+        java.util.Map $r2;
+        java.lang.Object $r3;
+        com.seattleclouds.f.a $r4;
+        com.seattleclouds.f.f $r5;
+
+        $r0 := @parameter0: java.lang.String;
+
+        $r1 = <com.seattleclouds.App: com.seattleclouds.cc c>;
+
+        $r2 = virtualinvoke $r1.<com.seattleclouds.cc: java.util.Map k()>();
+
+        $r3 = interfaceinvoke $r2.<java.util.Map: java.lang.Object get(java.lang.Object)>($r0);
+
+        $r4 = (com.seattleclouds.f.a) $r3;
+
+        $z0 = $r4 instanceof com.seattleclouds.f.f;
+
+        if $z0 == 0 goto label1;
+
+        $r5 = (com.seattleclouds.f.f) $r4;
+
+        return $r5;
+
+     label1:
+        return null;
+    }
+
+    public int a(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.f.f: java.lang.Integer d(java.lang.String)>("primaryColor");
+
+        if $r2 != null goto label1;
+
+        $i0 = <com.seattleclouds.c: int colorPrimary>;
+
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, $i0);
+
+        return $i0;
+
+     label1:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public int b(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.f.f: java.lang.Integer d(java.lang.String)>("primaryColor");
+
+        if $r2 != null goto label1;
+
+        $i0 = <com.seattleclouds.c: int colorPrimaryDark>;
+
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, $i0);
+
+        return $i0;
+
+     label1:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        $i0 = staticinvoke <com.seattleclouds.f.b: int a(int)>($i0);
+
+        return $i0;
+    }
+
+    public java.lang.String b()
+    {
+        com.seattleclouds.f.f $r0;
+        java.lang.String $r1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.f.a: java.lang.String b()>();
+
+        if $r1 == null goto label1;
+
+        $r1 = specialinvoke $r0.<com.seattleclouds.f.a: java.lang.String b()>();
+
+        return $r1;
+
+     label1:
+        return "Theme.Base.Light.DarkBars";
+    }
+
+    public int c(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2, $r3;
+        int $i0;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.f.f: java.lang.Integer d(java.lang.String)>("accentColor");
+
+        $r3 = $r2;
+
+        if $r2 != null goto label1;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.f.f: java.lang.Integer d(java.lang.String)>("primaryColor");
+
+     label1:
+        if $r3 != null goto label2;
+
+        $i0 = <com.seattleclouds.c: int colorAccent>;
+
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, $i0);
+
+        return $i0;
+
+     label2:
+        $i0 = virtualinvoke $r3.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public int d(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        boolean $z0;
+        java.lang.String $r2;
+        int $i0;
+        java.lang.Integer $r3;
+        java.lang.Throwable $r4;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $z0 = staticinvoke <com.seattleclouds.util.aw: boolean c(android.content.Context,int)>($r1, 16842839);
+
+        if $z0 == 0 goto label2;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.f.f: java.lang.String b()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("Theme.Base");
+
+        if $z0 == 0 goto label1;
+
+        $i0 = <com.seattleclouds.e: int background_floating_material_dark>;
+
+        $i0 = staticinvoke <android.support.v4.content.c: int b(android.content.Context,int)>($r1, $i0);
+
+        return $i0;
+
+     label1:
+        $i0 = <com.seattleclouds.e: int background_floating_material_light>;
+
+        $i0 = staticinvoke <android.support.v4.content.c: int b(android.content.Context,int)>($r1, $i0);
+
+        return $i0;
+
+     label2:
+        $r3 = virtualinvoke $r0.<com.seattleclouds.f.f: java.lang.Integer d(java.lang.String)>("windowBackgroundColor");
+
+        if $r3 != null goto label7;
+
+     label3:
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, 16842836);
+
+     label4:
+        return $i0;
+
+     label5:
+        $r4 := @caughtexception;
+
+        $r2 = <com.seattleclouds.f.f: java.lang.String b>;
+
+        staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>($r2, "android.R.attr.windowBackground is not a color => use hardcoded ones");
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.f.f: java.lang.String b()>();
+
+        $z0 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>("Theme.Base");
+
+        if $z0 == 0 goto label6;
+
+        $i0 = <com.seattleclouds.e: int background_material_dark>;
+
+        $i0 = staticinvoke <android.support.v4.content.c: int b(android.content.Context,int)>($r1, $i0);
+
+        return $i0;
+
+     label6:
+        $i0 = <com.seattleclouds.e: int background_material_light>;
+
+        $i0 = staticinvoke <android.support.v4.content.c: int b(android.content.Context,int)>($r1, $i0);
+
+        return $i0;
+
+     label7:
+        $i0 = virtualinvoke $r3.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+
+        catch android.content.res.Resources$NotFoundException from label3 to label4 with label5;
+    }
+
+    public int e(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2;
+        com.seattleclouds.f.a $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = null;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.f.f: com.seattleclouds.f.a c(java.lang.String)>("appBarStyle");
+
+        if $r3 == null goto label1;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.f.a: java.lang.Integer d(java.lang.String)>("accentColor");
+
+     label1:
+        if $r2 != null goto label2;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.f.f: int c(android.content.Context)>($r1);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label2:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        $i1 = virtualinvoke $r0.<com.seattleclouds.f.f: int a(android.content.Context)>($r1);
+
+        if $i0 != $i1 goto label3;
+
+        $i0 = <com.seattleclouds.c: int colorControlNormal>;
+
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, $i0);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label3:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public int f(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2;
+        com.seattleclouds.f.a $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = null;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.f.f: com.seattleclouds.f.a c(java.lang.String)>("appBarStyle");
+
+        if $r3 == null goto label1;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.f.a: java.lang.Integer d(java.lang.String)>("itemColor");
+
+     label1:
+        if $r2 == null goto label2;
+
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        $i1 = virtualinvoke $r0.<com.seattleclouds.f.f: int a(android.content.Context)>($r1);
+
+        if $i0 != $i1 goto label3;
+
+     label2:
+        $i0 = <com.seattleclouds.c: int colorControlNormal>;
+
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, $i0);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label3:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public int g(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2;
+        com.seattleclouds.f.a $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = null;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.f.f: com.seattleclouds.f.a c(java.lang.String)>("appBarStyle");
+
+        if $r3 == null goto label1;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.f.a: java.lang.Integer d(java.lang.String)>("titleTextColor");
+
+     label1:
+        if $r2 != null goto label2;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.f.f: int f(android.content.Context)>($r1);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label2:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        $i1 = virtualinvoke $r0.<com.seattleclouds.f.f: int a(android.content.Context)>($r1);
+
+        if $i0 != $i1 goto label3;
+
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, 16842806);
+
+        return $i0;
+
+     label3:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public int h(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2;
+        com.seattleclouds.f.a $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = null;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.f.f: com.seattleclouds.f.a c(java.lang.String)>("tabBarStyle");
+
+        if $r3 == null goto label1;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.f.a: java.lang.Integer d(java.lang.String)>("accentColor");
+
+     label1:
+        if $r2 != null goto label2;
+
+        $i0 = virtualinvoke $r0.<com.seattleclouds.f.f: int c(android.content.Context)>($r1);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label2:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        $i1 = virtualinvoke $r0.<com.seattleclouds.f.f: int a(android.content.Context)>($r1);
+
+        if $i0 != $i1 goto label3;
+
+        $i0 = <com.seattleclouds.c: int colorControlNormal>;
+
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, $i0);
+
+        $r2 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+     label3:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+
+    public int i(android.content.Context)
+    {
+        com.seattleclouds.f.f $r0;
+        android.content.Context $r1;
+        java.lang.Integer $r2;
+        com.seattleclouds.f.a $r3;
+        int $i0, $i1;
+
+        $r0 := @this: com.seattleclouds.f.f;
+
+        $r1 := @parameter0: android.content.Context;
+
+        $r2 = null;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.f.f: com.seattleclouds.f.a c(java.lang.String)>("tabBarStyle");
+
+        if $r3 == null goto label1;
+
+        $r2 = virtualinvoke $r3.<com.seattleclouds.f.a: java.lang.Integer d(java.lang.String)>("itemColor");
+
+     label1:
+        if $r2 == null goto label2;
+
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        $i1 = virtualinvoke $r0.<com.seattleclouds.f.f: int a(android.content.Context)>($r1);
+
+        if $i0 != $i1 goto label3;
+
+     label2:
+        $i0 = staticinvoke <com.seattleclouds.util.aw: int a(android.content.Context,int)>($r1, 16842806);
+
+        return $i0;
+
+     label3:
+        $i0 = virtualinvoke $r2.<java.lang.Integer: int intValue()>();
+
+        return $i0;
+    }
+}

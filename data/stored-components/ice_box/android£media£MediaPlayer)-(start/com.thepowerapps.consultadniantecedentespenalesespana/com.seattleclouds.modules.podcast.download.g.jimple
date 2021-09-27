@@ -1,0 +1,1017 @@
+public class com.seattleclouds.modules.podcast.download.g extends com.seattleclouds.r implements android.widget.AdapterView$OnItemClickListener
+{
+    private android.view.View a;
+    private java.util.ArrayList ai;
+    private com.seattleclouds.modules.podcast.download.PodcastDownloadService aj;
+    private boolean ak;
+    private final android.support.v7.view.c al;
+    private final android.content.BroadcastReceiver am;
+    private final android.widget.BaseAdapter an;
+    private final android.content.ServiceConnection ao;
+    private android.widget.GridView b;
+    private int c;
+    private int d;
+    private int e;
+    private java.util.ArrayList f;
+    private android.support.v4.content.q g;
+    private com.google.android.bitmapfun.v h;
+    private android.support.v7.view.b i;
+
+    public void <init>()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        java.util.ArrayList $r1;
+        com.seattleclouds.modules.podcast.download.m $r2;
+        com.seattleclouds.modules.podcast.download.o $r3;
+        com.seattleclouds.modules.podcast.download.p $r4;
+        com.seattleclouds.modules.podcast.download.q $r5;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        specialinvoke $r0.<com.seattleclouds.r: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: int e> = 0;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList f> = $r1;
+
+        $r1 = new java.util.ArrayList;
+
+        specialinvoke $r1.<java.util.ArrayList: void <init>()>();
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList ai> = $r1;
+
+        $r2 = new com.seattleclouds.modules.podcast.download.m;
+
+        specialinvoke $r2.<com.seattleclouds.modules.podcast.download.m: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.c al> = $r2;
+
+        $r3 = new com.seattleclouds.modules.podcast.download.o;
+
+        specialinvoke $r3.<com.seattleclouds.modules.podcast.download.o: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.content.BroadcastReceiver am> = $r3;
+
+        $r4 = new com.seattleclouds.modules.podcast.download.p;
+
+        specialinvoke $r4.<com.seattleclouds.modules.podcast.download.p: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.BaseAdapter an> = $r4;
+
+        $r5 = new com.seattleclouds.modules.podcast.download.q;
+
+        specialinvoke $r5.<com.seattleclouds.modules.podcast.download.q: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.content.ServiceConnection ao> = $r5;
+
+        return;
+    }
+
+    static android.support.v7.view.b a(com.seattleclouds.modules.podcast.download.g, android.support.v7.view.b)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.support.v7.view.b $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 := @parameter1: android.support.v7.view.b;
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i> = $r1;
+
+        return $r1;
+    }
+
+    static com.google.android.bitmapfun.v a(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        com.google.android.bitmapfun.v r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h>;
+
+        return r1;
+    }
+
+    static com.seattleclouds.modules.podcast.download.PodcastDownloadService a(com.seattleclouds.modules.podcast.download.g, com.seattleclouds.modules.podcast.download.PodcastDownloadService)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService $r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 := @parameter1: com.seattleclouds.modules.podcast.download.PodcastDownloadService;
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: com.seattleclouds.modules.podcast.download.PodcastDownloadService aj> = $r1;
+
+        return $r1;
+    }
+
+    static void a(com.seattleclouds.modules.podcast.download.g, int)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        $i0 := @parameter1: int;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void c(int)>($i0);
+
+        return;
+    }
+
+    private void ab()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        java.util.ArrayList $r1;
+        java.util.List $r2;
+        java.util.Iterator $r3;
+        boolean $z0;
+        java.lang.Object $r4;
+        com.seattleclouds.modules.podcast.PodcastItem $r5;
+        com.seattleclouds.modules.podcast.download.l $r6;
+        android.support.v7.view.b $r7;
+        android.widget.BaseAdapter $r8;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList f>;
+
+        virtualinvoke $r1.<java.util.ArrayList: void clear()>();
+
+        $r2 = staticinvoke <com.seattleclouds.modules.podcast.w: java.util.List a()>();
+
+        $r3 = interfaceinvoke $r2.<java.util.List: java.util.Iterator iterator()>();
+
+     label1:
+        $z0 = interfaceinvoke $r3.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 == 0 goto label2;
+
+        $r4 = interfaceinvoke $r3.<java.util.Iterator: java.lang.Object next()>();
+
+        $r5 = (com.seattleclouds.modules.podcast.PodcastItem) $r4;
+
+        $z0 = virtualinvoke $r5.<com.seattleclouds.modules.podcast.PodcastItem: boolean isDownloaded()>();
+
+        if $z0 == 0 goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList f>;
+
+        virtualinvoke $r1.<java.util.ArrayList: boolean add(java.lang.Object)>($r5);
+
+        goto label1;
+
+     label2:
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList f>;
+
+        $r6 = new com.seattleclouds.modules.podcast.download.l;
+
+        specialinvoke $r6.<com.seattleclouds.modules.podcast.download.l: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        staticinvoke <java.util.Collections: void sort(java.util.List,java.util.Comparator)>($r1, $r6);
+
+        $r7 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        if $r7 == null goto label3;
+
+        $r7 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        virtualinvoke $r7.<android.support.v7.view.b: void d()>();
+
+     label3:
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.BaseAdapter an>;
+
+        virtualinvoke $r8.<android.widget.BaseAdapter: void notifyDataSetChanged()>();
+
+        return;
+    }
+
+    private void ac()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.content.Intent $r1;
+        android.support.v4.app.ac $r2, $r3;
+        android.content.ServiceConnection $r4;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r1 = new android.content.Intent;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        specialinvoke $r1.<android.content.Intent: void <init>(android.content.Context,java.lang.Class)>($r3, class "Lcom/seattleclouds/modules/podcast/download/PodcastDownloadService;");
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: android.content.ServiceConnection ao>;
+
+        virtualinvoke $r2.<android.support.v4.app.ac: boolean bindService(android.content.Intent,android.content.ServiceConnection,int)>($r1, $r4, 1);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: boolean ak> = 1;
+
+        return;
+    }
+
+    private void ad()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.content.ServiceConnection $r1;
+        android.support.v4.app.ac $r2;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $z0 = $r0.<com.seattleclouds.modules.podcast.download.g: boolean ak>;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.content.ServiceConnection ao>;
+
+        virtualinvoke $r2.<android.support.v4.app.ac: void unbindService(android.content.ServiceConnection)>($r1);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: boolean ak> = 0;
+
+     label1:
+        return;
+    }
+
+    private boolean ae()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        boolean $z0;
+        android.support.v4.app.ac $r1;
+        int $i0;
+        int[] $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a()>();
+
+        if $z0 == 0 goto label4;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <android.support.v4.content.c: int a(android.content.Context,java.lang.String)>($r1, "android.permission.WRITE_EXTERNAL_STORAGE");
+
+        if $i0 != 0 goto label3;
+
+        $z0 = 1;
+
+     label1:
+        if $z0 != 0 goto label2;
+
+        $r2 = newarray (int)[2];
+
+        $i0 = <com.seattleclouds.l: int podcast_permission_rationale_delete_external_storage>;
+
+        $r2[0] = $i0;
+
+        $i0 = <com.seattleclouds.l: int podcast_delete_external_storage_permission_required_toast>;
+
+        $r2[1] = $i0;
+
+        staticinvoke <com.seattleclouds.util.w: void a(android.support.v4.app.Fragment,int,java.lang.String,int[])>($r0, 1001, "android.permission.WRITE_EXTERNAL_STORAGE", $r2);
+
+     label2:
+        if $z0 != 0 goto label4;
+
+        return 1;
+
+     label3:
+        $z0 = 0;
+
+        goto label1;
+
+     label4:
+        return 0;
+    }
+
+    private boolean af()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        boolean $z0;
+        android.support.v4.app.ac $r1;
+        int $i0;
+        int[] $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a()>();
+
+        if $z0 == 0 goto label4;
+
+        $r1 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <android.support.v4.content.c: int a(android.content.Context,java.lang.String)>($r1, "android.permission.READ_EXTERNAL_STORAGE");
+
+        if $i0 != 0 goto label3;
+
+        $z0 = 1;
+
+     label1:
+        if $z0 != 0 goto label2;
+
+        $r2 = newarray (int)[2];
+
+        $i0 = <com.seattleclouds.l: int podcast_permission_rationale_read_external_storage>;
+
+        $r2[0] = $i0;
+
+        $i0 = <com.seattleclouds.l: int podcast_read_external_storage_permission_required_toast>;
+
+        $r2[1] = $i0;
+
+        staticinvoke <com.seattleclouds.util.w: void a(android.support.v4.app.Fragment,int,java.lang.String,int[])>($r0, 1002, "android.permission.READ_EXTERNAL_STORAGE", $r2);
+
+     label2:
+        if $z0 != 0 goto label4;
+
+        return 1;
+
+     label3:
+        $z0 = 0;
+
+        goto label1;
+
+     label4:
+        return 0;
+    }
+
+    static int b(com.seattleclouds.modules.podcast.download.g, int)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        int $i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        $i0 := @parameter1: int;
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: int e> = $i0;
+
+        return $i0;
+    }
+
+    static android.support.v7.view.b b(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.support.v7.view.b r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        return r1;
+    }
+
+    static android.support.v7.view.c c(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.support.v7.view.c r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.c al>;
+
+        return r1;
+    }
+
+    private void c(int)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        int $i0;
+        android.widget.BaseAdapter $r1;
+        java.lang.Object $r2;
+        com.seattleclouds.modules.podcast.PodcastItem $r3;
+        java.util.ArrayList $r4;
+        boolean $z0;
+        android.widget.GridView $r5;
+        android.support.v7.view.b $r6;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $i0 := @parameter0: int;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.BaseAdapter an>;
+
+        $r2 = virtualinvoke $r1.<android.widget.BaseAdapter: java.lang.Object getItem(int)>($i0);
+
+        $r3 = (com.seattleclouds.modules.podcast.PodcastItem) $r2;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList ai>;
+
+        $z0 = virtualinvoke $r4.<java.util.ArrayList: boolean contains(java.lang.Object)>($r3);
+
+        if $z0 == 0 goto label2;
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        virtualinvoke $r5.<android.widget.GridView: void setItemChecked(int,boolean)>($i0, 0);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList ai>;
+
+        virtualinvoke $r4.<java.util.ArrayList: boolean remove(java.lang.Object)>($r3);
+
+     label1:
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList ai>;
+
+        $i0 = virtualinvoke $r4.<java.util.ArrayList: int size()>();
+
+        if $i0 <= 0 goto label3;
+
+        $r6 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        virtualinvoke $r6.<android.support.v7.view.b: void d()>();
+
+        return;
+
+     label2:
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        virtualinvoke $r5.<android.widget.GridView: void setItemChecked(int,boolean)>($i0, 1);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList ai>;
+
+        virtualinvoke $r4.<java.util.ArrayList: boolean add(java.lang.Object)>($r3);
+
+        goto label1;
+
+     label3:
+        $r6 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        virtualinvoke $r6.<android.support.v7.view.b: void c()>();
+
+        return;
+    }
+
+    static int d(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        i0 = $r0.<com.seattleclouds.modules.podcast.download.g: int e>;
+
+        return i0;
+    }
+
+    static android.widget.GridView e(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.widget.GridView r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        return r1;
+    }
+
+    static int f(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        i0 = $r0.<com.seattleclouds.modules.podcast.download.g: int c>;
+
+        return i0;
+    }
+
+    static int g(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        int i0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        i0 = $r0.<com.seattleclouds.modules.podcast.download.g: int d>;
+
+        return i0;
+    }
+
+    static java.util.ArrayList h(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList ai>;
+
+        return r1;
+    }
+
+    static boolean i(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        boolean $z0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: boolean ae()>();
+
+        return $z0;
+    }
+
+    static com.seattleclouds.modules.podcast.download.PodcastDownloadService j(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        com.seattleclouds.modules.podcast.download.PodcastDownloadService r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: com.seattleclouds.modules.podcast.download.PodcastDownloadService aj>;
+
+        return r1;
+    }
+
+    static android.widget.BaseAdapter k(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.widget.BaseAdapter r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.BaseAdapter an>;
+
+        return r1;
+    }
+
+    static void l(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void ab()>();
+
+        return;
+    }
+
+    static java.util.ArrayList m(com.seattleclouds.modules.podcast.download.g)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        java.util.ArrayList r1;
+
+        $r0 := @parameter0: com.seattleclouds.modules.podcast.download.g;
+
+        r1 = $r0.<com.seattleclouds.modules.podcast.download.g: java.util.ArrayList f>;
+
+        return r1;
+    }
+
+    public void F()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        com.google.android.bitmapfun.v $r1;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h>;
+
+        virtualinvoke $r1.<com.google.android.bitmapfun.v: void i()>();
+
+     label1:
+        specialinvoke $r0.<com.seattleclouds.r: void F()>();
+
+        return;
+    }
+
+    public android.view.View a(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.view.LayoutInflater $r1;
+        android.view.ViewGroup $r2;
+        android.os.Bundle $r3;
+        int $i0;
+        android.view.View $r4;
+        android.widget.GridView $r5;
+        android.widget.BaseAdapter $r6;
+        com.seattleclouds.modules.podcast.download.h $r7;
+        com.seattleclouds.modules.podcast.download.j $r8;
+        android.view.ViewTreeObserver $r9;
+        com.seattleclouds.modules.podcast.download.k $r10;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 := @parameter0: android.view.LayoutInflater;
+
+        $r2 := @parameter1: android.view.ViewGroup;
+
+        $r3 := @parameter2: android.os.Bundle;
+
+        $i0 = <com.seattleclouds.j: int podcast_downloads_grid>;
+
+        $r4 = virtualinvoke $r1.<android.view.LayoutInflater: android.view.View inflate(int,android.view.ViewGroup,boolean)>($i0, $r2, 0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.view.View a> = $r4;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: android.view.View a>;
+
+        $i0 = <com.seattleclouds.h: int grid>;
+
+        $r4 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        $r5 = (android.widget.GridView) $r4;
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b> = $r5;
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        $r6 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.BaseAdapter an>;
+
+        virtualinvoke $r5.<android.widget.GridView: void setAdapter(android.widget.ListAdapter)>($r6);
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        virtualinvoke $r5.<android.widget.GridView: void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)>($r0);
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: android.view.View a>;
+
+        $i0 = <com.seattleclouds.h: int emptyDownloadedView>;
+
+        $r4 = virtualinvoke $r4.<android.view.View: android.view.View findViewById(int)>($i0);
+
+        virtualinvoke $r5.<android.widget.GridView: void setEmptyView(android.view.View)>($r4);
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        $r7 = new com.seattleclouds.modules.podcast.download.h;
+
+        specialinvoke $r7.<com.seattleclouds.modules.podcast.download.h: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        virtualinvoke $r5.<android.widget.GridView: void setOnScrollListener(android.widget.AbsListView$OnScrollListener)>($r7);
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        $r8 = new com.seattleclouds.modules.podcast.download.j;
+
+        specialinvoke $r8.<com.seattleclouds.modules.podcast.download.j: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        virtualinvoke $r5.<android.widget.GridView: void setOnItemLongClickListener(android.widget.AdapterView$OnItemLongClickListener)>($r8);
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.GridView b>;
+
+        $r9 = virtualinvoke $r5.<android.widget.GridView: android.view.ViewTreeObserver getViewTreeObserver()>();
+
+        $r10 = new com.seattleclouds.modules.podcast.download.k;
+
+        specialinvoke $r10.<com.seattleclouds.modules.podcast.download.k: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        virtualinvoke $r9.<android.view.ViewTreeObserver: void addOnGlobalLayoutListener(android.view.ViewTreeObserver$OnGlobalLayoutListener)>($r10);
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: android.view.View a>;
+
+        return $r4;
+    }
+
+    public void a(int, java.lang.String[], int[])
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        int $i0;
+        java.lang.String[] $r1;
+        int[] $r2;
+        boolean $z0;
+        android.os.Handler $r3;
+        android.os.Looper $r4;
+        com.seattleclouds.modules.podcast.download.r $r5;
+        android.support.v4.app.ac $r6;
+        android.widget.Toast $r7;
+        com.seattleclouds.modules.podcast.download.i $r8;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: java.lang.String[];
+
+        $r2 := @parameter2: int[];
+
+        lookupswitch($i0)
+        {
+            case 1001: goto label2;
+            case 1002: goto label4;
+            default: goto label1;
+        };
+
+     label1:
+        return;
+
+     label2:
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(java.lang.String[],int[],java.lang.String)>($r1, $r2, "android.permission.WRITE_EXTERNAL_STORAGE");
+
+        if $z0 != 0 goto label3;
+
+        $r3 = new android.os.Handler;
+
+        $r4 = staticinvoke <android.os.Looper: android.os.Looper myLooper()>();
+
+        specialinvoke $r3.<android.os.Handler: void <init>(android.os.Looper)>($r4);
+
+        $r5 = new com.seattleclouds.modules.podcast.download.r;
+
+        specialinvoke $r5.<com.seattleclouds.modules.podcast.download.r: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        virtualinvoke $r3.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r5, 400L);
+
+        return;
+
+     label3:
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int common_permission_granted>;
+
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r6, $i0, 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+        return;
+
+     label4:
+        $z0 = staticinvoke <com.seattleclouds.util.w: boolean a(java.lang.String[],int[],java.lang.String)>($r1, $r2, "android.permission.READ_EXTERNAL_STORAGE");
+
+        if $z0 != 0 goto label5;
+
+        $r3 = new android.os.Handler;
+
+        $r4 = staticinvoke <android.os.Looper: android.os.Looper myLooper()>();
+
+        specialinvoke $r3.<android.os.Handler: void <init>(android.os.Looper)>($r4);
+
+        $r8 = new com.seattleclouds.modules.podcast.download.i;
+
+        specialinvoke $r8.<com.seattleclouds.modules.podcast.download.i: void <init>(com.seattleclouds.modules.podcast.download.g)>($r0);
+
+        virtualinvoke $r3.<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)>($r8, 400L);
+
+        return;
+
+     label5:
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $i0 = <com.seattleclouds.l: int common_permission_granted>;
+
+        $r7 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,int,int)>($r6, $i0, 0);
+
+        virtualinvoke $r7.<android.widget.Toast: void show()>();
+
+        return;
+    }
+
+    public void a(android.os.Bundle)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.os.Bundle $r1;
+        com.google.android.bitmapfun.t $r2;
+        int $i0;
+        android.support.v4.app.ac $r3;
+        android.support.v4.content.q $r4;
+        android.graphics.Bitmap$CompressFormat $r5;
+        android.content.res.Resources $r6;
+        com.seattleclouds.modules.podcast.o $r7;
+        com.google.android.bitmapfun.v $r8;
+        android.support.v4.app.aj $r9;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.os.Bundle)>($r1);
+
+        $i0 = <com.seattleclouds.l: int podcast_downloads_page_title>;
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void b(int)>($i0);
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r4 = staticinvoke <android.support.v4.content.q: android.support.v4.content.q a(android.content.Context)>($r3);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.content.q g> = $r4;
+
+        $r2 = new com.google.android.bitmapfun.t;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        specialinvoke $r2.<com.google.android.bitmapfun.t: void <init>(android.content.Context,java.lang.String)>($r3, "podcast/thumbnails");
+
+        $r2.<com.google.android.bitmapfun.t: boolean g> = 1;
+
+        $r5 = <android.graphics.Bitmap$CompressFormat: android.graphics.Bitmap$CompressFormat PNG>;
+
+        $r2.<com.google.android.bitmapfun.t: android.graphics.Bitmap$CompressFormat d> = $r5;
+
+        virtualinvoke $r2.<com.google.android.bitmapfun.t: void a(float)>(0.05F);
+
+        $r2.<com.google.android.bitmapfun.t: boolean i> = 1;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.content.res.Resources o()>();
+
+        $i0 = <com.seattleclouds.f: int podcast_cover_width>;
+
+        $i0 = virtualinvoke $r6.<android.content.res.Resources: int getDimensionPixelSize(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: int c> = $i0;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.content.res.Resources o()>();
+
+        $i0 = <com.seattleclouds.f: int podcast_card_spacing>;
+
+        $i0 = virtualinvoke $r6.<android.content.res.Resources: int getDimensionPixelSize(int)>($i0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: int d> = $i0;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $i0 = staticinvoke <com.seattleclouds.util.bt: int a(android.content.Context,float)>($r3, 140.0F);
+
+        $r7 = new com.seattleclouds.modules.podcast.o;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        specialinvoke $r7.<com.seattleclouds.modules.podcast.o: void <init>(android.content.Context,int,boolean)>($r3, $i0, 0);
+
+        $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h> = $r7;
+
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h>;
+
+        $i0 = <com.seattleclouds.g: int podcast_cover_placeholder_small>;
+
+        virtualinvoke $r8.<com.google.android.bitmapfun.v: void b(int)>($i0);
+
+        $r8 = $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h>;
+
+        $r3 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r9 = virtualinvoke $r3.<android.support.v4.app.ac: android.support.v4.app.aj f()>();
+
+        virtualinvoke $r8.<com.google.android.bitmapfun.v: void a(android.support.v4.app.aj,com.google.android.bitmapfun.t)>($r9, $r2);
+
+        return;
+    }
+
+    public void a(android.view.View, android.os.Bundle)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.view.View $r1;
+        android.os.Bundle $r2;
+        android.content.BroadcastReceiver $r3;
+        android.content.IntentFilter $r4;
+        android.support.v4.content.q $r5;
+        android.support.v4.app.ac $r6;
+        java.lang.String $r7;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 := @parameter0: android.view.View;
+
+        $r2 := @parameter1: android.os.Bundle;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a(android.view.View,android.os.Bundle)>($r1, $r2);
+
+        virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void e(boolean)>(1);
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void ac()>();
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void ab()>();
+
+        $r5 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.content.q g>;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.g: android.content.BroadcastReceiver am>;
+
+        $r4 = new android.content.IntentFilter;
+
+        $r6 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        $r7 = staticinvoke <com.seattleclouds.modules.podcast.download.PodcastDownloadService: java.lang.String a(android.content.Context)>($r6);
+
+        specialinvoke $r4.<android.content.IntentFilter: void <init>(java.lang.String)>($r7);
+
+        virtualinvoke $r5.<android.support.v4.content.q: void a(android.content.BroadcastReceiver,android.content.IntentFilter)>($r3, $r4);
+
+        return;
+    }
+
+    public void a_(boolean)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        boolean $z0;
+        android.support.v7.view.b $r1;
+        com.google.android.bitmapfun.v $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $z0 := @parameter0: boolean;
+
+        specialinvoke $r0.<com.seattleclouds.r: void a_(boolean)>($z0);
+
+        if $z0 != 0 goto label2;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        if $r1 == null goto label1;
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        virtualinvoke $r1.<android.support.v7.view.b: void c()>();
+
+     label1:
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h>;
+
+        if $r2 == null goto label2;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.g: com.google.android.bitmapfun.v h>;
+
+        virtualinvoke $r2.<com.google.android.bitmapfun.v: void h()>();
+
+     label2:
+        return;
+    }
+
+    public void g()
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.support.v4.content.q $r1;
+        android.content.BroadcastReceiver $r2;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void ad()>();
+
+        $r1 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.content.q g>;
+
+        $r2 = $r0.<com.seattleclouds.modules.podcast.download.g: android.content.BroadcastReceiver am>;
+
+        virtualinvoke $r1.<android.support.v4.content.q: void a(android.content.BroadcastReceiver)>($r2);
+
+        specialinvoke $r0.<com.seattleclouds.r: void g()>();
+
+        return;
+    }
+
+    public void onItemClick(android.widget.AdapterView, android.view.View, int, long)
+    {
+        com.seattleclouds.modules.podcast.download.g $r0;
+        android.widget.AdapterView $r1;
+        android.view.View $r2;
+        int $i0;
+        long $l1;
+        android.support.v7.view.b $r3;
+        boolean $z0;
+        android.widget.BaseAdapter $r4;
+        java.lang.Object $r5;
+        com.seattleclouds.modules.podcast.PodcastItem $r6;
+        android.support.v4.app.ac $r7;
+
+        $r0 := @this: com.seattleclouds.modules.podcast.download.g;
+
+        $r1 := @parameter0: android.widget.AdapterView;
+
+        $r2 := @parameter1: android.view.View;
+
+        $i0 := @parameter2: int;
+
+        $l1 := @parameter3: long;
+
+        $r3 = $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v7.view.b i>;
+
+        if $r3 == null goto label1;
+
+        specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: void c(int)>($i0);
+
+        return;
+
+     label1:
+        $z0 = specialinvoke $r0.<com.seattleclouds.modules.podcast.download.g: boolean af()>();
+
+        if $z0 != 0 goto label2;
+
+        $r4 = $r0.<com.seattleclouds.modules.podcast.download.g: android.widget.BaseAdapter an>;
+
+        $r5 = virtualinvoke $r4.<android.widget.BaseAdapter: java.lang.Object getItem(int)>($i0);
+
+        $r6 = (com.seattleclouds.modules.podcast.PodcastItem) $r5;
+
+        $r7 = virtualinvoke $r0.<com.seattleclouds.modules.podcast.download.g: android.support.v4.app.ac n()>();
+
+        staticinvoke <com.seattleclouds.modules.podcast.x: void a(android.app.Activity,com.seattleclouds.modules.podcast.PodcastItem)>($r7, $r6);
+
+     label2:
+        return;
+    }
+}

@@ -1,0 +1,108 @@
+class com.seattleclouds.modules.feedback.ad extends java.lang.Object implements java.lang.Runnable
+{
+    final java.lang.String a;
+    final android.net.Uri b;
+    final com.seattleclouds.modules.feedback.a c;
+    final android.net.Uri d;
+    final boolean e;
+    final com.seattleclouds.modules.feedback.c f;
+
+    void <init>(com.seattleclouds.modules.feedback.c, java.lang.String, android.net.Uri, com.seattleclouds.modules.feedback.a, android.net.Uri, boolean)
+    {
+        com.seattleclouds.modules.feedback.ad $r0;
+        com.seattleclouds.modules.feedback.c $r1;
+        java.lang.String $r2;
+        android.net.Uri $r3, $r5;
+        com.seattleclouds.modules.feedback.a $r4;
+        boolean $z0;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ad;
+
+        $r1 := @parameter0: com.seattleclouds.modules.feedback.c;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 := @parameter2: android.net.Uri;
+
+        $r4 := @parameter3: com.seattleclouds.modules.feedback.a;
+
+        $r5 := @parameter4: android.net.Uri;
+
+        $z0 := @parameter5: boolean;
+
+        $r0.<com.seattleclouds.modules.feedback.ad: com.seattleclouds.modules.feedback.c f> = $r1;
+
+        $r0.<com.seattleclouds.modules.feedback.ad: java.lang.String a> = $r2;
+
+        $r0.<com.seattleclouds.modules.feedback.ad: android.net.Uri b> = $r3;
+
+        $r0.<com.seattleclouds.modules.feedback.ad: com.seattleclouds.modules.feedback.a c> = $r4;
+
+        $r0.<com.seattleclouds.modules.feedback.ad: android.net.Uri d> = $r5;
+
+        $r0.<com.seattleclouds.modules.feedback.ad: boolean e> = $z0;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        com.seattleclouds.modules.feedback.ad $r0;
+        java.lang.String $r1;
+        android.net.Uri $r2;
+        com.seattleclouds.modules.feedback.c $r3;
+        android.support.v4.app.ac $r4;
+        android.graphics.Bitmap $r5;
+        com.seattleclouds.modules.feedback.a $r6;
+        android.widget.ImageView $r7;
+        java.lang.Thread $r8;
+        com.seattleclouds.modules.feedback.ae $r9;
+
+        $r0 := @this: com.seattleclouds.modules.feedback.ad;
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ad: java.lang.String a>;
+
+        if $r1 == null goto label1;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.ad: android.net.Uri b>;
+
+        $r3 = $r0.<com.seattleclouds.modules.feedback.ad: com.seattleclouds.modules.feedback.c f>;
+
+        $r4 = virtualinvoke $r3.<com.seattleclouds.modules.feedback.c: android.support.v4.app.ac n()>();
+
+        $r5 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap a(android.net.Uri,int,android.app.Activity)>($r2, 220, $r4);
+
+        $r1 = $r0.<com.seattleclouds.modules.feedback.ad: java.lang.String a>;
+
+        $r5 = staticinvoke <com.seattleclouds.util.k: android.graphics.Bitmap a(java.lang.String,android.graphics.Bitmap)>($r1, $r5);
+
+        if $r5 == null goto label1;
+
+        $r6 = $r0.<com.seattleclouds.modules.feedback.ad: com.seattleclouds.modules.feedback.a c>;
+
+        $r7 = $r6.<com.seattleclouds.modules.feedback.a: android.widget.ImageView e>;
+
+        virtualinvoke $r7.<android.widget.ImageView: void setImageBitmap(android.graphics.Bitmap)>($r5);
+
+        $r6 = $r0.<com.seattleclouds.modules.feedback.ad: com.seattleclouds.modules.feedback.a c>;
+
+        $r2 = $r0.<com.seattleclouds.modules.feedback.ad: android.net.Uri b>;
+
+        $r6.<com.seattleclouds.modules.feedback.a: android.net.Uri m> = $r2;
+
+        $r8 = new java.lang.Thread;
+
+        $r9 = new com.seattleclouds.modules.feedback.ae;
+
+        specialinvoke $r9.<com.seattleclouds.modules.feedback.ae: void <init>(com.seattleclouds.modules.feedback.ad)>($r0);
+
+        specialinvoke $r8.<java.lang.Thread: void <init>(java.lang.Runnable)>($r9);
+
+        virtualinvoke $r8.<java.lang.Thread: void start()>();
+
+     label1:
+        return;
+    }
+}

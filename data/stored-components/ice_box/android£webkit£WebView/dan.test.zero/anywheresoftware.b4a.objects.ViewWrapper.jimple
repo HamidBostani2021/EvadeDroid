@@ -1,0 +1,2149 @@
+public class anywheresoftware.b4a.objects.ViewWrapper extends anywheresoftware.b4a.AbsObjectWrapper implements anywheresoftware.b4a.BA$B4aDebuggable
+{
+    public static int animationDuration;
+    public static final int defaultColor;
+    public static int lastId;
+    protected anywheresoftware.b4a.BA ba;
+
+    static void <clinit>()
+    {
+        <anywheresoftware.b4a.objects.ViewWrapper: int defaultColor> = -984833;
+
+        <anywheresoftware.b4a.objects.ViewWrapper: int lastId> = 0;
+
+        <anywheresoftware.b4a.objects.ViewWrapper: int animationDuration> = 400;
+
+        return;
+    }
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        specialinvoke $r0.<anywheresoftware.b4a.AbsObjectWrapper: void <init>()>();
+
+        return;
+    }
+
+    public static void AnimateFrom(android.view.View, int, int, int, int, int)
+    {
+        android.view.View $r0;
+        int $i0, $i1, $i2, $i3, $i4, $i5;
+        android.animation.AnimatorSet $r1, r10;
+        android.view.ViewGroup$LayoutParams $r2;
+        anywheresoftware.b4a.BALayout$LayoutParams $r3;
+        java.util.HashMap $r4;
+        java.lang.Object $r5;
+        java.lang.ref.WeakReference $r6, r11;
+        boolean $z0;
+        java.lang.Object[] $r7;
+        float[] $r8;
+        float $f0, $f1;
+        android.animation.ObjectAnimator $r9;
+        long $l6;
+        android.animation.Animator[] r12;
+
+        $r0 := @parameter0: android.view.View;
+
+        $i0 := @parameter1: int;
+
+        $i1 := @parameter2: int;
+
+        $i2 := @parameter3: int;
+
+        $i3 := @parameter4: int;
+
+        $i4 := @parameter5: int;
+
+        $r2 = virtualinvoke $r0.<android.view.View: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r3 = (anywheresoftware.b4a.BALayout$LayoutParams) $r2;
+
+        $i5 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i5 < 11 goto label4;
+
+        if $i0 <= 0 goto label4;
+
+        if $i3 < 0 goto label4;
+
+        if $i4 < 0 goto label4;
+
+        virtualinvoke $r0.<android.view.View: void setPivotX(float)>(0.0F);
+
+        virtualinvoke $r0.<android.view.View: void setPivotY(float)>(0.0F);
+
+        $r4 = staticinvoke <anywheresoftware.b4a.AbsObjectWrapper: java.util.HashMap getExtraTags(java.lang.Object)>($r0);
+
+        $r5 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("prevSet");
+
+        $r6 = (java.lang.ref.WeakReference) $r5;
+
+        if $r6 == null goto label3;
+
+        $r5 = virtualinvoke $r6.<java.lang.ref.WeakReference: java.lang.Object get()>();
+
+        $r1 = (android.animation.AnimatorSet) $r5;
+
+     label1:
+        if $r1 == null goto label2;
+
+        $z0 = virtualinvoke $r1.<android.animation.AnimatorSet: boolean isRunning()>();
+
+        if $z0 == 0 goto label2;
+
+        virtualinvoke $r1.<android.animation.AnimatorSet: void end()>();
+
+     label2:
+        r10 = new android.animation.AnimatorSet;
+
+        $r1 = r10;
+
+        specialinvoke r10.<android.animation.AnimatorSet: void <init>()>();
+
+        $r4 = staticinvoke <anywheresoftware.b4a.AbsObjectWrapper: java.util.HashMap getExtraTags(java.lang.Object)>($r0);
+
+        r11 = new java.lang.ref.WeakReference;
+
+        specialinvoke r11.<java.lang.ref.WeakReference: void <init>(java.lang.Object)>($r1);
+
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("prevSet", r11);
+
+        $r7 = newarray (android.animation.Animator)[4];
+
+        $r8 = newarray (float)[2];
+
+        $i5 = $r3.<anywheresoftware.b4a.BALayout$LayoutParams: int left>;
+
+        $i1 = $i1 - $i5;
+
+        $f0 = (float) $i1;
+
+        $r8[0] = $f0;
+
+        $f0 = 0.0F;
+
+        $r8[1] = $f0;
+
+        $r9 = staticinvoke <android.animation.ObjectAnimator: android.animation.ObjectAnimator ofFloat(java.lang.Object,java.lang.String,float[])>($r0, "translationX", $r8);
+
+        $r7[0] = $r9;
+
+        $r8 = newarray (float)[2];
+
+        $i1 = $r3.<anywheresoftware.b4a.BALayout$LayoutParams: int top>;
+
+        $i1 = $i2 - $i1;
+
+        $f0 = (float) $i1;
+
+        $r8[0] = $f0;
+
+        $f0 = 0.0F;
+
+        $r8[1] = $f0;
+
+        $r9 = staticinvoke <android.animation.ObjectAnimator: android.animation.ObjectAnimator ofFloat(java.lang.Object,java.lang.String,float[])>($r0, "translationY", $r8);
+
+        $r7[1] = $r9;
+
+        $r8 = newarray (float)[2];
+
+        $f0 = (float) $i3;
+
+        $i1 = $r3.<anywheresoftware.b4a.BALayout$LayoutParams: int width>;
+
+        $f1 = (float) $i1;
+
+        $f0 = $f0 / $f1;
+
+        $r8[0] = $f0;
+
+        $f0 = 1.06535322E9F;
+
+        $r8[1] = $f0;
+
+        $r9 = staticinvoke <android.animation.ObjectAnimator: android.animation.ObjectAnimator ofFloat(java.lang.Object,java.lang.String,float[])>($r0, "scaleX", $r8);
+
+        $r7[2] = $r9;
+
+        $r8 = newarray (float)[2];
+
+        $f0 = (float) $i4;
+
+        $i1 = $r3.<anywheresoftware.b4a.BALayout$LayoutParams: int height>;
+
+        $f1 = (float) $i1;
+
+        $f0 = $f0 / $f1;
+
+        $r8[0] = $f0;
+
+        $f0 = 1.06535322E9F;
+
+        $r8[1] = $f0;
+
+        $r9 = staticinvoke <android.animation.ObjectAnimator: android.animation.ObjectAnimator ofFloat(java.lang.Object,java.lang.String,float[])>($r0, "scaleY", $r8);
+
+        $r7[3] = $r9;
+
+        r12 = (android.animation.Animator[]) $r7;
+
+        virtualinvoke $r1.<android.animation.AnimatorSet: void playTogether(android.animation.Animator[])>(r12);
+
+        $l6 = (long) $i0;
+
+        virtualinvoke $r1.<android.animation.AnimatorSet: android.animation.AnimatorSet setDuration(long)>($l6);
+
+        virtualinvoke $r1.<android.animation.AnimatorSet: void start()>();
+
+        return;
+
+     label3:
+        $r1 = null;
+
+        goto label1;
+
+     label4:
+        return;
+    }
+
+    public static android.view.View build(java.lang.Object, java.util.Map, boolean) throws java.lang.Exception
+    {
+        java.lang.Object $r0;
+        java.util.Map $r1;
+        boolean $z0, $z1;
+        java.util.HashMap $r2;
+        android.view.View $r3;
+        android.graphics.drawable.Drawable $r4;
+        int[] $r5;
+        int $i0, $i1, $i2, $i3;
+        android.view.ViewGroup$LayoutParams $r6;
+        anywheresoftware.b4a.BALayout$LayoutParams $r7;
+        java.lang.Integer $r8;
+        java.lang.Boolean $r9;
+        byte $b4;
+        float $f0, $f1;
+
+        $r0 := @parameter0: java.lang.Object;
+
+        $r1 := @parameter1: java.util.Map;
+
+        $z0 := @parameter2: boolean;
+
+        $r3 = (android.view.View) $r0;
+
+        $r0 = virtualinvoke $r3.<android.view.View: java.lang.Object getTag()>();
+
+        if $r0 != null goto label1;
+
+        if $z0 == 0 goto label1;
+
+        $r2 = new java.util.HashMap;
+
+        specialinvoke $r2.<java.util.HashMap: void <init>()>();
+
+        $r4 = virtualinvoke $r3.<android.view.View: android.graphics.drawable.Drawable getBackground()>();
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("background", $r4);
+
+        $r5 = newarray (int)[4];
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingLeft()>();
+
+        $r5[0] = $i0;
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingTop()>();
+
+        $r5[1] = $i0;
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingRight()>();
+
+        $r5[2] = $i0;
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingBottom()>();
+
+        $r5[3] = $i0;
+
+        virtualinvoke $r2.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("padding", $r5);
+
+        virtualinvoke $r3.<android.view.View: void setTag(java.lang.Object)>($r2);
+
+     label1:
+        $r6 = virtualinvoke $r3.<android.view.View: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r7 = (anywheresoftware.b4a.BALayout$LayoutParams) $r6;
+
+        if $r7 != null goto label2;
+
+        $r7 = new anywheresoftware.b4a.BALayout$LayoutParams;
+
+        specialinvoke $r7.<anywheresoftware.b4a.BALayout$LayoutParams: void <init>()>();
+
+        virtualinvoke $r3.<android.view.View: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r7);
+
+     label2:
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("left");
+
+        $r8 = (java.lang.Integer) $r0;
+
+        $i0 = virtualinvoke $r8.<java.lang.Integer: int intValue()>();
+
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("top");
+
+        $r8 = (java.lang.Integer) $r0;
+
+        $i1 = virtualinvoke $r8.<java.lang.Integer: int intValue()>();
+
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("width");
+
+        $r8 = (java.lang.Integer) $r0;
+
+        $i2 = virtualinvoke $r8.<java.lang.Integer: int intValue()>();
+
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("height");
+
+        $r8 = (java.lang.Integer) $r0;
+
+        $i3 = virtualinvoke $r8.<java.lang.Integer: int intValue()>();
+
+        virtualinvoke $r7.<anywheresoftware.b4a.BALayout$LayoutParams: void setFromUserPlane(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("enabled");
+
+        $r9 = (java.lang.Boolean) $r0;
+
+        $z1 = virtualinvoke $r9.<java.lang.Boolean: boolean booleanValue()>();
+
+        virtualinvoke $r3.<android.view.View: void setEnabled(boolean)>($z1);
+
+        if $z0 != 0 goto label4;
+
+        $b4 = 0;
+
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("visible");
+
+        $r9 = (java.lang.Boolean) $r0;
+
+        $z1 = virtualinvoke $r9.<java.lang.Boolean: boolean booleanValue()>();
+
+        if $z1 != 0 goto label3;
+
+        $b4 = 8;
+
+     label3:
+        virtualinvoke $r3.<android.view.View: void setVisibility(int)>($b4);
+
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("tag");
+
+        virtualinvoke $r3.<android.view.View: void setTag(java.lang.Object)>($r0);
+
+     label4:
+        $r0 = interfaceinvoke $r1.<java.util.Map: java.lang.Object get(java.lang.Object)>("padding");
+
+        $r5 = (int[]) $r0;
+
+        if $r5 == null goto label5;
+
+        $f0 = staticinvoke <anywheresoftware.b4a.BALayout: float getDeviceScale()>();
+
+        $i0 = $r5[0];
+
+        $f1 = (float) $i0;
+
+        $f0 = $f0 * $f1;
+
+        $i0 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $f0 = staticinvoke <anywheresoftware.b4a.BALayout: float getDeviceScale()>();
+
+        $i1 = $r5[1];
+
+        $f1 = (float) $i1;
+
+        $f0 = $f0 * $f1;
+
+        $i1 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $f0 = staticinvoke <anywheresoftware.b4a.BALayout: float getDeviceScale()>();
+
+        $i2 = $r5[2];
+
+        $f1 = (float) $i2;
+
+        $f0 = $f0 * $f1;
+
+        $i2 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        $f0 = staticinvoke <anywheresoftware.b4a.BALayout: float getDeviceScale()>();
+
+        $i3 = $r5[3];
+
+        $f1 = (float) $i3;
+
+        $f0 = $f0 * $f1;
+
+        $i3 = staticinvoke <java.lang.Math: int round(float)>($f0);
+
+        virtualinvoke $r3.<android.view.View: void setPadding(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+        return $r3;
+
+     label5:
+        if $z0 == 0 goto label6;
+
+        $r0 = staticinvoke <anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getDefault(android.view.View,java.lang.String,java.lang.Object)>($r3, "padding", null);
+
+        $r5 = (int[]) $r0;
+
+        $i0 = $r5[0];
+
+        $i1 = $r5[1];
+
+        $i2 = $r5[2];
+
+        $i3 = $r5[3];
+
+        virtualinvoke $r3.<android.view.View: void setPadding(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+     label6:
+        return $r3;
+    }
+
+    public static java.lang.Object buildNativeView(android.content.Context, java.lang.Class, java.util.HashMap, boolean) throws java.lang.IllegalArgumentException, java.lang.SecurityException, java.lang.InstantiationException, java.lang.IllegalAccessException, java.lang.reflect.InvocationTargetException, java.lang.NoSuchMethodException, java.lang.ClassNotFoundException
+    {
+        android.content.Context $r0;
+        java.lang.Class $r1;
+        java.util.HashMap $r2;
+        boolean $z0, $z1;
+        java.lang.ClassNotFoundException $r3;
+        java.lang.Object $r4;
+        java.lang.String $r5, $r8;
+        java.lang.StringBuilder $r6;
+        android.app.Application $r7;
+        int $i0;
+        java.lang.Class[] $r9;
+        java.lang.reflect.Constructor $r10;
+        java.lang.Object[] $r11;
+
+        $r0 := @parameter0: android.content.Context;
+
+        $r1 := @parameter1: java.lang.Class;
+
+        $r2 := @parameter2: java.util.HashMap;
+
+        $z0 := @parameter3: boolean;
+
+        $r4 = virtualinvoke $r2.<java.util.HashMap: java.lang.Object get(java.lang.Object)>("nativeClass");
+
+        $r5 = (java.lang.String) $r4;
+
+        if $r5 == null goto label1;
+
+        $z1 = virtualinvoke $r5.<java.lang.String: boolean startsWith(java.lang.String)>(".");
+
+        if $z1 == 0 goto label1;
+
+        $r6 = new java.lang.StringBuilder;
+
+        $r7 = <anywheresoftware.b4a.BA: android.app.Application applicationContext>;
+
+        $r8 = virtualinvoke $r7.<android.app.Application: java.lang.String getPackageName()>();
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r8);
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>(java.lang.String)>($r8);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label1:
+        if $z0 != 0 goto label4;
+
+        if $r5 == null goto label4;
+
+     label2:
+        $i0 = virtualinvoke $r5.<java.lang.String: int length()>();
+
+     label3:
+        if $i0 != 0 goto label5;
+
+     label4:
+        $r9 = newarray (java.lang.Class)[1];
+
+        $r9[0] = class "Landroid/content/Context;";
+
+        $r10 = virtualinvoke $r1.<java.lang.Class: java.lang.reflect.Constructor getConstructor(java.lang.Class[])>($r9);
+
+        $r11 = newarray (java.lang.Object)[1];
+
+        $r11[0] = $r0;
+
+        $r4 = virtualinvoke $r10.<java.lang.reflect.Constructor: java.lang.Object newInstance(java.lang.Object[])>($r11);
+
+        return $r4;
+
+     label5:
+        $r1 = staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>($r5);
+
+     label6:
+        goto label4;
+
+     label7:
+        $r3 := @caughtexception;
+
+        $i0 = virtualinvoke $r5.<java.lang.String: int lastIndexOf(java.lang.String)>(".");
+
+        $r6 = new java.lang.StringBuilder;
+
+        $r8 = virtualinvoke $r5.<java.lang.String: java.lang.String substring(int,int)>(0, $i0);
+
+        $r8 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r8);
+
+        specialinvoke $r6.<java.lang.StringBuilder: void <init>(java.lang.String)>($r8);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("$");
+
+        $i0 = $i0 + 1;
+
+        $r5 = virtualinvoke $r5.<java.lang.String: java.lang.String substring(int)>($i0);
+
+        $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r5);
+
+        $r5 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r1 = staticinvoke <java.lang.Class: java.lang.Class forName(java.lang.String)>($r5);
+
+        goto label4;
+
+        catch java.lang.ClassNotFoundException from label2 to label3 with label7;
+        catch java.lang.ClassNotFoundException from label5 to label6 with label7;
+    }
+
+    private float findRadius()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Exception $r1;
+        java.lang.Object $r2;
+        android.view.View $r3;
+        android.graphics.drawable.Drawable $r4;
+        boolean $z0;
+        anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners $r5;
+        android.graphics.drawable.GradientDrawable $r6;
+        java.lang.Class $r7;
+        java.lang.reflect.Field $r8;
+        java.lang.Float $r9;
+        float $f0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $r4 = virtualinvoke $r3.<android.view.View: android.graphics.drawable.Drawable getBackground()>();
+
+        if $r4 == null goto label5;
+
+        $z0 = $r4 instanceof android.graphics.drawable.GradientDrawable;
+
+        if $z0 == 0 goto label5;
+
+        $z0 = $r4 instanceof anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners;
+
+        if $z0 == 0 goto label1;
+
+        $r5 = (anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners) $r4;
+
+        $f0 = $r5.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: float cornerRadius>;
+
+        return $f0;
+
+     label1:
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $r4 = virtualinvoke $r3.<android.view.View: android.graphics.drawable.Drawable getBackground()>();
+
+        $r6 = (android.graphics.drawable.GradientDrawable) $r4;
+
+     label2:
+        $r7 = virtualinvoke $r6.<java.lang.Object: java.lang.Class getClass()>();
+
+        $r8 = virtualinvoke $r7.<java.lang.Class: java.lang.reflect.Field getDeclaredField(java.lang.String)>("mGradientState");
+
+        virtualinvoke $r8.<java.lang.reflect.Field: void setAccessible(boolean)>(1);
+
+        $r2 = virtualinvoke $r8.<java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>($r6);
+
+        $r7 = virtualinvoke $r2.<java.lang.Object: java.lang.Class getClass()>();
+
+        $r8 = virtualinvoke $r7.<java.lang.Class: java.lang.reflect.Field getDeclaredField(java.lang.String)>("mRadius");
+
+        $r2 = virtualinvoke $r8.<java.lang.reflect.Field: java.lang.Object get(java.lang.Object)>($r2);
+
+        $r9 = (java.lang.Float) $r2;
+
+        $f0 = virtualinvoke $r9.<java.lang.Float: float floatValue()>();
+
+     label3:
+        return $f0;
+
+     label4:
+        $r1 := @caughtexception;
+
+        virtualinvoke $r1.<java.lang.Exception: void printStackTrace()>();
+
+     label5:
+        return 0.0F;
+
+        catch java.lang.Exception from label2 to label3 with label4;
+    }
+
+    public static void fixAnchor(int, int, anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor)
+    {
+        int $i0, $i1, $i2, $i3;
+        anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor $r0;
+        anywheresoftware.b4a.objects.ViewWrapper $r1, $r2;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $r0 := @parameter2: anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor;
+
+        $i2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int hanchor>;
+
+        $i3 = <anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int RIGHT>;
+
+        if $i2 != $i3 goto label2;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i2 = virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: int getLeft()>();
+
+        $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int right> = $i2;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int right>;
+
+        $i0 = $i0 - $i2;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i2 = virtualinvoke $r2.<anywheresoftware.b4a.objects.ViewWrapper: int getWidth()>();
+
+        $i0 = $i0 - $i2;
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: void setLeft(int)>($i0);
+
+     label1:
+        $i0 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int vanchor>;
+
+        $i2 = <anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int BOTTOM>;
+
+        if $i0 != $i2 goto label3;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i0 = virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: int getTop()>();
+
+        $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int bottom> = $i0;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i0 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int bottom>;
+
+        $i0 = $i1 - $i0;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i1 = virtualinvoke $r2.<anywheresoftware.b4a.objects.ViewWrapper: int getHeight()>();
+
+        $i0 = $i0 - $i1;
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: void setTop(int)>($i0);
+
+        return;
+
+     label2:
+        $i2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int hanchor>;
+
+        $i3 = <anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int BOTH>;
+
+        if $i2 != $i3 goto label1;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i2 = virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: int getWidth()>();
+
+        $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int right> = $i2;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int right>;
+
+        $i0 = $i0 - $i2;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i2 = virtualinvoke $r2.<anywheresoftware.b4a.objects.ViewWrapper: int getLeft()>();
+
+        $i0 = $i0 - $i2;
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: void setWidth(int)>($i0);
+
+        goto label1;
+
+     label3:
+        $i0 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int vanchor>;
+
+        $i2 = <anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int BOTH>;
+
+        if $i0 != $i2 goto label4;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i0 = virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: int getHeight()>();
+
+        $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int bottom> = $i0;
+
+        $r1 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i0 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: int bottom>;
+
+        $i0 = $i1 - $i0;
+
+        $r2 = $r0.<anywheresoftware.b4a.keywords.LayoutBuilder$ViewWrapperAndAnchor: anywheresoftware.b4a.objects.ViewWrapper vw>;
+
+        $i1 = virtualinvoke $r2.<anywheresoftware.b4a.objects.ViewWrapper: int getTop()>();
+
+        $i0 = $i0 - $i1;
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.ViewWrapper: void setHeight(int)>($i0);
+
+     label4:
+        return;
+    }
+
+    public static java.lang.Object getDefault(android.view.View, java.lang.String, java.lang.Object)
+    {
+        android.view.View $r0;
+        java.lang.String $r1;
+        java.lang.Object $r2, $r3;
+        java.util.HashMap $r4;
+        boolean $z0;
+
+        $r0 := @parameter0: android.view.View;
+
+        $r1 := @parameter1: java.lang.String;
+
+        $r2 := @parameter2: java.lang.Object;
+
+        $r3 = virtualinvoke $r0.<android.view.View: java.lang.Object getTag()>();
+
+        $r4 = (java.util.HashMap) $r3;
+
+        $z0 = virtualinvoke $r4.<java.util.HashMap: boolean containsKey(java.lang.Object)>($r1);
+
+        if $z0 == 0 goto label1;
+
+        $r2 = virtualinvoke $r4.<java.util.HashMap: java.lang.Object get(java.lang.Object)>($r1);
+
+        return $r2;
+
+     label1:
+        virtualinvoke $r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2);
+
+        return $r2;
+    }
+
+    private android.view.ViewGroup$LayoutParams getLayoutParams()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.view.ViewGroup$LayoutParams $r3;
+        anywheresoftware.b4a.BALayout$LayoutParams $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        if $r3 != null goto label1;
+
+        $r4 = new anywheresoftware.b4a.BALayout$LayoutParams;
+
+        specialinvoke $r4.<anywheresoftware.b4a.BALayout$LayoutParams: void <init>(int,int,int,int)>(0, 0, 0, 0);
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r2.<android.view.View: void setLayoutParams(android.view.ViewGroup$LayoutParams)>($r4);
+
+        return $r4;
+
+     label1:
+        return $r3;
+    }
+
+    private void requestLayout()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.view.ViewParent $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        if $r3 == null goto label1;
+
+        interfaceinvoke $r3.<android.view.ViewParent: void requestLayout()>();
+
+     label1:
+        return;
+    }
+
+    public void BringToFront()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.view.ViewParent $r3;
+        boolean $z0;
+        android.view.ViewGroup $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        $z0 = $r3 instanceof android.view.ViewGroup;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        $r4 = (android.view.ViewGroup) $r3;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r4.<android.view.ViewGroup: void removeView(android.view.View)>($r2);
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r4.<android.view.ViewGroup: void addView(android.view.View)>($r2);
+
+     label1:
+        return;
+    }
+
+    public void Initialize(anywheresoftware.b4a.BA, java.lang.String)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        anywheresoftware.b4a.BA $r1;
+        java.lang.String $r2;
+        java.util.Locale $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: anywheresoftware.b4a.BA;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $r3 = <anywheresoftware.b4a.BA: java.util.Locale cul>;
+
+        $r2 = virtualinvoke $r2.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r3);
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void innerInitialize(anywheresoftware.b4a.BA,java.lang.String,boolean)>($r1, $r2, 0);
+
+        return;
+    }
+
+    public void Invalidate()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r2.<android.view.View: void invalidate()>();
+
+        return;
+    }
+
+    public void Invalidate2(android.graphics.Rect)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.graphics.Rect $r1;
+        java.lang.Object $r2;
+        android.view.View $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: android.graphics.Rect;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        virtualinvoke $r3.<android.view.View: void invalidate(android.graphics.Rect)>($r1);
+
+        return;
+    }
+
+    public void Invalidate3(int, int, int, int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0, $i1, $i2, $i3;
+        java.lang.Object $r1;
+        android.view.View $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r2.<android.view.View: void invalidate(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+        return;
+    }
+
+    public void RemoveView()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.view.ViewParent $r3;
+        boolean $z0;
+        android.view.ViewGroup $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        $z0 = $r3 instanceof android.view.ViewGroup;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        $r4 = (android.view.ViewGroup) $r3;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r4.<android.view.ViewGroup: void removeView(android.view.View)>($r2);
+
+     label1:
+        return;
+    }
+
+    public boolean RequestFocus()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        boolean $z0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $z0 = virtualinvoke $r2.<android.view.View: boolean requestFocus()>();
+
+        return $z0;
+    }
+
+    public void SendToBack()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.view.ViewParent $r3;
+        boolean $z0;
+        android.view.ViewGroup $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        $z0 = $r3 instanceof android.view.ViewGroup;
+
+        if $z0 == 0 goto label1;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        $r4 = (android.view.ViewGroup) $r3;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r4.<android.view.ViewGroup: void removeView(android.view.View)>($r2);
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r4.<android.view.ViewGroup: void addView(android.view.View,int)>($r2, 0);
+
+     label1:
+        return;
+    }
+
+    public void SetBackgroundImage(android.graphics.Bitmap)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.graphics.Bitmap $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: anywheresoftware.b4a.objects.drawable.BitmapDrawable SetBackgroundImageNew(android.graphics.Bitmap)>($r1);
+
+        return;
+    }
+
+    public anywheresoftware.b4a.objects.drawable.BitmapDrawable SetBackgroundImageNew(android.graphics.Bitmap)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.graphics.Bitmap $r1;
+        anywheresoftware.b4a.objects.drawable.BitmapDrawable $r2;
+        java.lang.Object $r3;
+        android.view.View $r4;
+        android.graphics.drawable.Drawable $r5;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: android.graphics.Bitmap;
+
+        $r2 = new anywheresoftware.b4a.objects.drawable.BitmapDrawable;
+
+        specialinvoke $r2.<anywheresoftware.b4a.objects.drawable.BitmapDrawable: void <init>()>();
+
+        virtualinvoke $r2.<anywheresoftware.b4a.objects.drawable.BitmapDrawable: void Initialize(android.graphics.Bitmap)>($r1);
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.view.View) $r3;
+
+        $r3 = virtualinvoke $r2.<anywheresoftware.b4a.objects.drawable.BitmapDrawable: java.lang.Object getObject()>();
+
+        $r5 = (android.graphics.drawable.Drawable) $r3;
+
+        virtualinvoke $r4.<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>($r5);
+
+        return $r2;
+    }
+
+    public void SetColorAnimated(int, int, int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0, $i1, $i2, $i3;
+        float[] $r1, $r2, $r3;
+        java.lang.Object $r4;
+        android.view.View $r5;
+        android.graphics.drawable.Drawable $r6;
+        boolean $z0;
+        anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners $r7;
+        android.animation.ValueAnimator $r8;
+        long $l4;
+        anywheresoftware.b4a.objects.ViewWrapper$3 $r9;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i3 < 11 goto label3;
+
+        if $i0 <= 0 goto label3;
+
+        $r4 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r5 = (android.view.View) $r4;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.graphics.drawable.Drawable getBackground()>();
+
+        $z0 = $r6 instanceof anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners;
+
+        if $z0 == 0 goto label2;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.graphics.drawable.Drawable getBackground()>();
+
+        $r7 = (anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners) $r6;
+
+     label1:
+        virtualinvoke $r7.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: void setColor(int)>($i1);
+
+        virtualinvoke $r5.<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>($r7);
+
+        $r2 = newarray (float)[3];
+
+        $r3 = newarray (float)[3];
+
+        staticinvoke <android.graphics.Color: void colorToHSV(int,float[])>($i1, $r2);
+
+        staticinvoke <android.graphics.Color: void colorToHSV(int,float[])>($i2, $r3);
+
+        $r1 = newarray (float)[2];
+
+        $r1[0] = 0.0F;
+
+        $r1[1] = 1.0F;
+
+        $r8 = staticinvoke <android.animation.ValueAnimator: android.animation.ValueAnimator ofFloat(float[])>($r1);
+
+        $l4 = (long) $i0;
+
+        virtualinvoke $r8.<android.animation.ValueAnimator: android.animation.ValueAnimator setDuration(long)>($l4);
+
+        $r1 = newarray (float)[3];
+
+        $i0 = staticinvoke <android.graphics.Color: int alpha(int)>($i1);
+
+        $i1 = staticinvoke <android.graphics.Color: int alpha(int)>($i2);
+
+        $r9 = new anywheresoftware.b4a.objects.ViewWrapper$3;
+
+        specialinvoke $r9.<anywheresoftware.b4a.objects.ViewWrapper$3: void <init>(anywheresoftware.b4a.objects.ViewWrapper,float[],float[],float[],int,int,anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners,android.view.View)>($r0, $r1, $r2, $r3, $i0, $i1, $r7, $r5);
+
+        virtualinvoke $r8.<android.animation.ValueAnimator: void addUpdateListener(android.animation.ValueAnimator$AnimatorUpdateListener)>($r9);
+
+        virtualinvoke $r8.<android.animation.ValueAnimator: void start()>();
+
+        return;
+
+     label2:
+        $r7 = new anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners;
+
+        specialinvoke $r7.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: void <init>()>();
+
+        goto label1;
+
+     label3:
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void setColor(int)>($i2);
+
+        return;
+    }
+
+    public void SetLayout(int, int, int, int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0, $i1, $i2, $i3;
+        android.view.ViewGroup$LayoutParams $r1;
+        anywheresoftware.b4a.BALayout$LayoutParams $r2;
+        java.lang.Object $r3;
+        android.view.View $r4;
+        android.view.ViewParent $r5;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r2 = (anywheresoftware.b4a.BALayout$LayoutParams) $r1;
+
+        $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int left> = $i0;
+
+        $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int top> = $i1;
+
+        $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int width> = $i2;
+
+        $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int height> = $i3;
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.view.View) $r3;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.ViewParent getParent()>();
+
+        if $r5 == null goto label1;
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.view.View) $r3;
+
+        $r5 = virtualinvoke $r4.<android.view.View: android.view.ViewParent getParent()>();
+
+        interfaceinvoke $r5.<android.view.ViewParent: void requestLayout()>();
+
+     label1:
+        return;
+    }
+
+    public void SetLayoutAnimated(int, int, int, int, int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0, $i1, $i2, $i3, $i4, $i5, $i6, $i7, $i8;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.view.ViewGroup$LayoutParams $r3;
+        anywheresoftware.b4a.BALayout$LayoutParams $r4;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $i1 := @parameter1: int;
+
+        $i2 := @parameter2: int;
+
+        $i3 := @parameter3: int;
+
+        $i4 := @parameter4: int;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r4 = (anywheresoftware.b4a.BALayout$LayoutParams) $r3;
+
+        if $r4 != null goto label1;
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void SetLayout(int,int,int,int)>($i1, $i2, $i3, $i4);
+
+        return;
+
+     label1:
+        $i5 = $r4.<anywheresoftware.b4a.BALayout$LayoutParams: int left>;
+
+        $i6 = $r4.<anywheresoftware.b4a.BALayout$LayoutParams: int top>;
+
+        $i7 = $r4.<anywheresoftware.b4a.BALayout$LayoutParams: int width>;
+
+        $i8 = $r4.<anywheresoftware.b4a.BALayout$LayoutParams: int height>;
+
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void SetLayout(int,int,int,int)>($i1, $i2, $i3, $i4);
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        staticinvoke <anywheresoftware.b4a.objects.ViewWrapper: void AnimateFrom(android.view.View,int,int,int,int,int)>($r2, $i0, $i5, $i6, $i7, $i8);
+
+        return;
+    }
+
+    public void SetVisibleAnimated(int, boolean)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0, $i1;
+        boolean $z0, $z1;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        float[] $r3;
+        android.animation.ObjectAnimator $r4;
+        anywheresoftware.b4a.objects.ViewWrapper$4 $r5;
+        long $l2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $z0 := @parameter1: boolean;
+
+        $z1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: boolean getVisible()>();
+
+        if $z0 != $z1 goto label1;
+
+        return;
+
+     label1:
+        $i1 = <android.os.Build$VERSION: int SDK_INT>;
+
+        if $i1 < 11 goto label4;
+
+        if $i0 <= 0 goto label4;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        if $z0 == 0 goto label3;
+
+        $r3 = newarray (float)[2];
+
+        $r3[0] = 0.0F;
+
+        $r3[1] = 1.0F;
+
+        $r4 = staticinvoke <android.animation.ObjectAnimator: android.animation.ObjectAnimator ofFloat(java.lang.Object,java.lang.String,float[])>($r2, "alpha", $r3);
+
+     label2:
+        $r5 = new anywheresoftware.b4a.objects.ViewWrapper$4;
+
+        specialinvoke $r5.<anywheresoftware.b4a.objects.ViewWrapper$4: void <init>(anywheresoftware.b4a.objects.ViewWrapper,boolean,android.view.View)>($r0, $z0, $r2);
+
+        virtualinvoke $r4.<android.animation.ObjectAnimator: void addListener(android.animation.Animator$AnimatorListener)>($r5);
+
+        $l2 = (long) $i0;
+
+        $r4 = virtualinvoke $r4.<android.animation.ObjectAnimator: android.animation.ObjectAnimator setDuration(long)>($l2);
+
+        virtualinvoke $r4.<android.animation.ObjectAnimator: void start()>();
+
+        if $z0 == 0 goto label5;
+
+        virtualinvoke $r2.<android.view.View: void setVisibility(int)>(0);
+
+        return;
+
+     label3:
+        $r3 = newarray (float)[2];
+
+        $r3[0] = 1.0F;
+
+        $r3[1] = 0.0F;
+
+        $r4 = staticinvoke <android.animation.ObjectAnimator: android.animation.ObjectAnimator ofFloat(java.lang.Object,java.lang.String,float[])>($r2, "alpha", $r3);
+
+        goto label2;
+
+     label4:
+        virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void setVisible(boolean)>($z0);
+
+     label5:
+        return;
+    }
+
+    public java.lang.Object[] debug(int, boolean[])
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0;
+        boolean[] $r1;
+        java.lang.Object[] $r2;
+        java.lang.String $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 := @parameter1: boolean[];
+
+        $r2 = newarray (java.lang.Object)[2];
+
+        $r2[0] = "ToString";
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.String toString()>();
+
+        $r2[1] = $r3;
+
+        $r1[0] = 1;
+
+        return $r2;
+    }
+
+    public android.graphics.drawable.Drawable getBackground()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.graphics.drawable.Drawable $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.graphics.drawable.Drawable getBackground()>();
+
+        return $r3;
+    }
+
+    public boolean getEnabled()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        boolean $z0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $z0 = virtualinvoke $r2.<android.view.View: boolean isEnabled()>();
+
+        return $z0;
+    }
+
+    public int getHeight()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.view.ViewGroup$LayoutParams $r1;
+        int i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        i0 = $r1.<android.view.ViewGroup$LayoutParams: int height>;
+
+        return i0;
+    }
+
+    public int getLeft()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.view.ViewGroup$LayoutParams $r1;
+        anywheresoftware.b4a.BALayout$LayoutParams $r2;
+        int i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r2 = (anywheresoftware.b4a.BALayout$LayoutParams) $r1;
+
+        i0 = $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int left>;
+
+        return i0;
+    }
+
+    public int[] getPadding()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int[] $r1;
+        java.lang.Object $r2;
+        android.view.View $r3;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = newarray (int)[4];
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingLeft()>();
+
+        $r1[0] = $i0;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingTop()>();
+
+        $r1[1] = $i0;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingRight()>();
+
+        $r1[2] = $i0;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $i0 = virtualinvoke $r3.<android.view.View: int getPaddingBottom()>();
+
+        $r1[3] = $i0;
+
+        return $r1;
+    }
+
+    public java.lang.Object getParent()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        android.view.ViewParent $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r3 = virtualinvoke $r2.<android.view.View: android.view.ViewParent getParent()>();
+
+        return $r3;
+    }
+
+    public java.lang.Object getTag()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $r1 = virtualinvoke $r2.<android.view.View: java.lang.Object getTag()>();
+
+        return $r1;
+    }
+
+    public int getTop()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.view.ViewGroup$LayoutParams $r1;
+        anywheresoftware.b4a.BALayout$LayoutParams $r2;
+        int i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r2 = (anywheresoftware.b4a.BALayout$LayoutParams) $r1;
+
+        i0 = $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int top>;
+
+        return i0;
+    }
+
+    public boolean getVisible()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        $i0 = virtualinvoke $r2.<android.view.View: int getVisibility()>();
+
+        if $i0 != 0 goto label1;
+
+        return 1;
+
+     label1:
+        return 0;
+    }
+
+    public int getWidth()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.view.ViewGroup$LayoutParams $r1;
+        int i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        i0 = $r1.<android.view.ViewGroup$LayoutParams: int width>;
+
+        return i0;
+    }
+
+    public void innerInitialize(anywheresoftware.b4a.BA, java.lang.String, boolean)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        anywheresoftware.b4a.BA $r1;
+        java.lang.String $r2, $r6;
+        boolean $z0;
+        java.lang.Object $r3;
+        android.view.View $r4;
+        int $i0;
+        java.lang.StringBuilder $r5;
+        anywheresoftware.b4a.objects.ViewWrapper$1 $r7;
+        anywheresoftware.b4a.objects.ViewWrapper$2 $r8;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: anywheresoftware.b4a.BA;
+
+        $r2 := @parameter1: java.lang.String;
+
+        $z0 := @parameter2: boolean;
+
+        $r0.<anywheresoftware.b4a.objects.ViewWrapper: anywheresoftware.b4a.BA ba> = $r1;
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.view.View) $r3;
+
+        $i0 = <anywheresoftware.b4a.objects.ViewWrapper: int lastId>;
+
+        $i0 = $i0 + 1;
+
+        <anywheresoftware.b4a.objects.ViewWrapper: int lastId> = $i0;
+
+        virtualinvoke $r4.<android.view.View: void setId(int)>($i0);
+
+        $r5 = new java.lang.StringBuilder;
+
+        $r6 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r2);
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_click");
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $z0 = virtualinvoke $r1.<anywheresoftware.b4a.BA: boolean subExists(java.lang.String)>($r6);
+
+        if $z0 == 0 goto label1;
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.view.View) $r3;
+
+        $r7 = new anywheresoftware.b4a.objects.ViewWrapper$1;
+
+        specialinvoke $r7.<anywheresoftware.b4a.objects.ViewWrapper$1: void <init>(anywheresoftware.b4a.objects.ViewWrapper,anywheresoftware.b4a.BA,java.lang.String)>($r0, $r1, $r2);
+
+        virtualinvoke $r4.<android.view.View: void setOnClickListener(android.view.View$OnClickListener)>($r7);
+
+     label1:
+        $r5 = new java.lang.StringBuilder;
+
+        $r6 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r2);
+
+        specialinvoke $r5.<java.lang.StringBuilder: void <init>(java.lang.String)>($r6);
+
+        $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("_longclick");
+
+        $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $z0 = virtualinvoke $r1.<anywheresoftware.b4a.BA: boolean subExists(java.lang.String)>($r6);
+
+        if $z0 == 0 goto label2;
+
+        $r3 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r4 = (android.view.View) $r3;
+
+        $r8 = new anywheresoftware.b4a.objects.ViewWrapper$2;
+
+        specialinvoke $r8.<anywheresoftware.b4a.objects.ViewWrapper$2: void <init>(anywheresoftware.b4a.objects.ViewWrapper,anywheresoftware.b4a.BA,java.lang.String)>($r0, $r1, $r2);
+
+        virtualinvoke $r4.<android.view.View: void setOnLongClickListener(android.view.View$OnLongClickListener)>($r8);
+
+     label2:
+        return;
+    }
+
+    public void setBackground(android.graphics.drawable.Drawable)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        android.graphics.drawable.Drawable $r1;
+        java.lang.Object $r2;
+        android.view.View $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: android.graphics.drawable.Drawable;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        virtualinvoke $r3.<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>($r1);
+
+        return;
+    }
+
+    public void setColor(int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0, $i1;
+        anywheresoftware.b4a.objects.drawable.ColorDrawable $r1;
+        java.lang.Object $r2;
+        android.view.View $r3;
+        android.graphics.drawable.Drawable $r4;
+        boolean $z0;
+        anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners $r5;
+        float $f0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $r4 = virtualinvoke $r3.<android.view.View: android.graphics.drawable.Drawable getBackground()>();
+
+        if $r4 == null goto label2;
+
+        $z0 = $r4 instanceof android.graphics.drawable.GradientDrawable;
+
+        if $z0 == 0 goto label2;
+
+        $z0 = $r4 instanceof anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners;
+
+        if $z0 == 0 goto label1;
+
+        $r5 = (anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners) $r4;
+
+        $i1 = $r5.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: int borderWidth>;
+
+        if $i1 == 0 goto label1;
+
+        $r5 = (anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners) $r4;
+
+        virtualinvoke $r5.<anywheresoftware.b4a.objects.drawable.ColorDrawable$GradientDrawableWithCorners: void setColor(int)>($i0);
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        virtualinvoke $r3.<android.view.View: void invalidate()>();
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        virtualinvoke $r3.<android.view.View: void requestLayout()>();
+
+        return;
+
+     label1:
+        $r1 = new anywheresoftware.b4a.objects.drawable.ColorDrawable;
+
+        specialinvoke $r1.<anywheresoftware.b4a.objects.drawable.ColorDrawable: void <init>()>();
+
+        $f0 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: float findRadius()>();
+
+        $i1 = (int) $f0;
+
+        virtualinvoke $r1.<anywheresoftware.b4a.objects.drawable.ColorDrawable: void Initialize(int,int)>($i0, $i1);
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $r2 = virtualinvoke $r1.<anywheresoftware.b4a.objects.drawable.ColorDrawable: java.lang.Object getObject()>();
+
+        $r4 = (android.graphics.drawable.Drawable) $r2;
+
+        virtualinvoke $r3.<android.view.View: void setBackgroundDrawable(android.graphics.drawable.Drawable)>($r4);
+
+        return;
+
+     label2:
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        virtualinvoke $r3.<android.view.View: void setBackgroundColor(int)>($i0);
+
+        return;
+    }
+
+    public void setEnabled(boolean)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        boolean $z0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        virtualinvoke $r2.<android.view.View: void setEnabled(boolean)>($z0);
+
+        return;
+    }
+
+    public void setHeight(int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0;
+        android.view.ViewGroup$LayoutParams $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r1.<android.view.ViewGroup$LayoutParams: int height> = $i0;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void requestLayout()>();
+
+        return;
+    }
+
+    public void setLeft(int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0;
+        android.view.ViewGroup$LayoutParams $r1;
+        anywheresoftware.b4a.BALayout$LayoutParams $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r2 = (anywheresoftware.b4a.BALayout$LayoutParams) $r1;
+
+        $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int left> = $i0;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void requestLayout()>();
+
+        return;
+    }
+
+    public void setPadding(int[])
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int[] $r1;
+        java.lang.Object $r2;
+        android.view.View $r3;
+        int $i0, $i1, $i2, $i3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: int[];
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        $i0 = $r1[0];
+
+        $i1 = $r1[1];
+
+        $i2 = $r1[2];
+
+        $i3 = $r1[3];
+
+        virtualinvoke $r3.<android.view.View: void setPadding(int,int,int,int)>($i0, $i1, $i2, $i3);
+
+        return;
+    }
+
+    public void setTag(java.lang.Object)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.Object $r1, $r2;
+        android.view.View $r3;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $r2 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r3 = (android.view.View) $r2;
+
+        virtualinvoke $r3.<android.view.View: void setTag(java.lang.Object)>($r1);
+
+        return;
+    }
+
+    public void setTop(int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0;
+        android.view.ViewGroup$LayoutParams $r1;
+        anywheresoftware.b4a.BALayout$LayoutParams $r2;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r2 = (anywheresoftware.b4a.BALayout$LayoutParams) $r1;
+
+        $r2.<anywheresoftware.b4a.BALayout$LayoutParams: int top> = $i0;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void requestLayout()>();
+
+        return;
+    }
+
+    public void setVisible(boolean)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        boolean $z0;
+        java.lang.Object $r1;
+        android.view.View $r2;
+        byte $b0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $z0 := @parameter0: boolean;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r2 = (android.view.View) $r1;
+
+        if $z0 == 0 goto label2;
+
+        $b0 = 0;
+
+     label1:
+        virtualinvoke $r2.<android.view.View: void setVisibility(int)>($b0);
+
+        return;
+
+     label2:
+        $b0 = 8;
+
+        goto label1;
+    }
+
+    public void setWidth(int)
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        int $i0;
+        android.view.ViewGroup$LayoutParams $r1;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $i0 := @parameter0: int;
+
+        $r1 = specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $r1.<android.view.ViewGroup$LayoutParams: int width> = $i0;
+
+        specialinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: void requestLayout()>();
+
+        return;
+    }
+
+    public java.lang.String toString()
+    {
+        anywheresoftware.b4a.objects.ViewWrapper $r0;
+        java.lang.String $r1, $r3;
+        boolean $z0;
+        java.lang.StringBuilder $r2;
+        java.lang.Object $r4;
+        android.view.View $r5;
+        android.view.ViewGroup$LayoutParams $r6;
+        int $i0;
+
+        $r0 := @this: anywheresoftware.b4a.objects.ViewWrapper;
+
+        $r1 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.String baseToString()>();
+
+        $z0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: boolean IsInitialized()>();
+
+        if $z0 == 0 goto label6;
+
+        $r2 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(": ");
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        $r3 = $r1;
+
+        $z0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: boolean getEnabled()>();
+
+        if $z0 != 0 goto label1;
+
+        $r2 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Enabled=false, ");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label1:
+        $z0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: boolean getVisible()>();
+
+        if $z0 != 0 goto label2;
+
+        $r2 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r3);
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Visible=false, ");
+
+        $r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label2:
+        $r4 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r5 = (android.view.View) $r4;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        if $r6 == null goto label3;
+
+        $r4 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getObject()>();
+
+        $r5 = (android.view.View) $r4;
+
+        $r6 = virtualinvoke $r5.<android.view.View: android.view.ViewGroup$LayoutParams getLayoutParams()>();
+
+        $z0 = $r6 instanceof anywheresoftware.b4a.BALayout$LayoutParams;
+
+        if $z0 != 0 goto label5;
+
+     label3:
+        $r2 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r3);
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Layout not available");
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+     label4:
+        $r4 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getTag()>();
+
+        if $r4 == null goto label6;
+
+        $r2 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r1);
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", Tag=");
+
+        $r4 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: java.lang.Object getTag()>();
+
+        $r1 = virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1);
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $r1;
+
+     label5:
+        $r2 = new java.lang.StringBuilder;
+
+        $r1 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($r3);
+
+        specialinvoke $r2.<java.lang.StringBuilder: void <init>(java.lang.String)>($r1);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Left=");
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: int getLeft()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", Top=");
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: int getTop()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", Width=");
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: int getWidth()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(", Height=");
+
+        $i0 = virtualinvoke $r0.<anywheresoftware.b4a.objects.ViewWrapper: int getHeight()>();
+
+        $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0);
+
+        $r1 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        goto label4;
+
+     label6:
+        return $r1;
+    }
+}

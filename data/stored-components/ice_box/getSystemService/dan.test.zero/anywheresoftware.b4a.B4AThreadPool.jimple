@@ -1,0 +1,354 @@
+public class anywheresoftware.b4a.B4AThreadPool extends java.lang.Object
+{
+    private static final int THREADS_SPARE;
+    private final java.util.WeakHashMap futures;
+    private java.util.concurrent.ThreadPoolExecutor pool;
+    private final java.util.concurrent.ConcurrentLinkedQueue queueOfTasks;
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.util.concurrent.TimeUnit $r1;
+        java.util.concurrent.SynchronousQueue $r2;
+        java.util.WeakHashMap $r3;
+        java.util.concurrent.ConcurrentLinkedQueue $r4;
+        anywheresoftware.b4a.B4AThreadPool$1 $r5;
+        java.util.concurrent.ThreadPoolExecutor $r6;
+        anywheresoftware.b4a.B4AThreadPool$MyThreadFactory $r7;
+
+        $r0 := @this: anywheresoftware.b4a.B4AThreadPool;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        $r3 = new java.util.WeakHashMap;
+
+        specialinvoke $r3.<java.util.WeakHashMap: void <init>()>();
+
+        $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.WeakHashMap futures> = $r3;
+
+        $r4 = new java.util.concurrent.ConcurrentLinkedQueue;
+
+        specialinvoke $r4.<java.util.concurrent.ConcurrentLinkedQueue: void <init>()>();
+
+        $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ConcurrentLinkedQueue queueOfTasks> = $r4;
+
+        $r5 = new anywheresoftware.b4a.B4AThreadPool$1;
+
+        $r1 = <java.util.concurrent.TimeUnit: java.util.concurrent.TimeUnit SECONDS>;
+
+        $r2 = new java.util.concurrent.SynchronousQueue;
+
+        specialinvoke $r2.<java.util.concurrent.SynchronousQueue: void <init>()>();
+
+        specialinvoke $r5.<anywheresoftware.b4a.B4AThreadPool$1: void <init>(anywheresoftware.b4a.B4AThreadPool,int,int,long,java.util.concurrent.TimeUnit,java.util.concurrent.BlockingQueue)>($r0, 0, 50, 60L, $r1, $r2);
+
+        $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ThreadPoolExecutor pool> = $r5;
+
+        $r6 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ThreadPoolExecutor pool>;
+
+        $r7 = new anywheresoftware.b4a.B4AThreadPool$MyThreadFactory;
+
+        specialinvoke $r7.<anywheresoftware.b4a.B4AThreadPool$MyThreadFactory: void <init>(anywheresoftware.b4a.B4AThreadPool$MyThreadFactory)>(null);
+
+        virtualinvoke $r6.<java.util.concurrent.ThreadPoolExecutor: void setThreadFactory(java.util.concurrent.ThreadFactory)>($r7);
+
+        return;
+    }
+
+    static java.util.concurrent.ThreadPoolExecutor access$0(anywheresoftware.b4a.B4AThreadPool)
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.util.concurrent.ThreadPoolExecutor r1;
+
+        $r0 := @parameter0: anywheresoftware.b4a.B4AThreadPool;
+
+        r1 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ThreadPoolExecutor pool>;
+
+        return r1;
+    }
+
+    static void access$1(anywheresoftware.b4a.B4AThreadPool, java.lang.Runnable, java.lang.Object, int)
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.lang.Runnable $r1;
+        java.lang.Object $r2;
+        int $i0;
+
+        $r0 := @parameter0: anywheresoftware.b4a.B4AThreadPool;
+
+        $r1 := @parameter1: java.lang.Runnable;
+
+        $r2 := @parameter2: java.lang.Object;
+
+        $i0 := @parameter3: int;
+
+        specialinvoke $r0.<anywheresoftware.b4a.B4AThreadPool: void submitToPool(java.lang.Runnable,java.lang.Object,int)>($r1, $r2, $i0);
+
+        return;
+    }
+
+    static java.util.concurrent.ConcurrentLinkedQueue access$2(anywheresoftware.b4a.B4AThreadPool)
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.util.concurrent.ConcurrentLinkedQueue r1;
+
+        $r0 := @parameter0: anywheresoftware.b4a.B4AThreadPool;
+
+        r1 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ConcurrentLinkedQueue queueOfTasks>;
+
+        return r1;
+    }
+
+    private void submitToPool(java.lang.Runnable, java.lang.Object, int)
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.lang.Runnable $r1;
+        java.lang.Object $r2, $r9;
+        int $i0;
+        java.lang.Throwable $r3, $r4, $r14;
+        java.util.WeakHashMap $r5, $r8;
+        java.util.concurrent.ThreadPoolExecutor $r6;
+        java.util.concurrent.Future $r7, $r15;
+        java.util.concurrent.ConcurrentHashMap $r10, r16;
+        java.util.Collection $r11;
+        java.util.Iterator $r12;
+        boolean $z0;
+        java.lang.Integer $r13;
+        java.lang.InterruptedException r17;
+
+        $r0 := @this: anywheresoftware.b4a.B4AThreadPool;
+
+        $r1 := @parameter0: java.lang.Runnable;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $i0 := @parameter2: int;
+
+        $r6 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ThreadPoolExecutor pool>;
+
+     label01:
+        $r7 = virtualinvoke $r6.<java.util.concurrent.ThreadPoolExecutor: java.util.concurrent.Future submit(java.lang.Runnable)>($r1);
+
+     label02:
+        $r5 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.WeakHashMap futures>;
+
+        entermonitor $r5;
+
+     label03:
+        $r8 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.WeakHashMap futures>;
+
+        $r9 = virtualinvoke $r8.<java.util.WeakHashMap: java.lang.Object get(java.lang.Object)>($r2);
+
+        $r10 = (java.util.concurrent.ConcurrentHashMap) $r9;
+
+        if $r10 != null goto label04;
+
+        r16 = new java.util.concurrent.ConcurrentHashMap;
+
+        $r10 = r16;
+
+        specialinvoke r16.<java.util.concurrent.ConcurrentHashMap: void <init>()>();
+
+        $r8 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.WeakHashMap futures>;
+
+        virtualinvoke $r8.<java.util.WeakHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r2, $r10);
+
+     label04:
+        exitmonitor $r5;
+
+     label05:
+        $r11 = virtualinvoke $r10.<java.util.concurrent.ConcurrentHashMap: java.util.Collection values()>();
+
+        $r12 = interfaceinvoke $r11.<java.util.Collection: java.util.Iterator iterator()>();
+
+     label06:
+        $z0 = interfaceinvoke $r12.<java.util.Iterator: boolean hasNext()>();
+
+        if $z0 != 0 goto label14;
+
+        $r13 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r10.<java.util.concurrent.ConcurrentHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r13, $r7);
+
+        return;
+
+     label07:
+        $r4 := @caughtexception;
+
+     label08:
+        staticinvoke <java.lang.Thread: void sleep(long)>(100L);
+
+     label09:
+        specialinvoke $r0.<anywheresoftware.b4a.B4AThreadPool: void submitToPool(java.lang.Runnable,java.lang.Object,int)>($r1, $r2, $i0);
+
+        return;
+
+     label10:
+        $r3 := @caughtexception;
+
+        r17 = (java.lang.InterruptedException) $r3;
+
+        virtualinvoke r17.<java.lang.InterruptedException: void printStackTrace()>();
+
+        goto label09;
+
+     label11:
+        $r14 := @caughtexception;
+
+     label12:
+        exitmonitor $r5;
+
+     label13:
+        throw $r14;
+
+     label14:
+        $r2 = interfaceinvoke $r12.<java.util.Iterator: java.lang.Object next()>();
+
+        $r15 = (java.util.concurrent.Future) $r2;
+
+        $z0 = interfaceinvoke $r15.<java.util.concurrent.Future: boolean isDone()>();
+
+        if $z0 == 0 goto label06;
+
+        interfaceinvoke $r12.<java.util.Iterator: void remove()>();
+
+        goto label06;
+
+        catch java.util.concurrent.RejectedExecutionException from label01 to label02 with label07;
+        catch java.lang.Throwable from label03 to label05 with label11;
+        catch java.lang.InterruptedException from label08 to label09 with label10;
+        catch java.lang.Throwable from label12 to label13 with label11;
+    }
+
+    public boolean isRunning(java.lang.Object, int)
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.lang.Object $r1;
+        int $i0;
+        java.util.WeakHashMap $r2;
+        java.util.concurrent.ConcurrentHashMap $r3;
+        java.lang.Integer $r4;
+        java.util.concurrent.Future $r5;
+        boolean $z0;
+
+        $r0 := @this: anywheresoftware.b4a.B4AThreadPool;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.WeakHashMap futures>;
+
+        $r1 = virtualinvoke $r2.<java.util.WeakHashMap: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r3 = (java.util.concurrent.ConcurrentHashMap) $r1;
+
+        if $r3 != null goto label1;
+
+        return 0;
+
+     label1:
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        $r1 = virtualinvoke $r3.<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>($r4);
+
+        $r5 = (java.util.concurrent.Future) $r1;
+
+        if $r5 == null goto label2;
+
+        $z0 = interfaceinvoke $r5.<java.util.concurrent.Future: boolean isDone()>();
+
+        if $z0 != 0 goto label2;
+
+        return 1;
+
+     label2:
+        return 0;
+    }
+
+    public void markTaskAsFinished(java.lang.Object, int)
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.lang.Object $r1;
+        int $i0;
+        java.util.WeakHashMap $r2;
+        java.util.concurrent.ConcurrentHashMap $r3;
+        java.lang.Integer $r4;
+
+        $r0 := @this: anywheresoftware.b4a.B4AThreadPool;
+
+        $r1 := @parameter0: java.lang.Object;
+
+        $i0 := @parameter1: int;
+
+        $r2 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.WeakHashMap futures>;
+
+        $r1 = virtualinvoke $r2.<java.util.WeakHashMap: java.lang.Object get(java.lang.Object)>($r1);
+
+        $r3 = (java.util.concurrent.ConcurrentHashMap) $r1;
+
+        if $r3 != null goto label1;
+
+        return;
+
+     label1:
+        $r4 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>($i0);
+
+        virtualinvoke $r3.<java.util.concurrent.ConcurrentHashMap: java.lang.Object remove(java.lang.Object)>($r4);
+
+        return;
+    }
+
+    public void submit(java.lang.Runnable, java.lang.Object, int)
+    {
+        anywheresoftware.b4a.B4AThreadPool $r0;
+        java.lang.Runnable $r1;
+        java.lang.Object $r2;
+        int $i0, $i1, $i2;
+        java.util.concurrent.ThreadPoolExecutor $r3;
+        java.util.concurrent.ConcurrentLinkedQueue $r4;
+        anywheresoftware.b4a.B4AThreadPool$QueuedTask $r5;
+
+        $r0 := @this: anywheresoftware.b4a.B4AThreadPool;
+
+        $r1 := @parameter0: java.lang.Runnable;
+
+        $r2 := @parameter1: java.lang.Object;
+
+        $i0 := @parameter2: int;
+
+        $r3 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ThreadPoolExecutor pool>;
+
+        $i1 = virtualinvoke $r3.<java.util.concurrent.ThreadPoolExecutor: int getActiveCount()>();
+
+        $r3 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ThreadPoolExecutor pool>;
+
+        $i2 = virtualinvoke $r3.<java.util.concurrent.ThreadPoolExecutor: int getMaximumPoolSize()>();
+
+        $i2 = $i2 + -5;
+
+        if $i1 <= $i2 goto label1;
+
+        $r4 = $r0.<anywheresoftware.b4a.B4AThreadPool: java.util.concurrent.ConcurrentLinkedQueue queueOfTasks>;
+
+        $r5 = new anywheresoftware.b4a.B4AThreadPool$QueuedTask;
+
+        specialinvoke $r5.<anywheresoftware.b4a.B4AThreadPool$QueuedTask: void <init>(anywheresoftware.b4a.B4AThreadPool,java.lang.Runnable,java.lang.Object,int)>($r0, $r1, $r2, $i0);
+
+        virtualinvoke $r4.<java.util.concurrent.ConcurrentLinkedQueue: boolean add(java.lang.Object)>($r5);
+
+        return;
+
+     label1:
+        specialinvoke $r0.<anywheresoftware.b4a.B4AThreadPool: void submitToPool(java.lang.Runnable,java.lang.Object,int)>($r1, $r2, $i0);
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <anywheresoftware.b4a.B4AThreadPool: int THREADS_SPARE> = 5;
+
+        return;
+    }
+}

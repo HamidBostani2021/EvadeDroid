@@ -1,0 +1,52 @@
+class com.seattleclouds.modules.videolist.j extends java.lang.Object implements com.seattleclouds.util.bi
+{
+    final com.seattleclouds.modules.videolist.b a;
+
+    void <init>(com.seattleclouds.modules.videolist.b)
+    {
+        com.seattleclouds.modules.videolist.j $r0;
+        com.seattleclouds.modules.videolist.b $r1;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.j;
+
+        $r1 := @parameter0: com.seattleclouds.modules.videolist.b;
+
+        $r0.<com.seattleclouds.modules.videolist.j: com.seattleclouds.modules.videolist.b a> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void a(java.lang.Object)
+    {
+        com.seattleclouds.modules.videolist.j $r0;
+        java.util.List $r1;
+        java.lang.Object $r2;
+        com.seattleclouds.modules.videolist.b $r3, $r4;
+
+        $r0 := @this: com.seattleclouds.modules.videolist.j;
+
+        $r2 := @parameter0: java.lang.Object;
+
+        $r3 = $r0.<com.seattleclouds.modules.videolist.j: com.seattleclouds.modules.videolist.b a>;
+
+        $r1 = (java.util.List) $r2;
+
+        staticinvoke <com.seattleclouds.modules.videolist.b: java.util.List a(com.seattleclouds.modules.videolist.b,java.util.List)>($r3, $r1);
+
+        $r3 = $r0.<com.seattleclouds.modules.videolist.j: com.seattleclouds.modules.videolist.b a>;
+
+        $r4 = $r0.<com.seattleclouds.modules.videolist.j: com.seattleclouds.modules.videolist.b a>;
+
+        $r1 = staticinvoke <com.seattleclouds.modules.videolist.b: java.util.List a(com.seattleclouds.modules.videolist.b)>($r4);
+
+        staticinvoke <com.seattleclouds.modules.videolist.b: void b(com.seattleclouds.modules.videolist.b,java.util.List)>($r3, $r1);
+
+        $r3 = $r0.<com.seattleclouds.modules.videolist.j: com.seattleclouds.modules.videolist.b a>;
+
+        staticinvoke <com.seattleclouds.modules.videolist.b: void b(com.seattleclouds.modules.videolist.b)>($r3);
+
+        return;
+    }
+}

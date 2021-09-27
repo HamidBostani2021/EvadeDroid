@@ -1,0 +1,20 @@
+class com.seattleclouds.bj extends com.seattleclouds.bk
+{
+
+    public void <init>(java.lang.String, org.xml.sax.Attributes)
+    {
+        com.seattleclouds.bj $r0;
+        java.lang.String $r1;
+        org.xml.sax.Attributes $r2;
+
+        $r0 := @this: com.seattleclouds.bj;
+
+        $r1 := @parameter0: java.lang.String;
+
+        $r2 := @parameter1: org.xml.sax.Attributes;
+
+        specialinvoke $r0.<com.seattleclouds.bk: void <init>(java.lang.String,org.xml.sax.Attributes)>($r1, $r2);
+
+        return;
+    }
+}

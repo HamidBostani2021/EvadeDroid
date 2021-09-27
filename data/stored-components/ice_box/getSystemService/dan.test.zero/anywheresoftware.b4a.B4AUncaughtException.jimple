@@ -1,0 +1,14 @@
+public class anywheresoftware.b4a.B4AUncaughtException extends java.lang.Error
+{
+
+    public void <init>()
+    {
+        anywheresoftware.b4a.B4AUncaughtException $r0;
+
+        $r0 := @this: anywheresoftware.b4a.B4AUncaughtException;
+
+        specialinvoke $r0.<java.lang.Error: void <init>()>();
+
+        return;
+    }
+}

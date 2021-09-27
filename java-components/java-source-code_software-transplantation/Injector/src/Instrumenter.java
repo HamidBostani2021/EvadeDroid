@@ -1,12 +1,18 @@
 
+/*
+This Java component, which is responsible for organ implantation, is originally implemented in [1]. 
+We did some minor modifications (because of the bugs, and etc.) for using in EvadeDroid.
+ 
+[1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
+    [S&P 2020], Pierazzi et al.
+
+ */
+
 import org.xmlpull.v1.XmlPullParserException;
-
-
 import soot.*;
 import soot.jimple.parser.lexer.LexerException;
 import soot.jimple.parser.parser.ParserException;
 import soot.options.Options;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -15,19 +21,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
-
 import static java.lang.System.exit;
-
 import org.apache.commons.io.FileUtils;
 
 
-
-
-
 public class Instrumenter {
-
-
-
 
     public static String slices_path = "";
 
@@ -54,26 +52,8 @@ public class Instrumenter {
     private static ArrayList<My_slice> slices_gathered = new ArrayList<>();
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {   	
     	
-    	/*
-    	Options.v().set_src_prec(Options.src_prec_java);
-        Options.v().set_output_format(Options.output_format_jimple);
-        Options.v().set_soot_classpath("C:\\Program Files\\Java\\jre1.8.0_291\\lib\\rt.jar");
-        Options.v().set_process_dir(Arrays.asList("C:\\GitLab\\end-to-end_black-box_evasion_attack\\opaque-preds\\sootOutput"));
-
-        Scene.v().loadNecessaryClasses();       
-        for (SootClass i: Scene.v().getApplicationClasses()) {
-        	System.out.println(i.getName());
-            for(SootField f: i.getFields()) {
-            	System.out.println(f);
-            }
-        	for(SootMethod sm: i.getMethods()) {            	
-            	System.out.println(sm.retrieveActiveBody());
-            }
-        }
-        */
-        
 
     	System.out.println(args.length);
         if (args.length == 9) {
@@ -279,7 +259,7 @@ public class Instrumenter {
 
         Injecter injecter = new Injecter();
         
-        //Hamid put it here
+        
         //Map<String, Integer> opaque_scores = config.get_opaque_scores(Opaque);
         Options.v().set_whole_program(true);
         

@@ -20,7 +20,6 @@ public class URL_extractor {
                         return c;
                     }
                 }
-
             }
 
             for (SootMethod m : c.getMethods()) {
@@ -36,43 +35,7 @@ public class URL_extractor {
                     }
                 }
             }
-        }
-        
-        //Hamid: if proper class does not find, we also check primitiveList by removing if (utility.isExcludeClass(c)) condition
-        //because it is not important in feature extraction
-        for (SootClass c : Scene.v().getApplicationClasses()) {
-        	
-        	/*
-            if (utility.isExcludeClass(c)) {
-                continue;
-            }
-            */
-        	
-            for(SootField f : c.getFields()){
-                for(Tag t  :f.getTags()){
-                    if(t.toString().contains(feature)){
-                        return c;
-                    }
-                }
-
-            }
-            
-
-            for (SootMethod m : c.getMethods()) {
-                if (!m.hasActiveBody()) {
-                    continue;
-                }
-
-                List<ValueBox> useBoxes = m.getActiveBody().getUseAndDefBoxes();
-                for (ValueBox valueBox : useBoxes) {
-                    String content = valueBox.getValue().toString();
-                    if (content.contains(feature)) {
-                        return c;
-                    }
-                }
-            }
-        }
-        
+        }        
         return null;
     }
 }

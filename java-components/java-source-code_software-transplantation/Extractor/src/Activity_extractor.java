@@ -17,8 +17,6 @@ public class Activity_extractor {
 
     private Soot_utlilty utility = new Soot_utlilty();
 
-
-
     public   ArrayList<String> extract_activity_dependencies_PDG(ArrayList<String> dependencies, String feature){
         ArrayList<String> new_dep = new ArrayList<String>();
         if(!dependencies.contains(feature)){

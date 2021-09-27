@@ -1,17 +1,20 @@
 
+/*
+This Java component, which is responsible for organ harvesting, is originally implemented in [1]. 
+Besides doing some modifications, we extended this component to extract API-calls gadgets.
+ 
+[1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
+    [S&P 2020], Pierazzi et al.
+
+ */
+
 import org.apache.commons.io.FileUtils;
-
-
 import soot.*;
-
 import soot.options.Options;
-
 import java.io.*;
 import java.lang.reflect.TypeVariable;
 import java.util.*;
-
 import javax.security.auth.callback.LanguageCallback;
-
 import static java.lang.System.exit;
 
 
@@ -27,17 +30,13 @@ public class Instrumenter {
 
     public static String output_dir = "";
 
-
     protected static String jarsPath = "";
-
 
     public static int output_format = Options.output_format_jimple;
 
     public static boolean DEBUG = false;
 
     private static boolean slice_found = false;
-
-
 
 
     public static void main(String[] args) {
@@ -59,35 +58,12 @@ public class Instrumenter {
         }else{
             System.out.println("Wrong arguments, invoation should be like:\njava -jar extractor.jar <feature> <path_to_goodware> <feature_type> <path_for_save_jimples>\n");
             exit(0);
-        }
+        }        
         
-        
-        
-        /*
-    	Options.v().set_src_prec(Options.src_prec_java);
-        Options.v().set_output_format(Options.output_format_jimple);
-        Options.v().set_soot_classpath("C:\\Program Files\\Java\\jre1.8.0_291\\lib\\rt.jar");
-        Options.v().set_process_dir(Arrays.asList(apkPath));
-
-        Scene.v().loadNecessaryClasses();       
-        for (SootClass i: Scene.v().getApplicationClasses()) {
-        	System.out.println(i.getName());
-            for(SootField f: i.getFields()) {
-            	System.out.println(f);
-            }
-        	for(SootMethod sm: i.getMethods()) {            	
-            	System.out.println(sm.retrieveActiveBody());
-            }
-        }
-        */
 
         Soot_utlilty config = new Soot_utlilty();
         String name_root_folder = "";
-        if(feature.startsWith("http")){
-            // . become _
-            // / become Â£
-            // : become ;
-             //Hamid: name_root_folder = feature.replace(".","_").replace("/","Â£").replace(":","^");
+        if(feature.startsWith("http")){           
              name_root_folder = feature.replace(".","_").replace("/","£").replace(":","^").replace("?","@").replace(">", "(").replace(";", ")");
         }else{
             name_root_folder = feature.replace(".","_").replace("/","£").replace("b'","").replace("'","").replace(">", "(").replace(";", ")");
@@ -95,7 +71,7 @@ public class Instrumenter {
         }
         
         
-        //Hamid's action: change feature names derived from smali to a proper feature name for jimple
+        //change feature names derived from smali to a proper feature name for jimple
         if(feature.startsWith("Read/WriteExternalStorage")) {
         	feature = "getExternalStorageDirectory";
         }       
@@ -108,8 +84,7 @@ public class Instrumenter {
         }
         String[] get_name = apkPath.split("/");
         
-        //String name_folder = get_name[get_name.length - 1].split("\\.")[0];
-        //Hamid's action
+        //String name_folder = get_name[get_name.length - 1].split("\\.")[0];        
         String name_folder = get_name[get_name.length - 1].replace(".apk", "");
         
         output_dir = name_root_folder + "/" + name_folder;
@@ -232,19 +207,7 @@ public class Instrumenter {
                 
                 Map<SootClass,ArrayList<SootMethod>> result_method = cgUtil.get_callgraph_for_method(apkPath,jarsPath,class_of_url,method);
                 
-                /*
-                //Hamid
-                if (result_method.isEmpty()) {
-                	ArrayList<SootMethod> tmp_method = new ArrayList<SootMethod>();
-                	tmp_method.add(method);
-                	Map<SootClass,ArrayList<SootMethod>> temp = new HashMap<>();
-                	temp.put(class_of_url, tmp_method);
-                	result_method = temp;                	
-                }
-                */
-                	 
-                
-                
+                              
                 if(!result_method.isEmpty()){
                     class_of_url_inner = result_method.keySet().iterator().next();
                     System.out.println("Found calling class "+class_of_url_inner.getName()+", getting now the dependencies of it ...");
@@ -276,7 +239,7 @@ public class Instrumenter {
                 }
 
            }
-            //Hamid's action
+            
             if(slice_class != null) {
             	ArrayList<String> dependencies = activity_extractor.extract_activity_dependencies_PDG(new ArrayList<String>(), class_of_url_inner.getName());
                 dependencies_tot.addAll(dependencies);	

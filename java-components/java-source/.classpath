@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="CC Calulcator/src"/>
+	<classpathentry kind="src" path="Class Counter/src"/>
+	<classpathentry kind="src" path="Extractor/src"/>
+	<classpathentry kind="src" path="Injector/src"/>
+	<classpathentry kind="src" path="Template Injector/src"/>
+	<classpathentry kind="lib" path="build/cccalculator.jar"/>
+	<classpathentry kind="lib" path="build/classlister.jar"/>
+	<classpathentry kind="lib" path="build/extractor.jar"/>
+	<classpathentry kind="lib" path="build/injector.jar"/>
+	<classpathentry kind="lib" path="build/templateinjector.jar"/>
+	<classpathentry kind="lib" path="libraries/java-json.jar"/>
+	<classpathentry kind="lib" path="libraries/slf4j-simple-1.7.25.jar"/>
+	<classpathentry kind="lib" path="libraries/soot-infoflow-android-classes.jar"/>
+	<classpathentry kind="lib" path="libraries/soot-infoflow-classes.jar"/>
+	<classpathentry kind="lib" path="libraries/soot-infoflow-cmd-classes.jar"/>
+	<classpathentry kind="lib" path="libraries/soot-infoflow-cmd-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="libraries/soot-infoflow-summaries-classes.jar"/>
+	<classpathentry kind="lib" path="libraries/xmlpull-1.1.3.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

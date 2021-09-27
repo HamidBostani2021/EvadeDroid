@@ -221,9 +221,8 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             organ_path = action_set[item] 
             with open(organ_path, 'rb') as f:
                 organ = pickle.load(f) 
-            action_set[item]  = organ
-        #number_of_query = 50
-        number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+            action_set[item]  = organ        
+        number_of_query = 20
         base_size = 0.1
         malware_detector = "Drebin"
         hard_label = False
@@ -354,9 +353,8 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             organ_path = action_set[item] 
             with open(organ_path, 'rb') as f:
                 organ = pickle.load(f) 
-            action_set[item]  = organ
-        #number_of_query = 50
-        number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+            action_set[item]  = organ        
+        number_of_query = 20
         base_size = 0.1
         malware_detector = "SecSVM"
         hard_label = False
@@ -429,9 +427,8 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             organ_path = action_set[item] 
             with open(organ_path, 'rb') as f:
                 organ = pickle.load(f) 
-            action_set[item]  = organ
-        #number_of_query = 50
-        number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+            action_set[item]  = organ       
+        number_of_query = 20
         base_size = 0.1
         malware_detector = "MaMaDroid"
         hard_label = False
@@ -440,9 +437,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         if os.path.isdir(path_base) == False:
             os.mkdir(path_base)
        
-        malware_idx = [idx_y for idx_y,y in enumerate(y_pred) if y == 1]       
-        
-       
+        malware_idx = [idx_y for idx_y,y in enumerate(y_pred) if y == 1]    
         malware_apps_path = [os.path.join(config['apks_accessible'],'malware',item) for idx_item,item in enumerate(malware_app) if idx_item in malware_idx]
         print("len(malware_apps_path): " ,len(malware_apps_path))
         
@@ -526,8 +521,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             
         no_evasion = [val for val in y_pred_random_attack if val == 0]
         ER_random_attack = (len(no_evasion)/len(y_pred_random_attack))*100  
-        print("ER_random_attack: ",ER_random_attack)
-        
+        print("ER_random_attack: ",ER_random_attack)        
         
         y_pred_pk_attack = list()
         for i in detected_malware_idx:
@@ -545,8 +539,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             
         no_evasion = [val for val in y_pred_pk_attack if val == 0]
         ER_random_attack = (len(no_evasion)/len(y_pred_pk_attack))*100  
-        print("ER_random_attack: ",ER_random_attack)
-        
+        print("ER_random_attack: ",ER_random_attack)       
        
         
         utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: reference attack on %s ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" %(model_name))
@@ -569,9 +562,8 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             organ_path = action_set[item] 
             with open(organ_path, 'rb') as f:
                 organ = pickle.load(f) 
-            action_set[item]  = organ
-        #number_of_query = 50
-        number_of_query = 10 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+            action_set[item]  = organ        
+        number_of_query = 10 
         base_size = 0.1
         malware_detector = vt_engine
         hard_label = False
@@ -586,8 +578,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             base_path = os.path.join(config['apks_accessible'],'vt_engines',malware_detector)
         malware_apps = os.listdir(base_path)     
        
-        malware_apps_path = [os.path.join(base_path,item) for item in malware_apps]    
-             
+        malware_apps_path = [os.path.join(base_path,item) for item in malware_apps]         
         
         hard_label = True
         base_size = 0.1
@@ -715,13 +706,7 @@ if __name__ == "__main__":
     evasion_attack_MaMaDroid = False
     evasion_attack_vt = True
     vt_engine = "Kaspersky"
-    '''
-    main(download_samples,initial_check_apks,accessible_inaccessible_datset_preparation,
-         mamadroid_feature_extraction,n_gram_feature_extraction,create_action_set,
-         roc_curve,create_Drebin,create_SecSVM,evasion_attack_Drebin,evasion_attack_SecSVM,
-         reference_attack_on_Drebin,reference_attack_on_SecSVM,
-         mamadroid_malware_feature_extraction,create_MaMaDroid,evasion_attack_vt,vt_engine)
-    '''
+    
     main(sys.argv[1], sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5],sys.argv[6],
     sys.argv[7],sys.argv[8],sys.argv[9],sys.argv[10],sys.argv[11],sys.argv[12],
     sys.argv[13],sys.argv[14],sys.argv[15],sys.argv[16],sys.argv[17],sys.argv[18])

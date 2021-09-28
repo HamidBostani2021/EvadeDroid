@@ -5,9 +5,9 @@ Experimental settings for the EvadeDroid's pipeline.
 """
 import os
 
-_absolute_project_path = '/home/hamid/Projects/end-to-end_black-box_evasion_attack'
-_absolute_java_components_path = '/home/hamid/Projects/end-to-end_black-box_evasion_attack/java-components/build'
-
+_absolute_project_path = '/EvadeDroid'
+_absolute_java_components_path = 'EvadeDroid/java-components/build'
+_absolute_graph_path = '/Result_Graphs'
 
 def project(base):
     return os.path.join(_absolute_project_path, base)
@@ -19,8 +19,9 @@ def java_components(base):
 
 config = {    
     'project_root': _absolute_project_path,
+    'result_graphs': _absolute_graph_path,
     
-    #data: apks and features
+    # data: apks and features
     'apks_accessible': project('data/apks/accessible/'),
     'apks_inaccessible': project('data/apks/inaccessible/'),    
     'features_accessible': project('data/features/accessible/'),
@@ -42,7 +43,7 @@ config = {
     'tmp_dir': project('data/stored-components/tmp/'),  
     'goodware_location': project('/data/apk'),
 
-    #software transplantation components
+    # Other components: software transplantation and mamadroid
     'soot':java_components('soot/'),   
     'extractor': java_components('extractor.jar'),
     'appgraph': java_components('appgraph.jar'),
@@ -59,11 +60,12 @@ config = {
     'cc_calculator': java_components('cccalculator.jar'),
     'class_lister': java_components('classlister.jar'),
     'classes_file': project('all_classes.txt'),       
-    'mined_slices': project('mined-slices'),
+    'mined_slices': project('data/stored-components/mined-slices'),
     'opaque_pred': project('opaque-preds/sootOutput'),
     'resigner': java_components('apk-signer.jar'),      
     'cc_calculator_timeout': 600,  
     'storage_radix': 0,  # Use if apps are stored with a radix (e.g., radix 3: root/0/0/A/00A384545.apk)
+    
     # Miscellaneous options
     'tries': 1,
     'nprocs_preload': 8,

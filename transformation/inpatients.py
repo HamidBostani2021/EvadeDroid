@@ -16,12 +16,10 @@ import glob
 import logging
 import pickle
 from pprint import pformat
-
 import os
 import shutil
 import tempfile
 from tqdm import tqdm
-
 import feature_extraction.drebin as drebin
 import lib.utils as utils
 from settings import config

@@ -12,7 +12,7 @@ import sys
 from transformation import extraction
 import lib.utils as utils
 import timeit
-import black_box_attack.models as models
+import attacks.models as models
 import json
 from attacks import evasion
 from attacks import reference_attacks as baseline

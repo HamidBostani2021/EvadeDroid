@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Plotting graphs that are presented in [1].
+Plotting the graphs that are presented in [1].
 
 [1] "EvadeDroid: A Practical Evasion Attack on Machine Learning for Black-box Android Malware Detection", 
 EuroS&P 2022,  Submitted on Sept. 23, 2021. 
@@ -57,7 +57,7 @@ def customize_colors_intensity(data,min_val,max_val,chart_type):
     
 def plot_er_drebin_over_diff_evasion_cost_query():
     plt.figure(figsize=(10,10))
-    number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+    number_of_query = 20
     base_size = 0.1    
     hard_label = False    
     path_base = os.path.join(config['results_dir'],'EvadeDroid/Drebin')  
@@ -70,8 +70,7 @@ def plot_er_drebin_over_diff_evasion_cost_query():
         increase_in_size = base_size * s
         name = "result-noquery_%d-size_%f-hardlabel_%d"%(number_of_query,increase_in_size,hardlabel)
         path = os.path.join(path_base,name)   
-        er_per_query = dict()
-        #base_path = "C:/GitLab/end-to-end_black-box_evasion_attack/data/stored-components/attack-results/EvadeDroid/Drebin/result-noquery_20-size_0.100000-hardlabel_0"
+        er_per_query = dict()        
         apk_name = os.listdir(path)
         cnt_corrupt = 0
         for app in apk_name:
@@ -94,8 +93,7 @@ def plot_er_drebin_over_diff_evasion_cost_query():
             X.append(i)
             SUM = 0
             for j in range(1,i + 1):
-                SUM = SUM + er_per_query[j]
-            #plt.ylim([10, 80])
+                SUM = SUM + er_per_query[j]            
             plt.xlim([0, 21])
             Y.append((SUM/total)*100)    
         ec = str(increase_in_size*100)
@@ -109,12 +107,8 @@ def plot_er_drebin_over_diff_evasion_cost_query():
     plt.xlabel('Query Budget',fontsize=18) 
     
     # Labeling the Y-axis 
-    plt.ylabel('Evasion Rate (%)',fontsize=18) 
-    
-    
-    # Give a title to the graph
-    #plt.title('Two plots on the same graph') 
-      
+    plt.ylabel('Evasion Rate (%)',fontsize=18)   
+   
     # Show a legend on the plot 
     plt.legend() 
     
@@ -125,13 +119,12 @@ def plot_er_drebin_over_diff_evasion_cost_query():
     plt.show()
             
 
-#plot_er_drebin_over_diff_evasion_cost_query()
-    
+   
 def plot_er_drebin_soft_hard_label():  
     plt.figure(figsize=(20,5))
     path_base = os.path.join(config['results_dir'],'EvadeDroid/Drebin')  
     hardlabel = 1
-    number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+    number_of_query = 20 
     base_size = 0.1            
     increase_in_size = base_size * 5
     
@@ -181,10 +174,8 @@ def plot_er_drebin_soft_hard_label():
     avg_rel_inc_size_soft = total_rel_inc_size/no_detected
     avg_er_soft = no_detected/(len(apk_name) - cnt_corrupt)
     
-    
-    #plt.figure(figsize=(4,5))
-    rows, cols = 1, 3    
-    
+   
+    rows, cols = 1, 3        
     plt.subplot(rows, cols, 1)    
     avg_er = [avg_er_soft*100,avg_er_hard*100]
     langs = ['Soft Label', 'Hard Label']      
@@ -211,17 +202,10 @@ def plot_er_drebin_soft_hard_label():
     plt.margins(0.2, 0.2)   
     plt.ylabel('ER (%)',fontsize=16,fontname="Times New Roman")     
     
-    plt.subplot(rows, cols, 2)
-    
-    #plt.rc('legend',fontsize=15)
-    #plt.rc('xtick', labelsize=15) 
-    #plt.rc('ytick', labelsize=15)
-    
-    
+    plt.subplot(rows, cols, 2)   
     avg_query = [avg_query_soft,avg_query_hard]    
     plt.grid(axis='y',zorder=0)
-    plt.bar(langs, avg_query, width = 0.3,zorder=3)
-    
+    plt.bar(langs, avg_query, width = 0.3,zorder=3)    
     
     arr_avg_query = np.array(avg_query)
     plt.bar(langs, avg_query, width = 0.3,zorder=3, edgecolor = 'black',color='white')
@@ -280,15 +264,14 @@ def plot_er_drebin_soft_hard_label():
     
 def plot_er_drebin_secsvm_over_diff_queries():
     plt.figure(figsize=(10,10))
-    number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+    number_of_query = 20
     base_size = 0.1       
     path_base = os.path.join(config['results_dir'],'EvadeDroid/Drebin')  
     hardlabel = 0          
     increase_in_size = base_size * 5
     name = "result-noquery_%d-size_%f-hardlabel_%d"%(number_of_query,increase_in_size,hardlabel)
     path = os.path.join(path_base,name)   
-    er_per_query = dict()
-    #base_path = "C:/GitLab/end-to-end_black-box_evasion_attack/data/stored-components/attack-results/EvadeDroid/Drebin/result-noquery_20-size_0.100000-hardlabel_0"
+    er_per_query = dict()  
     apk_name = os.listdir(path)
     cnt_corrupt = 0
     for app in apk_name:
@@ -311,8 +294,7 @@ def plot_er_drebin_secsvm_over_diff_queries():
         X.append(i)
         SUM = 0
         for j in range(1,i + 1):
-            SUM = SUM + er_per_query[j]
-        #plt.ylim([10, 80])
+            SUM = SUM + er_per_query[j]        
         plt.xlim([0, 21])
         Y.append((SUM/total)*100)    
     ec = str(increase_in_size*100)
@@ -325,8 +307,7 @@ def plot_er_drebin_secsvm_over_diff_queries():
     path_base = os.path.join(config['results_dir'],'EvadeDroid/SecSVM')     
     name = "result-noquery_%d-size_%f-hardlabel_%d"%(number_of_query,increase_in_size,hardlabel)
     path = os.path.join(path_base,name)   
-    er_per_query = dict()
-    #base_path = "C:/GitLab/end-to-end_black-box_evasion_attack/data/stored-components/attack-results/EvadeDroid/Drebin/result-noquery_20-size_0.100000-hardlabel_0"
+    er_per_query = dict()    
     apk_name = os.listdir(path)
     cnt_corrupt = 0
     for app in apk_name:
@@ -349,11 +330,9 @@ def plot_er_drebin_secsvm_over_diff_queries():
         X.append(i)
         SUM = 0
         for j in range(1,i + 1):
-            SUM = SUM + er_per_query[j]
-        #plt.ylim([10, 80])
+            SUM = SUM + er_per_query[j]       
         plt.xlim([0, 21])
-        Y.append((SUM/total)*100)    
-    ec = str(increase_in_size*100)   
+        Y.append((SUM/total)*100)     
     
     plt.rc('legend',fontsize=15)
     plt.rc('xtick', labelsize=15) 
@@ -364,13 +343,10 @@ def plot_er_drebin_secsvm_over_diff_queries():
         
         
     # Labeling the X-axis 
-    plt.xlabel('Query Budget',fontsize=16,fontname="Times New Roman") 
-    
+    plt.xlabel('Query Budget',fontsize=16,fontname="Times New Roman")     
     # Labeling the Y-axis 
     plt.ylabel('Evasion Rate (%)',fontsize=16,fontname="Times New Roman")     
-    
-    X_axis = [1,5,10,15,20]
-    #plt.xticks(X_axis)
+    X_axis = [1,5,10,15,20]    
     plt.xticks(X_axis,fontsize=15,fontname="Times New Roman")
     plt.yticks(fontsize=15,fontname="Times New Roman")
     plt.grid()
@@ -379,7 +355,7 @@ def plot_er_drebin_secsvm_over_diff_queries():
 
 def plot_er_drebin_over_diff_evasion_cost():
     plt.figure(figsize=(20,6))
-    number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+    number_of_query = 20
     base_size = 0.1    
     hard_label = False    
     path_base = os.path.join(config['results_dir'],'EvadeDroid/Drebin')  
@@ -401,8 +377,7 @@ def plot_er_drebin_over_diff_evasion_cost():
         total_no_query = 0    
         total_rel_inc_size = 0
         no_detected = 0
-        total_no_feature = 0
-        cnt_no_fature_check = 0
+        total_no_feature = 0       
         for app in apk_name:
             apk_info_path = os.path.join(path,app)
             with open(apk_info_path , 'rb') as f:
@@ -411,17 +386,10 @@ def plot_er_drebin_over_diff_evasion_cost():
                 cnt_corrupt += 1
             if apk.adv_malware_label == 0:
                 total_no_query += apk.number_of_queries
-                total_rel_inc_size += apk.percentage_increasing_size
-                '''
-                if apk.number_of_features_adv_malware - apk.number_of_features_malware > 0:
-                    total_no_feature += apk.number_of_features_adv_malware - apk.number_of_features_malware
-                    cnt_no_fature_check += 1
-                '''
+                total_rel_inc_size += apk.percentage_increasing_size               
                 total_no_feature += apk.number_of_features_adv_malware - apk.number_of_features_malware
-                no_detected += 1
-        
-        #avg_query_soft = total_no_query/no_detected
-        #avg_rel_inc_size_soft = total_rel_inc_size/no_detected
+                no_detected += 1       
+       
         avg_er_soft = no_detected/(len(apk_name) - cnt_corrupt)
         avg_er.append(avg_er_soft*100)
         avg_no_feature = total_no_feature/no_detected
@@ -480,8 +448,6 @@ def plot_er_drebin_over_diff_evasion_cost():
     plt.xlabel(r'$\alpha$ (%)',fontsize=16,fontname="Times New Roman")    
     plt.savefig(os.path.join(config['result_graphs'],'drebin_over_diff_evasion_cost.jpg'), format='jpg', dpi=800)          
     plt.show()
-
-plot_er_drebin_over_diff_evasion_cost()
 
 def plot_compare_evadedroid_pk_random_attacks():  
     plt.figure(figsize=(20,12))
@@ -645,7 +611,7 @@ def plot_compare_evadedroid_against_diff_malware_detectors():
     plt.figure(figsize=(15,10))
     path_base = os.path.join(config['results_dir'],'EvadeDroid/Drebin')  
     hardlabel = 0
-    number_of_query = 20 #I changed it in the middle of DREBIN-base_size = 0.1 - hard_label = False
+    number_of_query = 20
     base_size = 0.1            
     increase_in_size = base_size * 5
     

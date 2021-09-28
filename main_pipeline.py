@@ -234,8 +234,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         malware_idx = [idx_y for idx_y,y in enumerate(y_pred) if y == 1]
         malware_apps_path = [os.path.join(config['apks_accessible'],'malware',item) for idx_item,item in enumerate(malware_app) if idx_item in malware_idx]
         
-        for s in range(1,6):   
-            
+        for s in range(1,6):               
             if hard_label == True:
                hardlabel = 1
             else:
@@ -365,7 +364,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
        
         malware_idx = [idx_y for idx_y,y in enumerate(y_pred) if y == 1]
         malware_apps_path = [os.path.join(config['apks_accessible'],'malware',item) for idx_item,item in enumerate(malware_app) if idx_item in malware_idx]
-        
+     
         
         hard_label = False
         base_size = 0.1
@@ -504,9 +503,9 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         #malware_apps_name = [item for idx_item,item in enumerate(malware_app) if idx_item in detected_malware_idx]  
         path_fail = os.path.join(config['stored_components'],'malware_apk_fail.p')    
         with open(path_fail, 'rb') as f:
-            malware_apk_fail = pickle.load(f)
+            malware_apk_fail = pickle.load(f)        
         
-        
+        no_modifiable_features_random_attack = 200
         y_pred_random_attack = list()
         for i in detected_malware_idx:
             if malware_app[i] in malware_apk_fail:
@@ -514,7 +513,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             x_dict = X[malware_app_indices[i]]
             x = model.dict_to_feature_vector(x_dict) 
             x = x.toarray()
-            _,x_adv_dict = baseline.random_attack(x,len(model.vec.feature_names_),50,model.vec.feature_names_)
+            _,x_adv_dict = baseline.random_attack(x,len(model.vec.feature_names_),no_modifiable_features_random_attack,model.vec.feature_names_)
             x_adv = model.dict_to_feature_vector(x_adv_dict) 
             y_adv = model.clf.predict(x_adv)   
             y_pred_random_attack.append(y_adv[0])
@@ -523,6 +522,7 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
         ER_random_attack = (len(no_evasion)/len(y_pred_random_attack))*100  
         print("ER_random_attack: ",ER_random_attack)        
         
+        no_modifiable_features_pk_attack = 8
         y_pred_pk_attack = list()
         for i in detected_malware_idx:
             
@@ -532,14 +532,14 @@ def main(download_samples,initial_check_apks,accessible_inaccessible_datset_prep
             x_dict = X[malware_app_indices[i]]
             x = model.dict_to_feature_vector(x_dict) 
             x = x.toarray()
-            _,x_adv_dict = baseline.pk_attack(x,5,model.clf.coef_,model.vec.feature_names_)
+            _,x_adv_dict = baseline.pk_attack(x,no_modifiable_features_pk_attack,model.clf.coef_,model.vec.feature_names_)
             x_adv = model.dict_to_feature_vector(x_adv_dict) 
             y_adv = model.clf.predict(x_adv)   
             y_pred_pk_attack.append(y_adv[0])
             
         no_evasion = [val for val in y_pred_pk_attack if val == 0]
         ER_random_attack = (len(no_evasion)/len(y_pred_pk_attack))*100  
-        print("ER_random_attack: ",ER_random_attack)       
+        print("ER_pk_attack: ",ER_random_attack)       
        
         
         utils.perform_logging("~~~~~~~~~~~~~~~~~~~~~~~~~~~ End: reference attack on %s ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" %(model_name))

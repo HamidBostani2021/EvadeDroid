@@ -5,7 +5,7 @@ This is a tool for generating Android adversarial examples in a black-box settin
 
 2. The manipulation is in charge of perturbing malware samples by applying a sequence of transformations gathered in the action set into malware samples over several iterations.
 
-The pipeline's components have been recently moved from our research infrastructure to the repository; so, please let us know if you encounter some missing parts. Note we are gradually completing the guidelines for using EvadeDroid.
+Note the pipeline's components of EvadeDroid have been recently moved from our research infrastructure to the repository; so, please let us know if you encounter some missing parts. Moreover, we are gradually completing the guidelines for using EvadeDroid.
 
 ## Installation
 1. Install Python 3 (>= 3.6), Java 8 (Java SDK >= 1.8.0) and Android SDK on your machine.

@@ -1,5 +1,5 @@
 # EvadeDroid
-This is a tool for generating Android adversarial examples in a black-box setting. EvadeDroid's pipeline uses a two-step approach (i) _preparation (2) _manipulation:
+This is a tool for generating Android adversarial examples in a black-box setting. EvadeDroid's pipeline uses a two-step approach (i) **preparation** (2) **manipulation**:
 
 1. The preparation step is responsible for preparing an action set including a collection of gadgets (i.e., entry point, organ, and vein) extracted from benign Android apps that are publicly accessible. 
 

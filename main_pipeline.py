@@ -17,12 +17,12 @@ import json
 from attacks import evasion
 from attacks import reference_attacks as baseline
 import numpy as np
-import torch
 from itertools import repeat
 from settings import config
 import pickle
 import os
 import shutil
+import torch
 mp = torch.multiprocessing.get_context('forkserver')
 
 

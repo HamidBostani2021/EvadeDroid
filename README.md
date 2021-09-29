@@ -4,6 +4,7 @@ This is a tool for generating Android adversarial examples in a black-box settin
 ## Installation
 1. Install Python 3 (>= 3.6) in your machine, which can be either Windows or Linux. Note for using Windows machine, the codes related to parallelizing (e.g., ) should be cut. 
 
-'''Python
+'''python
+import torch
 mp = torch.multiprocessing.get_context('forkserver')
 '''

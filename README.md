@@ -24,3 +24,6 @@ To configure the pipeline, go to setting.py and fill out the following path vari
 - _absolute_project_path: The absolute root-path of the pipeline.
 - _absolute_java_components_path: The absolute path of Java components used in Automate Software Transplantation and MaMaDroid.
 - _absolute_graph_path: The absolute path for the graphs drawn based on the pipeline's outputs.
+
+## Run the Pipeline
+## Licensing

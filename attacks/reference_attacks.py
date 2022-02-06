@@ -204,4 +204,40 @@ def drebin():
     
     return ER_pk_attack,no_modified_features_pk,ER_random_attack,no_modified_features_random
 
+def random_attack_dnn(x,no_modifiable_features):     
+    index_candidate_features = [idx for idx,val in enumerate(x) if val == 0]    
+    features_rand = random.sample(index_candidate_features,no_modifiable_features)    
+    for f in range(0,10000):
+        if f in features_rand:
+            x[f] = 1   
+    x = np.array(x)
+    x = x.reshape(1,10000)
+    return x
+
+def ADE_MA(): 
+    from defender import AdversarialDeepEnsembleMax     
+    model_AdversarialDeepEnsembleMax = AdversarialDeepEnsembleMax()
+    from tools import utils as utils_dnn    
+    pris_data_path = "Projects/end-to-end_black-box_evasion_attack/data/drebin/attack/pristine_feature.data"
+    if os.path.exists(pris_data_path):
+        pris_feature_vectors = utils_dnn.readdata_np(pris_data_path)
+    else:
+        print("not exists")
+    
+    
+    y_pred_random_attack = list()
+    no_modified_features_random = 50
+    i = 0
+    for x in pris_feature_vectors:        
+        x_adv = random_attack_dnn(x,no_modified_features_random)        
+        y_adv = model_AdversarialDeepEnsembleMax.test_new(x_adv,[1],'label')[0]     
+        y_pred_random_attack.append(y_adv)
+        i += 1
+        #print("y_malware=%d  - y_adv=%d - i=%d"%(y_malware,y_adv,i))  
+        print("y_adv=%d - i=%d"%(y_adv,i))  
+        
+    no_evasion = [val for val in y_pred_random_attack if val == 0]
+    ER_random_attack = (len(no_evasion)/len(y_pred_random_attack))*100  
+    print("ER_random_attack: ",ER_random_attack)
+
         

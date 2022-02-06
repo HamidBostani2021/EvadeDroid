@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Preparing action set
-~~~~~~~~~~~~~
-
-[1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
-    [S&P 2020], Pierazzi et al.
-    
+Preparing action set   
 """
 import logging
 import pickle
@@ -19,7 +14,7 @@ import os
 import shutil
 import tempfile
 import feature_extraction.drebin as drebin
-import transformation.inpatients as inpatients
+import program_slicing.transformation.inpatients as inpatients
 import lib.utils as utils
 from settings import config
 from lib.utils import yellow, blue, green, red
@@ -306,4 +301,8 @@ def count_permissions(organ):
             except:
                 organ.dangerous_permissions = False
 
+"""
+[1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
+    [S&P 2020], Pierazzi et al.
+"""
 

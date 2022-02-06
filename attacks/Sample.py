@@ -11,7 +11,7 @@ class APK:
                  number_of_features_adv_malware_per_query,
                  number_of_api_calls_malware,number_of_api_calls_adv_malware,
                  number_of_api_calls_adv_malware_per_query, transformations,
-                 intact_due_to_soot_error,execution_time, classified_with_hard_label):
+                 intact_due_to_soot_error,execution_time, classified_with_hard_label,query_time):
         self.app_name = app_name
         self.malware_label = malware_label
         self.adv_malware_label = adv_malware_label
@@ -27,6 +27,7 @@ class APK:
         self.intact_due_to_soot_error = intact_due_to_soot_error
         self.execution_time =  execution_time
         self.classified_with_hard_label = classified_with_hard_label
+        self.query_time = query_time
         
     def compute_number_of_modified_feature_per_query(self):
         modified_features = list()

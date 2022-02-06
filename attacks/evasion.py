@@ -30,14 +30,22 @@ def loss_function(model,x_malware, x_manipulated,malware_detector):
         y_scores_adv_malware = y_scores_adv_malware[0][0]
         print("y_scores_malware: ", y_scores_malware)
         print("y_scores_adv_malware: ", y_scores_adv_malware)
+        #It would be better to consider only y_scores_adv_malware because y_scores_malware is constant
         loss = y_scores_adv_malware - y_scores_malware
+        y_pred_adv = model.clf.predict(x_manipulated)[0]
+    elif malware_detector == 'AdversarialDeepEnsembleMax':        
+        y_scores_adv_malware = model.test_new(x_manipulated,[1],'proba')[0,0]         
+        loss = y_scores_adv_malware
+        if y_scores_adv_malware >0.5:
+            y_pred_adv = 0
+        else:
+            y_pred_adv = 1
+        
     else:
         y_scores_malware = model.clf.decision_function(x_malware)
-        y_scores_adv_malware = model.clf.decision_function(x_manipulated)  
+        y_scores_adv_malware = model.clf.decision_function(x_manipulated)          
         loss = y_scores_malware-y_scores_adv_malware
-    
-    
-    y_pred_adv = model.clf.predict(x_manipulated)[0]
+        y_pred_adv = model.clf.predict(x_manipulated)[0] 
     return loss, y_pred_adv
 
 def loss_function_for_hard_label(model,post_op_host, x_manipulated,malware_detector):
@@ -54,32 +62,29 @@ def loss_function_for_hard_label(model,post_op_host, x_manipulated,malware_detec
     print("post_op_host: ",post_op_host)
     if malware_detector == "Drebin":
         y_pred_adv = model.clf.predict(x_manipulated)[0]
-    elif malware_detector == "Kaspersky":
-        no_detect,Kaspersky,_,_,_,_,_,_,_,_,_ = vt.report(post_op_host)
+     elif malware_detector == "Kaspersky":
+        no_detect,Kaspersky, _, _, _, _, _, _, _, _, _ = vt.report(post_op_host)
         y_pred_adv = bool(int(Kaspersky))
     elif malware_detector == "McAfee":
-        no_detect,_,_,McAfee,_,_,_,_,_,_,_ = vt.report(post_op_host)
+        no_detect,_, _, McAfee, _, _, _, _, _, _, _ = vt.report(post_op_host)
         y_pred_adv = bool(int(McAfee))
-    elif malware_detector == "Microsoft":
-        no_detect,_,_,_,Microsoft,_,_,_,_,_,_ = vt.report(post_op_host)
-        y_pred_adv = bool(int(Microsoft))
-    elif malware_detector == "ESET-NOD32":
-        no_detect,_,_,_,_,_,_,ESETNOD32,_,_,_ = vt.report(post_op_host)
-        y_pred_adv = bool(int(ESETNOD32))
-    elif malware_detector == "Symantec":
-        no_detect,_,Symantec,_,_,_,_,_,_,_,_ = vt.report(post_op_host)
-        y_pred_adv = bool(int(Symantec))
+    elif malware_detector == "Avira":
+        no_detect,_, _, _, _, Avira, _, _, _, _, _= vt.report(post_op_host)
+        y_pred_adv = bool(int(Avira))
+    elif malware_detector == "Ikarus":
+        no_detect,_, _, _, _, _, _, Ikarus, _, _, _ = vt.report(post_op_host)
+        y_pred_adv = bool(int(Ikarus))
+    elif malware_detector == "BitDefenderFalx":
+        no_detect,_, _, _, _, _, _, _, _, BitDefenderFalx, _ = vt.report(post_op_host)
+        y_pred_adv = bool(int(BitDefenderFalx))
     return loss, y_pred_adv,no_detect
     
 
 
 def generate_adversarial_example(malware, action_set, q, increase_in_size, 
-                                 model_inaccessible, hard_label, malware_detector):
-    
-    if malware_detector == "Kaspersky" and os.path.basename(malware) == "com.myproject.theme.oibikbhdfXEuIDflfdm.apk":
-        q = 2
-    if malware_detector == "ESET-NOD32" and os.path.basename(malware) == "com.ksdkxyv.fsdds.f.x.apk":
-        q = 2
+                                 model_inaccessible, hard_label, malware_detector):    
+   
+    query_time = 0
     k = 1
     app_name = os.path.basename(malware)
     percentage_increasing_size = 0
@@ -87,7 +92,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
     number_of_api_calls_adv_malware_per_query = list()
     transformations = list()
     M_total = [] 
-    increase_in_size_current = 0   
+    increase_in_size_current = 0
     
     number_of_features_adv_malware = 0
     number_of_api_calls_adv_malware = 0
@@ -104,7 +109,9 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
     
     U = list(range(0,len(sampling_distribution)))
     M = []   
-    malware_dict = drebin.get_features(malware)    
+    malware_dict = drebin.get_features(malware)      
+
+    
     no_malware_feature = len(malware_dict.keys()) 
     number_of_features_malware = no_malware_feature
     no_of_api_calls_malware = len([f for f in malware_dict.keys() if 'api_calls' in f or 'interesting_calls' in f])
@@ -148,23 +155,29 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
         decision_score =  model_inaccessible.clf.decision_function(x_malware)
         new_adv_dict = malware_dict
         L_best = -0.01 #model_inaccessible.clf.decision_function(x_malware)  
+    elif malware_detector =='AdversarialDeepEnsembleMax':
+        x_malware = model_inaccessible.dict_to_feature_vector(malware_dict) 
+        y_pred_adv = model_inaccessible.test_new(x_malware,[1],'label')[0]       
+        decision_score =  model_inaccessible.test_new(x_malware,[1],'proba')[0,0] 
+        new_adv_dict = malware_dict
+        L_best = -0.01 #model_inaccessible.clf.decision_function(x_malware)  
     else:
-        new_adv_dict = dict()
+        new_adv_dict = dict()        
         if malware_detector == "Kaspersky":
-            no_detect_best,Kaspersky,_,_,_,_,_,_,_,_,_ = vt.report(malware)
+            no_detect_best,Kaspersky, _, _, _, _, _, _, _, _, _ = vt.report(malware)
             y_pred_adv = bool(int(Kaspersky))
         elif malware_detector == "McAfee":
-            no_detect_best,_,_,McAfee,_,_,_,_,_,_,_ = vt.report(malware)
+            no_detect_best,_, _, McAfee, _, _, _, _, _, _, _ = vt.report(malware)
             y_pred_adv = bool(int(McAfee))
-        elif malware_detector == "Microsoft":
-            no_detect_best,_,_,_,Microsoft,_,_,_,_,_,_ = vt.report(malware)
-            y_pred_adv = bool(int(Microsoft))
-        elif malware_detector == "ESET-NOD32":
-            no_detect_best,_,_,_,_,_,_,ESETNOD32,_,_,_ = vt.report(malware)
-            y_pred_adv = bool(int(ESETNOD32))
-        elif malware_detector == "Symantec":
-            no_detect_best,_,Symantec,_,_,_,_,_,_,_,_ = vt.report(malware)
-            y_pred_adv = bool(int(Symantec))            
+        elif malware_detector == "Avira":
+            no_detect_best,_, _, _, _, Avira, _, _, _, _, _= vt.report(malware)
+            y_pred_adv = bool(int(Avira))
+        elif malware_detector == "Ikarus":
+            no_detect_best,_, _, _, _, _, _, Ikarus, _, _, _ = vt.report(malware)
+            y_pred_adv = bool(int(Ikarus))
+        elif malware_detector == "BitDefenderFalx":
+            no_detect_best,_, _, _, _, _, _, _, _, BitDefenderFalx, _ = vt.report(malware)
+            y_pred_adv = bool(int(BitDefenderFalx))
         L_best = 0  
     
     start = timer()
@@ -228,7 +241,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
         cnt_injection_failed = 0 #reset it one one organ inject successfuly
         is_try_to_inject = 1 #This flag show that at least one injection was done
         new_adv_dict_temp = new_adv_dict
-        if malware_detector == "MaMaDroid" or malware_detector == "Drebin" or malware_detector == "SecSVM":
+        if malware_detector == "MaMaDroid" or malware_detector == "Drebin" or malware_detector == "SecSVM" or malware_detector =='AdversarialDeepEnsembleMax':
             new_adv_dict = drebin.get_features(post_op_host) 
         else:
             new_adv_dict = dict()
@@ -253,6 +266,8 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
         
         print("cnt_size_check: %s - Check increase size: %s" % (cnt_size_check,str(float(increase_in_size_current) <= float(increase_in_size))))
         if (float(increase_in_size_current)> 0 and float(increase_in_size_current) <= float(increase_in_size)):                       
+            #Any way we should consider all features
+            #new_adv_dict = soot_filter(host.features, new_adv_dict, side_effects)
             cnt_size_check = 0 #reset it once the size is ok
             if malware_detector == "MaMaDroid":
                 try:
@@ -292,7 +307,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
                 except Exception as e:
                     print("exception: ", e)
                     x_manipulated_mamadroid = x_malware_mamadroid
-            elif malware_detector == "Drebin" or malware_detector == "SecSVM":
+            elif malware_detector == "Drebin" or malware_detector == "SecSVM" or malware_detector =='AdversarialDeepEnsembleMax':
                 x_manipulated = model_inaccessible.dict_to_feature_vector(new_adv_dict) 
             else:
                 x_manipulated = ""
@@ -304,9 +319,12 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
                 else:
                     L, y_pred_adv = loss_function(model_inaccessible,x_malware_mamadroid,x_manipulated_mamadroid,malware_detector)
             else:
+                start_query = timer()
                 L, y_pred_adv,no_detect = loss_function_for_hard_label(model_inaccessible,post_op_host,x_manipulated,malware_detector)
+                end_query = timer()
+                query_time += end_query-start_query
            
-            if malware_detector != "Drebin" and malware_detector != "SecSVM" and malware_detector != "MaMaDroid":
+            if malware_detector != "Drebin" and malware_detector != "SecSVM" and malware_detector != "MaMaDroid" and malware_detector !='AdversarialDeepEnsembleMax':
                 if no_detect > no_detect_best:
                     print("no_detect > no_detect_previou: True")
                     L = 0
@@ -315,7 +333,9 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
                     
             print("current loss: " + str(L))
             utils.perform_logging_for_attack("current loss: " + str(L))
-            number_of_query += 1            
+            number_of_query += 1
+            
+            
             label_per_query[number_of_query] = y_pred_adv        
             
             if hard_label == False:
@@ -338,8 +358,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
                     modified_features_per_query[number_of_query] = no_adv_malware_feature - no_malware_feature
                     
                     number_of_features_adv_malware_per_query.append(no_malware_feature)
-                    number_of_api_calls_adv_malware_per_query.append(no_of_api_calls_malware)
-                    
+                    number_of_api_calls_adv_malware_per_query.append(no_of_api_calls_malware)                   
                     
                 else:
                     modified_features_per_query[number_of_query] = modified_features_per_query[number_of_query-1]
@@ -349,8 +368,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
                     length = len(number_of_api_calls_adv_malware_per_query)
                     number_of_api_calls_adv_malware_per_query.append(number_of_api_calls_adv_malware_per_query[length-1])
                 for m in range(0,len(M)):
-                    M_total.remove(M[m])  
-        
+                    M_total.remove(M[m])          
         
             files = glob.glob(host.tmpdname +"/postop/*")
             if y_pred_adv == 1:
@@ -368,7 +386,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
             for f in files:
                 os.remove(f)
             for m in range(0,len(M)):
-                M_total.remove(M[m])  
+                M_total.remove(M[m])    
                 
     if malware_detector == "Drebin" or malware_detector == "SecSVM":    
         if is_intact == 0:        
@@ -384,26 +402,36 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
         else:
             adv_malware_label = model_inaccessible.clf.predict(x_malware_mamadroid)[0]
             adv_decision_score = model_inaccessible.clf.predict_proba(x_malware_mamadroid)
+    elif malware_detector =='AdversarialDeepEnsembleMax':
+        if is_intact == 0:        
+            adv_malware_label = model_inaccessible.test_new(x_manipulated,[1],'label')[0]  
+            adv_decision_score = model_inaccessible.test_new(x_manipulated,[1],'proba')[0,0] 
+        else:
+            adv_malware_label = model_inaccessible.test_new(x_malware,[1],'label')[0]
+            adv_decision_score = model_inaccessible.test_new(x_malware,[1],'proba')[0,0]
     else:
         if is_intact == 0:
             if os.path.exists(post_op_host) == False:
                 adv_malware_label = 1
-            else:
+            else:                
+                start_query = timer()
                 if malware_detector == "Kaspersky":
-                    _,Kaspersky,_,_,_,_,_,_,_,_,_ = vt.report(post_op_host)
+                    _,Kaspersky, _, _, _, _, _, _, _, _, _ = vt.report(post_op_host)
                     adv_malware_label = bool(int(Kaspersky))
                 elif malware_detector == "McAfee":
-                    _,_,_,McAfee,_,_,_,_,_,_,_ = vt.report(post_op_host)
+                    _,_, _, McAfee, _, _, _, _, _, _, _ = vt.report(post_op_host)
                     adv_malware_label = bool(int(McAfee))
-                elif malware_detector == "Microsoft":
-                    _,_,_,_,Microsoft,_,_,_,_,_,_ = vt.report(post_op_host)
-                    adv_malware_label = bool(int(Microsoft))
-                elif malware_detector == "ESET-NOD32":
-                    _,_,_,_,_,_,_,ESETNOD32,_,_,_ = vt.report(post_op_host)
-                    adv_malware_label = bool(int(ESETNOD32))
-                elif malware_detector == "Symantec":
-                    _,_,Symantec,_,_,_,_,_,_,_,_ = vt.report(post_op_host)
-                    adv_malware_label = bool(int(Symantec))
+                elif malware_detector == "Avira":
+                    _,_, _, _, _, Avira, _, _, _, _, _= vt.report(post_op_host)
+                    adv_malware_label = bool(int(Avira))
+                elif malware_detector == "Ikarus":
+                    _,_, _, _, _, _, _, Ikarus, _, _, _ = vt.report(post_op_host)
+                    adv_malware_label = bool(int(Ikarus))
+                elif malware_detector == "BitDefenderFalx":
+                    _,_, _, _, _, _, _, _, _, BitDefenderFalx, _ = vt.report(post_op_host)
+                    adv_malware_label = bool(int(BitDefenderFalx))
+                end_query = timer()
+                query_time += end_query-start_query
         else:
             adv_malware_label = 1
         
@@ -414,9 +442,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
         host_path = os.path.join(host.tmpdname, host.name)
         shutil.copyfile(host_path,dest)
     shutil.rmtree(host.tmpdname)   
-    
-    number_of_queries = number_of_query
-    
+    number_of_queries = number_of_query    
     if adv_malware_label == 0 :
         percentage_increasing_size = increase_in_size_current 
         transformations = M_total
@@ -426,8 +452,10 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
     
     intact_due_to_soot_error = 1 - is_try_to_inject
     end = timer()
-    execution_time = end - start
+    #execution_time = end - start
+    execution_time = end - start - query_time
     print("execution_time: ", execution_time)
+    print("query_time: ", query_time)
     classified_with_hard_label = hard_label
     apk = Sample.APK(app_name,malware_label, adv_malware_label, 
                  number_of_queries, percentage_increasing_size, 
@@ -435,7 +463,7 @@ def generate_adversarial_example(malware, action_set, q, increase_in_size,
                  number_of_features_adv_malware_per_query,
                  number_of_api_calls_malware,number_of_api_calls_adv_malware,
                  number_of_api_calls_adv_malware_per_query, transformations,
-                 intact_due_to_soot_error,execution_time,classified_with_hard_label)
+                 intact_due_to_soot_error,execution_time,classified_with_hard_label,query_time)
     
     return apk
 

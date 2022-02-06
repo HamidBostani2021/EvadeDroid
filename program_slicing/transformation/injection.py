@@ -2,6 +2,8 @@
 """
 Applying a transformation into a malware app by injecting gadget into the APK
 ~~~~~~~~~~
+This module that is originally created in [1] has been slightly modified for using in EvadeDroid.
+
 [1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
     [S&P 2020], Pierazzi et al.
 """
@@ -14,7 +16,6 @@ import lib.utils as utils
 from lib.utils import yellow, green, blue
 from pprint import pformat
 
-# This function that is originally defined in [1] is slightly modified for using in EvadeDroid.
 def transplant_organs(host, apks):
     # Create dictionary to store ongoing statistics
     results = {}
@@ -112,7 +113,6 @@ def transplant_organs(host, apks):
     logging.debug("Final apk signed")
     return 0,post_op_host,side_effects
     
-# This function that is originally defined in [1] is slightly modified for using in EvadeDroid.  
 def transplant(host, apks, perm_file=None):
     """Transplant a set of organs into a host malware.
 
@@ -155,7 +155,6 @@ def transplant(host, apks, perm_file=None):
     classes = 0
     return os.path.join(output_location, host.name), int(avg_cc), int(classes)
 
-# This function is originally defined in [1].
 def resign(app_path):
     """Resign the apk."""
     utils.run_java_component(config['resigner'], ['--overwrite', '-a', app_path])

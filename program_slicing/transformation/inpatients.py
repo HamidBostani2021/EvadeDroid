@@ -10,7 +10,6 @@ This module that is originally created in [1] has been slightly modified for usi
 [1] Intriguing Properties of Adversarial ML Attacks in the Problem Space 
     [S&P 2020], Pierazzi et al.
 
-
 """
 import glob
 import logging
@@ -26,6 +25,7 @@ from settings import config
 from lib.utils import blue, green, cyan, magenta, yellow
 
 hosts_dir = os.path.join(config['results_dir'], 'hosts')
+hosts_dir_temp = os.path.join(config['results_dir'], 'hosts_temp')
 
 
 class Host:
@@ -65,6 +65,16 @@ class Host:
     @classmethod
     def load(cls, path):
         hosts_file = os.path.join(hosts_dir, os.path.basename(path)) + '.p'
+        if os.path.exists(hosts_file):
+            with open(hosts_file, 'rb') as f:
+                return pickle.load(f)
+        host = Host(path)
+        with open(hosts_file, 'wb') as f:
+            pickle.dump(host, f)
+            return host
+    @classmethod
+    def load_temp(cls, path):
+        hosts_file = os.path.join(hosts_dir_temp, os.path.basename(path)) + '.p'
         if os.path.exists(hosts_file):
             with open(hosts_file, 'rb') as f:
                 return pickle.load(f)

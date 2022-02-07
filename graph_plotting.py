@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Plotting the graphs that are presented in [1].
-
-[1] "EvadeDroid: A Practical Evasion Attack on Machine Learning for Black-box Android Malware Detection", 
-EuroS&P 2022,  Submitted on Sept. 23, 2021. 
+Plotting the graphs.
 """
 
 

@@ -4,7 +4,7 @@ This tool is the EvadeDroid's pipeline, a problem-space evasion attack for
 black-box based Android malware detection, presented in [1].
 
 [1] "EvadeDroid: A Practical Evasion Attack on Machine Learning for Black-box Android Malware Detection", 
-USENIX Security 2022,  Submitted on Feb. , 2022. 
+USENIX Security 2022,  Submitted on Feb. 3, 2022. 
 """
 
 from feature_extraction import feature_set

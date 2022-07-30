@@ -1,9 +1,0 @@
-public interface  anywheresoftware.b4a.ObjectWrapper extends java.lang.Object
-{
-
-    public abstract java.lang.Object getObject();
-
-    public abstract java.lang.Object getObjectOrNull();
-
-    public abstract void setObject(java.lang.Object);
-}

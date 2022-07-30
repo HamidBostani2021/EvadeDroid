@@ -1,5 +1,0 @@
-public annotation interface  anywheresoftware.b4a.BA$ShortName extends java.lang.Object implements java.lang.'annotation'.Annotation
-{
-
-    public abstract java.lang.String value();
-}

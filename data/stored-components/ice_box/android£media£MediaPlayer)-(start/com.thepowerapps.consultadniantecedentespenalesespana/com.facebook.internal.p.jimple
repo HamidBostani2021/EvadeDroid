@@ -1,5 +1,0 @@
-public interface  com.facebook.internal.p extends java.lang.Object
-{
-
-    public abstract boolean a(int, android.content.Intent);
-}

@@ -1,5 +1,0 @@
-public interface  com.seattleclouds.previewer.bg extends java.lang.Object
-{
-
-    public abstract void a(com.seattleclouds.previewer.data.SCTemplateApp);
-}

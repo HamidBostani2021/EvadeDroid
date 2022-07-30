@@ -1,5 +1,0 @@
-public interface  com.seattleclouds.location.m extends java.lang.Object implements android.location.LocationListener
-{
-
-    public abstract void a(android.location.Location);
-}

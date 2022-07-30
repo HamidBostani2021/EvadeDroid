@@ -1,5 +1,0 @@
-interface  com.seattleclouds.previewer.ae extends java.lang.Object
-{
-
-    public abstract void p();
-}

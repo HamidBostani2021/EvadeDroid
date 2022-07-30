@@ -1,2 +1,0 @@
-com.google.android.gms.common.GooglePlayServicesUtil
-com.google.android.gms.internal.ca

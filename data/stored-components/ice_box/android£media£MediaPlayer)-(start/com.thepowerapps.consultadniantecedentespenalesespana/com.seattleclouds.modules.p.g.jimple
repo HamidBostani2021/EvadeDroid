@@ -1,5 +1,0 @@
-public interface  com.seattleclouds.modules.p.g extends java.lang.Object
-{
-
-    public abstract void a(com.seattleclouds.modules.p.e, long, java.lang.String, java.util.Date);
-}

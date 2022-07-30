@@ -1,5 +1,0 @@
-web.apache.sax.app
-web.apache.sax.DialogActivity
-web.apache.sax.app$MsgHandler
-web.apache.sax.DialogActivity$1
-dummyMainClass

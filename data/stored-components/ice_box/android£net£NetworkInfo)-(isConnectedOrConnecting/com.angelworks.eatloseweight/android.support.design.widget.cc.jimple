@@ -1,4 +1,0 @@
-class android.support.design.widget.cc extends android.widget.LinearLayout implements android.view.View$OnLongClickListener
-{
-
-}

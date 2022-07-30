@@ -1,6 +1,0 @@
-com.concretepage.SplashActivity
-com.concretepage.MainActivity
-com.concretepage.SplashActivity$1
-com.concretepage.MainActivity$WebViewClientDemo
-com.concretepage.MainActivity$WebChromeClientDemo
-dummyMainClass

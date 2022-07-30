@@ -1,5 +1,0 @@
-public interface  com.seattleclouds.am extends java.lang.Object
-{
-
-    public abstract boolean a();
-}

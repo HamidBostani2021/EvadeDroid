@@ -1,3 +1,0 @@
-public interface  com.facebook.share.model.ShareModel extends java.lang.Object implements android.os.Parcelable
-{
-}

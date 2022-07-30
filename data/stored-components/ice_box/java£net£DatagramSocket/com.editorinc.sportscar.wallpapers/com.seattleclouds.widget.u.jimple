@@ -1,5 +1,0 @@
-public interface  com.seattleclouds.widget.u extends java.lang.Object
-{
-
-    public abstract boolean a(android.view.MotionEvent);
-}

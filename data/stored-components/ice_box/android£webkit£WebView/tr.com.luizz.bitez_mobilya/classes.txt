@@ -1,2 +1,0 @@
-tr.com.luizz.bitez_mobilya.MainActivity$1
-tr.com.luizz.bitez_mobilya.MainActivity

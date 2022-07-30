@@ -1,5 +1,0 @@
-public interface  com.facebook.ad extends java.lang.Object
-{
-
-    public abstract void a(com.facebook.an);
-}

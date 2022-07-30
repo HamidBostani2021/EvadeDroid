@@ -1,4 +1,0 @@
-public class android.support.v4.app.Fragment extends java.lang.Object implements android.content.ComponentCallbacks, android.view.View$OnCreateContextMenuListener
-{
-
-}

@@ -1,5 +1,0 @@
-public interface  com.facebook.am extends java.lang.Object implements com.facebook.al
-{
-
-    public abstract void a(com.facebook.ak, long, long);
-}

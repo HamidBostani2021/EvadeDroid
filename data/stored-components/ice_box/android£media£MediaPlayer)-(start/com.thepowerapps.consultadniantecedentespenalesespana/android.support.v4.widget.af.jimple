@@ -1,4 +1,0 @@
-class android.support.v4.widget.af extends android.graphics.drawable.Drawable implements android.graphics.drawable.Animatable
-{
-
-}

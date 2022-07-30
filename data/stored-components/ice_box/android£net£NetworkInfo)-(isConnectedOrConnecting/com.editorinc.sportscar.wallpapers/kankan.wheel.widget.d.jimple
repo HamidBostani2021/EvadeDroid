@@ -1,7 +1,0 @@
-public interface  kankan.wheel.widget.d extends java.lang.Object
-{
-
-    public abstract void a(kankan.wheel.widget.WheelView);
-
-    public abstract void b(kankan.wheel.widget.WheelView);
-}

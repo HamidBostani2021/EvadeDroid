@@ -1,1 +1,0 @@
-anywheresoftware.b4a.objects.drawable.CanvasWrapper$BitmapWrapper

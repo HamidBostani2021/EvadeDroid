@@ -1,5 +1,0 @@
-public interface  com.facebook.af extends java.lang.Object implements com.facebook.ac
-{
-
-    public abstract void a(long, long);
-}

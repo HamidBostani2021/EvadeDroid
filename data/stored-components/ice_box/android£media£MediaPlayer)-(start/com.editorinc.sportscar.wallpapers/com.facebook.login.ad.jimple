@@ -1,7 +1,0 @@
-interface  com.facebook.login.ad extends java.lang.Object
-{
-
-    public abstract android.app.Activity a();
-
-    public abstract void a(android.content.Intent, int);
-}

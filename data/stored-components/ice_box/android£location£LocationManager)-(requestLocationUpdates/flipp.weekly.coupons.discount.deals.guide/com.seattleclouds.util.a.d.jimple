@@ -1,7 +1,0 @@
-public interface  com.seattleclouds.util.a.d extends java.lang.Object
-{
-
-    public abstract void a(org.apache.http.HttpResponse);
-
-    public abstract void ab();
-}

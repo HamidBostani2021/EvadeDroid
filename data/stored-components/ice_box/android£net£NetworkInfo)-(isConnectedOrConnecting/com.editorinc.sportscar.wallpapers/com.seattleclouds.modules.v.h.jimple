@@ -1,9 +1,0 @@
-public interface  com.seattleclouds.modules.v.h extends java.lang.Object
-{
-
-    public abstract void ab();
-
-    public abstract void ac();
-
-    public abstract void ad();
-}

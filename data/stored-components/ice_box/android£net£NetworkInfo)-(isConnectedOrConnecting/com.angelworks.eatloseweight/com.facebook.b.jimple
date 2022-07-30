@@ -1,7 +1,0 @@
-public interface  com.facebook.b extends java.lang.Object
-{
-
-    public abstract void a(com.facebook.AccessToken);
-
-    public abstract void a(com.facebook.FacebookException);
-}

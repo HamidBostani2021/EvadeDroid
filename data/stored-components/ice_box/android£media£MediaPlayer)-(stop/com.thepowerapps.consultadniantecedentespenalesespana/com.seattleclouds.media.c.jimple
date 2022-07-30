@@ -1,5 +1,0 @@
-public interface  com.seattleclouds.media.c extends java.lang.Object
-{
-
-    public abstract void a(java.lang.String, android.graphics.Bitmap);
-}

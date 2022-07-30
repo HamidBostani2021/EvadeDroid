@@ -1,2 +1,0 @@
-sha256,sha1,md5,dex_date,apk_size,pkg_name,vercode,vt_detection,vt_scan_date,dex_size,markets,year,month,day,tags,analysis_engines,sample_path,submission_date
-B36F18DC0D8499359109D70FEC7F44816E8433E18B2C97691E74308574EF7B7C,755330761C955F9DA11B0CCB0A83154A5907AF73,18E832E34995AF9B1DECA65996961B99,2021-07-09 00:00:00,18748435,com.ywha.social.followers,3.0,5.0,2018-11-22 03:35:25,10722472,play.google.com,2018,10,17,"['androzoo', '2018-h2']",[],/media/nas/datasets/android/samples/Androzoo/B/3/6/B36F18DC0D8499359109D70FEC7F44816E8433E18B2C97691E74308574EF7B7C.apk,1551381977

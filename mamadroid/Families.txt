@@ -1,9 +1,0 @@
-com.google.
-xml.
-apache.
-javax.
-java.
-android.
-dom.
-json.
-dalvik.

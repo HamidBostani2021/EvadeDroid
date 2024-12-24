@@ -1,0 +1,1 @@
+Our Java-based components for harvesting and injection are built on the tool available at https://s2lab.cs.ucl.ac.uk/projects/intriguing, with some modifications, and accessing the source code requires the permission of the owners.
